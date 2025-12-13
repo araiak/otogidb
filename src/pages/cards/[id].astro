@@ -227,6 +227,33 @@ const sdImageUrl = getImageUrl(card, 'sd');
           </div>
         )}
 
+        <!-- Bonds -->
+        {card.bonds && card.bonds.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Bonds</h2>
+            <div class="space-y-2 sm:space-y-3">
+              {card.bonds.map(bond => (
+                <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 min-w-0">
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
+                          style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}>
+                      {bond.type}
+                    </span>
+                    {bond.name && (
+                      <span class="text-xs sm:text-sm truncate" style="color: var(--color-highlight);">
+                        {bond.name}
+                      </span>
+                    )}
+                  </div>
+                  <div class="text-sm sm:text-base font-bold font-mono flex-shrink-0" style="color: var(--color-accent);">
+                    +{bond.bonus_percent}%
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <!-- History -->
         <div class="card p-3 sm:p-4">
           <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">History</h2>

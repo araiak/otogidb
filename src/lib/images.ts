@@ -9,6 +9,20 @@ const CLOUDINARY_FOLDER = 'otogi';
 
 export type ImageVariant = 'android' | 'sd' | 'hd' | 'icons' | 'team';
 
+// Cards 1-100 (asset_id 100001-100100) don't have android images on CDN
+// They need to fall back to HD-generated circles
+const CARDS_WITHOUT_ANDROID = new Set<string>();
+for (let i = 100001; i <= 100100; i++) {
+  CARDS_WITHOUT_ANDROID.add(String(i));
+}
+
+/**
+ * Check if a card has android images available
+ */
+export function hasAndroidImage(assetId: string): boolean {
+  return !CARDS_WITHOUT_ANDROID.has(assetId);
+}
+
 /**
  * Construct Cloudinary URL from asset_id when image_urls is not populated
  */
@@ -25,6 +39,11 @@ function constructCloudinaryUrl(assetId: string, variant: ImageVariant): string 
 
   const config = variantConfig[variant];
   if (!config) return null;
+
+  // Don't construct android URLs for cards that don't have them
+  if (variant === 'android' && !hasAndroidImage(assetId)) {
+    return null;
+  }
 
   return `${CLOUDINARY_BASE}/${CLOUDINARY_FOLDER}/${config.folder}/${assetId}${config.suffix}.png`;
 }
