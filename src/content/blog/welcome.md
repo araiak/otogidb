@@ -21,10 +21,10 @@ OtogiDB is a comprehensive card database for **Otogi Spirit Agents**, featuring 
 
 In blog posts, you can reference cards using the `:card[id]` syntax. For example:
 
-- :card[100101] - Reference by ID
+- :card[1] - Reference by ID
 - :card[Nue] - Reference by name
 
-These will show as links with hover popups showing card details.
+These will show as links to the card detail pages.
 
 ## Getting Started
 
