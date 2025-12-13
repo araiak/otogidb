@@ -2,7 +2,7 @@
 title: "Welcome to OtogiDB"
 description: "An introduction to the Otogi Spirit Agents card database - accurate data for the 2024 re-release"
 date: "2025-12-13"
-author: "OtogiDB Team"
+author: "Araiak"
 tags: ["announcement", "guide"]
 ---
 
