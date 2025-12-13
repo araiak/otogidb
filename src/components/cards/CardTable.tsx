@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef } from 'react';
+import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
 import {
   useReactTable,
   getCoreRowModel,
@@ -241,6 +241,94 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [bondFilter, setBondFilter] = useState<string[]>([]);
   const [skillTagFilter, setSkillTagFilter] = useState<string[]>([]);
   const [abilityTagFilter, setAbilityTagFilter] = useState<string[]>([]);
+
+  // Track if we're initializing from URL to prevent double-updates
+  const isInitializing = useRef(true);
+  const [shareTooltip, setShareTooltip] = useState<string | null>(null);
+
+  // Read URL params on mount
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const params = new URLSearchParams(window.location.search);
+
+    // Search query
+    const q = params.get('q');
+    if (q) setGlobalFilter(q);
+
+    // Attribute filter
+    const attr = params.get('attr');
+    if (attr) setAttributeFilter(attr.split(',').filter(Boolean));
+
+    // Type filter
+    const type = params.get('type');
+    if (type) setTypeFilter(type.split(',').filter(Boolean));
+
+    // Rarity filter
+    const rarity = params.get('rarity');
+    if (rarity) setRarityFilter(rarity.split(',').map(Number).filter(n => !isNaN(n)));
+
+    // Bond filter
+    const bond = params.get('bond');
+    if (bond) setBondFilter(bond.split(',').filter(Boolean));
+
+    // Skill tag filter
+    const skill = params.get('skill');
+    if (skill) setSkillTagFilter(skill.split(',').filter(Boolean));
+
+    // Ability tag filter
+    const ability = params.get('ability');
+    if (ability) setAbilityTagFilter(ability.split(',').filter(Boolean));
+
+    // Sorting
+    const sort = params.get('sort');
+    const dir = params.get('dir');
+    if (sort) {
+      setSorting([{ id: sort, desc: dir === 'desc' }]);
+    }
+
+    // Mark initialization complete after a tick
+    setTimeout(() => {
+      isInitializing.current = false;
+    }, 100);
+  }, []);
+
+  // Update URL when filters change
+  useEffect(() => {
+    if (typeof window === 'undefined' || isInitializing.current) return;
+
+    const params = new URLSearchParams();
+
+    if (globalFilter) params.set('q', globalFilter);
+    if (attributeFilter.length > 0) params.set('attr', attributeFilter.join(','));
+    if (typeFilter.length > 0) params.set('type', typeFilter.join(','));
+    if (rarityFilter.length > 0) params.set('rarity', rarityFilter.join(','));
+    if (bondFilter.length > 0) params.set('bond', bondFilter.join(','));
+    if (skillTagFilter.length > 0) params.set('skill', skillTagFilter.join(','));
+    if (abilityTagFilter.length > 0) params.set('ability', abilityTagFilter.join(','));
+    if (sorting.length > 0) {
+      params.set('sort', sorting[0].id);
+      params.set('dir', sorting[0].desc ? 'desc' : 'asc');
+    }
+
+    const newUrl = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+
+    window.history.replaceState({}, '', newUrl);
+  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sorting]);
+
+  // Copy share link to clipboard
+  const handleShare = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+      setShareTooltip('Link copied!');
+      setTimeout(() => setShareTooltip(null), 2000);
+    } catch {
+      setShareTooltip('Failed to copy');
+      setTimeout(() => setShareTooltip(null), 2000);
+    }
+  }, []);
 
   // Load cards and skills
   useEffect(() => {
@@ -797,23 +885,47 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
       </div>
 
-      {/* Results count */}
-      <div className="text-sm text-secondary">
-        Showing {table.getRowModel().rows.length} of {cards.length} cards
-        {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0) && (
-          <button
-            onClick={() => {
-              setAttributeFilter([]);
-              setTypeFilter([]);
-              setRarityFilter([]);
-              setBondFilter([]);
-              setSkillTagFilter([]);
-              setAbilityTagFilter([]);
-            }}
-            className="ml-2 text-accent hover:underline"
-          >
-            Clear filters
-          </button>
+      {/* Results count and actions */}
+      <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
+        <div>
+          Showing {table.getRowModel().rows.length} of {cards.length} cards
+          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0) && (
+            <button
+              onClick={() => {
+                setAttributeFilter([]);
+                setTypeFilter([]);
+                setRarityFilter([]);
+                setBondFilter([]);
+                setSkillTagFilter([]);
+                setAbilityTagFilter([]);
+              }}
+              className="ml-2 text-accent hover:underline"
+            >
+              Clear filters
+            </button>
+          )}
+        </div>
+
+        {/* Share button */}
+        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sorting.length > 0) && (
+          <div className="relative">
+            <button
+              onClick={handleShare}
+              className="btn-secondary text-xs px-2 py-1 rounded inline-flex items-center gap-1"
+              title="Copy link to current view"
+            >
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+              Share
+            </button>
+            {shareTooltip && (
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-1 px-2 py-1 text-xs rounded whitespace-nowrap"
+                   style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)' }}>
+                {shareTooltip}
+              </div>
+            )}
+          </div>
         )}
       </div>
 
