@@ -246,6 +246,10 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const isInitializing = useRef(true);
   const [shareTooltip, setShareTooltip] = useState<string | null>(null);
 
+  // Mobile preview state
+  const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
+  const mobilePreviewRef = useRef<HTMLDivElement>(null);
+
   // Read URL params on mount
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -317,6 +321,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     window.history.replaceState({}, '', newUrl);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sorting]);
+
+  // Close mobile preview when clicking outside
+  useEffect(() => {
+    if (!mobilePreviewCard) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (mobilePreviewRef.current && !mobilePreviewRef.current.contains(event.target as Node)) {
+        setMobilePreviewCard(null);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [mobilePreviewCard]);
 
   // Copy share link to clipboard
   const handleShare = useCallback(async () => {
@@ -984,26 +1002,35 @@ export default function CardTable({ initialCards }: CardTableProps) {
           const card = row.original;
           const imgUrl = getThumbnailUrl(card);
           return (
-            <a
-              key={row.id}
-              href={`/cards/${card.id}`}
-              className="card-grid-item flex items-center gap-3 py-2"
-            >
-              <img
-                src={imgUrl || PLACEHOLDER_IMAGE}
-                alt={card.name || `Card #${card.id}`}
-                className="w-10 h-10 rounded object-cover flex-shrink-0"
-                loading="lazy"
-              />
-              <div className="flex-1 min-w-0">
+            <div key={row.id} className="card-grid-item flex items-center gap-3 py-2">
+              <a href={`/cards/${card.id}`} className="flex-shrink-0">
+                <img
+                  src={imgUrl || PLACEHOLDER_IMAGE}
+                  alt={card.name || `Card #${card.id}`}
+                  className="w-10 h-10 rounded object-cover"
+                  loading="lazy"
+                />
+              </a>
+              <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
                 <div className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</div>
                 <div className="flex items-center gap-1.5">
                   <AttributeIcon value={card.stats.attribute_name} size="sm" />
                   <TypeIcon value={card.stats.type_name} size="sm" />
                   <RarityStars value={card.stats.rarity} size="sm" />
                 </div>
-              </div>
-            </a>
+              </a>
+              <button
+                onClick={() => setMobilePreviewCard(card)}
+                className="p-2 rounded-full flex-shrink-0 touch-target"
+                style={{ backgroundColor: 'var(--color-surface)' }}
+                aria-label="Preview card"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </button>
+            </div>
           );
         })}
       </div>
@@ -1014,18 +1041,16 @@ export default function CardTable({ initialCards }: CardTableProps) {
           const card = row.original;
           const imgUrl = getThumbnailUrl(card);
           return (
-            <a
-              key={row.id}
-              href={`/cards/${card.id}`}
-              className="card-grid-item flex items-center gap-3"
-            >
-              <img
-                src={imgUrl || PLACEHOLDER_IMAGE}
-                alt={card.name || `Card #${card.id}`}
-                className="w-12 h-12 rounded object-cover"
-                loading="lazy"
-              />
-              <div className="flex-1 min-w-0">
+            <div key={row.id} className="card-grid-item flex items-center gap-3">
+              <a href={`/cards/${card.id}`} className="flex-shrink-0">
+                <img
+                  src={imgUrl || PLACEHOLDER_IMAGE}
+                  alt={card.name || `Card #${card.id}`}
+                  className="w-12 h-12 rounded object-cover"
+                  loading="lazy"
+                />
+              </a>
+              <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
                 <div className="font-medium truncate">{card.name || `Card #${card.id}`}</div>
                 <div className="flex items-center gap-2 text-sm">
                   <AttributeIcon value={card.stats.attribute_name} size="sm" />
@@ -1035,12 +1060,23 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 {card.skill && (
                   <div className="text-xs text-secondary truncate">{card.skill.name}</div>
                 )}
-              </div>
-              <div className="text-right text-sm">
+              </a>
+              <div className="text-right text-sm mr-2">
                 <div>ATK: {formatNumber(card.stats.max_atk)}</div>
                 <div className="text-secondary">HP: {formatNumber(card.stats.max_hp)}</div>
               </div>
-            </a>
+              <button
+                onClick={() => setMobilePreviewCard(card)}
+                className="p-2 rounded-full flex-shrink-0 touch-target"
+                style={{ backgroundColor: 'var(--color-surface)' }}
+                aria-label="Preview card"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </button>
+            </div>
           );
         })}
       </div>
@@ -1067,6 +1103,111 @@ export default function CardTable({ initialCards }: CardTableProps) {
           </button>
         </div>
       </div>
+
+      {/* Mobile Preview Modal */}
+      {mobilePreviewCard && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 md:hidden">
+          <div
+            ref={mobilePreviewRef}
+            className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden"
+            style={{ backgroundColor: 'var(--color-surface)' }}
+          >
+            {/* Header */}
+            <div className="flex items-center justify-between p-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
+              <h3 className="font-bold truncate">{mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}</h3>
+              <button
+                onClick={() => setMobilePreviewCard(null)}
+                className="p-1 rounded"
+                aria-label="Close preview"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className="p-4">
+              <div className="flex gap-4">
+                {/* Image */}
+                <div className="flex-shrink-0">
+                  <img
+                    src={getPopupImageUrl(mobilePreviewCard) || PLACEHOLDER_IMAGE}
+                    alt={mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}
+                    className="w-24 h-auto rounded"
+                  />
+                </div>
+
+                {/* Info */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <AttributeIcon value={mobilePreviewCard.stats.attribute_name} size="md" />
+                    <TypeIcon value={mobilePreviewCard.stats.type_name} size="md" />
+                    <RarityStars value={mobilePreviewCard.stats.rarity} size="sm" />
+                  </div>
+
+                  {/* Stats */}
+                  <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm mb-3">
+                    <div>
+                      <span className="text-secondary">ATK:</span>{' '}
+                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.max_atk)}</span>
+                    </div>
+                    <div>
+                      <span className="text-secondary">HP:</span>{' '}
+                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.max_hp)}</span>
+                    </div>
+                    <div>
+                      <span className="text-secondary">SPD:</span>{' '}
+                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.speed)}</span>
+                    </div>
+                    <div>
+                      <span className="text-secondary">CRIT:</span>{' '}
+                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.crit)}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Skill */}
+              {mobilePreviewCard.skill && (
+                <div className="mt-3 pt-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
+                  <div className="text-sm font-medium" style={{ color: 'var(--color-accent)' }}>
+                    {mobilePreviewCard.skill.name || 'Unknown Skill'}
+                  </div>
+                  <div
+                    className="text-sm text-secondary line-clamp-3"
+                    dangerouslySetInnerHTML={{
+                      __html: formatSkillDescription(
+                        mobilePreviewCard.skill.description,
+                        skills[mobilePreviewCard.skill.id],
+                        mobilePreviewCard.stats.rarity
+                      ) || 'No description'
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* Abilities */}
+              {mobilePreviewCard.abilities && mobilePreviewCard.abilities.length > 0 && (
+                <div className="mt-2 text-sm">
+                  <span className="text-secondary">Abilities:</span>{' '}
+                  {mobilePreviewCard.abilities.map(a => a.name).join(', ')}
+                </div>
+              )}
+            </div>
+
+            {/* Footer */}
+            <div className="p-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
+              <a
+                href={`/cards/${mobilePreviewCard.id}`}
+                className="btn-primary w-full text-center py-2 rounded block"
+              >
+                View Full Details
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
