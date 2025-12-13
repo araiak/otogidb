@@ -3,6 +3,20 @@
  * Uses IndexedDB for storage to handle large JSON files
  */
 
+// Get data version from global (set at build time in BaseLayout)
+declare global {
+  interface Window {
+    OTOGIDB_DATA_VERSION?: string;
+  }
+}
+
+function getDataVersion(): string {
+  if (typeof window !== 'undefined' && window.OTOGIDB_DATA_VERSION) {
+    return window.OTOGIDB_DATA_VERSION;
+  }
+  return '';
+}
+
 const DB_NAME = 'otogidb-cache';
 const DB_VERSION = 1;
 const STORE_NAME = 'json-cache';
@@ -144,9 +158,11 @@ export async function fetchWithCache<T>(
     }
   }
 
-  // Fetch fresh data
-  console.log(`[Cache] Fetching: ${url}`);
-  const response = await fetch(url);
+  // Fetch fresh data with cache-busting version
+  const version = getDataVersion();
+  const fetchUrl = version ? `${url}?v=${version}` : url;
+  console.log(`[Cache] Fetching: ${fetchUrl}`);
+  const response = await fetch(fetchUrl);
 
   if (!response.ok) {
     throw new Error(`Failed to fetch ${url}: ${response.status}`);

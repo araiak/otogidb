@@ -4,6 +4,10 @@ import { themeInitScript } from '../lib/theme';
 import DebugPanel from '../components/DebugPanel';
 import SEO from '../components/SEO.astro';
 
+// Read data version at build time for cache busting
+import cardsData from '../../public/data/cards.json';
+const dataVersion = cardsData.version || Date.now().toString();
+
 interface Props {
   title: string;
   description?: string;
@@ -40,6 +44,11 @@ const {
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />
+
+    <!-- Data version for cache busting -->
+    <script is:inline define:vars={{ dataVersion }}>
+      window.OTOGIDB_DATA_VERSION = dataVersion;
+    </script>
 
     <!-- Preconnect to Cloudinary for faster image loading -->
     <link rel="preconnect" href="https://res.cloudinary.com" />
