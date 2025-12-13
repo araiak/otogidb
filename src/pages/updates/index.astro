@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// Load manifest at build time
+let manifest: PatchNotesManifest;
+try {
+  const manifestRaw = await import('../../../public/data/changes/manifest.json');
+  manifest = manifestRaw.default || manifestRaw;
+} catch (e) {
+  manifest = { generated_at: '', total_versions: 0, versions: [] };
+}
+
+interface PatchNotesManifest {
+  generated_at: string;
+  total_versions: number;
+  versions: Array<{
+    version: string;
+    date: string | null;
+    new_cards: number;
+    modified_cards: number;
+  }>;
+}
+
+interface CardChange {
+  category: string;
+  category_label: string;
+  field: string;
+  field_label: string;
+  old: unknown;
+  new: unknown;
+  display: string;
+}
+
+interface NewCard {
+  id: string;
+  name: string;
+  rarity: number;
+  attribute: string;
+  type: string;
+  image_url: string | null;
+}
+
+interface ModifiedCard {
+  id: string;
+  name: string;
+  rarity: number;
+  image_url: string | null;
+  changes: CardChange[];
+}
+
+interface PatchNotes {
+  version: string;
+  version_date: string;
+  previous_version: string | null;
+  generated_at: string;
+  summary: {
+    new_cards: number;
+    modified_cards: number;
+  };
+  new_cards: NewCard[];
+  modified_cards: ModifiedCard[];
+}
+
+// Load all patch notes
+const patchNotes: PatchNotes[] = [];
+for (const versionInfo of manifest.versions) {
+  try {
+    const notes = await import(`../../../public/data/changes/patch_notes_${versionInfo.version}.json`);
+    patchNotes.push(notes.default || notes);
+  } catch (e) {
+    console.warn(`Failed to load patch notes for version ${versionInfo.version}`);
+  }
+}
+
+// Sort by date descending (newest first)
+patchNotes.sort((a, b) => {
+  const dateA = a.version_date || a.generated_at || '';
+  const dateB = b.version_date || b.generated_at || '';
+  return dateB.localeCompare(dateA);
+});
+
+// Helper to format date
+function formatDate(dateStr: string): string {
+  if (!dateStr) return 'Unknown date';
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  } catch {
+    return dateStr;
+  }
+}
+
+// Helper to render rarity stars
+function renderStars(rarity: number): string {
+  return '★'.repeat(Math.min(Math.max(rarity, 0), 5));
+}
+
+// Helper to get optimized thumbnail URL
+function getThumbnailUrl(imageUrl: string | null): string | null {
+  if (!imageUrl) return null;
+  if (imageUrl.includes('cloudinary.com')) {
+    return imageUrl.replace('/upload/', '/upload/w_60,h_60,c_fill,q_auto,f_auto/');
+  }
+  return imageUrl;
+}
+---
+
+<BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes">
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">Patch Notes</h1>
+      <p class="text-secondary">Card updates, new releases, and balance changes.</p>
+    </div>
+
+    {patchNotes.length === 0 ? (
+      <div class="card p-6 text-center">
+        <p class="text-secondary">No patch notes available yet.</p>
+      </div>
+    ) : (
+      <div class="space-y-8">
+        {patchNotes.map((notes) => (
+          <article class="card overflow-hidden">
+            {/* Header */}
+            <div class="p-4 md:p-6 border-b" style="border-color: var(--color-border);">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                  <h2 class="text-xl font-bold">Version {notes.version}</h2>
+                  <p class="text-sm text-secondary">{formatDate(notes.version_date)}</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                  {notes.summary.new_cards > 0 && (
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
+                          style="background-color: rgba(34, 197, 94, 0.15); color: rgb(34, 197, 94);">
+                      +{notes.summary.new_cards} New
+                    </span>
+                  )}
+                  {notes.summary.modified_cards > 0 && (
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium"
+                          style="background-color: rgba(59, 130, 246, 0.15); color: rgb(59, 130, 246);">
+                      {notes.summary.modified_cards} Changed
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 md:p-6 space-y-6">
+              {/* New Cards Section */}
+              {notes.new_cards.length > 0 && (
+                <section>
+                  <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full" style="background-color: rgb(34, 197, 94);"></span>
+                    New Cards
+                  </h3>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {notes.new_cards.map((card) => (
+                      <a href={`/cards/${card.id}`}
+                         class="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-opacity-50"
+                         style="background-color: var(--color-surface);">
+                        {/* Card Image */}
+                        <div class="flex-shrink-0 w-12 h-12 rounded overflow-hidden"
+                             style="background-color: var(--color-bg);">
+                          {getThumbnailUrl(card.image_url) ? (
+                            <img src={getThumbnailUrl(card.image_url)}
+                                 alt={card.name}
+                                 class="w-full h-full object-cover"
+                                 loading="lazy" />
+                          ) : (
+                            <div class="w-full h-full flex items-center justify-center text-secondary text-xs">
+                              No img
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Card Info */}
+                        <div class="flex-1 min-w-0">
+                          <div class="font-medium truncate">{card.name}</div>
+                          <div class="text-sm text-secondary flex items-center gap-2">
+                            <span class="text-yellow-500">{renderStars(card.rarity)}</span>
+                            {card.attribute && <span>{card.attribute}</span>}
+                            {card.type && <span>• {card.type}</span>}
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* Modified Cards Section */}
+              {notes.modified_cards.length > 0 && (
+                <section>
+                  <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full" style="background-color: rgb(59, 130, 246);"></span>
+                    Balance Changes
+                  </h3>
+                  <div class="space-y-3">
+                    {notes.modified_cards.map((card) => (
+                      <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+                        <div class="flex items-start gap-3">
+                          {/* Card Image */}
+                          <a href={`/cards/${card.id}`} class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded overflow-hidden"
+                                 style="background-color: var(--color-bg);">
+                              {getThumbnailUrl(card.image_url) ? (
+                                <img src={getThumbnailUrl(card.image_url)}
+                                     alt={card.name}
+                                     class="w-full h-full object-cover"
+                                     loading="lazy" />
+                              ) : (
+                                <div class="w-full h-full flex items-center justify-center text-secondary text-xs">
+                                  No img
+                                </div>
+                              )}
+                            </div>
+                          </a>
+
+                          {/* Card Info & Changes */}
+                          <div class="flex-1 min-w-0">
+                            <a href={`/cards/${card.id}`} class="font-medium link hover:underline">
+                              {card.name}
+                            </a>
+                            <span class="text-yellow-500 text-sm ml-2">{renderStars(card.rarity)}</span>
+
+                            {/* Changes List */}
+                            <ul class="mt-2 space-y-1">
+                              {card.changes.map((change) => (
+                                <li class="text-sm flex items-start gap-2">
+                                  <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium flex-shrink-0"
+                                        style={`background-color: ${
+                                          change.category === 'stats' ? 'rgba(234, 179, 8, 0.15)' :
+                                          change.category === 'skill' ? 'rgba(168, 85, 247, 0.15)' :
+                                          'rgba(107, 114, 128, 0.15)'
+                                        }; color: ${
+                                          change.category === 'stats' ? 'rgb(234, 179, 8)' :
+                                          change.category === 'skill' ? 'rgb(168, 85, 247)' :
+                                          'rgb(156, 163, 175)'
+                                        };`}>
+                                    {change.category_label}
+                                  </span>
+                                  <span class="text-secondary">{change.display}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {/* No changes message */}
+              {notes.new_cards.length === 0 && notes.modified_cards.length === 0 && (
+                <p class="text-secondary text-center py-4">No card changes in this version.</p>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

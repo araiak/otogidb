@@ -1,0 +1,31 @@
+{
+  "name": "otogidb",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Otogi Spirit Agents Card Database",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.0",
+    "@astrojs/react": "^3.6.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@floating-ui/react": "^0.26.0",
+    "@tanstack/react-table": "^8.20.0",
+    "astro": "^4.16.0",
+    "fuse.js": "^7.0.0",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.6.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0"
+  }
+}

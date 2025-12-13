@@ -1,0 +1,142 @@
+---
+import '../styles/global.css';
+import { themeInitScript } from '../lib/theme';
+import DebugPanel from '../components/DebugPanel';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Otogi Spirit Agents Card Database - Complete card stats, skills, and abilities' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | OtogiDB</title>
+
+    <!-- Prevent flash of wrong theme -->
+    <script is:inline set:html={themeInitScript} />
+
+    <!-- Preconnect to Cloudinary for faster image loading -->
+    <link rel="preconnect" href="https://res.cloudinary.com" />
+    <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+  </head>
+  <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">
+    <header class="sticky top-0 z-40 border-b" style="background-color: var(--color-header); border-color: var(--color-border);">
+      <div class="container mx-auto px-4">
+        <nav class="flex items-center justify-between h-14 md:h-16">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2 font-bold text-lg" style="color: var(--color-text);">
+            <span>OtogiDB</span>
+          </a>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-6">
+            <a href="/" class="link hover:no-underline">Cards</a>
+            <a href="/updates" class="link hover:no-underline">Updates</a>
+            <a href="/blog" class="link hover:no-underline">Blog</a>
+          </div>
+
+          <!-- Theme Toggle & Mobile Menu -->
+          <div class="flex items-center gap-2">
+            <button
+              id="theme-toggle"
+              class="btn-secondary p-2 rounded-md touch-target"
+              aria-label="Toggle theme"
+            >
+              <!-- Sun icon (shown in dark mode) -->
+              <svg class="w-5 h-5 hidden dark:block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>
+              <!-- Moon icon (shown in light mode) -->
+              <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+              </svg>
+            </button>
+
+            <!-- Mobile menu button -->
+            <button
+              id="mobile-menu-toggle"
+              class="md:hidden btn-secondary p-2 rounded-md touch-target"
+              aria-label="Toggle menu"
+            >
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+          <div class="flex flex-col gap-2">
+            <a href="/" class="link py-2 touch-target">Cards</a>
+            <a href="/updates" class="link py-2 touch-target">Updates</a>
+            <a href="/blog" class="link py-2 touch-target">Blog</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-1" style="background-color: var(--color-bg);">
+      <slot />
+    </main>
+
+    <footer class="border-t py-6 mt-8" style="border-color: var(--color-border); background-color: var(--color-header);">
+      <div class="container mx-auto px-4 text-center text-sm" style="color: var(--color-text-secondary);">
+        <p>OtogiDB - Otogi Spirit Agents Card Database</p>
+      </div>
+    </footer>
+
+    <!-- Debug Panel (toggles with Ctrl+Shift+D) -->
+    <DebugPanel client:load />
+
+    <script>
+      // Theme toggle - explicitly saves user choice to override system preference
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.contains('dark');
+          const newTheme = isDark ? 'light' : 'dark';
+
+          // Save explicit user choice
+          localStorage.setItem('otogidb-theme', newTheme);
+
+          // Apply immediately
+          if (newTheme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        });
+      }
+
+      // Mobile menu toggle
+      const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // Listen for system preference changes (only if user hasn't explicitly chosen)
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const stored = localStorage.getItem('otogidb-theme');
+        if (!stored || stored === 'system') {
+          if (e.matches) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

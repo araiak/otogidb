@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate } from '../../lib/formatters';
+
+// Get all non-draft blog posts
+const posts = await getCollection('blog', ({ data }) => !data.draft);
+
+// Sort by date descending
+posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+---
+
+<BaseLayout title="Blog" description="Otogi Spirit Agents card database blog - guides, analysis, and updates">
+  <div class="container mx-auto px-4 py-6">
+    <h1 class="text-2xl md:text-3xl font-bold mb-6">Blog</h1>
+
+    {posts.length === 0 ? (
+      <div class="card p-6 text-center">
+        <p class="text-secondary">No blog posts yet. Check back soon!</p>
+      </div>
+    ) : (
+      <div class="space-y-4">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="card p-4 md:p-6 block hover:opacity-90 transition-opacity">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div>
+                <h2 class="text-xl font-bold mb-1">{post.data.title}</h2>
+                {post.data.description && (
+                  <p class="text-secondary text-sm line-clamp-2">{post.data.description}</p>
+                )}
+              </div>
+              <div class="text-sm text-secondary shrink-0">
+                {formatDate(post.data.date.toString())}
+              </div>
+            </div>
+
+            {post.data.tags && post.data.tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-3">
+                {post.data.tags.map((tag) => (
+                  <span class="badge text-xs">{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</BaseLayout>

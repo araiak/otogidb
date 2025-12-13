@@ -1,0 +1,25 @@
+# Cloudflare Pages caching headers
+
+# JSON data - cache for 1 hour, allow stale for 24 hours while revalidating
+/data/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# Static assets (JS, CSS) - immutable, cache forever
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - cache for 1 week
+/images/*
+  Cache-Control: public, max-age=604800
+
+# Icons - cache for 1 year (rarely change)
+/icons/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache, always revalidate
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Favicon
+/favicon.svg
+  Cache-Control: public, max-age=86400

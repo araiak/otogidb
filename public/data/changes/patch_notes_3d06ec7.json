@@ -1,0 +1,798 @@
+{
+  "version": "3d06ec7",
+  "version_date": "2025-12-13",
+  "previous_version": "3d06ec7",
+  "generated_at": "2025-12-13T12:19:30.935799+00:00",
+  "summary": {
+    "new_cards": 15,
+    "modified_cards": 38
+  },
+  "new_cards": [
+    {
+      "id": "1435",
+      "name": "Santa Claus",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1436",
+      "name": "Salamander [Xmas]",
+      "rarity": 5,
+      "attribute": "Anima",
+      "type": "Melee",
+      "image_url": null
+    },
+    {
+      "id": "1437",
+      "name": "Pipe Fox [Xmas]",
+      "rarity": 5,
+      "attribute": "Anima",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1438",
+      "name": "Kotetsu [Xmas]",
+      "rarity": 5,
+      "attribute": "Phantasma",
+      "type": "Melee",
+      "image_url": null
+    },
+    {
+      "id": "1439",
+      "name": "Behemoth (Calm) [Xmas]",
+      "rarity": 5,
+      "attribute": "Anima",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1991",
+      "name": "Mary Magdalene",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1992",
+      "name": "Sacred Mimic",
+      "rarity": 5,
+      "attribute": "Anima",
+      "type": "Healer",
+      "image_url": null
+    },
+    {
+      "id": "1430",
+      "name": "Poli'ahu [Xmas]",
+      "rarity": 4,
+      "attribute": "Divina",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1431",
+      "name": "Natalia Nyfe [Xmas]",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Healer",
+      "image_url": null
+    },
+    {
+      "id": "1432",
+      "name": "Kiku Ichimonji [Xmas]",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1433",
+      "name": "Hashihime [Xmas]",
+      "rarity": 4,
+      "attribute": "Anima",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1434",
+      "name": "Snow Dome",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1993",
+      "name": "Gift Box",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1994",
+      "name": "Fir Tree Sprite",
+      "rarity": 4,
+      "attribute": "Divina",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1995",
+      "name": "Wish-Filled Stocking",
+      "rarity": 3,
+      "attribute": "Phantasma",
+      "type": "Assist",
+      "image_url": null
+    }
+  ],
+  "modified_cards": [
+    {
+      "id": "154",
+      "name": "Angra Mainyu",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"The name's Mainyu, and I'm absolutely evil♪\"</color><br/><color=#ef9843>The spirit of a destructive being in Zoroastrianism who loves to annoy those around her.</color> It's actually inspiring how she's willing to go to any length to bother others. Mikado's been making good use of her at the Bureau, and she's happy just to see the pissed off looks on people's faces. Some say her arrival brought about the rise of <color=#ef9843>\"Dictator Mikado.\"</color><br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#240}'s skill DMG.</color>",
+          "new": "<color=#f4e48e>\"The name's Mainyu, and I'm absolutely evil♪\"</color><br/><color=#ef9843>The spirit of a destructive being in Zoroastrianism who loves to annoy those around her.</color> It's actually inspiring how she's willing to go to any length to bother others. Mikado's been making good use of her at the Bureau, and she's happy just to see the pissed off looks on people's faces. Some say her arrival brought about the rise of <color=#ef9843>\"Dictator Mikado.\"</color><br/><color=#94b5fe>[Special Bond] Increases Azi Dahaka's skill DMG.</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "209",
+      "name": "Old Clock Chronus",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"What am I going to do with her?\"</color><br/><color=#ef9843>The spirit of the god of time. </color>Because his power is too great, he uses an old clock as a physical representation of his presence, to hold his power in check. If he were to show his true self, as the god of time, he would be able to use unspeakable power. He's not willing to do that, however, saying that his present power is just enough. Since the incident in Chinatown, his relationship with Belphegor has been restored, and now he is attentive and caring towards her (or, more like, they have more time to spend together so he has no choice but to pay attention to her?).<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#208}'s speed.</color><br/><color=#f45d68>[Event] A New Year's Tale of Laziness</color>",
+          "new": "<color=#f4e48e>\"What am I going to do with her?\"</color><br/><color=#ef9843>The spirit of the god of time. </color>Because his power is too great, he uses an old clock as a physical representation of his presence, to hold his power in check. If he were to show his true self, as the god of time, he would be able to use unspeakable power. He's not willing to do that, however, saying that his present power is just enough. Since the incident in Chinatown, his relationship with Belphegor has been restored, and now he is attentive and caring towards her (or, more like, they have more time to spend together so he has no choice but to pay attention to her?).<br/><color=#94b5fe>[Special Bond] Increases Belphegor's speed.</color><br/><color=#f45d68>[Event] A New Year's Tale of Laziness</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "227",
+      "name": "Witch Ravenna",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"It feels strange, protecting love for once...\"</color><br/><color=#ef9843>The spirit of a witch who was fixated on beauty.</color> Betrayed by her husband, she started to hate love, and went on a mission to wipe all love from the face of the earth. But after witnessing unbreakable, true love, she finally admitted her error—though not without plenty of fuss. Nowadays she fights to protect love even more fiercely than she destroyed it in the past, so that she can become a mother her daughter can be proud of.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by {#MonsterName#222}.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "new": "<color=#f4e48e>\"It feels strange, protecting love for once...\"</color><br/><color=#ef9843>The spirit of a witch who was fixated on beauty.</color> Betrayed by her husband, she started to hate love, and went on a mission to wipe all love from the face of the earth. But after witnessing unbreakable, true love, she finally admitted her error—though not without plenty of fuss. Nowadays she fights to protect love even more fiercely than she destroyed it in the past, so that she can become a mother her daughter can be proud of.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by Snow White.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "228",
+      "name": "Ohina",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"With you, Odairi, I'd go anywhere.\"</color><br/><color=#ef9843>The spirit of one of the dolls put on display during the Doll Festival.</color> The Empress, one of the two dolls on the top tier of the Doll Festival stand. Since the incident, her ties with Odairi have deepened, and they learned how to truly care for one another. But, lately, some of their doll friends have been complaining to Odairi that Ohina just can't stop talking about how happy they are together.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#226}'s max HP.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "new": "<color=#f4e48e>\"With you, Odairi, I'd go anywhere.\"</color><br/><color=#ef9843>The spirit of one of the dolls put on display during the Doll Festival.</color> The Empress, one of the two dolls on the top tier of the Doll Festival stand. Since the incident, her ties with Odairi have deepened, and they learned how to truly care for one another. But, lately, some of their doll friends have been complaining to Odairi that Ohina just can't stop talking about how happy they are together.<br/><color=#94b5fe>[Special Bond] Increases Odairi's max HP.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "240",
+      "name": "Azi Dahaka",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Japan is so awesome!\"</color><br/><color=#ef9843>The spirit of a monster that used a thousand types of magic to battle the gods,</color> but her stubbornness got her imprisoned in a mountain. After becoming a spirit, she headed to Japan to send the country spiraling into terror...but then she encountered the Bureau of the Occult and switched gears to offer her help instead. Angra Mainyu seems to have played a key role in this transformation...<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#154}'s skill DMG.</color>",
+          "new": "<color=#f4e48e>\"Japan is so awesome!\"</color><br/><color=#ef9843>The spirit of a monster that used a thousand types of magic to battle the gods,</color> but her stubbornness got her imprisoned in a mountain. After becoming a spirit, she headed to Japan to send the country spiraling into terror...but then she encountered the Bureau of the Occult and switched gears to offer her help instead. Angra Mainyu seems to have played a key role in this transformation...<br/><color=#94b5fe>[Special Bond] Increases Angra Mainyu's skill DMG.</color>",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 50% of Crit DMG when {#MonsterName#154} is on the team.",
+          "new": "Increases 50% of Crit DMG when Angra Mainyu is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "249",
+      "name": "George Washington",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"If you keep at it long enough, most things eventually come true.\"</color><br/><color=#ef9843>The spirit of the first US president.</color> He values his country above all else, even himself, and devotes everything to it. He started spending more time with <color=#ef9843>Forge</color> after the copy incident blew over, passing on all sorts of lessons and making sure to spend more time in deep self-reflection. His manner has somehow grown more soft and relaxed than before. The two Washingtons look like brothers whenever they're together...which makes sense, considering they were originally the same person.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#248}'s skill DMG.</color><br/><color=#f45d68>[Event] Chopping Trees? Stop, Please!</color>",
+          "new": "<color=#f4e48e>\"If you keep at it long enough, most things eventually come true.\"</color><br/><color=#ef9843>The spirit of the first US president.</color> He values his country above all else, even himself, and devotes everything to it. He started spending more time with <color=#ef9843>Forge</color> after the copy incident blew over, passing on all sorts of lessons and making sure to spend more time in deep self-reflection. His manner has somehow grown more soft and relaxed than before. The two Washingtons look like brothers whenever they're together...which makes sense, considering they were originally the same person.<br/><color=#94b5fe>[Special Bond] Increases Forge Washington's skill DMG.</color><br/><color=#f45d68>[Event] Chopping Trees? Stop, Please!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "266",
+      "name": "Platina Elf",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 10% of all Divina team members' Crit Rate when {#MonsterName#268} is on the team.",
+          "new": "Increases 10% of all Divina team members' Crit Rate when Aurum Elf is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "268",
+      "name": "Aurum Elf",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 10% of all Divina team members' Crit Rate when {#MonsterName#266} is on the team.",
+          "new": "Increases 10% of all Divina team members' Crit Rate when Platina Elf is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "283",
+      "name": "Nekomata",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"You wanna talk to little old me?\"</color><br/><color=#ef9843>The spirit of a cat that was once looked after by a certain master.</color> She eventually became a spirit after living for a very long time as a cat. She's fond of humans on account of a loving master. And, maybe also thanks to her old master, she has a slightly philosophical bent. She's good friends with Socrates, and they often discuss things at great length. Many philosophical concepts appear quite different from the perspective of a cat, so talking with her definitely makes you think about things in a new way.<br/><color=#94b5fe>[Special Bond] Increases normal ATK by {#MonsterName#84}.</color>",
+          "new": "<color=#f4e48e>\"You wanna talk to little old me?\"</color><br/><color=#ef9843>The spirit of a cat that was once looked after by a certain master.</color> She eventually became a spirit after living for a very long time as a cat. She's fond of humans on account of a loving master. And, maybe also thanks to her old master, she has a slightly philosophical bent. She's good friends with Socrates, and they often discuss things at great length. Many philosophical concepts appear quite different from the perspective of a cat, so talking with her definitely makes you think about things in a new way.<br/><color=#94b5fe>[Special Bond] Increases normal ATK by Socrates.</color>",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 10% of the ATK speed of all allies when {#MonsterName#84} is on the team.",
+          "new": "Increases 10% of the ATK speed of all allies when Socrates is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "299",
+      "name": "Hikoboshi [Sacred Swimsuit]",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 20% of DMG dealt when {#MonsterName#300} is on the team.",
+          "new": "Increases 20% of DMG dealt when Orihime [Sky Flower] is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "300",
+      "name": "Orihime [Sky Flower]",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 20% of DMG dealt when {#MonsterName#299} is on the team.",
+          "new": "Increases 20% of DMG dealt when Hikoboshi [Sacred Swimsuit] is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "302",
+      "name": "Princess Oto [Ocean Flower]",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 20% of Skill DMG when {#MonsterName#293} is on the team.",
+          "new": "Increases 20% of Skill DMG when Urashima Taro is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "390",
+      "name": "Ono-no-Takamura",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Traveling around Hell is nice, but one trip is enough.\"</color><br/><color=#ef9843>An expert on Hell who is very knowledgeable.</color> He's been to Hell many times and is an outstanding scholar, with many books on Hell to his name. He claims to be Ono-no-Komachi's grandfather, which even Ono-no-Komachi herself acknowledges to a certain extent. His love for his granddaughter transforms his personality completely, shocking many spirits who are used to his more academic persona. It's like how superheroes have wildly different alter egos, and no one is quite sure which personality is the real one.<br/><color=#f45d68>[Event] Holidays From Hell</color><br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#388}” max HP</color>",
+          "new": "<color=#f4e48e>\"Traveling around Hell is nice, but one trip is enough.\"</color><br/><color=#ef9843>An expert on Hell who is very knowledgeable.</color> He's been to Hell many times and is an outstanding scholar, with many books on Hell to his name. He claims to be Ono-no-Komachi's grandfather, which even Ono-no-Komachi herself acknowledges to a certain extent. His love for his granddaughter transforms his personality completely, shocking many spirits who are used to his more academic persona. It's like how superheroes have wildly different alter egos, and no one is quite sure which personality is the real one.<br/><color=#f45d68>[Event] Holidays From Hell</color><br/><color=#94b5fe>[Special Bond] Increases “Ono-no-Komachi” max HP</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "392",
+      "name": "Lucifer [Christmas II]",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"My sister is so annoying...\"</color><br/><color=#ef9843>The spirit of the world-renowned, one-and-only boss of Hell.</color> Also famous as a perennial favorite pop idol. He's rumored to have some relationship with Satan, but the details are shrouded in mystery. There's a theory that this is why he acts so aloof and hard to approach despite his position in the public eye. Maybe, just maybe...he's actually a kind, normal young man? He would never admit as much, that's for sure.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#389}’s skill DMG </color>",
+          "new": "<color=#f4e48e>\"My sister is so annoying...\"</color><br/><color=#ef9843>The spirit of the world-renowned, one-and-only boss of Hell.</color> Also famous as a perennial favorite pop idol. He's rumored to have some relationship with Satan, but the details are shrouded in mystery. There's a theory that this is why he acts so aloof and hard to approach despite his position in the public eye. Maybe, just maybe...he's actually a kind, normal young man? He would never admit as much, that's for sure.<br/><color=#94b5fe>[Special Bond] Increases Satan’s skill DMG </color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Mjölnir",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"BOOM! BOOM!\"</color><br/><color=#ef9843>The spirit of a hammer from Norse mythology.</color> People say her big bust is also like a <color=#ef9843>\"red hot hammer,\"</color> and in a sense it does have incredible destructive power. Well, maybe they're more like spheres than hammers... But still, perhaps because of that destructive power, she is often found amid scrap heaps and junkyards. She may not show it publicly, but in fact she has had some terribly difficult times living in poverty. That's why she's so stingy. But, since she's also scatterbrained, she loses her purse a lot.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by {#MonsterName#218}.</color>",
+          "new": "<color=#f4e48e>\"BOOM! BOOM!\"</color><br/><color=#ef9843>The spirit of a hammer from Norse mythology.</color> People say her big bust is also like a <color=#ef9843>\"red hot hammer,\"</color> and in a sense it does have incredible destructive power. Well, maybe they're more like spheres than hammers... But still, perhaps because of that destructive power, she is often found amid scrap heaps and junkyards. She may not show it publicly, but in fact she has had some terribly difficult times living in poverty. That's why she's so stingy. But, since she's also scatterbrained, she loses her purse a lot.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by Chidori.</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "425",
+      "name": "Guan Yu",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"I stand together with my brothers at all times!\"</color><br/><color=#ef9843>The spirit of a warrior that served Liu Bei of Shu Han during the Three Kingdoms Period of Chinese history.</color> He is sworn brothers with both Liu Bei and Zhang Fei. The sublime nature of their bond is hard for others to understand, and some feel uncomfortable just being around him, but his outstanding battle skills combined with his very stoic nature make him extremely popular with men. Some say he needs a good, strong woman who can handle a man like him.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#86}” normal ATK</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "new": "<color=#f4e48e>\"I stand together with my brothers at all times!\"</color><br/><color=#ef9843>The spirit of a warrior that served Liu Bei of Shu Han during the Three Kingdoms Period of Chinese history.</color> He is sworn brothers with both Liu Bei and Zhang Fei. The sublime nature of their bond is hard for others to understand, and some feel uncomfortable just being around him, but his outstanding battle skills combined with his very stoic nature make him extremely popular with men. Some say he needs a good, strong woman who can handle a man like him.<br/><color=#94b5fe>[Special Bond] Increases “Red Hare” normal ATK</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "479",
+      "name": "Doppella Gänger",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 15% of Crit DMG when {#MonsterName#476} is on the team.",
+          "new": "Increases 15% of Crit DMG when Mikazuki Munechika is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "514",
+      "name": "Flying Nimbus [Awakened]",
+      "rarity": 5,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"That touch, that smell...! Ah, how I missed this!\"</color><br/><color=#ef9843>The spirit of a magic cloud that soars through the skies.</color> She likes to partner up with people whose hearts are beautiful and dreams are pure, in addition to being strong. She's been working with Sun Wukong for longer than anyone else, and their relationship is filled with deep, mutual respect. Apparently some spirits get excited just to witness the two of them working together.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#511}'s skill DMG</color>",
+          "new": "<color=#f4e48e>\"That touch, that smell...! Ah, how I missed this!\"</color><br/><color=#ef9843>The spirit of a magic cloud that soars through the skies.</color> She likes to partner up with people whose hearts are beautiful and dreams are pure, in addition to being strong. She's been working with Sun Wukong for longer than anyone else, and their relationship is filled with deep, mutual respect. Apparently some spirits get excited just to witness the two of them working together.<br/><color=#94b5fe>[Special Bond] Increases Sun Wukong's skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "195",
+      "name": "Hydra",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"It's me, Chimera, in Hydra Form!\"</color><br/><color=#ef9843>Chimera, the spirit who uses puppets and changes forms, as a hydra.</color> She's quite proud of her super-strong poison and incredible recovery ability. She's also both extremely ferocious and sly, which can make her troublesome to have around. Generally, she tries to find people's weaknesses, then takes advantage of them to get what she wants. But in the end all she wants are cute things, like a lunch date together at her favorite restaurant.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#409}”’s skill DMG</color>",
+          "new": "<color=#f4e48e>\"It's me, Chimera, in Hydra Form!\"</color><br/><color=#ef9843>Chimera, the spirit who uses puppets and changes forms, as a hydra.</color> She's quite proud of her super-strong poison and incredible recovery ability. She's also both extremely ferocious and sly, which can make her troublesome to have around. Generally, she tries to find people's weaknesses, then takes advantage of them to get what she wants. But in the end all she wants are cute things, like a lunch date together at her favorite restaurant.<br/><color=#94b5fe>[Special Bond] Increases “Orthrus [Festival]”’s skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "203",
+      "name": "Amanojaku",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"You WANT me to play a trick on you? You're odd.\"</color><br/><color=#ef9843>A spirit who used to play tricks on people using her ability to read minds. </color>She once played the trick of hiding a child and ended up being frantically chased by the demon mother searching for her child. Since then, she has rarely played any tricks, maybe because she learned she shouldn't do things others don't want her to do. Now, she works for the Bureau of the Occult to prevent malicious mischief, making use of her observational skills.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#92}'s speed.</color><br/><color=#f45d68>[Event] A New Year's Tale of Laziness</color>",
+          "new": "<color=#f4e48e>\"You WANT me to play a trick on you? You're odd.\"</color><br/><color=#ef9843>A spirit who used to play tricks on people using her ability to read minds. </color>She once played the trick of hiding a child and ended up being frantically chased by the demon mother searching for her child. Since then, she has rarely played any tricks, maybe because she learned she shouldn't do things others don't want her to do. Now, she works for the Bureau of the Occult to prevent malicious mischief, making use of her observational skills.<br/><color=#94b5fe>[Special Bond] Increases Hariti's speed.</color><br/><color=#f45d68>[Event] A New Year's Tale of Laziness</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "222",
+      "name": "Snow White",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"I will let her know how I feel one day.\"</color><br/><color=#ef9843>The spirit of a beautiful princess who has overcome a witch's assassination attempts many times.</color> She wanders around from place to place, looking for the witch who tried to kill her. Following the witch's trail, she has come to stay at the Bureau of the Occult for a time. She has something she desperately wants to tell the witch, and has been looking for her for a long time.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by {#MonsterName#227}.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "new": "<color=#f4e48e>\"I will let her know how I feel one day.\"</color><br/><color=#ef9843>The spirit of a beautiful princess who has overcome a witch's assassination attempts many times.</color> She wanders around from place to place, looking for the witch who tried to kill her. Following the witch's trail, she has come to stay at the Bureau of the Occult for a time. She has something she desperately wants to tell the witch, and has been looking for her for a long time.<br/><color=#94b5fe>[Special Bond] Increases DMG dealt by Witch Ravenna.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "226",
+      "name": "Odairi",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"I'd do anything for someone important to me.\"</color><br/><color=#ef9843>The spirit of one of the dolls put on display during the Doll Festival.</color> The Emperor, one of the two dolls on the top tier of the Doll Festival stand. His love for Ohina is true, but he's too shy to express it. He says his actions should speak louder than words. Ohina's possessiveness was starting to bother him, but as he realized the importance of letting his true feelings be known, their relationship got better.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#228}'s skill DMG.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "new": "<color=#f4e48e>\"I'd do anything for someone important to me.\"</color><br/><color=#ef9843>The spirit of one of the dolls put on display during the Doll Festival.</color> The Emperor, one of the two dolls on the top tier of the Doll Festival stand. His love for Ohina is true, but he's too shy to express it. He says his actions should speak louder than words. Ohina's possessiveness was starting to bother him, but as he realized the importance of letting his true feelings be known, their relationship got better.<br/><color=#94b5fe>[Special Bond] Increases Ohina's skill DMG.</color><br/><color=#f45d68>[Event] The Spirits' Doll Festival</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "name": "Flying Nimbus",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Here we go, wooo!\"</color><br/><color=#ef9843>The spirit of a magic flying cloud. </color>She loves people with inner beauty, strength, and pure dreams, and tries to form partnerships with them. In something like a sponsorship contract, she agrees to help them with transportation if they outwardly appeal to her as a partner. The only problem is that she's booked solid and can't take on any new partnerships for the next few years.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#511}'s skill DMG</color>",
+          "new": "<color=#f4e48e>\"Here we go, wooo!\"</color><br/><color=#ef9843>The spirit of a magic flying cloud. </color>She loves people with inner beauty, strength, and pure dreams, and tries to form partnerships with them. In something like a sponsorship contract, she agrees to help them with transportation if they outwardly appeal to her as a partner. The only problem is that she's booked solid and can't take on any new partnerships for the next few years.<br/><color=#94b5fe>[Special Bond] Increases Sun Wukong's skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "292",
+      "name": "Triaina",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Meet me in the ocean if you're in the mood for a tasty treat!\"</color><br/><color=#ef9843>The spirit of the trident that Poseidon is said to have wielded.</color> In her glory days she was like an extension of Poseidon's own arm. Now, since becoming a spirit, she's secretly taken up cooking as a hobby. She just loves entertaining guests with a meal of freshly caught fish. This has led her to spend a lot of time with other food-loving spirits and thus form many close friendships.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#298}'s skill DMG.</color><br/><color=#f45d68>[Event] Coastal Calamity - Tanabata Beach Contest</color>",
+          "new": "<color=#f4e48e>\"Meet me in the ocean if you're in the mood for a tasty treat!\"</color><br/><color=#ef9843>The spirit of the trident that Poseidon is said to have wielded.</color> In her glory days she was like an extension of Poseidon's own arm. Now, since becoming a spirit, she's secretly taken up cooking as a hobby. She just loves entertaining guests with a meal of freshly caught fish. This has led her to spend a lot of time with other food-loving spirits and thus form many close friendships.<br/><color=#94b5fe>[Special Bond] Increases Charybdis's skill DMG.</color><br/><color=#f45d68>[Event] Coastal Calamity - Tanabata Beach Contest</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "318",
+      "name": "Firework Artisan Kagi",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"In the fleeting moment lies true beauty.\"</color><br/><color=#ef9843>One of the two master firework artisans that captured the imaginations of the people in Edo-era Japan. </color>Inheriting the knowledge of artisans throughout the ages, Kagi was an innovator who created new and exciting rockets to compete with rival and close friend, Tama. The spirit world firework festival was said to have been started by the pair after their competition to make ever more beautiful displays resulted in the creation of fireworks they couldn't launch with their spirit essence alone.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#319}'s skill DMG</color><br/><color=#f45d68>[Event] The Great Fireworks Showdown</color>",
+          "new": "<color=#f4e48e>\"In the fleeting moment lies true beauty.\"</color><br/><color=#ef9843>One of the two master firework artisans that captured the imaginations of the people in Edo-era Japan. </color>Inheriting the knowledge of artisans throughout the ages, Kagi was an innovator who created new and exciting rockets to compete with rival and close friend, Tama. The spirit world firework festival was said to have been started by the pair after their competition to make ever more beautiful displays resulted in the creation of fireworks they couldn't launch with their spirit essence alone.<br/><color=#94b5fe>[Special Bond] Increases Firework Artisan Tama's skill DMG</color><br/><color=#f45d68>[Event] The Great Fireworks Showdown</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "319",
+      "name": "Firework Artisan Tama",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Impressive right? It's my finest work yet!\"</color><br/><color=#ef9843>One of the two master firework artisans that captured the imaginations of the people of Edo-era Japan.</color> Originally working under Firework Artisan Kagi, Tama quickly proved herself by learning all her master had to teach before setting up shop on her own, becoming her old master's friend and biggest rival. Putting her genius to good use, Tama is known for inventive, original creations, though some say they don't meet with the approval of firework traditionalists.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#318}'s skill DMG</color><br/><color=#f45d68>[Event] The Great Fireworks Showdown</color>",
+          "new": "<color=#f4e48e>\"Impressive right? It's my finest work yet!\"</color><br/><color=#ef9843>One of the two master firework artisans that captured the imaginations of the people of Edo-era Japan.</color> Originally working under Firework Artisan Kagi, Tama quickly proved herself by learning all her master had to teach before setting up shop on her own, becoming her old master's friend and biggest rival. Putting her genius to good use, Tama is known for inventive, original creations, though some say they don't meet with the approval of firework traditionalists.<br/><color=#94b5fe>[Special Bond] Increases Firework Artisan Kagi's skill DMG</color><br/><color=#f45d68>[Event] The Great Fireworks Showdown</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "326",
+      "name": "Ball Lightning",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Watch it, touch me and you're in for a shock!\"</color><br/><color=#ef9843>The spirit of floating balls of electricity.</color> Ball Lightning can effortlessly command multiple orbs, each of which pack a punch as powerful as a bolt of lightning. If she's in the room when a fight breaks out, you can say goodbye to all your electronics. No doubt thanks to her elemental affiliation, Ball Lightning gets on with lightning beasts like a house on fire, so much so that when two or more of them get together in the Bureau of the Occult, you'll often hear lightning strike as they entertain each other. If ever you hear thunder in the corridors, keep away at all costs.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#169}'s skill DMG</color>",
+          "new": "<color=#f4e48e>\"Watch it, touch me and you're in for a shock!\"</color><br/><color=#ef9843>The spirit of floating balls of electricity.</color> Ball Lightning can effortlessly command multiple orbs, each of which pack a punch as powerful as a bolt of lightning. If she's in the room when a fight breaks out, you can say goodbye to all your electronics. No doubt thanks to her elemental affiliation, Ball Lightning gets on with lightning beasts like a house on fire, so much so that when two or more of them get together in the Bureau of the Occult, you'll often hear lightning strike as they entertain each other. If ever you hear thunder in the corridors, keep away at all costs.<br/><color=#94b5fe>[Special Bond] Increases Raiju's skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "352",
+      "name": "White Hare of Inaba [Sports Festival]",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"I'm starting to think this might just work out.\"</color><br/><color=#ef9843>The spirit of a rabbit that was helped by a god.</color> She has dreams that tell the future—albeit in fragments—but lately they've been getting more accurate. For example, the dream where she joined a sports festival held by someone who had helped her in the past. Many details of the festival and even her opponents were just as she saw them in the dream, which made her feel like she had a real chance of winning. But just how accurate was the dream, really...?<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#361}'s skill DMG</color><br/><color=#f45d68>[Event] Get Ready! The October Sports Meet at the Tokyo Blue Cemetery!</color>",
+          "new": "<color=#f4e48e>\"I'm starting to think this might just work out.\"</color><br/><color=#ef9843>The spirit of a rabbit that was helped by a god.</color> She has dreams that tell the future—albeit in fragments—but lately they've been getting more accurate. For example, the dream where she joined a sports festival held by someone who had helped her in the past. Many details of the festival and even her opponents were just as she saw them in the dream, which made her feel like she had a real chance of winning. But just how accurate was the dream, really...?<br/><color=#94b5fe>[Special Bond] Increases Okuninushi's skill DMG</color><br/><color=#f45d68>[Event] Get Ready! The October Sports Meet at the Tokyo Blue Cemetery!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "354",
+      "name": "Aka Manah",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Ready to be reduced to trash?\"</color><br/><color=#ef9843>The spirit of a demon whose name means \"evil thoughts.\"</color> She once fought under Ahriman against the gods of the heavens and has the power to make people incapable of distinguishing between right and wrong. No matter how saintly someone might be at first, she can reduce them to complete trash. So locking eyes with her is basically game over, socially speaking.<br/><color=#94b5fe>[Special Bond] Increases normal ATK by {#MonsterName#154}.</color><br/><color=#f45d68>[Event] Get Ready! The October Sports Meet at the Tokyo Blue Cemetery!</color>",
+          "new": "<color=#f4e48e>\"Ready to be reduced to trash?\"</color><br/><color=#ef9843>The spirit of a demon whose name means \"evil thoughts.\"</color> She once fought under Ahriman against the gods of the heavens and has the power to make people incapable of distinguishing between right and wrong. No matter how saintly someone might be at first, she can reduce them to complete trash. So locking eyes with her is basically game over, socially speaking.<br/><color=#94b5fe>[Special Bond] Increases normal ATK by Angra Mainyu.</color><br/><color=#f45d68>[Event] Get Ready! The October Sports Meet at the Tokyo Blue Cemetery!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "387",
+      "name": "Mayd N. Hell",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Greetings, human. What can I do to serve.\"</color><br/><color=#ef9843>A humanoid, all-purpose servant robot created by Satan.</color> There are various theories about her appearance, but apparently she was modeled on Satan herself, with a few extra touches to make people more inclined to ask her for help.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#389}’s skill DMG </color><br/><color=#f45d68>[Event] Holidays From Hell</color>",
+          "new": "<color=#f4e48e>\"Greetings, human. What can I do to serve.\"</color><br/><color=#ef9843>A humanoid, all-purpose servant robot created by Satan.</color> There are various theories about her appearance, but apparently she was modeled on Satan herself, with a few extra touches to make people more inclined to ask her for help.<br/><color=#94b5fe>[Special Bond] Increases Satan’s skill DMG </color><br/><color=#f45d68>[Event] Holidays From Hell</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "388",
+      "name": "Ono-no-Komachi",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Now I can come up with a wonderful new song, hehe!\"</color><br/><color=#ef9843>The spirit of a poet of irresistible beauty.</color> She's also considered one of the 36 Immortal Poets. It's not just her looks that make her popular, but also the special style in which she sings—her intense, undulating emotions naturally capture many teenage spirits' hearts. She travels around Japan performing as a singer-songwriter, but she refuses to sing in huge concert halls, preferring small, acoustic venues instead.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#390}’s skill DMG</color><br/><color=#f45d68>[Event] Holidays From Hell</color>",
+          "new": "<color=#f4e48e>\"Now I can come up with a wonderful new song, hehe!\"</color><br/><color=#ef9843>The spirit of a poet of irresistible beauty.</color> She's also considered one of the 36 Immortal Poets. It's not just her looks that make her popular, but also the special style in which she sings—her intense, undulating emotions naturally capture many teenage spirits' hearts. She travels around Japan performing as a singer-songwriter, but she refuses to sing in huge concert halls, preferring small, acoustic venues instead.<br/><color=#94b5fe>[Special Bond] Increases Ono-no-Takamura’s skill DMG</color><br/><color=#f45d68>[Event] Holidays From Hell</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "420",
+      "name": "Chocolat Blanc",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Ooh, I could really go for something sweet!\"</color><br/><color=#ef9843>The spirit of soft and pure white chocolate.</color> This type of chocolate is thought to have started as a special treat for nobility, which also explains her \"sweet Lolita\" fashion choices. She and Chocolat Noir are like sisters, though they're not actually blood-related. She loves to boss Noir around and tell her what to do—out of the deepest mutual respect, of course.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#421}” max HP</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "new": "<color=#f4e48e>\"Ooh, I could really go for something sweet!\"</color><br/><color=#ef9843>The spirit of soft and pure white chocolate.</color> This type of chocolate is thought to have started as a special treat for nobility, which also explains her \"sweet Lolita\" fashion choices. She and Chocolat Noir are like sisters, though they're not actually blood-related. She loves to boss Noir around and tell her what to do—out of the deepest mutual respect, of course.<br/><color=#94b5fe>[Special Bond] Increases “Chocolat Noir” max HP</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "name": "White Hare of Inaba",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Eeep! I've got a bad feeling about this...\"</color><br/><color=#ef9843>A rabbit spirit who received the grace of a god.</color> She's convinced the vivid dreams she has whenever she takes a nap are trying to tell her something. Unfortunately, they have an uncanny knack of ending before the most important part, and as a result are totally useless.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#361}'s skill DMG</color>",
+          "new": "<color=#f4e48e>\"Eeep! I've got a bad feeling about this...\"</color><br/><color=#ef9843>A rabbit spirit who received the grace of a god.</color> She's convinced the vivid dreams she has whenever she takes a nap are trying to tell her something. Unfortunately, they have an uncanny knack of ending before the most important part, and as a result are totally useless.<br/><color=#94b5fe>[Special Bond] Increases Okuninushi's skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "name": "Cerberus",
+      "rarity": 4,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Transforming to Cerberus mode!\"</color><br/><color=#ef9843>A chimera with a puppet based on Cerberus, the watchdog of the underworld.</color> Her personality changes based on the puppet that she's using, so things can get pretty crazy with the right combination. After making some kids cry, she's not allowed to perform for them anymore.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#409}”’s skill DMG</color>",
+          "new": "<color=#f4e48e>\"Transforming to Cerberus mode!\"</color><br/><color=#ef9843>A chimera with a puppet based on Cerberus, the watchdog of the underworld.</color> Her personality changes based on the puppet that she's using, so things can get pretty crazy with the right combination. After making some kids cry, she's not allowed to perform for them anymore.<br/><color=#94b5fe>[Special Bond] Increases “Orthrus [Festival]”’s skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "421",
+      "name": "Chocolat Noir",
+      "rarity": 3,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"I hope you don't mind that I can be a bit blunt now and then.\"</color><br/><color=#ef9843>The spirit of firm, dark chocolate.</color> The bitter taste is prefered by those with a more refined palette, and you could also call her word choice a tad bitter at times. Noir gets along well with the self-absorbed Chocolat Blanc, having mastered the art of letting Blanc feel like she's in charge while actually controlling her all the while.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#420}”’s skill DMG</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "new": "<color=#f4e48e>\"I hope you don't mind that I can be a bit blunt now and then.\"</color><br/><color=#ef9843>The spirit of firm, dark chocolate.</color> The bitter taste is prefered by those with a more refined palette, and you could also call her word choice a tad bitter at times. Noir gets along well with the self-absorbed Chocolat Blanc, having mastered the art of letting Blanc feel like she's in charge while actually controlling her all the while.<br/><color=#94b5fe>[Special Bond] Increases “Chocolat Blanc”’s skill DMG</color><br/><color=#f45d68>[Event]Free-For-All Love Match: Battle Dating!</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "539",
+      "name": "Fuma Shuriken",
+      "rarity": 3,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "ability.description",
+          "field_label": "Ability Effect",
+          "old": "Increases 20% of Skill DMG when {#MonsterName#541} is on the team.",
+          "new": "Increases 20% of Skill DMG when Fuma Kotaro is on the team.",
+          "display": "Ability Effect: Updated"
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "name": "Hanzo's Uniform",
+      "rarity": 3,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Can I help you? To DIE, perhaps?\"</color><br/><color=#ef9843>The Anima of attire once worn by legendary ninja Hattori Hanzo.</color> A Hanzo fanatic who imitates every aspect of her idol, from the way he talks right down to his ticks and habits.<br/><color=#94b5fe>[Special Bond] Increases “{#MonsterName#391}” max HP</color>",
+          "new": "<color=#f4e48e>\"Can I help you? To DIE, perhaps?\"</color><br/><color=#ef9843>The Anima of attire once worn by legendary ninja Hattori Hanzo.</color> A Hanzo fanatic who imitates every aspect of her idol, from the way he talks right down to his ticks and habits.<br/><color=#94b5fe>[Special Bond] Increases “Hattori Hanzo” max HP</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "32",
+      "name": "Yashichi",
+      "rarity": 1,
+      "image_url": null,
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Another day, another fight. Who will I face today?\"</color><br/><color=#ef9843>The spirit of a common foot soldier who once served under a military commander.</color> He is very skilled, but he chose not to become a famous warrior. He loves the battlefield and the stinging joy of being on the front lines. He's really famous for this among his fellow soldiers, and other armies fearfully refer to him as <color=#ef9843>\"Yashichi the Tiger.\"</color> No one knows much about him beyond that.<br/><color=#94b5fe>[Special Bond] Increases {#MonsterName#330}'s skill DMG</color>",
+          "new": "<color=#f4e48e>\"Another day, another fight. Who will I face today?\"</color><br/><color=#ef9843>The spirit of a common foot soldier who once served under a military commander.</color> He is very skilled, but he chose not to become a famous warrior. He loves the battlefield and the stinging joy of being on the front lines. He's really famous for this among his fellow soldiers, and other armies fearfully refer to him as <color=#ef9843>\"Yashichi the Tiger.\"</color> No one knows much about him beyond that.<br/><color=#94b5fe>[Special Bond] Increases Commander Yashichi's skill DMG</color>",
+          "display": "Description: Updated"
+        }
+      ]
+    }
+  ]
+}

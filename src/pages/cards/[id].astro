@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../lib/formatters';
+import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/icons';
+import { getImageUrl } from '../../lib/images';
+import type { Card, CardsData } from '../../types/card';
+
+// Import cards and skills data at build time
+import cardsDataRaw from '../../../public/data/cards.json';
+import skillsDataRaw from '../../../public/data/skills.json';
+
+export async function getStaticPaths() {
+  // Cast inside getStaticPaths since it runs first during build
+  const cardsData = cardsDataRaw as unknown as CardsData;
+
+  const paths = Object.keys(cardsData.cards).map(id => ({
+    params: { id },
+    props: { card: cardsData.cards[id] }
+  }));
+
+  return paths;
+}
+
+// Also need cardsData for related cards below
+const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
+
+interface Props {
+  card: Card;
+}
+
+const { card } = Astro.props;
+
+// Get skill data for formatting
+const skillData = card.skill ? skillsData[card.skill.id] : null;
+
+// Get related cards (same attribute or type)
+const relatedCards = Object.values(cardsData.cards)
+  .filter(c => c.id !== card.id)
+  .filter(c =>
+    c.stats.attribute === card.stats.attribute ||
+    c.stats.type === card.stats.type
+  )
+  .slice(0, 6);
+
+// Get image URLs (uses fallback to construct from asset_id if needed)
+const hdImageUrl = getImageUrl(card, 'hd');
+const sdImageUrl = getImageUrl(card, 'sd');
+---
+
+<BaseLayout title={card.name || `Card #${card.id}`} description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}>
+  <div class="container mx-auto px-4 py-6">
+    <!-- Breadcrumb -->
+    <nav class="mb-4 text-sm">
+      <a href="/" class="link">Cards</a>
+      <span class="mx-2">/</span>
+      <span class="text-secondary">{card.name || `Card #${card.id}`}</span>
+    </nav>
+
+    <div class="grid lg:grid-cols-3 gap-6">
+      <!-- Card Image -->
+      <div class="lg:col-span-1">
+        <div class="card p-4 sticky top-20">
+          <img
+            src={hdImageUrl || sdImageUrl || '/placeholder-card.svg'}
+            alt={card.name || `Card #${card.id}`}
+            class="w-full h-auto rounded-lg"
+            loading="eager"
+          />
+
+          <!-- Quick Stats Mobile -->
+          <div class="lg:hidden mt-4 grid grid-cols-2 gap-2 text-sm">
+            <div class="text-center p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary">ATK</div>
+              <div class="font-bold font-mono">{formatNumber(card.stats.max_atk)}</div>
+            </div>
+            <div class="text-center p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary">HP</div>
+              <div class="font-bold font-mono">{formatNumber(card.stats.max_hp)}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Info -->
+      <div class="lg:col-span-2 space-y-6">
+        <!-- Header -->
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <h1 class="text-2xl md:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
+            <span class="text-sm font-mono text-secondary">#{card.id}</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center gap-1" title={card.stats.attribute_name}>
+              <img src={getAttributeIconUrl(card.stats.attribute_name, { width: 48 })} alt={card.stats.attribute_name} class="w-6 h-6 object-contain" loading="lazy" decoding="async" />
+              <span class="text-sm">{card.stats.attribute_name}</span>
+            </span>
+            <span class="inline-flex items-center gap-1" title={card.stats.type_name}>
+              <img src={getTypeIconUrl(card.stats.type_name, { width: 48 })} alt={card.stats.type_name} class="w-6 h-6 object-contain" loading="lazy" decoding="async" />
+              <span class="text-sm">{card.stats.type_name}</span>
+            </span>
+            <span class="inline-flex items-center" title={`${card.stats.rarity} Stars`}>
+              {Array.from({ length: card.stats.rarity }, () => null).map(() => (
+                <img src={getStarIconUrl({ width: 40 })} alt="★" class="w-5 h-5 object-contain -ml-0.5 first:ml-0" loading="lazy" decoding="async" />
+              ))}
+            </span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        {card.description && (
+          <div class="card p-4">
+            <h2 class="font-semibold mb-2">Description</h2>
+            <div class="text-sm leading-relaxed" set:html={formatDescription(card.description)} />
+          </div>
+        )}
+
+        <!-- Stats -->
+        <div class="card p-4">
+          <h2 class="font-semibold mb-4">Stats</h2>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div>
+              <div class="text-secondary text-sm">Max ATK</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_atk)}</div>
+              <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_atk)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Max HP</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_hp)}</div>
+              <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_hp)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Speed</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.speed)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Crit Rate</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.crit)}</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4 pt-4" style="border-top: 1px solid var(--color-border);">
+            <div>
+              <div class="text-secondary text-sm">Max Level</div>
+              <div class="font-mono">{card.stats.max_level}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill -->
+        {card.skill && (
+          <div class="card p-4">
+            <h2 class="font-semibold mb-2">Skill</h2>
+            <div class="text-lg font-medium mb-1" style="color: var(--color-accent);">
+              {card.skill.name || 'Unknown Skill'}
+            </div>
+            <div class="text-sm mb-2" set:html={formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description available'} />
+            {card.skill.tags && card.skill.tags.length > 0 && (
+              <div class="flex flex-wrap gap-1.5 mt-2">
+                {card.skill.tags.map(tag => (
+                  <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-accent);">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        <!-- Abilities -->
+        {card.abilities.length > 0 && (
+          <div class="card p-4">
+            <h2 class="font-semibold mb-4">Abilities</h2>
+            <div class="space-y-4">
+              {card.abilities.map(ability => (
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <span class="font-medium" style="color: var(--color-highlight);">
+                      {ability.name}
+                    </span>
+                    {ability.unlock_level && (
+                      <span class="text-xs px-2 py-0.5 rounded" style="background-color: var(--color-surface); color: var(--color-text-secondary);">
+                        Lv. {ability.unlock_level}
+                      </span>
+                    )}
+                  </div>
+                  <div class="text-sm text-secondary">
+                    {ability.description}
+                  </div>
+                  {ability.tags && ability.tags.length > 0 && (
+                    <div class="flex flex-wrap gap-1.5 mt-1.5">
+                      {ability.tags.map(tag => (
+                        <span class="text-xs px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-highlight);">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- History -->
+        <div class="card p-4">
+          <h2 class="font-semibold mb-2">History</h2>
+          <div class="grid grid-cols-2 gap-4 text-sm">
+            <div>
+              <div class="text-secondary">First Seen</div>
+              <div>{formatDate(card.history.first_seen)}</div>
+              <div class="text-xs text-secondary">v{card.history.first_seen_version}</div>
+            </div>
+            <div>
+              <div class="text-secondary">Last Modified</div>
+              <div>{formatDate(card.history.last_modified)}</div>
+              <div class="text-xs text-secondary">v{card.history.last_modified_version}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Cards -->
+    {relatedCards.length > 0 && (
+      <div class="mt-8">
+        <h2 class="text-xl font-bold mb-4">Related Cards</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {relatedCards.map(related => (
+            <a href={`/cards/${related.id}`} class="card-grid-item text-center">
+              <img
+                src={getImageUrl(related, 'android') || '/placeholder-card.svg'}
+                alt={related.name || `Card #${related.id}`}
+                class="w-full h-auto rounded mb-2"
+                loading="lazy"
+              />
+              <div class="text-sm font-medium truncate">{related.name || `Card #${related.id}`}</div>
+              <div class="flex items-center justify-center gap-1 text-xs">
+                <img src={getAttributeIconUrl(related.stats.attribute_name, { width: 32 })} alt={related.stats.attribute_name} class="w-4 h-4 object-contain" loading="lazy" decoding="async" />
+                <img src={getTypeIconUrl(related.stats.type_name, { width: 32 })} alt={related.stats.type_name} class="w-4 h-4 object-contain" loading="lazy" decoding="async" />
+                <span class="inline-flex items-center">
+                  {Array.from({ length: related.stats.rarity }, () => null).map(() => (
+                    <img src={getStarIconUrl({ width: 24 })} alt="★" class="w-3 h-3 object-contain -ml-0.5 first:ml-0" loading="lazy" decoding="async" />
+                  ))}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>
