@@ -43,9 +43,37 @@ const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 }
 // Get image URLs (uses fallback to construct from asset_id if needed)
 const hdImageUrl = getImageUrl(card, 'hd');
 const sdImageUrl = getImageUrl(card, 'sd');
+
+// SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
+const seoImage = hdImageUrl || sdImageUrl || undefined;
+
+// JSON-LD structured data for the card
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": card.name || `Card #${card.id}`,
+  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "image": seoImage,
+  "url": `https://otogidb.com/cards/${card.id}`,
+  "creator": {
+    "@type": "Organization",
+    "name": "Mitama Games"
+  },
+  "isPartOf": {
+    "@type": "VideoGame",
+    "name": "Otogi Spirit Agents"
+  }
+};
 ---
 
-<BaseLayout title={card.name || `Card #${card.id}`} description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}>
+<BaseLayout
+  title={card.name || `Card #${card.id}`}
+  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  image={seoImage}
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6">
     <!-- Breadcrumb -->
     <nav class="mb-3 sm:mb-4 text-xs sm:text-sm">
@@ -57,7 +85,12 @@ const sdImageUrl = getImageUrl(card, 'sd');
     <!-- Mobile Header (xs only) - Shows above image -->
     <div class="md:hidden mb-3">
       <div class="flex items-center justify-between gap-2 mb-2">
-        <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+        <div class="flex items-center gap-2 min-w-0">
+          <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+          {!card.playable && (
+            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
+          )}
+        </div>
         <span class="text-xs font-mono text-secondary flex-shrink-0">#{card.id}</span>
       </div>
       <div class="flex items-center gap-2 flex-wrap">
@@ -119,6 +152,9 @@ const sdImageUrl = getImageUrl(card, 'sd');
         <div class="hidden md:block">
           <div class="flex items-center gap-3 mb-2">
             <h1 class="text-2xl lg:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
+            {!card.playable && (
+              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">NPC</span>
+            )}
             <span class="text-sm font-mono text-secondary">#{card.id}</span>
           </div>
 

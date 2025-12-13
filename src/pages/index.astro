@@ -1,9 +1,29 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CardTable from '../components/cards/CardTable';
+
+// JSON-LD WebSite structured data with search action
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "OtogiDB",
+  "url": "https://otogidb.com",
+  "description": "Otogi Spirit Agents Card Database - Complete card stats, skills, and abilities",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://otogidb.com/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+};
 ---
 
 <BaseLayout title="Card Database">
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
   <div class="container mx-auto px-4 py-6">
     <div class="mb-6">
       <h1 class="text-2xl md:text-3xl font-bold mb-2">Otogi Spirit Agents Card Database</h1>

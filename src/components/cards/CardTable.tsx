@@ -241,6 +241,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [bondFilter, setBondFilter] = useState<string[]>([]);
   const [skillTagFilter, setSkillTagFilter] = useState<string[]>([]);
   const [abilityTagFilter, setAbilityTagFilter] = useState<string[]>([]);
+  const [hideNonPlayable, setHideNonPlayable] = useState(true); // Hide NPC/enemy cards by default
 
   // Track if we're initializing from URL to prevent double-updates
   const isInitializing = useRef(true);
@@ -291,6 +292,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
       setSorting([{ id: sort, desc: dir === 'desc' }]);
     }
 
+    // Playable filter (show NPC cards if npc=1)
+    const npc = params.get('npc');
+    if (npc === '1') {
+      setHideNonPlayable(false);
+    }
+
     // Mark initialization complete after a tick
     setTimeout(() => {
       isInitializing.current = false;
@@ -314,13 +321,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
       params.set('sort', sorting[0].id);
       params.set('dir', sorting[0].desc ? 'desc' : 'asc');
     }
+    if (!hideNonPlayable) params.set('npc', '1');
 
     const newUrl = params.toString()
       ? `${window.location.pathname}?${params.toString()}`
       : window.location.pathname;
 
     window.history.replaceState({}, '', newUrl);
-  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sorting]);
+  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sorting, hideNonPlayable]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -394,8 +402,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (abilityTagFilter.length > 0) {
       filters.push({ id: 'abilityTags', value: abilityTagFilter });
     }
+    if (hideNonPlayable) {
+      filters.push({ id: 'playable', value: true });
+    }
     setColumnFilters(filters);
-  }, [attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter]);
+  }, [attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, hideNonPlayable]);
 
   // Get unique filter options
   const filterOptions = useMemo(() => {
@@ -582,12 +593,19 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: 'Name',
       size: 140,
       cell: ({ row }) => (
-        <a
-          href={`/cards/${row.original.id}`}
-          className="link font-medium hover:underline"
-        >
-          {row.original.name || `Card #${row.original.id}`}
-        </a>
+        <div className="flex items-center gap-1.5">
+          <a
+            href={`/cards/${row.original.id}`}
+            className="link font-medium hover:underline"
+          >
+            {row.original.name || `Card #${row.original.id}`}
+          </a>
+          {!row.original.playable && (
+            <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">
+              NPC
+            </span>
+          )}
+        </div>
       ),
     },
     {
@@ -690,6 +708,22 @@ export default function CardTable({ initialCards }: CardTableProps) {
         });
         // Check if ALL selected filter tags are present across the card's abilities
         return filterValue.every(f => allAbilityTags.includes(f));
+      },
+    },
+    {
+      id: 'playable',
+      accessorFn: (row) => row.playable,
+      header: 'Playable',
+      size: 0,
+      enableSorting: false,
+      meta: { hidden: true },
+      filterFn: (row, columnId, filterValue: boolean) => {
+        // When filter is true, only show playable cards
+        if (filterValue === true) {
+          return row.original.playable === true;
+        }
+        // When filter is false/undefined, show all cards
+        return true;
       },
     },
     {
@@ -836,6 +870,16 @@ export default function CardTable({ initialCards }: CardTableProps) {
         {/* Filter Dropdowns - wrap on small screens */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm text-secondary hidden sm:inline">Filters:</span>
+          <label className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+                 style={{ borderColor: hideNonPlayable ? 'var(--color-accent)' : 'var(--color-border)' }}>
+            <input
+              type="checkbox"
+              checked={hideNonPlayable}
+              onChange={(e) => setHideNonPlayable(e.target.checked)}
+              className="rounded"
+            />
+            <span>Hide NPCs</span>
+          </label>
           <FilterDropdown
             options={filterOptions.attributes}
             value={attributeFilter}
@@ -907,7 +951,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
         <div>
           Showing {table.getRowModel().rows.length} of {cards.length} cards
-          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0) && (
+          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || !hideNonPlayable) && (
             <button
               onClick={() => {
                 setAttributeFilter([]);
@@ -916,6 +960,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 setBondFilter([]);
                 setSkillTagFilter([]);
                 setAbilityTagFilter([]);
+                setHideNonPlayable(true);
               }}
               className="ml-2 text-accent hover:underline"
             >
@@ -925,7 +970,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
 
         {/* Share button */}
-        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sorting.length > 0) && (
+        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sorting.length > 0 || !hideNonPlayable) && (
           <div className="relative">
             <button
               onClick={handleShare}
@@ -1012,7 +1057,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 />
               </a>
               <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
-                <div className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</div>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</span>
+                  {!card.playable && (
+                    <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
+                  )}
+                </div>
                 <div className="flex items-center gap-1.5">
                   <AttributeIcon value={card.stats.attribute_name} size="sm" />
                   <TypeIcon value={card.stats.type_name} size="sm" />
@@ -1051,7 +1101,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 />
               </a>
               <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
-                <div className="font-medium truncate">{card.name || `Card #${card.id}`}</div>
+                <div className="flex items-center gap-1.5">
+                  <span className="font-medium truncate">{card.name || `Card #${card.id}`}</span>
+                  {!card.playable && (
+                    <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
+                  )}
+                </div>
                 <div className="flex items-center gap-2 text-sm">
                   <AttributeIcon value={card.stats.attribute_name} size="sm" />
                   <TypeIcon value={card.stats.type_name} size="sm" />
@@ -1114,7 +1169,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
           >
             {/* Header */}
             <div className="flex items-center justify-between p-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
-              <h3 className="font-bold truncate">{mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}</h3>
+              <div className="flex items-center gap-2 min-w-0">
+                <h3 className="font-bold truncate">{mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}</h3>
+                {!mobilePreviewCard.playable && (
+                  <span className="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
+                )}
+              </div>
               <button
                 onClick={() => setMobilePreviewCard(null)}
                 className="p-1 rounded"

@@ -81,6 +81,7 @@ export interface Card {
   asset_id: string;
   name: string | null;
   description: string | null;
+  playable: boolean; // True for obtainable cards, False for NPC/enemy cards
   stats: CardStats;
   skill: Skill | null;
   abilities: Ability[];

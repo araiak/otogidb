@@ -2,13 +2,28 @@
 import '../styles/global.css';
 import { themeInitScript } from '../lib/theme';
 import DebugPanel from '../components/DebugPanel';
+import SEO from '../components/SEO.astro';
 
 interface Props {
   title: string;
   description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    tags?: string[];
+  };
 }
 
-const { title, description = 'Otogi Spirit Agents Card Database - Complete card stats, skills, and abilities' } = Astro.props;
+const {
+  title,
+  description = 'Otogi Spirit Agents Card Database - Complete card stats, skills, and abilities',
+  image,
+  type = 'website',
+  article,
+} = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -19,6 +34,9 @@ const { title, description = 'Otogi Spirit Agents Card Database - Complete card 
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title} | OtogiDB</title>
+
+    <!-- SEO: Open Graph, Twitter Cards, Canonical -->
+    <SEO title={title} description={description} image={image} type={type} article={article} />
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />
