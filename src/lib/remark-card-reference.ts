@@ -64,17 +64,24 @@ export function remarkCardReference() {
         }
 
         if (cardId) {
-          // Create a link node
+          // Create a link node with data attributes for client-side hydration
+          // Using 'as any' because mdast types don't include hProperties but rehype processes them
           newNodes.push({
             type: 'link',
             url: `/cards/${cardId}`,
+            data: {
+              hProperties: {
+                className: 'card-ref',
+                'data-card-id': cardId,
+              },
+            },
             children: [
               {
                 type: 'text',
                 value: cardName || `Card #${cardId}`,
               },
             ],
-          });
+          } as any);
         } else {
           // Card not found, just output the text
           newNodes.push({

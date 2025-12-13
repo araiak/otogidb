@@ -2,6 +2,15 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { formatDate } from '../../lib/formatters';
+import CardReferencePopups from '../../components/blog/CardReferencePopups';
+import type { CardsData } from '../../types/card';
+
+// Import cards and skills data for popups
+import cardsDataRaw from '../../../public/data/cards.json';
+import skillsDataRaw from '../../../public/data/skills.json';
+
+const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog');
@@ -50,6 +59,9 @@ const { Content } = await post.render();
         <Content />
       </div>
     </article>
+
+    <!-- Card reference hover popups -->
+    <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
 
     <!-- Back to blog -->
     <div class="mt-6">
