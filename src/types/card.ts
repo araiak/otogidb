@@ -56,6 +56,8 @@ export interface Bond {
 
 export interface CardMeta {
   art_id: string | null;
+  artist_name: string | null;
+  artist_name_jp: string | null;
   cv_id: string | null;
   album: boolean;
   generation: number;
@@ -76,6 +78,64 @@ export interface CardHistory {
   changelog: ChangelogEntry[];
 }
 
+// Acquisition source types
+export interface GachaBanner {
+  start: string;
+  end: string;
+  pity: number;
+  is_current: boolean;
+}
+
+export interface GachaAcquisition {
+  in_standard_pool: boolean;
+  featured_banners: GachaBanner[];
+}
+
+export interface ExchangeEntry {
+  start: string;
+  end: string;
+  price: number;
+  currency: string;
+  limit: number;
+  is_current: boolean;
+}
+
+export interface ExchangeAcquisition {
+  entries: ExchangeEntry[];
+}
+
+export interface AuctionAcquisition {
+  available: boolean;
+  price_min: number | null;
+  price_max: number | null;
+  currency?: string; // 'gold' = Jewels, 'gApple' = Mochi
+  is_time_limited?: boolean;
+}
+
+export interface EventRewardTier {
+  tier: string;
+  quantity: number;
+  event_id: string;
+  event_name?: string;
+  is_current: boolean;
+}
+
+export interface EventAcquisition {
+  reward_tiers: EventRewardTier[];
+}
+
+export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event';
+
+export interface CardAcquisition {
+  sources: AcquisitionSource[];
+  currently_available: boolean;
+  availability_summary: string[]; // e.g., ['Standard Gacha', 'Auction']
+  gacha: GachaAcquisition;
+  exchange: ExchangeAcquisition;
+  auction: AuctionAcquisition;
+  event: EventAcquisition;
+}
+
 export interface Card {
   id: string;
   asset_id: string;
@@ -90,6 +150,7 @@ export interface Card {
   image_urls: ImageUrls;
   meta: CardMeta;
   history: CardHistory;
+  acquisition?: CardAcquisition; // Optional for backwards compatibility
 }
 
 export interface CardsData {
