@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback } from '../../lib/images';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderMascot } from '../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../lib/similarity';
 import type { Card, CardsData } from '../../types/card';
 
@@ -117,7 +117,7 @@ const jsonLd = {
           <!-- Mobile: Centered smaller image -->
           <div class="flex justify-center md:block">
             <img
-              src={hdImageUrl || sdImageUrl || '/placeholder-card.svg'}
+              src={hdImageUrl || sdImageUrl || getPlaceholderHD()}
               alt={card.name || `Card #${card.id}`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"
@@ -334,7 +334,7 @@ const jsonLd = {
             <a href={`/cards/${related.id}`} class="card-grid-item text-center group p-1.5 sm:p-2">
               <div class="relative inline-block">
                 <img
-                  src={getAndroidImageWithFallback(related, 128) || '/placeholder-card.svg'}
+                  src={getAndroidImageWithFallback(related, 128)}
                   alt={related.name || `Card #${related.id}`}
                   class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto object-cover"
                   loading="lazy"

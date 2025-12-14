@@ -52,8 +52,14 @@ function constructCloudinaryUrl(assetId: string, variant: ImageVariant): string 
  * Get the appropriate image URL for a card based on environment
  * Production: Cloudinary URLs (from image_urls or constructed from asset_id)
  * Development: Local file paths
+ *
+ * Returns null if the image doesn't exist, allowing callers to use placeholders.
  */
 export function getImageUrl(card: Card, variant: ImageVariant): string | null {
+  // First check if the image actually exists in card.images
+  // If it's null/undefined, the image doesn't exist - return null for placeholder
+  const imageExists = card.images?.[variant] != null;
+
   if (USE_LOCAL_IMAGES) {
     // Local development: use local paths
     const localPath = card.images?.[variant];
@@ -61,12 +67,12 @@ export function getImageUrl(card: Card, variant: ImageVariant): string | null {
     return `/images/${localPath}`;
   }
 
-  // Production: try image_urls first, then construct from asset_id
+  // Production: try image_urls first
   const existingUrl = card.image_urls?.[variant];
   if (existingUrl) return existingUrl;
 
-  // Fallback: construct URL from asset_id
-  if (card.asset_id) {
+  // Only construct URL from asset_id if the image actually exists
+  if (imageExists && card.asset_id) {
     return constructCloudinaryUrl(card.asset_id, variant);
   }
 
@@ -166,9 +172,61 @@ export function getHDImageUrl(card: Card): string | null {
 }
 
 /**
- * Placeholder image for missing/failed images
+ * Get HD image with placeholder fallback for detail pages
  */
-export const PLACEHOLDER_IMAGE = '/placeholder-card.svg';
+export function getHDImageUrlWithFallback(card: Card, width?: number): string {
+  const hdUrl = getHDImageUrl(card);
+  if (hdUrl) return hdUrl;
+  return getPlaceholderHD(width);
+}
+
+/**
+ * Placeholder images hosted on Cloudinary with AI upscaling support
+ */
+const PLACEHOLDER_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
+
+// HD card placeholder - game-style card with Sola's "Sorry, Master!" message
+const PLACEHOLDER_CARD_ID = 'v1765670205/placeholder-card_q0umz7.png';
+
+// Mascot placeholder - sad chibi character for errors
+const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
+
+/**
+ * Get HD placeholder with AI upscaling
+ * Upscales to match HD card dimensions (492x632)
+ *
+ * TODO: Review upscaling quality - current AI upscaling may have jagged edges.
+ * Consider: higher res source image, different Cloudinary transforms, or
+ * pre-upscaled placeholder uploaded directly to Cloudinary.
+ */
+export function getPlaceholderHD(width: number = 492, height: number = 632): string {
+  // Use Cloudinary's AI upscaling for smooth results
+  const transforms = [
+    `w_${width}`,
+    `h_${height}`,
+    'c_fit',             // Fit within dimensions
+    'e_upscale',         // AI upscaling
+    'q_100',             // Max quality
+    'f_png'              // PNG for crisp lines
+  ];
+  return `${PLACEHOLDER_BASE}/${transforms.join(',')}/${PLACEHOLDER_CARD_ID}`;
+}
+
+/**
+ * Get mascot placeholder for android/circle images and errors
+ */
+export function getPlaceholderMascot(size?: number): string {
+  const transforms = ['f_auto', 'q_auto'];
+  if (size) {
+    transforms.push(`w_${size}`, `h_${size}`, 'c_fit');
+  }
+  return `${PLACEHOLDER_BASE}/${transforms.join(',')}/${PLACEHOLDER_MASCOT_ID}`;
+}
+
+/**
+ * Default placeholder image (HD card style)
+ */
+export const PLACEHOLDER_IMAGE = getPlaceholderHD();
 
 /**
  * Generate a circle thumbnail from HD image using Cloudinary transformations.
@@ -197,10 +255,10 @@ export function getCircleThumbnailFromHD(card: Card, size: number = 128): string
 }
 
 /**
- * Get android circle image, with fallback to HD-generated circle
+ * Get android circle image, with fallback to HD-generated circle, then mascot
  * For cards 1-100 that don't have android images on CDN
  */
-export function getAndroidImageWithFallback(card: Card, size: number = 128): string | null {
+export function getAndroidImageWithFallback(card: Card, size: number = 128): string {
   // First try to get actual android image
   const androidUrl = getImageUrl(card, 'android');
   if (androidUrl) {
@@ -213,5 +271,9 @@ export function getAndroidImageWithFallback(card: Card, size: number = 128): str
   }
 
   // Fallback: generate circle from HD using content-aware crop
-  return getCircleThumbnailFromHD(card, size);
+  const hdCircle = getCircleThumbnailFromHD(card, size);
+  if (hdCircle) return hdCircle;
+
+  // Final fallback: sad mascot placeholder
+  return getPlaceholderMascot(size);
 }

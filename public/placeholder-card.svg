@@ -1,5 +1,42 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
-  <rect width="100" height="100" rx="8" fill="#2B3856"/>
-  <rect x="20" y="35" width="60" height="30" rx="4" fill="#3B4866"/>
-  <text x="50" y="55" font-family="Arial, sans-serif" font-size="12" fill="#A3A3A8" text-anchor="middle">No Image</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 195" fill="none">
+  <!-- Card background with gradient like the game's no-data card -->
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3d4a5c"/>
+      <stop offset="50%" style="stop-color:#2d3a4a"/>
+      <stop offset="100%" style="stop-color:#1d2a3a"/>
+    </linearGradient>
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b6b4a"/>
+      <stop offset="50%" style="stop-color:#c4a06a"/>
+      <stop offset="100%" style="stop-color:#8b6b4a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer border -->
+  <rect x="2" y="2" width="146" height="191" rx="6" fill="url(#borderGrad)"/>
+
+  <!-- Inner card -->
+  <rect x="6" y="6" width="138" height="183" rx="4" fill="url(#cardBg)"/>
+
+  <!-- Decorative corners -->
+  <path d="M15 15 L30 15 L30 18 L18 18 L18 30 L15 30 Z" fill="#8b6b4a" opacity="0.8"/>
+  <path d="M135 15 L120 15 L120 18 L132 18 L132 30 L135 30 Z" fill="#8b6b4a" opacity="0.8"/>
+  <path d="M15 180 L30 180 L30 177 L18 177 L18 165 L15 165 Z" fill="#8b6b4a" opacity="0.8"/>
+  <path d="M135 180 L120 180 L120 177 L132 177 L132 165 L135 165 Z" fill="#8b6b4a" opacity="0.8"/>
+
+  <!-- Character silhouette circle -->
+  <circle cx="75" cy="60" r="35" fill="#2a3545" stroke="#5a6a7a" stroke-width="2"/>
+
+  <!-- Simple character silhouette -->
+  <ellipse cx="75" cy="52" rx="12" ry="15" fill="#4a5a6a"/>
+  <ellipse cx="75" cy="78" rx="20" ry="16" fill="#4a5a6a"/>
+
+  <!-- Speech bubble -->
+  <path d="M18 105 Q18 98 26 98 L124 98 Q132 98 132 105 L132 145 Q132 152 124 152 L82 152 L75 162 L68 152 L26 152 Q18 152 18 145 Z" fill="#f5f0e8" stroke="#d4c4a8" stroke-width="1.5"/>
+
+  <!-- Speech text - Sola style -->
+  <text x="75" y="118" font-family="Arial, sans-serif" font-size="10" fill="#5a4a3a" text-anchor="middle" font-weight="bold">Sorry, Master!</text>
+  <text x="75" y="132" font-family="Arial, sans-serif" font-size="9" fill="#6a5a4a" text-anchor="middle">This card</text>
+  <text x="75" y="145" font-family="Arial, sans-serif" font-size="9" fill="#6a5a4a" text-anchor="middle">got away~</text>
 </svg>

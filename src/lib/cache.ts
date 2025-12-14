@@ -173,18 +173,18 @@ export async function fetchWithCache<T>(
 
   // Calculate hash and extract version if available
   const hash = calculateHash(text);
-  const version = (data as Record<string, unknown>).version as string || '';
+  const dataVersion = (data as Record<string, unknown>).version as string || '';
 
   // Cache the result
   if (typeof indexedDB !== 'undefined') {
     await setCache({
       key: cacheKey,
       data,
-      version,
+      version: dataVersion,
       hash,
       cachedAt: Date.now()
     });
-    console.log(`[Cache] Stored: ${url} (version: ${version}, hash: ${hash})`);
+    console.log(`[Cache] Stored: ${url} (version: ${dataVersion}, hash: ${hash})`);
   }
 
   return data;
