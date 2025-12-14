@@ -1,10 +1,20 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getPlaceholderMascot, getAndroidImageWithFallback } from '../../lib/images';
-import type { Card } from '../../types/card';
+
+// Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
+interface CardIndexEntry {
+  id: string;
+  asset_id: string;
+  name: string;
+  image_urls: {
+    android?: string | null;
+    sd?: string | null;
+  };
+}
 
 // Load cards index for image lookups
-let cardsIndex: Record<string, Card> = {};
+let cardsIndex: Record<string, CardIndexEntry> = {};
 try {
   const cardsData = await import('../../../public/data/cards_index.json');
   cardsIndex = (cardsData.default || cardsData).cards || {};

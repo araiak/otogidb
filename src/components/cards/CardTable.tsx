@@ -616,7 +616,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       cell: ({ row }) => (
         <AttributeIcon value={row.original.stats.attribute_name} size="md" />
       ),
-      filterFn: (row, columnId, filterValue: string[]) => {
+      filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         return filterValue.includes(row.original.stats.attribute_name);
       },
@@ -629,7 +629,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       cell: ({ row }) => (
         <TypeIcon value={row.original.stats.type_name} size="md" />
       ),
-      filterFn: (row, columnId, filterValue: string[]) => {
+      filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         return filterValue.includes(row.original.stats.type_name);
       },
@@ -642,7 +642,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       cell: ({ getValue }) => (
         <RarityStars value={getValue() as number} size="sm" />
       ),
-      filterFn: (row, columnId, filterValue: number[]) => {
+      filterFn: (row, _columnId, filterValue: number[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         return filterValue.includes(row.original.stats.rarity);
       },
@@ -661,7 +661,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                           bondType === 'HP' ? 'text-green-400' : '';
         return <span className={`text-sm font-medium ${colorClass}`}>{bondType}</span>;
       },
-      filterFn: (row, columnId, filterValue: string[]) => {
+      filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         const bonds = row.original.bonds || [];
         if (bonds.length === 0) return false;
@@ -676,7 +676,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       size: 0,
       enableSorting: false,
       meta: { hidden: true },
-      filterFn: (row, columnId, filterValue: string[]) => {
+      filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         const tags = row.original.skill?.tags || [];
         if (tags.length === 0) return false;
@@ -697,7 +697,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       size: 0,
       enableSorting: false,
       meta: { hidden: true },
-      filterFn: (row, columnId, filterValue: string[]) => {
+      filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
         const abilities = row.original.abilities || [];
         if (abilities.length === 0) return false;
@@ -717,7 +717,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       size: 0,
       enableSorting: false,
       meta: { hidden: true },
-      filterFn: (row, columnId, filterValue: boolean) => {
+      filterFn: (row, _columnId, filterValue: boolean) => {
         // When filter is true, only show playable cards
         if (filterValue === true) {
           return row.original.playable === true;

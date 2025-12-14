@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderMascot } from '../../lib/images';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../lib/similarity';
 import type { Card, CardsData } from '../../types/card';
 
@@ -26,11 +26,7 @@ export async function getStaticPaths() {
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 
-interface Props {
-  card: Card;
-}
-
-const { card } = Astro.props;
+const { card } = Astro.props as { card: Card };
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
