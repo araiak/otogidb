@@ -8,6 +8,7 @@ interface CardIndexEntry {
   name: string | null;
   image_urls?: {
     android?: string | null;
+    hd?: string | null;
   };
 }
 
@@ -30,28 +31,51 @@ function getPlaceholderCard(size: number = 60): string {
   return `${CLOUDINARY_BASE}/w_${size},h_${size},c_fill,r_max,f_auto,q_auto/${PLACEHOLDER_CARD_ID}`;
 }
 
-// Get card thumbnail - simplified version that works with minimal card data
+// Generate circle thumbnail from HD image using Cloudinary transformations
+function getCircleFromHD(hdUrl: string, size: number = 60): string {
+  if (!hdUrl.includes('cloudinary.com')) return hdUrl;
+  // Use face detection with content-aware fallback for best centering
+  const transforms = `w_${size},h_${size},c_thumb,g_face:auto,r_max,f_auto,q_auto`;
+  return hdUrl.replace('/upload/', `/upload/${transforms}/`);
+}
+
+// Get card thumbnail with proper fallback chain:
+// 1. Android image (circle) if available
+// 2. Generate circle from HD image if available
+// 3. Sola placeholder as final fallback
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
   if (!card) return getPlaceholderCard(60);
 
-  // Try image_urls.android first
+  // 1. Try android image first
   const androidUrl = card.image_urls?.android;
   if (androidUrl) {
-    // Apply size optimization for Cloudinary URLs
     if (androidUrl.includes('cloudinary.com')) {
       return androidUrl.replace('/upload/', '/upload/w_60,h_60,c_fill,r_max,f_auto,q_auto/');
     }
     return androidUrl;
   }
 
-  // Fallback: construct URL from asset_id (cards 100001-100100 don't have android images)
+  // Also try constructing android URL from asset_id (cards > 100100 have android images)
   const assetId = parseInt(card.asset_id);
   if (assetId > 100100) {
     return `${CLOUDINARY_BASE}/w_60,h_60,c_fill,r_max,f_auto,q_auto/otogi/android/${card.asset_id}.png`;
   }
 
-  // Use Sola placeholder for cards without images
+  // 2. Try generating circle from HD image
+  const hdUrl = card.image_urls?.hd;
+  if (hdUrl) {
+    return getCircleFromHD(hdUrl, 60);
+  }
+
+  // Also try constructing HD URL from asset_id
+  const constructedHdUrl = `${CLOUDINARY_BASE}/otogi/cards_hd/${card.asset_id}_hd.png`;
+  // For cards 100001-100100, they have HD images but no android
+  if (assetId >= 100001 && assetId <= 100100) {
+    return getCircleFromHD(constructedHdUrl, 60);
+  }
+
+  // 3. Sola placeholder as final fallback
   return getPlaceholderCard(60);
 }
 
