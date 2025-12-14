@@ -6,6 +6,10 @@ interface CardIndexEntry {
   id: string;
   asset_id: string;
   name: string | null;
+  images?: {
+    android?: string | null;
+    hd?: string | null;
+  };
   image_urls?: {
     android?: string | null;
     hd?: string | null;
@@ -24,11 +28,11 @@ try {
 // Cloudinary base for constructing URLs
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
 
-// Sola placeholder card - "Sorry, Master!" message for cards without images
-const PLACEHOLDER_CARD_ID = 'v1765670205/placeholder-card_q0umz7.png';
+// Mascot placeholder - sad chibi for cards without images
+const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
 
-function getPlaceholderCard(size: number = 60): string {
-  return `${CLOUDINARY_BASE}/w_${size},h_${size},c_fill,r_max,f_auto,q_auto/${PLACEHOLDER_CARD_ID}`;
+function getPlaceholderMascot(size: number = 60): string {
+  return `${CLOUDINARY_BASE}/w_${size},h_${size},c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
 }
 
 // Generate circle thumbnail from HD image using Cloudinary transformations
@@ -40,14 +44,16 @@ function getCircleFromHD(hdUrl: string, size: number = 60): string {
 }
 
 // Get card thumbnail with proper fallback chain:
-// 1. Android image (circle) if available
-// 2. Generate circle from HD image if available
-// 3. Sola placeholder as final fallback
+// 1. Android image from image_urls (if populated)
+// 2. Construct android URL if card has android in images field
+// 3. HD image from image_urls transformed to circle
+// 4. Construct HD URL if card has hd in images field
+// 5. Mascot placeholder for cards without any images
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
-  if (!card) return getPlaceholderCard(60);
+  if (!card) return getPlaceholderMascot(60);
 
-  // 1. Try android image first
+  // 1. Try android image from image_urls first
   const androidUrl = card.image_urls?.android;
   if (androidUrl) {
     if (androidUrl.includes('cloudinary.com')) {
@@ -56,27 +62,25 @@ function getCardThumbnail(cardId: string): string {
     return androidUrl;
   }
 
-  // Also try constructing android URL from asset_id (cards > 100100 have android images)
-  const assetId = parseInt(card.asset_id);
-  if (assetId > 100100) {
+  // 2. Construct android URL only if card has an android image
+  if (card.images?.android) {
     return `${CLOUDINARY_BASE}/w_60,h_60,c_fill,r_max,f_auto,q_auto/otogi/android/${card.asset_id}.png`;
   }
 
-  // 2. Try generating circle from HD image
+  // 3. Try HD image from image_urls
   const hdUrl = card.image_urls?.hd;
   if (hdUrl) {
     return getCircleFromHD(hdUrl, 60);
   }
 
-  // Also try constructing HD URL from asset_id
-  const constructedHdUrl = `${CLOUDINARY_BASE}/otogi/cards_hd/${card.asset_id}_hd.png`;
-  // For cards 100001-100100, they have HD images but no android
-  if (assetId >= 100001 && assetId <= 100100) {
+  // 4. Construct HD URL only if card has an HD image
+  if (card.images?.hd) {
+    const constructedHdUrl = `${CLOUDINARY_BASE}/otogi/cards_hd/${card.asset_id}_hd.png`;
     return getCircleFromHD(constructedHdUrl, 60);
   }
 
-  // 3. Sola placeholder as final fallback
-  return getPlaceholderCard(60);
+  // 5. Mascot placeholder for cards without any images
+  return getPlaceholderMascot(60);
 }
 
 // Load manifest at build time
