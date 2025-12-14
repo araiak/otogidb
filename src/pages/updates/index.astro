@@ -1,15 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPlaceholderMascot, getAndroidImageWithFallback } from '../../lib/images';
+import { getPlaceholderMascot } from '../../lib/images';
 
 // Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
 interface CardIndexEntry {
   id: string;
   asset_id: string;
-  name: string;
-  image_urls: {
+  name: string | null;
+  image_urls?: {
     android?: string | null;
-    sd?: string | null;
   };
 }
 
@@ -18,16 +17,34 @@ let cardsIndex: Record<string, CardIndexEntry> = {};
 try {
   const cardsData = await import('../../../public/data/cards_index.json');
   cardsIndex = (cardsData.default || cardsData).cards || {};
-} catch (e) {
+} catch (_e) {
   console.warn('Failed to load cards index for images');
 }
 
-// Get card thumbnail with proper fallback chain
+// Cloudinary base for constructing URLs
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
+
+// Get card thumbnail - simplified version that works with minimal card data
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
-  if (card) {
-    return getAndroidImageWithFallback(card, 60);
+  if (!card) return getPlaceholderMascot(60);
+
+  // Try image_urls.android first
+  const androidUrl = card.image_urls?.android;
+  if (androidUrl) {
+    // Apply size optimization for Cloudinary URLs
+    if (androidUrl.includes('cloudinary.com')) {
+      return androidUrl.replace('/upload/', '/upload/w_60,h_60,c_fill,r_max,f_auto,q_auto/');
+    }
+    return androidUrl;
   }
+
+  // Fallback: construct URL from asset_id (cards 100001-100100 don't have android images)
+  const assetId = parseInt(card.asset_id);
+  if (assetId > 100100) {
+    return `${CLOUDINARY_BASE}/w_60,h_60,c_fill,r_max,f_auto,q_auto/otogi/android/${card.asset_id}.png`;
+  }
+
   return getPlaceholderMascot(60);
 }
 
