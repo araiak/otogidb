@@ -11,12 +11,18 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
-import { getCardsData, getSkillsData } from '../../lib/cards';
+import { getCardsData, getSkillsData, type CardLocale } from '../../lib/cards';
 import { getThumbnailUrl, getPopupImageUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription, type SkillData } from '../../lib/formatters';
 import { createSearchIndex, searchCards } from '../../lib/search';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import CardPopup from './CardPopup';
+import {
+  extractLocaleFromPath,
+  getStoredLocale,
+  LOCALE_STORAGE_KEY,
+  type SupportedLocale
+} from '../../lib/i18n';
 
 interface CardTableProps {
   initialCards?: Card[];
@@ -195,15 +201,16 @@ function GroupedTagDropdown({
 }
 
 // Image cell with hover popup and link to card page
-function ImageCell({ card, skillData }: { card: Card; skillData?: SkillData | null }) {
+function ImageCell({ card, skillData, locale }: { card: Card; skillData?: SkillData | null; locale: SupportedLocale }) {
   const [isHovered, setIsHovered] = useState(false);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const url = getThumbnailUrl(card);
+  const cardUrl = locale === 'en' ? `/cards/${card.id}` : `/${locale}/cards/${card.id}`;
 
   return (
     <>
       <a
-        href={`/cards/${card.id}`}
+        href={cardUrl}
         ref={setReferenceElement}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -224,10 +231,61 @@ function ImageCell({ card, skillData }: { card: Card; skillData?: SkillData | nu
 }
 
 export default function CardTable({ initialCards }: CardTableProps) {
+  // Detect locale from URL path first, then fall back to stored preference
+  const detectLocale = useCallback((): SupportedLocale => {
+    if (typeof window === 'undefined') return 'en';
+
+    // Check URL path first (e.g., /ja/cards/...)
+    const pathLocale = extractLocaleFromPath(window.location.pathname);
+    if (pathLocale !== 'en') return pathLocale;
+
+    // Fall back to stored preference
+    return getStoredLocale() || 'en';
+  }, []);
+
+  const [locale, setLocale] = useState<SupportedLocale>('en');
+
+  // Helper to generate locale-aware card URLs
+  const getCardUrl = useCallback((cardId: string) => {
+    return locale === 'en' ? `/cards/${cardId}` : `/${locale}/cards/${cardId}`;
+  }, [locale]);
+
   const [cards, setCards] = useState<Card[]>(initialCards || []);
   const [skills, setSkills] = useState<Record<string, SkillData>>({});
   const [loading, setLoading] = useState(!initialCards);
   const [error, setError] = useState<string | null>(null);
+
+  // Detect locale on mount
+  useEffect(() => {
+    setLocale(detectLocale());
+  }, [detectLocale]);
+
+  // Listen for locale changes (when user switches language)
+  useEffect(() => {
+    const handleStorageChange = (e: StorageEvent) => {
+      if (e.key === LOCALE_STORAGE_KEY && e.newValue) {
+        const newLocale = e.newValue as SupportedLocale;
+        if (newLocale !== locale) {
+          setLocale(newLocale);
+        }
+      }
+    };
+
+    // Also listen for custom event (for same-tab changes)
+    const handleLocaleChange = (e: CustomEvent<{ locale: SupportedLocale }>) => {
+      if (e.detail.locale !== locale) {
+        setLocale(e.detail.locale);
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    window.addEventListener('otogidb-locale-change' as any, handleLocaleChange as any);
+
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+      window.removeEventListener('otogidb-locale-change' as any, handleLocaleChange as any);
+    };
+  }, [locale]);
 
   // Table state
   const [sorting, setSorting] = useState<SortingState>([]);
@@ -368,12 +426,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }
   }, []);
 
-  // Load cards and skills
+  // Load cards and skills - reload when locale changes
   useEffect(() => {
     async function loadData() {
+      setLoading(true);
+      setError(null);
       try {
         const [cardsData, skillsData] = await Promise.all([
-          initialCards ? Promise.resolve({ cards: Object.fromEntries(initialCards.map(c => [c.id, c])) }) : getCardsData(),
+          initialCards ? Promise.resolve({ cards: Object.fromEntries(initialCards.map(c => [c.id, c])) }) : getCardsData({ locale: locale as CardLocale }),
           getSkillsData()
         ]);
 
@@ -391,7 +451,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }
 
     loadData();
-  }, [initialCards]);
+  }, [initialCards, locale]);
 
   // Update column filters when filter values change
   useEffect(() => {
@@ -615,7 +675,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skillData={row.original.skill ? skills[row.original.skill.id] : null} />,
+      cell: ({ row }) => <ImageCell card={row.original} skillData={row.original.skill ? skills[row.original.skill.id] : null} locale={locale} />,
     },
     {
       accessorKey: 'id',
@@ -632,7 +692,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       cell: ({ row }) => (
         <div className="flex items-center gap-1.5">
           <a
-            href={`/cards/${row.original.id}`}
+            href={getCardUrl(row.original.id)}
             className="link font-medium hover:underline"
           >
             {row.original.name || `Card #${row.original.id}`}
@@ -903,7 +963,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
       ),
     },
-  ], [skills]);
+  ], [skills, locale]);
 
   // Create table instance
   const table = useReactTable({
@@ -1176,7 +1236,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
           const imgUrl = getThumbnailUrl(card);
           return (
             <div key={row.id} className="card-grid-item flex items-center gap-3 py-2">
-              <a href={`/cards/${card.id}`} className="flex-shrink-0">
+              <a href={getCardUrl(card.id)} className="flex-shrink-0">
                 <img
                   src={imgUrl || PLACEHOLDER_IMAGE}
                   alt={card.name || `Card #${card.id}`}
@@ -1184,7 +1244,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                   loading="lazy"
                 />
               </a>
-              <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
+              <a href={getCardUrl(card.id)} className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
                   <span className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</span>
                   {!card.playable && (
@@ -1220,7 +1280,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
           const imgUrl = getThumbnailUrl(card);
           return (
             <div key={row.id} className="card-grid-item flex items-center gap-3">
-              <a href={`/cards/${card.id}`} className="flex-shrink-0">
+              <a href={getCardUrl(card.id)} className="flex-shrink-0">
                 <img
                   src={imgUrl || PLACEHOLDER_IMAGE}
                   alt={card.name || `Card #${card.id}`}
@@ -1228,7 +1288,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                   loading="lazy"
                 />
               </a>
-              <a href={`/cards/${card.id}`} className="flex-1 min-w-0">
+              <a href={getCardUrl(card.id)} className="flex-1 min-w-0">
                 <div className="flex items-center gap-1.5">
                   <span className="font-medium truncate">{card.name || `Card #${card.id}`}</span>
                   {!card.playable && (
@@ -1387,7 +1447,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             {/* Footer */}
             <div className="p-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
               <a
-                href={`/cards/${mobilePreviewCard.id}`}
+                href={getCardUrl(mobilePreviewCard.id)}
                 className="btn-primary w-full text-center py-2 rounded block"
               >
                 View Full Details

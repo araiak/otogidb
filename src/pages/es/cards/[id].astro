@@ -1,0 +1,379 @@
+---
+/**
+ * Spanish Card Detail Page
+ * Loads card data from /data/es/cards.json with Spanish names/descriptions
+ * UI elements (tags, labels) remain in English
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
+import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
+import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
+import type { Card, CardsData } from '../../../types/card';
+
+// Import locale cards data and English skills data at build time
+import cardsDataRaw from '../../../../public/data/es/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
+
+// For similar cards, we use English data to get names for linking
+import enCardsDataRaw from '../../../../public/data/cards.json';
+
+const currentLocale = 'es';
+const localeName = 'Español';
+
+export async function getStaticPaths() {
+  const cardsData = cardsDataRaw as unknown as CardsData;
+
+  const paths = Object.keys(cardsData.cards).map(id => ({
+    params: { id },
+    props: { card: cardsData.cards[id] }
+  }));
+
+  return paths;
+}
+
+const cardsData = cardsDataRaw as unknown as CardsData;
+const enCardsData = enCardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
+
+const { card } = Astro.props as { card: Card };
+
+// Get skill data for formatting
+const skillData = card.skill ? skillsData[card.skill.id] : null;
+
+// Get similar cards using English data for consistent comparison
+const allCards = Object.values(enCardsData.cards) as Card[];
+const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 });
+
+// Get image URLs
+const hdImageUrl = getImageUrl(card, 'hd');
+const sdImageUrl = getImageUrl(card, 'sd');
+const seoImage = hdImageUrl || sdImageUrl || undefined;
+
+// Helper to get localized card URL
+const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
+
+// JSON-LD structured data
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": card.name || `Card #${card.id}`,
+  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "image": seoImage,
+  "url": `https://otogidb.com/${currentLocale}/cards/${card.id}`,
+  "inLanguage": currentLocale,
+  "creator": {
+    "@type": "Organization",
+    "name": "Mitama Games"
+  },
+  "isPartOf": {
+    "@type": "VideoGame",
+    "name": "Otogi Spirit Agents"
+  }
+};
+---
+
+<BaseLayout
+  title={card.name || `Card #${card.id}`}
+  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  image={seoImage}
+  lang={currentLocale}
+>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6">
+    <!-- Breadcrumb with language indicator -->
+    <nav class="mb-3 sm:mb-4 text-xs sm:text-sm flex items-center justify-between">
+      <div>
+        <a href={`/${currentLocale}`} class="link">Cards</a>
+        <span class="mx-1 sm:mx-2">/</span>
+        <span class="text-secondary truncate">{card.name || `Card #${card.id}`}</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href={`/cards/${card.id}`} class="text-xs px-2 py-1 rounded hover:bg-white/10 transition-colors" title="View in English">EN</a>
+        <span class="text-xs px-2 py-1 rounded bg-white/10 font-medium">ES</span>
+      </div>
+    </nav>
+
+    <!-- Mobile Header -->
+    <div class="md:hidden mb-3">
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <div class="flex items-center gap-2 min-w-0">
+          <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+          {!card.playable && (
+            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
+          )}
+        </div>
+        <span class="text-xs font-mono text-secondary flex-shrink-0">#{card.id}</span>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="inline-flex items-center gap-1">
+          <img src={getAttributeIconUrl(card.stats.attribute_name, { width: 32 })} alt={card.stats.attribute_name} class="w-5 h-5 object-contain" />
+          <span class="text-xs">{card.stats.attribute_name}</span>
+        </span>
+        <span class="inline-flex items-center gap-1">
+          <img src={getTypeIconUrl(card.stats.type_name, { width: 32 })} alt={card.stats.type_name} class="w-5 h-5 object-contain" />
+          <span class="text-xs">{card.stats.type_name}</span>
+        </span>
+        <span class="inline-flex items-center">
+          {Array.from({ length: card.stats.rarity }, () => null).map(() => (
+            <img src={getStarIconUrl({ width: 32 })} alt="★" class="w-4 h-4 object-contain -ml-0.5 first:ml-0" />
+          ))}
+        </span>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-5 lg:grid-cols-3 gap-4 sm:gap-6">
+      <!-- Card Image -->
+      <div class="md:col-span-2 lg:col-span-1">
+        <div class="card p-3 sm:p-4 md:sticky md:top-20">
+          <div class="flex justify-center md:block">
+            <img
+              src={hdImageUrl || sdImageUrl || getPlaceholderHD()}
+              alt={card.name || `Card #${card.id}`}
+              class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Quick Stats (Mobile/Tablet) -->
+          <div class="lg:hidden mt-3 sm:mt-4 grid grid-cols-4 gap-1.5 sm:gap-2 text-xs sm:text-sm">
+            <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary text-[10px] sm:text-xs">ATK</div>
+              <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(card.stats.max_atk)}</div>
+            </div>
+            <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary text-[10px] sm:text-xs">HP</div>
+              <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(card.stats.max_hp)}</div>
+            </div>
+            <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary text-[10px] sm:text-xs">SPD</div>
+              <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(card.stats.speed)}</div>
+            </div>
+            <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
+              <div class="text-secondary text-[10px] sm:text-xs">CRIT</div>
+              <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(card.stats.crit)}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Info -->
+      <div class="md:col-span-3 lg:col-span-2 space-y-4 sm:space-y-6">
+        <!-- Header (Desktop) -->
+        <div class="hidden md:block">
+          <div class="flex items-center gap-3 mb-2">
+            <h1 class="text-2xl lg:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
+            {!card.playable && (
+              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">NPC</span>
+            )}
+            <span class="text-sm font-mono text-secondary">#{card.id}</span>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center gap-1" title={card.stats.attribute_name}>
+              <img src={getAttributeIconUrl(card.stats.attribute_name, { width: 48 })} alt={card.stats.attribute_name} class="w-6 h-6 object-contain" loading="lazy" decoding="async" />
+              <span class="text-sm">{card.stats.attribute_name}</span>
+            </span>
+            <span class="inline-flex items-center gap-1" title={card.stats.type_name}>
+              <img src={getTypeIconUrl(card.stats.type_name, { width: 48 })} alt={card.stats.type_name} class="w-6 h-6 object-contain" loading="lazy" decoding="async" />
+              <span class="text-sm">{card.stats.type_name}</span>
+            </span>
+            <span class="inline-flex items-center" title={`${card.stats.rarity} Stars`}>
+              {Array.from({ length: card.stats.rarity }, () => null).map(() => (
+                <img src={getStarIconUrl({ width: 40 })} alt="★" class="w-5 h-5 object-contain -ml-0.5 first:ml-0" loading="lazy" decoding="async" />
+              ))}
+            </span>
+          </div>
+        </div>
+
+        <!-- Description -->
+        {card.description && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">Description</h2>
+            <div class="text-xs sm:text-sm leading-relaxed" set:html={formatDescription(card.description)} />
+          </div>
+        )}
+
+        <!-- Stats (Desktop) -->
+        <div class="hidden lg:block card p-4">
+          <h2 class="font-semibold mb-4">Stats</h2>
+          <div class="grid grid-cols-4 gap-4">
+            <div>
+              <div class="text-secondary text-sm">Max ATK</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_atk)}</div>
+              <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_atk)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Max HP</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_hp)}</div>
+              <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_hp)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Speed</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.speed)}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-sm">Crit Rate</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.crit)}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill -->
+        {card.skill && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">Skill</h2>
+            <div class="text-base sm:text-lg font-medium mb-1" style="color: var(--color-accent);">
+              {card.skill.name || 'Unknown Skill'}
+            </div>
+            <div class="text-xs sm:text-sm mb-2" set:html={formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description available'} />
+            {card.skill.tags && card.skill.tags.length > 0 && (
+              <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-2">
+                {card.skill.tags.map(tag => (
+                  <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-accent);">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+
+        <!-- Abilities -->
+        {card.abilities.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Abilities</h2>
+            <div class="space-y-3 sm:space-y-4">
+              {card.abilities.map(ability => (
+                <div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                    <span class="font-medium text-sm sm:text-base" style="color: var(--color-highlight);">
+                      {ability.name}
+                    </span>
+                    {ability.unlock_level && (
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded" style="background-color: var(--color-surface); color: var(--color-text-secondary);">
+                        Lv. {ability.unlock_level}
+                      </span>
+                    )}
+                  </div>
+                  <div class="text-xs sm:text-sm text-secondary mt-0.5">
+                    {ability.description}
+                  </div>
+                  {ability.tags && ability.tags.length > 0 && (
+                    <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-1.5">
+                      {ability.tags.map(tag => (
+                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-highlight);">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Bonds -->
+        {card.bonds && card.bonds.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Bonds</h2>
+            <div class="space-y-2 sm:space-y-3">
+              {card.bonds.map(bond => {
+                const isSpecial = bond.target_id && bond.target_id !== '';
+                const targetCard = isSpecial ? cardsData.cards[bond.target_id] : null;
+                return (
+                  <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2 min-w-0 flex-wrap">
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
+                            style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}>
+                          {bond.type}
+                      </span>
+                      {isSpecial && (
+                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
+                              style="background-color: var(--color-highlight); color: var(--color-bg);">
+                          Special
+                        </span>
+                      )}
+                      {targetCard && (
+                        <a href={getCardUrl(bond.target_id)} class="text-xs sm:text-sm truncate link">
+                          {targetCard.name}
+                        </a>
+                      )}
+                      {bond.name && !targetCard && (
+                        <span class="text-xs sm:text-sm truncate" style="color: var(--color-highlight);">
+                          {bond.name}
+                        </span>
+                      )}
+                    </div>
+                    <div class="text-sm sm:text-base font-bold font-mono flex-shrink-0" style="color: var(--color-accent);">
+                      +{bond.bonus_percent}%
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        <!-- Info -->
+        <div class="card p-3 sm:p-4">
+          <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">Info</h2>
+          <div class="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
+            <div>
+              <div class="text-secondary text-[10px] sm:text-xs">First Seen</div>
+              <div>{formatDate(card.history.first_seen)}</div>
+              <div class="text-[10px] sm:text-xs text-secondary">v{card.history.first_seen_version}</div>
+            </div>
+            <div>
+              <div class="text-secondary text-[10px] sm:text-xs">Last Modified</div>
+              <div>{formatDate(card.history.last_modified)}</div>
+              <div class="text-[10px] sm:text-xs text-secondary">v{card.history.last_modified_version}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Similar Cards -->
+    {similarCards.length > 0 && (
+      <div class="mt-6 sm:mt-8">
+        <h2 class="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">Similar Cards</h2>
+        <p class="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Good options for team replacements</p>
+        <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
+          {similarCards.map(({ card: related, details }) => {
+            const localeCard = cardsData.cards[related.id];
+            const displayName = localeCard?.name || related.name || `Card #${related.id}`;
+            return (
+              <a href={getCardUrl(related.id)} class="card-grid-item text-center group p-1.5 sm:p-2">
+                <div class="relative inline-block">
+                  <img
+                    src={getAndroidImageWithFallback(related, 128)}
+                    alt={displayName}
+                    class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="text-[10px] sm:text-xs md:text-sm font-medium truncate mt-1.5">{displayName}</div>
+                <div class="flex items-center justify-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs">
+                  <img src={getAttributeIconUrl(related.stats.attribute_name, { width: 24 })} alt={related.stats.attribute_name} class="w-3 h-3 sm:w-4 sm:h-4 object-contain" loading="lazy" decoding="async" />
+                  <img src={getTypeIconUrl(related.stats.type_name, { width: 24 })} alt={related.stats.type_name} class="w-3 h-3 sm:w-4 sm:h-4 object-contain" loading="lazy" decoding="async" />
+                  <span class="inline-flex items-center">
+                    {Array.from({ length: related.stats.rarity }, () => null).map(() => (
+                      <img src={getStarIconUrl({ width: 20 })} alt="★" class="w-2.5 h-2.5 sm:w-3 sm:h-3 object-contain -ml-0.5 first:ml-0" loading="lazy" decoding="async" />
+                    ))}
+                  </span>
+                </div>
+                <div class="hidden sm:block text-[10px] sm:text-xs text-secondary mt-1 opacity-75 group-hover:opacity-100 truncate">
+                  {getSimilarityReason(details)}
+                </div>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    )}
+  </div>
+</BaseLayout>

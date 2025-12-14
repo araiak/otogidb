@@ -2,30 +2,48 @@ import type { Card, CardsData, ChangeNotes } from '../types/card';
 import { fetchWithCache } from './cache';
 import type { SkillData } from './formatters';
 
+// Supported locales for card data
+export type CardLocale = 'en' | 'ja' | 'ko' | 'zh-cn' | 'zh-tw' | 'es';
+
 // In-memory cache for card data (faster than IndexedDB for repeat access)
-let cardsCache: CardsData | null = null;
+// Keyed by locale
+const cardsCacheByLocale: Record<string, CardsData | null> = {};
 let skillsCache: Record<string, SkillData> | null = null;
 
 // Max age for cached data (24 hours - data updates infrequently)
 const CACHE_MAX_AGE = 24 * 60 * 60 * 1000;
 
 /**
+ * Get the data path for a given locale
+ */
+function getDataPath(filename: string, locale: CardLocale = 'en'): string {
+  if (locale === 'en') {
+    return `/data/${filename}`;
+  }
+  return `/data/${locale}/${filename}`;
+}
+
+/**
  * Load minimal cards index (for table display - faster loading)
  * Uses IndexedDB caching with hash validation to avoid re-downloading
  */
-export async function getCardsData(options: { forceRefresh?: boolean } = {}): Promise<CardsData> {
+export async function getCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<CardsData> {
+  const locale = options.locale || 'en';
+  const cacheKey = locale;
+
   // Check in-memory cache first (fastest)
-  if (cardsCache && !options.forceRefresh) {
-    return cardsCache;
+  if (cardsCacheByLocale[cacheKey] && !options.forceRefresh) {
+    return cardsCacheByLocale[cacheKey]!;
   }
 
   // Load minimal index for table (787KB vs 2.5MB full)
-  cardsCache = await fetchWithCache<CardsData>('/data/cards_index.json', {
+  const dataPath = getDataPath('cards_index.json', locale);
+  cardsCacheByLocale[cacheKey] = await fetchWithCache<CardsData>(dataPath, {
     forceRefresh: options.forceRefresh,
     maxAge: CACHE_MAX_AGE
   });
 
-  return cardsCache;
+  return cardsCacheByLocale[cacheKey]!;
 }
 
 // Cache for full card data (loaded on demand)
@@ -177,9 +195,13 @@ export async function getAvailableVersions(): Promise<string[]> {
  * Force refresh all card data from server
  * Clears in-memory and IndexedDB cache
  */
-export async function refreshCardData(): Promise<CardsData> {
-  cardsCache = null;
-  return getCardsData({ forceRefresh: true });
+export async function refreshCardData(locale: CardLocale = 'en'): Promise<CardsData> {
+  // Clear all locale caches
+  Object.keys(cardsCacheByLocale).forEach(key => {
+    cardsCacheByLocale[key] = null;
+  });
+  fullCardsCache = null;
+  return getCardsData({ forceRefresh: true, locale });
 }
 
 // Re-export cache utilities for debugging

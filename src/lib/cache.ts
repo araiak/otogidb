@@ -103,6 +103,12 @@ function calculateHash(data: string): string {
 /**
  * Fetch JSON with caching and hash validation
  *
+ * Cache invalidation strategy:
+ * 1. If build version (window.OTOGIDB_DATA_VERSION) doesn't match cached version -> refetch
+ * 2. If forceRefresh is true -> refetch
+ * 3. If cache is older than maxAge -> refetch
+ * 4. Otherwise -> use cache
+ *
  * @param url - URL to fetch
  * @param options - Caching options
  * @returns Parsed JSON data
@@ -128,6 +134,7 @@ export async function fetchWithCache<T>(
   } = options;
 
   const cacheKey = url;
+  const buildVersion = getDataVersion(); // Version baked into build
 
   // Check if we should use cache
   if (!forceRefresh && typeof indexedDB !== 'undefined') {
@@ -137,30 +144,39 @@ export async function fetchWithCache<T>(
       const age = Date.now() - cached.cachedAt;
       const isExpired = age > maxAge;
 
+      // CRITICAL: If build version exists and doesn't match cached version, invalidate
+      // This ensures new deployments always fetch fresh data
+      if (buildVersion && cached.version && cached.version !== buildVersion) {
+        console.log(`[Cache] Version mismatch: ${url} (cached: ${cached.version}, build: ${buildVersion})`);
+        // Continue to fetch fresh data
+      }
       // If we have expected version/hash, validate against it
-      if (expectedVersion && cached.version === expectedVersion) {
+      else if (expectedVersion && cached.version === expectedVersion) {
         console.log(`[Cache] Hit: ${url} (version match: ${expectedVersion})`);
         return cached.data as T;
       }
-
-      if (expectedHash && cached.hash === expectedHash) {
+      else if (expectedHash && cached.hash === expectedHash) {
         console.log(`[Cache] Hit: ${url} (hash match: ${expectedHash})`);
         return cached.data as T;
       }
-
-      // If no expected values and not expired, use cache
-      if (!expectedVersion && !expectedHash && !isExpired) {
-        console.log(`[Cache] Hit: ${url} (not expired)`);
+      // Build version matches cached version - use cache if not expired
+      else if (buildVersion && cached.version === buildVersion) {
+        console.log(`[Cache] Hit: ${url} (build version match: ${buildVersion})`);
         return cached.data as T;
       }
-
-      console.log(`[Cache] Stale: ${url} (age: ${Math.round(age / 1000)}s, expired: ${isExpired})`);
+      // No build version set and not expired, use cache
+      else if (!buildVersion && !expectedVersion && !expectedHash && !isExpired) {
+        console.log(`[Cache] Hit: ${url} (not expired, age: ${Math.round(age / 1000)}s)`);
+        return cached.data as T;
+      }
+      else {
+        console.log(`[Cache] Stale: ${url} (age: ${Math.round(age / 1000)}s, expired: ${isExpired})`);
+      }
     }
   }
 
   // Fetch fresh data with cache-busting version
-  const version = getDataVersion();
-  const fetchUrl = version ? `${url}?v=${version}` : url;
+  const fetchUrl = buildVersion ? `${url}?v=${buildVersion}` : url;
   console.log(`[Cache] Fetching: ${fetchUrl}`);
   const response = await fetch(fetchUrl);
 
@@ -173,7 +189,8 @@ export async function fetchWithCache<T>(
 
   // Calculate hash and extract version if available
   const hash = calculateHash(text);
-  const dataVersion = (data as Record<string, unknown>).version as string || '';
+  // Use build version as the cached version (so we can detect version changes)
+  const dataVersion = buildVersion || (data as Record<string, unknown>).version as string || '';
 
   // Cache the result
   if (typeof indexedDB !== 'undefined') {
