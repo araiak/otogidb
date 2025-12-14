@@ -301,9 +301,9 @@ const jsonLd = {
           </div>
         )}
 
-        <!-- History -->
+        <!-- History & Credits -->
         <div class="card p-3 sm:p-4">
-          <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">History</h2>
+          <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">Info</h2>
           <div class="grid grid-cols-2 gap-3 sm:gap-4 text-xs sm:text-sm">
             <div>
               <div class="text-secondary text-[10px] sm:text-xs">First Seen</div>
@@ -315,6 +315,17 @@ const jsonLd = {
               <div>{formatDate(card.history.last_modified)}</div>
               <div class="text-[10px] sm:text-xs text-secondary">v{card.history.last_modified_version}</div>
             </div>
+            {card.meta?.artist_name && (
+              <div class="col-span-2 pt-2 border-t" style="border-color: var(--color-border);">
+                <div class="text-secondary text-[10px] sm:text-xs">Illustrator</div>
+                <div>
+                  {card.meta.artist_name}
+                  {card.meta.artist_name_jp && card.meta.artist_name_jp !== card.meta.artist_name && (
+                    <span class="text-secondary ml-1">({card.meta.artist_name_jp})</span>
+                  )}
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

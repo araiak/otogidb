@@ -56,6 +56,8 @@ export interface Bond {
 
 export interface CardMeta {
   art_id: string | null;
+  artist_name: string | null;
+  artist_name_jp: string | null;
   cv_id: string | null;
   album: boolean;
   generation: number;
