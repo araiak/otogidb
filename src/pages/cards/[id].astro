@@ -356,23 +356,32 @@ const jsonLd = {
               )}
 
               {/* Auction */}
-              {card.acquisition.sources.includes('auction') && (
-                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                  <div class="flex items-center gap-2">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Auction</span>
-                    {card.acquisition.auction.available ? (
-                      <span class="text-xs text-green-400">✓ Available</span>
-                    ) : (
-                      <span class="text-xs text-secondary">Not currently listed</span>
+              {card.acquisition.sources.includes('auction') && (() => {
+                // Map currency codes to display names
+                const auctionCurrency = card.acquisition.auction.currency === 'gold' ? 'Jewels' :
+                                       card.acquisition.auction.currency === 'gApple' ? 'Mochi' :
+                                       card.acquisition.auction.currency || 'Jewels';
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2">
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Auction</span>
+                      {card.acquisition.auction.available ? (
+                        <span class="text-xs text-green-400">✓ Available</span>
+                      ) : (
+                        <span class="text-xs text-secondary">Not currently listed</span>
+                      )}
+                      {card.acquisition.auction.is_time_limited && (
+                        <span class="text-xs text-yellow-400">(Limited Time)</span>
+                      )}
+                    </div>
+                    {card.acquisition.auction.price_min !== null && card.acquisition.auction.price_max !== null && (
+                      <div class="text-xs text-secondary mt-1">
+                        Price range: {formatNumber(card.acquisition.auction.price_min)} - {formatNumber(card.acquisition.auction.price_max)} {auctionCurrency}
+                      </div>
                     )}
                   </div>
-                  {card.acquisition.auction.price_min !== null && card.acquisition.auction.price_max !== null && (
-                    <div class="text-xs text-secondary mt-1">
-                      Price range: {formatNumber(card.acquisition.auction.price_min)} - {formatNumber(card.acquisition.auction.price_max)} Soulstones
-                    </div>
-                  )}
-                </div>
-              )}
+                );
+              })()}
 
               {/* Exchange */}
               {card.acquisition.sources.includes('exchange') && (

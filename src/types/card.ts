@@ -108,6 +108,8 @@ export interface AuctionAcquisition {
   available: boolean;
   price_min: number | null;
   price_max: number | null;
+  currency?: string; // 'gold' = Jewels, 'gApple' = Mochi
+  is_time_limited?: boolean;
 }
 
 export interface EventRewardTier {
