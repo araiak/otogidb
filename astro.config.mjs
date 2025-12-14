@@ -13,6 +13,13 @@ export default defineConfig({
     sitemap()
   ],
   output: 'static',
+  i18n: {
+    locales: ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'],
+    defaultLocale: 'en',
+    routing: {
+      prefixDefaultLocale: false  // English: /cards/1, others: /ja/cards/1, /ko/cards/1, etc.
+    }
+  },
   markdown: {
     remarkPlugins: [remarkCardReference]
   },

@@ -183,6 +183,62 @@ function renderStars(rarity: number): string {
 ---
 
 <BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes">
+  <script is:inline>
+    // Locale detection and link updating for updates page
+    (function() {
+      var SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+      var STORAGE_KEY = 'otogidb-locale';
+
+      function getStoredLocale() {
+        try {
+          var stored = localStorage.getItem(STORAGE_KEY);
+          return stored && SUPPORTED_LOCALES.indexOf(stored) !== -1 ? stored : null;
+        } catch (e) { return null; }
+      }
+
+      function getCurrentLocale() {
+        var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+        if (pathMatch && SUPPORTED_LOCALES.indexOf(pathMatch[1]) !== -1) {
+          return pathMatch[1];
+        }
+        return getStoredLocale() || 'en';
+      }
+
+      function updateCardLinks() {
+        var locale = getCurrentLocale();
+        var prefix = locale === 'en' ? '' : '/' + locale;
+
+        document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href) {
+            var cardId = href.replace('/cards/', '');
+            link.setAttribute('href', prefix + '/cards/' + cardId);
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateCardLinks);
+      } else {
+        updateCardLinks();
+      }
+
+      window.addEventListener('otogidb-locale-change', function(e) {
+        var locale = e.detail && e.detail.locale;
+        if (!locale) return;
+        var prefix = locale === 'en' ? '' : '/' + locale;
+        document.querySelectorAll('a[href*="/cards/"]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href) {
+            var match = href.match(/\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?cards\/(\d+)/);
+            if (match) {
+              link.setAttribute('href', prefix + '/cards/' + match[1]);
+            }
+          }
+        });
+      });
+    })();
+  </script>
   <div class="container mx-auto px-4 py-6">
     <div class="mb-6">
       <h1 class="text-2xl md:text-3xl font-bold mb-2">Patch Notes</h1>
