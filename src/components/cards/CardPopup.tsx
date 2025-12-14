@@ -93,9 +93,16 @@ export default function CardPopup({ card, isOpen, referenceElement, skillData }:
 
           {/* Abilities Preview */}
           {card.abilities && card.abilities.length > 0 && (
-            <div className="text-sm">
-              <span className="text-secondary">Abilities:</span>{' '}
-              {card.abilities.map(a => a.name).join(', ')}
+            <div className="text-sm space-y-1">
+              <span className="text-secondary">Abilities:</span>
+              {card.abilities.map((ability, idx) => (
+                <div key={idx} className="pl-2 border-l-2" style={{ borderColor: 'var(--color-border)' }}>
+                  <span className="font-medium">{ability.name}</span>
+                  {ability.description && (
+                    <div className="text-secondary text-xs line-clamp-2">{ability.description}</div>
+                  )}
+                </div>
+              ))}
             </div>
           )}
         </div>

@@ -1,5 +1,25 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPlaceholderMascot, getAndroidImageWithFallback } from '../../lib/images';
+import type { Card } from '../../types/card';
+
+// Load cards index for image lookups
+let cardsIndex: Record<string, Card> = {};
+try {
+  const cardsData = await import('../../../public/data/cards_index.json');
+  cardsIndex = (cardsData.default || cardsData).cards || {};
+} catch (e) {
+  console.warn('Failed to load cards index for images');
+}
+
+// Get card thumbnail with proper fallback chain
+function getCardThumbnail(cardId: string): string {
+  const card = cardsIndex[cardId];
+  if (card) {
+    return getAndroidImageWithFallback(card, 60);
+  }
+  return getPlaceholderMascot(60);
+}
 
 // Load manifest at build time
 let manifest: PatchNotesManifest;
@@ -98,15 +118,6 @@ function formatDate(dateStr: string): string {
 function renderStars(rarity: number): string {
   return '★'.repeat(Math.min(Math.max(rarity, 0), 5));
 }
-
-// Helper to get optimized thumbnail URL
-function getThumbnailUrl(imageUrl: string | null): string | null {
-  if (!imageUrl) return null;
-  if (imageUrl.includes('cloudinary.com')) {
-    return imageUrl.replace('/upload/', '/upload/w_60,h_60,c_fill,q_auto,f_auto/');
-  }
-  return imageUrl;
-}
 ---
 
 <BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes">
@@ -163,18 +174,12 @@ function getThumbnailUrl(imageUrl: string | null): string | null {
                          class="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-opacity-50"
                          style="background-color: var(--color-surface);">
                         {/* Card Image */}
-                        <div class="flex-shrink-0 w-12 h-12 rounded overflow-hidden"
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden"
                              style="background-color: var(--color-bg);">
-                          {getThumbnailUrl(card.image_url) ? (
-                            <img src={getThumbnailUrl(card.image_url)}
-                                 alt={card.name}
-                                 class="w-full h-full object-cover"
-                                 loading="lazy" />
-                          ) : (
-                            <div class="w-full h-full flex items-center justify-center text-secondary text-xs">
-                              No img
-                            </div>
-                          )}
+                          <img src={getCardThumbnail(card.id)}
+                               alt={card.name}
+                               class="w-full h-full object-cover"
+                               loading="lazy" />
                         </div>
 
                         {/* Card Info */}
@@ -205,18 +210,12 @@ function getThumbnailUrl(imageUrl: string | null): string | null {
                         <div class="flex items-start gap-3">
                           {/* Card Image */}
                           <a href={`/cards/${card.id}`} class="flex-shrink-0">
-                            <div class="w-12 h-12 rounded overflow-hidden"
+                            <div class="w-12 h-12 rounded-full overflow-hidden"
                                  style="background-color: var(--color-bg);">
-                              {getThumbnailUrl(card.image_url) ? (
-                                <img src={getThumbnailUrl(card.image_url)}
-                                     alt={card.name}
-                                     class="w-full h-full object-cover"
-                                     loading="lazy" />
-                              ) : (
-                                <div class="w-full h-full flex items-center justify-center text-secondary text-xs">
-                                  No img
-                                </div>
-                              )}
+                              <img src={getCardThumbnail(card.id)}
+                                   alt={card.name}
+                                   class="w-full h-full object-cover"
+                                   loading="lazy" />
                             </div>
                           </a>
 
