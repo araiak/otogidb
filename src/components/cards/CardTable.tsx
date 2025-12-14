@@ -494,7 +494,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     });
 
     // Sort ability tags: buff effects first, then defensive, then status, then scope
-    const abilityTagOrder = ['DMG Boost', 'Crit Rate', 'Crit DMG', 'ATK Speed', 'Skill DMG', 'Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Slow', 'DMG Amp', 'Enemy DMG Down', 'Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify', 'Immunity', 'Team', 'Divina', 'Anima', 'Phantasma', 'Melee', 'Ranged', 'Healer', 'Leader', 'Wave Start', 'Final Wave', 'Drop Rate', 'Time Limit'];
+    const abilityTagOrder = ['DMG Boost', 'Crit Rate', 'Crit DMG', 'ATK Speed', 'Skill DMG', 'Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Slow', 'DMG Amp', 'Enemy DMG Down', 'Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify', 'Immunity', 'Team', 'Divina', 'Anima', 'Phantasma', 'Melee', 'Ranged', 'Healer', 'Leader', 'Wave Start', 'Final Wave', 'Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost'];
     const sortedAbilityTags = Array.from(abilityTags).sort((a, b) => {
       const aIndex = abilityTagOrder.indexOf(a);
       const bIndex = abilityTagOrder.indexOf(b);
@@ -596,7 +596,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       },
       {
         name: 'Special',
-        tags: ['Drop Rate', 'Time Limit'].filter(t => available.has(t)),
+        tags: ['Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost'].filter(t => available.has(t)),
         colorClass: 'text-cyan-400'
       },
     ];
