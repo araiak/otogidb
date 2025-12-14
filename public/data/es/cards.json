@@ -1,6 +1,6 @@
 {
-  "version": "3d06ec7",
-  "generated_at": "2025-12-14T12:35:33.250230+00:00",
+  "version": "6885e0f",
+  "generated_at": "2025-12-14T14:18:54.644623+00:00",
   "locale": "es_ES",
   "total_cards": 883,
   "cloudinary_base_url": null,
@@ -26153,10 +26153,13 @@
       ],
       "acquisition": {
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -26174,9 +26177,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 30,
+          "price_max": 500,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -43279,8 +43284,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -43298,7 +43305,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 500,
           "price_max": 50000,
           "currency": "gold",
@@ -43392,8 +43399,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -43411,7 +43420,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 1000,
           "price_max": 100000,
           "currency": "gold",
@@ -43503,8 +43512,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -43522,7 +43533,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 500,
           "price_max": 50000,
           "currency": "gold",
@@ -44155,8 +44166,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -44174,7 +44187,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 1000,
           "price_max": 100000,
           "currency": "gold",
@@ -44280,8 +44293,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -44299,7 +44314,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 1000,
           "price_max": 100000,
           "currency": "gold",
@@ -44391,8 +44406,10 @@
           "exchange",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": [],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -44410,7 +44427,7 @@
           ]
         },
         "auction": {
-          "available": false,
+          "available": true,
           "price_min": 500,
           "price_max": 50000,
           "currency": "gold",
@@ -72906,9 +72923,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -72917,9 +72938,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 30,
+          "price_max": 500,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -74793,10 +74816,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -74823,9 +74848,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 500,
+          "price_max": 50000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
@@ -74909,10 +74936,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -74939,9 +74968,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 500,
+          "price_max": 50000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
@@ -75025,10 +75056,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -75055,9 +75088,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 500,
+          "price_max": 50000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
@@ -75139,9 +75174,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -75150,9 +75189,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 2,
+          "price_max": 5,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -75239,9 +75280,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -75250,9 +75295,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 5,
+          "price_max": 50,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -75339,9 +75386,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -75350,9 +75401,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 5,
+          "price_max": 50,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -75439,9 +75492,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -75450,9 +75507,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 30,
+          "price_max": 500,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -75543,9 +75602,13 @@
         }
       ],
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": [],
+        "sources": [
+          "auction"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Auction"
+        ],
         "gacha": {
           "in_standard_pool": false,
           "featured_banners": []
@@ -75554,9 +75617,11 @@
           "entries": []
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 30,
+          "price_max": 500,
+          "currency": "gApple",
+          "is_time_limited": false
         },
         "event": {
           "reward_tiers": []
@@ -75652,10 +75717,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -75682,9 +75749,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 1000,
+          "price_max": 100000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
@@ -75782,10 +75851,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -75812,9 +75883,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 1000,
+          "price_max": 100000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
@@ -75898,10 +75971,12 @@
       "acquisition": {
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "currently_available": true,
         "availability_summary": [
+          "Auction",
           "Standard Gacha"
         ],
         "gacha": {
@@ -75921,9 +75996,11 @@
           ]
         },
         "auction": {
-          "available": false,
-          "price_min": null,
-          "price_max": null
+          "available": true,
+          "price_min": 500,
+          "price_max": 50000,
+          "currency": "gold",
+          "is_time_limited": true
         },
         "event": {
           "reward_tiers": []
