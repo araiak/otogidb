@@ -10,7 +10,7 @@ import {
   type ColumnFiltersState,
   flexRender,
 } from '@tanstack/react-table';
-import type { Card } from '../../types/card';
+import type { Card, AcquisitionSource } from '../../types/card';
 import { getCardsData, getSkillsData } from '../../lib/cards';
 import { getThumbnailUrl, getPopupImageUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription, type SkillData } from '../../lib/formatters';
@@ -241,6 +241,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [bondFilter, setBondFilter] = useState<string[]>([]);
   const [skillTagFilter, setSkillTagFilter] = useState<string[]>([]);
   const [abilityTagFilter, setAbilityTagFilter] = useState<string[]>([]);
+  const [sourceFilter, setSourceFilter] = useState<string[]>([]); // Acquisition sources: gacha, auction, exchange, event
+  const [availableOnly, setAvailableOnly] = useState(false); // Only show currently available cards
   const [hideNonPlayable, setHideNonPlayable] = useState(true); // Hide NPC/enemy cards by default
 
   // Track if we're initializing from URL to prevent double-updates
@@ -285,6 +287,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
     const ability = params.get('ability');
     if (ability) setAbilityTagFilter(ability.split(',').filter(Boolean));
 
+    // Source filter (acquisition sources)
+    const source = params.get('source');
+    if (source) setSourceFilter(source.split(',').filter(Boolean));
+
+    // Available only filter
+    const available = params.get('available');
+    if (available === '1') setAvailableOnly(true);
+
     // Sorting
     const sort = params.get('sort');
     const dir = params.get('dir');
@@ -317,6 +327,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (bondFilter.length > 0) params.set('bond', bondFilter.join(','));
     if (skillTagFilter.length > 0) params.set('skill', skillTagFilter.join(','));
     if (abilityTagFilter.length > 0) params.set('ability', abilityTagFilter.join(','));
+    if (sourceFilter.length > 0) params.set('source', sourceFilter.join(','));
+    if (availableOnly) params.set('available', '1');
     if (sorting.length > 0) {
       params.set('sort', sorting[0].id);
       params.set('dir', sorting[0].desc ? 'desc' : 'asc');
@@ -328,7 +340,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       : window.location.pathname;
 
     window.history.replaceState({}, '', newUrl);
-  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sorting, hideNonPlayable]);
+  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -402,11 +414,17 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (abilityTagFilter.length > 0) {
       filters.push({ id: 'abilityTags', value: abilityTagFilter });
     }
+    if (sourceFilter.length > 0) {
+      filters.push({ id: 'sources', value: sourceFilter });
+    }
+    if (availableOnly) {
+      filters.push({ id: 'available', value: true });
+    }
     if (hideNonPlayable) {
       filters.push({ id: 'playable', value: true });
     }
     setColumnFilters(filters);
-  }, [attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, hideNonPlayable]);
+  }, [attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, hideNonPlayable]);
 
   // Get unique filter options
   const filterOptions = useMemo(() => {
@@ -486,6 +504,24 @@ export default function CardTable({ initialCards }: CardTableProps) {
       return a.localeCompare(b);
     });
 
+    // Collect acquisition sources
+    const sources = new Set<string>();
+    cards.forEach(card => {
+      if (card.acquisition?.sources) {
+        card.acquisition.sources.forEach(s => sources.add(s));
+      }
+    });
+    // Define source order
+    const sourceOrder = ['gacha', 'auction', 'exchange', 'event'];
+    const sortedSources = Array.from(sources).sort((a, b) => {
+      const aIndex = sourceOrder.indexOf(a);
+      const bIndex = sourceOrder.indexOf(b);
+      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
+      if (aIndex !== -1) return -1;
+      if (bIndex !== -1) return 1;
+      return a.localeCompare(b);
+    });
+
     return {
       attributes: sortedAttributes,
       types: Array.from(types).sort(),
@@ -493,6 +529,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       bondTypes: sortedBondTypes,
       skillTags: sortedSkillTags,
       abilityTags: sortedAbilityTags,
+      sources: sortedSources,
     };
   }, [cards]);
 
@@ -648,6 +685,52 @@ export default function CardTable({ initialCards }: CardTableProps) {
       },
     },
     {
+      id: 'sources',
+      accessorFn: (row) => row.acquisition?.sources || [],
+      header: 'Source',
+      size: 90,
+      cell: ({ row }) => {
+        const sources = row.original.acquisition?.sources || [];
+        const available = row.original.acquisition?.currently_available || false;
+        if (sources.length === 0) return <span className="text-secondary text-sm">-</span>;
+
+        return (
+          <div className="flex flex-wrap gap-0.5">
+            {sources.map(source => {
+              const label = source === 'gacha' ? 'G' :
+                           source === 'auction' ? 'A' :
+                           source === 'exchange' ? 'E' :
+                           source === 'event' ? 'Ev' : source;
+              const colorClass = source === 'gacha' ? 'bg-purple-500/20 text-purple-300' :
+                                source === 'auction' ? 'bg-yellow-500/20 text-yellow-300' :
+                                source === 'exchange' ? 'bg-blue-500/20 text-blue-300' :
+                                source === 'event' ? 'bg-green-500/20 text-green-300' : 'bg-gray-500/20';
+              const title = source === 'gacha' ? 'Gacha' :
+                           source === 'auction' ? 'Auction' :
+                           source === 'exchange' ? 'Exchange' :
+                           source === 'event' ? 'Event' : source;
+              return (
+                <span
+                  key={source}
+                  className={`px-1 py-0.5 text-xs rounded ${colorClass} ${available ? '' : 'opacity-50'}`}
+                  title={`${title}${available ? '' : ' (not currently available)'}`}
+                >
+                  {label}
+                </span>
+              );
+            })}
+          </div>
+        );
+      },
+      filterFn: (row, _columnId, filterValue: string[]) => {
+        if (!filterValue || filterValue.length === 0) return true;
+        const cardSources = row.original.acquisition?.sources || [];
+        if (cardSources.length === 0) return false;
+        // Show card if it has ANY of the selected sources (OR logic)
+        return filterValue.some(f => cardSources.includes(f as AcquisitionSource));
+      },
+    },
+    {
       id: 'bonds',
       accessorFn: (row) => row.bonds?.[0]?.type || '',
       header: 'Bond',
@@ -723,6 +806,21 @@ export default function CardTable({ initialCards }: CardTableProps) {
           return row.original.playable === true;
         }
         // When filter is false/undefined, show all cards
+        return true;
+      },
+    },
+    {
+      id: 'available',
+      accessorFn: (row) => row.acquisition?.currently_available || false,
+      header: 'Available',
+      size: 0,
+      enableSorting: false,
+      meta: { hidden: true },
+      filterFn: (row, _columnId, filterValue: boolean) => {
+        // When filter is true, only show currently available cards
+        if (filterValue === true) {
+          return row.original.acquisition?.currently_available === true;
+        }
         return true;
       },
     },
@@ -944,6 +1042,34 @@ export default function CardTable({ initialCards }: CardTableProps) {
             onChange={setAbilityTagFilter}
             placeholder="Ability Tags"
           />
+          <FilterDropdown
+            options={filterOptions.sources}
+            value={sourceFilter}
+            onChange={(v) => setSourceFilter(v as string[])}
+            placeholder="Source"
+            dropdownClassName="min-w-[130px]"
+            renderOption={(opt) => {
+              const label = opt === 'gacha' ? 'Gacha' :
+                           opt === 'auction' ? 'Auction' :
+                           opt === 'exchange' ? 'Exchange' :
+                           opt === 'event' ? 'Event' : String(opt);
+              const colorClass = opt === 'gacha' ? 'text-purple-400' :
+                                opt === 'auction' ? 'text-yellow-400' :
+                                opt === 'exchange' ? 'text-blue-400' :
+                                opt === 'event' ? 'text-green-400' : '';
+              return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
+            }}
+          />
+          <label className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+                 style={{ borderColor: availableOnly ? 'var(--color-accent)' : 'var(--color-border)' }}>
+            <input
+              type="checkbox"
+              checked={availableOnly}
+              onChange={(e) => setAvailableOnly(e.target.checked)}
+              className="rounded"
+            />
+            <span>Available Now</span>
+          </label>
         </div>
       </div>
 
@@ -951,7 +1077,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
         <div>
           Showing {table.getRowModel().rows.length} of {cards.length} cards
-          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || !hideNonPlayable) && (
+          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || !hideNonPlayable) && (
             <button
               onClick={() => {
                 setAttributeFilter([]);
@@ -960,6 +1086,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 setBondFilter([]);
                 setSkillTagFilter([]);
                 setAbilityTagFilter([]);
+                setSourceFilter([]);
+                setAvailableOnly(false);
                 setHideNonPlayable(true);
               }}
               className="ml-2 text-accent hover:underline"
@@ -970,7 +1098,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
 
         {/* Share button */}
-        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sorting.length > 0 || !hideNonPlayable) && (
+        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || sorting.length > 0 || !hideNonPlayable) && (
           <div className="relative">
             <button
               onClick={handleShare}
