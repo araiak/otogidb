@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPlaceholderMascot } from '../../lib/images';
 
 // Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
 interface CardIndexEntry {
@@ -24,10 +23,17 @@ try {
 // Cloudinary base for constructing URLs
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
 
+// Sola placeholder card - "Sorry, Master!" message for cards without images
+const PLACEHOLDER_CARD_ID = 'v1765670205/placeholder-card_q0umz7.png';
+
+function getPlaceholderCard(size: number = 60): string {
+  return `${CLOUDINARY_BASE}/w_${size},h_${size},c_fill,r_max,f_auto,q_auto/${PLACEHOLDER_CARD_ID}`;
+}
+
 // Get card thumbnail - simplified version that works with minimal card data
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
-  if (!card) return getPlaceholderMascot(60);
+  if (!card) return getPlaceholderCard(60);
 
   // Try image_urls.android first
   const androidUrl = card.image_urls?.android;
@@ -45,7 +51,8 @@ function getCardThumbnail(cardId: string): string {
     return `${CLOUDINARY_BASE}/w_60,h_60,c_fill,r_max,f_auto,q_auto/otogi/android/${card.asset_id}.png`;
   }
 
-  return getPlaceholderMascot(60);
+  // Use Sola placeholder for cards without images
+  return getPlaceholderCard(60);
 }
 
 // Load manifest at build time
