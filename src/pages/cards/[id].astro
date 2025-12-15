@@ -487,7 +487,7 @@ const jsonLd = {
 
               {/* Daily Dungeon */}
               {card.acquisition.sources.includes('daily') && card.acquisition.daily?.available && (() => {
-                const weekdayNames = {1: 'Mon', 2: 'Tue', 3: 'Wed', 4: 'Thu', 5: 'Fri', 6: 'Sat', 7: 'Sun'};
+                const weekdayNames = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
                 const schedule = card.acquisition.daily.schedule || [];
                 const scheduleDays = schedule.map((d) => weekdayNames[d] || `Day ${d}`).join(', ');
                 const dropRate = card.acquisition.daily.drop_rate;
