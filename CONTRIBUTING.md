@@ -131,8 +131,9 @@ By submitting a pull request, you confirm that:
 
 1. You are the original author of the content, or have permission to submit it
 2. You understand and accept the MIT License terms
-3. You are giving up exclusive rights to your submitted content
-4. You will not make copyright claims against OtogiDB or its users for the submitted content
+3. Your content can be freely copied, modified, and redistributed by anyone under MIT
+
+**Important:** While we will honor requests to remove your content from this repository, once published under MIT license, we cannot control if others have already copied or reused it. The MIT license is irrevocable for copies already distributed.
 
 If you are not comfortable with these terms, please do not submit content to this repository.
 
