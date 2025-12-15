@@ -1,6 +1,6 @@
 {
   "version": "6885e0f",
-  "generated_at": "2025-12-14T14:27:43.308524+00:00",
+  "generated_at": "2025-12-15T01:37:02.079169+00:00",
   "locale": "ko_KR",
   "total_cards": 883,
   "cards": {
@@ -4450,6 +4450,7 @@
           "description": "모든 근접형 적이 받는 데미지가 5% 증가한다",
           "unlock_level": 75,
           "tags": [
+            "DMG Amp",
             "Melee"
           ]
         }
@@ -7474,6 +7475,7 @@
           "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 10% 증가한다",
           "unlock_level": 83,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -8777,7 +8779,9 @@
           "name": "마력의 칼바람",
           "description": "일반 공격 대상의 속도를 20% 감소시킨다",
           "unlock_level": 30,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "13702",
@@ -11075,7 +11079,9 @@
           "name": "바람의 힘",
           "description": "스킬 대상의 공격 속도를 33% 감소시킨다",
           "unlock_level": 50,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "17002",
@@ -12247,7 +12253,9 @@
           "name": "실망의 선물 배달부",
           "description": "스킬 대상의 공격 속도를 20% 감소시킨다",
           "unlock_level": 30,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "18702",
@@ -14678,6 +14686,7 @@
           "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 4% 증가한다",
           "unlock_level": 68,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -15665,7 +15674,9 @@
           "name": "거미줄",
           "description": "일반 공격 대상의 속도를 15% 감소시킨다",
           "unlock_level": 65,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -16221,6 +16232,7 @@
           "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 10% 증가한다",
           "unlock_level": 73,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -21993,7 +22005,9 @@
           "name": "철의 처녀",
           "description": "스킬 대상의 공격 속도를 30% 감소시킨다",
           "unlock_level": 33,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "32702",
@@ -23180,6 +23194,7 @@
           "description": "WAVE 시작 시마다 80% 확률로 모든 적을 수면 상태로 만드는 동시 공격속도를 3% 감소한다",
           "unlock_level": 52,
           "tags": [
+            "Slow",
             "Sleep",
             "Wave Start"
           ]
@@ -23259,6 +23274,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 10% 증가한다",
           "unlock_level": 57,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -27957,6 +27973,7 @@
           "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 8% 증가한다",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -28804,7 +28821,9 @@
           "name": "억압의 사슬",
           "description": "남은 HP가 50%이하일때 받는 데미지가 30% 감소하고 공격 속도가 30% 증가한다.",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -30221,7 +30240,8 @@
           "description": "전투 데미지가 20% 증가하는 동시에 공격 속도가 5% 감소한다",
           "unlock_level": 82,
           "tags": [
-            "DMG Boost"
+            "DMG Boost",
+            "Slow"
           ]
         }
       ],
@@ -31855,8 +31875,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "467": {
@@ -31922,9 +31944,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "468": {
@@ -31986,9 +32012,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "469": {
@@ -32913,8 +32943,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "482": {
@@ -32977,9 +33009,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "483": {
@@ -33041,9 +33077,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "484": {
@@ -34022,8 +34062,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "498": {
@@ -34087,9 +34129,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "499": {
@@ -34150,9 +34196,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "500": {
@@ -34224,8 +34274,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "501": {
@@ -34288,9 +34340,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "502": {
@@ -34357,9 +34413,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "503": {
@@ -35371,8 +35431,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "517": {
@@ -35433,9 +35495,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "518": {
@@ -35497,9 +35563,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "519": {
@@ -36473,8 +36543,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "533": {
@@ -36550,8 +36622,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "534": {
@@ -36610,9 +36684,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "535": {
@@ -37202,6 +37280,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 20% 증가한다",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -38923,8 +39002,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "568": {
@@ -38987,9 +39068,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "569": {
@@ -39048,9 +39133,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "570": {
@@ -40040,8 +40129,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "584": {
@@ -40101,9 +40192,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "585": {
@@ -40165,9 +40260,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "586": {
@@ -40749,6 +40848,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 20% 증가한다",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -41146,8 +41246,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "600": {
@@ -41206,9 +41308,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "601": {
@@ -41267,9 +41373,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "602": {
@@ -41376,7 +41486,9 @@
           "name": "시바의 권속",
           "description": "일반 공격 대상의 속도를 25% 감소시킨다",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "60302",
@@ -41408,9 +41520,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "604": {
@@ -41470,9 +41586,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "605": {
@@ -41913,6 +42033,7 @@
           "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 20% 증가한다",
           "unlock_level": 75,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -42328,8 +42449,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "617": {
@@ -42390,10 +42513,13 @@
       "image_urls": {},
       "acquisition": {
         "sources": [
+          "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "618": {
@@ -42533,8 +42659,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "620": {
@@ -42593,9 +42721,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "621": {
@@ -43445,8 +43577,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "633": {
@@ -43506,10 +43640,13 @@
       "image_urls": {},
       "acquisition": {
         "sources": [
+          "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "634": {
@@ -43814,6 +43951,7 @@
           "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 7% 증가한다",
           "unlock_level": 64,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -44019,6 +44157,7 @@
           "description": "모든 원거리형 아군의 받는 데미지가 10% 감소하고 공격 속도가 15% 증가한다",
           "unlock_level": 75,
           "tags": [
+            "Slow",
             "Ranged"
           ]
         }
@@ -44095,6 +44234,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 20% 증가한다",
           "unlock_level": 90,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -44419,8 +44559,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "647": {
@@ -44479,9 +44621,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "648": {
@@ -44852,6 +44998,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 10% 증가한다",
           "unlock_level": 67,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -44920,7 +45067,9 @@
           "name": "귀재",
           "description": "일반 공격 대상의 속도를 20% 감소시킨다",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -45427,6 +45576,7 @@
           "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 30% 증가한다",
           "unlock_level": 84,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -45453,8 +45603,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "662": {
@@ -45513,9 +45665,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "663": {
@@ -45572,9 +45728,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "664": {
@@ -46439,6 +46599,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 17% 증가한다(조력자이외 아군파티 1회유효)",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -46541,8 +46702,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "678": {
@@ -46580,7 +46743,9 @@
           "name": "매혹의 향기",
           "description": "일반 공격 대상의 속도를 25% 감소시킨다",
           "unlock_level": 66,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -46602,9 +46767,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "679": {
@@ -46640,6 +46809,7 @@
           "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 10% 증가한다",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -46663,9 +46833,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "680": {
@@ -47408,6 +47582,8 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 30% 증가한다 동시에 공격 속도가 30% 감소한다",
           "unlock_level": 90,
           "tags": [
+            "Slow",
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -47643,9 +47819,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "694": {
@@ -47707,9 +47887,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "695": {
@@ -47769,9 +47953,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "696": {
@@ -47907,8 +48095,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "698": {
@@ -47967,9 +48157,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "699": {
@@ -48032,9 +48226,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "700": {
@@ -48961,8 +49159,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "713": {
@@ -49022,9 +49222,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "714": {
@@ -49088,9 +49292,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "715": {
@@ -49803,7 +50011,9 @@
           "name": "츤데레",
           "description": "일반 공격 대상의 속도를 40% 감소시킨다",
           "unlock_level": 73,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "72502",
@@ -50043,8 +50253,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "729": {
@@ -50107,9 +50319,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "730": {
@@ -50172,9 +50388,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "731": {
@@ -50943,6 +51163,7 @@
           "description": "최종 WAVE 시 모든 아군이 받는 데미지가 15% 감소하고 공격 속도가 20% 증가한다",
           "unlock_level": 76,
           "tags": [
+            "Slow",
             "Team",
             "Final Wave"
           ]
@@ -51178,9 +51399,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "745": {
@@ -51241,9 +51466,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "746": {
@@ -51303,9 +51532,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "747": {
@@ -51503,8 +51736,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "750": {
@@ -51567,9 +51802,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "751": {
@@ -52379,9 +52618,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2195": {
@@ -52622,6 +52865,7 @@
           "description": "최종 WAVE시 모든 적이 받는 데미지가 25% 증가한다",
           "unlock_level": 90,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -52869,8 +53113,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2196": {
@@ -53007,9 +53253,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2374": {
@@ -53057,6 +53307,7 @@
           "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 35% 증가한다",
           "unlock_level": 85,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -53080,9 +53331,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2377": {
@@ -53146,9 +53401,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2376": {
@@ -53207,9 +53466,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1318": {
@@ -54174,9 +54437,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1309": {
@@ -54251,8 +54518,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1321": {
@@ -54325,8 +54594,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1303": {
@@ -54387,9 +54658,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1306": {
@@ -54448,9 +54723,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1302": {
@@ -54509,9 +54788,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1313": {
@@ -55469,8 +55752,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1466": {
@@ -55529,9 +55814,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1465": {
@@ -55786,9 +56075,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1433": {
@@ -55888,6 +56181,7 @@
           "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 12% 증가한다",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -56334,7 +56628,8 @@
         ],
         "currently_available": true,
         "availability_summary": [
-          "Featured Banner"
+          "Featured Banner",
+          "Standard Gacha"
         ]
       }
     },

@@ -69,7 +69,7 @@ export default function CardReferencePopups({ cards, skills = {} }: CardReferenc
     <div
       ref={refs.setFloating}
       style={floatingStyles}
-      className="popup z-50"
+      className="popup z-50 max-w-md"
     >
       <div className="flex gap-3">
         {/* Card Image */}
@@ -77,7 +77,7 @@ export default function CardReferencePopups({ cards, skills = {} }: CardReferenc
           <img
             src={imageUrl || PLACEHOLDER_IMAGE}
             alt={activeCard.name || `Card #${activeCard.id}`}
-            className="w-24 h-auto rounded"
+            className="w-28 h-auto rounded"
             loading="lazy"
             onError={(e) => {
               (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
@@ -96,7 +96,7 @@ export default function CardReferencePopups({ cards, skills = {} }: CardReferenc
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-xs mb-2">
+          <div className="grid grid-cols-4 gap-x-2 gap-y-0.5 text-xs mb-2">
             <div>
               <span className="text-secondary">ATK:</span>{' '}
               <span className="font-mono">{formatNumber(activeCard.stats.max_atk)}</span>
@@ -117,16 +117,35 @@ export default function CardReferencePopups({ cards, skills = {} }: CardReferenc
 
           {/* Skill */}
           {activeCard.skill && (
-            <div>
+            <div className="mb-2">
               <div className="text-xs font-medium" style={{ color: 'var(--color-accent)' }}>
-                {activeCard.skill.name || 'Unknown Skill'}
+                Skill: {activeCard.skill.name || 'Unknown Skill'}
               </div>
               <div
-                className="text-xs text-secondary line-clamp-2"
+                className="text-xs text-secondary"
                 dangerouslySetInnerHTML={{
                   __html: formatSkillDescription(activeCard.skill.description, skillData, activeCard.stats.rarity) || 'No description'
                 }}
               />
+            </div>
+          )}
+
+          {/* Abilities */}
+          {activeCard.abilities && activeCard.abilities.length > 0 && (
+            <div className="space-y-1">
+              {activeCard.abilities.map((ability, idx) => (
+                <div key={ability.id || idx}>
+                  <div className="text-xs font-medium" style={{ color: 'var(--color-accent)' }}>
+                    Lv.{ability.unlock_level}: {ability.name || 'Unknown Ability'}
+                  </div>
+                  <div
+                    className="text-xs text-secondary"
+                    dangerouslySetInnerHTML={{
+                      __html: formatSkillDescription(ability.description, null, activeCard.stats.rarity) || 'No description'
+                    }}
+                  />
+                </div>
+              ))}
             </div>
           )}
         </div>

@@ -1,6 +1,6 @@
 {
   "version": "6885e0f",
-  "generated_at": "2025-12-14T14:27:43.308524+00:00",
+  "generated_at": "2025-12-15T01:37:02.079169+00:00",
   "total_cards": 883,
   "cards": {
     "1": {
@@ -4449,6 +4449,7 @@
           "description": "All melee foes take 5% more DMG.",
           "unlock_level": 75,
           "tags": [
+            "DMG Amp",
             "Melee"
           ]
         }
@@ -7473,6 +7474,7 @@
           "description": "All melee foes take 10% more DMG at the start of each wave.",
           "unlock_level": 83,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -8776,7 +8778,9 @@
           "name": "Like a Blade of Magic",
           "description": "Normal attacks decrease target's ATK speed by 20%.",
           "unlock_level": 30,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "13702",
@@ -11074,7 +11078,9 @@
           "name": "Wind Power",
           "description": "Skill attacks decrease target's ATK speed by 33%.",
           "unlock_level": 50,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "17002",
@@ -12246,7 +12252,9 @@
           "name": "Gifter of Disappointments",
           "description": "Skill attacks decrease target's ATK speed by 20%.",
           "unlock_level": 30,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "18702",
@@ -14677,6 +14685,7 @@
           "description": "All melee foes take 4% more DMG at the start of each wave.",
           "unlock_level": 68,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -15664,7 +15673,9 @@
           "name": "The Spider's Thread",
           "description": "Normal attacks decrease the current target's ATK speed by 15%.",
           "unlock_level": 65,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -16220,6 +16231,7 @@
           "description": "All melee foes take 10% more DMG at the start of each wave.",
           "unlock_level": 73,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -21992,7 +22004,9 @@
           "name": "Maid of Iron",
           "description": "Skill attacks decrease target's ATK speed by 30%.",
           "unlock_level": 33,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "32702",
@@ -23179,6 +23193,7 @@
           "description": "80% chances of inflicting Sleep to all foes and decreases 3% ATK speed with 80% chances at the start of each wave.",
           "unlock_level": 52,
           "tags": [
+            "Slow",
             "Sleep",
             "Wave Start"
           ]
@@ -23258,6 +23273,7 @@
           "description": "At the start of the final wave, all foes take 10% more damage.",
           "unlock_level": 57,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -27956,6 +27972,7 @@
           "description": "All melee foes take 8% more DMG at the start of each wave.",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -28803,7 +28820,9 @@
           "name": "Chains of Restraint",
           "description": "Reduces 30% of DMG taken and increases 30% of ATK speed when HP is 1/2 or below.",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -30220,7 +30239,8 @@
           "description": "Increases 20% of DMG dealt and slightly decreases the ATK speed.",
           "unlock_level": 82,
           "tags": [
-            "DMG Boost"
+            "DMG Boost",
+            "Slow"
           ]
         }
       ],
@@ -31854,8 +31874,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "467": {
@@ -31921,9 +31943,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "468": {
@@ -31985,9 +32011,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "469": {
@@ -32912,8 +32942,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "482": {
@@ -32976,9 +33008,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "483": {
@@ -33040,9 +33076,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "484": {
@@ -34021,8 +34061,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "498": {
@@ -34086,9 +34128,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "499": {
@@ -34149,9 +34195,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "500": {
@@ -34223,8 +34273,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "501": {
@@ -34287,9 +34339,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "502": {
@@ -34356,9 +34412,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "503": {
@@ -35370,8 +35430,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "517": {
@@ -35432,9 +35494,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "518": {
@@ -35496,9 +35562,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "519": {
@@ -36472,8 +36542,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "533": {
@@ -36549,8 +36621,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "534": {
@@ -36609,9 +36683,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "535": {
@@ -37201,6 +37279,7 @@
           "description": "At the start of the final wave, all foes take 20% more damage.",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -38922,8 +39001,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "568": {
@@ -38986,9 +39067,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "569": {
@@ -39047,9 +39132,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "570": {
@@ -40039,8 +40128,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "584": {
@@ -40100,9 +40191,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "585": {
@@ -40164,9 +40259,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "586": {
@@ -40748,6 +40847,7 @@
           "description": "At the start of the final wave, all foes take 20% more damage.",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         },
@@ -41145,8 +41245,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "600": {
@@ -41205,9 +41307,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "601": {
@@ -41266,9 +41372,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "602": {
@@ -41375,7 +41485,9 @@
           "name": "Shiva's aide",
           "description": "Normal attacks decrease the current target's ATK speed by 25%.",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "60302",
@@ -41407,9 +41519,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "604": {
@@ -41469,9 +41585,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "605": {
@@ -41912,6 +42032,7 @@
           "description": "At the start of the final wave, enemy with the most HP takes 20% more damage.",
           "unlock_level": 75,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -42327,8 +42448,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "617": {
@@ -42389,10 +42512,13 @@
       "image_urls": {},
       "acquisition": {
         "sources": [
+          "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "618": {
@@ -42532,8 +42658,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "620": {
@@ -42592,9 +42720,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "621": {
@@ -43444,8 +43576,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "633": {
@@ -43505,10 +43639,13 @@
       "image_urls": {},
       "acquisition": {
         "sources": [
+          "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "634": {
@@ -43813,6 +43950,7 @@
           "description": "All melee foes take 7% more DMG at the start of each wave.",
           "unlock_level": 64,
           "tags": [
+            "DMG Amp",
             "Melee",
             "Wave Start"
           ]
@@ -44018,6 +44156,7 @@
           "description": "Reduces 10% of DMG taken of all ranged allies; increases 15% of ATK speed.",
           "unlock_level": 75,
           "tags": [
+            "Slow",
             "Ranged"
           ]
         }
@@ -44094,6 +44233,7 @@
           "description": "At the start of the final wave, all foes take 20% more damage.",
           "unlock_level": 90,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -44418,8 +44558,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "647": {
@@ -44478,9 +44620,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "648": {
@@ -44851,6 +44997,7 @@
           "description": "At the start of the final wave, all foes take 10% more damage.",
           "unlock_level": 67,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -44919,7 +45066,9 @@
           "name": "One with special powers",
           "description": "Normal attacks decrease target's ATK speed by 20%.",
           "unlock_level": 60,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -45426,6 +45575,7 @@
           "description": "At the start of the final wave, enemy with the most HP takes 30% more damage.",
           "unlock_level": 84,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -45452,8 +45602,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "662": {
@@ -45512,9 +45664,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "663": {
@@ -45571,9 +45727,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "664": {
@@ -46438,6 +46598,7 @@
           "description": "At the start of the final wave, all foes take 17% more damage.(only take effect once to the team)",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -46540,8 +46701,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "678": {
@@ -46579,7 +46742,9 @@
           "name": "Alluring Fragrance",
           "description": "Normal attacks decrease the current target's ATK speed by 25%.",
           "unlock_level": 66,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         }
       ],
       "bonds": [
@@ -46601,9 +46766,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "679": {
@@ -46639,6 +46808,7 @@
           "description": "At the start of the final wave, enemy with the most HP takes 10% more damage.",
           "unlock_level": 80,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -46662,9 +46832,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "680": {
@@ -47407,6 +47581,8 @@
           "description": "At the start of the final wave, all foes take 30% more damage and decreases 30% of the ATK speed..",
           "unlock_level": 90,
           "tags": [
+            "Slow",
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -47642,9 +47818,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "694": {
@@ -47706,9 +47886,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "695": {
@@ -47768,9 +47952,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "696": {
@@ -47906,8 +48094,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "698": {
@@ -47966,9 +48156,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "699": {
@@ -48031,9 +48225,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "700": {
@@ -48960,8 +49158,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "713": {
@@ -49021,9 +49221,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "714": {
@@ -49087,9 +49291,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "715": {
@@ -49802,7 +50010,9 @@
           "name": "Tsundere",
           "description": "Normal attacks decrease the current target's ATK speed by 40%.",
           "unlock_level": 73,
-          "tags": []
+          "tags": [
+            "Slow"
+          ]
         },
         {
           "id": "72502",
@@ -50042,8 +50252,10 @@
           "gacha",
           "auction"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "729": {
@@ -50106,9 +50318,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "730": {
@@ -50171,9 +50387,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "731": {
@@ -50942,6 +51162,7 @@
           "description": "Reduces 15% of DMG taken of all team members; increases 20% of ATK speed at the start of the final wave.",
           "unlock_level": 76,
           "tags": [
+            "Slow",
             "Team",
             "Final Wave"
           ]
@@ -51177,9 +51398,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "745": {
@@ -51240,9 +51465,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "746": {
@@ -51302,9 +51531,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "747": {
@@ -51502,8 +51735,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "750": {
@@ -51566,9 +51801,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "751": {
@@ -52378,9 +52617,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2195": {
@@ -52621,6 +52864,7 @@
           "description": "At the start of the final wave, all foes take 25% more damage.",
           "unlock_level": 90,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -52868,8 +53112,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2196": {
@@ -53006,9 +53252,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2374": {
@@ -53056,6 +53306,7 @@
           "description": "At the start of the final wave, enemy with the most HP takes 35% more damage.",
           "unlock_level": 85,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -53079,9 +53330,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2377": {
@@ -53145,9 +53400,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "2376": {
@@ -53206,9 +53465,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1318": {
@@ -54173,9 +54436,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1309": {
@@ -54250,8 +54517,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1321": {
@@ -54324,8 +54593,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1303": {
@@ -54386,9 +54657,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1306": {
@@ -54447,9 +54722,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1302": {
@@ -54508,9 +54787,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1313": {
@@ -55468,8 +55751,10 @@
         "sources": [
           "gacha"
         ],
-        "currently_available": false,
-        "availability_summary": []
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1466": {
@@ -55528,9 +55813,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1465": {
@@ -55785,9 +56074,13 @@
       },
       "image_urls": {},
       "acquisition": {
-        "sources": [],
-        "currently_available": false,
-        "availability_summary": []
+        "sources": [
+          "gacha"
+        ],
+        "currently_available": true,
+        "availability_summary": [
+          "Standard Gacha"
+        ]
       }
     },
     "1433": {
@@ -55887,6 +56180,7 @@
           "description": "At the start of the final wave, enemy with the most HP takes 12% more damage.",
           "unlock_level": 70,
           "tags": [
+            "DMG Amp",
             "Final Wave"
           ]
         }
@@ -56333,7 +56627,8 @@
         ],
         "currently_available": true,
         "availability_summary": [
-          "Featured Banner"
+          "Featured Banner",
+          "Standard Gacha"
         ]
       }
     },
