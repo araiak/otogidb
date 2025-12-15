@@ -2,6 +2,17 @@
 
 Thank you for your interest in contributing to OtogiDB! This guide covers how to submit blog posts, the review process, and important licensing information.
 
+## Important: Data Files
+
+**Do not modify files in the `public/data/` directory.** These files are managed by proprietary automation that extracts data directly from the game client.
+
+If you find incorrect data or missing information:
+- Open an issue on [GitHub](https://github.com/araiak/otogidb/issues)
+- Describe the problem and provide screenshots if possible
+- We will investigate and update the automation as needed
+
+Pull requests that modify `public/data/` files will be rejected.
+
 ## Blog Post Contributions
 
 We welcome blog posts about Otogi Spirit Agents including:
