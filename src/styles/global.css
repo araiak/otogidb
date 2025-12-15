@@ -208,6 +208,12 @@
 }
 
 @layer utilities {
+  /* Game color text - designed for dark backgrounds, needs adjustment in light mode */
+  /* Light mode only: darken game colors for better contrast on light backgrounds */
+  html:not(.dark) .game-color {
+    filter: brightness(0.65) saturate(1.3);
+  }
+
   /* Link styles */
   .link {
     color: var(--color-accent);

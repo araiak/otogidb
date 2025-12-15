@@ -591,7 +591,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       }
     });
     // Define source order
-    const sourceOrder = ['gacha', 'auction', 'exchange', 'event'];
+    const sourceOrder = ['gacha', 'auction', 'exchange', 'event', 'daily'];
     const sortedSources = Array.from(sources).sort((a, b) => {
       const aIndex = sourceOrder.indexOf(a);
       const bIndex = sourceOrder.indexOf(b);
@@ -779,15 +779,18 @@ export default function CardTable({ initialCards }: CardTableProps) {
               const label = source === 'gacha' ? 'G' :
                            source === 'auction' ? 'A' :
                            source === 'exchange' ? 'E' :
-                           source === 'event' ? 'Ev' : source;
-              const colorClass = source === 'gacha' ? 'bg-purple-500/20 text-purple-300' :
-                                source === 'auction' ? 'bg-yellow-500/20 text-yellow-300' :
-                                source === 'exchange' ? 'bg-blue-500/20 text-blue-300' :
-                                source === 'event' ? 'bg-green-500/20 text-green-300' : 'bg-gray-500/20';
+                           source === 'event' ? 'Ev' :
+                           source === 'daily' ? 'D' : source;
+              const colorClass = source === 'gacha' ? 'bg-purple-500/20 text-purple-700 dark:text-purple-300' :
+                                source === 'auction' ? 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-300' :
+                                source === 'exchange' ? 'bg-blue-500/20 text-blue-700 dark:text-blue-300' :
+                                source === 'event' ? 'bg-green-500/20 text-green-700 dark:text-green-300' :
+                                source === 'daily' ? 'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300' : 'bg-gray-500/20';
               const title = source === 'gacha' ? 'Gacha' :
                            source === 'auction' ? 'Auction' :
                            source === 'exchange' ? 'Exchange' :
-                           source === 'event' ? 'Event' : source;
+                           source === 'event' ? 'Event' :
+                           source === 'daily' ? 'Daily Dungeon' : source;
               return (
                 <span
                   key={source}
@@ -1131,11 +1134,13 @@ export default function CardTable({ initialCards }: CardTableProps) {
               const label = opt === 'gacha' ? 'Gacha' :
                            opt === 'auction' ? 'Auction' :
                            opt === 'exchange' ? 'Exchange' :
-                           opt === 'event' ? 'Event' : String(opt);
+                           opt === 'event' ? 'Event' :
+                           opt === 'daily' ? 'Daily Dungeon' : String(opt);
               const colorClass = opt === 'gacha' ? 'text-purple-400' :
                                 opt === 'auction' ? 'text-yellow-400' :
                                 opt === 'exchange' ? 'text-blue-400' :
-                                opt === 'event' ? 'text-green-400' : '';
+                                opt === 'event' ? 'text-green-400' :
+                                opt === 'daily' ? 'text-cyan-400' : '';
               return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />

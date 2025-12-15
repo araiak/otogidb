@@ -27,6 +27,7 @@ export interface Ability {
   description: string;
   unlock_level?: number;
   tags?: string[];
+  synergy_partners?: string[]; // Card IDs that trigger this ability's team bonus
 }
 
 export interface ImagePaths {
@@ -124,7 +125,14 @@ export interface EventAcquisition {
   reward_tiers: EventRewardTier[];
 }
 
-export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event';
+export interface DailyAcquisition {
+  available: boolean;
+  drop_rate: number | null;
+  schedule: number[]; // Weekday numbers: 1=Mon, 2=Tue, ..., 7=Sun
+  battle_id: string | null;
+}
+
+export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event' | 'daily';
 
 export interface CardAcquisition {
   sources: AcquisitionSource[];
@@ -134,6 +142,7 @@ export interface CardAcquisition {
   exchange: ExchangeAcquisition;
   auction: AuctionAcquisition;
   event: EventAcquisition;
+  daily?: DailyAcquisition;
 }
 
 export interface Card {
@@ -146,6 +155,7 @@ export interface Card {
   skill: Skill | null;
   abilities: Ability[];
   bonds: Bond[];
+  synergies?: string[]; // Card IDs that trigger team bonus abilities
   images: ImagePaths;
   image_urls: ImageUrls;
   meta: CardMeta;

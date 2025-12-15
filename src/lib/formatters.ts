@@ -2,10 +2,13 @@
  * Convert game's custom markup to safe HTML
  *
  * Game format: <color=#hex>text</color>
- * HTML format: <span style="color:#hex">text</span>
+ * HTML format: <span class="game-color" style="color:#hex">text</span>
  *
  * Security: This function sanitizes the output to prevent XSS attacks.
  * Only allows <span style="color:#hex"> and <br> tags.
+ *
+ * Note: The "game-color" class allows CSS to adjust colors for light mode
+ * (game colors are designed for dark backgrounds).
  */
 export function formatDescription(text: string | null | undefined): string {
   if (!text) return '';
@@ -42,9 +45,10 @@ export function formatDescription(text: string | null | undefined): string {
   for (const tag of colorTags) {
     // Only allow valid hex colors
     if (/^#[0-9a-fA-F]{6}$/.test(tag.hex)) {
+      // Add game-color class for CSS-based light mode adjustment
       formatted = formatted.replace(
         tag.placeholder,
-        `<span style="color:${tag.hex}">${tag.content}</span>`
+        `<span class="game-color" style="color:${tag.hex}">${tag.content}</span>`
       );
     } else {
       // Invalid hex, just use the escaped content
