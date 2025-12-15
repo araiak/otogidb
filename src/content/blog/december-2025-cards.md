@@ -30,7 +30,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[689] is one of the strongest assists out there. In longer content this is comparable to :card[707], but the MLB bonus in short content like World Boss or boss phases in Tower/Story generally makes this card better for Divina teams. You can also potentially MLB and then seal and sell back copies so if you are floating a bunch of jewels you can potentially get this one for fairly cheap, especially if you already snagged one or more copies when the Gacha was live. At MLB, :card[723] is slightly better for Divina teams since its MLB skill is Divina-only, but weaker in all other situations. Since Toyouke-Omikami is in limited supply and likely going for close to 500 mochi each, Okita is still a decent alternative for players who don't have it. **Must buy for paying Divina players**, a skip for everyone else.
 
-:card[690] is a strong Anima melee whose MLB seems very strong for World Boss and has a good skill, but I don't think it's a must have. It's a nice one, but it's running 2000 jewels at the moment which is probably just too much for a melee world bosser. **Strong pass for most.**
+:card[690] is a strong Anima melee whose MLB seems very strong for World Boss and has a good skill, but I don't think it's a must have. It's a nice one, but it's running 2000 jewels at the moment which is probably just too much for a melee world bosser. **Probably a pass for most.**
 
 :card[664] is a permanent add and probably a **must buy for pretty much everyone**. The upfront cost is fairly high, but you can seal and sell back copies after the fact which will nearly make any reserve or support a :card[672] for the cost of a few hundred mochi.
 
