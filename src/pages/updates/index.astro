@@ -89,11 +89,10 @@ try {
   const manifestRaw = await import('../../../public/data/changes/manifest.json');
   manifest = manifestRaw.default || manifestRaw;
 } catch (e) {
-  manifest = { generated_at: '', total_versions: 0, versions: [] };
+  manifest = { total_versions: 0, versions: [] };
 }
 
 interface PatchNotesManifest {
-  generated_at: string;
   total_versions: number;
   versions: Array<{
     version: string;
