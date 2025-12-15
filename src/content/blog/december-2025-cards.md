@@ -35,3 +35,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 :card[664] is a permanent add and probably a **must buy for pretty much everyone**. The upfront cost is fairly high, but you can seal and sell back copies after the fact which will nearly make any reserve or support a :card[672] for the cost of a few hundred mochi.
 
 :card[688] was the ranking card from the event but its usefulness is... questionable? I'm sure there is use for it, maybe for a melee wave clearer where a little tankiness and skill damage could be useful, making the card work like :card[593] or the much stronger :card[734], or doubling down on one of those cards to make a super AoE skill nuker. But I think those assist slots are probably better used for support cards that increase damage of your carries directly like :card[664], :card[643], or more widely like :card[618] which are all fairly accessible on auction. **Pass unless you have a lot of mochi floating around.**
+
+---
+
+*A note on recommendations: Play how you like! If you want a card, go for it. My recommendations are meant to highlight cards that I see as standouts - ones that are unlikely to be replaced for some time - while trying to balance cost.*
