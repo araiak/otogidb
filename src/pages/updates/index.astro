@@ -25,62 +25,55 @@ try {
   console.warn('Failed to load cards index for images');
 }
 
-// Cloudinary base for constructing URLs
+// =============================================================================
+// STANDARDIZED TRANSFORMS - Must match src/lib/images.ts to avoid duplicate credits
+// =============================================================================
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
+const TRANSFORMS = {
+  // Android: serve at original size (~200px) - browser downscales nicely for retina
+  androidCircle: 'c_scale,r_max,f_auto,q_auto',
+  // HD circle: 120px (2x for retina) - high-res source so resize is crisp
+  hdCircle: 'w_120,h_120,c_thumb,g_face,r_max,f_auto,q_auto',
+} as const;
 
 // Mascot placeholder - sad chibi for cards without images
 const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
+const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
 
-function getPlaceholderMascot(size: number = 60): string {
-  return `${CLOUDINARY_BASE}/w_${size},h_${size},c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
-}
-
-// Generate circle thumbnail from HD image using Cloudinary transformations
-function getCircleFromHD(hdUrl: string, size: number = 60): string {
-  if (!hdUrl.includes('cloudinary.com')) return hdUrl;
-  // Use face detection with content-aware fallback for best centering
-  const transforms = `w_${size},h_${size},c_thumb,g_face:auto,r_max,f_auto,q_auto`;
-  return hdUrl.replace('/upload/', `/upload/${transforms}/`);
-}
-
-// Get card thumbnail with proper fallback chain:
-// 1. Android image from image_urls (if populated)
-// 2. Construct android URL if card has android in images field
-// 3. HD image from image_urls transformed to circle
-// 4. Construct HD URL if card has hd in images field
-// 5. Mascot placeholder for cards without any images
+// Get card thumbnail with proper fallback chain
+// Android: original size (~200px) - CSS handles display size
+// HD fallback: 120px circle (2x for retina)
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
-  if (!card) return getPlaceholderMascot(60);
+  if (!card) return PLACEHOLDER_MASCOT_URL;
 
   // 1. Try android image from image_urls first
   const androidUrl = card.image_urls?.android;
   if (androidUrl) {
     if (androidUrl.includes('cloudinary.com')) {
-      return androidUrl.replace('/upload/', '/upload/w_60,h_60,c_fill,r_max,f_auto,q_auto/');
+      return androidUrl.replace('/upload/', `/upload/${TRANSFORMS.androidCircle}/`);
     }
     return androidUrl;
   }
 
   // 2. Construct android URL only if card has an android image
   if (card.images?.android) {
-    return `${CLOUDINARY_BASE}/w_60,h_60,c_fill,r_max,f_auto,q_auto/otogi/android/${card.asset_id}.png`;
+    return `${CLOUDINARY_BASE}/${TRANSFORMS.androidCircle}/otogi/android/${card.asset_id}.png`;
   }
 
-  // 3. Try HD image from image_urls
+  // 3. Try HD image from image_urls (generate circle from HD)
   const hdUrl = card.image_urls?.hd;
-  if (hdUrl) {
-    return getCircleFromHD(hdUrl, 60);
+  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+    return hdUrl.replace('/upload/', `/upload/${TRANSFORMS.hdCircle}/`);
   }
 
   // 4. Construct HD URL only if card has an HD image
   if (card.images?.hd) {
-    const constructedHdUrl = `${CLOUDINARY_BASE}/otogi/cards_hd/${card.asset_id}_hd.png`;
-    return getCircleFromHD(constructedHdUrl, 60);
+    return `${CLOUDINARY_BASE}/${TRANSFORMS.hdCircle}/otogi/cards_hd/${card.asset_id}_hd.png`;
   }
 
   // 5. Mascot placeholder for cards without any images
-  return getPlaceholderMascot(60);
+  return PLACEHOLDER_MASCOT_URL;
 }
 
 // Load manifest at build time
