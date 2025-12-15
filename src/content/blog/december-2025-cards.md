@@ -16,7 +16,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## Christmas Cards
 
-:card[1991] is the first released card into the standard pool. This is a fairly strong Divina assist card, however Divina assists are fairly crowded with :card[689] which is currently on auction, or :card[723] which should be coming to permanent auction in several patches. It may not be the best option, but it is a good option and uncapping will net you duplicates on unseal that could be used on your whole team if you don't have better options. The main problem is top players probably don't need it, and newer players probably shouldn't waste pulls because it requires too many copies to be useful, and there are good assists on auction like :card[664].
+:card[1991] is the first released card into the standard pool. This is a fairly strong Divina assist card, however Divina assists are fairly crowded with :card[689] which is currently on auction, or :card[723] which should be coming to permanent auction in several patches. It may not be the best option, but it is a good option and uncapping will net you duplicates on unseal that could be used on your whole team if you don't have better options. The main problem is top players probably don't need it, and newer players probably shouldn't waste pulls because it requires too many copies to be useful, and there are good assists on auction like :card[664]. **Probably hold your invokers.**
 
 :card[1435] is essentially a Divina version of :card[1312]'s skill (hitting 3 enemies with highest ATK) that increases in damage round over round. It looks like it's balanced to be a story card, so it may be accessible to newer players, and only requires 3 copies to get the skill which is... fine, I guess.
 
