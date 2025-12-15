@@ -38,4 +38,4 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ---
 
-*A note on recommendations: Play how you like! If you want a card, go for it. My recommendations are meant to highlight cards that I see as standouts - ones that are unlikely to be replaced for some time - while trying to balance cost.*
+*A note on recommendations: Play how you like! If you want a card, go for it. My recommendations are meant to highlight cards that I see as standouts - ones that are unlikely to be replaced for some time - while trying to balance cost. The game is fairly generous, so you can pick up some cards that aren't super strong and still have resources available for the next event. Don't hesitate to buy a card you like!*
