@@ -125,7 +125,14 @@ export interface EventAcquisition {
   reward_tiers: EventRewardTier[];
 }
 
-export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event';
+export interface DailyAcquisition {
+  available: boolean;
+  drop_rate: number | null;
+  schedule: number[]; // Weekday numbers: 1=Mon, 2=Tue, ..., 7=Sun
+  battle_id: string | null;
+}
+
+export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event' | 'daily';
 
 export interface CardAcquisition {
   sources: AcquisitionSource[];
@@ -135,6 +142,7 @@ export interface CardAcquisition {
   exchange: ExchangeAcquisition;
   auction: AuctionAcquisition;
   event: EventAcquisition;
+  daily?: DailyAcquisition;
 }
 
 export interface Card {

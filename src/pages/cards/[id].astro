@@ -216,7 +216,7 @@ const jsonLd = {
             {card.skill.tags && card.skill.tags.length > 0 && (
               <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-2">
                 {card.skill.tags.map(tag => (
-                  <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-accent);">
+                  <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300">
                     {tag}
                   </span>
                 ))}
@@ -248,7 +248,7 @@ const jsonLd = {
                   {ability.tags && ability.tags.length > 0 && (
                     <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-1.5">
                       {ability.tags.map(tag => (
-                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full" style="background-color: var(--color-surface); color: var(--color-highlight);">
+                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300">
                           {tag}
                         </span>
                       ))}
@@ -340,11 +340,11 @@ const jsonLd = {
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <h2 class="font-semibold text-sm sm:text-base">Availability</h2>
               {card.acquisition.currently_available ? (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-400 font-medium">
+                <span class="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-700 dark:text-green-400 font-medium">
                   Available Now
                 </span>
               ) : (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-400 font-medium">
+                <span class="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-700 dark:text-red-400 font-medium">
                   Not Available
                 </span>
               )}
@@ -355,9 +355,9 @@ const jsonLd = {
               {card.acquisition.sources.includes('gacha') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-300 font-medium">Gacha</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-medium">Gacha</span>
                     {card.acquisition.gacha.in_standard_pool && (
-                      <span class="text-xs text-green-400">✓ Standard Pool</span>
+                      <span class="text-xs text-green-700 dark:text-green-400">✓ Standard Pool</span>
                     )}
                   </div>
                   {card.acquisition.gacha.featured_banners && card.acquisition.gacha.featured_banners.length > 0 && (
@@ -370,10 +370,10 @@ const jsonLd = {
                           </span>
                           <div class="flex items-center gap-2">
                             {banner.pity > 0 && (
-                              <span class="text-yellow-400" title="Pity threshold">Pity: {banner.pity}</span>
+                              <span class="text-yellow-700 dark:text-yellow-400" title="Pity threshold">Pity: {banner.pity}</span>
                             )}
                             {banner.is_current && (
-                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">Active</span>
+                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
                             )}
                           </div>
                         </div>
@@ -397,14 +397,14 @@ const jsonLd = {
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center gap-2">
-                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Auction</span>
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-700 dark:text-yellow-300 font-medium">Auction</span>
                       {card.acquisition.auction.available ? (
-                        <span class="text-xs text-green-400">✓ Available</span>
+                        <span class="text-xs text-green-700 dark:text-green-400">✓ Available</span>
                       ) : (
                         <span class="text-xs text-secondary">Not currently listed</span>
                       )}
                       {card.acquisition.auction.is_time_limited && (
-                        <span class="text-xs text-yellow-400">(Limited Time)</span>
+                        <span class="text-xs text-yellow-700 dark:text-yellow-400">(Limited Time)</span>
                       )}
                     </div>
                     {card.acquisition.auction.price_min !== null && card.acquisition.auction.price_max !== null && (
@@ -420,7 +420,7 @@ const jsonLd = {
               {card.acquisition.sources.includes('exchange') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-300 font-medium">Exchange</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-700 dark:text-blue-300 font-medium">Exchange</span>
                   </div>
                   {card.acquisition.exchange.entries && card.acquisition.exchange.entries.length > 0 && (
                     <div class="space-y-1.5">
@@ -440,7 +440,7 @@ const jsonLd = {
                                 <span class="text-secondary">(Limit: {entry.limit})</span>
                               )}
                               {entry.is_current && (
-                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">Active</span>
+                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
                               )}
                             </div>
                           </div>
@@ -460,7 +460,7 @@ const jsonLd = {
               {card.acquisition.sources.includes('event') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-300 font-medium">Event</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-700 dark:text-green-300 font-medium">Event</span>
                   </div>
                   {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (
                     <div class="space-y-1">
@@ -475,7 +475,7 @@ const jsonLd = {
                               {tier.event_name || `Event #${tier.event_id}`}
                             </span>
                             {tier.is_current && (
-                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">Active</span>
+                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
                             )}
                           </div>
                         </div>
@@ -484,6 +484,33 @@ const jsonLd = {
                   )}
                 </div>
               )}
+
+              {/* Daily Dungeon */}
+              {card.acquisition.sources.includes('daily') && card.acquisition.daily?.available && (() => {
+                const weekdayNames = {1: 'Mon', 2: 'Tue', 3: 'Wed', 4: 'Thu', 5: 'Fri', 6: 'Sat', 7: 'Sun'};
+                const schedule = card.acquisition.daily.schedule || [];
+                const scheduleDays = schedule.map((d) => weekdayNames[d] || `Day ${d}`).join(', ');
+                const dropRate = card.acquisition.daily.drop_rate;
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-medium">Daily Dungeon</span>
+                      <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Available</span>
+                    </div>
+                    <div class="text-xs space-y-1">
+                      {dropRate !== null && (
+                        <div>Drop Rate: <span class="font-medium">{dropRate}%</span></div>
+                      )}
+                      {schedule.length > 0 && (
+                        <div>Schedule: <span class="font-medium">{scheduleDays}</span></div>
+                      )}
+                      {schedule.length === 7 && (
+                        <div class="text-secondary italic">Available every day</div>
+                      )}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           </div>
         )}
