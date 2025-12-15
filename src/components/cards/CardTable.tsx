@@ -23,6 +23,15 @@ import {
   LOCALE_STORAGE_KEY,
   type SupportedLocale
 } from '../../lib/i18n';
+import {
+  sanitizeSearchQuery,
+  parseAndValidateStringParam,
+  parseAndValidateNumberParam,
+  validateSortColumn,
+  validateSortDirection,
+  validateBooleanParam,
+  ALLOWED_FILTER_VALUES,
+} from '../../lib/security';
 
 interface CardTableProps {
   initialCards?: Card[];
@@ -311,58 +320,68 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
 
-  // Read URL params on mount
+  // Read URL params on mount with input validation
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
     const params = new URLSearchParams(window.location.search);
 
-    // Search query
-    const q = params.get('q');
+    // Search query - sanitize to prevent XSS
+    const q = sanitizeSearchQuery(params.get('q'));
     if (q) setGlobalFilter(q);
 
-    // Attribute filter
-    const attr = params.get('attr');
-    if (attr) setAttributeFilter(attr.split(',').filter(Boolean));
+    // Attribute filter - validate against allowed values
+    const attrValues = parseAndValidateStringParam(params.get('attr'), ALLOWED_FILTER_VALUES.attributes);
+    if (attrValues.length > 0) setAttributeFilter(attrValues);
 
-    // Type filter
-    const type = params.get('type');
-    if (type) setTypeFilter(type.split(',').filter(Boolean));
+    // Type filter - validate against allowed values
+    const typeValues = parseAndValidateStringParam(params.get('type'), ALLOWED_FILTER_VALUES.types);
+    if (typeValues.length > 0) setTypeFilter(typeValues);
 
-    // Rarity filter
-    const rarity = params.get('rarity');
-    if (rarity) setRarityFilter(rarity.split(',').map(Number).filter(n => !isNaN(n)));
+    // Rarity filter - validate against allowed values
+    const rarityValues = parseAndValidateNumberParam(params.get('rarity'), ALLOWED_FILTER_VALUES.rarities);
+    if (rarityValues.length > 0) setRarityFilter(rarityValues);
 
-    // Bond filter
-    const bond = params.get('bond');
-    if (bond) setBondFilter(bond.split(',').filter(Boolean));
+    // Bond filter - validate against allowed values
+    const bondValues = parseAndValidateStringParam(params.get('bond'), ALLOWED_FILTER_VALUES.bonds);
+    if (bondValues.length > 0) setBondFilter(bondValues);
 
-    // Skill tag filter
+    // Skill tag filter - sanitize each value (dynamic tags from data)
     const skill = params.get('skill');
-    if (skill) setSkillTagFilter(skill.split(',').filter(Boolean));
-
-    // Ability tag filter
-    const ability = params.get('ability');
-    if (ability) setAbilityTagFilter(ability.split(',').filter(Boolean));
-
-    // Source filter (acquisition sources)
-    const source = params.get('source');
-    if (source) setSourceFilter(source.split(',').filter(Boolean));
-
-    // Available only filter
-    const available = params.get('available');
-    if (available === '1') setAvailableOnly(true);
-
-    // Sorting
-    const sort = params.get('sort');
-    const dir = params.get('dir');
-    if (sort) {
-      setSorting([{ id: sort, desc: dir === 'desc' }]);
+    if (skill) {
+      const skillTags = skill.split(',')
+        .map(s => s.trim().slice(0, 50))
+        .filter(s => s && /^[a-zA-Z0-9\s]+$/.test(s));
+      if (skillTags.length > 0) setSkillTagFilter(skillTags);
     }
 
-    // Playable filter (show NPC cards if npc=1)
-    const npc = params.get('npc');
-    if (npc === '1') {
+    // Ability tag filter - sanitize each value (dynamic tags from data)
+    const ability = params.get('ability');
+    if (ability) {
+      const abilityTags = ability.split(',')
+        .map(s => s.trim().slice(0, 50))
+        .filter(s => s && /^[a-zA-Z0-9\s]+$/.test(s));
+      if (abilityTags.length > 0) setAbilityTagFilter(abilityTags);
+    }
+
+    // Source filter - validate against allowed values
+    const sourceValues = parseAndValidateStringParam(params.get('source'), ALLOWED_FILTER_VALUES.sources);
+    if (sourceValues.length > 0) setSourceFilter(sourceValues);
+
+    // Available only filter - validate boolean
+    if (validateBooleanParam(params.get('available'))) {
+      setAvailableOnly(true);
+    }
+
+    // Sorting - validate column and direction
+    const sortColumn = validateSortColumn(params.get('sort'));
+    const sortDir = validateSortDirection(params.get('dir'));
+    if (sortColumn) {
+      setSorting([{ id: sortColumn, desc: sortDir === 'desc' }]);
+    }
+
+    // Playable filter - validate boolean
+    if (validateBooleanParam(params.get('npc'))) {
       setHideNonPlayable(false);
     }
 

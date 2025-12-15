@@ -1,24 +1,81 @@
 /**
- * Convert game's custom markup to HTML
+ * Convert game's custom markup to safe HTML
  *
  * Game format: <color=#hex>text</color>
  * HTML format: <span style="color:#hex">text</span>
+ *
+ * Security: This function sanitizes the output to prevent XSS attacks.
+ * Only allows <span style="color:#hex"> and <br> tags.
  */
 export function formatDescription(text: string | null | undefined): string {
   if (!text) return '';
 
   let formatted = text;
 
-  // Convert <color=#hex>text</color> to <span style="color:#hex">text</span>
+  // Step 1: Escape any existing HTML entities to prevent double-encoding issues
+  // But preserve our game markup tags for processing
+  const colorTags: Array<{placeholder: string, original: string, hex: string, content: string}> = [];
+  let placeholderIndex = 0;
+
+  // Extract and preserve color tags
   formatted = formatted.replace(
-    /<color=(#[0-9a-fA-F]{6})>([\s\S]*?)<\/color>/g,
-    '<span style="color:$1">$2</span>'
+    /<color=(#[0-9a-fA-F]{6})>([\s\S]*?)<\/color>/gi,
+    (_match, hex, content) => {
+      const placeholder = `__COLOR_${placeholderIndex++}__`;
+      // Recursively sanitize the content inside color tags
+      const sanitizedContent = escapeHtmlExceptBr(content);
+      colorTags.push({ placeholder, original: _match, hex, content: sanitizedContent });
+      return placeholder;
+    }
   );
 
-  // Convert <br/> to proper HTML line breaks
-  formatted = formatted.replace(/<br\s*\/?>/gi, '<br />');
+  // Extract and preserve br tags
+  const brPlaceholder = '__BR_TAG__';
+  formatted = formatted.replace(/<br\s*\/?>/gi, brPlaceholder);
+
+  // Step 2: Escape ALL remaining HTML (anything not in our placeholders is untrusted)
+  formatted = escapeHtmlChars(formatted);
+
+  // Step 3: Restore our safe tags
+  formatted = formatted.replace(new RegExp(brPlaceholder, 'g'), '<br />');
+
+  for (const tag of colorTags) {
+    // Only allow valid hex colors
+    if (/^#[0-9a-fA-F]{6}$/.test(tag.hex)) {
+      formatted = formatted.replace(
+        tag.placeholder,
+        `<span style="color:${tag.hex}">${tag.content}</span>`
+      );
+    } else {
+      // Invalid hex, just use the escaped content
+      formatted = formatted.replace(tag.placeholder, tag.content);
+    }
+  }
 
   return formatted;
+}
+
+/**
+ * Escape HTML special characters
+ */
+function escapeHtmlChars(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
+/**
+ * Escape HTML except for br tags (used for content inside color tags)
+ */
+function escapeHtmlExceptBr(text: string): string {
+  const brPlaceholder = '__INNER_BR__';
+  let result = text.replace(/<br\s*\/?>/gi, brPlaceholder);
+  result = escapeHtmlChars(result);
+  result = result.replace(new RegExp(brPlaceholder, 'g'), '<br />');
+  return result;
 }
 
 /**

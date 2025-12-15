@@ -168,16 +168,28 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
     const posts = document.querySelectorAll<HTMLAnchorElement>('.blog-post');
     const noResults = document.getElementById('no-results');
 
+    // Collect valid tags from the page (whitelist approach)
+    const validTags = new Set<string>(['all']);
+    tagButtons.forEach(btn => {
+      const tag = btn.dataset.tag;
+      if (tag) validTags.add(tag);
+    });
+
     let activeTag = 'all';
 
-    // Check URL for tag param
+    // Check URL for tag param with validation
     const urlParams = new URLSearchParams(window.location.search);
     const tagParam = urlParams.get('tag');
-    if (tagParam) {
+    // Only accept tags that exist on the page (whitelist) and are safe strings
+    if (tagParam && validTags.has(tagParam) && /^[\w\s-]+$/.test(tagParam)) {
       activeTag = tagParam;
     }
 
     function updateFilter(tag: string) {
+      // Validate tag before using
+      if (!validTags.has(tag)) {
+        tag = 'all';
+      }
       activeTag = tag;
 
       // Update URL without reload
