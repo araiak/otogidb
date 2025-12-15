@@ -161,6 +161,11 @@ patchNotes.sort((a, b) => {
   return dateB.localeCompare(dateA);
 });
 
+// Filter out versions with no changes
+const visiblePatchNotes = patchNotes.filter(notes =>
+  notes.summary.new_cards > 0 || notes.summary.modified_cards > 0
+);
+
 // Helper to format date
 function formatDate(dateStr: string): string {
   if (!dateStr) return 'Unknown date';
@@ -245,13 +250,13 @@ function renderStars(rarity: number): string {
       <p class="text-secondary">Card updates, new releases, and balance changes.</p>
     </div>
 
-    {patchNotes.length === 0 ? (
+    {visiblePatchNotes.length === 0 ? (
       <div class="card p-6 text-center">
         <p class="text-secondary">No patch notes available yet.</p>
       </div>
     ) : (
       <div class="space-y-8">
-        {patchNotes.map((notes) => (
+        {visiblePatchNotes.map((notes) => (
           <article class="card overflow-hidden">
             {/* Header */}
             <div class="p-4 md:p-6 border-b" style="border-color: var(--color-border);">
@@ -372,10 +377,6 @@ function renderStars(rarity: number): string {
                 </section>
               )}
 
-              {/* No changes message */}
-              {notes.new_cards.length === 0 && notes.modified_cards.length === 0 && (
-                <p class="text-secondary text-center py-4">No card changes in this version.</p>
-              )}
             </div>
           </article>
         ))}
