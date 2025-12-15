@@ -83,10 +83,12 @@ This creates hoverable links that show card previews. You can use:
 ### Submitting Your Post
 
 1. **Commit your changes** to your fork
-2. **Create a Pull Request** to the `main` branch
+2. **Create a Pull Request** to the `dev` branch (not `main`)
 3. **Fill out the PR description** with:
    - Brief summary of your post
    - Any specific feedback you'd like
+
+**Note:** We merge `dev` to `main` periodically. Your post will go live after the next merge to `main`.
 
 ## Review Process
 
