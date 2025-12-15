@@ -12,7 +12,7 @@ Christmas cards and the December auctions are live, so I wanted to give some per
 
 First, since this is one of my first posts, I'll give some background on myself as a player that will give some context on the inputs I have. I played the original AGG back when that was live and eventually quit. Around 8 months ago I came across Otogi as a kind of re-hash of AGG that was re-running and joined up, the first few events I participated in are now coming up on auction.
 
-I've ranked top 80 overall in some recent events, and am hovering around world boss 200 on rankings although I'm not building for or putting much effort into world boss rankings. So I have a fairly strong team, but I'm not at the cutting edge of the "meta". In any case I want to share my thoughts on some of these cards.
+I've ranked top 80 overall in some recent events, and am hovering around world boss 200 on rankings although I'm not building for or putting much effort into world boss rankings. So I have a fairly strong team, but I'm not at the cutting edge of the "meta". I started playing Divina, but have recently switched to mostly Phantasma. My Anima team is pretty weak and I don't have Sola, so I don't have a lot of "meta" knowledge on Anima teams. In any case I want to share my thoughts on some of these cards.
 
 ## Christmas Cards
 
