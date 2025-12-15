@@ -5,6 +5,7 @@ import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/i
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../lib/similarity';
 import type { Card, CardsData } from '../../types/card';
+import CardPopups from '../../components/cards/CardPopups';
 
 // Import cards and skills data at build time
 import cardsDataRaw from '../../../public/data/cards.json';
@@ -255,6 +256,38 @@ const jsonLd = {
                   )}
                 </div>
               ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Synergies (Team Bonuses) -->
+        {card.synergies && card.synergies.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Synergy Partners</h2>
+            <p class="text-xs text-secondary mb-3">Cards that trigger this card's team bonus abilities</p>
+            <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
+              {card.synergies.map(partnerId => {
+                const partner = cardsData.cards[partnerId];
+                if (!partner) return null;
+                return (
+                  <a
+                    href={`/cards/${partnerId}`}
+                    class="synergy-card text-center group"
+                    data-card-id={partnerId}
+                  >
+                    <img
+                      src={getAndroidImageWithFallback(partner, 80)}
+                      alt={partner.name || `Card #${partnerId}`}
+                      class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto object-cover group-hover:ring-2 ring-offset-1 transition-all"
+                      style="--tw-ring-color: var(--color-accent); --tw-ring-offset-color: var(--color-bg);"
+                      loading="lazy"
+                    />
+                    <div class="text-[9px] sm:text-[10px] truncate mt-1 group-hover:text-accent transition-colors">
+                      {partner.name || `#${partnerId}`}
+                    </div>
+                  </a>
+                );
+              })}
             </div>
           </div>
         )}
@@ -542,4 +575,14 @@ const jsonLd = {
       </div>
     )}
   </div>
+
+  <!-- Card hover popups for synergy cards -->
+  {card.synergies && card.synergies.length > 0 && (
+    <CardPopups
+      client:visible
+      cards={cardsData.cards}
+      skills={skillsData}
+      selector=".synergy-card"
+    />
+  )}
 </BaseLayout>

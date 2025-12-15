@@ -27,6 +27,7 @@ export interface Ability {
   description: string;
   unlock_level?: number;
   tags?: string[];
+  synergy_partners?: string[]; // Card IDs that trigger this ability's team bonus
 }
 
 export interface ImagePaths {
@@ -146,6 +147,7 @@ export interface Card {
   skill: Skill | null;
   abilities: Ability[];
   bonds: Bond[];
+  synergies?: string[]; // Card IDs that trigger team bonus abilities
   images: ImagePaths;
   image_urls: ImageUrls;
   meta: CardMeta;
