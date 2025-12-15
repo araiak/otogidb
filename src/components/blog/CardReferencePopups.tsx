@@ -300,13 +300,20 @@ export default function CardReferencePopups({ cards, skills = {} }: CardReferenc
 
             {/* Abilities */}
             {mobilePreviewCard.abilities && mobilePreviewCard.abilities.length > 0 && (
-              <div className="mb-3">
-                <div className="text-sm font-medium mb-1" style={{ color: 'var(--color-accent)' }}>
-                  Abilities
-                </div>
-                <div className="text-xs text-secondary">
-                  {mobilePreviewCard.abilities.map(a => `Lv.${a.unlock_level}: ${a.name}`).join(', ')}
-                </div>
+              <div className="mb-3 space-y-2">
+                {mobilePreviewCard.abilities.map((ability, idx) => (
+                  <div key={ability.id || idx}>
+                    <div className="text-sm font-medium" style={{ color: 'var(--color-accent)' }}>
+                      Lv.{ability.unlock_level}: {ability.name || 'Unknown Ability'}
+                    </div>
+                    <div
+                      className="text-xs text-secondary"
+                      dangerouslySetInnerHTML={{
+                        __html: formatSkillDescription(ability.description, null, mobilePreviewCard.stats.rarity) || 'No description'
+                      }}
+                    />
+                  </div>
+                ))}
               </div>
             )}
 
