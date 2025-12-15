@@ -120,68 +120,87 @@ export function getOptimizedImageUrl(
   return baseUrl.replace('/upload/', `/upload/${transforms.join(',')}/`);
 }
 
+// =============================================================================
+// STANDARDIZED TRANSFORMS - Keep these minimal to reduce Cloudinary credits
+// Each unique transform string × image = 1 derived asset
+// =============================================================================
+const STANDARD_TRANSFORMS = {
+  // Android circle: Don't resize - serve at original size (~200px) for quality
+  // CSS will handle display size, browser downscaling looks better than Cloudinary upscaling
+  androidCircle: 'c_scale,r_max,f_auto,q_auto',
+  // HD circle at 120px (2x for retina) - high-res source so resize looks good
+  hdCircle: 'w_120,h_120,c_thumb,g_face,r_max,f_auto,q_auto',
+  // 80px thumbnail for table rows
+  thumb: 'w_80,f_auto,q_auto',
+  // 200px for hover/tap popups
+  popup: 'w_200,f_auto,q_auto',
+  // Original size with optimization for detail pages
+  hd: 'f_auto,q_auto',
+} as const;
+
 /**
- * Get thumbnail URL for card table (search results)
+ * Get thumbnail URL for card table (search results) - 80px
  * Uses HD optimized and scaled down, falls back to android
  */
 export function getThumbnailUrl(card: Card): string | null {
   // Try HD first (highest quality, Cloudinary will resize and cache)
-  const hdUrl = getOptimizedImageUrl(card, 'hd', {
-    width: 80,
-    quality: 'auto',
-    format: 'auto'
-  });
+  const hdUrl = getImageUrl(card, 'hd');
+  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+    return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.thumb}/`);
+  }
   if (hdUrl) return hdUrl;
 
   // Fall back to android
-  return getOptimizedImageUrl(card, 'android', {
-    width: 80,
-    quality: 'auto',
-    format: 'auto'
-  });
+  const androidUrl = getImageUrl(card, 'android');
+  if (androidUrl && androidUrl.includes('cloudinary.com')) {
+    return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.thumb}/`);
+  }
+  return androidUrl;
 }
 
 /**
- * Get medium size image for popups
+ * Get medium size image for popups - 200px
  * Uses HD optimized, falls back to android
  */
 export function getPopupImageUrl(card: Card): string | null {
   // Try HD first with resize
-  const hdUrl = getOptimizedImageUrl(card, 'hd', {
-    width: 200,
-    quality: 'auto',
-    format: 'auto'
-  });
+  const hdUrl = getImageUrl(card, 'hd');
+  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+    return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.popup}/`);
+  }
   if (hdUrl) return hdUrl;
 
-  // Fall back to android
-  return getOptimizedImageUrl(card, 'android', {
-    quality: 'auto',
-    format: 'auto'
-  });
+  // Fall back to android (no resize, it's already small)
+  const androidUrl = getImageUrl(card, 'android');
+  if (androidUrl && androidUrl.includes('cloudinary.com')) {
+    return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.hd}/`);
+  }
+  return androidUrl;
 }
 
 /**
- * Get HD image for detail pages
+ * Get HD image for detail pages - original size with optimization
  */
 export function getHDImageUrl(card: Card): string | null {
-  return getOptimizedImageUrl(card, 'hd', {
-    quality: 'auto',
-    format: 'auto'
-  });
+  const hdUrl = getImageUrl(card, 'hd');
+  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+    return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.hd}/`);
+  }
+  return hdUrl;
 }
 
 /**
  * Get HD image with placeholder fallback for detail pages
  */
-export function getHDImageUrlWithFallback(card: Card, width?: number): string {
+export function getHDImageUrlWithFallback(card: Card): string {
   const hdUrl = getHDImageUrl(card);
   if (hdUrl) return hdUrl;
-  return getPlaceholderHD(width);
+  return getPlaceholderHD();
 }
 
 /**
- * Placeholder images hosted on Cloudinary with AI upscaling support
+ * Placeholder images hosted on Cloudinary
+ * Using fixed sizes to minimize transformation variants
  */
 const PLACEHOLDER_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
 
@@ -191,36 +210,26 @@ const PLACEHOLDER_CARD_ID = 'v1765670205/placeholder-card_q0umz7.png';
 // Mascot placeholder - sad chibi character for errors
 const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
 
+// Pre-computed placeholder transforms (fixed sizes to reduce credit usage)
+const PLACEHOLDER_TRANSFORMS = {
+  // HD placeholder - just optimize, no resize (source is already card-sized)
+  hd: 'f_auto,q_auto',
+  // Mascot as 60px circle
+  mascotCircle: 'w_60,h_60,c_fit,f_auto,q_auto',
+} as const;
+
 /**
- * Get HD placeholder with AI upscaling
- * Upscales to match HD card dimensions (492x632)
- *
- * TODO: Review upscaling quality - current AI upscaling may have jagged edges.
- * Consider: higher res source image, different Cloudinary transforms, or
- * pre-upscaled placeholder uploaded directly to Cloudinary.
+ * Get HD placeholder (original size, optimized)
  */
-export function getPlaceholderHD(width: number = 492, height: number = 632): string {
-  // Use Cloudinary's AI upscaling for smooth results
-  const transforms = [
-    `w_${width}`,
-    `h_${height}`,
-    'c_fit',             // Fit within dimensions
-    'e_upscale',         // AI upscaling
-    'q_100',             // Max quality
-    'f_png'              // PNG for crisp lines
-  ];
-  return `${PLACEHOLDER_BASE}/${transforms.join(',')}/${PLACEHOLDER_CARD_ID}`;
+export function getPlaceholderHD(): string {
+  return `${PLACEHOLDER_BASE}/${PLACEHOLDER_TRANSFORMS.hd}/${PLACEHOLDER_CARD_ID}`;
 }
 
 /**
- * Get mascot placeholder for android/circle images and errors
+ * Get mascot placeholder as 60px circle (fixed size)
  */
-export function getPlaceholderMascot(size?: number): string {
-  const transforms = ['f_auto', 'q_auto'];
-  if (size) {
-    transforms.push(`w_${size}`, `h_${size}`, 'c_fit');
-  }
-  return `${PLACEHOLDER_BASE}/${transforms.join(',')}/${PLACEHOLDER_MASCOT_ID}`;
+export function getPlaceholderMascot(): string {
+  return `${PLACEHOLDER_BASE}/${PLACEHOLDER_TRANSFORMS.mascotCircle}/${PLACEHOLDER_MASCOT_ID}`;
 }
 
 /**
@@ -229,11 +238,13 @@ export function getPlaceholderMascot(size?: number): string {
 export const PLACEHOLDER_IMAGE = getPlaceholderHD();
 
 /**
- * Generate a circle thumbnail from HD image using Cloudinary transformations.
+ * Generate a 120px circle thumbnail from HD image using Cloudinary transformations.
  * Uses content-aware cropping and face detection to create a circular thumbnail.
  * This is a fallback for cards missing android (circle) images.
+ *
+ * 120px (2x) for retina displays - HD source is high-res so resize looks crisp.
  */
-export function getCircleThumbnailFromHD(card: Card, size: number = 128): string | null {
+export function getCircleThumbnailFromHD(card: Card): string | null {
   // Get the HD image URL
   const hdUrl = getImageUrl(card, 'hd');
   if (!hdUrl) return null;
@@ -243,37 +254,31 @@ export function getCircleThumbnailFromHD(card: Card, size: number = 128): string
     return hdUrl;
   }
 
-  // Cloudinary transformations for circle thumbnail:
-  // - w_{size},h_{size}: Target dimensions
-  // - c_thumb: Thumbnail crop mode (smart cropping)
-  // - g_face: Focus on face detection (best for character art)
-  // - r_max: Maximum border radius (creates circle)
-  // - f_auto,q_auto: Automatic format and quality
-  const transforms = `w_${size},h_${size},c_thumb,g_face,r_max,f_auto,q_auto`;
-
-  return hdUrl.replace('/upload/', `/upload/${transforms}/`);
+  return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.hdCircle}/`);
 }
 
 /**
- * Get android circle image, with fallback to HD-generated circle, then mascot
+ * Get android circle image with fallback to HD-generated circle, then mascot
  * For cards 1-100 that don't have android images on CDN
+ *
+ * Android: served at original size (~200px) - browser downscaling looks sharper than upscaling
+ * HD fallback: 120px circle (2x for retina) - high-res source so resize is crisp
  */
-export function getAndroidImageWithFallback(card: Card, size: number = 128): string {
+export function getAndroidImageWithFallback(card: Card): string {
   // First try to get actual android image
   const androidUrl = getImageUrl(card, 'android');
   if (androidUrl) {
-    // Apply size optimization if it's a Cloudinary URL
+    // Apply circle optimization if it's a Cloudinary URL - no resize, keep original quality
     if (androidUrl.includes('cloudinary.com')) {
-      const transforms = `w_${size},h_${size},c_fill,r_max,f_auto,q_auto`;
-      return androidUrl.replace('/upload/', `/upload/${transforms}/`);
+      return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.androidCircle}/`);
     }
     return androidUrl;
   }
 
   // Fallback: generate circle from HD using content-aware crop
-  const hdCircle = getCircleThumbnailFromHD(card, size);
+  const hdCircle = getCircleThumbnailFromHD(card);
   if (hdCircle) return hdCircle;
 
   // Final fallback: sad mascot placeholder
-  return getPlaceholderMascot(size);
+  return getPlaceholderMascot();
 }

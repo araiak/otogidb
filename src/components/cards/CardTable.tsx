@@ -1461,9 +1461,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
               {/* Abilities */}
               {mobilePreviewCard.abilities && mobilePreviewCard.abilities.length > 0 && (
-                <div className="mt-2 text-sm">
-                  <span className="text-secondary">Abilities:</span>{' '}
-                  {mobilePreviewCard.abilities.map(a => a.name).join(', ')}
+                <div className="mt-3 pt-3 border-t space-y-2" style={{ borderColor: 'var(--color-border)' }}>
+                  {mobilePreviewCard.abilities.map((ability, idx) => (
+                    <div key={ability.id || idx}>
+                      <div className="text-sm font-medium" style={{ color: 'var(--color-accent)' }}>
+                        Lv.{ability.unlock_level}: {ability.name || 'Unknown Ability'}
+                      </div>
+                      <div
+                        className="text-sm text-secondary"
+                        dangerouslySetInnerHTML={{
+                          __html: formatSkillDescription(ability.description, null, mobilePreviewCard.stats.rarity) || 'No description'
+                        }}
+                      />
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
