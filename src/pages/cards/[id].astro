@@ -579,7 +579,7 @@ const jsonLd = {
   <!-- Card hover popups for synergy cards -->
   {card.synergies && card.synergies.length > 0 && (
     <CardPopups
-      client:visible
+      client:load
       cards={cardsData.cards}
       skills={skillsData}
       selector=".synergy-card"
