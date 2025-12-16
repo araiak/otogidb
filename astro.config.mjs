@@ -3,6 +3,8 @@ import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import { remarkCardReference } from './src/lib/remark-card-reference';
+import { remarkFilterReference } from './src/lib/remark-filter-reference';
+import { remarkTeamReference } from './src/lib/remark-team-reference';
 
 // https://astro.build/config
 export default defineConfig({
@@ -21,7 +23,7 @@ export default defineConfig({
     }
   },
   markdown: {
-    remarkPlugins: [remarkCardReference]
+    remarkPlugins: [remarkCardReference, remarkFilterReference, remarkTeamReference]
   },
   build: {
     inlineStylesheets: 'auto'
