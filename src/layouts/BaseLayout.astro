@@ -9,8 +9,33 @@ import { getPlaceholderMascot } from '../lib/images';
 const mascotUrl = getPlaceholderMascot();
 
 // Read data version at build time for cache busting
+// We use a content hash to ensure cache invalidation when data changes,
+// even if the game data version stays the same (e.g., processing bug fixes)
 import cardsData from '../../public/data/cards.json';
-const dataVersion = cardsData.version || Date.now().toString();
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Calculate hash of the full cards.json file for reliable cache busting
+function getFileHash(filePath: string): string {
+  try {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    let hash = 0;
+    // Use a larger sample of the file for speed while still being reliable
+    const sample = content.slice(0, 50000) + content.slice(-50000);
+    for (let i = 0; i < sample.length; i++) {
+      const char = sample.charCodeAt(i);
+      hash = ((hash << 5) - hash) + char;
+      hash = hash & hash;
+    }
+    return Math.abs(hash).toString(36);
+  } catch {
+    return Date.now().toString(36);
+  }
+}
+
+const cardsJsonPath = path.resolve('./public/data/cards.json');
+const contentHash = getFileHash(cardsJsonPath);
+const dataVersion = `${cardsData.version || 'unknown'}-${contentHash}`;
 
 // Detect current locale from URL path
 const currentPath = Astro.url.pathname;
@@ -59,9 +84,7 @@ const {
     <script is:inline set:html={localeInitScript} />
 
     <!-- Data version for cache busting -->
-    <script is:inline define:vars={{ dataVersion }}>
-      window.OTOGIDB_DATA_VERSION = dataVersion;
-    </script>
+    <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";`} />
 
     <!-- Preconnect to Cloudinary for faster image loading -->
     <link rel="preconnect" href="https://res.cloudinary.com" />
