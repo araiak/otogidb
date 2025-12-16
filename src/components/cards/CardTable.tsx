@@ -866,13 +866,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
         if (!filterValue || filterValue.length === 0) return true;
         const abilities = row.original.abilities || [];
         if (abilities.length === 0) return false;
-        // Collect all ability tags from all abilities
-        const allAbilityTags: string[] = [];
-        abilities.forEach(ability => {
-          if (ability.tags) allAbilityTags.push(...ability.tags);
+        // Check if ANY single ability has ALL the selected filter tags
+        return abilities.some(ability => {
+          const tags = ability.tags || [];
+          return filterValue.every(f => tags.includes(f));
         });
-        // Check if ALL selected filter tags are present across the card's abilities
-        return filterValue.every(f => allAbilityTags.includes(f));
       },
     },
     {
