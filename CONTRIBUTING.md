@@ -80,6 +80,98 @@ This creates hoverable links that show card previews. You can use:
 - Card ID: `:card[689]`
 - Card name: `:card[Nue]`
 
+### Using Filter Blocks
+
+Display a grid of cards matching specific criteria using the `:filter["query"]` syntax:
+
+```markdown
+Cards with DMG Boost that activate at wave start:
+
+:filter["?ability=DMG Boost,Wave Start"]
+
+All 5-star Divina healers:
+
+:filter["?attribute=Divina&type=Healer&rarity=5"]
+```
+
+This renders a visual grid of matching cards with hover popups, similar to the "Synergy Partners" section on card detail pages.
+
+#### Supported Filter Parameters
+
+The filter block supports all parameters from the [Cards page](/cards). You can build and test your filter on the Cards page, then copy the URL query parameters directly into a filter block.
+
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `q` | Text search on card name | `?q=Nue` |
+| `ability` | Ability tags (comma-separated, ALL must exist on ONE ability) | `?ability=DMG Boost,Wave Start` |
+| `skill` | Skill tags (comma-separated, ALL must exist on the skill) | `?skill=DMG,AoE` |
+| `attr` | Card attribute(s) | `?attr=Divina,Phantasma` |
+| `type` | Card type(s) | `?type=Healer,Assist` |
+| `rarity` | Star rarity (1-5) | `?rarity=4,5` |
+| `bond` | Bond type(s) | `?bond=Attack,Skill` |
+| `source` | Acquisition source(s) | `?source=gacha,auction` |
+| `available` | Currently obtainable (1 or true) | `?available=1` |
+| `npc` | Show NPC/enemy cards (1 = show, omit = hide) | `?npc=1` |
+
+**Source values:** `gacha`, `event`, `exchange`, `auction`, `daily`
+
+**Bond values:** `Attack`, `Skill`, `HP`
+
+**Skill tag examples:** `DMG`, `Heal`, `Buff`, `Debuff`, `Single`, `Multi`, `AoE`, `Stun`, `Poison`, `Burn`, `Freeze`, `Sleep`, `Silence`
+
+**Ability tag examples:** `DMG Boost`, `Crit Rate`, `Crit DMG`, `Skill DMG`, `Max HP`, `DMG Reduction`, `Wave Start`, `Team`, `Divina`, `Anima`, `Phantasma`
+
+**Combining filters:** Use `&` to combine multiple parameters. All conditions must match (AND logic).
+
+```markdown
+5-star event cards with AoE damage skills:
+
+:filter["?rarity=5&source=event&skill=DMG,AoE"]
+
+Phantasma healers with Max HP boost at wave start:
+
+:filter["?attr=Phantasma&type=Healer&ability=Max HP,Wave Start"]
+```
+
+**Tip:** Go to the [Cards page](/cards), set your filters, then click "Share" to copy the URL. The query string (everything after `?`) can be used directly in a filter block.
+
+### Using Team Blocks
+
+Display a team composition with main team and optional reserve using the `:team["query"]` syntax:
+
+```markdown
+### My Anima Team
+
+:team["req=583,583&opt=671,712,586"]:reserve["req=744&opt=634"]
+```
+
+This renders a visual team widget showing:
+- Main team cards with required cards marked with a star badge
+- Optional reserve section (if specified)
+- Hover/tap popups with full card details
+
+#### Team Query Parameters
+
+| Parameter | Description | Example |
+|-----------|-------------|---------|
+| `req` | Required card IDs (comma-separated) | `req=583,583` |
+| `opt` | Optional card IDs (comma-separated) | `opt=671,712,586` |
+
+**Syntax variations:**
+
+```markdown
+Main team only:
+:team["req=583&opt=671,712"]
+
+Main team with reserve:
+:team["req=583&opt=671,712"]:reserve["req=744&opt=634"]
+
+Reserve with only optional cards:
+:team["req=583&opt=671"]:reserve["opt=634,208"]
+```
+
+Required cards are displayed with a gold star badge to indicate they are essential to the team composition.
+
 ### Submitting Your Post
 
 1. **Commit your changes** to your fork
