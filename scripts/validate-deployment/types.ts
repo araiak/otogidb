@@ -67,6 +67,11 @@ export interface ValidationResult {
 
 export interface ValidationSummary {
   target: string;
+  localeRedirects?: {
+    total: number;
+    passed: number;
+    failed: number;
+  };
   pages: {
     total: number;
     passed: number;

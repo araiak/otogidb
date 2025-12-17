@@ -7,7 +7,7 @@
 
 import { appendFileSync } from 'fs';
 import { generateUrlSamples } from './url-sampler.js';
-import { validatePages } from './page-validator.js';
+import { validatePages, validateLocaleRedirects } from './page-validator.js';
 import { validateImages } from './image-validator.js';
 import type { ValidationSummary } from './types.js';
 
@@ -32,6 +32,13 @@ function printResults(summary: ValidationSummary, shortHash: string): void {
   console.log(`Target: ${summary.target}`);
 
   console.log('');
+
+  // Locale redirect results
+  if (summary.localeRedirects) {
+    const localePercent = ((summary.localeRedirects.passed / summary.localeRedirects.total) * 100).toFixed(1);
+    console.log(`Locale Redirects: ${summary.localeRedirects.passed}/${summary.localeRedirects.total} passed (${localePercent}%)`);
+    console.log('');
+  }
 
   // Page results
   const pagePercent = ((summary.pages.passed / summary.pages.total) * 100).toFixed(1);
@@ -110,6 +117,11 @@ async function main(): Promise<void> {
   });
   console.log('');
 
+  // Validate locale redirects
+  console.log('Validating locale redirects...');
+  const localeResults = await validateLocaleRedirects(VALIDATION_URL, TIMEOUT_MS);
+  console.log('');
+
   // Validate pages
   console.log('Validating pages...');
   const pageResults = await validatePages(pages, {
@@ -127,8 +139,14 @@ async function main(): Promise<void> {
   });
 
   // Build summary
+  const localeSuccess = localeResults.failed === 0;
   const summary: ValidationSummary = {
     target: VALIDATION_URL,
+    localeRedirects: {
+      total: localeResults.passed + localeResults.failed,
+      passed: localeResults.passed,
+      failed: localeResults.failed,
+    },
     pages: {
       total: pageResults.length,
       passed: pageResults.filter((r) => r.status === 'pass').length,
@@ -142,6 +160,7 @@ async function main(): Promise<void> {
       results: imageResults,
     },
     success:
+      localeSuccess &&
       pageResults.every((r) => r.status === 'pass') &&
       imageResults.every((r) => r.status === 'pass'),
     duration: Date.now() - startTime,
