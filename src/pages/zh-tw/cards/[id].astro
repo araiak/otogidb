@@ -52,31 +52,42 @@ const seoImage = hdImageUrl || undefined;
 // Helper to get localized card URL
 const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 
-// JSON-LD structured data
+// SEO: Optimized title and description
+const cardName = card.name || `Daemon #${card.id}`;
+const rarityStars = '★'.repeat(card.stats.rarity);
+const skillName = card.skill?.name || '';
+
+const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoDescription = `${cardName} stats, skills & abilities. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''}`;
+
+// JSON-LD structured data - enhanced for SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": card.name || `Card #${card.id}`,
-  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "name": cardName,
+  "description": seoDescription,
   "image": seoImage,
   "url": `https://otogidb.com/${currentLocale}/cards/${card.id}`,
   "inLanguage": currentLocale,
-  "creator": {
-    "@type": "Organization",
-    "name": "Mitama Games"
-  },
+  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, skills, abilities`,
+  "creator": [
+    { "@type": "Organization", "name": "MyRealLife Games" },
+    { "@type": "Organization", "name": "Mitama Games" }
+  ],
   "isPartOf": {
     "@type": "VideoGame",
-    "name": "Otogi Spirit Agents"
+    "name": "Otogi: Spirit Agents",
+    "gamePlatform": ["iOS", "Android"]
   }
 };
 ---
 
 <BaseLayout
-  title={card.name || `Card #${card.id}`}
-  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  title={seoTitle}
+  description={seoDescription}
   image={seoImage}
   lang={currentLocale}
+  hasLocalizedUrls={true}
 >
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

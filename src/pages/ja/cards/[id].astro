@@ -50,32 +50,44 @@ const hdImageUrl = getImageUrl(card, 'hd');
 const seoImage = hdImageUrl || undefined;
 
 // Helper to get localized card URL
-const getCardUrl = (cardId: string) => `/ja/cards/${cardId}`;
+const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 
-// JSON-LD structured data
+// SEO: Optimized title and description for long-tail queries
+const cardName = card.name || `式神 #${card.id}`;
+const rarityStars = '★'.repeat(card.stats.rarity);
+const skillName = card.skill?.name || '';
+
+const seoTitle = `${cardName} - あやかし百鬼夜行 ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoDescription = `${cardName}のステータス、スキル、アビリティ。${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name}式神。ATK ${card.stats.max_atk}、HP ${card.stats.max_hp}。${skillName ? `スキル: ${skillName}。` : ''}`;
+
+// JSON-LD structured data - enhanced for SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": card.name || `Card #${card.id}`,
-  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "name": cardName,
+  "alternateName": `${cardName} あやかし`,
+  "description": seoDescription,
   "image": seoImage,
   "url": `https://otogidb.com/ja/cards/${card.id}`,
   "inLanguage": "ja",
-  "creator": {
-    "@type": "Organization",
-    "name": "Mitama Games"
-  },
+  "keywords": `${cardName}, あやかし百鬼夜行, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}`,
+  "creator": [
+    { "@type": "Organization", "name": "MyRealLife Games" },
+    { "@type": "Organization", "name": "Mitama Games" }
+  ],
   "isPartOf": {
     "@type": "VideoGame",
-    "name": "Otogi Spirit Agents"
+    "name": "Otogi: Spirit Agents",
+    "gamePlatform": ["iOS", "Android"]
   }
 };
 ---
 
 <BaseLayout
-  title={card.name || `Card #${card.id}`}
-  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  title={seoTitle}
+  description={seoDescription}
   image={seoImage}
+  hasLocalizedUrls={true}
 >
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />

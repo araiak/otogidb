@@ -43,29 +43,44 @@ const hdImageUrl = getImageUrl(card, 'hd');
 // SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
 const seoImage = hdImageUrl || undefined;
 
-// JSON-LD structured data for the card
+// SEO: Optimized title and description for long-tail queries
+const cardName = card.name || `Daemon #${card.id}`;
+const rarityStars = '★'.repeat(card.stats.rarity);
+const skillName = card.skill?.name || '';
+
+// Title format: "[Name] - Otogi: Spirit Agents [Rarity]★ [Type] Daemon"
+const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+
+// Description with long-tail keywords: stats, skills, abilities
+const seoDescription = `${cardName} stats, skills & abilities in Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''} View full ability details and similar daemons.`;
+
+// JSON-LD structured data for the card - enhanced for SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": card.name || `Card #${card.id}`,
-  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "name": cardName,
+  "alternateName": `${cardName} Otogi`,
+  "description": seoDescription,
   "image": seoImage,
   "url": `https://otogidb.com/cards/${card.id}`,
-  "creator": {
-    "@type": "Organization",
-    "name": "Mitama Games"
-  },
+  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, ${card.stats.rarity} star, daemon, skills, abilities`,
+  "creator": [
+    { "@type": "Organization", "name": "MyRealLife Games" },
+    { "@type": "Organization", "name": "Mitama Games" }
+  ],
   "isPartOf": {
     "@type": "VideoGame",
-    "name": "Otogi Spirit Agents"
+    "name": "Otogi: Spirit Agents",
+    "gamePlatform": ["iOS", "Android"]
   }
 };
 ---
 
 <BaseLayout
-  title={card.name || `Card #${card.id}`}
-  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  title={seoTitle}
+  description={seoDescription}
   image={seoImage}
+  hasLocalizedUrls={true}
 >
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
