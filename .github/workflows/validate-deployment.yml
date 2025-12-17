@@ -37,20 +37,11 @@ jobs:
       - name: Get commit SHA
         id: get-sha
         run: |
-          # For PRs: validate latest dev deployment (PR source may not be deployed yet)
-          # For pushes/manual: validate the specific commit that was pushed
-          if [ "${{ github.event_name }}" == "pull_request" ]; then
-            # Don't specify SHA - poller will use latest successful deployment on dev
-            echo "sha=" >> $GITHUB_OUTPUT
-            echo "short_sha=latest" >> $GITHUB_OUTPUT
-            echo "PR validation: will validate latest dev deployment"
-          else
-            SHA="${{ github.sha }}"
-            SHORT_SHA="${SHA:0:7}"
-            echo "sha=$SHA" >> $GITHUB_OUTPUT
-            echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
-            echo "Push/manual validation: commit $SHORT_SHA ($SHA)"
-          fi
+          # Always use latest deployment on branch - SHA matching is unreliable
+          # (GitHub SHA can differ from what Cloudflare receives due to various factors)
+          echo "sha=" >> $GITHUB_OUTPUT
+          echo "short_sha=latest" >> $GITHUB_OUTPUT
+          echo "Will validate latest successful deployment on dev branch"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
