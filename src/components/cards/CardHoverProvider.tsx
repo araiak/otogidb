@@ -21,6 +21,8 @@ interface CardHoverProviderProps {
   compact?: boolean;
   /** Custom container to search within */
   container?: HTMLElement | null;
+  /** Whether to update link text with localized card names */
+  updateLinkText?: boolean;
 }
 
 /**
@@ -50,6 +52,7 @@ export default function CardHoverProvider({
   injectMobileIcons = false,
   compact = true,
   container = null,
+  updateLinkText = false,
 }: CardHoverProviderProps) {
   const {
     activeCard,
@@ -64,6 +67,7 @@ export default function CardHoverProvider({
     offsetDistance,
     injectMobileIcons,
     container,
+    updateLinkText,
   });
 
   return (

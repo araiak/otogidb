@@ -15,6 +15,8 @@ export interface UseCardHoverOptions {
   injectMobileIcons?: boolean;
   /** Custom container to search within (defaults to document) */
   container?: HTMLElement | null;
+  /** Whether to update link text with localized card names */
+  updateLinkText?: boolean;
 }
 
 export interface UseCardHoverReturn {
@@ -46,6 +48,7 @@ export function useCardHover({
   offsetDistance = 8,
   injectMobileIcons = false,
   container = null,
+  updateLinkText = false,
 }: UseCardHoverOptions): UseCardHoverReturn {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
@@ -108,6 +111,9 @@ export function useCardHover({
     // Track mobile click handlers for cleanup
     const mobileClickHandlers: Array<{ el: HTMLElement; handler: EventListener }> = [];
 
+    // Track original text for restoration
+    const originalTexts: Map<HTMLElement, string> = new Map();
+
     elements.forEach(element => {
       // Desktop: hover listeners
       element.addEventListener('mouseenter', handleMouseEnter as EventListener);
@@ -116,6 +122,15 @@ export function useCardHover({
       // Mobile: tap to preview (intercept click on touch devices)
       const cardId = element.dataset.cardId;
       if (cardId && cards[cardId]) {
+        // Update link text with localized card name if enabled
+        if (updateLinkText) {
+          const card = cards[cardId];
+          const localizedName = card.name || `Card #${cardId}`;
+          // Store original text
+          originalTexts.set(element, element.textContent || '');
+          // Update to localized name
+          element.textContent = localizedName;
+        }
         const mobileClickHandler = (e: Event) => {
           // Only intercept on touch devices (no hover support)
           if (window.matchMedia('(hover: none)').matches) {
@@ -164,8 +179,13 @@ export function useCardHover({
 
       // Clean up injected icons
       injectedIcons.forEach(icon => icon.remove());
+
+      // Restore original text
+      originalTexts.forEach((text, el) => {
+        el.textContent = text;
+      });
     };
-  }, [cards, selector, container, injectMobileIcons, handleMouseEnter, handleMouseLeave]);
+  }, [cards, selector, container, injectMobileIcons, updateLinkText, handleMouseEnter, handleMouseLeave]);
 
   return {
     activeCard,

@@ -1,0 +1,230 @@
+---
+/**
+ * Japanese Updates/Patch Notes Page
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CardPopups from '../../../components/cards/CardPopups';
+import { getTranslations } from '../../../lib/translations';
+import type { CardsData } from '../../../types/card';
+
+const currentLocale = 'zh-cn';
+const t = getTranslations(currentLocale);
+
+// Import localized cards data for hover popups
+import cardsDataRaw from '../../../../public/data/zh-cn/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
+
+const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
+
+interface CardIndexEntry {
+  id: string;
+  asset_id: string;
+  name: string | null;
+  images?: { android?: string | null; hd?: string | null; };
+  image_urls?: { android?: string | null; hd?: string | null; };
+}
+
+let cardsIndex: Record<string, CardIndexEntry> = {};
+try {
+  const cardsIndexData = await import('../../../../public/data/cards_index.json');
+  cardsIndex = (cardsIndexData.default || cardsIndexData).cards || {};
+} catch (_e) {
+  console.warn('Failed to load cards index for images');
+}
+
+const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
+const TRANSFORMS = {
+  androidCircle: 'c_scale,r_max,f_auto,q_auto',
+  hdCircle: 'w_120,h_120,c_thumb,g_face,r_max,f_auto,q_auto',
+} as const;
+
+const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
+const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
+
+function getCardThumbnail(cardId: string): string {
+  const card = cardsIndex[cardId];
+  if (!card) return PLACEHOLDER_MASCOT_URL;
+  const androidUrl = card.image_urls?.android;
+  if (androidUrl) {
+    if (androidUrl.includes('cloudinary.com')) {
+      return androidUrl.replace('/upload/', `/upload/${TRANSFORMS.androidCircle}/`);
+    }
+    return androidUrl;
+  }
+  const hdUrl = card.image_urls?.hd;
+  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+    return hdUrl.replace('/upload/', `/upload/${TRANSFORMS.hdCircle}/`);
+  }
+  return PLACEHOLDER_MASCOT_URL;
+}
+
+interface PatchNotesManifest { total_versions: number; versions: Array<{ version: string; date: string | null; new_cards: number; modified_cards: number; }>; }
+interface CardChange { category: string; category_label: string; field: string; field_label: string; old: unknown; new: unknown; display: string; }
+interface NewCard { id: string; name: string; rarity: number; attribute: string; type: string; image_url: string | null; }
+interface ModifiedCard { id: string; name: string; rarity: number; image_url: string | null; changes: CardChange[]; }
+interface PatchNotes { version: string; version_date: string; previous_version: string | null; generated_at: string; summary: { new_cards: number; modified_cards: number; }; new_cards: NewCard[]; modified_cards: ModifiedCard[]; }
+
+let manifest: PatchNotesManifest;
+try {
+  const manifestRaw = await import('../../../../public/data/changes/manifest.json');
+  manifest = manifestRaw.default || manifestRaw;
+} catch (e) {
+  manifest = { total_versions: 0, versions: [] };
+}
+
+const patchNotes: PatchNotes[] = [];
+for (const versionInfo of manifest.versions) {
+  try {
+    const notes = await import(`../../../../public/data/changes/patch_notes_${versionInfo.version}.json`);
+    patchNotes.push(notes.default || notes);
+  } catch (e) {
+    console.warn(`Failed to load patch notes for version ${versionInfo.version}`);
+  }
+}
+
+patchNotes.sort((a, b) => {
+  const dateA = a.version_date || a.generated_at || '';
+  const dateB = b.version_date || b.generated_at || '';
+  return dateB.localeCompare(dateA);
+});
+
+const visiblePatchNotes = patchNotes.filter(notes => notes.summary.new_cards > 0 || notes.summary.modified_cards > 0);
+
+function formatDate(dateStr: string): string {
+  if (!dateStr) return 'Unknown date';
+  try {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('zh-cn', { year: 'numeric', month: 'long', day: 'numeric' });
+  } catch { return dateStr; }
+}
+
+function renderStars(rarity: number): string {
+  return '★'.repeat(Math.min(Math.max(rarity, 0), 5));
+}
+---
+
+<BaseLayout title={t.updates} description="あやかし百鬼夜行 カードパッチノート - 新カードとバランス調整" hasLocalizedUrls={true} lang={currentLocale}>
+  <script is:inline define:vars={{ currentLocale }}>
+    (function() {
+      var STORAGE_KEY = 'otogidb-locale';
+      var prefix = '/' + currentLocale;
+      try { localStorage.setItem(STORAGE_KEY, currentLocale); } catch(e) {}
+
+      function updateCardLinks() {
+        document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href) {
+            var cardId = href.replace('/cards/', '');
+            link.setAttribute('href', prefix + '/cards/' + cardId);
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateCardLinks);
+      } else {
+        updateCardLinks();
+      }
+    })();
+  </script>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">{t.patchNotes}</h1>
+      <p class="text-secondary">{t.patchNotesDescription}</p>
+    </div>
+
+    {visiblePatchNotes.length === 0 ? (
+      <div class="card p-6 text-center">
+        <p class="text-secondary">{t.noPatchNotes}</p>
+      </div>
+    ) : (
+      <div class="space-y-8">
+        {visiblePatchNotes.map((notes) => (
+          <article class="card overflow-hidden">
+            <div class="p-4 md:p-6 border-b" style="border-color: var(--color-border);">
+              <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+                <div>
+                  <h2 class="text-xl font-bold">{t.version} {notes.version}</h2>
+                  <p class="text-sm text-secondary">{formatDate(notes.version_date)}</p>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {notes.summary.new_cards > 0 && (
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(34, 197, 94, 0.15); color: rgb(34, 197, 94);">+{notes.summary.new_cards} {t.newCards}</span>
+                  )}
+                  {notes.summary.modified_cards > 0 && (
+                    <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium" style="background-color: rgba(59, 130, 246, 0.15); color: rgb(59, 130, 246);">{notes.summary.modified_cards} {t.changed}</span>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 md:p-6 space-y-6">
+              {notes.new_cards.length > 0 && (
+                <section>
+                  <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full" style="background-color: rgb(34, 197, 94);"></span>
+                    {t.newCards}
+                  </h3>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                    {notes.new_cards.map((card) => (
+                      <a href={`/${currentLocale}/cards/${card.id}`} data-card-id={card.id} class="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-opacity-50" style="background-color: var(--color-surface);">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full overflow-hidden" style="background-color: var(--color-bg);">
+                          <img src={getCardThumbnail(card.id)} alt={card.name} class="w-full h-full object-cover" loading="lazy" />
+                        </div>
+                        <div class="flex-1 min-w-0">
+                          <div class="font-medium truncate">{card.name}</div>
+                          <div class="text-sm text-secondary flex items-center gap-2">
+                            <span class="text-yellow-500">{renderStars(card.rarity)}</span>
+                            {card.attribute && <span>{card.attribute}</span>}
+                            {card.type && <span>• {card.type}</span>}
+                          </div>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+                </section>
+              )}
+
+              {notes.modified_cards.length > 0 && (
+                <section>
+                  <h3 class="text-lg font-semibold mb-4 flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full" style="background-color: rgb(59, 130, 246);"></span>
+                    {t.balanceChanges}
+                  </h3>
+                  <div class="space-y-3">
+                    {notes.modified_cards.map((card) => (
+                      <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+                        <div class="flex items-start gap-3">
+                          <a href={`/${currentLocale}/cards/${card.id}`} data-card-id={card.id} class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full overflow-hidden" style="background-color: var(--color-bg);">
+                              <img src={getCardThumbnail(card.id)} alt={card.name} class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                          </a>
+                          <div class="flex-1 min-w-0">
+                            <a href={`/${currentLocale}/cards/${card.id}`} data-card-id={card.id} class="font-medium link hover:underline">{card.name}</a>
+                            <span class="text-yellow-500 text-sm ml-2">{renderStars(card.rarity)}</span>
+                            <ul class="mt-2 space-y-1">
+                              {card.changes.map((change) => (
+                                <li class="text-sm flex items-start gap-2">
+                                  <span class="inline-block px-1.5 py-0.5 rounded text-xs font-medium flex-shrink-0" style={`background-color: ${change.category === 'stats' ? 'rgba(234, 179, 8, 0.15)' : change.category === 'skill' ? 'rgba(168, 85, 247, 0.15)' : 'rgba(107, 114, 128, 0.15)'}; color: ${change.category === 'stats' ? 'rgb(234, 179, 8)' : change.category === 'skill' ? 'rgb(168, 85, 247)' : 'rgb(156, 163, 175)'};`}>{change.category_label}</span>
+                                  <span class="text-secondary">{change.display}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
+    )}
+
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
+  </div>
+</BaseLayout>
