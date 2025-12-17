@@ -202,7 +202,7 @@ function renderStars(rarity: number): string {
 
       function updateCardLinks() {
         var locale = getCurrentLocale();
-        var prefix = locale === 'en' ? '' : '/' + locale;
+        var prefix = '/' + locale;
 
         document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
           var href = link.getAttribute('href');
@@ -222,7 +222,7 @@ function renderStars(rarity: number): string {
       window.addEventListener('otogidb-locale-change', function(e) {
         var locale = e.detail && e.detail.locale;
         if (!locale) return;
-        var prefix = locale === 'en' ? '' : '/' + locale;
+        var prefix = '/' + locale;
         document.querySelectorAll('a[href*="/cards/"]').forEach(function(link) {
           var href = link.getAttribute('href');
           if (href) {

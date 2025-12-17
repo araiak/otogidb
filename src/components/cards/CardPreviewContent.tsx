@@ -2,6 +2,7 @@ import type { Card } from '../../types/card';
 import { getPopupImageUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
+import type { SupportedLocale } from '../../lib/i18n';
 
 interface CardPreviewContentProps {
   card: Card;
@@ -10,6 +11,8 @@ interface CardPreviewContentProps {
   compact?: boolean;
   /** Show "View Full Details" link at bottom */
   showDetailsLink?: boolean;
+  /** Locale for URL generation (defaults to 'en') */
+  locale?: SupportedLocale;
 }
 
 /**
@@ -23,6 +26,7 @@ export default function CardPreviewContent({
   skills = {},
   compact = true,
   showDetailsLink = false,
+  locale = 'en',
 }: CardPreviewContentProps) {
   const imageUrl = getPopupImageUrl(card);
   const skillData = card.skill ? skills[card.skill.id] : null;
@@ -129,7 +133,7 @@ export default function CardPreviewContent({
         {/* View Full Details Link */}
         {showDetailsLink && (
           <a
-            href={`/cards/${card.id}`}
+            href={`/${locale}/cards/${card.id}`}
             className={`block w-full text-center py-2 px-4 rounded ${contentSize} font-medium transition-colors mt-3`}
             style={{
               backgroundColor: 'var(--color-accent)',

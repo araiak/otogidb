@@ -285,7 +285,7 @@ const jsonLd = {
                 if (!partner) return null;
                 return (
                   <a
-                    href={`/cards/${partnerId}`}
+                    href={`/en/cards/${partnerId}`}
                     class="synergy-card text-center group"
                     data-card-id={partnerId}
                   >
@@ -328,7 +328,7 @@ const jsonLd = {
                         </span>
                       )}
                       {targetCard && (
-                        <a href={`/cards/${bond.target_id}`} class="text-xs sm:text-sm truncate link">
+                        <a href={`/en/cards/${bond.target_id}`} class="text-xs sm:text-sm truncate link">
                           {targetCard.name}
                         </a>
                       )}
@@ -566,7 +566,7 @@ const jsonLd = {
         <p class="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Good options for team replacements</p>
         <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
           {similarCards.map(({ card: related, details }) => (
-            <a href={`/cards/${related.id}`} class="card-grid-item text-center group p-1.5 sm:p-2">
+            <a href={`/en/cards/${related.id}`} class="card-grid-item text-center group p-1.5 sm:p-2">
               <div class="relative inline-block">
                 <img
                   src={getAndroidImageWithFallback(related)}

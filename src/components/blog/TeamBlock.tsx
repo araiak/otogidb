@@ -3,6 +3,7 @@ import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import CardPreviewContent from '../cards/CardPreviewContent';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 
 interface TeamBlockProps {
   cards: Record<string, Card>;
@@ -67,6 +68,15 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
+  const [locale, setLocale] = useState<SupportedLocale>('en');
+
+  // Detect locale from URL on mount
+  useEffect(() => {
+    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+      setLocale(pathMatch[1] as SupportedLocale);
+    }
+  }, []);
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -189,7 +199,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
 
           // Card link wrapper
           const link = document.createElement('a');
-          link.href = `/cards/${card.id}`;
+          link.href = `/${locale}/cards/${card.id}`;
           link.className = 'team-member-card text-center group relative';
           link.dataset.cardId = card.id;
 
@@ -284,7 +294,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
         el.removeEventListener(type, handler);
       });
     };
-  }, [cards, handleMouseEnter, handleMouseLeave, handleMobileTap]);
+  }, [cards, locale, handleMouseEnter, handleMouseLeave, handleMobileTap]);
 
   return (
     <>
@@ -299,6 +309,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
             card={activeCard}
             skills={skills}
             compact={true}
+            locale={locale}
           />
         </div>
       )}
@@ -337,6 +348,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
                 skills={skills}
                 compact={false}
                 showDetailsLink={true}
+                locale={locale}
               />
             </div>
           </div>

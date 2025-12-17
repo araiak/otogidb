@@ -215,7 +215,7 @@ function ImageCell({ card, skills, locale }: { card: Card; skills: Record<string
   const [isHovered, setIsHovered] = useState(false);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const url = getThumbnailUrl(card);
-  const cardUrl = locale === 'en' ? `/cards/${card.id}` : `/${locale}/cards/${card.id}`;
+  const cardUrl = `/${locale}/cards/${card.id}`;
 
   return (
     <>
@@ -242,6 +242,7 @@ function ImageCell({ card, skills, locale }: { card: Card; skills: Record<string
         skills={skills}
         placement="right-start"
         compact={true}
+        locale={locale}
       />
     </>
   );
@@ -264,7 +265,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Helper to generate locale-aware card URLs
   const getCardUrl = useCallback((cardId: string) => {
-    return locale === 'en' ? `/cards/${cardId}` : `/${locale}/cards/${cardId}`;
+    return `/${locale}/cards/${cardId}`;
   }, [locale]);
 
   const [cards, setCards] = useState<Card[]>(initialCards || []);
@@ -1421,6 +1422,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 skills={skills}
                 compact={false}
                 showDetailsLink={true}
+                locale={locale}
               />
             </div>
           </div>

@@ -3,6 +3,7 @@ import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import CardPreviewContent from '../cards/CardPreviewContent';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 
 interface FilteredCardsBlockProps {
   cards: Record<string, Card>;
@@ -207,6 +208,15 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
+  const [locale, setLocale] = useState<SupportedLocale>('en');
+
+  // Detect locale from URL on mount
+  useEffect(() => {
+    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+      setLocale(pathMatch[1] as SupportedLocale);
+    }
+  }, []);
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -316,7 +326,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
           .replace(/&#039;/g, "'");
 
         const link = document.createElement('a');
-        link.href = `/cards${decodedQuery}`;
+        link.href = `/${locale}/cards${decodedQuery}`;
         link.className = 'text-xs hover:underline';
         link.style.color = 'var(--color-accent)';
         link.textContent = 'Try on Cards page →';
@@ -335,7 +345,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
       // Add cards to grid
       matching.forEach(card => {
         const link = document.createElement('a');
-        link.href = `/cards/${card.id}`;
+        link.href = `/${locale}/cards/${card.id}`;
         link.className = 'filter-result-card text-center group';
         link.dataset.cardId = card.id;
 
@@ -373,7 +383,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
         el.removeEventListener(type, handler);
       });
     };
-  }, [cards, handleMouseEnter, handleMouseLeave, handleMobileTap]);
+  }, [cards, locale, handleMouseEnter, handleMouseLeave, handleMobileTap]);
 
   return (
     <>
@@ -388,6 +398,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
             card={activeCard}
             skills={skills}
             compact={true}
+            locale={locale}
           />
         </div>
       )}
@@ -426,6 +437,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
                 skills={skills}
                 compact={false}
                 showDetailsLink={true}
+                locale={locale}
               />
             </div>
           </div>

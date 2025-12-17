@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import type { Placement } from '@floating-ui/react';
 import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react';
 import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
 import CardPreviewContent from './CardPreviewContent';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 
 interface CardHoverProviderProps {
   /** Card data lookup by ID */
@@ -54,6 +56,25 @@ export default function CardHoverProvider({
   container = null,
   updateLinkText = false,
 }: CardHoverProviderProps) {
+  // Detect locale for URLs
+  const [locale, setLocale] = useState<SupportedLocale>('en');
+
+  useEffect(() => {
+    // Check URL path first
+    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+      setLocale(pathMatch[1] as SupportedLocale);
+      return;
+    }
+    // Fallback to stored preference
+    try {
+      const stored = localStorage.getItem('otogidb-locale');
+      if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
+        setLocale(stored as SupportedLocale);
+      }
+    } catch {}
+  }, []);
+
   const {
     activeCard,
     mobilePreviewCard,
@@ -83,6 +104,7 @@ export default function CardHoverProvider({
             card={activeCard}
             skills={skills}
             compact={compact}
+            locale={locale}
           />
         </div>
       )}
@@ -121,6 +143,7 @@ export default function CardHoverProvider({
                 skills={skills}
                 compact={false}
                 showDetailsLink={true}
+                locale={locale}
               />
             </div>
           </div>
@@ -141,6 +164,7 @@ export function CardFloatingPopup({
   skills = {},
   placement = 'right-start',
   compact = true,
+  locale = 'en',
 }: {
   card: Card | null;
   isOpen: boolean;
@@ -148,6 +172,7 @@ export function CardFloatingPopup({
   skills?: Record<string, any>;
   placement?: Placement;
   compact?: boolean;
+  locale?: SupportedLocale;
 }) {
   const { refs, floatingStyles } = useFloating({
     open: isOpen,
@@ -172,6 +197,7 @@ export function CardFloatingPopup({
         card={card}
         skills={skills}
         compact={compact}
+        locale={locale}
       />
     </div>
   );
