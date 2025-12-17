@@ -5,6 +5,13 @@ on:
     branches: [dev]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'true'
+        type: boolean
 
 # Prevent duplicate runs: cancel in-progress when new commit arrives
 # Use ref_name for consistency (push: "dev", PR: "dev")
@@ -31,7 +38,7 @@ jobs:
         id: get-sha
         run: |
           # For PRs: validate latest dev deployment (PR source may not be deployed yet)
-          # For pushes: validate the specific commit that was pushed
+          # For pushes/manual: validate the specific commit that was pushed
           if [ "${{ github.event_name }}" == "pull_request" ]; then
             # Don't specify SHA - poller will use latest successful deployment on dev
             echo "sha=" >> $GITHUB_OUTPUT
@@ -42,7 +49,7 @@ jobs:
             SHORT_SHA="${SHA:0:7}"
             echo "sha=$SHA" >> $GITHUB_OUTPUT
             echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
-            echo "Push validation: commit $SHORT_SHA ($SHA)"
+            echo "Push/manual validation: commit $SHORT_SHA ($SHA)"
           fi
 
       - name: Setup Node.js
@@ -63,6 +70,7 @@ jobs:
           CLOUDFLARE_PROJECT_NAME: otogidb
           TARGET_BRANCH: dev
           GITHUB_SHA: ${{ steps.get-sha.outputs.sha }}
+          DEBUG: ${{ inputs.debug || 'false' }}
 
       - name: Validate deployment
         id: validate

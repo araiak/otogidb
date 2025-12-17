@@ -13,6 +13,7 @@ const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const CLOUDFLARE_PROJECT_NAME = process.env.CLOUDFLARE_PROJECT_NAME || 'otogidb';
 const TARGET_BRANCH = process.env.TARGET_BRANCH || 'dev';
 const GITHUB_SHA = process.env.GITHUB_SHA; // Full commit hash from GitHub Actions
+const DEBUG = process.env.DEBUG === 'true';
 
 // Polling configuration
 const POLL_INTERVAL_MS = 15000; // 15 seconds
@@ -28,6 +29,36 @@ interface PollerResult {
 
 function getShortHash(fullHash: string | undefined): string {
   return fullHash ? fullHash.substring(0, 7) : 'unknown';
+}
+
+function debugLog(...args: unknown[]): void {
+  if (DEBUG) {
+    console.log('[DEBUG]', ...args);
+  }
+}
+
+function debugDeployments(deployments: CloudflareDeployment[]): void {
+  if (!DEBUG) return;
+
+  console.log('');
+  console.log('[DEBUG] ═══════════════════════════════════════════════════════');
+  console.log(`[DEBUG] API returned ${deployments.length} deployments:`);
+  console.log('[DEBUG] ───────────────────────────────────────────────────────');
+
+  deployments.slice(0, 10).forEach((d, i) => {
+    const commit = getShortHash(d.deployment_trigger?.metadata?.commit_hash);
+    const branch = d.deployment_trigger?.metadata?.branch || 'unknown';
+    const env = d.environment || 'unknown';
+    const status = d.latest_stage?.status || 'unknown';
+    const stage = d.latest_stage?.name || 'unknown';
+    console.log(`[DEBUG] ${i + 1}. ${commit} | ${branch} | ${env} | ${stage}:${status}`);
+  });
+
+  if (deployments.length > 10) {
+    console.log(`[DEBUG] ... and ${deployments.length - 10} more`);
+  }
+  console.log('[DEBUG] ═══════════════════════════════════════════════════════');
+  console.log('');
 }
 
 function formatElapsed(ms: number): string {
@@ -138,12 +169,19 @@ async function waitForDeployment(): Promise<PollerResult> {
         continue;
       }
 
+      // Debug: show what the API returned (only on first poll)
+      if (lastStatus === '') {
+        debugDeployments(response.result);
+      }
+
       // Find deployment - by exact commit hash, or latest on branch
       const deployment = useCommitMatch
         ? findDeploymentByCommit(response.result, GITHUB_SHA!, TARGET_BRANCH)
         : findLatestDeploymentForBranch(response.result, TARGET_BRANCH);
 
       if (!deployment) {
+        debugLog(`No matching deployment found. useCommitMatch=${useCommitMatch}, looking for: ${shortHash}`);
+
         // Show what deployments exist on the branch
         const branchDeployments = response.result.filter(
           (d) => d.deployment_trigger?.metadata?.branch === TARGET_BRANCH
