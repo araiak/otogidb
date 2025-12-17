@@ -41,7 +41,8 @@ function formatElapsed(ms: number): string {
 }
 
 async function fetchDeployments(): Promise<CloudflareDeploymentsResponse> {
-  const url = `${API_BASE}/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments`;
+  // Filter by preview environment on the API side
+  const url = `${API_BASE}/accounts/${CLOUDFLARE_ACCOUNT_ID}/pages/projects/${CLOUDFLARE_PROJECT_NAME}/deployments?env=preview`;
 
   const response = await fetch(url, {
     headers: {
