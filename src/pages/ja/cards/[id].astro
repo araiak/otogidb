@@ -47,8 +47,7 @@ const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 }
 
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
-const sdImageUrl = getImageUrl(card, 'sd');
-const seoImage = hdImageUrl || sdImageUrl || undefined;
+const seoImage = hdImageUrl || undefined;
 
 // Helper to get localized card URL
 const getCardUrl = (cardId: string) => `/ja/cards/${cardId}`;
@@ -129,7 +128,7 @@ const jsonLd = {
         <div class="card p-3 sm:p-4 md:sticky md:top-20">
           <div class="flex justify-center md:block">
             <img
-              src={hdImageUrl || sdImageUrl || getPlaceholderHD()}
+              src={hdImageUrl || getPlaceholderHD()}
               alt={card.name || `Card #${card.id}`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"

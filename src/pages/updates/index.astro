@@ -56,7 +56,7 @@ function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
   if (!card) return PLACEHOLDER_MASCOT_URL;
 
-  // 1. Try android image from image_urls first
+  // 1. Try android image from image_urls
   const androidUrl = card.image_urls?.android;
   if (androidUrl) {
     if (androidUrl.includes('cloudinary.com')) {
@@ -65,23 +65,13 @@ function getCardThumbnail(cardId: string): string {
     return androidUrl;
   }
 
-  // 2. Construct android URL only if card has an android image
-  if (card.images?.android) {
-    return `${CLOUDINARY_BASE}/${TRANSFORMS.androidCircle}/otogi/android/${card.asset_id}.png`;
-  }
-
-  // 3. Try HD image from image_urls (generate circle from HD)
+  // 2. Try HD image from image_urls (generate circle from HD)
   const hdUrl = card.image_urls?.hd;
   if (hdUrl && hdUrl.includes('cloudinary.com')) {
     return hdUrl.replace('/upload/', `/upload/${TRANSFORMS.hdCircle}/`);
   }
 
-  // 4. Construct HD URL only if card has an HD image
-  if (card.images?.hd) {
-    return `${CLOUDINARY_BASE}/${TRANSFORMS.hdCircle}/otogi/cards_hd/${card.asset_id}_hd.png`;
-  }
-
-  // 5. Mascot placeholder for cards without any images
+  // 3. Mascot placeholder for cards without images
   return PLACEHOLDER_MASCOT_URL;
 }
 

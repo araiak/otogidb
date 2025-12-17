@@ -1,13 +1,10 @@
 import type { Card } from '../types/card';
 
-// Check if we should use local images (development mode)
-export const USE_LOCAL_IMAGES = import.meta.env.PUBLIC_USE_LOCAL_IMAGES === 'true';
-
 // Cloudinary base URL for constructing image URLs from asset_id
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
 const CLOUDINARY_FOLDER = 'otogi';
 
-export type ImageVariant = 'android' | 'sd' | 'hd' | 'icons' | 'team';
+export type ImageVariant = 'android' | 'hd';
 
 // Cards 1-100 (asset_id 100001-100100) don't have android images on CDN
 // They need to fall back to HD-generated circles
@@ -27,52 +24,32 @@ export function hasAndroidImage(assetId: string): boolean {
  * Construct Cloudinary URL from asset_id when image_urls is not populated
  */
 function constructCloudinaryUrl(assetId: string, variant: ImageVariant): string | null {
-  // Map variant to Cloudinary folder and filename pattern
-  // Note: SD images were deleted, only android and hd are available
-  const variantConfig: Record<ImageVariant, { folder: string; suffix: string } | null> = {
-    android: { folder: 'android', suffix: '' },
-    sd: null,     // SD images deleted
-    hd: { folder: 'cards_hd', suffix: '_hd' },
-    icons: null,  // Not uploaded
-    team: null,   // Not uploaded
-  };
-
-  const config = variantConfig[variant];
-  if (!config) return null;
-
-  // Don't construct android URLs for cards that don't have them
-  if (variant === 'android' && !hasAndroidImage(assetId)) {
-    return null;
+  if (variant === 'android') {
+    // Don't construct android URLs for cards that don't have them
+    if (!hasAndroidImage(assetId)) return null;
+    return `${CLOUDINARY_BASE}/${CLOUDINARY_FOLDER}/android/${assetId}.png`;
   }
 
-  return `${CLOUDINARY_BASE}/${CLOUDINARY_FOLDER}/${config.folder}/${assetId}${config.suffix}.png`;
+  if (variant === 'hd') {
+    return `${CLOUDINARY_BASE}/${CLOUDINARY_FOLDER}/cards_hd/${assetId}_hd.png`;
+  }
+
+  return null;
 }
 
 /**
- * Get the appropriate image URL for a card based on environment
- * Production: Cloudinary URLs (from image_urls or constructed from asset_id)
- * Development: Local file paths
+ * Get the appropriate image URL for a card
+ * Returns Cloudinary URL from image_urls, or constructs one from asset_id
  *
  * Returns null if the image doesn't exist, allowing callers to use placeholders.
  */
 export function getImageUrl(card: Card, variant: ImageVariant): string | null {
-  // First check if the image actually exists in card.images
-  // If it's null/undefined, the image doesn't exist - return null for placeholder
-  const imageExists = card.images?.[variant] != null;
-
-  if (USE_LOCAL_IMAGES) {
-    // Local development: use local paths
-    const localPath = card.images?.[variant];
-    if (!localPath) return null;
-    return `/images/${localPath}`;
-  }
-
-  // Production: try image_urls first
+  // Try image_urls first (Cloudinary URLs from pipeline)
   const existingUrl = card.image_urls?.[variant];
   if (existingUrl) return existingUrl;
 
-  // Only construct URL from asset_id if the image actually exists
-  if (imageExists && card.asset_id) {
+  // Fallback: construct URL from asset_id if available
+  if (card.asset_id) {
     return constructCloudinaryUrl(card.asset_id, variant);
   }
 
@@ -81,7 +58,6 @@ export function getImageUrl(card: Card, variant: ImageVariant): string | null {
 
 /**
  * Get optimized Cloudinary URL with transformations
- * Only applies in production mode
  */
 export function getOptimizedImageUrl(
   card: Card,
@@ -97,7 +73,7 @@ export function getOptimizedImageUrl(
   if (!baseUrl) return null;
 
   // Only apply transformations to Cloudinary URLs
-  if (USE_LOCAL_IMAGES || !baseUrl.includes('cloudinary.com')) {
+  if (!baseUrl.includes('cloudinary.com')) {
     return baseUrl;
   }
 
