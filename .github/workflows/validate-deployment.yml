@@ -20,6 +20,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Get commit SHA
+        id: get-sha
+        run: |
+          # For PRs, use the head commit (what Cloudflare deploys)
+          # For pushes, use the pushed commit
+          if [ "${{ github.event_name }}" == "pull_request" ]; then
+            SHA="${{ github.event.pull_request.head.sha }}"
+          else
+            SHA="${{ github.sha }}"
+          fi
+          SHORT_SHA="${SHA:0:7}"
+          echo "sha=$SHA" >> $GITHUB_OUTPUT
+          echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+          echo "Commit SHA: $SHORT_SHA ($SHA)"
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -37,7 +52,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_PROJECT_NAME: otogidb
           TARGET_BRANCH: dev
-          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_SHA: ${{ steps.get-sha.outputs.sha }}
 
       - name: Validate deployment
         id: validate
@@ -48,18 +63,19 @@ jobs:
           VALIDATION_CONCURRENCY: '10'
           CARDS_PER_LOCALE: '10'
           IMAGE_COUNT: '50'
-          GITHUB_SHA: ${{ github.sha }}
+          GITHUB_SHA: ${{ steps.get-sha.outputs.sha }}
 
       - name: Post validation summary
         if: always()
+        env:
+          SHORT_SHA: ${{ steps.get-sha.outputs.short_sha }}
+          FULL_SHA: ${{ steps.get-sha.outputs.sha }}
         run: |
-          SHORT_SHA="${GITHUB_SHA:0:7}"
-
           echo "## Deployment Validation" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${{ github.sha }}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${FULL_SHA}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Branch | \`dev\` |" >> $GITHUB_STEP_SUMMARY
           echo "| Target | [dev.otogidb.pages.dev](https://dev.otogidb.pages.dev) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
