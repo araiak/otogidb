@@ -30,19 +30,8 @@ export interface Ability {
   synergy_partners?: string[]; // Card IDs that trigger this ability's team bonus
 }
 
-export interface ImagePaths {
-  android: string | null;
-  icons: string | null;
-  sd: string | null;
-  team: string | null;
-  hd: string | null;
-}
-
 export interface ImageUrls {
   android: string | null;
-  icons: string | null;
-  sd: string | null;
-  team: string | null;
   hd: string | null;
 }
 
@@ -156,7 +145,6 @@ export interface Card {
   abilities: Ability[];
   bonds: Bond[];
   synergies?: string[]; // Card IDs that trigger team bonus abilities
-  images: ImagePaths;
   image_urls: ImageUrls;
   meta: CardMeta;
   history: CardHistory;

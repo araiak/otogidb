@@ -39,10 +39,9 @@ const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 }
 
 // Get image URLs (uses fallback to construct from asset_id if needed)
 const hdImageUrl = getImageUrl(card, 'hd');
-const sdImageUrl = getImageUrl(card, 'sd');
 
 // SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
-const seoImage = hdImageUrl || sdImageUrl || undefined;
+const seoImage = hdImageUrl || undefined;
 
 // JSON-LD structured data for the card
 const jsonLd = {
@@ -114,7 +113,7 @@ const jsonLd = {
           <!-- Mobile: Centered smaller image -->
           <div class="flex justify-center md:block">
             <img
-              src={hdImageUrl || sdImageUrl || getPlaceholderHD()}
+              src={hdImageUrl || getPlaceholderHD()}
               alt={card.name || `Card #${card.id}`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"

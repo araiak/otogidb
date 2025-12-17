@@ -12,11 +12,12 @@ import {
 } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
 import { getCardsData, getSkillsData, type CardLocale } from '../../lib/cards';
-import { getThumbnailUrl, getPopupImageUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
+import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription, type SkillData } from '../../lib/formatters';
 import { createSearchIndex, searchCards } from '../../lib/search';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
-import CardPopup from './CardPopup';
+import { CardFloatingPopup } from './CardHoverProvider';
+import CardPreviewContent from './CardPreviewContent';
 import {
   extractLocaleFromPath,
   getStoredLocale,
@@ -210,7 +211,7 @@ function GroupedTagDropdown({
 }
 
 // Image cell with hover popup and link to card page
-function ImageCell({ card, skillData, locale }: { card: Card; skillData?: SkillData | null; locale: SupportedLocale }) {
+function ImageCell({ card, skills, locale }: { card: Card; skills: Record<string, SkillData>; locale: SupportedLocale }) {
   const [isHovered, setIsHovered] = useState(false);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const url = getThumbnailUrl(card);
@@ -234,7 +235,14 @@ function ImageCell({ card, skillData, locale }: { card: Card; skillData?: SkillD
           }}
         />
       </a>
-      <CardPopup card={card} isOpen={isHovered} referenceElement={referenceElement} skillData={skillData} />
+      <CardFloatingPopup
+        card={card}
+        isOpen={isHovered}
+        referenceElement={referenceElement}
+        skills={skills}
+        placement="right-start"
+        compact={true}
+      />
     </>
   );
 }
@@ -618,12 +626,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
     return [
       {
         name: 'Effect',
-        tags: ['DMG', 'Heal', 'Buff', 'Debuff'].filter(t => available.has(t)),
+        tags: ['DMG', 'Heal', 'DMG Boost', 'Debuff'].filter(t => available.has(t)),
         colorClass: 'text-yellow-500'
       },
       {
         name: 'Target',
-        tags: ['Single', 'Multi', 'AoE'].filter(t => available.has(t)),
+        tags: ['Self', 'Single', 'Multi', 'AoE'].filter(t => available.has(t)),
         colorClass: 'text-blue-400'
       },
       {
@@ -632,9 +640,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
         colorClass: 'text-red-400'
       },
       {
-        name: 'Secondary',
-        tags: ['Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Cleanse'].filter(t => available.has(t)),
+        name: 'Buffs',
+        tags: ['DEF Up', 'Speed Up', 'Crit Rate', 'DMG Reduction', 'Cleanse'].filter(t => available.has(t)),
         colorClass: 'text-green-400'
+      },
+      {
+        name: 'Debuffs',
+        tags: ['Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Dispel'].filter(t => available.has(t)),
+        colorClass: 'text-purple-400'
       },
     ];
   }, [filterOptions.skillTags]);
@@ -650,7 +663,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       },
       {
         name: 'Defensive',
-        tags: ['Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Immunity'].filter(t => available.has(t)),
+        tags: ['Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Immunity', 'Counter'].filter(t => available.has(t)),
         colorClass: 'text-green-400'
       },
       {
@@ -664,18 +677,23 @@ export default function CardTable({ initialCards }: CardTableProps) {
         colorClass: 'text-red-400'
       },
       {
-        name: 'Scope',
-        tags: ['Team', 'Divina', 'Anima', 'Phantasma', 'Melee', 'Ranged', 'Healer', 'Leader'].filter(t => available.has(t)),
+        name: 'Target',
+        tags: ['Self', 'Single', 'Multi', 'AoE', 'Team'].filter(t => available.has(t)),
         colorClass: 'text-blue-400'
       },
       {
+        name: 'Scope',
+        tags: ['Divina', 'Anima', 'Phantasma', 'Neutral', 'Melee', 'Ranged', 'Leader'].filter(t => available.has(t)),
+        colorClass: 'text-teal-400'
+      },
+      {
         name: 'Timing',
-        tags: ['Wave Start', 'Final Wave'].filter(t => available.has(t)),
+        tags: ['Wave Start', 'Final Wave', 'On Skill', 'On Attack', 'Conditional'].filter(t => available.has(t)),
         colorClass: 'text-orange-400'
       },
       {
         name: 'Special',
-        tags: ['Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost'].filter(t => available.has(t)),
+        tags: ['Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost', 'Level Boost'].filter(t => available.has(t)),
         colorClass: 'text-cyan-400'
       },
     ];
@@ -694,7 +712,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skillData={row.original.skill ? skills[row.original.skill.id] : null} locale={locale} />,
+      cell: ({ row }) => <ImageCell card={row.original} skills={skills} locale={locale} />,
     },
     {
       accessorKey: 'id',
@@ -1396,95 +1414,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </button>
             </div>
 
-            {/* Content */}
-            <div className="p-4">
-              <div className="flex gap-4">
-                {/* Image */}
-                <div className="flex-shrink-0">
-                  <img
-                    src={getPopupImageUrl(mobilePreviewCard) || PLACEHOLDER_IMAGE}
-                    alt={mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}
-                    className="w-24 h-auto rounded"
-                  />
-                </div>
-
-                {/* Info */}
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-2">
-                    <AttributeIcon value={mobilePreviewCard.stats.attribute_name} size="md" />
-                    <TypeIcon value={mobilePreviewCard.stats.type_name} size="md" />
-                    <RarityStars value={mobilePreviewCard.stats.rarity} size="sm" />
-                  </div>
-
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-x-3 gap-y-1 text-sm mb-3">
-                    <div>
-                      <span className="text-secondary">ATK:</span>{' '}
-                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.max_atk)}</span>
-                    </div>
-                    <div>
-                      <span className="text-secondary">HP:</span>{' '}
-                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.max_hp)}</span>
-                    </div>
-                    <div>
-                      <span className="text-secondary">SPD:</span>{' '}
-                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.speed)}</span>
-                    </div>
-                    <div>
-                      <span className="text-secondary">CRIT:</span>{' '}
-                      <span className="font-mono">{formatNumber(mobilePreviewCard.stats.crit)}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Skill */}
-              {mobilePreviewCard.skill && (
-                <div className="mt-3 pt-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
-                  <div className="text-sm font-medium" style={{ color: 'var(--color-accent)' }}>
-                    {mobilePreviewCard.skill.name || 'Unknown Skill'}
-                  </div>
-                  <div
-                    className="text-sm text-secondary line-clamp-3"
-                    dangerouslySetInnerHTML={{
-                      __html: formatSkillDescription(
-                        mobilePreviewCard.skill.description,
-                        skills[mobilePreviewCard.skill.id],
-                        mobilePreviewCard.stats.rarity
-                      ) || 'No description'
-                    }}
-                  />
-                </div>
-              )}
-
-              {/* Abilities */}
-              {mobilePreviewCard.abilities && mobilePreviewCard.abilities.length > 0 && (
-                <div className="mt-3 pt-3 border-t space-y-2" style={{ borderColor: 'var(--color-border)' }}>
-                  {mobilePreviewCard.abilities.map((ability, idx) => (
-                    <div key={ability.id || idx}>
-                      <div className="text-sm font-medium" style={{ color: 'var(--color-accent)' }}>
-                        Lv.{ability.unlock_level}: {ability.name || 'Unknown Ability'}
-                      </div>
-                      <div
-                        className="text-sm text-secondary"
-                        dangerouslySetInnerHTML={{
-                          __html: formatSkillDescription(ability.description, null, mobilePreviewCard.stats.rarity) || 'No description'
-                        }}
-                      />
-                    </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* Footer */}
-            <div className="p-3 border-t" style={{ borderColor: 'var(--color-border)' }}>
-              <a
-                href={getCardUrl(mobilePreviewCard.id)}
-                className="btn-primary w-full text-center py-2 rounded block"
-              >
-                View Full Details
-              </a>
+            {/* Content - using shared CardPreviewContent */}
+            <div className="p-4 max-h-[70vh] overflow-y-auto">
+              <CardPreviewContent
+                card={mobilePreviewCard}
+                skills={skills}
+                compact={false}
+                showDetailsLink={true}
+              />
             </div>
           </div>
         </div>

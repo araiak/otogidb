@@ -4,6 +4,7 @@ import { getCollection } from 'astro:content';
 import { formatDate } from '../../lib/formatters';
 import CardReferencePopups from '../../components/blog/CardReferencePopups';
 import FilteredCardsBlock from '../../components/blog/FilteredCardsBlock';
+import ListBlock from '../../components/blog/ListBlock';
 import TeamBlock from '../../components/blog/TeamBlock';
 import type { CardsData } from '../../types/card';
 
@@ -163,6 +164,9 @@ const jsonLd = {
 
     <!-- Filter block card grids with hover popups -->
     <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
+
+    <!-- List block card grids with hover popups -->
+    <ListBlock client:load cards={cardsData.cards} skills={skillsData} />
 
     <!-- Team composition blocks with hover popups -->
     <TeamBlock client:load cards={cardsData.cards} skills={skillsData} />
