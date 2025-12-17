@@ -78,6 +78,11 @@ export interface ValidationSummary {
     failed: number;
     results: ValidationResult[];
   };
+  htmlChecks?: {
+    total: number;
+    passed: number;
+    failed: number;
+  };
   images: {
     total: number;
     passed: number;

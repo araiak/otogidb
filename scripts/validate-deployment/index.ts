@@ -7,7 +7,7 @@
 
 import { appendFileSync } from 'fs';
 import { generateUrlSamples } from './url-sampler.js';
-import { validatePages, validateLocaleRedirects } from './page-validator.js';
+import { validatePages, validateLocaleRedirects, validateHtmlContent } from './page-validator.js';
 import { validateImages } from './image-validator.js';
 import type { ValidationSummary } from './types.js';
 
@@ -37,8 +37,15 @@ function printResults(summary: ValidationSummary, shortHash: string): void {
   if (summary.localeRedirects) {
     const localePercent = ((summary.localeRedirects.passed / summary.localeRedirects.total) * 100).toFixed(1);
     console.log(`Locale Redirects: ${summary.localeRedirects.passed}/${summary.localeRedirects.total} passed (${localePercent}%)`);
-    console.log('');
   }
+
+  // HTML check results
+  if (summary.htmlChecks) {
+    const htmlPercent = ((summary.htmlChecks.passed / summary.htmlChecks.total) * 100).toFixed(1);
+    console.log(`HTML Sanity: ${summary.htmlChecks.passed}/${summary.htmlChecks.total} passed (${htmlPercent}%)`);
+  }
+
+  console.log('');
 
   // Page results
   const pagePercent = ((summary.pages.passed / summary.pages.total) * 100).toFixed(1);
@@ -131,6 +138,14 @@ async function main(): Promise<void> {
   });
   console.log('');
 
+  // HTML sanity checks
+  console.log('Running HTML sanity checks...');
+  const htmlResults = await validateHtmlContent(pages, {
+    baseUrl: VALIDATION_URL,
+    timeout: TIMEOUT_MS,
+  });
+  console.log('');
+
   // Validate images
   console.log('Validating images...');
   const imageResults = await validateImages(images, {
@@ -140,6 +155,7 @@ async function main(): Promise<void> {
 
   // Build summary
   const localeSuccess = localeResults.failed === 0;
+  const htmlSuccess = htmlResults.failed === 0;
   const summary: ValidationSummary = {
     target: VALIDATION_URL,
     localeRedirects: {
@@ -153,6 +169,11 @@ async function main(): Promise<void> {
       failed: pageResults.filter((r) => r.status !== 'pass').length,
       results: pageResults,
     },
+    htmlChecks: {
+      total: htmlResults.passed + htmlResults.failed,
+      passed: htmlResults.passed,
+      failed: htmlResults.failed,
+    },
     images: {
       total: imageResults.length,
       passed: imageResults.filter((r) => r.status === 'pass').length,
@@ -161,6 +182,7 @@ async function main(): Promise<void> {
     },
     success:
       localeSuccess &&
+      htmlSuccess &&
       pageResults.every((r) => r.status === 'pass') &&
       imageResults.every((r) => r.status === 'pass'),
     duration: Date.now() - startTime,

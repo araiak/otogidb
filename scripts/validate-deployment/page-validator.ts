@@ -228,3 +228,157 @@ export async function validatePages(
 
   return results;
 }
+
+// HTML sanity check result
+interface HtmlCheckResult {
+  url: string;
+  checks: Array<{ name: string; passed: boolean; detail?: string }>;
+  status: 'pass' | 'fail' | 'error';
+  error?: string;
+}
+
+// Expected content patterns for different page types
+const HTML_CHECKS: Record<string, Array<{ name: string; pattern: RegExp; required: boolean }>> = {
+  card: [
+    { name: 'has title', pattern: /<title[^>]*>[^<]+<\/title>/i, required: true },
+    { name: 'has ATK/HP stats', pattern: /(ATK|HP|SPD).*\d+/s, required: true },
+    { name: 'has skill section', pattern: /<h[23][^>]*>.*skill/is, required: true },
+    { name: 'has image', pattern: /<img[^>]*src=/i, required: true },
+  ],
+  list: [
+    { name: 'has content', pattern: /<div[^>]*>/i, required: true },
+    { name: 'has links', pattern: /<a[^>]*href=/i, required: true },
+  ],
+  blog: [
+    { name: 'has content', pattern: /<div[^>]*>/i, required: true },
+    { name: 'has title', pattern: /<title[^>]*>[^<]+<\/title>/i, required: true },
+  ],
+  static: [
+    { name: 'has content', pattern: /<div[^>]*>/i, required: true },
+    { name: 'has title', pattern: /<title[^>]*>[^<]+<\/title>/i, required: true },
+  ],
+};
+
+// Patterns that should NEVER appear (indicates runtime errors)
+const ERROR_PATTERNS = [
+  { name: 'no React error', pattern: /Minified React error #|React error boundary/i },
+  { name: 'no hydration error', pattern: /Hydration failed because|Text content does not match/i },
+  { name: 'no undefined render', pattern: />undefined<\/|>NaN<\//i },
+  { name: 'no null render', pattern: />null<\//i },
+  { name: 'no [object Object]', pattern: />\[object Object\]<\//i },
+];
+
+async function checkHtmlContent(
+  baseUrl: string,
+  url: string,
+  category: string,
+  timeout: number
+): Promise<HtmlCheckResult> {
+  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    const response = await fetch(fullUrl, {
+      method: 'GET',
+      signal: controller.signal,
+      headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      return {
+        url,
+        checks: [],
+        status: 'error',
+        error: `HTTP ${response.status}`,
+      };
+    }
+
+    const html = await response.text();
+    const checks: Array<{ name: string; passed: boolean; detail?: string }> = [];
+
+    // Run category-specific checks
+    const categoryChecks = HTML_CHECKS[category] || [];
+    for (const check of categoryChecks) {
+      const matches = check.pattern.test(html);
+      // For "no error" type checks, we want the pattern to NOT match
+      const isNegativeCheck = check.name.startsWith('no ');
+      const passed = isNegativeCheck ? !matches : matches;
+
+      if (check.required || !passed) {
+        checks.push({ name: check.name, passed });
+      }
+    }
+
+    // Run error pattern checks (should never match)
+    for (const check of ERROR_PATTERNS) {
+      const matches = check.pattern.test(html);
+      if (matches) {
+        checks.push({ name: check.name, passed: false });
+      }
+    }
+
+    const allPassed = checks.every((c) => c.passed);
+    return {
+      url,
+      checks,
+      status: allPassed ? 'pass' : 'fail',
+    };
+  } catch (error) {
+    return {
+      url,
+      checks: [],
+      status: 'error',
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+export async function validateHtmlContent(
+  samples: UrlSample[],
+  options: ValidatorOptions
+): Promise<{ passed: number; failed: number; results: HtmlCheckResult[] }> {
+  const { baseUrl, timeout = 10000 } = options;
+
+  // Sample a subset for HTML checks (one per category per locale)
+  const sampled: UrlSample[] = [];
+  const seen = new Set<string>();
+
+  for (const sample of samples) {
+    const key = `${sample.category}-${sample.locale || 'default'}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      sampled.push(sample);
+    }
+  }
+
+  console.log(`Running HTML sanity checks on ${sampled.length} pages`);
+
+  const results: HtmlCheckResult[] = [];
+
+  for (const sample of sampled) {
+    const result = await checkHtmlContent(baseUrl, sample.url, sample.category, timeout);
+    results.push(result);
+
+    const icon = result.status === 'pass' ? '✓' : '✗';
+    const failedChecks = result.checks.filter((c) => !c.passed);
+
+    if (result.status === 'pass') {
+      console.log(`  ${icon} ${sample.url}`);
+    } else if (result.error) {
+      console.log(`  ${icon} ${sample.url} - ${result.error}`);
+    } else {
+      console.log(`  ${icon} ${sample.url} - failed: ${failedChecks.map((c) => c.name).join(', ')}`);
+    }
+  }
+
+  const passed = results.filter((r) => r.status === 'pass').length;
+  const failed = results.filter((r) => r.status !== 'pass').length;
+
+  console.log(`  Results: ${passed} passed, ${failed} failed`);
+
+  return { passed, failed, results };
+}
