@@ -3,6 +3,7 @@ import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import CardPreviewContent from '../cards/CardPreviewContent';
+import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 
 interface ListBlockProps {
   cards: Record<string, Card>;
@@ -18,11 +19,22 @@ interface ListBlockProps {
  *
  * The cards will be displayed in the order specified.
  */
+// Get locale from URL synchronously (avoids useEffect timing issues)
+function getLocaleFromUrl(): SupportedLocale {
+  if (typeof window === 'undefined') return 'en';
+  const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+  if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+    return pathMatch[1] as SupportedLocale;
+  }
+  return 'en';
+}
+
 export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
   const [activeCard, setActiveCard] = useState<Card | null>(null);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
+  const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -143,7 +155,7 @@ export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
       // Add cards to grid (in specified order)
       cardList.forEach(card => {
         const link = document.createElement('a');
-        link.href = `/cards/${card.id}`;
+        link.href = `/${locale}/cards/${card.id}`;
         link.className = 'list-card text-center group';
         link.dataset.cardId = card.id;
 
@@ -196,6 +208,7 @@ export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
             card={activeCard}
             skills={skills}
             compact={true}
+            locale={locale}
           />
         </div>
       )}
@@ -234,6 +247,7 @@ export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
                 skills={skills}
                 compact={false}
                 showDetailsLink={true}
+                locale={locale}
               />
             </div>
           </div>

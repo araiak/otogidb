@@ -1,11 +1,11 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import CardPopups from '../../components/cards/CardPopups';
-import type { CardsData } from '../../types/card';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CardPopups from '../../../components/cards/CardPopups';
+import type { CardsData } from '../../../types/card';
 
 // Import full cards and skills data for hover popups
-import cardsDataRaw from '../../../public/data/cards.json';
-import skillsDataRaw from '../../../public/data/skills.json';
+import cardsDataRaw from '../../../../public/data/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
@@ -28,7 +28,7 @@ interface CardIndexEntry {
 // Load cards index for image lookups
 let cardsIndex: Record<string, CardIndexEntry> = {};
 try {
-  const cardsData = await import('../../../public/data/cards_index.json');
+  const cardsData = await import('../../../../public/data/cards_index.json');
   cardsIndex = (cardsData.default || cardsData).cards || {};
 } catch (_e) {
   console.warn('Failed to load cards index for images');
@@ -78,7 +78,7 @@ function getCardThumbnail(cardId: string): string {
 // Load manifest at build time
 let manifest: PatchNotesManifest;
 try {
-  const manifestRaw = await import('../../../public/data/changes/manifest.json');
+  const manifestRaw = await import('../../../../public/data/changes/manifest.json');
   manifest = manifestRaw.default || manifestRaw;
 } catch (e) {
   manifest = { total_versions: 0, versions: [] };
@@ -178,7 +178,7 @@ function renderStars(rarity: number): string {
 }
 ---
 
-<BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes">
+<BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes" hasLocalizedUrls={true}>
   <script is:inline>
     // Locale detection and link updating for updates page
     (function() {
@@ -202,7 +202,7 @@ function renderStars(rarity: number): string {
 
       function updateCardLinks() {
         var locale = getCurrentLocale();
-        var prefix = locale === 'en' ? '' : '/' + locale;
+        var prefix = '/' + locale;
 
         document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
           var href = link.getAttribute('href');
@@ -222,7 +222,7 @@ function renderStars(rarity: number): string {
       window.addEventListener('otogidb-locale-change', function(e) {
         var locale = e.detail && e.detail.locale;
         if (!locale) return;
-        var prefix = locale === 'en' ? '' : '/' + locale;
+        var prefix = '/' + locale;
         document.querySelectorAll('a[href*="/cards/"]').forEach(function(link) {
           var href = link.getAttribute('href');
           if (href) {

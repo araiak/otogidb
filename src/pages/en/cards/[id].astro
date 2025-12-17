@@ -1,15 +1,15 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../lib/formatters';
-import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../lib/images';
-import { findSimilarCards, getSimilarityReason } from '../../lib/similarity';
-import type { Card, CardsData } from '../../types/card';
-import CardPopups from '../../components/cards/CardPopups';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
+import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
+import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
+import type { Card, CardsData } from '../../../types/card';
+import CardPopups from '../../../components/cards/CardPopups';
 
 // Import cards and skills data at build time
-import cardsDataRaw from '../../../public/data/cards.json';
-import skillsDataRaw from '../../../public/data/skills.json';
+import cardsDataRaw from '../../../../public/data/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
 
 export async function getStaticPaths() {
   // Cast inside getStaticPaths since it runs first during build
@@ -43,29 +43,44 @@ const hdImageUrl = getImageUrl(card, 'hd');
 // SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
 const seoImage = hdImageUrl || undefined;
 
-// JSON-LD structured data for the card
+// SEO: Optimized title and description for long-tail queries
+const cardName = card.name || `Daemon #${card.id}`;
+const rarityStars = '★'.repeat(card.stats.rarity);
+const skillName = card.skill?.name || '';
+
+// Title format: "[Name] - Otogi: Spirit Agents [Rarity]★ [Type] Daemon"
+const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+
+// Description with long-tail keywords: stats, skills, abilities
+const seoDescription = `${cardName} stats, skills & abilities in Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''} View full ability details and similar daemons.`;
+
+// JSON-LD structured data for the card - enhanced for SEO
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
-  "name": card.name || `Card #${card.id}`,
-  "description": card.description || `${card.stats.attribute_name} ${card.stats.type_name} card from Otogi Spirit Agents`,
+  "name": cardName,
+  "alternateName": `${cardName} Otogi`,
+  "description": seoDescription,
   "image": seoImage,
   "url": `https://otogidb.com/cards/${card.id}`,
-  "creator": {
-    "@type": "Organization",
-    "name": "Mitama Games"
-  },
+  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, ${card.stats.rarity} star, daemon, skills, abilities`,
+  "creator": [
+    { "@type": "Organization", "name": "MyRealLife Games" },
+    { "@type": "Organization", "name": "Mitama Games" }
+  ],
   "isPartOf": {
     "@type": "VideoGame",
-    "name": "Otogi Spirit Agents"
+    "name": "Otogi: Spirit Agents",
+    "gamePlatform": ["iOS", "Android"]
   }
 };
 ---
 
 <BaseLayout
-  title={card.name || `Card #${card.id}`}
-  description={`${card.name || 'Unknown Card'} - ${card.stats.attribute_name} ${card.stats.type_name} - Stats, skills, and abilities`}
+  title={seoTitle}
+  description={seoDescription}
   image={seoImage}
+  hasLocalizedUrls={true}
 >
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
@@ -73,7 +88,7 @@ const jsonLd = {
   <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6">
     <!-- Breadcrumb -->
     <nav class="mb-3 sm:mb-4 text-xs sm:text-sm">
-      <a href="/" class="link">Cards</a>
+      <a href="/en/" class="link">Cards</a>
       <span class="mx-1 sm:mx-2">/</span>
       <span class="text-secondary truncate">{card.name || `Card #${card.id}`}</span>
     </nav>
@@ -114,7 +129,7 @@ const jsonLd = {
           <div class="flex justify-center md:block">
             <img
               src={hdImageUrl || getPlaceholderHD()}
-              alt={card.name || `Card #${card.id}`}
+              alt={`${card.name || `Card #${card.id}`} - Otogi Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name} daemon artwork`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"
             />
@@ -270,7 +285,7 @@ const jsonLd = {
                 if (!partner) return null;
                 return (
                   <a
-                    href={`/cards/${partnerId}`}
+                    href={`/en/cards/${partnerId}`}
                     class="synergy-card text-center group"
                     data-card-id={partnerId}
                   >
@@ -313,7 +328,7 @@ const jsonLd = {
                         </span>
                       )}
                       {targetCard && (
-                        <a href={`/cards/${bond.target_id}`} class="text-xs sm:text-sm truncate link">
+                        <a href={`/en/cards/${bond.target_id}`} class="text-xs sm:text-sm truncate link">
                           {targetCard.name}
                         </a>
                       )}
@@ -551,7 +566,7 @@ const jsonLd = {
         <p class="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Good options for team replacements</p>
         <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-4">
           {similarCards.map(({ card: related, details }) => (
-            <a href={`/cards/${related.id}`} class="card-grid-item text-center group p-1.5 sm:p-2">
+            <a href={`/en/cards/${related.id}`} class="card-grid-item text-center group p-1.5 sm:p-2">
               <div class="relative inline-block">
                 <img
                   src={getAndroidImageWithFallback(related)}

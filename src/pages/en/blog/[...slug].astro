@@ -1,22 +1,24 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { formatDate } from '../../lib/formatters';
-import CardReferencePopups from '../../components/blog/CardReferencePopups';
-import FilteredCardsBlock from '../../components/blog/FilteredCardsBlock';
-import ListBlock from '../../components/blog/ListBlock';
-import TeamBlock from '../../components/blog/TeamBlock';
-import type { CardsData } from '../../types/card';
+import { formatDate } from '../../../lib/formatters';
+import CardReferencePopups from '../../../components/blog/CardReferencePopups';
+import FilteredCardsBlock from '../../../components/blog/FilteredCardsBlock';
+import ListBlock from '../../../components/blog/ListBlock';
+import TeamBlock from '../../../components/blog/TeamBlock';
+import type { CardsData, Card } from '../../../types/card';
+import { getImageUrl } from '../../../lib/images';
 
 // Import cards and skills data for popups
-import cardsDataRaw from '../../../public/data/cards.json';
-import skillsDataRaw from '../../../public/data/skills.json';
+import cardsDataRaw from '../../../../public/data/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
+  // Only get English posts (locale is 'en' or unspecified)
+  const posts = await getCollection('blog', ({ data }) => !data.locale || data.locale === 'en');
   return posts.map((post) => ({
     params: { slug: post.slug },
     props: { post },
@@ -29,12 +31,55 @@ const { Content } = await post.render();
 // Format date for JSON-LD
 const publishedDate = new Date(post.data.date).toISOString();
 
+/**
+ * Extract the most-referenced card ID from markdown content
+ * Counts :card[id] references and returns the most frequent one
+ */
+function getMostReferencedCardId(markdown: string): string | null {
+  const cardRefRegex = /:card\[(\d+)\]/g;
+  const counts: Record<string, number> = {};
+  let match;
+
+  while ((match = cardRefRegex.exec(markdown)) !== null) {
+    const id = match[1];
+    counts[id] = (counts[id] || 0) + 1;
+  }
+
+  // Find the most referenced card
+  let maxCount = 0;
+  let mostReferenced: string | null = null;
+
+  for (const [id, count] of Object.entries(counts)) {
+    if (count > maxCount) {
+      maxCount = count;
+      mostReferenced = id;
+    }
+  }
+
+  return mostReferenced;
+}
+
+// Determine the social share image:
+// 1. Explicit image from frontmatter (highest priority)
+// 2. Most-referenced card's HD image (auto-detected)
+// 3. Default fallback (handled by SEO component)
+let socialImage = post.data.image;
+
+if (!socialImage) {
+  const mostReferencedCardId = getMostReferencedCardId(post.body);
+  if (mostReferencedCardId && cardsData.cards[mostReferencedCardId]) {
+    const card = cardsData.cards[mostReferencedCardId] as Card;
+    socialImage = getImageUrl(card, 'hd') || undefined;
+  }
+}
+
 // JSON-LD BlogPosting structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   "headline": post.data.title,
   "description": post.data.description,
+  "image": socialImage,
   "datePublished": publishedDate,
   "dateModified": publishedDate,
   "author": {
@@ -57,7 +102,9 @@ const jsonLd = {
 <BaseLayout
   title={post.data.title}
   description={post.data.description}
+  image={socialImage}
   type="article"
+  hasLocalizedUrls={true}
   article={{
     publishedTime: publishedDate,
     author: post.data.author,

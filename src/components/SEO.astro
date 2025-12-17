@@ -1,7 +1,8 @@
 ---
 /**
- * SEO Component - Handles Open Graph, Twitter Cards, and canonical URLs
+ * SEO Component - Handles Open Graph, Twitter Cards, canonical URLs, and hreflang
  */
+import { SUPPORTED_LOCALES, type SupportedLocale, getPathInLocale } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -9,6 +10,9 @@ interface Props {
   image?: string;
   type?: 'website' | 'article';
   canonical?: string;
+  locale?: SupportedLocale;
+  /** Set to true for pages with localized URL versions (e.g., card detail pages) */
+  hasLocalizedUrls?: boolean;
   article?: {
     publishedTime?: string;
     modifiedTime?: string;
@@ -23,6 +27,8 @@ const {
   image,
   type = 'website',
   canonical,
+  locale = 'en',
+  hasLocalizedUrls = false,
   article,
 } = Astro.props;
 
@@ -38,10 +44,49 @@ const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
 
 // Full title with site name
 const fullTitle = `${title} | ${siteName}`;
+
+// Map locale codes to OG locale format
+const OG_LOCALE_MAP: Record<SupportedLocale, string> = {
+  'en': 'en_US',
+  'ja': 'ja_JP',
+  'ko': 'ko_KR',
+  'zh-cn': 'zh_CN',
+  'zh-tw': 'zh_TW',
+  'es': 'es_ES',
+};
+
+// Map locale codes to hreflang format
+const HREFLANG_MAP: Record<SupportedLocale, string> = {
+  'en': 'en',
+  'ja': 'ja',
+  'ko': 'ko',
+  'zh-cn': 'zh-Hans',
+  'zh-tw': 'zh-Hant',
+  'es': 'es',
+};
+
+const ogLocale = OG_LOCALE_MAP[locale] || 'en_US';
+
+// Generate hreflang URLs for pages with localized versions
+const hreflangUrls = hasLocalizedUrls
+  ? SUPPORTED_LOCALES.map(loc => ({
+      locale: loc,
+      hreflang: HREFLANG_MAP[loc],
+      url: new URL(getPathInLocale(Astro.url.pathname, loc), siteUrl).href,
+    }))
+  : [];
 ---
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalUrl} />
+
+<!-- Hreflang tags for localized pages -->
+{hasLocalizedUrls && hreflangUrls.map(({ hreflang, url }) => (
+  <link rel="alternate" hreflang={hreflang} href={url} />
+))}
+{hasLocalizedUrls && (
+  <link rel="alternate" hreflang="x-default" href={new URL(getPathInLocale(Astro.url.pathname, 'en'), siteUrl).href} />
+)}
 
 <!-- Open Graph -->
 <meta property="og:type" content={type} />
@@ -50,7 +95,7 @@ const fullTitle = `${title} | ${siteName}`;
 <meta property="og:description" content={description} />
 <meta property="og:image" content={ogImage} />
 <meta property="og:site_name" content={siteName} />
-<meta property="og:locale" content="en_US" />
+<meta property="og:locale" content={ogLocale} />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />

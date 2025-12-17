@@ -1,0 +1,174 @@
+---
+/**
+ * Japanese Blog Index Page
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { formatDate } from '../../../lib/formatters';
+import { getTranslations } from '../../../lib/translations';
+
+const currentLocale = 'ja';
+const t = getTranslations(currentLocale);
+
+// Get all non-draft blog posts for this locale (Japanese)
+const posts = await getCollection('blog', ({ data }) => !data.draft && data.locale === 'ja');
+
+// Sort by date descending
+posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
+
+// Collect all unique tags
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+---
+
+<BaseLayout title={t.blog} description="あやかし百鬼夜行 カードデータベースブログ - ガイド、分析、アップデート" hasLocalizedUrls={true} lang={currentLocale}>
+  <script is:inline define:vars={{ currentLocale }}>
+    (function() {
+      var STORAGE_KEY = 'otogidb-locale';
+      var prefix = '/' + currentLocale;
+      try { localStorage.setItem(STORAGE_KEY, currentLocale); } catch(e) {}
+
+      function updateCardLinks() {
+        document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
+          var href = link.getAttribute('href');
+          if (href) {
+            var cardId = href.replace('/cards/', '');
+            link.setAttribute('href', prefix + '/cards/' + cardId);
+          }
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', updateCardLinks);
+      } else {
+        updateCardLinks();
+      }
+    })();
+  </script>
+  <div class="container mx-auto px-4 py-6">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold">{t.blog}</h1>
+      <a
+        href="https://github.com/araiak/otogidb"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-secondary text-sm px-3 py-1.5 rounded inline-flex items-center gap-1.5 w-fit"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+        </svg>
+        {t.contributePost}
+      </a>
+    </div>
+
+    {allTags.length > 0 && (
+      <div class="mb-6">
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="text-sm text-secondary mr-1">{t.filter}</span>
+          <button class="tag-filter badge text-xs cursor-pointer hover:opacity-80 transition-opacity active" data-tag="all">
+            {t.all}
+          </button>
+          {allTags.map((tag) => (
+            <button class="tag-filter badge text-xs cursor-pointer hover:opacity-80 transition-opacity" data-tag={tag}>
+              {tag}
+            </button>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {posts.length === 0 ? (
+      <div class="card p-6 text-center">
+        <p class="text-secondary">{t.noPostsYet}</p>
+      </div>
+    ) : (
+      <div id="posts-container" class="space-y-4">
+        {posts.map((post) => (
+          <a
+            href={`/${currentLocale}/blog/${post.slug}`}
+            class="blog-post card p-4 md:p-6 block hover:opacity-90 transition-opacity"
+            data-tags={JSON.stringify(post.data.tags || [])}
+          >
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
+              <div>
+                <h2 class="text-xl font-bold mb-1">{post.data.title}</h2>
+                {post.data.description && (
+                  <p class="text-secondary text-sm line-clamp-2">{post.data.description}</p>
+                )}
+              </div>
+              <div class="text-sm text-secondary shrink-0">
+                {formatDate(post.data.date.toString())}
+              </div>
+            </div>
+
+            {post.data.tags && post.data.tags.length > 0 && (
+              <div class="flex flex-wrap gap-2 mt-3">
+                {post.data.tags.map((tag) => (
+                  <span class="badge text-xs">{tag}</span>
+                ))}
+              </div>
+            )}
+          </a>
+        ))}
+      </div>
+    )}
+
+    <div id="no-results" class="card p-6 text-center hidden">
+      <p class="text-secondary">{t.noPostsMatch}</p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .tag-filter { opacity: 0.6; }
+  .tag-filter.active { opacity: 1; outline: 2px solid var(--color-accent); outline-offset: 1px; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tagButtons = document.querySelectorAll<HTMLButtonElement>('.tag-filter');
+    const posts = document.querySelectorAll<HTMLAnchorElement>('.blog-post');
+    const noResults = document.getElementById('no-results');
+
+    const validTags = new Set<string>(['all']);
+    tagButtons.forEach(btn => {
+      const tag = btn.dataset.tag;
+      if (tag) validTags.add(tag);
+    });
+
+    let activeTag = 'all';
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const tagParam = urlParams.get('tag');
+    if (tagParam && validTags.has(tagParam) && /^[\w\s-]+$/.test(tagParam)) {
+      activeTag = tagParam;
+    }
+
+    function updateFilter(tag: string) {
+      if (!validTags.has(tag)) tag = 'all';
+      activeTag = tag;
+
+      const url = new URL(window.location.href);
+      if (tag === 'all') {
+        url.searchParams.delete('tag');
+      } else {
+        url.searchParams.set('tag', tag);
+      }
+      window.history.replaceState({}, '', url.toString());
+
+      tagButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.tag === tag));
+
+      let visibleCount = 0;
+      posts.forEach(post => {
+        const postTags: string[] = JSON.parse(post.dataset.tags || '[]');
+        const show = tag === 'all' || postTags.includes(tag);
+        post.style.display = show ? '' : 'none';
+        if (show) visibleCount++;
+      });
+
+      if (noResults) noResults.classList.toggle('hidden', visibleCount > 0);
+    }
+
+    updateFilter(activeTag);
+    tagButtons.forEach(btn => btn.addEventListener('click', () => updateFilter(btn.dataset.tag || 'all')));
+  });
+</script>

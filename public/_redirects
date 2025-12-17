@@ -1,0 +1,10 @@
+# Cloudflare Pages redirects
+
+# Redirect favicon.ico to Cloudinary-hosted PNG for browser compatibility
+/favicon.ico https://res.cloudinary.com/dn3j8sqcc/image/upload/c_thumb,g_face,w_32,h_32,z_1.0/f_png/otogi/cards_hd/100014_hd.png 301
+
+# Backward compatibility: redirect old English URLs to /en/ prefix
+/cards/* /en/cards/:splat 301
+/blog/* /en/blog/:splat 301
+/updates /en/updates 301
+/updates/ /en/updates/ 301

@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardTable from '../../components/cards/CardTable';
+import type { CardsData } from '../../types/card';
+
+import cardsDataRaw from '../../../public/data/cards.json';
+const cardsData = cardsDataRaw as unknown as CardsData;
+const cardCount = Object.keys(cardsData.cards).length;
+
+const currentLocale = 'zh-tw';
+
+const pageTitle = "御靈士資料庫 - 屬性、技能、能力";
+const pageDescription = `完整的御靈士資料庫。搜尋和篩選${cardCount}個式神的屬性、技能和能力。`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "OtogiDB - 御靈士資料庫",
+  "alternateName": "OtogiDB",
+  "url": "https://otogidb.com/zh-tw",
+  "description": pageDescription,
+  "inLanguage": "zh-TW"
+};
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">御靈士資料庫</h1>
+      <p class="text-secondary">完整收錄{cardCount}個式神的屬性、技能和能力。</p>
+    </div>
+
+    <div class="card p-4">
+      <CardTable client:load />
+    </div>
+  </div>
+</BaseLayout>

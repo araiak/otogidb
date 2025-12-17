@@ -1,0 +1,134 @@
+name: Validate Deployment
+
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Enable debug output'
+        required: false
+        default: 'true'
+        type: boolean
+
+# Prevent duplicate runs: cancel in-progress when new commit arrives
+# Use ref_name for consistency (push: "dev", PR: "dev")
+concurrency:
+  group: validate-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Delay for PR events
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "Waiting 10s to allow push event to claim concurrency slot..."
+          sleep 10
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get commit SHA
+        id: get-sha
+        run: |
+          # Always use latest deployment on branch - SHA matching is unreliable
+          # (GitHub SHA can differ from what Cloudflare receives due to various factors)
+          echo "sha=" >> $GITHUB_OUTPUT
+          echo "short_sha=latest" >> $GITHUB_OUTPUT
+          echo "Will validate latest successful deployment on dev branch"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Wait for Cloudflare deployment
+        id: cloudflare
+        run: npx tsx scripts/validate-deployment/cloudflare-poller.ts
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PROJECT_NAME: otogidb
+          TARGET_BRANCH: dev
+          GITHUB_SHA: ${{ steps.get-sha.outputs.sha }}
+          DEBUG: ${{ inputs.debug || 'false' }}
+
+      - name: Validate deployment
+        id: validate
+        run: npx tsx scripts/validate-deployment/index.ts
+        env:
+          # Use the deployment-specific URL to ensure we test the exact build
+          VALIDATION_URL: ${{ steps.cloudflare.outputs.deployment_url }}
+          VALIDATION_TIMEOUT: '10000'
+          VALIDATION_CONCURRENCY: '10'
+          CARDS_PER_LOCALE: '10'
+          IMAGE_COUNT: '50'
+          GITHUB_SHA: ${{ steps.get-sha.outputs.sha }}
+
+      - name: Post validation summary
+        if: always()
+        env:
+          # Use Cloudflare-reported hash (more reliable for PRs using "latest")
+          SHORT_SHA: ${{ steps.cloudflare.outputs.short_hash || steps.get-sha.outputs.short_sha }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
+          DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
+        run: |
+          echo "## Deployment Validation" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${SHORT_SHA}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deployment | \`${DEPLOYMENT_ID}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| URL | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+
+          if [ "${{ job.status }}" == "success" ]; then
+            echo "### ✅ Validation Passed" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "### ❌ Validation Failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Please check the logs above for details on which pages or images failed." >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Comment on PR
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Use Cloudflare-reported hash (more reliable for PRs using "latest")
+          SHORT_SHA: ${{ steps.cloudflare.outputs.short_hash || steps.get-sha.outputs.short_sha }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
+          DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            STATUS="✅ **Deployment Validation Passed**"
+          else
+            STATUS="❌ **Deployment Validation Failed**"
+          fi
+
+          COMMENT=$(cat <<EOF
+          ${STATUS}
+
+          | Property | Value |
+          |----------|-------|
+          | Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${SHORT_SHA}) |
+          | Deployment | \`${DEPLOYMENT_ID}\` |
+          | Preview | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |
+
+          [View workflow run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
+          )
+
+          gh pr comment ${{ github.event.pull_request.number }} --body "${COMMENT}"
