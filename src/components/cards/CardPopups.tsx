@@ -6,6 +6,8 @@ interface CardPopupsProps {
   skills?: Record<string, any>;
   /** CSS selector for elements that trigger popups (must have data-card-id attribute) */
   selector?: string;
+  /** Whether to inject mobile preview icons next to elements */
+  injectMobileIcons?: boolean;
 }
 
 /**
@@ -17,7 +19,8 @@ interface CardPopupsProps {
 export default function CardPopups({
   cards,
   skills = {},
-  selector = '[data-card-id]'
+  selector = '[data-card-id]',
+  injectMobileIcons = false,
 }: CardPopupsProps) {
   return (
     <CardHoverProvider
@@ -25,6 +28,7 @@ export default function CardPopups({
       skills={skills}
       selector={selector}
       placement="top"
+      injectMobileIcons={injectMobileIcons}
       compact={true}
     />
   );

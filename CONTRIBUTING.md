@@ -80,6 +80,26 @@ This creates hoverable links that show card previews. You can use:
 - Card ID: `:card[689]`
 - Card name: `:card[Nue]`
 
+### Using Card List Blocks
+
+Display a grid of specific cards by ID using the `:list[ids]` syntax:
+
+```markdown
+My favorite cards:
+
+:list[10001,10002,10003]
+```
+
+This renders a grid showing the specified cards in order, with hover/tap popups. Unlike `:filter`, this shows exact cards you specify rather than matching a query.
+
+**Use cases:**
+- Recommended cards for specific content
+- Cards to prioritize from an event
+- Example team alternatives
+- Any curated list of specific cards
+
+Cards are displayed in the order you specify them.
+
 ### Using Filter Blocks
 
 Display a grid of cards matching specific criteria using the `:filter["query"]` syntax:

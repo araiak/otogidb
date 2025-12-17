@@ -79,3 +79,71 @@ export function remarkFilterReference() {
     });
   };
 }
+
+/**
+ * Remark plugin to transform :list[id1,id2,id3] into a card list grid
+ *
+ * Usage in markdown:
+ *   :list[111,123,456]
+ *   :list[10001, 10002, 10003]
+ *
+ * Cards are displayed in the order specified, with hover popups.
+ * Unlike :filter[], this shows specific cards by ID rather than filtering.
+ */
+export function remarkListReference() {
+  return (tree: Root) => {
+    visit(tree, 'text', (node: Text, index: number | undefined, parent: Parent | undefined) => {
+      if (!parent || index === undefined) return;
+
+      // Match :list[id1,id2,id3] - just comma-separated numbers
+      const listRegex = /:list\[([0-9,\s]+)\]/g;
+      const text = node.value;
+
+      if (!listRegex.test(text)) return;
+
+      // Reset regex
+      listRegex.lastIndex = 0;
+
+      const newNodes: Array<Text | { type: 'html'; value: string }> = [];
+      let lastIndex = 0;
+      let match;
+
+      while ((match = listRegex.exec(text)) !== null) {
+        // Add text before the match
+        if (match.index > lastIndex) {
+          newNodes.push({
+            type: 'text',
+            value: text.slice(lastIndex, match.index),
+          });
+        }
+
+        // Clean up the card IDs - remove extra whitespace
+        const cardIds = match[1]
+          .split(',')
+          .map(id => id.trim())
+          .filter(Boolean)
+          .join(',');
+
+        newNodes.push({
+          type: 'html',
+          value: `<div class="card-list-block" data-card-ids="${cardIds}"></div>`,
+        });
+
+        lastIndex = match.index + match[0].length;
+      }
+
+      // Add remaining text
+      if (lastIndex < text.length) {
+        newNodes.push({
+          type: 'text',
+          value: text.slice(lastIndex),
+        });
+      }
+
+      // Replace the node with the new nodes
+      if (newNodes.length > 0) {
+        parent.children.splice(index, 1, ...newNodes as any);
+      }
+    });
+  };
+}

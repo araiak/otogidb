@@ -105,14 +105,30 @@ export function useCardHover({
     const elements = root.querySelectorAll<HTMLElement>(selector);
     const injectedIcons: HTMLButtonElement[] = [];
 
+    // Track mobile click handlers for cleanup
+    const mobileClickHandlers: Array<{ el: HTMLElement; handler: EventListener }> = [];
+
     elements.forEach(element => {
       // Desktop: hover listeners
       element.addEventListener('mouseenter', handleMouseEnter as EventListener);
       element.addEventListener('mouseleave', handleMouseLeave);
 
+      // Mobile: tap to preview (intercept click on touch devices)
+      const cardId = element.dataset.cardId;
+      if (cardId && cards[cardId]) {
+        const mobileClickHandler = (e: Event) => {
+          // Only intercept on touch devices (no hover support)
+          if (window.matchMedia('(hover: none)').matches) {
+            e.preventDefault();
+            setMobilePreviewCard(cards[cardId]);
+          }
+        };
+        element.addEventListener('click', mobileClickHandler as EventListener);
+        mobileClickHandlers.push({ el: element, handler: mobileClickHandler as EventListener });
+      }
+
       // Mobile: inject view icon if enabled and not already present
       if (injectMobileIcons && !element.nextElementSibling?.classList.contains('card-ref-mobile-icon')) {
-        const cardId = element.dataset.cardId;
         if (cardId && cards[cardId]) {
           const icon = document.createElement('button');
           icon.className = 'card-ref-mobile-icon';
@@ -139,6 +155,11 @@ export function useCardHover({
       elements.forEach(element => {
         element.removeEventListener('mouseenter', handleMouseEnter as EventListener);
         element.removeEventListener('mouseleave', handleMouseLeave);
+      });
+
+      // Clean up mobile click handlers
+      mobileClickHandlers.forEach(({ el, handler }) => {
+        el.removeEventListener('click', handler);
       });
 
       // Clean up injected icons

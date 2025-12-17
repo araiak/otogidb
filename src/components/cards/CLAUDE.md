@@ -270,6 +270,37 @@ function ImageCell({ card, skills }) {
 |------|--------------|
 | `CardTable.tsx` | `CardFloatingPopup` for table cells |
 | `FilteredCardsBlock.tsx` | Manual state + `CardPreviewContent` |
+| `ListBlock.tsx` | Manual state + `CardPreviewContent` |
 | `TeamBlock.tsx` | Manual state + `CardPreviewContent` |
 | `CardReferencePopups.tsx` | `CardHoverProvider` wrapper |
 | `CardPopups.tsx` | `CardHoverProvider` wrapper |
+
+## Markdown Syntax for Blog Posts
+
+The following markdown syntax is supported in blog posts for displaying cards:
+
+### Card References (Inline Links)
+```markdown
+Check out :card[Nue]{10001} for a powerful attacker.
+```
+Creates an inline link with hover popup.
+
+### Card List (Specific Cards)
+```markdown
+:list[10001,10002,10003]
+```
+Displays a grid of specific cards by ID. Cards appear in the order specified.
+
+### Card Filter (Query-Based)
+```markdown
+:filter["?ability=DMG+Boost,Wave+Start"]
+:filter["?attr=Divina&type=Healer"]
+:filter["?rarity=5"]
+```
+Displays cards matching the filter query (same syntax as /cards page URL params).
+
+### Team Composition
+```markdown
+:team["req=10001,10002&opt=10003,10004"]
+```
+Displays a team composition with required and optional cards.
