@@ -7,8 +7,9 @@ on:
     branches: [main]
 
 # Prevent duplicate runs: cancel in-progress when new commit arrives
+# Use ref_name for consistency (push: "dev", PR: "dev")
 concurrency:
-  group: validate-${{ github.head_ref || github.ref }}
+  group: validate-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -17,23 +18,32 @@ jobs:
     timeout-minutes: 15
 
     steps:
+      - name: Delay for PR events
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "Waiting 10s to allow push event to claim concurrency slot..."
+          sleep 10
+
       - name: Checkout
         uses: actions/checkout@v4
 
       - name: Get commit SHA
         id: get-sha
         run: |
-          # For PRs, use the head commit (what Cloudflare deploys)
-          # For pushes, use the pushed commit
+          # For pushes, require exact commit match
+          # For PRs, we'll use latest deployment on dev branch (no specific SHA)
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            SHA="${{ github.event.pull_request.head.sha }}"
+            # Don't set SHA - poller will use latest deployment on branch
+            echo "sha=" >> $GITHUB_OUTPUT
+            echo "short_sha=latest" >> $GITHUB_OUTPUT
+            echo "PR validation: will use latest deployment on dev branch"
           else
             SHA="${{ github.sha }}"
+            SHORT_SHA="${SHA:0:7}"
+            echo "sha=$SHA" >> $GITHUB_OUTPUT
+            echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+            echo "Push validation: commit $SHORT_SHA ($SHA)"
           fi
-          SHORT_SHA="${SHA:0:7}"
-          echo "sha=$SHA" >> $GITHUB_OUTPUT
-          echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
-          echo "Commit SHA: $SHORT_SHA ($SHA)"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -69,8 +79,8 @@ jobs:
       - name: Post validation summary
         if: always()
         env:
-          SHORT_SHA: ${{ steps.get-sha.outputs.short_sha }}
-          FULL_SHA: ${{ steps.get-sha.outputs.sha }}
+          # Use Cloudflare-reported hash (more reliable for PRs using "latest")
+          SHORT_SHA: ${{ steps.cloudflare.outputs.short_hash || steps.get-sha.outputs.short_sha }}
           DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
           DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
         run: |
@@ -78,7 +88,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${FULL_SHA}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${SHORT_SHA}) |" >> $GITHUB_STEP_SUMMARY
           echo "| Deployment | \`${DEPLOYMENT_ID}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| URL | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -95,8 +105,8 @@ jobs:
         if: always() && github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SHORT_SHA: ${{ steps.get-sha.outputs.short_sha }}
-          FULL_SHA: ${{ steps.get-sha.outputs.sha }}
+          # Use Cloudflare-reported hash (more reliable for PRs using "latest")
+          SHORT_SHA: ${{ steps.cloudflare.outputs.short_hash || steps.get-sha.outputs.short_sha }}
           DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
           DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
         run: |
@@ -111,7 +121,7 @@ jobs:
 
           | Property | Value |
           |----------|-------|
-          | Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${FULL_SHA}) |
+          | Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${SHORT_SHA}) |
           | Deployment | \`${DEPLOYMENT_ID}\` |
           | Preview | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |
 
