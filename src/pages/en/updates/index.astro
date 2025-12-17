@@ -138,7 +138,7 @@ interface PatchNotes {
 const patchNotes: PatchNotes[] = [];
 for (const versionInfo of manifest.versions) {
   try {
-    const notes = await import(`../../../public/data/changes/patch_notes_${versionInfo.version}.json`);
+    const notes = await import(`../../../../public/data/changes/patch_notes_${versionInfo.version}.json`);
     patchNotes.push(notes.default || notes);
   } catch (e) {
     console.warn(`Failed to load patch notes for version ${versionInfo.version}`);
