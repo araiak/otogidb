@@ -10,7 +10,7 @@
  */
 
 import { readFileSync } from 'fs';
-import { join, dirname } from 'path';
+import { join, dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
 import type { CardData, Card, UrlSample, Locale } from './types.js';
 import { LOCALES } from './types.js';
@@ -174,8 +174,11 @@ export function generateUrlSamples(options: SamplerOptions = {}): {
   return { pages, images };
 }
 
-// Run as standalone for testing
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Run as standalone for testing (handles Windows path differences)
+const __filename = fileURLToPath(import.meta.url);
+const isMainModule = resolve(process.argv[1] || '') === __filename;
+
+if (isMainModule) {
   const { pages, images } = generateUrlSamples();
   console.log('\nSample page URLs:');
   pages.slice(0, 10).forEach((s) => console.log(`  ${s.url} (${s.category})`));

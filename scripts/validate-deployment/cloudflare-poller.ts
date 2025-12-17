@@ -7,6 +7,8 @@
 
 import type { CloudflareDeploymentsResponse, CloudflareDeployment } from './types.js';
 import { appendFileSync } from 'fs';
+import { fileURLToPath } from 'url';
+import { resolve } from 'path';
 
 const CLOUDFLARE_API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
 const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
@@ -305,8 +307,11 @@ export async function pollForDeployment(): Promise<PollerResult> {
   return waitForDeployment();
 }
 
-// Run as standalone script
-if (import.meta.url === `file://${process.argv[1]}`) {
+// Run as standalone script (handles Windows path differences)
+const __filename = fileURLToPath(import.meta.url);
+const isMainModule = resolve(process.argv[1] || '') === __filename;
+
+if (isMainModule) {
   pollForDeployment().then((result) => {
     writeGitHubOutput(result);
 
