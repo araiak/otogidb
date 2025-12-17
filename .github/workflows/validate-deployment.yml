@@ -58,7 +58,8 @@ jobs:
         id: validate
         run: npx tsx scripts/validate-deployment/index.ts
         env:
-          VALIDATION_URL: https://dev.otogidb.pages.dev
+          # Use the deployment-specific URL to ensure we test the exact build
+          VALIDATION_URL: ${{ steps.cloudflare.outputs.deployment_url }}
           VALIDATION_TIMEOUT: '10000'
           VALIDATION_CONCURRENCY: '10'
           CARDS_PER_LOCALE: '10'
@@ -70,14 +71,16 @@ jobs:
         env:
           SHORT_SHA: ${{ steps.get-sha.outputs.short_sha }}
           FULL_SHA: ${{ steps.get-sha.outputs.sha }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
+          DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
         run: |
           echo "## Deployment Validation" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Property | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|----------|-------|" >> $GITHUB_STEP_SUMMARY
           echo "| Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${FULL_SHA}) |" >> $GITHUB_STEP_SUMMARY
-          echo "| Branch | \`dev\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| Target | [dev.otogidb.pages.dev](https://dev.otogidb.pages.dev) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Deployment | \`${DEPLOYMENT_ID}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| URL | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
 
           if [ "${{ job.status }}" == "success" ]; then
