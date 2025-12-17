@@ -42,9 +42,8 @@ function generateCardUrls(cards: Card[], perLocale: number): UrlSample[] {
   for (const locale of LOCALES) {
     const sampledCards = sample(cards, perLocale);
     for (const card of sampledCards) {
-      const path = locale === 'en' ? `/cards/${card.id}` : `/${locale}/cards/${card.id}`;
       samples.push({
-        url: path,
+        url: `/${locale}/cards/${card.id}`,
         category: 'card',
         locale,
       });
@@ -61,7 +60,8 @@ function generateListUrls(): UrlSample[] {
 
   for (const locale of LOCALES) {
     for (const page of listPages) {
-      const path = locale === 'en' ? page : `/${locale}${page}`;
+      // All locales now use /{locale}/ prefix, including English
+      const path = page === '/' ? `/${locale}/` : `/${locale}${page}`;
       samples.push({
         url: path,
         category: 'list',
@@ -79,9 +79,8 @@ function generateBlogUrls(): UrlSample[] {
 
   // Blog index pages
   for (const locale of LOCALES) {
-    const path = locale === 'en' ? '/blog' : `/${locale}/blog`;
     samples.push({
-      url: path,
+      url: `/${locale}/blog`,
       category: 'blog',
       locale,
     });
@@ -89,9 +88,8 @@ function generateBlogUrls(): UrlSample[] {
 
   // Updates pages
   for (const locale of LOCALES) {
-    const path = locale === 'en' ? '/updates' : `/${locale}/updates`;
     samples.push({
-      url: path,
+      url: `/${locale}/updates`,
       category: 'blog',
       locale,
     });
@@ -107,9 +105,8 @@ function generateStaticUrls(): UrlSample[] {
 
   for (const locale of LOCALES) {
     for (const page of staticPages) {
-      const path = locale === 'en' ? page : `/${locale}${page}`;
       samples.push({
-        url: path,
+        url: `/${locale}${page}`,
         category: 'static',
         locale,
       });
