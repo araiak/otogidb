@@ -90,3 +90,33 @@ jobs:
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "Please check the logs above for details on which pages or images failed." >> $GITHUB_STEP_SUMMARY
           fi
+
+      - name: Comment on PR
+        if: always() && github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHORT_SHA: ${{ steps.get-sha.outputs.short_sha }}
+          FULL_SHA: ${{ steps.get-sha.outputs.sha }}
+          DEPLOYMENT_URL: ${{ steps.cloudflare.outputs.deployment_url }}
+          DEPLOYMENT_ID: ${{ steps.cloudflare.outputs.deployment_id }}
+        run: |
+          if [ "${{ job.status }}" == "success" ]; then
+            STATUS="✅ **Deployment Validation Passed**"
+          else
+            STATUS="❌ **Deployment Validation Failed**"
+          fi
+
+          COMMENT=$(cat <<EOF
+          ${STATUS}
+
+          | Property | Value |
+          |----------|-------|
+          | Commit | [\`${SHORT_SHA}\`](https://github.com/${{ github.repository }}/commit/${FULL_SHA}) |
+          | Deployment | \`${DEPLOYMENT_ID}\` |
+          | Preview | [${DEPLOYMENT_URL}](${DEPLOYMENT_URL}) |
+
+          [View workflow run](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+          EOF
+          )
+
+          gh pr comment ${{ github.event.pull_request.number }} --body "${COMMENT}"
