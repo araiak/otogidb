@@ -30,13 +30,14 @@ jobs:
       - name: Get commit SHA
         id: get-sha
         run: |
-          # For pushes, require exact commit match
-          # For PRs, we'll use latest deployment on dev branch (no specific SHA)
+          # For PRs, use the actual head commit (not the merge commit)
+          # For pushes, use github.sha
           if [ "${{ github.event_name }}" == "pull_request" ]; then
-            # Don't set SHA - poller will use latest deployment on branch
-            echo "sha=" >> $GITHUB_OUTPUT
-            echo "short_sha=latest" >> $GITHUB_OUTPUT
-            echo "PR validation: will use latest deployment on dev branch"
+            SHA="${{ github.event.pull_request.head.sha }}"
+            SHORT_SHA="${SHA:0:7}"
+            echo "sha=$SHA" >> $GITHUB_OUTPUT
+            echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+            echo "PR validation: head commit $SHORT_SHA ($SHA)"
           else
             SHA="${{ github.sha }}"
             SHORT_SHA="${SHA:0:7}"
