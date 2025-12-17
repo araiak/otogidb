@@ -59,6 +59,16 @@ function parseTeamQuery(query: string): TeamMember[] {
   return members;
 }
 
+// Get locale from URL synchronously (avoids useEffect timing issues)
+function getLocaleFromUrl(): SupportedLocale {
+  if (typeof window === 'undefined') return 'en';
+  const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+  if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+    return pathMatch[1] as SupportedLocale;
+  }
+  return 'en';
+}
+
 /**
  * TeamBlock - Hydrates all .team-block containers
  * Renders team compositions with required/optional markers and hover popups
@@ -68,15 +78,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
-  const [locale, setLocale] = useState<SupportedLocale>('en');
-
-  // Detect locale from URL on mount
-  useEffect(() => {
-    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
-      setLocale(pathMatch[1] as SupportedLocale);
-    }
-  }, []);
+  const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -294,7 +296,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
         el.removeEventListener(type, handler);
       });
     };
-  }, [cards, locale, handleMouseEnter, handleMouseLeave, handleMobileTap]);
+  }, [cards, handleMouseEnter, handleMouseLeave, handleMobileTap]);
 
   return (
     <>

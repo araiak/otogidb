@@ -199,6 +199,16 @@ function matchesFilters(card: Card, filters: ParsedFilters): boolean {
   return true;
 }
 
+// Get locale from URL synchronously (avoids useEffect timing issues)
+function getLocaleFromUrl(): SupportedLocale {
+  if (typeof window === 'undefined') return 'en';
+  const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+  if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
+    return pathMatch[1] as SupportedLocale;
+  }
+  return 'en';
+}
+
 /**
  * FilteredCardsBlock - Hydrates all .filtered-cards-block containers
  * Renders matching cards as a grid with hover popups (desktop) and tap preview (mobile)
@@ -208,15 +218,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
-  const [locale, setLocale] = useState<SupportedLocale>('en');
-
-  // Detect locale from URL on mount
-  useEffect(() => {
-    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
-      setLocale(pathMatch[1] as SupportedLocale);
-    }
-  }, []);
+  const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -383,7 +385,7 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
         el.removeEventListener(type, handler);
       });
     };
-  }, [cards, locale, handleMouseEnter, handleMouseLeave, handleMobileTap]);
+  }, [cards, handleMouseEnter, handleMouseLeave, handleMobileTap]);
 
   return (
     <>
