@@ -5,10 +5,11 @@
  * Outputs results and sets exit code based on validation success.
  */
 
+import { appendFileSync } from 'fs';
 import { generateUrlSamples } from './url-sampler.js';
 import { validatePages } from './page-validator.js';
 import { validateImages } from './image-validator.js';
-import type { ValidationResult, ValidationSummary } from './types.js';
+import type { ValidationSummary } from './types.js';
 
 // Configuration from environment
 const VALIDATION_URL = process.env.VALIDATION_URL || 'https://dev.otogidb.pages.dev';
@@ -81,8 +82,6 @@ function printResults(summary: ValidationSummary, shortHash: string): void {
 function writeGitHubOutput(summary: ValidationSummary): void {
   const outputFile = process.env.GITHUB_OUTPUT;
   if (!outputFile) return;
-
-  const { appendFileSync } = require('fs');
 
   appendFileSync(outputFile, `validation_success=${summary.success}\n`);
   appendFileSync(outputFile, `pages_passed=${summary.pages.passed}\n`);
