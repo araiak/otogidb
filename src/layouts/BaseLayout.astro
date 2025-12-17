@@ -75,10 +75,10 @@ const {
   article,
 } = Astro.props;
 
-// Build locale-aware navigation paths
-const localePrefix = currentLocale === 'en' ? '' : `/${currentLocale}`;
+// Build locale-aware navigation paths - all locales use /{locale}/ prefix
+const localePrefix = `/${currentLocale}`;
 const navLinks = {
-  home: localePrefix || '/',
+  home: localePrefix,
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
 };

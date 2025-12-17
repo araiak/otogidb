@@ -1,17 +1,17 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { formatDate } from '../../lib/formatters';
-import CardReferencePopups from '../../components/blog/CardReferencePopups';
-import FilteredCardsBlock from '../../components/blog/FilteredCardsBlock';
-import ListBlock from '../../components/blog/ListBlock';
-import TeamBlock from '../../components/blog/TeamBlock';
-import type { CardsData, Card } from '../../types/card';
-import { getImageUrl } from '../../lib/images';
+import { formatDate } from '../../../lib/formatters';
+import CardReferencePopups from '../../../components/blog/CardReferencePopups';
+import FilteredCardsBlock from '../../../components/blog/FilteredCardsBlock';
+import ListBlock from '../../../components/blog/ListBlock';
+import TeamBlock from '../../../components/blog/TeamBlock';
+import type { CardsData, Card } from '../../../types/card';
+import { getImageUrl } from '../../../lib/images';
 
 // Import cards and skills data for popups
-import cardsDataRaw from '../../../public/data/cards.json';
-import skillsDataRaw from '../../../public/data/skills.json';
+import cardsDataRaw from '../../../../public/data/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};

@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { formatDate } from '../../lib/formatters';
+import { formatDate } from '../../../lib/formatters';
 
 // Get all non-draft blog posts for this locale (English or unspecified)
 const posts = await getCollection('blog', ({ data }) => !data.draft && (!data.locale || data.locale === 'en'));

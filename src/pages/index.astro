@@ -1,49 +1,28 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import CardTable from '../components/cards/CardTable';
-import type { CardsData } from '../types/card';
-
-// Import cards data at build time to get dynamic card count
-import cardsDataRaw from '../../public/data/cards.json';
-const cardsData = cardsDataRaw as unknown as CardsData;
-const cardCount = Object.keys(cardsData.cards).length;
-
-// SEO: Optimized title and description for core keywords
-const pageTitle = "Otogi: Spirit Agents Daemon Database - Stats, Skills & Abilities";
-const pageDescription = `Complete Otogi: Spirit Agents database with ${cardCount} daemons. Search and filter by stats, skills, abilities, attributes, and rarity.`;
-
-// JSON-LD WebSite structured data with search action
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "OtogiDB - Otogi: Spirit Agents Database",
-  "alternateName": "OtogiDB",
-  "url": "https://otogidb.com",
-  "description": pageDescription,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "https://otogidb.com/?q={search_term_string}"
-    },
-    "query-input": "required name=search_term_string"
-  }
-};
+/**
+ * Root page - redirects to user's preferred locale
+ * Uses client-side redirect based on stored preference or browser detection
+ */
+import { localeInitScript } from '../lib/i18n';
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription}>
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-
-  <div class="container mx-auto px-4 py-6">
-    <div class="mb-6">
-      <h1 class="text-2xl md:text-3xl font-bold mb-2">Otogi: Spirit Agents Daemon Database</h1>
-      <p class="text-secondary">Complete stats, skills, abilities, and rankings for all {cardCount} daemons.</p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OtogiDB - Redirecting...</title>
+    <meta name="robots" content="noindex" />
+    <!-- Redirect script runs immediately -->
+    <script set:html={localeInitScript} />
+    <!-- Fallback for no-JS: redirect to English -->
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=/en/" />
+    </noscript>
+  </head>
+  <body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: system-ui, sans-serif;">
+      <p>Redirecting...</p>
     </div>
-
-    <!-- Card Table (React Island) -->
-    <div class="card p-4">
-      <CardTable client:load />
-    </div>
-  </div>
-</BaseLayout>
+  </body>
+</html>

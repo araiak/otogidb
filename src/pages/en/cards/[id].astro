@@ -1,15 +1,15 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../lib/formatters';
-import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../lib/images';
-import { findSimilarCards, getSimilarityReason } from '../../lib/similarity';
-import type { Card, CardsData } from '../../types/card';
-import CardPopups from '../../components/cards/CardPopups';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
+import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
+import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
+import type { Card, CardsData } from '../../../types/card';
+import CardPopups from '../../../components/cards/CardPopups';
 
 // Import cards and skills data at build time
-import cardsDataRaw from '../../../public/data/cards.json';
-import skillsDataRaw from '../../../public/data/skills.json';
+import cardsDataRaw from '../../../../public/data/cards.json';
+import skillsDataRaw from '../../../../public/data/skills.json';
 
 export async function getStaticPaths() {
   // Cast inside getStaticPaths since it runs first during build

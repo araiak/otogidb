@@ -48,21 +48,25 @@ export function getDataPathPrefix(locale: SupportedLocale): string {
 
 /**
  * Get the URL path prefix for a locale
- * Returns empty string for default locale, "/ja" etc. for others
+ * All locales now use /{locale}/ prefix including English
  */
 export function getUrlPathPrefix(locale: SupportedLocale): string {
-  return locale === DEFAULT_LOCALE ? '' : `/${locale}`;
+  return `/${locale}`;
 }
 
 /**
  * Build a localized URL for a given path
  * e.g., getLocalizedUrl('ja', '/cards/1') => '/ja/cards/1'
- * e.g., getLocalizedUrl('en', '/cards/1') => '/cards/1'
+ * e.g., getLocalizedUrl('en', '/cards/1') => '/en/cards/1'
  */
 export function getLocalizedUrl(locale: SupportedLocale, path: string): string {
   const prefix = getUrlPathPrefix(locale);
   // Ensure path starts with /
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  // Avoid double slash: /en + / = /en not /en/
+  if (normalizedPath === '/') {
+    return prefix;
+  }
   return `${prefix}${normalizedPath}`;
 }
 
@@ -83,16 +87,18 @@ export function extractLocaleFromPath(path: string): SupportedLocale {
 
 /**
  * Get the equivalent path in another locale
- * e.g., getPathInLocale('/ja/cards/1', 'en') => '/cards/1'
- * e.g., getPathInLocale('/cards/1', 'ja') => '/ja/cards/1'
+ * e.g., getPathInLocale('/ja/cards/1', 'en') => '/en/cards/1'
+ * e.g., getPathInLocale('/en/cards/1', 'ja') => '/ja/cards/1'
  */
 export function getPathInLocale(currentPath: string, targetLocale: SupportedLocale): string {
   const currentLocale = extractLocaleFromPath(currentPath);
 
   // Remove current locale prefix if present
   let basePath = currentPath;
-  if (currentLocale !== DEFAULT_LOCALE) {
-    basePath = currentPath.replace(`/${currentLocale}`, '') || '/';
+  if (currentPath.startsWith(`/${currentLocale}/`)) {
+    basePath = currentPath.slice(currentLocale.length + 1) || '/';
+  } else if (currentPath === `/${currentLocale}`) {
+    basePath = '/';
   }
 
   // Add target locale prefix
@@ -156,6 +162,7 @@ export function getEffectiveLocale(): SupportedLocale {
 /**
  * Script to run on page load for locale detection and potential redirect
  * This is inline script for initial page load
+ * Root path (/) redirects to user's preferred locale
  */
 export const localeInitScript = `
 (function() {
@@ -186,27 +193,11 @@ export const localeInitScript = `
     return DEFAULT;
   }
 
-  function getCurrentPathLocale() {
-    // Match locale codes like /ja/, /ko/, /zh-cn/, /zh-tw/, /es/
-    const match = location.pathname.match(/^\\/([a-z]{2}(?:-[a-z]{2})?)([\\/]|$)/);
-    return (match && SUPPORTED.includes(match[1])) ? match[1] : DEFAULT;
-  }
-
-  // Only redirect on first visit to root or cards page
-  // Don't redirect if user explicitly navigated to a locale
-  const pathLocale = getCurrentPathLocale();
-  const stored = getStoredLocale();
-
-  if (!stored && pathLocale === DEFAULT) {
-    // First visit, no explicit choice - check browser preference
-    const detected = detectBrowserLocale();
-
-    // Only soft-redirect if browser prefers non-default and we're on root/cards
-    if (detected !== DEFAULT && (location.pathname === '/' || location.pathname.startsWith('/cards'))) {
-      // Don't redirect, but show language preference hint
-      // User can click language switcher to change
-      window.__otogidb_detected_locale = detected;
-    }
+  // Redirect from root to preferred locale
+  if (location.pathname === '/' || location.pathname === '') {
+    const stored = getStoredLocale();
+    const preferred = stored || detectBrowserLocale();
+    location.replace('/' + preferred + '/');
   }
 })();
 `;
