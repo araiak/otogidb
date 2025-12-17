@@ -13,7 +13,7 @@ const CLOUDFLARE_ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
 const CLOUDFLARE_PROJECT_NAME = process.env.CLOUDFLARE_PROJECT_NAME || 'otogidb';
 const TARGET_BRANCH = process.env.TARGET_BRANCH || 'dev';
 const GITHUB_SHA = process.env.GITHUB_SHA; // Full commit hash from GitHub Actions
-const DEBUG = process.env.DEBUG === 'true';
+const DEBUG = process.env.DEBUG !== 'false'; // Default to true
 
 // Polling configuration
 const POLL_INTERVAL_MS = 15000; // 15 seconds
