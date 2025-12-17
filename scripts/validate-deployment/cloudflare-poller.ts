@@ -177,9 +177,20 @@ async function waitForDeployment(): Promise<PollerResult> {
       }
 
       // Find deployment - by exact commit hash, or latest on branch
-      const deployment = useCommitMatch
+      let deployment = useCommitMatch
         ? findDeploymentByCommit(response.result, GITHUB_SHA!, TARGET_BRANCH)
         : findLatestDeploymentForBranch(response.result, TARGET_BRANCH);
+
+      // If exact commit not found, fall back to latest successful deployment
+      // This handles cases where GitHub SHA doesn't match Cloudflare's commit hash
+      if (!deployment && useCommitMatch) {
+        debugLog(`Commit ${shortHash} not found, falling back to latest deployment`);
+        deployment = findLatestDeploymentForBranch(response.result, TARGET_BRANCH);
+        if (deployment) {
+          const latestCommit = getShortHash(deployment.deployment_trigger?.metadata?.commit_hash);
+          console.log(`[${elapsedStr}] ℹ Commit ${shortHash} not found, using latest: ${latestCommit}`);
+        }
+      }
 
       if (!deployment) {
         debugLog(`No matching deployment found. useCommitMatch=${useCommitMatch}, looking for: ${shortHash}`);
