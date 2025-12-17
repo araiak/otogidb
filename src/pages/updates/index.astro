@@ -1,5 +1,14 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import CardPopups from '../../components/cards/CardPopups';
+import type { CardsData } from '../../types/card';
+
+// Import full cards and skills data for hover popups
+import cardsDataRaw from '../../../public/data/cards.json';
+import skillsDataRaw from '../../../public/data/skills.json';
+
+const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
 
 // Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
 interface CardIndexEntry {
@@ -286,6 +295,7 @@ function renderStars(rarity: number): string {
                   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {notes.new_cards.map((card) => (
                       <a href={`/cards/${card.id}`}
+                         data-card-id={card.id}
                          class="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-opacity-50"
                          style="background-color: var(--color-surface);">
                         {/* Card Image */}
@@ -324,7 +334,7 @@ function renderStars(rarity: number): string {
                       <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
                         <div class="flex items-start gap-3">
                           {/* Card Image */}
-                          <a href={`/cards/${card.id}`} class="flex-shrink-0">
+                          <a href={`/cards/${card.id}`} data-card-id={card.id} class="flex-shrink-0">
                             <div class="w-12 h-12 rounded-full overflow-hidden"
                                  style="background-color: var(--color-bg);">
                               <img src={getCardThumbnail(card.id)}
@@ -336,7 +346,7 @@ function renderStars(rarity: number): string {
 
                           {/* Card Info & Changes */}
                           <div class="flex-1 min-w-0">
-                            <a href={`/cards/${card.id}`} class="font-medium link hover:underline">
+                            <a href={`/cards/${card.id}`} data-card-id={card.id} class="font-medium link hover:underline">
                               {card.name}
                             </a>
                             <span class="text-yellow-500 text-sm ml-2">{renderStars(card.rarity)}</span>
@@ -374,5 +384,8 @@ function renderStars(rarity: number): string {
         ))}
       </div>
     )}
+
+    <!-- Card hover popups with mobile modal support -->
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
   </div>
 </BaseLayout>
