@@ -244,10 +244,13 @@ const HTML_CHECKS: Record<string, Array<{ name: string; pattern: RegExp; require
     { name: 'has ATK/HP stats', pattern: /(ATK|HP|SPD).*\d+/s, required: true },
     { name: 'has skill section', pattern: /<h[23][^>]*>.*skill/is, required: true },
     { name: 'has image', pattern: /<img[^>]*src=/i, required: true },
+    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.js"/i, required: true },
   ],
   list: [
     { name: 'has content', pattern: /<div[^>]*>/i, required: true },
     { name: 'has links', pattern: /<a[^>]*href=/i, required: true },
+    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.js"/i, required: true },
+    // data-card-id is added client-side by React, not in server-rendered HTML
   ],
   blog: [
     { name: 'has content', pattern: /<div[^>]*>/i, required: true },
@@ -381,4 +384,82 @@ export async function validateHtmlContent(
   console.log(`  Results: ${passed} passed, ${failed} failed`);
 
   return { passed, failed, results };
+}
+
+// Validate that JS bundles referenced in pages actually load
+export async function validateJsBundles(
+  baseUrl: string,
+  timeout: number = 10000
+): Promise<{ passed: number; failed: number; bundles: string[] }> {
+  console.log('Checking JS bundle loading...');
+
+  // Fetch a card list page to find JS bundles
+  const testUrl = `${baseUrl}/en/`;
+  let html: string;
+
+  try {
+    const response = await fetch(testUrl, {
+      headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
+    });
+    html = await response.text();
+  } catch (error) {
+    console.log(`  ✗ Failed to fetch ${testUrl}`);
+    return { passed: 0, failed: 1, bundles: [] };
+  }
+
+  // Extract JS bundle URLs
+  const scriptMatches = html.matchAll(/<script[^>]*src="([^"]*\.js)"[^>]*>/gi);
+  const bundles: string[] = [];
+
+  for (const match of scriptMatches) {
+    let src = match[1];
+    // Make absolute URL
+    if (src.startsWith('/')) {
+      src = `${baseUrl}${src}`;
+    } else if (!src.startsWith('http')) {
+      src = `${baseUrl}/${src}`;
+    }
+    if (!bundles.includes(src)) {
+      bundles.push(src);
+    }
+  }
+
+  if (bundles.length === 0) {
+    console.log('  ⚠ No JS bundles found');
+    return { passed: 0, failed: 0, bundles: [] };
+  }
+
+  let passed = 0;
+  let failed = 0;
+
+  for (const bundleUrl of bundles) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+      const response = await fetch(bundleUrl, {
+        method: 'HEAD',
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeoutId);
+
+      const shortUrl = bundleUrl.replace(baseUrl, '');
+      if (response.ok) {
+        console.log(`  ✓ ${shortUrl}`);
+        passed++;
+      } else {
+        console.log(`  ✗ ${shortUrl} - HTTP ${response.status}`);
+        failed++;
+      }
+    } catch (error) {
+      const shortUrl = bundleUrl.replace(baseUrl, '');
+      console.log(`  ✗ ${shortUrl} - ${error instanceof Error ? error.message : 'Failed'}`);
+      failed++;
+    }
+  }
+
+  console.log(`  Results: ${passed} passed, ${failed} failed`);
+
+  return { passed, failed, bundles };
 }

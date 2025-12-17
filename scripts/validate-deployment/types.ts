@@ -83,6 +83,11 @@ export interface ValidationSummary {
     passed: number;
     failed: number;
   };
+  jsBundles?: {
+    total: number;
+    passed: number;
+    failed: number;
+  };
   images: {
     total: number;
     passed: number;

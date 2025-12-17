@@ -7,7 +7,7 @@
 
 import { appendFileSync } from 'fs';
 import { generateUrlSamples } from './url-sampler.js';
-import { validatePages, validateLocaleRedirects, validateHtmlContent } from './page-validator.js';
+import { validatePages, validateLocaleRedirects, validateHtmlContent, validateJsBundles } from './page-validator.js';
 import { validateImages } from './image-validator.js';
 import type { ValidationSummary } from './types.js';
 
@@ -43,6 +43,12 @@ function printResults(summary: ValidationSummary, shortHash: string): void {
   if (summary.htmlChecks) {
     const htmlPercent = ((summary.htmlChecks.passed / summary.htmlChecks.total) * 100).toFixed(1);
     console.log(`HTML Sanity: ${summary.htmlChecks.passed}/${summary.htmlChecks.total} passed (${htmlPercent}%)`);
+  }
+
+  // JS bundle results
+  if (summary.jsBundles) {
+    const jsPercent = ((summary.jsBundles.passed / summary.jsBundles.total) * 100).toFixed(1);
+    console.log(`JS Bundles: ${summary.jsBundles.passed}/${summary.jsBundles.total} passed (${jsPercent}%)`);
   }
 
   console.log('');
@@ -102,6 +108,10 @@ function writeGitHubOutput(summary: ValidationSummary): void {
   appendFileSync(outputFile, `pages_total=${summary.pages.total}\n`);
   appendFileSync(outputFile, `images_passed=${summary.images.passed}\n`);
   appendFileSync(outputFile, `images_total=${summary.images.total}\n`);
+  if (summary.jsBundles) {
+    appendFileSync(outputFile, `js_bundles_passed=${summary.jsBundles.passed}\n`);
+    appendFileSync(outputFile, `js_bundles_total=${summary.jsBundles.total}\n`);
+  }
 }
 
 async function main(): Promise<void> {
@@ -146,6 +156,11 @@ async function main(): Promise<void> {
   });
   console.log('');
 
+  // JS bundle checks
+  console.log('Validating JS bundles...');
+  const jsResults = await validateJsBundles(VALIDATION_URL, TIMEOUT_MS);
+  console.log('');
+
   // Validate images
   console.log('Validating images...');
   const imageResults = await validateImages(images, {
@@ -156,6 +171,7 @@ async function main(): Promise<void> {
   // Build summary
   const localeSuccess = localeResults.failed === 0;
   const htmlSuccess = htmlResults.failed === 0;
+  const jsSuccess = jsResults.failed === 0;
   const summary: ValidationSummary = {
     target: VALIDATION_URL,
     localeRedirects: {
@@ -174,6 +190,11 @@ async function main(): Promise<void> {
       passed: htmlResults.passed,
       failed: htmlResults.failed,
     },
+    jsBundles: {
+      total: jsResults.passed + jsResults.failed,
+      passed: jsResults.passed,
+      failed: jsResults.failed,
+    },
     images: {
       total: imageResults.length,
       passed: imageResults.filter((r) => r.status === 'pass').length,
@@ -183,6 +204,7 @@ async function main(): Promise<void> {
     success:
       localeSuccess &&
       htmlSuccess &&
+      jsSuccess &&
       pageResults.every((r) => r.status === 'pass') &&
       imageResults.every((r) => r.status === 'pass'),
     duration: Date.now() - startTime,
