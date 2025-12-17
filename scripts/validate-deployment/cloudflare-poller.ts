@@ -17,6 +17,7 @@ const GITHUB_SHA = process.env.GITHUB_SHA; // Full commit hash from GitHub Actio
 // Polling configuration
 const POLL_INTERVAL_MS = 15000; // 15 seconds
 const MAX_POLL_TIME_MS = 600000; // 10 minutes
+const FALLBACK_TO_LATEST_MS = 120000; // After 2 minutes, accept latest successful deployment
 const API_BASE = 'https://api.cloudflare.com/client/v4';
 
 interface PollerResult {
@@ -90,7 +91,8 @@ function findLatestDeploymentForBranch(
 async function waitForDeployment(): Promise<PollerResult> {
   const startTime = Date.now();
   const shortHash = getShortHash(GITHUB_SHA);
-  const useCommitMatch = !!GITHUB_SHA;
+  let useCommitMatch = !!GITHUB_SHA;
+  let fellBackToLatest = false;
 
   console.log('═'.repeat(60));
   console.log('Cloudflare Pages Deployment Poller');
@@ -100,6 +102,7 @@ async function waitForDeployment(): Promise<PollerResult> {
   console.log(`Commit:     ${shortHash}${GITHUB_SHA ? ` (${GITHUB_SHA})` : ' (not specified, using latest)'}`);
   console.log(`Max wait:   ${MAX_POLL_TIME_MS / 1000}s`);
   console.log(`Poll every: ${POLL_INTERVAL_MS / 1000}s`);
+  console.log(`Fallback:   After ${FALLBACK_TO_LATEST_MS / 1000}s, will use latest successful deployment`);
   console.log('═'.repeat(60));
   console.log('');
 
@@ -111,6 +114,13 @@ async function waitForDeployment(): Promise<PollerResult> {
     const elapsed = Date.now() - startTime;
     const elapsedStr = formatElapsed(elapsed);
 
+    // After fallback time, switch to using latest deployment
+    if (useCommitMatch && elapsed >= FALLBACK_TO_LATEST_MS && !fellBackToLatest) {
+      console.log(`[${elapsedStr}] ⚠ Commit ${shortHash} not found, falling back to latest successful deployment`);
+      useCommitMatch = false;
+      fellBackToLatest = true;
+    }
+
     try {
       const response = await fetchDeployments();
 
@@ -121,7 +131,7 @@ async function waitForDeployment(): Promise<PollerResult> {
       }
 
       // Find deployment - by commit hash if available, otherwise latest on branch
-      const deployment = useCommitMatch
+      let deployment = useCommitMatch
         ? findDeploymentByCommit(response.result, GITHUB_SHA!, TARGET_BRANCH)
         : findLatestDeploymentForBranch(response.result, TARGET_BRANCH);
 
