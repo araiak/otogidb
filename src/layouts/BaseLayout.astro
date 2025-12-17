@@ -384,32 +384,14 @@ const navLinks = {
           }
         });
 
-        // Handle language selection
+        // Handle language selection - save preference then allow navigation
         langDropdown.querySelectorAll('a[data-locale]').forEach((link) => {
-          link.addEventListener('click', (e) => {
+          link.addEventListener('click', () => {
             const locale = (link as HTMLElement).dataset.locale;
             if (locale) {
-              // Save explicit locale choice
+              // Save explicit locale choice before navigation
               localStorage.setItem('otogidb-locale', locale);
-
-              // Dispatch custom event for same-tab components (like CardTable)
-              window.dispatchEvent(new CustomEvent('otogidb-locale-change', {
-                detail: { locale }
-              }));
-
-              // On pages without locale in URL, prevent navigation and update in-place
-              const currentPath = window.location.pathname;
-              const isRootPath = currentPath === '/' || SUPPORTED_LOCALES.some(l => currentPath === `/${l}` || currentPath === `/${l}/`);
-              const isUpdatesPage = currentPath === '/updates' || currentPath === '/updates/';
-              const isBlogPage = currentPath.startsWith('/blog');
-
-              if (isRootPath || isUpdatesPage || isBlogPage) {
-                e.preventDefault();
-                langDropdown.classList.add('hidden');
-                // Update the dropdown to reflect new locale
-                syncDropdownWithLocale(locale);
-              }
-              // For card detail pages, allow normal navigation to locale-specific URL
+              // Navigation happens via the <a> href - no need to prevent default
             }
           });
         });
