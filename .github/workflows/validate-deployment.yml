@@ -1,8 +1,6 @@
 name: Validate Deployment
 
 on:
-  push:
-    branches: [dev]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -14,7 +12,6 @@ on:
         type: boolean
 
 # Prevent duplicate runs: cancel in-progress when new commit arrives
-# Use ref_name for consistency (push: "dev", PR: "dev")
 concurrency:
   group: validate-${{ github.head_ref || github.ref_name }}
   cancel-in-progress: true
@@ -28,11 +25,10 @@ jobs:
       pull-requests: write
 
     steps:
-      - name: Delay for PR events
-        if: github.event_name == 'pull_request'
+      - name: Wait for Cloudflare to start deployment
         run: |
-          echo "Waiting 10s to allow push event to claim concurrency slot..."
-          sleep 10
+          echo "Waiting 15s for Cloudflare to detect the commit and start deployment..."
+          sleep 15
 
       - name: Checkout
         uses: actions/checkout@v4
