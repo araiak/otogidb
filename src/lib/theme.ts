@@ -59,6 +59,8 @@ export function applyTheme(theme: Theme): void {
   if (typeof document === 'undefined') return;
 
   let resolved: 'light' | 'dark';
+  const isExplicitChoice = theme !== 'system';
+  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
   if (theme === 'system') {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -77,8 +79,16 @@ export function applyTheme(theme: Theme): void {
 
   if (resolved === 'dark') {
     document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light-override');
   } else {
     document.documentElement.classList.remove('dark');
+    // If user explicitly chose light but system prefers dark, add override class
+    // This prevents CSS @media (prefers-color-scheme: dark) from applying
+    if (isExplicitChoice && systemPrefersDark) {
+      document.documentElement.classList.add('light-override');
+    } else {
+      document.documentElement.classList.remove('light-override');
+    }
   }
 }
 
@@ -111,15 +121,20 @@ export function initTheme(): void {
 /**
  * Script to inject in head for preventing flash of wrong theme
  * Priority: localStorage override > system preference > dark (default)
+ *
+ * Works together with CSS @media (prefers-color-scheme: dark) rule that provides
+ * instant dark mode for system dark users BEFORE this script runs.
  */
 export const themeInitScript = `
   (function() {
     const stored = localStorage.getItem('${THEME_KEY}');
     let resolved;
+    let isExplicitChoice = false;
 
     if (stored && stored !== 'system') {
       // User has explicitly chosen a theme
       resolved = stored;
+      isExplicitChoice = true;
     } else {
       // Check system preference, default to dark if no preference
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -135,8 +150,16 @@ export const themeInitScript = `
       }
     }
 
+    // Apply the resolved theme
     if (resolved === 'dark') {
       document.documentElement.classList.add('dark');
+      document.documentElement.classList.remove('light-override');
+    } else {
+      document.documentElement.classList.remove('dark');
+      // If user explicitly chose light but system is dark, we need to override the CSS media query
+      if (isExplicitChoice) {
+        document.documentElement.classList.add('light-override');
+      }
     }
   })();
 `;
