@@ -1,25 +1,56 @@
 # Cloudflare Pages caching headers
+# See: https://developers.cloudflare.com/pages/configuration/headers/
 
-# JSON data - cache for 1 hour, allow stale for 24 hours while revalidating
-/data/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+# =============================================================================
+# STATIC ASSETS - Immutable, cache forever (hashed filenames)
+# =============================================================================
 
-# Static assets (JS, CSS) - immutable, cache forever
+# Astro build assets (JS, CSS with content hashes)
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Images - cache for 1 week
-/images/*
-  Cache-Control: public, max-age=604800
+# =============================================================================
+# DATA FILES - Cache with revalidation
+# =============================================================================
 
-# Icons - cache for 1 year (rarely change)
+# JSON data - cache 1 hour, serve stale while revalidating for 24 hours
+/data/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+
+# =============================================================================
+# IMAGES & ICONS - Long cache
+# =============================================================================
+
+# Local images - cache 1 week
+/images/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# Icons - cache 1 year (rarely change)
 /icons/*
   Cache-Control: public, max-age=31536000, immutable
-
-# HTML pages - short cache, always revalidate
-/*.html
-  Cache-Control: public, max-age=0, must-revalidate
 
 # Favicon
 /favicon.svg
   Cache-Control: public, max-age=86400
+
+# =============================================================================
+# HTML PAGES - Short cache with stale-while-revalidate
+# =============================================================================
+
+# All HTML pages - cache 5 minutes, serve stale up to 1 hour while revalidating
+# This dramatically improves cache hit rate while keeping content fresh
+/*
+  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# =============================================================================
+# SECURITY HEADERS (apply to all)
+# =============================================================================
+
+# Apply security headers globally - these merge with above rules
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
