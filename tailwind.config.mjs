@@ -1,7 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-  darkMode: 'class',
+  // Use 'selector' strategy with custom selector that matches:
+  // 1. When .dark class is present (explicit choice or JS-applied)
+  // 2. When system prefers dark AND user hasn't explicitly chosen light
+  darkMode: ['variant', [
+    '.dark &',
+    '@media (prefers-color-scheme: dark) { :root:not(.light-override) & }'
+  ]],
   theme: {
     // Add xs breakpoint for extra-small phones (360-480px)
     screens: {
