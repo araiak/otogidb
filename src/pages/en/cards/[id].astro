@@ -43,7 +43,8 @@ const hdImageUrl = getImageUrl(card, 'hd');
 // SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
 const seoImage = hdImageUrl || undefined;
 
-// SEO: Optimized title and description for long-tail queries
+// SEO: Optimized title and description with LSI keywords
+// Primary: daemon, stats | LSI: character, unit, spirit, build, guide
 const cardName = card.name || `Daemon #${card.id}`;
 const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
@@ -51,8 +52,8 @@ const skillName = card.skill?.name || '';
 // Title format: "[Name] - Otogi: Spirit Agents [Rarity]★ [Type] Daemon"
 const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
 
-// Description with long-tail keywords: stats, skills, abilities
-const seoDescription = `${cardName} stats, skills & abilities in Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''} View full ability details and similar daemons.`;
+// Description with LSI keywords: daemon/character/spirit, stats/attributes, skills/abilities
+const seoDescription = `${cardName} character guide for Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} spirit with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''} Full stats, abilities, and similar units.`;
 
 // JSON-LD structured data for the card - enhanced for SEO
 const jsonLd = {
@@ -63,7 +64,7 @@ const jsonLd = {
   "description": seoDescription,
   "image": seoImage,
   "url": `https://otogidb.com/cards/${card.id}`,
-  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, ${card.stats.rarity} star, daemon, skills, abilities`,
+  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, ${card.stats.rarity} star, daemon, character, spirit, skills, abilities, guide, mobile RPG`,
   "creator": [
     { "@type": "Organization", "name": "MyRealLife Games" },
     { "@type": "Organization", "name": "Mitama Games" }

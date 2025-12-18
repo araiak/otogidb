@@ -40,7 +40,7 @@ const TRANSFORMS = {
 } as const;
 
 const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
-const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
+const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fill,g_face,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
 
 function getCardThumbnail(cardId: string): string {
   const card = cardsIndex[cardId];
