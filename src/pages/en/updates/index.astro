@@ -47,7 +47,7 @@ const TRANSFORMS = {
 
 // Mascot placeholder - sad chibi for cards without images
 const PLACEHOLDER_MASCOT_ID = 'v1765670264/mascot_p2e3gi.png';
-const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fit,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
+const PLACEHOLDER_MASCOT_URL = `${CLOUDINARY_BASE}/w_60,h_60,c_fill,g_face,f_auto,q_auto/${PLACEHOLDER_MASCOT_ID}`;
 
 // Get card thumbnail with proper fallback chain
 // Android: original size (~200px) - CSS handles display size
@@ -284,7 +284,7 @@ function renderStars(rarity: number): string {
                   </h3>
                   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {notes.new_cards.map((card) => (
-                      <a href={`/cards/${card.id}`}
+                      <a href={`/en/cards/${card.id}`}
                          data-card-id={card.id}
                          class="flex items-center gap-3 p-3 rounded-lg transition-colors hover:bg-opacity-50"
                          style="background-color: var(--color-surface);">
@@ -324,7 +324,7 @@ function renderStars(rarity: number): string {
                       <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
                         <div class="flex items-start gap-3">
                           {/* Card Image */}
-                          <a href={`/cards/${card.id}`} data-card-id={card.id} class="flex-shrink-0">
+                          <a href={`/en/cards/${card.id}`} data-card-id={card.id} class="flex-shrink-0">
                             <div class="w-12 h-12 rounded-full overflow-hidden"
                                  style="background-color: var(--color-bg);">
                               <img src={getCardThumbnail(card.id)}
@@ -336,7 +336,7 @@ function renderStars(rarity: number): string {
 
                           {/* Card Info & Changes */}
                           <div class="flex-1 min-w-0">
-                            <a href={`/cards/${card.id}`} data-card-id={card.id} class="font-medium link hover:underline">
+                            <a href={`/en/cards/${card.id}`} data-card-id={card.id} class="font-medium link hover:underline">
                               {card.name}
                             </a>
                             <span class="text-yellow-500 text-sm ml-2">{renderStars(card.rarity)}</span>

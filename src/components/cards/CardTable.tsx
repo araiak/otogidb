@@ -633,22 +633,22 @@ export default function CardTable({ initialCards }: CardTableProps) {
       {
         name: 'Target',
         tags: ['Self', 'Single', 'Multi', 'AoE'].filter(t => available.has(t)),
-        colorClass: 'text-blue-400'
+        colorClass: 'text-blue-600 dark:text-blue-400'
       },
       {
         name: 'Status',
         tags: ['Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify'].filter(t => available.has(t)),
-        colorClass: 'text-red-400'
+        colorClass: 'text-red-600 dark:text-red-400'
       },
       {
         name: 'Buffs',
         tags: ['DEF Up', 'Speed Up', 'Crit Rate', 'DMG Reduction', 'Cleanse'].filter(t => available.has(t)),
-        colorClass: 'text-green-400'
+        colorClass: 'text-green-600 dark:text-green-400'
       },
       {
         name: 'Debuffs',
         tags: ['Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Dispel'].filter(t => available.has(t)),
-        colorClass: 'text-purple-400'
+        colorClass: 'text-purple-600 dark:text-purple-400'
       },
     ];
   }, [filterOptions.skillTags]);
@@ -665,27 +665,27 @@ export default function CardTable({ initialCards }: CardTableProps) {
       {
         name: 'Defensive',
         tags: ['Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Immunity', 'Counter'].filter(t => available.has(t)),
-        colorClass: 'text-green-400'
+        colorClass: 'text-green-600 dark:text-green-400'
       },
       {
         name: 'Debuffs',
         tags: ['Slow', 'DMG Amp', 'Enemy DMG Down'].filter(t => available.has(t)),
-        colorClass: 'text-purple-400'
+        colorClass: 'text-purple-600 dark:text-purple-400'
       },
       {
         name: 'Status',
         tags: ['Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify'].filter(t => available.has(t)),
-        colorClass: 'text-red-400'
+        colorClass: 'text-red-600 dark:text-red-400'
       },
       {
         name: 'Target',
         tags: ['Self', 'Single', 'Multi', 'AoE', 'Team'].filter(t => available.has(t)),
-        colorClass: 'text-blue-400'
+        colorClass: 'text-blue-600 dark:text-blue-400'
       },
       {
         name: 'Scope',
         tags: ['Divina', 'Anima', 'Phantasma', 'Neutral', 'Melee', 'Ranged', 'Leader'].filter(t => available.has(t)),
-        colorClass: 'text-teal-400'
+        colorClass: 'text-teal-600 dark:text-teal-400'
       },
       {
         name: 'Timing',
@@ -840,9 +840,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
         const bonds = row.original.bonds || [];
         if (bonds.length === 0) return <span className="text-secondary text-sm">-</span>;
         const bondType = bonds[0]?.type || '-';
-        const colorClass = bondType === 'Attack' ? 'text-red-400' :
-                          bondType === 'Skill' ? 'text-blue-400' :
-                          bondType === 'HP' ? 'text-green-400' : '';
+        const colorClass = bondType === 'Attack' ? 'text-red-600 dark:text-red-400' :
+                          bondType === 'Skill' ? 'text-blue-600 dark:text-blue-400' :
+                          bondType === 'HP' ? 'text-green-600 dark:text-green-400' : '';
         return <span className={`text-sm font-medium ${colorClass}`}>{bondType}</span>;
       },
       filterFn: (row, _columnId, filterValue: string[]) => {
@@ -1123,9 +1123,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
             placeholder="Bond"
             dropdownClassName="min-w-[120px]"
             renderOption={(opt) => {
-              const colorClass = opt === 'Attack' ? 'text-red-400' :
-                                opt === 'Skill' ? 'text-blue-400' :
-                                opt === 'HP' ? 'text-green-400' : '';
+              const colorClass = opt === 'Attack' ? 'text-red-600 dark:text-red-400' :
+                                opt === 'Skill' ? 'text-blue-600 dark:text-blue-400' :
+                                opt === 'HP' ? 'text-green-600 dark:text-green-400' : '';
               return <span className={`text-sm font-medium ${colorClass}`}>{opt}</span>;
             }}
           />
@@ -1153,11 +1153,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
                            opt === 'exchange' ? 'Exchange' :
                            opt === 'event' ? 'Event' :
                            opt === 'daily' ? 'Daily Dungeon' : String(opt);
-              const colorClass = opt === 'gacha' ? 'text-purple-400' :
-                                opt === 'auction' ? 'text-yellow-400' :
-                                opt === 'exchange' ? 'text-blue-400' :
-                                opt === 'event' ? 'text-green-400' :
-                                opt === 'daily' ? 'text-cyan-400' : '';
+              const colorClass = opt === 'gacha' ? 'text-purple-600 dark:text-purple-400' :
+                                opt === 'auction' ? 'text-yellow-600 dark:text-yellow-400' :
+                                opt === 'exchange' ? 'text-blue-600 dark:text-blue-400' :
+                                opt === 'event' ? 'text-green-600 dark:text-green-400' :
+                                opt === 'daily' ? 'text-cyan-600 dark:text-cyan-400' : '';
               return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />

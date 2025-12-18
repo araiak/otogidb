@@ -191,7 +191,7 @@ const PLACEHOLDER_TRANSFORMS = {
   // HD placeholder - just optimize, no resize (source is already card-sized)
   hd: 'f_auto,q_auto',
   // Mascot as 60px circle
-  mascotCircle: 'w_60,h_60,c_fit,f_auto,q_auto',
+  mascotCircle: 'w_60,h_60,c_fill,g_face,f_auto,q_auto',
 } as const;
 
 /**
