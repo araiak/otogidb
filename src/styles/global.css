@@ -7,7 +7,7 @@
 @layer base {
   /* CSS Variables for theming */
   :root {
-    /* Light Mode - Serene Purity */
+    /* Light Mode - Serene Purity (default) */
     --color-bg: #F5F5F0;
     --color-surface: #FFFFFF;
     --color-header: #E8E8E3;
@@ -26,6 +26,29 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
   }
 
+  /* Apply dark mode by default for users with system dark preference
+     This prevents flash BEFORE JavaScript runs */
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light-override) {
+      --color-bg: #0F1520;
+      --color-surface: #1A2332;
+      --color-header: #161D2A;
+      --color-text: #F3F3E8;
+      --color-text-secondary: #A3A3A8;
+      --color-accent: #5588DD;
+      --color-accent-hover: #6699EE;
+      --color-error: #E65454;
+      --color-success: #4CAF50;
+      --color-highlight: #FFC840;
+      --color-border: #2B3856;
+
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  /* When .dark class is explicitly set (by JS), use dark mode regardless of system preference */
   .dark {
     /* Dark Mode - Deep Elegance */
     --color-bg: #0F1520;
