@@ -463,3 +463,173 @@ export async function validateJsBundles(
 
   return { passed, failed, bundles };
 }
+
+// Link validation result
+interface LinkCheckResult {
+  pageUrl: string;
+  links: Array<{ href: string; issue: string }>;
+  status: 'pass' | 'fail' | 'error';
+  error?: string;
+}
+
+// Supported locales for validation
+const SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+
+// Patterns for detecting link issues
+const LOCALE_SUFFIX_PATTERN = /-(?:ja|ko|es|zh-cn|zh-tw)(?:\/|$)/;
+
+function validateLink(href: string, pageLocale: string): { valid: boolean; issue?: string } {
+  // Skip external links, anchors, and special protocols
+  if (
+    href.startsWith('http') ||
+    href.startsWith('//') ||
+    href.startsWith('#') ||
+    href.startsWith('mailto:') ||
+    href.startsWith('javascript:') ||
+    href.startsWith('data:')
+  ) {
+    return { valid: true };
+  }
+
+  // Check for locale prefix
+  const hasLocalePrefix = SUPPORTED_LOCALES.some(
+    (locale) => href.startsWith(`/${locale}/`) || href === `/${locale}`
+  );
+
+  // Internal links should have locale prefix
+  if (href.startsWith('/') && !hasLocalePrefix) {
+    // Exception: static assets like /data/, /_astro/, /favicon
+    if (
+      href.startsWith('/data/') ||
+      href.startsWith('/_astro/') ||
+      href.startsWith('/favicon') ||
+      href.startsWith('/_redirects')
+    ) {
+      return { valid: true };
+    }
+    return { valid: false, issue: `Missing locale prefix: ${href}` };
+  }
+
+  // Check for locale suffix in blog URLs (old format like /en/blog/post-ko)
+  if (href.includes('/blog/') && LOCALE_SUFFIX_PATTERN.test(href)) {
+    return { valid: false, issue: `Has locale suffix (old format): ${href}` };
+  }
+
+  return { valid: true };
+}
+
+async function checkPageLinks(
+  baseUrl: string,
+  url: string,
+  timeout: number
+): Promise<LinkCheckResult> {
+  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+
+  // Determine page locale from URL
+  const localeMatch = url.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+  const pageLocale = localeMatch ? localeMatch[1] : 'en';
+
+  try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+    const response = await fetch(fullUrl, {
+      method: 'GET',
+      signal: controller.signal,
+      headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
+    });
+
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      return {
+        pageUrl: url,
+        links: [],
+        status: 'error',
+        error: `HTTP ${response.status}`,
+      };
+    }
+
+    const html = await response.text();
+    const invalidLinks: Array<{ href: string; issue: string }> = [];
+
+    // Extract all href attributes
+    const hrefMatches = html.matchAll(/href="([^"]+)"/gi);
+
+    for (const match of hrefMatches) {
+      const href = match[1];
+      const result = validateLink(href, pageLocale);
+
+      if (!result.valid && result.issue) {
+        // Deduplicate
+        if (!invalidLinks.some((l) => l.href === href)) {
+          invalidLinks.push({ href, issue: result.issue });
+        }
+      }
+    }
+
+    return {
+      pageUrl: url,
+      links: invalidLinks,
+      status: invalidLinks.length === 0 ? 'pass' : 'fail',
+    };
+  } catch (error) {
+    return {
+      pageUrl: url,
+      links: [],
+      status: 'error',
+      error: error instanceof Error ? error.message : String(error),
+    };
+  }
+}
+
+export async function validateInternalLinks(
+  samples: UrlSample[],
+  options: ValidatorOptions
+): Promise<{ passed: number; failed: number; results: LinkCheckResult[] }> {
+  const { baseUrl, timeout = 10000 } = options;
+
+  // Sample a subset for link checks (one per category per locale)
+  const sampled: UrlSample[] = [];
+  const seen = new Set<string>();
+
+  for (const sample of samples) {
+    const key = `${sample.category}-${sample.locale || 'default'}`;
+    if (!seen.has(key)) {
+      seen.add(key);
+      sampled.push(sample);
+    }
+  }
+
+  console.log(`Validating internal links on ${sampled.length} pages`);
+
+  const results: LinkCheckResult[] = [];
+
+  for (const sample of sampled) {
+    const result = await checkPageLinks(baseUrl, sample.url, timeout);
+    results.push(result);
+
+    const icon = result.status === 'pass' ? '✓' : '✗';
+
+    if (result.status === 'pass') {
+      console.log(`  ${icon} ${sample.url}`);
+    } else if (result.error) {
+      console.log(`  ${icon} ${sample.url} - ${result.error}`);
+    } else {
+      console.log(`  ${icon} ${sample.url} - ${result.links.length} invalid links`);
+      for (const link of result.links.slice(0, 3)) {
+        console.log(`      ${link.issue}`);
+      }
+      if (result.links.length > 3) {
+        console.log(`      ... and ${result.links.length - 3} more`);
+      }
+    }
+  }
+
+  const passed = results.filter((r) => r.status === 'pass').length;
+  const failed = results.filter((r) => r.status !== 'pass').length;
+
+  console.log(`  Results: ${passed} passed, ${failed} failed`);
+
+  return { passed, failed, results };
+}

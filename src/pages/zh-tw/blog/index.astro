@@ -11,7 +11,8 @@ const currentLocale = 'zh-tw';
 const t = getTranslations(currentLocale);
 
 // Get all non-draft blog posts for this locale (Traditional Chinese)
-const posts = await getCollection('blog', ({ data }) => !data.draft && data.locale === 'zh-tw');
+// Posts are now in zh-tw/ subdirectory, so slug starts with 'zh-tw/'
+const posts = await getCollection('blog', ({ data, slug }) => !data.draft && slug.startsWith('zh-tw/'));
 
 // Sort by date descending
 posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
@@ -84,7 +85,7 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
       <div id="posts-container" class="space-y-4">
         {posts.map((post) => (
           <a
-            href={`/${currentLocale}/blog/${post.slug}`}
+            href={`/${currentLocale}/blog/${post.slug.replace(/^zh-tw\//, '')}`}
             class="blog-post card p-4 md:p-6 block hover:opacity-90 transition-opacity"
             data-tags={JSON.stringify(post.data.tags || [])}
           >

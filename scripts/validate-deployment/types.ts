@@ -88,6 +88,11 @@ export interface ValidationSummary {
     passed: number;
     failed: number;
   };
+  linkChecks?: {
+    total: number;
+    passed: number;
+    failed: number;
+  };
   images: {
     total: number;
     passed: number;

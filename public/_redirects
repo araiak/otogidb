@@ -8,3 +8,42 @@
 /blog/* /en/blog/:splat 301
 /updates /en/updates 301
 /updates/ /en/updates/ 301
+
+# Redirects for old blog URLs with locale suffixes
+# Japanese
+/ja/blog/challenge-mode-guide-ja /ja/blog/challenge-mode-guide 301
+/ja/blog/welcome-ja /ja/blog/welcome 301
+/ja/blog/december-2025-cards-ja /ja/blog/december-2025-cards 301
+/ja/blog/pvp-farming-guide-ja /ja/blog/pvp-farming-guide 301
+
+# Korean
+/ko/blog/challenge-mode-guide-ko /ko/blog/challenge-mode-guide 301
+/ko/blog/welcome-ko /ko/blog/welcome 301
+/ko/blog/december-2025-cards-ko /ko/blog/december-2025-cards 301
+/ko/blog/pvp-farming-guide-ko /ko/blog/pvp-farming-guide 301
+
+# Spanish
+/es/blog/challenge-mode-guide-es /es/blog/challenge-mode-guide 301
+/es/blog/welcome-es /es/blog/welcome 301
+/es/blog/december-2025-cards-es /es/blog/december-2025-cards 301
+/es/blog/pvp-farming-guide-es /es/blog/pvp-farming-guide 301
+
+# Simplified Chinese
+/zh-cn/blog/challenge-mode-guide-zh-cn /zh-cn/blog/challenge-mode-guide 301
+/zh-cn/blog/welcome-zh-cn /zh-cn/blog/welcome 301
+/zh-cn/blog/december-2025-cards-zh-cn /zh-cn/blog/december-2025-cards 301
+/zh-cn/blog/pvp-farming-guide-zh-cn /zh-cn/blog/pvp-farming-guide 301
+
+# Traditional Chinese
+/zh-tw/blog/challenge-mode-guide-zh-tw /zh-tw/blog/challenge-mode-guide 301
+/zh-tw/blog/welcome-zh-tw /zh-tw/blog/welcome 301
+/zh-tw/blog/december-2025-cards-zh-tw /zh-tw/blog/december-2025-cards 301
+/zh-tw/blog/pvp-farming-guide-zh-tw /zh-tw/blog/pvp-farming-guide 301
+
+# Cross-locale redirects for language switching (old URLs with wrong locale suffix)
+# These handle cases where language switcher may have generated wrong URLs
+/en/blog/*-ja /en/blog/:splat 301
+/en/blog/*-ko /en/blog/:splat 301
+/en/blog/*-es /en/blog/:splat 301
+/en/blog/*-zh-cn /en/blog/:splat 301
+/en/blog/*-zh-tw /en/blog/:splat 301
