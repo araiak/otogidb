@@ -1,9 +1,9 @@
 ---
-title: "PvP刷分：穩定獲取每月5星升級球"
-description: "最大化PvP中的SE效率，通過互刷穩定獲取每月5星升級球"
+title: "Otogi Spirit Agents PvP刷分攻略：每月穩定獲取5星升級球"
+description: "Otogi Spirit Agents PvP互刷完整攻略。學習如何用高效陣容每月賺取8,000挑戰積分，穩定獲取5星升級球。"
 date: "2025-12-19"
 author: "Araiak"
-tags: ["攻略", "pvp", "刷分", "升級球"]
+tags: ["攻略", "pvp", "刷分"]
 locale: "zh-tw"
 ---
 

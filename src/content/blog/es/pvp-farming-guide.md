@@ -1,9 +1,9 @@
 ---
-title: "Farmeo PvP: Orbes de 5 Estrellas Mensuales Garantizados"
-description: "Maximiza tu eficiencia de SE en PvP para obtener tus orbes de mejora de 5 estrellas mensuales de forma confiable"
+title: "Guía de Farmeo PvP en Otogi Spirit Agents: Obtén Orbes de 5 Estrellas Mensualmente"
+description: "Guía completa de intercambio de victorias en PvP de Otogi Spirit Agents. Aprende a ganar 8,000 puntos de desafío mensuales para orbes de mejora de 5 estrellas con configuraciones de equipo eficientes."
 date: "2025-12-19"
 author: "Araiak"
-tags: ["guía", "pvp", "farmeo", "orbes"]
+tags: ["guía", "pvp", "farmeo"]
 locale: "es"
 ---
 

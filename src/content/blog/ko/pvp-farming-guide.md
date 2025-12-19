@@ -1,9 +1,9 @@
 ---
-title: "PvP 파밍: 매월 5성 오브 확실하게 얻기"
-description: "PvP에서 SE 효율을 최대화하여 승리 트레이드로 매월 5성 강화 오브를 확실하게 얻는 방법"
+title: "Otogi Spirit Agents PvP 파밍 가이드: 매월 5성 오브 확실하게 얻기"
+description: "Otogi Spirit Agents PvP 승리 트레이드 완벽 가이드. 효율적인 팀 구성으로 매월 8,000 도전 포인트를 모아 5성 강화 오브를 확실하게 얻는 방법."
 date: "2025-12-19"
 author: "Araiak"
-tags: ["가이드", "pvp", "파밍", "오브"]
+tags: ["가이드", "pvp", "파밍"]
 locale: "ko"
 ---
 

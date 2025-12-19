@@ -1,9 +1,9 @@
 ---
-title: "PvPファーミング：毎月の5つ星オーブを確実に入手"
-description: "PvPでのSE効率を最大化し、勝ちトレードで毎月の5つ星強化オーブを確実に入手する方法"
+title: "Otogi Spirit Agents PvPファーミング攻略：毎月5つ星オーブを確実に入手"
+description: "Otogi Spirit AgentsのPvP勝ちトレード完全ガイド。効率的なチーム編成で毎月8,000チャレンジポイントを稼ぎ、5つ星強化オーブを確実に入手する方法を解説。"
 date: "2025-12-19"
 author: "Araiak"
-tags: ["攻略", "pvp", "ファーミング", "オーブ"]
+tags: ["攻略", "pvp", "ファーミング"]
 locale: "ja"
 ---
 
