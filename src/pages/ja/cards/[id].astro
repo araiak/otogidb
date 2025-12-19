@@ -10,14 +10,24 @@ import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../li
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
 import { getPathInLocale } from '../../../lib/i18n';
+import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 
 // Import Japanese cards data and English skills data at build time
 import cardsDataRaw from '../../../../public/data/ja/cards.json';
 import skillsDataRaw from '../../../../public/data/skills.json';
+import cardMentionsRaw from '../../../../public/data/card_mentions.json';
 
 // For similar cards, we use English data to get names for linking
 import enCardsDataRaw from '../../../../public/data/cards.json';
+
+// Type for card mentions
+interface CardMention {
+  slug: string;
+  title: string;
+  date: string;
+}
+type CardMentionsData = Record<string, CardMention[]>;
 
 const currentLocale = 'ja';
 
@@ -35,11 +45,30 @@ export async function getStaticPaths() {
 const cardsData = cardsDataRaw as unknown as CardsData;
 const enCardsData = enCardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
+const cardMentions = cardMentionsRaw as CardMentionsData;
 
 const { card } = Astro.props as { card: Card };
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
+
+// Get blog posts that mention this card
+const relatedGuidesRaw = cardMentions[card.id] || [];
+
+// Fetch localized blog posts to get translated titles
+const localizedPosts = await getCollection('blog', ({ slug }) => slug.startsWith('ja/'));
+const titleLookup: Record<string, string> = {};
+for (const post of localizedPosts) {
+  // slug is like "ja/pvp-farming-guide", we want just "pvp-farming-guide"
+  const baseSlug = post.slug.replace('ja/', '');
+  titleLookup[baseSlug] = post.data.title;
+}
+
+// Map guides with localized titles (fallback to English if not found)
+const relatedGuides = relatedGuidesRaw.map(guide => ({
+  ...guide,
+  title: titleLookup[guide.slug] || guide.title
+}));
 
 // Get similar cards using English data for consistent comparison
 const allCards = Object.values(enCardsData.cards) as Card[];
@@ -56,9 +85,31 @@ const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 const cardName = card.name || `式神 #${card.id}`;
 const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
+const artistName = card.meta?.artist_name || null;
+const artistNameJp = card.meta?.artist_name_jp || null;
 
 const seoTitle = `${cardName} - あやかし百鬼夜行 ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
-const seoDescription = `${cardName}のステータス、スキル、アビリティ。${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name}式神。ATK ${card.stats.max_atk}、HP ${card.stats.max_hp}。${skillName ? `スキル: ${skillName}。` : ''}`;
+const seoDescription = `${cardName}のステータス、スキル、アビリティ。${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name}式神。ATK ${card.stats.max_atk}、HP ${card.stats.max_hp}。${skillName ? `スキル: ${skillName}。` : ''}${artistNameJp || artistName ? `イラスト: ${artistNameJp || artistName}。` : ''}`;
+
+// Build creator array - include artist if available
+const creators: Array<{ "@type": string; name: string }> = [
+  { "@type": "Organization", "name": "MyRealLife Games" },
+  { "@type": "Organization", "name": "Mitama Games" }
+];
+if (artistName) {
+  creators.push({ "@type": "Person", "name": artistName });
+}
+
+// Build keywords - include artist if available
+const keywordParts = [
+  cardName,
+  'あやかし百鬼夜行',
+  'Otogi Spirit Agents',
+  card.stats.attribute_name,
+  card.stats.type_name
+];
+if (artistName) keywordParts.push(artistName);
+if (artistNameJp) keywordParts.push(artistNameJp);
 
 // JSON-LD structured data - enhanced for SEO
 const jsonLd = {
@@ -70,11 +121,8 @@ const jsonLd = {
   "image": seoImage,
   "url": `https://otogidb.com/ja/cards/${card.id}`,
   "inLanguage": "ja",
-  "keywords": `${cardName}, あやかし百鬼夜行, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}`,
-  "creator": [
-    { "@type": "Organization", "name": "MyRealLife Games" },
-    { "@type": "Organization", "name": "Mitama Games" }
-  ],
+  "keywords": keywordParts.join(', '),
+  "creator": creators,
   "isPartOf": {
     "@type": "VideoGame",
     "name": "Otogi: Spirit Agents",
@@ -413,6 +461,30 @@ const jsonLd = {
         </div>
       </div>
     </div>
+
+    <!-- Related Guides (Blog posts mentioning this card) -->
+    {relatedGuides.length > 0 && (
+      <div class="mt-6 sm:mt-8">
+        <h2 class="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">Related Guides</h2>
+        <p class="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Blog posts featuring this card</p>
+        <div class="grid gap-2 sm:gap-3">
+          {relatedGuides.map(guide => (
+            <a
+              href={`/${currentLocale}/blog/${guide.slug}`}
+              class="card p-3 sm:p-4 hover:ring-2 ring-accent transition-all flex items-center justify-between gap-3"
+            >
+              <div class="min-w-0">
+                <div class="font-medium text-sm sm:text-base truncate">{guide.title}</div>
+                <div class="text-xs text-secondary">{formatDate(guide.date)}</div>
+              </div>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Similar Cards -->
     {similarCards.length > 0 && (

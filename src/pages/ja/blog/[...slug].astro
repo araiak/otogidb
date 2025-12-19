@@ -23,10 +23,11 @@ const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
-  // Only get Japanese posts
-  const posts = await getCollection('blog', ({ data }) => data.locale === 'ja');
+  // Only get Japanese posts (now in ja/ subdirectory)
+  const posts = await getCollection('blog', ({ slug }) => slug.startsWith('ja/'));
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    // Use base slug (without locale prefix) for URL
+    params: { slug: post.slug.replace(/^ja\//, '') },
     props: { post },
   }));
 }
@@ -75,7 +76,7 @@ const jsonLd = {
   "inLanguage": currentLocale,
   "author": { "@type": "Person", "name": post.data.author || "OtogiDB Team" },
   "publisher": { "@type": "Organization", "name": "OtogiDB", "url": "https://otogidb.com" },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug}` },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug.replace(/^ja\//, '')}` },
   "keywords": post.data.tags?.join(", ")
 };
 ---

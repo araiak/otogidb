@@ -15,30 +15,13 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
 
 <BaseLayout title="Blog" description="Otogi Spirit Agents card database blog - guides, analysis, and updates" hasLocalizedUrls={true}>
   <script is:inline>
-    // Locale detection and link updating for blog page
+    // Update card links to use /en/ prefix for English blog pages
     (function() {
-      var SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
       var STORAGE_KEY = 'otogidb-locale';
-
-      function getStoredLocale() {
-        try {
-          var stored = localStorage.getItem(STORAGE_KEY);
-          return stored && SUPPORTED_LOCALES.indexOf(stored) !== -1 ? stored : null;
-        } catch (e) { return null; }
-      }
-
-      function getCurrentLocale() {
-        var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
-        if (pathMatch && SUPPORTED_LOCALES.indexOf(pathMatch[1]) !== -1) {
-          return pathMatch[1];
-        }
-        return getStoredLocale() || 'en';
-      }
+      var prefix = '/en';
+      try { localStorage.setItem(STORAGE_KEY, 'en'); } catch(e) {}
 
       function updateCardLinks() {
-        var locale = getCurrentLocale();
-        var prefix = locale === 'en' ? '' : '/' + locale;
-
         document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
           var href = link.getAttribute('href');
           if (href) {
@@ -53,21 +36,6 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
       } else {
         updateCardLinks();
       }
-
-      window.addEventListener('otogidb-locale-change', function(e) {
-        var locale = e.detail && e.detail.locale;
-        if (!locale) return;
-        var prefix = locale === 'en' ? '' : '/' + locale;
-        document.querySelectorAll('a[href*="/cards/"]').forEach(function(link) {
-          var href = link.getAttribute('href');
-          if (href) {
-            var match = href.match(/\/(?:[a-z]{2}(?:-[a-z]{2})?\/)?cards\/(\d+)/);
-            if (match) {
-              link.setAttribute('href', prefix + '/cards/' + match[1]);
-            }
-          }
-        });
-      });
     })();
   </script>
   <div class="container mx-auto px-4 py-6">

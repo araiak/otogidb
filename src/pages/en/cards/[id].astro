@@ -7,9 +7,18 @@ import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
-// Import cards and skills data at build time
+// Import cards, skills, and card mentions data at build time
 import cardsDataRaw from '../../../../public/data/cards.json';
 import skillsDataRaw from '../../../../public/data/skills.json';
+import cardMentionsRaw from '../../../../public/data/card_mentions.json';
+
+// Type for card mentions
+interface CardMention {
+  slug: string;
+  title: string;
+  date: string;
+}
+type CardMentionsData = Record<string, CardMention[]>;
 
 export async function getStaticPaths() {
   // Cast inside getStaticPaths since it runs first during build
@@ -26,11 +35,15 @@ export async function getStaticPaths() {
 // Also need cardsData for related cards below
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
+const cardMentions = cardMentionsRaw as CardMentionsData;
 
 const { card } = Astro.props as { card: Card };
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
+
+// Get blog posts that mention this card
+const relatedGuides = cardMentions[card.id] || [];
 
 // Get similar cards using weighted scoring
 // Considers: attribute, type, skill tags, ability tags, rarity
@@ -48,12 +61,41 @@ const seoImage = hdImageUrl || undefined;
 const cardName = card.name || `Daemon #${card.id}`;
 const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
+const artistName = card.meta?.artist_name || null;
 
 // Title format: "[Name] - Otogi: Spirit Agents [Rarity]★ [Type] Daemon"
 const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
 
 // Description with LSI keywords: daemon/character/spirit, stats/attributes, skills/abilities
-const seoDescription = `${cardName} character guide for Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} spirit with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''} Full stats, abilities, and similar units.`;
+const seoDescription = `${cardName} character guide for Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} spirit with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''}${artistName ? ` Art by ${artistName}.` : ''} Full stats, abilities, and similar units.`;
+
+// Build creator array - include artist if available
+const creators: Array<{ "@type": string; name: string }> = [
+  { "@type": "Organization", "name": "MyRealLife Games" },
+  { "@type": "Organization", "name": "Mitama Games" }
+];
+if (artistName) {
+  creators.push({ "@type": "Person", "name": artistName });
+}
+
+// Build keywords - include artist if available
+const keywordParts = [
+  cardName,
+  'Otogi Spirit Agents',
+  card.stats.attribute_name,
+  card.stats.type_name,
+  `${card.stats.rarity} star`,
+  'daemon',
+  'character',
+  'spirit',
+  'skills',
+  'abilities',
+  'guide',
+  'mobile RPG'
+];
+if (artistName) {
+  keywordParts.push(artistName, `${artistName} art`, `${artistName} illustration`);
+}
 
 // JSON-LD structured data for the card - enhanced for SEO
 const jsonLd = {
@@ -63,12 +105,9 @@ const jsonLd = {
   "alternateName": `${cardName} Otogi`,
   "description": seoDescription,
   "image": seoImage,
-  "url": `https://otogidb.com/cards/${card.id}`,
-  "keywords": `${cardName}, Otogi Spirit Agents, ${card.stats.attribute_name}, ${card.stats.type_name}, ${card.stats.rarity} star, daemon, character, spirit, skills, abilities, guide, mobile RPG`,
-  "creator": [
-    { "@type": "Organization", "name": "MyRealLife Games" },
-    { "@type": "Organization", "name": "Mitama Games" }
-  ],
+  "url": `https://otogidb.com/en/cards/${card.id}`,
+  "keywords": keywordParts.join(', '),
+  "creator": creators,
   "isPartOf": {
     "@type": "VideoGame",
     "name": "Otogi: Spirit Agents",
@@ -559,6 +598,30 @@ const jsonLd = {
         </div>
       </div>
     </div>
+
+    <!-- Related Guides (Blog posts mentioning this card) -->
+    {relatedGuides.length > 0 && (
+      <div class="mt-6 sm:mt-8">
+        <h2 class="text-lg sm:text-xl font-bold mb-1.5 sm:mb-2">Related Guides</h2>
+        <p class="text-xs sm:text-sm text-secondary mb-3 sm:mb-4">Blog posts featuring this card</p>
+        <div class="grid gap-2 sm:gap-3">
+          {relatedGuides.map(guide => (
+            <a
+              href={`/en/blog/${guide.slug}`}
+              class="card p-3 sm:p-4 hover:ring-2 ring-accent transition-all flex items-center justify-between gap-3"
+            >
+              <div class="min-w-0">
+                <div class="font-medium text-sm sm:text-base truncate">{guide.title}</div>
+                <div class="text-xs text-secondary">{formatDate(guide.date)}</div>
+              </div>
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0 text-secondary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    )}
 
     <!-- Similar Cards (Good Replacements) -->
     {similarCards.length > 0 && (
