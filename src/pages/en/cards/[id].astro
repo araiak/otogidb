@@ -516,22 +516,63 @@ const jsonLd = {
                   <div class="flex items-center gap-2 mb-1.5">
                     <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-700 dark:text-green-300 font-medium">Event</span>
                   </div>
-                  {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (
-                    <div class="space-y-1">
-                      {card.acquisition.event.reward_tiers.map(tier => (
-                        <div class="text-xs flex items-center justify-between gap-2">
-                          <span>
-                            {tier.tier} Reward
-                            {tier.quantity > 1 && <span class="text-secondary"> (x{tier.quantity})</span>}
-                          </span>
-                          <div class="flex items-center gap-2">
-                            <span class="text-secondary" title={`Event #${tier.event_id}`}>
-                              {tier.event_name || `Event #${tier.event_id}`}
-                            </span>
-                            {tier.is_current && (
-                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
-                            )}
+                  {/* Event Reward Tiers - grouped by event */}
+                  {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (() => {
+                    // Group by event_id to show one line per event
+                    const seen = new Set();
+                    const uniqueEvents = card.acquisition.event.reward_tiers.filter(tier => {
+                      if (seen.has(tier.event_id)) return false;
+                      seen.add(tier.event_id);
+                      return true;
+                    });
+                    return (
+                      <div class="space-y-1">
+                        {uniqueEvents.map(tier => (
+                          <div class="text-xs flex items-center justify-between gap-2">
+                            <span>Ranking Reward</span>
+                            <div class="flex items-center gap-2">
+                              <span class="text-secondary" title={`Event #${tier.event_id}`}>
+                                {tier.event_name || `Event #${tier.event_id}`}
+                              </span>
+                              {tier.is_current && (
+                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
+                              )}
+                            </div>
                           </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                  {/* Tower Drops */}
+                  {card.acquisition.event.tower_drops && card.acquisition.event.tower_drops.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.tower_drops.map(drop => (
+                        <div class="text-xs">
+                          <div class="flex items-center justify-between gap-2">
+                            <span>
+                              Tower Drop
+                              <span class="text-secondary ml-1">(Floors: {drop.floors.join(', ')})</span>
+                            </span>
+                            <div class="flex items-center gap-2">
+                              <span class="text-secondary" title={`Event #${drop.event_id}`}>
+                                {drop.event_name || `Event #${drop.event_id}`}
+                              </span>
+                              {drop.is_current && (
+                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Active</span>
+                              )}
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {/* From Description (legacy event cards) */}
+                  {card.acquisition.event.from_description && card.acquisition.event.from_description.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.from_description.map(desc => (
+                        <div class="text-xs flex items-center justify-between gap-2">
+                          <span>Event Card</span>
+                          <span class="text-secondary">{desc.event_name}</span>
                         </div>
                       ))}
                     </div>
