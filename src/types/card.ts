@@ -110,8 +110,22 @@ export interface EventRewardTier {
   is_current: boolean;
 }
 
+export interface TowerDrop {
+  event_id: string;
+  event_name?: string;
+  floors: number[];  // Tower floors where this card drops (e.g., [10, 20, 30])
+  first_seen?: string;  // Date when this drop was first tracked
+  is_current: boolean;
+}
+
+export interface DescriptionEvent {
+  event_name: string;  // Event name extracted from card description [Event] tag
+}
+
 export interface EventAcquisition {
   reward_tiers: EventRewardTier[];
+  tower_drops?: TowerDrop[];
+  from_description?: DescriptionEvent[];  // Events linked via description text
 }
 
 export interface DailyAcquisition {
@@ -126,7 +140,6 @@ export type AcquisitionSource = 'gacha' | 'exchange' | 'auction' | 'event' | 'da
 export interface CardAcquisition {
   sources: AcquisitionSource[];
   currently_available: boolean;
-  availability_summary: string[]; // e.g., ['Standard Gacha', 'Auction']
   gacha: GachaAcquisition;
   exchange: ExchangeAcquisition;
   auction: AuctionAcquisition;
@@ -155,7 +168,6 @@ export interface CardsData {
   version: string;
   generated_at: string;
   total_cards: number;
-  cloudinary_base_url: string;
   cards: Record<string, Card>;
 }
 

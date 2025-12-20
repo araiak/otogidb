@@ -15,7 +15,6 @@ export interface ValidationConfig {
 export interface CardData {
   version: string;
   total_cards: number;
-  cloudinary_base_url: string;
   cards: Record<string, Card>;
 }
 

@@ -148,10 +148,6 @@ const jsonLd = {
         <span class="mx-1 sm:mx-2">/</span>
         <span class="text-secondary truncate">{card.name || `Card #${card.id}`}</span>
       </div>
-      <div class="flex items-center gap-2">
-        <a href={`/en/cards/${card.id}`} class="text-xs px-2 py-1 rounded hover:bg-white/10 transition-colors" title="View in English">EN</a>
-        <span class="text-xs px-2 py-1 rounded bg-white/10 font-medium">JA</span>
-      </div>
     </nav>
 
     <!-- Mobile Header -->
@@ -425,7 +421,67 @@ const jsonLd = {
 
               {card.acquisition.sources.includes('event') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                  <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-300 font-medium">Event</span>
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-300 font-medium">イベント</span>
+                  </div>
+                  {/* Event Reward Tiers - grouped by event */}
+                  {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (() => {
+                    const seen = new Set();
+                    const uniqueEvents = card.acquisition.event.reward_tiers.filter(tier => {
+                      if (seen.has(tier.event_id)) return false;
+                      seen.add(tier.event_id);
+                      return true;
+                    });
+                    return (
+                      <div class="space-y-1">
+                        {uniqueEvents.map(tier => (
+                          <div class="text-xs flex items-center justify-between gap-2">
+                            <span>ランキング報酬</span>
+                            <div class="flex items-center gap-2">
+                              <span class="text-secondary" title={`Event #${tier.event_id}`}>
+                                {tier.event_name || `Event #${tier.event_id}`}
+                              </span>
+                              {tier.is_current && (
+                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">開催中</span>
+                              )}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                  {/* Tower Drops */}
+                  {card.acquisition.event.tower_drops && card.acquisition.event.tower_drops.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.tower_drops.map(drop => (
+                        <div class="text-xs flex items-center justify-between gap-2">
+                          <span>
+                            タワードロップ
+                            <span class="text-secondary ml-1">({drop.floors.join(', ')}階)</span>
+                          </span>
+                          <div class="flex items-center gap-2">
+                            <span class="text-secondary" title={`Event #${drop.event_id}`}>
+                              {drop.event_name || `Event #${drop.event_id}`}
+                            </span>
+                            {drop.is_current && (
+                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">開催中</span>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {/* From Description (legacy event cards) */}
+                  {card.acquisition.event.from_description && card.acquisition.event.from_description.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.from_description.map(desc => (
+                        <div class="text-xs flex items-center justify-between gap-2">
+                          <span>イベントカード</span>
+                          <span class="text-secondary">{desc.event_name}</span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               )}
             </div>

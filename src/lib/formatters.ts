@@ -9,52 +9,59 @@
  *
  * Note: The "game-color" class allows CSS to adjust colors for light mode
  * (game colors are designed for dark backgrounds).
+ *
+ * Handles nested color tags by processing iteratively from innermost to outermost.
  */
 export function formatDescription(text: string | null | undefined): string {
   if (!text) return '';
 
   let formatted = text;
 
-  // Step 1: Escape any existing HTML entities to prevent double-encoding issues
-  // But preserve our game markup tags for processing
-  const colorTags: Array<{placeholder: string, original: string, hex: string, content: string}> = [];
-  let placeholderIndex = 0;
+  // Step 1: Extract and preserve br tags first
+  const brPlaceholder = '__BR_TAG__';
+  formatted = formatted.replace(/<br\s*\/?>/gi, brPlaceholder);
 
-  // Extract and preserve color tags
+  // Step 2: Process color tags iteratively from innermost to outermost
+  // Use simple non-greedy regex - it naturally matches innermost first
+  // Keep applying until no more color tags remain
+  const colorTagRegex = /<color=(#[0-9a-fA-F]{6})>([\s\S]*?)<\/color>/gi;
+  let maxIterations = 10; // Safety limit for deeply nested tags
+
+  while (maxIterations-- > 0 && colorTagRegex.test(formatted)) {
+    colorTagRegex.lastIndex = 0; // Reset regex state
+    formatted = formatted.replace(
+      colorTagRegex,
+      (_match, hex, content) => {
+        if (/^#[0-9a-fA-F]{6}$/.test(hex)) {
+          return `<span class="game-color" style="color:${hex}">${content}</span>`;
+        }
+        return content;
+      }
+    );
+  }
+
+  // Step 3: Escape any remaining untrusted HTML (but preserve our safe spans)
+  // Extract our safe spans first
+  const safeSpans: string[] = [];
   formatted = formatted.replace(
-    /<color=(#[0-9a-fA-F]{6})>([\s\S]*?)<\/color>/gi,
-    (_match, hex, content) => {
-      const placeholder = `__COLOR_${placeholderIndex++}__`;
-      // Recursively sanitize the content inside color tags
-      const sanitizedContent = escapeHtmlExceptBr(content);
-      colorTags.push({ placeholder, original: _match, hex, content: sanitizedContent });
+    /<span class="game-color" style="color:#[0-9a-fA-F]{6}">([^]*?)<\/span>/gi,
+    (match) => {
+      const placeholder = `__SPAN_${safeSpans.length}__`;
+      safeSpans.push(match);
       return placeholder;
     }
   );
 
-  // Extract and preserve br tags
-  const brPlaceholder = '__BR_TAG__';
-  formatted = formatted.replace(/<br\s*\/?>/gi, brPlaceholder);
-
-  // Step 2: Escape ALL remaining HTML (anything not in our placeholders is untrusted)
+  // Escape remaining HTML
   formatted = escapeHtmlChars(formatted);
 
-  // Step 3: Restore our safe tags
-  formatted = formatted.replace(new RegExp(brPlaceholder, 'g'), '<br />');
+  // Restore br tags
+  formatted = formatted.replace(/__BR_TAG__/g, '<br />');
 
-  for (const tag of colorTags) {
-    // Only allow valid hex colors
-    if (/^#[0-9a-fA-F]{6}$/.test(tag.hex)) {
-      // Add game-color class for CSS-based light mode adjustment
-      formatted = formatted.replace(
-        tag.placeholder,
-        `<span class="game-color" style="color:${tag.hex}">${tag.content}</span>`
-      );
-    } else {
-      // Invalid hex, just use the escaped content
-      formatted = formatted.replace(tag.placeholder, tag.content);
-    }
-  }
+  // Restore safe spans
+  safeSpans.forEach((span, i) => {
+    formatted = formatted.replace(`__SPAN_${i}__`, span);
+  });
 
   return formatted;
 }
@@ -71,16 +78,6 @@ function escapeHtmlChars(text: string): string {
     .replace(/'/g, '&#x27;');
 }
 
-/**
- * Escape HTML except for br tags (used for content inside color tags)
- */
-function escapeHtmlExceptBr(text: string): string {
-  const brPlaceholder = '__INNER_BR__';
-  let result = text.replace(/<br\s*\/?>/gi, brPlaceholder);
-  result = escapeHtmlChars(result);
-  result = result.replace(new RegExp(brPlaceholder, 'g'), '<br />');
-  return result;
-}
 
 /**
  * Strip all HTML/markup tags from text
