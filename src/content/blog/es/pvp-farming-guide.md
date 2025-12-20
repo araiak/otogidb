@@ -110,9 +110,11 @@ Debido a su aturdimiento, :card[337] puede ser un poco dependiente de RNG. Auto 
 
 ### Opciones de 4 Estrellas
 
-:card[675] funciona hasta nivel 85, pero se vuelve bastante difícil a ese nivel.
+:list[474,675]
 
-Otras cartas de 4 estrellas pueden funcionar a nivel 80+, pero no son tan comunes de ver en la comunidad de farmeo.
+:card[474] funciona bien a nivel 80 como sanadora y puede encontrarse en subasta.
+
+:card[675] funciona hasta nivel 85, pero se vuelve bastante difícil a ese nivel.
 
 ---
 

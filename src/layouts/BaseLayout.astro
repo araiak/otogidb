@@ -110,6 +110,16 @@ const navLinks = {
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";`} />
 
+    <!-- Prevent CLS from WIP banner dismissal -->
+    <script is:inline>
+      if (localStorage.getItem('otogidb-wip-dismissed') === '1') {
+        document.documentElement.classList.add('wip-dismissed');
+      }
+    </script>
+    <style>
+      .wip-dismissed #wip-banner { display: none !important; }
+    </style>
+
     <!-- Preconnect to Cloudinary for faster image loading -->
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
