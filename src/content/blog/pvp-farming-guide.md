@@ -109,9 +109,11 @@ Because of her stun, :card[337] can be a bit RNG-dependent. Auto has a moderate 
 
 ### 4-Star Options
 
-:card[675] works up to level 85, but becomes fairly difficult at that level.
+:list[474,675]
 
-Other 4-star cards may work at level 80+, but they aren't as common to see in the farming community.
+:card[474] works well at level 80 as a healer and can potentially be found on auction.
+
+:card[675] works up to level 85, but becomes fairly difficult at that level.
 
 ---
 
