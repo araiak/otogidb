@@ -1,0 +1,17 @@
+{
+  "name": "otogidb-checkly",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "npx checkly test",
+    "test:local": "npx playwright test",
+    "deploy": "npx checkly deploy",
+    "deploy:preview": "npx checkly deploy --preview"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "checkly": "^4.0.0",
+    "typescript": "^5.3.0",
+    "ts-node": "^10.9.0"
+  }
+}

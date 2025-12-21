@@ -1,0 +1,42 @@
+name: Deploy Checkly Monitors
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'checkly/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: checkly
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: checkly/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Test checks locally
+        run: npx checkly test
+        env:
+          CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+          CHECKLY_ACCOUNT_ID: 526a1723-59d3-40b5-8bc3-8ce5741ff801
+          DISCORD_WEBHOOK_URL: ${{ secrets.CHECKLY_WEBHOOK }}
+
+      - name: Deploy to Checkly
+        run: npx checkly deploy --force
+        env:
+          CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
+          CHECKLY_ACCOUNT_ID: 526a1723-59d3-40b5-8bc3-8ce5741ff801
+          DISCORD_WEBHOOK_URL: ${{ secrets.CHECKLY_WEBHOOK }}
