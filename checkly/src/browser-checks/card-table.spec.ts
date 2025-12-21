@@ -3,7 +3,7 @@ import { BASE_URL, SELECTORS, TIMEOUTS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
 
 test.describe('Card Table', () => {
-  test('loads card table with 850+ cards on desktop', async ({ page }) => {
+  test('loads card table with 850+ cards on desktop @critical', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
     // Navigate to homepage

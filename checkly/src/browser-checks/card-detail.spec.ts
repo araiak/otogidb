@@ -3,7 +3,7 @@ import { BASE_URL, SAMPLE_CARD_IDS, TIMEOUTS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
 
 test.describe('Card Detail Page', () => {
-  test('card detail page renders correctly on desktop', async ({ page }) => {
+  test('card detail page renders correctly on desktop @critical', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
     await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'networkidle' })
