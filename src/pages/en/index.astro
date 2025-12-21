@@ -4,7 +4,7 @@ import CardTable from '../../components/cards/CardTable';
 import type { CardsData } from '../../types/card';
 
 // Import cards data at build time to get dynamic card count
-import cardsDataRaw from '../../../public/data/cards.json';
+import cardsDataRaw from '../../data/cards.json';
 const cardsData = cardsDataRaw as unknown as CardsData;
 const cardCount = Object.keys(cardsData.cards).length;
 
@@ -48,7 +48,7 @@ const jsonLd = {
 
     <!-- Card Table (React Island) -->
     <div class="card p-4">
-      <CardTable client:load />
+      <CardTable client:visible />
     </div>
   </div>
 </BaseLayout>

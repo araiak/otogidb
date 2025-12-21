@@ -13,7 +13,15 @@
 # DATA FILES - Cache with revalidation
 # =============================================================================
 
-# JSON data - cache 1 hour, serve stale while revalidating for 24 hours
+# Hashed data files (e.g., cards_index.abc12345.json) - cache 1 month
+# These have content hashes in filenames, so they're safe to cache long-term
+/data/cards_index.*.json
+  Cache-Control: public, max-age=2592000, immutable
+
+/data/*/cards_index.*.json
+  Cache-Control: public, max-age=2592000, immutable
+
+# Other JSON data - cache 1 hour, serve stale while revalidating for 24 hours
 /data/*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
 

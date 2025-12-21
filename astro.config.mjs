@@ -6,8 +6,8 @@ import { remarkCardReference } from './src/lib/remark-card-reference';
 import { remarkFilterReference, remarkListReference } from './src/lib/remark-filter-reference';
 import { remarkTeamReference } from './src/lib/remark-team-reference';
 
-// Load cards data for sitemap lastmod dates
-import cardsData from './public/data/cards.json' with { type: 'json' };
+// Load cards data for sitemap lastmod dates (from src/data - build-only file)
+import cardsData from './src/data/cards.json' with { type: 'json' };
 
 // Build a map of card ID to last modified date for sitemap
 const cardLastModified = {};

@@ -2,7 +2,7 @@ import { visit } from 'unist-util-visit';
 import type { Root, Text, Parent } from 'mdast';
 
 // Load cards data at build time
-import cardsDataRaw from '../../public/data/cards.json';
+import cardsDataRaw from '../data/cards.json';
 
 interface CardsData {
   cards: Record<string, { id: string; name: string | null }>;

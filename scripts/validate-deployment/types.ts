@@ -64,41 +64,30 @@ export interface ValidationResult {
   responseTime?: number;
 }
 
+export interface ValidationCategorySummary {
+  total: number;
+  passed: number;
+  failed: number;
+}
+
 export interface ValidationSummary {
   target: string;
-  localeRedirects?: {
-    total: number;
-    passed: number;
-    failed: number;
-  };
-  pages: {
-    total: number;
-    passed: number;
-    failed: number;
-    results: ValidationResult[];
-  };
-  htmlChecks?: {
-    total: number;
-    passed: number;
-    failed: number;
-  };
-  jsBundles?: {
-    total: number;
-    passed: number;
-    failed: number;
-  };
-  linkChecks?: {
-    total: number;
-    passed: number;
-    failed: number;
-  };
-  images: {
-    total: number;
-    passed: number;
-    failed: number;
-    results: ValidationResult[];
-  };
+  localeRedirects?: ValidationCategorySummary;
+  pages: ValidationCategorySummary & { results: ValidationResult[] };
+  htmlChecks?: ValidationCategorySummary;
+  jsBundles?: ValidationCategorySummary;
+  linkChecks?: ValidationCategorySummary;
+  images: ValidationCategorySummary & { results: ValidationResult[] };
+  // New validation categories
+  seoChecks?: ValidationCategorySummary;
+  accessibilityChecks?: ValidationCategorySummary;
+  apiEndpoints?: ValidationCategorySummary;
+  performanceChecks?: ValidationCategorySummary & { warned: number };
+  errorPages?: ValidationCategorySummary;
+  // Success tracking
   success: boolean;
+  hardFailures: number;
+  softFailures: number;
   duration: number;
 }
 

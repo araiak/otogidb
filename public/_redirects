@@ -1,15 +1,14 @@
 # Cloudflare Pages redirects
+# Note: Specific rules must come BEFORE splat/wildcard rules for performance
 
 # Redirect favicon.ico to Cloudinary-hosted PNG for browser compatibility
 /favicon.ico https://res.cloudinary.com/dn3j8sqcc/image/upload/c_thumb,g_face,w_32,h_32,z_1.0/f_png/otogi/cards_hd/100014_hd.png 301
 
-# Backward compatibility: redirect old English URLs to /en/ prefix
-/cards/* /en/cards/:splat 301
-/blog/* /en/blog/:splat 301
+# Exact match redirects (must be before splats)
 /updates /en/updates 301
 /updates/ /en/updates/ 301
 
-# Redirects for old blog URLs with locale suffixes
+# Redirects for old blog URLs with locale suffixes (specific paths before splats)
 # Japanese
 /ja/blog/challenge-mode-guide-ja /ja/blog/challenge-mode-guide 301
 /ja/blog/welcome-ja /ja/blog/welcome 301
@@ -39,6 +38,11 @@
 /zh-tw/blog/welcome-zh-tw /zh-tw/blog/welcome 301
 /zh-tw/blog/december-2025-cards-zh-tw /zh-tw/blog/december-2025-cards 301
 /zh-tw/blog/pvp-farming-guide-zh-tw /zh-tw/blog/pvp-farming-guide 301
+
+# Splat/wildcard rules (must be LAST for performance)
+# Backward compatibility: redirect old English URLs to /en/ prefix
+/cards/* /en/cards/:splat 301
+/blog/* /en/blog/:splat 301
 
 # Cross-locale redirects for language switching (old URLs with wrong locale suffix)
 # These handle cases where language switcher may have generated wrong URLs

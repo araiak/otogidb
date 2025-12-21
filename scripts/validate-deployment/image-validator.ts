@@ -2,10 +2,11 @@
  * Image Validator
  *
  * Validates that Cloudinary images are accessible.
- * Uses HEAD requests to check without downloading full images.
+ * Uses HEAD requests with retry logic to handle transient failures.
  */
 
 import type { ValidationResult, UrlSample } from './types.js';
+import { fetchWithRetry } from './retry.js';
 
 interface ValidatorOptions {
   timeout?: number;
@@ -16,18 +17,16 @@ async function validateImage(url: string, timeout: number): Promise<ValidationRe
   const startTime = Date.now();
 
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-    const response = await fetch(url, {
-      method: 'HEAD',
-      signal: controller.signal,
-      headers: {
-        'User-Agent': 'OtogiDB-Validator/1.0',
+    const response = await fetchWithRetry(
+      url,
+      {
+        method: 'HEAD',
+        headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
       },
-    });
+      timeout,
+      { maxAttempts: 3, retryableStatuses: [429, 500, 502, 503, 504] }
+    );
 
-    clearTimeout(timeoutId);
     const responseTime = Date.now() - startTime;
 
     if (!response.ok) {
@@ -60,16 +59,6 @@ async function validateImage(url: string, timeout: number): Promise<ValidationRe
     };
   } catch (error) {
     const responseTime = Date.now() - startTime;
-
-    if (error instanceof Error && error.name === 'AbortError') {
-      return {
-        url,
-        status: 'error',
-        error: `Timeout after ${timeout}ms`,
-        responseTime,
-      };
-    }
-
     return {
       url,
       status: 'error',
