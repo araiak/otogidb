@@ -1,8 +1,50 @@
 /* Fonts are loaded asynchronously in BaseLayout.astro to avoid render-blocking */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* TailwindCSS 4 theme configuration (migrated from tailwind.config.mjs) */
+@theme {
+  /* Custom breakpoint */
+  --breakpoint-xs: 480px;
+
+  /* Light Mode - Serene Purity */
+  --color-shiro: #F7F7F0;
+  --color-gin-nezumi: #D9D9D3;
+  --color-sumiiro: #242429;
+  --color-nibi-iro: #737373;
+  --color-asagi-iro: #6699AA;
+  --color-benihi: #D24D4D;
+
+  /* Dark Mode - Deep Elegance */
+  --color-rurikon: #121A2C;
+  --color-konkikyou: #2B3856;
+  --color-enpaku: #F3F3E8;
+  --color-aozumi: #A3A3A8;
+  --color-ruri-iro: #3366CC;
+  --color-yamabuki: #FFC840;
+  --color-shu: #E63A3C;
+
+  /* Attribute colors */
+  --color-divina: #FFD700;
+  --color-anima: #FF6B6B;
+  --color-phantasma: #9B59B6;
+
+  /* Type colors */
+  --color-melee: #E74C3C;
+  --color-ranged: #3498DB;
+  --color-healer: #2ECC71;
+  --color-assist: #F39C12;
+
+  /* Rarity colors */
+  --color-rarity-1: #9E9E9E;
+  --color-rarity-2: #8BC34A;
+  --color-rarity-3: #2196F3;
+  --color-rarity-4: #9C27B0;
+  --color-rarity-5: #FF9800;
+
+  /* Font family */
+  --font-sans: 'Inter', 'Noto Sans JP', system-ui, -apple-system, sans-serif;
+}
 
 @layer base {
   /* CSS Variables for theming */
