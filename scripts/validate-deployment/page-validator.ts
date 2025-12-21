@@ -270,12 +270,14 @@ const HTML_CHECKS: Record<string, Array<{ name: string; pattern: RegExp; require
     { name: 'has ATK/HP stats', pattern: /(ATK|HP|SPD).*\d+/s, required: true },
     { name: 'has skill section', pattern: /<h[23][^>]*>.*skill/is, required: true },
     { name: 'has image', pattern: /<img[^>]*src=/i, required: true },
-    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.js"/i, required: true },
+    // Match <script src="...js">, or astro-island component-url/renderer-url (Astro 5 uses islands)
+    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.m?js"|<astro-island[^>]*component-url="[^"]*\.js"/i, required: true },
   ],
   list: [
     { name: 'has content', pattern: /<div[^>]*>/i, required: true },
     { name: 'has links', pattern: /<a[^>]*href=/i, required: true },
-    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.js"/i, required: true },
+    // Match <script src="...js">, or astro-island component-url/renderer-url (Astro 5 uses islands)
+    { name: 'has JS bundle', pattern: /<script[^>]*src="[^"]*\.m?js"|<astro-island[^>]*component-url="[^"]*\.js"/i, required: true },
     // data-card-id is added client-side by React, not in server-rendered HTML
   ],
   blog: [
@@ -441,13 +443,35 @@ export async function validateJsBundles(
     return { passed: 0, failed: 1, bundles: [] };
   }
 
-  // Extract JS bundle URLs
-  const scriptMatches = html.matchAll(/<script[^>]*src="([^"]*\.js)"[^>]*>/gi);
+  // Extract JS bundle URLs from multiple sources:
+  // 1. Traditional <script src="..."> tags
+  // 2. Astro island component-url and renderer-url attributes (Astro 5 uses islands)
   const bundles: string[] = [];
 
+  // Match traditional script tags
+  const scriptMatches = html.matchAll(/<script[^>]*src="([^"]*\.m?js)"[^>]*>/gi);
   for (const match of scriptMatches) {
     const src = match[1];
-    // Use safe URL construction
+    const bundleUrl = constructSafeUrl(src, baseUrl);
+    if (bundleUrl && !bundles.includes(bundleUrl)) {
+      bundles.push(bundleUrl);
+    }
+  }
+
+  // Match Astro island component-url attributes
+  const componentMatches = html.matchAll(/<astro-island[^>]*component-url="([^"]*\.js)"[^>]*>/gi);
+  for (const match of componentMatches) {
+    const src = match[1];
+    const bundleUrl = constructSafeUrl(src, baseUrl);
+    if (bundleUrl && !bundles.includes(bundleUrl)) {
+      bundles.push(bundleUrl);
+    }
+  }
+
+  // Match Astro island renderer-url attributes
+  const rendererMatches = html.matchAll(/<astro-island[^>]*renderer-url="([^"]*\.js)"[^>]*>/gi);
+  for (const match of rendererMatches) {
+    const src = match[1];
     const bundleUrl = constructSafeUrl(src, baseUrl);
     if (bundleUrl && !bundles.includes(bundleUrl)) {
       bundles.push(bundleUrl);
