@@ -67,10 +67,10 @@ const skillData = card.skill ? skillsData[card.skill.id] : null;
 const relatedGuidesRaw = cardMentions[card.id] || [];
 
 // Fetch localized blog posts to get translated titles
-const localizedPosts = await getCollection('blog', ({ slug }) => slug.startsWith('ko/'));
+const localizedPosts = await getCollection('blog', ({ id }) => id.startsWith('ko/'));
 const titleLookup: Record<string, string> = {};
 for (const post of localizedPosts) {
-  const baseSlug = post.slug.replace('ko/', '');
+  const baseSlug = post.id.replace('ko/', '');
   titleLookup[baseSlug] = post.data.title;
 }
 
