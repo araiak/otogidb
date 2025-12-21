@@ -3,10 +3,14 @@
  * Uses IndexedDB for storage to handle large JSON files
  */
 
-// Get data version from global (set at build time in BaseLayout)
+// Get data version and paths from global (set at build time in BaseLayout)
 declare global {
   interface Window {
     OTOGIDB_DATA_VERSION?: string;
+    OTOGIDB_DATA_PATHS?: Record<string, {
+      cards_index: string;
+      cards_index_base: string;
+    }>;
   }
 }
 

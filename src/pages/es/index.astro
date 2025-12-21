@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import CardTable from '../../components/cards/CardTable';
 import type { CardsData } from '../../types/card';
 
-import cardsDataRaw from '../../../public/data/cards.json';
+import cardsDataRaw from '../../data/cards.json';
 const cardsData = cardsDataRaw as unknown as CardsData;
 const cardCount = Object.keys(cardsData.cards).length;
 
@@ -33,7 +33,7 @@ const jsonLd = {
     </div>
 
     <div class="card p-4">
-      <CardTable client:load />
+      <CardTable client:visible />
     </div>
   </div>
 </BaseLayout>

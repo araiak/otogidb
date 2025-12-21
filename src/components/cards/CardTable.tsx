@@ -11,12 +11,11 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
-import { getCardsData, getSkillsData, type CardLocale } from '../../lib/cards';
+import { getCardsData, type CardLocale } from '../../lib/cards';
 import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
-import { formatNumber, formatSkillDescription, type SkillData } from '../../lib/formatters';
-import { createSearchIndex, searchCards } from '../../lib/search';
+import { formatNumber, formatSkillDescription } from '../../lib/formatters';
+import Fuse from 'fuse.js';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
-import { CardFloatingPopup } from './CardHoverProvider';
 import CardPreviewContent from './CardPreviewContent';
 import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown, type TagCategory } from './filters';
 import { ImageCell } from './cells';
@@ -40,6 +39,25 @@ interface CardTableProps {
   initialCards?: Card[];
 }
 
+// Fuse.js configuration for search
+const FUSE_OPTIONS = {
+  keys: [
+    { name: 'id', weight: 2 },
+    { name: 'name', weight: 3 },
+    { name: 'description', weight: 0.5 },
+    { name: 'skill.name', weight: 2 },
+    { name: 'skill.description', weight: 1 },
+    { name: 'abilities.name', weight: 2 },
+    { name: 'abilities.description', weight: 1 },
+    { name: 'stats.attribute_name', weight: 1.5 },
+    { name: 'stats.type_name', weight: 1.5 }
+  ],
+  threshold: 0.3,
+  includeScore: true,
+  ignoreLocation: true,
+  minMatchCharLength: 2
+};
+
 export default function CardTable({ initialCards }: CardTableProps) {
   // Detect locale from URL path first, then fall back to stored preference
   const detectLocale = useCallback((): SupportedLocale => {
@@ -55,13 +73,15 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   const [locale, setLocale] = useState<SupportedLocale>('en');
 
+  // Lazy search index - only created when user starts searching
+  const searchIndexRef = useRef<Fuse<Card> | null>(null);
+
   // Helper to generate locale-aware card URLs
   const getCardUrl = useCallback((cardId: string) => {
     return `/${locale}/cards/${cardId}`;
   }, [locale]);
 
   const [cards, setCards] = useState<Card[]>(initialCards || []);
-  const [skills, setSkills] = useState<Record<string, SkillData>>({});
   const [loading, setLoading] = useState(!initialCards);
   const [error, setError] = useState<string | null>(null);
 
@@ -246,23 +266,24 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }
   }, []);
 
-  // Load cards and skills - reload when locale changes
+  // Load cards - reload when locale changes
+  // Note: skills.json is NOT loaded at runtime - skill descriptions in cards_index.json
+  // are pre-calculated at build time with {value}, {probability}, {delay1} substituted
   useEffect(() => {
     async function loadData() {
       setLoading(true);
       setError(null);
       try {
-        const [cardsData, skillsData] = await Promise.all([
-          initialCards ? Promise.resolve({ cards: Object.fromEntries(initialCards.map(c => [c.id, c])) }) : getCardsData({ locale: locale as CardLocale }),
-          getSkillsData()
-        ]);
+        const cardsData = initialCards
+          ? { cards: Object.fromEntries(initialCards.map(c => [c.id, c])) }
+          : await getCardsData({ locale: locale as CardLocale });
 
         if (!initialCards) {
           const cardList = Object.values(cardsData.cards);
           setCards(cardList);
-          createSearchIndex(cardList);
+          // Clear search index when cards change - will be rebuilt lazily on first search
+          searchIndexRef.current = null;
         }
-        setSkills(skillsData);
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load cards');
       } finally {
@@ -492,10 +513,19 @@ export default function CardTable({ initialCards }: CardTableProps) {
     ];
   }, [filterOptions.abilityTags]);
 
-  // Filter data based on global search
+  // Filter data based on global search - lazily creates search index on first search
   const filteredData = useMemo(() => {
     if (!globalFilter.trim()) return cards;
-    return searchCards(globalFilter, cards);
+
+    // Lazily create search index on first search
+    if (!searchIndexRef.current && cards.length > 0) {
+      searchIndexRef.current = new Fuse(cards, FUSE_OPTIONS);
+    }
+
+    if (!searchIndexRef.current) return cards;
+
+    const results = searchIndexRef.current.search(globalFilter);
+    return results.map(result => result.item);
   }, [cards, globalFilter]);
 
   // Column definitions
@@ -505,7 +535,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skills={skills} locale={locale} />,
+      cell: ({ row }) => <ImageCell card={row.original} skills={{}} locale={locale} />,
     },
     {
       accessorKey: 'id',
@@ -723,8 +753,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
       cell: ({ row }) => {
         const skill = row.original.skill;
         if (!skill) return <span className="text-secondary text-sm">-</span>;
-        const skillData = skills[skill.id];
-        const formattedDesc = formatSkillDescription(skill.description, skillData, row.original.stats.rarity);
+        // Note: skill.description is pre-calculated in cards_index.json, so skillData is not needed
+        const formattedDesc = formatSkillDescription(skill.description, null, row.original.stats.rarity);
         return (
           <span
             className="text-sm block max-w-[300px] leading-snug"
@@ -794,7 +824,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
       ),
     },
-  ], [skills, locale]);
+  ], [locale]);
 
   // Create table instance
   const table = useReactTable({
@@ -1217,7 +1247,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             <div className="p-4 max-h-[70vh] overflow-y-auto">
               <CardPreviewContent
                 card={mobilePreviewCard}
-                skills={skills}
+                skills={{}}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}

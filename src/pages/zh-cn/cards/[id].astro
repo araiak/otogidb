@@ -13,12 +13,12 @@ import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 
 // Import locale cards data and English skills data at build time
-import cardsDataRaw from '../../../../public/data/zh-cn/cards.json';
-import skillsDataRaw from '../../../../public/data/skills.json';
-import cardMentionsRaw from '../../../../public/data/card_mentions.json';
+import cardsDataRaw from '../../../data/zh-cn/cards.json';
+import skillsDataRaw from '../../../data/skills.json';
+import cardMentionsRaw from '../../../data/card_mentions.json';
 
 // For similar cards, we use English data to get names for linking
-import enCardsDataRaw from '../../../../public/data/cards.json';
+import enCardsDataRaw from '../../../data/cards.json';
 
 // Type for card mentions
 interface CardMention {
