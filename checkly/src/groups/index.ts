@@ -1,8 +1,8 @@
-import { CheckGroup, Frequency } from 'checkly/constructs'
+import { CheckGroupV2, Frequency } from 'checkly/constructs'
 import { discordChannel } from '../alert-channels'
 
 // Critical checks - Homepage and core functionality
-export const criticalGroup = new CheckGroup('critical-checks', {
+export const criticalGroup = new CheckGroupV2('critical-checks', {
   name: 'Critical - Core Functionality',
   activated: true,
   frequency: Frequency.EVERY_2M,
@@ -12,7 +12,7 @@ export const criticalGroup = new CheckGroup('critical-checks', {
 })
 
 // Standard checks - Feature functionality
-export const standardGroup = new CheckGroup('standard-checks', {
+export const standardGroup = new CheckGroupV2('standard-checks', {
   name: 'Standard - Features',
   activated: true,
   frequency: Frequency.EVERY_12H,
@@ -22,7 +22,7 @@ export const standardGroup = new CheckGroup('standard-checks', {
 })
 
 // CDN checks - External dependencies
-export const cdnGroup = new CheckGroup('cdn-checks', {
+export const cdnGroup = new CheckGroupV2('cdn-checks', {
   name: 'CDN - External Dependencies',
   activated: true,
   frequency: Frequency.EVERY_1H,

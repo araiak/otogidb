@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import { remarkCardReference } from './src/lib/remark-card-reference';
 import { remarkFilterReference, remarkListReference } from './src/lib/remark-filter-reference';
@@ -22,7 +22,6 @@ export default defineConfig({
   site: 'https://otogidb.com',
   integrations: [
     react(),
-    tailwind(),
     sitemap({
       serialize(item) {
         // Extract card ID from URL patterns like /cards/123 or /ja/cards/123
@@ -52,6 +51,7 @@ export default defineConfig({
     inlineStylesheets: 'auto'
   },
   vite: {
+    plugins: [tailwindcss()],
     build: {
       rollupOptions: {
         output: {
