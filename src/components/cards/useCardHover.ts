@@ -34,7 +34,7 @@ export interface UseCardHoverReturn {
     floatingStyles: ReturnType<typeof useFloating>['floatingStyles'];
   };
   /** Ref for mobile modal (for click-outside detection) */
-  mobilePreviewRef: React.RefObject<HTMLDivElement>;
+  mobilePreviewRef: React.RefObject<HTMLDivElement | null>;
 }
 
 /**

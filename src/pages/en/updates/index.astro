@@ -28,7 +28,7 @@ interface CardIndexEntry {
 // Load cards index for image lookups
 let cardsIndex: Record<string, CardIndexEntry> = {};
 try {
-  const cardsData = await import('../../../../public/data/cards_index.json');
+  const cardsData = await import('../../../../public/data/cards_index.json') as { default?: { cards?: Record<string, CardIndexEntry> }, cards?: Record<string, CardIndexEntry> };
   cardsIndex = (cardsData.default || cardsData).cards || {};
 } catch (_e) {
   console.warn('Failed to load cards index for images');
