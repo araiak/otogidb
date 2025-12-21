@@ -17,9 +17,9 @@ import { LOCALES } from './types.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-// Load cards data
+// Load cards data (from src/data/ - build-only files)
 function loadCardsData(): CardData {
-  const cardsPath = join(__dirname, '../../public/data/cards.json');
+  const cardsPath = join(__dirname, '../../src/data/cards.json');
   const content = readFileSync(cardsPath, 'utf-8');
   return JSON.parse(content) as CardData;
 }

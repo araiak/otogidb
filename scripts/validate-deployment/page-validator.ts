@@ -2,10 +2,11 @@
  * Page Validator
  *
  * Validates that pages return HTTP 200 status codes.
- * Uses concurrent requests with rate limiting.
+ * Uses concurrent requests with rate limiting and retry logic.
  */
 
 import type { ValidationResult, UrlSample } from './types.js';
+import { fetchWithRetry } from './retry.js';
 
 interface ValidatorOptions {
   baseUrl: string;
@@ -22,18 +23,16 @@ async function validateUrl(
   const startTime = Date.now();
 
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-    const response = await fetch(fullUrl, {
-      method: 'GET',
-      signal: controller.signal,
-      headers: {
-        'User-Agent': 'OtogiDB-Validator/1.0',
+    const response = await fetchWithRetry(
+      fullUrl,
+      {
+        method: 'GET',
+        headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
       },
-    });
+      timeout,
+      { maxAttempts: 3 }
+    );
 
-    clearTimeout(timeoutId);
     const responseTime = Date.now() - startTime;
 
     if (response.ok) {
@@ -54,16 +53,6 @@ async function validateUrl(
     };
   } catch (error) {
     const responseTime = Date.now() - startTime;
-
-    if (error instanceof Error && error.name === 'AbortError') {
-      return {
-        url: sample.url,
-        status: 'error',
-        error: `Timeout after ${timeout}ms`,
-        responseTime,
-      };
-    }
-
     return {
       url: sample.url,
       status: 'error',
@@ -280,16 +269,15 @@ async function checkHtmlContent(
   const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
 
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-    const response = await fetch(fullUrl, {
-      method: 'GET',
-      signal: controller.signal,
-      headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
-    });
-
-    clearTimeout(timeoutId);
+    const response = await fetchWithRetry(
+      fullUrl,
+      {
+        method: 'GET',
+        headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
+      },
+      timeout,
+      { maxAttempts: 3 }
+    );
 
     if (!response.ok) {
       return {
@@ -530,16 +518,15 @@ async function checkPageLinks(
   const pageLocale = localeMatch ? localeMatch[1] : 'en';
 
   try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), timeout);
-
-    const response = await fetch(fullUrl, {
-      method: 'GET',
-      signal: controller.signal,
-      headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
-    });
-
-    clearTimeout(timeoutId);
+    const response = await fetchWithRetry(
+      fullUrl,
+      {
+        method: 'GET',
+        headers: { 'User-Agent': 'OtogiDB-Validator/1.0' },
+      },
+      timeout,
+      { maxAttempts: 3 }
+    );
 
     if (!response.ok) {
       return {
