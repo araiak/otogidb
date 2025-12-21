@@ -67,11 +67,11 @@ const skillData = card.skill ? skillsData[card.skill.id] : null;
 const relatedGuidesRaw = cardMentions[card.id] || [];
 
 // Fetch localized blog posts to get translated titles
-const localizedPosts = await getCollection('blog', ({ slug }) => slug.startsWith('ja/'));
+const localizedPosts = await getCollection('blog', ({ id }) => id.startsWith('ja/'));
 const titleLookup: Record<string, string> = {};
 for (const post of localizedPosts) {
-  // slug is like "ja/pvp-farming-guide", we want just "pvp-farming-guide"
-  const baseSlug = post.slug.replace('ja/', '');
+  // id is like "ja/pvp-farming-guide", we want just "pvp-farming-guide"
+  const baseSlug = post.id.replace('ja/', '');
   titleLookup[baseSlug] = post.data.title;
 }
 

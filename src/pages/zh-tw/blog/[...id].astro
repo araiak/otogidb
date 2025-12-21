@@ -3,7 +3,7 @@
  * Traditional Chinese Blog Post Page
  */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../../lib/formatters';
 import { getTranslations } from '../../../lib/translations';
 import CardReferencePopups from '../../../components/blog/CardReferencePopups';
@@ -24,16 +24,16 @@ const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
   // Only get Traditional Chinese posts (now in zh-tw/ subdirectory)
-  const posts = await getCollection('blog', ({ slug }) => slug.startsWith('zh-tw/'));
+  const posts = await getCollection('blog', ({ id }) => id.startsWith('zh-tw/'));
   return posts.map((post) => ({
-    // Use base slug (without locale prefix) for URL
-    params: { slug: post.slug.replace(/^zh-tw\//, '') },
+    // Use base id (without locale prefix) for URL
+    params: { id: post.id.replace(/^zh-tw\//, '') },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const publishedDate = new Date(post.data.date).toISOString();
 
@@ -76,7 +76,7 @@ const jsonLd = {
   "inLanguage": currentLocale,
   "author": { "@type": "Person", "name": post.data.author || "OtogiDB Team" },
   "publisher": { "@type": "Organization", "name": "OtogiDB", "url": "https://otogidb.com" },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug.replace(/^zh-tw\//, '')}` },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.id.replace(/^zh-tw\//, '')}` },
   "keywords": post.data.tags?.join(", ")
 };
 ---
