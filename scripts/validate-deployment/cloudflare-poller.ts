@@ -20,6 +20,7 @@ const DEBUG = process.env.DEBUG !== 'false'; // Default to true
 // Polling configuration
 const POLL_INTERVAL_MS = 15000; // 15 seconds
 const MAX_POLL_TIME_MS = 600000; // 10 minutes
+const IDLE_TIMEOUT_MS = 45000; // 45 seconds - if stuck in idle, assume skipped
 const API_BASE = 'https://api.cloudflare.com/client/v4';
 
 interface PollerResult {
@@ -125,14 +126,33 @@ function findLatestDeploymentForBranch(
   const latest = branchDeployments[0];
   const latestStatus = latest.latest_stage?.status;
 
-  // If latest is in progress (active/idle) or successful, return it
+  // If latest is in progress (active) or successful, return it
   // This ensures we wait for in-progress builds rather than skipping to old successful ones
-  if (latestStatus === 'active' || latestStatus === 'idle' || latestStatus === 'success') {
+  if (latestStatus === 'active' || latestStatus === 'success') {
+    return latest;
+  }
+
+  // If latest is idle, it might be queued or skipped - return it so caller can detect timeout
+  if (latestStatus === 'idle') {
     return latest;
   }
 
   // If latest failed/canceled, find the most recent successful one
   return branchDeployments.find((d) => d.latest_stage?.status === 'success');
+}
+
+function findLastSuccessfulDeployment(
+  deployments: CloudflareDeployment[],
+  branch: string
+): CloudflareDeployment | undefined {
+  return deployments
+    .filter((d) =>
+      d.environment === 'preview' &&
+      d.deployment_trigger?.metadata?.branch === branch &&
+      d.latest_stage?.status === 'success' &&
+      d.latest_stage?.name === 'deploy'
+    )
+    .sort((a, b) => new Date(b.created_on).getTime() - new Date(a.created_on).getTime())[0];
 }
 
 async function waitForDeployment(): Promise<PollerResult> {
@@ -157,6 +177,7 @@ async function waitForDeployment(): Promise<PollerResult> {
   console.log('');
 
   let lastStatus = '';
+  let idleStartTime: number | null = null; // Track when deployment entered idle state
 
   while (Date.now() - startTime < MAX_POLL_TIME_MS) {
     const elapsed = Date.now() - startTime;
@@ -252,6 +273,43 @@ async function waitForDeployment(): Promise<PollerResult> {
           shortHash: deployCommit,
           error: `Deployment ${status} at stage "${stageName}": ${deployment.short_id} (${deployCommit})`,
         };
+      }
+
+      // Detect skipped deployments: stuck in idle/queued state
+      if (status === 'idle' && stageName === 'queued') {
+        if (idleStartTime === null) {
+          idleStartTime = Date.now();
+          debugLog(`Deployment ${deployCommit} entered idle state, starting timeout...`);
+        } else if (Date.now() - idleStartTime > IDLE_TIMEOUT_MS) {
+          // Deployment has been idle too long - likely skipped by Cloudflare
+          console.log(`[${elapsedStr}] ⏭ Deployment ${deployCommit} appears to be skipped (idle for ${formatElapsed(IDLE_TIMEOUT_MS)})`);
+
+          // Find the last successful deployment instead
+          const lastSuccessful = findLastSuccessfulDeployment(response.result, TARGET_BRANCH);
+          if (lastSuccessful) {
+            const successCommit = getShortHash(lastSuccessful.deployment_trigger?.metadata?.commit_hash);
+            console.log('');
+            console.log('═'.repeat(60));
+            console.log('✅ Using last successful deployment (current was skipped)');
+            console.log('═'.repeat(60));
+            console.log(`Deployment ID: ${lastSuccessful.short_id}`);
+            console.log(`Commit:        ${successCommit}`);
+            console.log(`URL:           ${lastSuccessful.url}`);
+            console.log(`Duration:      ${elapsedStr}`);
+            console.log('═'.repeat(60));
+
+            return { success: true, deployment: lastSuccessful, shortHash: successCommit };
+          } else {
+            return {
+              success: false,
+              shortHash: deployCommit,
+              error: `Deployment ${deployCommit} was skipped and no previous successful deployment found`,
+            };
+          }
+        }
+      } else {
+        // Reset idle timer if deployment progresses
+        idleStartTime = null;
       }
 
       // Still in progress, wait and poll again
