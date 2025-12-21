@@ -1,9 +1,9 @@
 ---
 /**
- * Simplified Chinese Blog Post Page
+ * Korean Blog Post Page
  */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../../lib/formatters';
 import { getTranslations } from '../../../lib/translations';
 import CardReferencePopups from '../../../components/blog/CardReferencePopups';
@@ -14,26 +14,26 @@ import type { CardsData, Card } from '../../../types/card';
 import { getImageUrl } from '../../../lib/images';
 
 // Import localized cards data for popups
-import cardsDataRaw from '../../../data/zh-cn/cards.json';
+import cardsDataRaw from '../../../data/ko/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 
-const currentLocale = 'zh-cn';
+const currentLocale = 'ko';
 const t = getTranslations(currentLocale);
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
-  // Only get Simplified Chinese posts (now in zh-cn/ subdirectory)
-  const posts = await getCollection('blog', ({ slug }) => slug.startsWith('zh-cn/'));
+  // Only get Korean posts (now in ko/ subdirectory)
+  const posts = await getCollection('blog', ({ id }) => id.startsWith('ko/'));
   return posts.map((post) => ({
-    // Use base slug (without locale prefix) for URL
-    params: { slug: post.slug.replace(/^zh-cn\//, '') },
+    // Use base id (without locale prefix) for URL
+    params: { id: post.id.replace(/^ko\//, '') },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
 const publishedDate = new Date(post.data.date).toISOString();
 
@@ -76,7 +76,7 @@ const jsonLd = {
   "inLanguage": currentLocale,
   "author": { "@type": "Person", "name": post.data.author || "OtogiDB Team" },
   "publisher": { "@type": "Organization", "name": "OtogiDB", "url": "https://otogidb.com" },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug.replace(/^zh-cn\//, '')}` },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.id.replace(/^ko\//, '')}` },
   "keywords": post.data.tags?.join(", ")
 };
 ---

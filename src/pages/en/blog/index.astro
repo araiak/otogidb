@@ -85,7 +85,7 @@ const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort()
       <div id="posts-container" class="space-y-4">
         {posts.map((post) => (
           <a
-            href={`/en/blog/${post.slug}`}
+            href={`/en/blog/${post.id}`}
             class="blog-post card p-4 md:p-6 block hover:opacity-90 transition-opacity"
             data-tags={JSON.stringify(post.data.tags || [])}
           >
