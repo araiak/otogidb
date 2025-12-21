@@ -3,14 +3,15 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
-import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
+import { getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
-// Import cards, skills, and card mentions data at build time
+// Import cards, skills, card mentions, and pre-computed similar cards at build time
 import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
+import similarCardsRaw from '../../../data/similar_cards.json';
 
 // Type for card mentions
 interface CardMention {
@@ -19,6 +20,15 @@ interface CardMention {
   date: string;
 }
 type CardMentionsData = Record<string, CardMention[]>;
+
+// Type for pre-computed similar cards
+interface SimilarCardEntry {
+  id: string;
+  score: number;
+  sameAttribute: boolean;
+  sameType: boolean;
+}
+type SimilarCardsData = Record<string, SimilarCardEntry[]>;
 
 export async function getStaticPaths() {
   // Cast inside getStaticPaths since it runs first during build
@@ -36,6 +46,7 @@ export async function getStaticPaths() {
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
+const similarCardsData = similarCardsRaw as SimilarCardsData;
 
 const { card } = Astro.props as { card: Card };
 
@@ -45,10 +56,20 @@ const skillData = card.skill ? skillsData[card.skill.id] : null;
 // Get blog posts that mention this card
 const relatedGuides = cardMentions[card.id] || [];
 
-// Get similar cards using weighted scoring
-// Considers: attribute, type, skill tags, ability tags, rarity
-const allCards = Object.values(cardsData.cards) as Card[];
-const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 });
+// Get pre-computed similar cards (computed at sync time for faster builds)
+const precomputedSimilar = similarCardsData[card.id] || [];
+const similarCards = precomputedSimilar.map(entry => ({
+  card: cardsData.cards[entry.id] as Card,
+  score: entry.score,
+  details: {
+    sameAttribute: entry.sameAttribute,
+    sameType: entry.sameType,
+    sameRarity: cardsData.cards[entry.id]?.stats?.rarity === card.stats.rarity,
+    matchingSkillTags: [] as string[],  // Not needed for display
+    matchingAbilityTags: [] as string[],  // Not needed for display
+    score: entry.score,
+  }
+})).filter(item => item.card);  // Filter out any missing cards
 
 // Get image URLs (uses fallback to construct from asset_id if needed)
 const hdImageUrl = getImageUrl(card, 'hd');

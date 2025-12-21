@@ -8,7 +8,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
-import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
+import { getSimilarityReason } from '../../../lib/similarity';
 import { getPathInLocale } from '../../../lib/i18n';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
@@ -17,6 +17,7 @@ import type { Card, CardsData } from '../../../types/card';
 import cardsDataRaw from '../../../data/ja/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
+import similarCardsRaw from '../../../data/similar_cards.json';
 
 // For similar cards, we use English data to get names for linking
 import enCardsDataRaw from '../../../data/cards.json';
@@ -28,6 +29,15 @@ interface CardMention {
   date: string;
 }
 type CardMentionsData = Record<string, CardMention[]>;
+
+// Type for pre-computed similar cards
+interface SimilarCardEntry {
+  id: string;
+  score: number;
+  sameAttribute: boolean;
+  sameType: boolean;
+}
+type SimilarCardsData = Record<string, SimilarCardEntry[]>;
 
 const currentLocale = 'ja';
 
@@ -46,6 +56,7 @@ const cardsData = cardsDataRaw as unknown as CardsData;
 const enCardsData = enCardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
+const similarCardsData = similarCardsRaw as SimilarCardsData;
 
 const { card } = Astro.props as { card: Card };
 
@@ -70,9 +81,20 @@ const relatedGuides = relatedGuidesRaw.map(guide => ({
   title: titleLookup[guide.slug] || guide.title
 }));
 
-// Get similar cards using English data for consistent comparison
-const allCards = Object.values(enCardsData.cards) as Card[];
-const similarCards = findSimilarCards(card, allCards, { limit: 6, minScore: 15 });
+// Get pre-computed similar cards (computed at sync time for faster builds)
+const precomputedSimilar = similarCardsData[card.id] || [];
+const similarCards = precomputedSimilar.map(entry => ({
+  card: enCardsData.cards[entry.id] as Card,
+  score: entry.score,
+  details: {
+    sameAttribute: entry.sameAttribute,
+    sameType: entry.sameType,
+    sameRarity: enCardsData.cards[entry.id]?.stats?.rarity === card.stats.rarity,
+    matchingSkillTags: [] as string[],
+    matchingAbilityTags: [] as string[],
+    score: entry.score,
+  }
+})).filter(item => item.card);
 
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
