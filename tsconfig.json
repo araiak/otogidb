@@ -10,5 +10,10 @@
       "@lib/*": ["src/lib/*"],
       "@types/*": ["src/types/*"]
     }
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "checkly",
+    "scripts/validate-deployment"
+  ]
 }
