@@ -35,6 +35,7 @@ export interface CloudflareDeployment {
   project_name: string;
   environment: string;
   url: string;
+  is_skipped: boolean;
   latest_stage: {
     name: string;
     status: 'idle' | 'active' | 'canceled' | 'success' | 'failure';

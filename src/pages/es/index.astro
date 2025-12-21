@@ -9,8 +9,9 @@ const cardCount = Object.keys(cardsData.cards).length;
 
 const currentLocale = 'es';
 
-const pageTitle = "Base de Datos de Otogi: Spirit Agents - Estadísticas, Habilidades y Capacidades";
-const pageDescription = `Base de datos completa de Otogi: Spirit Agents con ${cardCount} demonios. Busca y filtra por estadísticas, habilidades, capacidades, atributos y rareza.`;
+// Title limit: 60 chars (+ " | OtogiDB" = 70 max), Description limit: 160 chars
+const pageTitle = "Otogi: Spirit Agents - Base de Datos de Demonios";
+const pageDescription = `Base de datos de Otogi: Spirit Agents con ${cardCount} demonios. Estadísticas, habilidades y capacidades. Filtra por atributo, tipo y rareza.`;
 
 const jsonLd = {
   "@context": "https://schema.org",

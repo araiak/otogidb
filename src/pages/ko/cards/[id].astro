@@ -102,14 +102,13 @@ const seoImage = hdImageUrl || undefined;
 // Helper to get localized card URL
 const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 
-// SEO: Optimized title and description
+// SEO: Title limit: 60 chars (+ " | OtogiDB" = 70 max), Description limit: 160 chars
 const cardName = card.name || `Daemon #${card.id}`;
-const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
 const artistName = card.meta?.artist_name || null;
 
-const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
-const seoDescription = `${cardName} stats, skills & abilities. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''}${artistName ? ` Art by ${artistName}.` : ''}`;
+const seoTitle = `${cardName} - Otogi ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoDescription = `${cardName} - Otogi: Spirit Agents. ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}. ATK ${formatNumber(card.stats.max_atk)}, HP ${formatNumber(card.stats.max_hp)}.${skillName ? ` Skill: ${skillName}.` : ''}`;
 
 // Build creator array - include artist if available
 const creators: Array<{ "@type": string; name: string }> = [
@@ -167,7 +166,7 @@ const jsonLd = {
     <div class="md:hidden mb-3">
       <div class="flex items-center justify-between gap-2 mb-2">
         <div class="flex items-center gap-2 min-w-0">
-          <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+          <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
             <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
           )}

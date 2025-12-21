@@ -104,14 +104,13 @@ const seoImage = hdImageUrl || undefined;
 const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 
 // SEO: Optimized title and description for long-tail queries
+// SEO: Title limit: 60 chars (+ " | OtogiDB" = 70 max), Description limit: 160 chars
 const cardName = card.name || `式神 #${card.id}`;
-const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
 const artistName = card.meta?.artist_name || null;
-const artistNameJp = card.meta?.artist_name_jp || null;
 
-const seoTitle = `${cardName} - あやかし百鬼夜行 ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
-const seoDescription = `${cardName}のステータス、スキル、アビリティ。${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name}式神。ATK ${card.stats.max_atk}、HP ${card.stats.max_hp}。${skillName ? `スキル: ${skillName}。` : ''}${artistNameJp || artistName ? `イラスト: ${artistNameJp || artistName}。` : ''}`;
+const seoTitle = `${cardName} - あやかし ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoDescription = `${cardName} - あやかし百鬼夜行。${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}。ATK ${formatNumber(card.stats.max_atk)}、HP ${formatNumber(card.stats.max_hp)}。${skillName ? `スキル: ${skillName}。` : ''}`;
 
 // Build creator array - include artist if available
 const creators: Array<{ "@type": string; name: string }> = [
@@ -131,7 +130,6 @@ const keywordParts = [
   card.stats.type_name
 ];
 if (artistName) keywordParts.push(artistName);
-if (artistNameJp) keywordParts.push(artistNameJp);
 
 // JSON-LD structured data - enhanced for SEO
 const jsonLd = {
@@ -173,10 +171,10 @@ const jsonLd = {
     </nav>
 
     <!-- Mobile Header -->
-    <div class="md:hidden mb-3">
+    <div class="md:hidden mb-3" aria-hidden="true">
       <div class="flex items-center justify-between gap-2 mb-2">
         <div class="flex items-center gap-2 min-w-0">
-          <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+          <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
             <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
           )}

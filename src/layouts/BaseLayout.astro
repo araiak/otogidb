@@ -160,9 +160,10 @@ const navLinks = {
         // PostHog snippet (loads SDK from api_host)
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister getFeatureFlag isFeatureEnabled on reset get_distinct_id get_session_id opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
 
-        // Try direct PostHog first, fallback to proxy if blocked
+        // Try direct PostHog first, fallback to proxy if blocked by ad blocker
+        // Any HTTP response (even 400) means it's reachable; only network errors trigger fallback
         fetch(DIRECT_HOST + '/decide?v=3', { method: 'POST', mode: 'cors' })
-          .then(function(r) { if (!r.ok) throw new Error(); return 'direct'; })
+          .then(function() { return 'direct'; })
           .catch(function() { return 'proxy'; })
           .then(function(mode) {
             config.api_host = (mode === 'direct') ? DIRECT_HOST : PROXY_HOST;

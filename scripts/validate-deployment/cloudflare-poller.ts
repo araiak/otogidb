@@ -123,6 +123,12 @@ function findLatestDeploymentForBranch(
   if (branchDeployments.length === 0) return undefined;
 
   const latest = branchDeployments[0];
+
+  // If latest is skipped, return it so caller can detect and handle
+  if (latest.is_skipped) {
+    return latest;
+  }
+
   const latestStatus = latest.latest_stage?.status;
 
   // If latest is in progress (active/idle) or successful, return it
@@ -132,7 +138,22 @@ function findLatestDeploymentForBranch(
   }
 
   // If latest failed/canceled, find the most recent successful one
-  return branchDeployments.find((d) => d.latest_stage?.status === 'success');
+  return branchDeployments.find((d) => d.latest_stage?.status === 'success' && !d.is_skipped);
+}
+
+function findLastSuccessfulDeployment(
+  deployments: CloudflareDeployment[],
+  branch: string
+): CloudflareDeployment | undefined {
+  return deployments
+    .filter((d) =>
+      d.environment === 'preview' &&
+      d.deployment_trigger?.metadata?.branch === branch &&
+      d.latest_stage?.status === 'success' &&
+      d.latest_stage?.name === 'deploy' &&
+      !d.is_skipped
+    )
+    .sort((a, b) => new Date(b.created_on).getTime() - new Date(a.created_on).getTime())[0];
 }
 
 async function waitForDeployment(): Promise<PollerResult> {
@@ -252,6 +273,34 @@ async function waitForDeployment(): Promise<PollerResult> {
           shortHash: deployCommit,
           error: `Deployment ${status} at stage "${stageName}": ${deployment.short_id} (${deployCommit})`,
         };
+      }
+
+      // Detect skipped deployments using the is_skipped API field
+      if (deployment.is_skipped) {
+        console.log(`[${elapsedStr}] ⏭ Deployment ${deployCommit} was skipped by Cloudflare`);
+
+        // Find the last successful deployment instead
+        const lastSuccessful = findLastSuccessfulDeployment(response.result, TARGET_BRANCH);
+        if (lastSuccessful) {
+          const successCommit = getShortHash(lastSuccessful.deployment_trigger?.metadata?.commit_hash);
+          console.log('');
+          console.log('═'.repeat(60));
+          console.log('✅ Using last successful deployment (current was skipped)');
+          console.log('═'.repeat(60));
+          console.log(`Deployment ID: ${lastSuccessful.short_id}`);
+          console.log(`Commit:        ${successCommit}`);
+          console.log(`URL:           ${lastSuccessful.url}`);
+          console.log(`Duration:      ${elapsedStr}`);
+          console.log('═'.repeat(60));
+
+          return { success: true, deployment: lastSuccessful, shortHash: successCommit };
+        } else {
+          return {
+            success: false,
+            shortHash: deployCommit,
+            error: `Deployment ${deployCommit} was skipped and no previous successful deployment found`,
+          };
+        }
       }
 
       // Still in progress, wait and poll again

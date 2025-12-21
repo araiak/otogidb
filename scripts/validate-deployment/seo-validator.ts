@@ -268,7 +268,15 @@ export async function validateSeo(
       if (result.error) {
         console.log(`  ${icon} ${sample.url} - ${result.error}`);
       } else {
-        console.log(`  ${icon} ${sample.url} - failed: ${failedChecks.map((c) => c.name).join(', ')}`);
+        // Show actionable error messages with details
+        const issues = failedChecks.map((c) => {
+          if (c.detail && c.detail !== 'Missing') {
+            return `${c.name}: ${c.detail}`;
+          }
+          return `missing ${c.name.replace('has ', '')}`;
+        });
+        console.log(`  ${icon} ${sample.url}`);
+        issues.forEach((issue) => console.log(`      → ${issue}`));
       }
     }
   }
