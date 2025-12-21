@@ -192,6 +192,8 @@ const PLACEHOLDER_TRANSFORMS = {
   hd: 'f_auto,q_auto',
   // Mascot as 60px circle
   mascotCircle: 'w_60,h_60,c_fill,g_face,f_auto,q_auto',
+  // Card placeholder as 120px circle (2x for retina) - centered crop
+  cardCircle: 'w_120,h_120,c_thumb,g_center,r_max,f_auto,q_auto',
 } as const;
 
 /**
@@ -206,6 +208,14 @@ export function getPlaceholderHD(): string {
  */
 export function getPlaceholderMascot(): string {
   return `${PLACEHOLDER_BASE}/${PLACEHOLDER_TRANSFORMS.mascotCircle}/${PLACEHOLDER_MASCOT_ID}`;
+}
+
+/**
+ * Get placeholder card as 120px circle (2x for retina)
+ * Uses the card placeholder with face detection cropping for best results
+ */
+export function getPlaceholderCircle(): string {
+  return `${PLACEHOLDER_BASE}/${PLACEHOLDER_TRANSFORMS.cardCircle}/${PLACEHOLDER_CARD_ID}`;
 }
 
 /**
@@ -255,6 +265,6 @@ export function getAndroidImageWithFallback(card: Card): string {
   const hdCircle = getCircleThumbnailFromHD(card);
   if (hdCircle) return hdCircle;
 
-  // Final fallback: sad mascot placeholder
-  return getPlaceholderMascot();
+  // Final fallback: placeholder card cropped to circle
+  return getPlaceholderCircle();
 }

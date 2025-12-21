@@ -7,7 +7,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
 import { getPathInLocale } from '../../../lib/i18n';
 import { getCollection } from 'astro:content';
@@ -188,6 +188,7 @@ const jsonLd = {
               alt={card.name || `Card #${card.id}`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"
+              onerror={`this.onerror=null; this.src='${getPlaceholderHD()}';`}
             />
           </div>
 
@@ -560,6 +561,7 @@ const jsonLd = {
                     alt={displayName}
                     class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto object-cover"
                     loading="lazy"
+                    onerror={`this.onerror=null; this.src='${getPlaceholderCircle()}';`}
                   />
                   <div class="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 flex gap-0.5">
                     {details.sameAttribute && (
