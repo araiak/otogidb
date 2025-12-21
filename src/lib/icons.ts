@@ -12,9 +12,6 @@ export const USE_LOCAL_ICONS = import.meta.env.PUBLIC_USE_LOCAL_IMAGES === 'true
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
 const CLOUDINARY_FOLDER = 'otogi/icons';
 
-// Optimization: f_auto (auto format - WebP/AVIF), q_auto (auto quality)
-const _DEFAULT_OPTIMIZATION = 'f_auto,q_auto';
-
 // Local paths
 const LOCAL_PATHS = {
   attributes: {
