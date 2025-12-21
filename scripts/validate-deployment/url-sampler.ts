@@ -56,7 +56,7 @@ function generateCardUrls(cards: Card[], perLocale: number): UrlSample[] {
 // Generate list page URLs
 function generateListUrls(): UrlSample[] {
   const samples: UrlSample[] = [];
-  const listPages = ['/', '/search'];
+  const listPages = ['/'];
 
   for (const locale of LOCALES) {
     for (const page of listPages) {
