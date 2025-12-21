@@ -66,7 +66,7 @@ function getMostReferencedCardId(markdown: string): string | null {
 let socialImage = post.data.image;
 
 if (!socialImage) {
-  const mostReferencedCardId = getMostReferencedCardId(post.body);
+  const mostReferencedCardId = getMostReferencedCardId(post.body || '');
   if (mostReferencedCardId && cardsData.cards[mostReferencedCardId]) {
     const card = cardsData.cards[mostReferencedCardId] as Card;
     socialImage = getImageUrl(card, 'hd') || undefined;
