@@ -167,7 +167,7 @@ const jsonLd = {
     <div class="md:hidden mb-3">
       <div class="flex items-center justify-between gap-2 mb-2">
         <div class="flex items-center gap-2 min-w-0">
-          <h1 class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</h1>
+          <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
             <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
           )}

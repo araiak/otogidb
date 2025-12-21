@@ -98,23 +98,8 @@ function generateBlogUrls(): UrlSample[] {
   return samples;
 }
 
-// Generate static page URLs
-function generateStaticUrls(): UrlSample[] {
-  const samples: UrlSample[] = [];
-  const staticPages = ['/about', '/privacy'];
-
-  for (const locale of LOCALES) {
-    for (const page of staticPages) {
-      samples.push({
-        url: `/${locale}${page}`,
-        category: 'static',
-        locale,
-      });
-    }
-  }
-
-  return samples;
-}
+// Note: /about and /privacy pages don't exist in the site
+// If static pages are added in the future, add them here
 
 // Generate image URLs from Cloudinary
 function generateImageUrls(cards: Card[], count: number): UrlSample[] {
@@ -156,9 +141,8 @@ export function generateUrlSamples(options: SamplerOptions = {}): {
   const cardUrls = generateCardUrls(playableCards, cardsPerLocale);
   const listUrls = generateListUrls();
   const blogUrls = generateBlogUrls();
-  const staticUrls = generateStaticUrls();
 
-  const pages = [...cardUrls, ...listUrls, ...blogUrls, ...staticUrls];
+  const pages = [...cardUrls, ...listUrls, ...blogUrls];
 
   // Generate image URLs
   const images = generateImageUrls(playableCards, imageCount);
@@ -169,7 +153,6 @@ export function generateUrlSamples(options: SamplerOptions = {}): {
   );
   console.log(`  - List pages: ${listUrls.length}`);
   console.log(`  - Blog pages: ${blogUrls.length}`);
-  console.log(`  - Static pages: ${staticUrls.length}`);
 
   return { pages, images };
 }
