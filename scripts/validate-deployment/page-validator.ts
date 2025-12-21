@@ -14,12 +14,49 @@ interface ValidatorOptions {
   concurrency?: number;
 }
 
+/**
+ * Safely construct a full URL from a sample URL and base URL.
+ * Validates URL scheme to prevent SSRF and other URL-based attacks.
+ */
+function constructSafeUrl(sampleUrl: string, baseUrl: string): string | null {
+  // If the URL already has a scheme, validate it
+  if (sampleUrl.includes('://')) {
+    try {
+      const parsed = new URL(sampleUrl);
+      // Only allow http and https schemes
+      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+        return null;
+      }
+      return sampleUrl;
+    } catch {
+      return null;
+    }
+  }
+
+  // Relative URL - prepend base URL
+  if (sampleUrl.startsWith('/')) {
+    return `${baseUrl}${sampleUrl}`;
+  }
+
+  // Invalid URL format
+  return null;
+}
+
 async function validateUrl(
   baseUrl: string,
   sample: UrlSample,
   timeout: number
 ): Promise<ValidationResult> {
-  const fullUrl = sample.url.startsWith('http') ? sample.url : `${baseUrl}${sample.url}`;
+  const fullUrl = constructSafeUrl(sample.url, baseUrl);
+
+  if (!fullUrl) {
+    return {
+      url: sample.url,
+      status: 'error',
+      error: 'Invalid URL format or scheme',
+      responseTime: 0,
+    };
+  }
   const startTime = Date.now();
 
   try {
@@ -266,7 +303,16 @@ async function checkHtmlContent(
   category: string,
   timeout: number
 ): Promise<HtmlCheckResult> {
-  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  const fullUrl = constructSafeUrl(url, baseUrl);
+
+  if (!fullUrl) {
+    return {
+      url,
+      checks: [],
+      status: 'error',
+      error: 'Invalid URL format or scheme',
+    };
+  }
 
   try {
     const response = await fetchWithRetry(
@@ -400,15 +446,11 @@ export async function validateJsBundles(
   const bundles: string[] = [];
 
   for (const match of scriptMatches) {
-    let src = match[1];
-    // Make absolute URL
-    if (src.startsWith('/')) {
-      src = `${baseUrl}${src}`;
-    } else if (!src.startsWith('http')) {
-      src = `${baseUrl}/${src}`;
-    }
-    if (!bundles.includes(src)) {
-      bundles.push(src);
+    const src = match[1];
+    // Use safe URL construction
+    const bundleUrl = constructSafeUrl(src, baseUrl);
+    if (bundleUrl && !bundles.includes(bundleUrl)) {
+      bundles.push(bundleUrl);
     }
   }
 
@@ -511,7 +553,16 @@ async function checkPageLinks(
   url: string,
   timeout: number
 ): Promise<LinkCheckResult> {
-  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  const fullUrl = constructSafeUrl(url, baseUrl);
+
+  if (!fullUrl) {
+    return {
+      pageUrl: url,
+      links: [],
+      status: 'error',
+      error: 'Invalid URL format or scheme',
+    };
+  }
 
   // Determine page locale from URL
   const localeMatch = url.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);

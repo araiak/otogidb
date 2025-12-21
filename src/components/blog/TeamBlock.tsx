@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
+import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
@@ -23,13 +24,8 @@ function parseTeamQuery(query: string): TeamMember[] {
 
   const members: TeamMember[] = [];
 
-  // Decode HTML entities
-  const decoded = query
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'");
+  // Decode HTML entities using single-pass decoding to prevent double-decoding attacks
+  const decoded = decodeHtmlEntities(query);
 
   const params = new URLSearchParams(decoded);
 

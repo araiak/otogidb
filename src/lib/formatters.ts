@@ -1,3 +1,5 @@
+import { escapeHtml } from './security';
+
 /**
  * Convert game's custom markup to safe HTML
  *
@@ -52,8 +54,8 @@ export function formatDescription(text: string | null | undefined): string {
     }
   );
 
-  // Escape remaining HTML
-  formatted = escapeHtmlChars(formatted);
+  // Escape remaining HTML using single-pass escaping
+  formatted = escapeHtml(formatted);
 
   // Restore br tags
   formatted = formatted.replace(/__BR_TAG__/g, '<br />');
@@ -66,17 +68,6 @@ export function formatDescription(text: string | null | undefined): string {
   return formatted;
 }
 
-/**
- * Escape HTML special characters
- */
-function escapeHtmlChars(text: string): string {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;');
-}
 
 
 /**

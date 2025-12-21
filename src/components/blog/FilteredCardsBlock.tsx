@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
+import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
@@ -30,12 +31,8 @@ function parseFilterQuery(query: string): ParsedFilters {
   const filters: ParsedFilters = {};
 
   // Decode HTML entities (escapeHtml converts & to &amp; which breaks URLSearchParams)
-  const decoded = query
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#039;/g, "'");
+  // Uses single-pass decoding to prevent double-decoding attacks
+  const decoded = decodeHtmlEntities(query);
 
   // Handle query with or without leading ?
   const queryString = decoded.startsWith('?') ? decoded.slice(1) : decoded;
@@ -253,12 +250,8 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
         empty.appendChild(text);
 
         // Decode query for the link (reverse the escapeHtml)
-        const decodedQuery = query
-          .replace(/&amp;/g, '&')
-          .replace(/&lt;/g, '<')
-          .replace(/&gt;/g, '>')
-          .replace(/&quot;/g, '"')
-          .replace(/&#039;/g, "'");
+        // Uses single-pass decoding to prevent double-decoding attacks
+        const decodedQuery = decodeHtmlEntities(query);
 
         const link = document.createElement('a');
         link.href = `/${locale}/cards${decodedQuery}`;
