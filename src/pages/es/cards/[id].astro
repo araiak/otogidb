@@ -102,14 +102,13 @@ const seoImage = hdImageUrl || undefined;
 // Helper to get localized card URL
 const getCardUrl = (cardId: string) => `/${currentLocale}/cards/${cardId}`;
 
-// SEO: Optimized title and description
+// SEO: Title limit: 60 chars (+ " | OtogiDB" = 70 max), Description limit: 160 chars
 const cardName = card.name || `Daemon #${card.id}`;
-const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
 const artistName = card.meta?.artist_name || null;
 
-const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
-const seoDescription = `${cardName} stats, skills & abilities. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} daemon with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''}${artistName ? ` Art by ${artistName}.` : ''}`;
+const seoTitle = `${cardName} - Otogi ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoDescription = `${cardName} en Otogi: Spirit Agents. ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name} con ${formatNumber(card.stats.max_atk)} ATK, ${formatNumber(card.stats.max_hp)} HP.${skillName ? ` Skill: ${skillName}.` : ''}`;
 
 // Build creator array - include artist if available
 const creators: Array<{ "@type": string; name: string }> = [

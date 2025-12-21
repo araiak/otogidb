@@ -79,16 +79,16 @@ const seoImage = hdImageUrl || undefined;
 
 // SEO: Optimized title and description with LSI keywords
 // Primary: daemon, stats | LSI: character, unit, spirit, build, guide
+// Title limit: 60 chars (+ " | OtogiDB" = 70 max), Description limit: 160 chars
 const cardName = card.name || `Daemon #${card.id}`;
-const rarityStars = '★'.repeat(card.stats.rarity);
 const skillName = card.skill?.name || '';
 const artistName = card.meta?.artist_name || null;
 
 // Title format: "[Name] - Otogi: Spirit Agents [Rarity]★ [Type] Daemon"
-const seoTitle = `${cardName} - Otogi: Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
+const seoTitle = `${cardName} - Otogi ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name}`;
 
-// Description with LSI keywords: daemon/character/spirit, stats/attributes, skills/abilities
-const seoDescription = `${cardName} character guide for Otogi: Spirit Agents. ${rarityStars} ${card.stats.attribute_name} ${card.stats.type_name} spirit with ${card.stats.max_atk} ATK, ${card.stats.max_hp} HP.${skillName ? ` Skill: ${skillName}.` : ''}${artistName ? ` Art by ${artistName}.` : ''} Full stats, abilities, and similar units.`;
+// Description: Keep under 160 chars - prioritize key stats
+const seoDescription = `${cardName} in Otogi: Spirit Agents. ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name} with ${formatNumber(card.stats.max_atk)} ATK, ${formatNumber(card.stats.max_hp)} HP.${skillName ? ` Skill: ${skillName}.` : ''}`;
 
 // Build creator array - include artist if available
 const creators: Array<{ "@type": string; name: string }> = [
