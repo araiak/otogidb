@@ -3,7 +3,7 @@
  * Japanese Blog Post Page
  */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content';
+import { getCollection } from 'astro:content';
 import { formatDate } from '../../../lib/formatters';
 import { getTranslations } from '../../../lib/translations';
 import CardReferencePopups from '../../../components/blog/CardReferencePopups';
@@ -24,16 +24,16 @@ const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
   // Only get Japanese posts (now in ja/ subdirectory)
-  const posts = await getCollection('blog', ({ id }) => id.startsWith('ja/'));
+  const posts = await getCollection('blog', ({ slug }) => slug.startsWith('ja/'));
   return posts.map((post) => ({
-    // Use base id (without locale prefix) for URL
-    params: { id: post.id.replace(/^ja\//, '') },
+    // Use base slug (without locale prefix) for URL
+    params: { slug: post.slug.replace(/^ja\//, '') },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await render(post);
+const { Content } = await post.render();
 
 const publishedDate = new Date(post.data.date).toISOString();
 
@@ -76,7 +76,7 @@ const jsonLd = {
   "inLanguage": currentLocale,
   "author": { "@type": "Person", "name": post.data.author || "OtogiDB Team" },
   "publisher": { "@type": "Organization", "name": "OtogiDB", "url": "https://otogidb.com" },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.id.replace(/^ja\//, '')}` },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug.replace(/^ja\//, '')}` },
   "keywords": post.data.tags?.join(", ")
 };
 ---
