@@ -3,6 +3,11 @@ name: Validate Deployment
 on:
   pull_request:
     branches: [main]
+    paths-ignore:
+      - 'checkly/**'
+      - '.github/**'
+      - '*.md'
+      - 'docs/**'
   workflow_dispatch:
     inputs:
       debug:
