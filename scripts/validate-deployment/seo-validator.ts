@@ -57,10 +57,16 @@ const SEO_CHECKS: SeoCheck[] = [
     pattern: /<link\s+rel="canonical"\s+href="([^"]+)"/i,
     required: true,
     validator: (match) => {
-      if (!match.startsWith('https://otogidb.com')) {
-        return { valid: false, issue: 'Canonical URL should start with https://otogidb.com' };
+      // Use proper URL parsing to validate the canonical URL
+      try {
+        const parsed = new URL(match);
+        if (parsed.protocol !== 'https:' || parsed.hostname !== 'otogidb.com') {
+          return { valid: false, issue: 'Canonical URL should be https://otogidb.com' };
+        }
+        return { valid: true };
+      } catch {
+        return { valid: false, issue: 'Invalid canonical URL format' };
       }
-      return { valid: true };
     },
   },
 
@@ -163,13 +169,45 @@ const SEO_CHECKS: SeoCheck[] = [
   },
 ];
 
+/**
+ * Safely construct a full URL from a sample URL and base URL.
+ * Validates URL scheme to prevent SSRF and other URL-based attacks.
+ */
+function constructSafeUrl(sampleUrl: string, baseUrl: string): string | null {
+  // If the URL already has a scheme, validate it
+  if (sampleUrl.includes('://')) {
+    try {
+      const parsed = new URL(sampleUrl);
+      // Only allow http and https schemes
+      if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') {
+        return null;
+      }
+      return sampleUrl;
+    } catch {
+      return null;
+    }
+  }
+
+  // Relative URL - prepend base URL
+  if (sampleUrl.startsWith('/')) {
+    return `${baseUrl}${sampleUrl}`;
+  }
+
+  // Invalid URL format
+  return null;
+}
+
 async function checkSeo(
   baseUrl: string,
   url: string,
   category: string,
   timeout: number
 ): Promise<SeoCheckResult> {
-  const fullUrl = url.startsWith('http') ? url : `${baseUrl}${url}`;
+  const fullUrl = constructSafeUrl(url, baseUrl);
+
+  if (!fullUrl) {
+    return { url, checks: [], status: 'error', error: 'Invalid URL format or scheme' };
+  }
 
   try {
     const response = await fetchWithRetry(

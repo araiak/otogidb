@@ -7,6 +7,10 @@ on:
       - 'checkly/**'
   workflow_dispatch:
 
+# Minimum required permissions for security
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest

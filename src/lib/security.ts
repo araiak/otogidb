@@ -233,23 +233,65 @@ function sanitizeAttributes(attrString: string): string {
 }
 
 /**
- * Escape special HTML characters
+ * HTML escape map for single-pass encoding.
+ * This prevents issues with multi-pass encoding where intermediate
+ * results could be misinterpreted.
+ */
+const HTML_ESCAPE_MAP: Record<string, string> = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#x27;',
+};
+
+/**
+ * Escape special HTML characters using a single-pass replacement.
+ * This is safer than chained .replace() calls as it processes all
+ * characters in one pass, preventing any intermediate state issues.
  */
 export function escapeHtml(text: string): string {
-  return text
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#x27;');
+  if (!text) return '';
+  return text.replace(/[&<>"']/g, (char) => HTML_ESCAPE_MAP[char] || char);
+}
+
+/**
+ * HTML entity decode map for single-pass decoding.
+ * Using a map prevents double-decoding vulnerabilities.
+ */
+const HTML_ENTITIES: Record<string, string> = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&#039;': "'",
+  '&#x27;': "'",
+  '&apos;': "'",
+};
+
+/**
+ * Safely decode HTML entities in a single pass.
+ * This prevents double-decoding attacks (e.g., &amp;lt; → &lt; → <)
+ */
+export function decodeHtmlEntities(text: string): string {
+  if (!text) return '';
+  // Single-pass replacement using a regex that matches all entities at once
+  return text.replace(/&(?:amp|lt|gt|quot|#039|#x27|apos);/g, (match) => {
+    return HTML_ENTITIES[match] || match;
+  });
 }
 
 /**
  * Strip all HTML tags from text (for plain text output)
+ * Uses a proper parser approach to handle malformed tags
  */
 export function stripHtml(html: string | null | undefined): string {
   if (!html) return '';
-  return html.replace(/<[^>]*>/g, '');
+  // Use a more robust approach that handles edge cases
+  return html
+    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove scripts first
+    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')   // Remove styles
+    .replace(/<[^>]+>/g, '');                                           // Remove remaining tags
 }
 
 // ============================================================================

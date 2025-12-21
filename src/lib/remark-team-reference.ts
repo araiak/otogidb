@@ -1,5 +1,6 @@
 import { visit } from 'unist-util-visit';
 import type { Root, Text, Parent } from 'mdast';
+import { escapeHtml } from './security';
 
 /**
  * Remark plugin to transform :team["..."] and :reserve["..."] into a team display widget
@@ -46,14 +47,7 @@ export function remarkTeamReference() {
         const mainTeamQuery = match[1];
         const reserveQuery = match[2] || '';
 
-        // Escape HTML characters in the queries to prevent XSS
-        const escapeHtml = (str: string) => str
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
-
+        // Escape HTML characters in the queries to prevent XSS using single-pass escaping
         const escapedMain = escapeHtml(mainTeamQuery);
         const escapedReserve = escapeHtml(reserveQuery);
 

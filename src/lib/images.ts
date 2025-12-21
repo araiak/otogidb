@@ -2,6 +2,19 @@ import type { Card } from '../types/card';
 
 // Cloudinary base URL for constructing image URLs from asset_id
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
+
+/**
+ * Safely check if a URL is a Cloudinary URL by parsing the hostname.
+ * This prevents bypasses like "https://evil.com?cloudinary.com"
+ */
+function isCloudinaryUrl(url: string): boolean {
+  try {
+    const parsed = new URL(url);
+    return parsed.hostname === 'res.cloudinary.com';
+  } catch {
+    return false;
+  }
+}
 const CLOUDINARY_FOLDER = 'otogi';
 
 export type ImageVariant = 'android' | 'hd';
@@ -73,7 +86,7 @@ export function getOptimizedImageUrl(
   if (!baseUrl) return null;
 
   // Only apply transformations to Cloudinary URLs
-  if (!baseUrl.includes('cloudinary.com')) {
+  if (!isCloudinaryUrl(baseUrl)) {
     return baseUrl;
   }
 
@@ -121,14 +134,14 @@ const STANDARD_TRANSFORMS = {
 export function getThumbnailUrl(card: Card): string | null {
   // Try HD first (highest quality, Cloudinary will resize and cache)
   const hdUrl = getImageUrl(card, 'hd');
-  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+  if (hdUrl && isCloudinaryUrl(hdUrl)) {
     return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.thumb}/`);
   }
   if (hdUrl) return hdUrl;
 
   // Fall back to android
   const androidUrl = getImageUrl(card, 'android');
-  if (androidUrl && androidUrl.includes('cloudinary.com')) {
+  if (androidUrl && isCloudinaryUrl(androidUrl)) {
     return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.thumb}/`);
   }
   return androidUrl;
@@ -141,14 +154,14 @@ export function getThumbnailUrl(card: Card): string | null {
 export function getPopupImageUrl(card: Card): string | null {
   // Try HD first with resize
   const hdUrl = getImageUrl(card, 'hd');
-  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+  if (hdUrl && isCloudinaryUrl(hdUrl)) {
     return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.popup}/`);
   }
   if (hdUrl) return hdUrl;
 
   // Fall back to android (no resize, it's already small)
   const androidUrl = getImageUrl(card, 'android');
-  if (androidUrl && androidUrl.includes('cloudinary.com')) {
+  if (androidUrl && isCloudinaryUrl(androidUrl)) {
     return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.hd}/`);
   }
   return androidUrl;
@@ -159,7 +172,7 @@ export function getPopupImageUrl(card: Card): string | null {
  */
 export function getHDImageUrl(card: Card): string | null {
   const hdUrl = getImageUrl(card, 'hd');
-  if (hdUrl && hdUrl.includes('cloudinary.com')) {
+  if (hdUrl && isCloudinaryUrl(hdUrl)) {
     return hdUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.hd}/`);
   }
   return hdUrl;
@@ -223,7 +236,7 @@ export function getCircleThumbnailFromHD(card: Card): string | null {
   if (!hdUrl) return null;
 
   // Only apply transformations to Cloudinary URLs
-  if (!hdUrl.includes('cloudinary.com')) {
+  if (!isCloudinaryUrl(hdUrl)) {
     return hdUrl;
   }
 
@@ -242,7 +255,7 @@ export function getAndroidImageWithFallback(card: Card): string {
   const androidUrl = getImageUrl(card, 'android');
   if (androidUrl) {
     // Apply circle optimization if it's a Cloudinary URL - no resize, keep original quality
-    if (androidUrl.includes('cloudinary.com')) {
+    if (isCloudinaryUrl(androidUrl)) {
       return androidUrl.replace('/upload/', `/upload/${STANDARD_TRANSFORMS.androidCircle}/`);
     }
     return androidUrl;

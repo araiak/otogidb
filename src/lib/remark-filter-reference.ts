@@ -1,5 +1,6 @@
 import { visit } from 'unist-util-visit';
 import type { Root, Text, Parent } from 'mdast';
+import { escapeHtml } from './security';
 
 /**
  * Remark plugin to transform :filter["query"] into a filterable card grid
@@ -48,13 +49,8 @@ export function remarkFilterReference() {
         const query = match[1];
 
         // Create an HTML div that will be hydrated client-side
-        // Escape HTML characters in the query to prevent XSS
-        const escapedQuery = query
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;')
-          .replace(/"/g, '&quot;')
-          .replace(/'/g, '&#039;');
+        // Escape HTML characters in the query to prevent XSS using single-pass escaping
+        const escapedQuery = escapeHtml(query);
 
         newNodes.push({
           type: 'html',
