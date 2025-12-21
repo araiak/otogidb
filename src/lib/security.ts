@@ -283,15 +283,37 @@ export function decodeHtmlEntities(text: string): string {
 
 /**
  * Strip all HTML tags from text (for plain text output)
- * Uses a proper parser approach to handle malformed tags
+ * Uses iterative single-regex approach to prevent incomplete sanitization attacks
+ * where nested tags like <scr<script>ipt> could reform after removal.
  */
 export function stripHtml(html: string | null | undefined): string {
   if (!html) return '';
-  // Use a more robust approach that handles edge cases
-  return html
-    .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove scripts first
-    .replace(/<style\b[^<]*(?:(?!<\/style>)<[^<]*)*<\/style>/gi, '')   // Remove styles
-    .replace(/<[^>]+>/g, '');                                           // Remove remaining tags
+
+  let result = html;
+  let previous: string;
+
+  // Single regex that matches both complete tags and unclosed tag fragments
+  // Using alternation in one regex prevents chained-replace vulnerabilities
+  const TAG_PATTERN = /<[^>]*>|<[^>]*$/g;
+
+  // Iteratively remove all tags until no changes occur
+  // This prevents attacks like <scr<script>ipt> reforming into <script>
+  const MAX_ITERATIONS = 10;
+  let iterations = 0;
+
+  do {
+    previous = result;
+    result = result.replace(TAG_PATTERN, '');
+    iterations++;
+  } while (result !== previous && iterations < MAX_ITERATIONS);
+
+  // Final safety: escape any remaining < characters
+  // This catches edge cases like lone < characters that weren't part of tags
+  if (result.includes('<')) {
+    result = result.replace(/</g, '&lt;');
+  }
+
+  return result;
 }
 
 // ============================================================================
