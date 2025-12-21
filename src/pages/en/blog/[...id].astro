@@ -1,11 +1,7 @@
 ---
-/**
- * Korean Blog Post Page
- */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../../lib/formatters';
-import { getTranslations } from '../../../lib/translations';
 import CardReferencePopups from '../../../components/blog/CardReferencePopups';
 import FilteredCardsBlock from '../../../components/blog/FilteredCardsBlock';
 import ListBlock from '../../../components/blog/ListBlock';
@@ -13,50 +9,62 @@ import TeamBlock from '../../../components/blog/TeamBlock';
 import type { CardsData, Card } from '../../../types/card';
 import { getImageUrl } from '../../../lib/images';
 
-// Import localized cards data for popups
-import cardsDataRaw from '../../../data/ko/cards.json';
+// Import cards and skills data for popups
+import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 
-const currentLocale = 'ko';
-const t = getTranslations(currentLocale);
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
-  // Only get Korean posts (now in ko/ subdirectory)
-  const posts = await getCollection('blog', ({ slug }) => slug.startsWith('ko/'));
+  // Only get English posts (locale is 'en' or unspecified)
+  const posts = await getCollection('blog', ({ data }) => !data.locale || data.locale === 'en');
   return posts.map((post) => ({
-    // Use base slug (without locale prefix) for URL
-    params: { slug: post.slug.replace(/^ko\//, '') },
+    params: { id: post.id },
     props: { post },
   }));
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content } = await render(post);
 
+// Format date for JSON-LD
 const publishedDate = new Date(post.data.date).toISOString();
 
+/**
+ * Extract the most-referenced card ID from markdown content
+ * Counts :card[id] references and returns the most frequent one
+ */
 function getMostReferencedCardId(markdown: string): string | null {
   const cardRefRegex = /:card\[(\d+)\]/g;
   const counts: Record<string, number> = {};
   let match;
+
   while ((match = cardRefRegex.exec(markdown)) !== null) {
     const id = match[1];
     counts[id] = (counts[id] || 0) + 1;
   }
+
+  // Find the most referenced card
   let maxCount = 0;
   let mostReferenced: string | null = null;
+
   for (const [id, count] of Object.entries(counts)) {
     if (count > maxCount) {
       maxCount = count;
       mostReferenced = id;
     }
   }
+
   return mostReferenced;
 }
 
+// Determine the social share image:
+// 1. Explicit image from frontmatter (highest priority)
+// 2. Most-referenced card's HD image (auto-detected)
+// 3. Default fallback (handled by SEO component)
 let socialImage = post.data.image;
+
 if (!socialImage) {
   const mostReferencedCardId = getMostReferencedCardId(post.body || '');
   if (mostReferencedCardId && cardsData.cards[mostReferencedCardId]) {
@@ -65,6 +73,7 @@ if (!socialImage) {
   }
 }
 
+// JSON-LD BlogPosting structured data
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
@@ -73,10 +82,19 @@ const jsonLd = {
   "image": socialImage,
   "datePublished": publishedDate,
   "dateModified": publishedDate,
-  "inLanguage": currentLocale,
-  "author": { "@type": "Person", "name": post.data.author || "OtogiDB Team" },
-  "publisher": { "@type": "Organization", "name": "OtogiDB", "url": "https://otogidb.com" },
-  "mainEntityOfPage": { "@type": "WebPage", "@id": `https://otogidb.com/${currentLocale}/blog/${post.slug.replace(/^ko\//, '')}` },
+  "author": {
+    "@type": "Person",
+    "name": post.data.author || "OtogiDB Team"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "OtogiDB",
+    "url": "https://otogidb.com"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://otogidb.com/en/blog/${post.id}`
+  },
   "keywords": post.data.tags?.join(", ")
 };
 ---
@@ -86,17 +104,22 @@ const jsonLd = {
   description={post.data.description}
   image={socialImage}
   type="article"
-  lang={currentLocale}
   hasLocalizedUrls={true}
-  article={{ publishedTime: publishedDate, author: post.data.author, tags: post.data.tags }}
+  article={{
+    publishedTime: publishedDate,
+    author: post.data.author,
+    tags: post.data.tags,
+  }}
 >
+  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <script is:inline define:vars={{ currentLocale }}>
+  <script is:inline>
+    // Update card links to use /en/ prefix for English blog pages
     (function() {
       var STORAGE_KEY = 'otogidb-locale';
-      var prefix = '/' + currentLocale;
-      try { localStorage.setItem(STORAGE_KEY, currentLocale); } catch(e) {}
+      var prefix = '/en';
+      try { localStorage.setItem(STORAGE_KEY, 'en'); } catch(e) {}
 
       function updateCardLinks() {
         document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
@@ -117,68 +140,134 @@ const jsonLd = {
   </script>
 
   <div class="container mx-auto px-4 py-6">
+    <!-- Breadcrumb -->
     <nav class="mb-4 text-sm">
-      <a href={`/${currentLocale}/blog`} class="link">{t.blog}</a>
+      <a href="/en/blog" class="link">Blog</a>
       <span class="mx-2">/</span>
       <span class="text-secondary">{post.data.title}</span>
     </nav>
 
     <article class="card p-4 md:p-8">
-      <!-- Machine Translation Notice -->
-      <div class="mb-4 p-3 rounded-lg text-sm" style="background-color: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3);">
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5 flex-shrink-0" style="color: rgb(234, 179, 8);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-          </svg>
-          <div>
-            <span class="font-medium" style="color: rgb(234, 179, 8);">{t.machineTranslated}</span>
-            <span class="text-secondary ml-1">{t.machineTranslatedNote}</span>
-          </div>
-        </div>
-      </div>
-
       <header class="mb-6 pb-6" style="border-bottom: 1px solid var(--color-border);">
         <h1 class="text-2xl md:text-3xl font-bold mb-2">{post.data.title}</h1>
+
         <div class="flex flex-wrap items-center gap-4 text-sm text-secondary">
-          <time datetime={post.data.date.toString()}>{formatDate(post.data.date.toString())}</time>
-          {post.data.author && <span>{t.by} {post.data.author}</span>}
+          <time datetime={post.data.date.toString()}>
+            {formatDate(post.data.date.toString())}
+          </time>
+          {post.data.author && (
+            <span>by {post.data.author}</span>
+          )}
         </div>
+
         {post.data.tags && post.data.tags.length > 0 && (
           <div class="flex flex-wrap gap-2 mt-3">
-            {post.data.tags.map((tag) => <span class="badge text-xs">{tag}</span>)}
+            {post.data.tags.map((tag) => (
+              <span class="badge text-xs">{tag}</span>
+            ))}
           </div>
         )}
       </header>
-      <div class="prose prose-invert max-w-none"><Content /></div>
+
+      <div class="prose prose-invert max-w-none">
+        <Content />
+      </div>
     </article>
 
+    <!-- Card reference hover popups -->
     <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
+
+    <!-- Filter block card grids with hover popups -->
     <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
+
+    <!-- List block card grids with hover popups -->
     <ListBlock client:load cards={cardsData.cards} skills={skillsData} />
+
+    <!-- Team composition blocks with hover popups -->
     <TeamBlock client:load cards={cardsData.cards} skills={skillsData} />
 
+    <!-- Back to blog -->
     <div class="mt-6">
-      <a href={`/${currentLocale}/blog`} class="link">&larr; {t.backToBlog}</a>
+      <a href="/en/blog" class="link">&larr; Back to Blog</a>
     </div>
   </div>
 </BaseLayout>
 
 <style is:global>
-  .prose { line-height: 1.7; }
-  .prose h1, .prose h2, .prose h3, .prose h4 { margin-top: 1.5em; margin-bottom: 0.5em; font-weight: bold; }
+  /* Blog content styling */
+  .prose {
+    line-height: 1.7;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+
   .prose h1 { font-size: 1.75rem; }
   .prose h2 { font-size: 1.5rem; }
   .prose h3 { font-size: 1.25rem; }
-  .prose p { margin-bottom: 1em; }
-  .prose ul, .prose ol { margin-bottom: 1em; padding-left: 1.5em; }
-  .prose li { margin-bottom: 0.25em; }
-  .prose ul { list-style-type: disc; }
-  .prose ol { list-style-type: decimal; }
-  .prose a { color: var(--color-accent); text-decoration: underline; }
-  .prose a:hover { opacity: 0.8; }
-  .prose strong { font-weight: bold; }
-  .prose code { background-color: var(--color-surface); padding: 0.125em 0.25em; border-radius: 0.25rem; font-size: 0.875em; }
-  .prose pre { background-color: var(--color-surface); padding: 1em; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1em; }
-  .prose pre code { background: none; padding: 0; }
-  .prose blockquote { border-left: 3px solid var(--color-accent); padding-left: 1em; margin: 1em 0; font-style: italic; color: var(--color-text-secondary); }
+
+  .prose p {
+    margin-bottom: 1em;
+  }
+
+  .prose ul, .prose ol {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+  }
+
+  .prose li {
+    margin-bottom: 0.25em;
+  }
+
+  .prose ul {
+    list-style-type: disc;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+  }
+
+  .prose a {
+    color: var(--color-accent);
+    text-decoration: underline;
+  }
+
+  .prose a:hover {
+    opacity: 0.8;
+  }
+
+  .prose strong {
+    font-weight: bold;
+  }
+
+  .prose code {
+    background-color: var(--color-surface);
+    padding: 0.125em 0.25em;
+    border-radius: 0.25rem;
+    font-size: 0.875em;
+  }
+
+  .prose pre {
+    background-color: var(--color-surface);
+    padding: 1em;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1em;
+  }
+
+  .prose pre code {
+    background: none;
+    padding: 0;
+  }
+
+  .prose blockquote {
+    border-left: 3px solid var(--color-accent);
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+    color: var(--color-text-secondary);
+  }
 </style>
