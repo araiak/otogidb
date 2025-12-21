@@ -1,26 +1,27 @@
 import { ApiCheck, AssertionBuilder, Frequency } from 'checkly/constructs'
 import { cdnGroup } from '../groups'
-import { CLOUDINARY_BASE, CLOUDINARY_PATHS, CLOUDINARY_TRANSFORMS, SAMPLE_CARD_IDS } from '../utils/constants'
+import { CLOUDINARY_BASE, CLOUDINARY_PATHS, CLOUDINARY_TRANSFORMS, SAMPLE_ASSET_IDS } from '../utils/constants'
 
-// Check various Cloudinary image types
+// Check Cloudinary using small images and HEAD requests to minimize bandwidth
+// All use w_80 (80px thumbnail) which is ~2-5KB per image
 const imageChecks = [
   {
-    id: 'cloudinary-popup',
-    name: 'CDN - Cloudinary Popup Size',
-    transform: CLOUDINARY_TRANSFORMS.popup,
-    path: CLOUDINARY_PATHS.hdCard(SAMPLE_CARD_IDS.primary),
+    id: 'cloudinary-thumb-check',
+    name: 'CDN - Cloudinary Thumb Transform',
+    transform: CLOUDINARY_TRANSFORMS.thumb, // w_80,f_auto,q_auto
+    path: CLOUDINARY_PATHS.hdCard(SAMPLE_ASSET_IDS.primary),
   },
   {
     id: 'cloudinary-placeholder',
     name: 'CDN - Cloudinary Placeholder',
-    transform: 'f_auto,q_auto',
+    transform: 'w_80,f_auto,q_auto', // Small transform for placeholder
     path: CLOUDINARY_PATHS.placeholder,
   },
   {
     id: 'cloudinary-favicon',
     name: 'CDN - Cloudinary Favicon',
-    transform: CLOUDINARY_TRANSFORMS.favicon,
-    path: CLOUDINARY_PATHS.hdCard(SAMPLE_CARD_IDS.secondary),
+    transform: CLOUDINARY_TRANSFORMS.favicon, // Already small (32x32)
+    path: CLOUDINARY_PATHS.hdCard(SAMPLE_ASSET_IDS.secondary),
   },
 ]
 
@@ -33,7 +34,7 @@ imageChecks.forEach(({ id, name, transform, path }) => {
     locations: ['us-east-1', 'eu-west-1', 'ap-northeast-1'],
     maxResponseTime: 5000,
     request: {
-      method: 'HEAD',
+      method: 'HEAD', // HEAD request - doesn't download image body
       url: `${CLOUDINARY_BASE}/${transform}/${path}`,
       assertions: [
         AssertionBuilder.statusCode().equals(200),

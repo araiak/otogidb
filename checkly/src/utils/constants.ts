@@ -7,10 +7,18 @@ export const LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'] as const
 export type Locale = typeof LOCALES[number]
 
 // Sample card IDs for testing (stable, well-known cards)
+// URL uses simple ID (270), asset/image uses prefixed ID (100270)
 export const SAMPLE_CARD_IDS = {
-  primary: '100001',    // A reliable card for basic tests
-  secondary: '100014',  // Used for favicon
-  tertiary: '10001',    // Another stable card
+  primary: '270',       // Apollo's Harp - a reliable card for basic tests
+  secondary: '14',      // Used for favicon (asset: 100014)
+  tertiary: '1',        // First card
+}
+
+// Asset IDs (prefixed with 100 for Cloudinary paths)
+export const SAMPLE_ASSET_IDS = {
+  primary: '100270',
+  secondary: '100014',
+  tertiary: '100001',
 }
 
 // CSS Selectors
