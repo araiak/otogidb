@@ -10,7 +10,7 @@ export default defineConfig({
   checks: {
     activated: true,
     muted: false,
-    runtimeId: '2024.09',
+    runtimeId: '2025.04',
     frequency: Frequency.EVERY_12H, // Default for browser checks (free tier optimization)
     locations: ['us-east-1', 'eu-west-1'],
     tags: ['otogidb', 'production'],
