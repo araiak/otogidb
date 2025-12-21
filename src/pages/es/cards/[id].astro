@@ -7,7 +7,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
-import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD } from '../../../lib/images';
+import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { findSimilarCards, getSimilarityReason } from '../../../lib/similarity';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
@@ -179,6 +179,7 @@ const jsonLd = {
               alt={card.name || `Card #${card.id}`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"
+              onerror={`this.onerror=null; this.src='${getPlaceholderHD()}';`}
             />
           </div>
 
@@ -502,6 +503,7 @@ const jsonLd = {
                     alt={displayName}
                     class="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mx-auto object-cover"
                     loading="lazy"
+                    onerror={`this.onerror=null; this.src='${getPlaceholderCircle()}';`}
                   />
                 </div>
                 <div class="text-[10px] sm:text-xs md:text-sm font-medium truncate mt-1.5">{displayName}</div>

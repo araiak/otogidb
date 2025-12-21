@@ -106,6 +106,16 @@ export function getPathInLocale(currentPath: string, targetLocale: SupportedLoca
 }
 
 /**
+ * Client-side: Get locale from current URL path
+ * Safe to call during SSR (returns default locale)
+ * Use this in React components to get the current locale synchronously
+ */
+export function getLocaleFromUrl(): SupportedLocale {
+  if (typeof window === 'undefined') return DEFAULT_LOCALE;
+  return extractLocaleFromPath(window.location.pathname);
+}
+
+/**
  * Client-side: Detect preferred locale from browser settings
  * Only used on first visit when no explicit selection exists
  */
