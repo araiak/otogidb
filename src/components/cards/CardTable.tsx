@@ -141,6 +141,10 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
 
+  // Sort dropdown state
+  const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
+  const sortDropdownRef = useRef<HTMLDivElement>(null);
+
   // Read URL params on mount with input validation
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -253,6 +257,62 @@ export default function CardTable({ initialCards }: CardTableProps) {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [mobilePreviewCard]);
+
+  // Close sort dropdown when clicking outside
+  useEffect(() => {
+    if (!sortDropdownOpen) return;
+
+    function handleClickOutside(event: MouseEvent) {
+      if (sortDropdownRef.current && !sortDropdownRef.current.contains(event.target as Node)) {
+        setSortDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [sortDropdownOpen]);
+
+  // Sortable column options for the dropdown
+  const sortableColumns = useMemo(() => [
+    { id: 'id', label: 'ID' },
+    { id: 'name', label: 'Name' },
+    { id: 'max_atk', label: 'ATK' },
+    { id: 'max_hp', label: 'HP' },
+    { id: 'speed', label: 'Speed' },
+    { id: 'rarity', label: 'Rarity' },
+    { id: 'attribute', label: 'Attribute' },
+    { id: 'type', label: 'Type' },
+  ], []);
+
+  // Get current sort info for display
+  const currentSort = useMemo(() => {
+    if (sorting.length === 0) return { column: null, label: 'Default', desc: false };
+    const col = sortableColumns.find(c => c.id === sorting[0].id);
+    return {
+      column: sorting[0].id,
+      label: col?.label || sorting[0].id,
+      desc: sorting[0].desc
+    };
+  }, [sorting, sortableColumns]);
+
+  // Handle sort selection
+  const handleSortSelect = useCallback((columnId: string) => {
+    if (sorting.length > 0 && sorting[0].id === columnId) {
+      // Same column - toggle direction
+      setSorting([{ id: columnId, desc: !sorting[0].desc }]);
+    } else {
+      // Different column - default to descending for stats, ascending for text
+      const isStatColumn = ['max_atk', 'max_hp', 'speed', 'rarity'].includes(columnId);
+      setSorting([{ id: columnId, desc: isStatColumn }]);
+    }
+    setSortDropdownOpen(false);
+  }, [sorting]);
+
+  // Clear sort
+  const handleClearSort = useCallback(() => {
+    setSorting([]);
+    setSortDropdownOpen(false);
+  }, []);
 
   // Copy share link to clipboard
   const handleShare = useCallback(async () => {
@@ -889,6 +949,56 @@ export default function CardTable({ initialCards }: CardTableProps) {
         {/* Filter Dropdowns - wrap on small screens */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm text-secondary hidden sm:inline">Filters:</span>
+
+          {/* Sort Dropdown */}
+          <div className="relative" ref={sortDropdownRef}>
+            <button
+              onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
+              className="flex items-center gap-1 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+              style={{ borderColor: sorting.length > 0 ? 'var(--color-accent)' : 'var(--color-border)' }}
+            >
+              <span>Sort: {currentSort.label}</span>
+              {sorting.length > 0 && (
+                <span className="text-accent">{currentSort.desc ? '↓' : '↑'}</span>
+              )}
+              <svg className="w-3 h-3 ml-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {sortDropdownOpen && (
+              <div
+                className="absolute z-50 mt-1 p-1 rounded-md shadow-lg border bg-primary min-w-[140px]"
+                style={{ borderColor: 'var(--color-border)' }}
+              >
+                {sorting.length > 0 && (
+                  <>
+                    <button
+                      onClick={handleClearSort}
+                      className="w-full text-left px-2 py-1.5 text-xs rounded hover:bg-surface transition-colors text-secondary"
+                    >
+                      Clear sort
+                    </button>
+                    <div className="border-b my-1" style={{ borderColor: 'var(--color-border)' }} />
+                  </>
+                )}
+                {sortableColumns.map(col => (
+                  <button
+                    key={col.id}
+                    onClick={() => handleSortSelect(col.id)}
+                    className={`w-full text-left px-2 py-1.5 text-xs rounded hover:bg-surface transition-colors flex items-center justify-between ${
+                      currentSort.column === col.id ? 'text-accent font-medium' : ''
+                    }`}
+                  >
+                    <span>{col.label}</span>
+                    {currentSort.column === col.id && (
+                      <span>{currentSort.desc ? '↓' : '↑'}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
           <label className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
                  style={{ borderColor: hideNonPlayable ? 'var(--color-accent)' : 'var(--color-border)' }}>
             <input
