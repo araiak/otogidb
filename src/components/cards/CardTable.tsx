@@ -301,9 +301,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
       // Same column - toggle direction
       setSorting([{ id: columnId, desc: !sorting[0].desc }]);
     } else {
-      // Different column - default to descending for stats, ascending for text
-      const isStatColumn = ['max_atk', 'max_hp', 'speed', 'rarity'].includes(columnId);
-      setSorting([{ id: columnId, desc: isStatColumn }]);
+      // Different column - default to descending for stats/ID (newer cards first), ascending for text
+      const defaultDescending = ['id', 'max_atk', 'max_hp', 'speed', 'rarity'].includes(columnId);
+      setSorting([{ id: columnId, desc: defaultDescending }]);
     }
     setSortDropdownOpen(false);
   }, [sorting]);

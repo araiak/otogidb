@@ -30,8 +30,8 @@ imageChecks.forEach(({ id, name, transform, path }) => {
     name,
     group: cdnGroup,
     activated: true,
-    frequency: Frequency.EVERY_1H,
-    locations: ['us-east-1', 'eu-west-1', 'ap-northeast-1'],
+    frequency: Frequency.EVERY_12H,
+    locations: ['us-east-1'],
     maxResponseTime: 5000,
     request: {
       method: 'HEAD', // HEAD request - doesn't download image body
