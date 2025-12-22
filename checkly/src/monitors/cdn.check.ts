@@ -3,12 +3,13 @@ import { cdnGroup } from '../groups'
 import { CLOUDINARY_BASE, CLOUDINARY_PATHS, CLOUDINARY_TRANSFORMS, SAMPLE_ASSET_IDS } from '../utils/constants'
 
 // Cloudinary CDN - Thumbnail size (small bandwidth)
+// Free tier: 10,000 API checks/month = ~333/day max
 new ApiCheck('cloudinary-thumb', {
   name: 'CDN - Cloudinary Thumbnail',
   group: cdnGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1', 'ap-northeast-1'],
+  frequency: Frequency.EVERY_6H,
+  locations: ['us-east-1'],
   maxResponseTime: 5000,
   request: {
     method: 'HEAD', // HEAD request - no body downloaded

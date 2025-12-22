@@ -3,12 +3,13 @@ import { criticalGroup } from '../groups'
 import { BASE_URL, SAMPLE_CARD_IDS } from '../utils/constants'
 
 // Card Detail Page (Slot 3)
+// Free tier: 10,000 API checks/month = ~333/day max
 new ApiCheck('card-detail-page', {
   name: 'Card Detail - Sample Page',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1', 'ap-northeast-1', 'ap-southeast-1'],
+  frequency: Frequency.EVERY_1H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {
@@ -27,8 +28,8 @@ new ApiCheck('blog-index', {
   name: 'Blog - Index Page',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1'],
+  frequency: Frequency.EVERY_6H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',
@@ -45,8 +46,8 @@ new ApiCheck('updates-page', {
   name: 'Updates - Patch Notes',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1'],
+  frequency: Frequency.EVERY_6H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',
@@ -63,8 +64,8 @@ new ApiCheck('sitemap', {
   name: 'Sitemap - SEO Index',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1'],
+  frequency: Frequency.EVERY_12H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',

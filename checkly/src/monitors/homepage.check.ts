@@ -3,12 +3,13 @@ import { criticalGroup } from '../groups'
 import { BASE_URL } from '../utils/constants'
 
 // Homepage EN - Primary (Slot 1)
+// Free tier: 10,000 API checks/month = ~333/day max
 new ApiCheck('homepage-en', {
   name: 'Homepage - English',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1', 'ap-northeast-1', 'ap-southeast-1'],
+  frequency: Frequency.EVERY_1H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {
@@ -27,8 +28,8 @@ new ApiCheck('homepage-ja', {
   name: 'Homepage - Japanese',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['ap-northeast-1', 'us-west-1', 'eu-west-1', 'ap-southeast-1'],
+  frequency: Frequency.EVERY_6H,
+  locations: ['ap-northeast-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {
@@ -46,8 +47,8 @@ new ApiCheck('root-redirect', {
   name: 'Root - Redirect Check',
   group: criticalGroup,
   activated: true,
-  frequency: Frequency.EVERY_2M,
-  locations: ['us-east-1', 'eu-west-1'],
+  frequency: Frequency.EVERY_6H,
+  locations: ['us-east-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',

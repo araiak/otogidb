@@ -12,8 +12,8 @@ localesToCheck.forEach((locale) => {
     name: `Data - Cards Index (${locale.toUpperCase()})`,
     group: cdnGroup,
     activated: true,
-    frequency: Frequency.EVERY_1H,
-    locations: ['us-east-1', 'eu-west-1'],
+    frequency: Frequency.EVERY_12H,
+    locations: ['us-east-1'],
     maxResponseTime: 10000,
     request: {
       method: 'GET',
@@ -33,7 +33,7 @@ new ApiCheck('data-manifest', {
   name: 'Data - Patch Notes Manifest',
   group: cdnGroup,
   activated: true,
-  frequency: Frequency.EVERY_2H,
+  frequency: Frequency.EVERY_24H,
   locations: ['us-east-1'],
   maxResponseTime: 5000,
   request: {
