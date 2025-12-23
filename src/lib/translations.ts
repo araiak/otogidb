@@ -65,12 +65,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: 'by',
 
     patchNotes: 'Patch Notes',
-    patchNotesDescription: 'Card updates, new releases, and balance changes.',
+    patchNotesDescription: 'Card updates, new releases, and availability changes.',
     noPatchNotes: 'No patch notes available yet.',
     version: 'Version',
     newCards: 'New Cards',
     changed: 'Changed',
-    balanceChanges: 'Balance Changes',
+    balanceChanges: 'Card Changes',
 
     skill: 'Skill',
     abilities: 'Abilities',
@@ -108,12 +108,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: '著者:',
 
     patchNotes: 'パッチノート',
-    patchNotesDescription: 'カードの更新、新リリース、バランス調整。',
+    patchNotesDescription: 'カードの更新、新リリース、入手方法の変更。',
     noPatchNotes: 'パッチノートはまだありません。',
     version: 'バージョン',
     newCards: '新カード',
     changed: '変更',
-    balanceChanges: 'バランス調整',
+    balanceChanges: 'カード変更',
 
     skill: 'スキル',
     abilities: 'アビリティ',
@@ -151,12 +151,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: '작성자:',
 
     patchNotes: '패치 노트',
-    patchNotesDescription: '카드 업데이트, 신규 출시, 밸런스 조정.',
+    patchNotesDescription: '카드 업데이트, 신규 출시, 획득 방법 변경.',
     noPatchNotes: '아직 패치 노트가 없습니다.',
     version: '버전',
     newCards: '신규 카드',
     changed: '변경됨',
-    balanceChanges: '밸런스 조정',
+    balanceChanges: '카드 변경',
 
     skill: '스킬',
     abilities: '어빌리티',
@@ -194,12 +194,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: '作者:',
 
     patchNotes: '更新日志',
-    patchNotesDescription: '卡牌更新、新卡发布、平衡性调整。',
+    patchNotesDescription: '卡牌更新、新卡发布、获取方式变更。',
     noPatchNotes: '暂无更新日志。',
     version: '版本',
     newCards: '新卡',
     changed: '已更改',
-    balanceChanges: '平衡性调整',
+    balanceChanges: '卡牌变更',
 
     skill: '技能',
     abilities: '能力',
@@ -237,12 +237,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: '作者:',
 
     patchNotes: '更新日誌',
-    patchNotesDescription: '卡牌更新、新卡發布、平衡性調整。',
+    patchNotesDescription: '卡牌更新、新卡發布、取得方式變更。',
     noPatchNotes: '暫無更新日誌。',
     version: '版本',
     newCards: '新卡',
     changed: '已更改',
-    balanceChanges: '平衡性調整',
+    balanceChanges: '卡牌變更',
 
     skill: '技能',
     abilities: '能力',
@@ -280,12 +280,12 @@ const translations: Record<SupportedLocale, UITranslations> = {
     by: 'por',
 
     patchNotes: 'Notas del Parche',
-    patchNotesDescription: 'Actualizaciones de cartas, nuevos lanzamientos y cambios de balance.',
+    patchNotesDescription: 'Actualizaciones de cartas, nuevos lanzamientos y cambios de disponibilidad.',
     noPatchNotes: 'Aún no hay notas del parche disponibles.',
     version: 'Versión',
     newCards: 'Nuevas Cartas',
     changed: 'Cambiado',
-    balanceChanges: 'Cambios de Balance',
+    balanceChanges: 'Cambios de Cartas',
 
     skill: 'Habilidad',
     abilities: 'Habilidades',
