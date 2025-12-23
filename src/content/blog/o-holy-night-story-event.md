@@ -10,6 +10,12 @@ I wanted to do a quick rundown of the O Holy Night story event now that we have 
 
 ---
 
+## Limited Time: Half-Price 5-Star Orb
+
+There's a **5-star bonus orb available at half price** until the event ends! Given the weaker rewards in this event, it's highly recommended that players who can [PVP farm](/blog/pvp-farming-guide) make an effort to grab this extra orb before time runs out.
+
+---
+
 ## New Player Priority
 
 **Aim for Chapter 4!** I think :card[1436] is the standout card for new players in this event - a solid tank, much tankier than last event's :card[1489]. If you already have strong melee units, you can skip. Later on she'll likely be replaced by units with better support skills (e.g. :card[738] has less EHP but offers more team value with good healers). If you can't reach the Chapter 4 boss, I'd recommend saving your resources (revives, items) rather than spending them on earlier chapters.

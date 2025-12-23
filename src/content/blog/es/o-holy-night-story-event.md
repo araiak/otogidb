@@ -11,6 +11,12 @@ Quería hacer un resumen rápido del evento de historia O Holy Night ahora que t
 
 ---
 
+## Tiempo Limitado: Orbe 5 Estrellas a Mitad de Precio
+
+¡Hay un **orbe de bonificación de 5 estrellas disponible a mitad de precio** hasta que termine el evento! Dado que las recompensas de este evento son más débiles, se recomienda encarecidamente que los jugadores que puedan [farmear PVP](/es/blog/pvp-farming-guide) hagan el esfuerzo de conseguir este orbe extra antes de que se acabe el tiempo.
+
+---
+
 ## Prioridad para Nuevos Jugadores
 
 **¡Apunta al Capítulo 4!** Creo que :card[1436] es la carta destacada para nuevos jugadores en este evento - un tanque sólido, mucho más resistente que :card[1489] del evento anterior. Si ya tienes unidades melee fuertes, puedes saltártela. Más adelante probablemente será reemplazada por unidades con mejores habilidades de soporte (ej: :card[738] tiene menos EHP pero ofrece más valor al equipo con buenos healers). Si no puedes llegar al jefe del Capítulo 4, recomendaría guardar tus recursos (revivir, objetos) en lugar de gastarlos en capítulos anteriores.
