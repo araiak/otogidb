@@ -4,6 +4,7 @@ description: "Análisis rápido de las cartas destacadas de la subasta para juga
 date: "2025-12-25"
 author: "Araiak"
 tags: ["análisis", "subasta", "navidad", "phantasma"]
+locale: "es"
 ---
 
 Seré breve aquí, en general estas cartas han quedado obsoletas por el power creep y eso se nota en los precios más bajos. Hay 3 que podrían destacar, así que compartiré mis pensamientos sobre ellas.
