@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TierList from '../../../components/tiers/TierList';
+
+const currentLocale = 'ja';
+
+const pageTitle = "ティアリスト - カードランキング";
+const pageDescription = "おとぎ：スピリットエージェントの全カードのティアランキングを表示します。役割、属性、バトルモードでフィルタリング可能。";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-4 md:mb-6">
+      <div class="flex items-center gap-2 mb-1 md:mb-2">
+        <h1 class="text-lg sm:text-xl md:text-3xl font-bold">ティアリスト</h1>
+        <span class="px-2 py-0.5 text-xs font-semibold bg-blue-500/20 text-blue-400 rounded">BETA</span>
+      </div>
+      <p class="text-secondary text-sm md:text-base hidden sm:block">
+        バトルシミュレーションに基づくカードランキング。役割、属性、テストモードでフィルタリング可能。
+      </p>
+    </div>
+
+    <!-- Tier List (React Island) -->
+    <TierList client:load />
+  </div>
+</BaseLayout>
