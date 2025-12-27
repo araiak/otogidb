@@ -91,21 +91,18 @@ export const DATA_ENDPOINTS: ApiEndpoint[] = [
       const firstCardKey = Object.keys(cards)[0];
       if (firstCardKey) {
         const card = cards[firstCardKey] as Record<string, unknown>;
-        const requiredFields = ['overall', 'role'];
-        for (const field of requiredFields) {
-          if (!(field in card)) {
-            return { valid: false, error: `Tier data missing required field: ${field}` };
-          }
+        // Check card has tiers object with overall tier
+        const tiers = card.tiers as Record<string, unknown>;
+        if (!tiers || typeof tiers !== 'object') {
+          return { valid: false, error: 'Card missing tiers object' };
         }
-        // Check overall has tier property
-        const overall = card.overall as Record<string, unknown>;
-        if (!overall || typeof overall.tier !== 'string') {
-          return { valid: false, error: 'overall.tier is not a string' };
+        if (typeof tiers.overall !== 'string') {
+          return { valid: false, error: 'tiers.overall is not a string' };
         }
         // Verify tier is valid
         const validTiers = ['S+', 'S', 'A', 'B', 'C', 'D', 'N/A'];
-        if (!validTiers.includes(overall.tier as string)) {
-          return { valid: false, error: `Invalid tier: ${overall.tier}` };
+        if (!validTiers.includes(tiers.overall as string)) {
+          return { valid: false, error: `Invalid tier: ${tiers.overall}` };
         }
       }
 
