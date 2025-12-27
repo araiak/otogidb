@@ -2,21 +2,21 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import TierList from '../../../components/tiers/TierList';
 
-const currentLocale = 'en';
+const currentLocale = 'ko';
 
-const pageTitle = "Tier List - Card Rankings by Battle Mode";
-const pageDescription = "View tier rankings for all Otogi: Spirit Agents cards. Filter by role, attribute, and battle mode. See 5-round, 1-round, and defense rankings.";
+const pageTitle = "티어 리스트 - 카드 랭킹";
+const pageDescription = "오토기: 스피릿 에이전트의 모든 카드 티어 랭킹을 확인하세요. 역할, 속성, 배틀 모드별로 필터링할 수 있습니다.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
   <div class="container mx-auto px-4 py-6">
     <div class="mb-4 md:mb-6">
       <div class="flex items-center gap-2 mb-1 md:mb-2">
-        <h1 class="text-lg sm:text-xl md:text-3xl font-bold">Tier List</h1>
+        <h1 class="text-lg sm:text-xl md:text-3xl font-bold">티어 리스트</h1>
         <span class="px-2 py-0.5 text-xs font-semibold bg-blue-500/20 text-blue-400 rounded">BETA</span>
       </div>
       <p class="text-secondary text-sm md:text-base hidden sm:block">
-        Card rankings based on battle simulation benchmarks. Filter by role, attribute, or test mode.
+        배틀 시뮬레이션 벤치마크 기반 카드 랭킹. 역할, 속성, 테스트 모드별로 필터링할 수 있습니다.
       </p>
     </div>
 

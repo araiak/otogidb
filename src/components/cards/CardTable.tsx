@@ -12,6 +12,7 @@ import {
 } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
 import { getCardsData, type CardLocale } from '../../lib/cards';
+import { fetchWithCache } from '../../lib/cache';
 import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import Fuse from 'fuse.js';
@@ -141,6 +142,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
 
+  // Tier data state
+  const [tierData, setTierData] = useState<Record<string, any> | null>(null);
+
   // Sort dropdown state
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
   const sortDropdownRef = useRef<HTMLDivElement>(null);
@@ -243,6 +247,23 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     window.history.replaceState({}, '', newUrl);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
+
+  // Load tier data on mount (uses IndexedDB cache with hashed path for cache busting)
+  useEffect(() => {
+    // Get hashed path from manifest if available, fallback to base path
+    const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
+    const tiersPath = dataPaths.tiers?.path || '/data/tiers.json';
+
+    fetchWithCache<{ cards: Record<string, any> }>(tiersPath)
+      .then(data => {
+        if (data?.cards) {
+          setTierData(data.cards);
+        }
+      })
+      .catch(() => {
+        // Tier data is optional, don't fail if unavailable
+      });
+  }, []);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -595,7 +616,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skills={{}} locale={locale} />,
+      cell: ({ row }) => <ImageCell card={row.original} skills={{}} tierData={tierData?.[row.original.id]} locale={locale} />,
     },
     {
       accessorKey: 'id',
@@ -884,7 +905,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
       ),
     },
-  ], [locale]);
+  ], [locale, tierData]);
 
   // Create table instance
   const table = useReactTable({
@@ -1358,6 +1379,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <CardPreviewContent
                 card={mobilePreviewCard}
                 skills={{}}
+                tierData={tierData?.[mobilePreviewCard.id]}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}

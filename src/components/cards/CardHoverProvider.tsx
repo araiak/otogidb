@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { Placement } from '@floating-ui/react';
-import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react';
+import { useFloating, offset, flip, shift, autoUpdate, FloatingPortal } from '@floating-ui/react';
 import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
 import CardPreviewContent from './CardPreviewContent';
@@ -120,21 +120,23 @@ export default function CardHoverProvider({
 
   return (
     <>
-      {/* Desktop floating popup - responsive sizing */}
+      {/* Desktop floating popup - rendered via portal to prevent layout shift */}
       {activeCard && (
-        <div
-          ref={floating.refs.setFloating}
-          style={floating.floatingStyles}
-          className="popup z-50 max-w-md lg:max-w-lg xl:max-w-xl hidden md:block"
-        >
-          <CardPreviewContent
-            card={activeCard}
-            skills={skills}
-            tierData={tiers?.cards[activeCard.id] || null}
-            compact={compact}
-            locale={locale}
-          />
-        </div>
+        <FloatingPortal>
+          <div
+            ref={floating.refs.setFloating}
+            style={floating.floatingStyles}
+            className="popup z-50 max-w-md lg:max-w-lg xl:max-w-xl hidden md:block"
+          >
+            <CardPreviewContent
+              card={activeCard}
+              skills={skills}
+              tierData={tiers?.cards[activeCard.id] || null}
+              compact={compact}
+              locale={locale}
+            />
+          </div>
+        </FloatingPortal>
       )}
 
       {/* Mobile preview modal */}
@@ -219,18 +221,20 @@ export function CardFloatingPopup({
   if (!isOpen || !referenceElement || !card) return null;
 
   return (
-    <div
-      ref={refs.setFloating}
-      style={floatingStyles}
-      className="popup z-50 max-w-md lg:max-w-lg xl:max-w-xl"
-    >
-      <CardPreviewContent
-        card={card}
-        skills={skills}
-        tierData={tierData}
-        compact={compact}
-        locale={locale}
-      />
-    </div>
+    <FloatingPortal>
+      <div
+        ref={refs.setFloating}
+        style={floatingStyles}
+        className="popup z-50 max-w-md lg:max-w-lg xl:max-w-xl"
+      >
+        <CardPreviewContent
+          card={card}
+          skills={skills}
+          tierData={tierData}
+          compact={compact}
+          locale={locale}
+        />
+      </div>
+    </FloatingPortal>
   );
 }

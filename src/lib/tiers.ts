@@ -17,6 +17,18 @@ let tierDataCache: TierData | null = null;
 let availabilityCache: Record<string, boolean> | null = null;
 
 /**
+ * Get data paths from manifest (set by BaseLayout at build time).
+ * Falls back to base paths if manifest not available.
+ */
+function getDataPaths(): { tiers: string; cardsIndex: string } {
+  const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
+  return {
+    tiers: dataPaths.tiers?.path || '/data/tiers.json',
+    cardsIndex: dataPaths.en?.cards_index || '/data/cards_index.json',
+  };
+}
+
+/**
  * Load availability data from cards_index.json.
  */
 async function loadAvailabilityData(): Promise<Record<string, boolean>> {
@@ -25,7 +37,8 @@ async function loadAvailabilityData(): Promise<Record<string, boolean>> {
   }
 
   try {
-    const response = await fetch('/data/cards_index.json');
+    const { cardsIndex } = getDataPaths();
+    const response = await fetch(cardsIndex);
     if (!response.ok) {
       return {};
     }
@@ -50,8 +63,9 @@ export async function loadTierData(): Promise<TierData> {
     return tierDataCache;
   }
 
+  const { tiers } = getDataPaths();
   const [tierResponse, availability] = await Promise.all([
-    fetch('/data/tiers.json'),
+    fetch(tiers),
     loadAvailabilityData(),
   ]);
 
