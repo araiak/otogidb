@@ -6,7 +6,18 @@ author: "Araiak"
 tags: ["guide", "tier-list", "analysis"]
 ---
 
-Tier lists. So let's get it out of the way right up front. You don't need a tier list, a team of MLB monsters with any sort of synergy can beat all of the event content. World Boss and Challenge are specialized to the point tier lists are not going to get you to the top ranks, you are going to have to do some of that work yourself. The tier lists presented here are also intended to only answer one question, and that question does not align with how you get to the best team. You need a more subjective tier list to understand the intricacies of availability and synergies to get the best possible teams, and I'm not high enough ranked to give you that information accurately. This tier list just seeks to answer how strong this card is in isolation. That is helpful for getting started, it's helpful for level setting, but it won't tell you if a card is going to improve your team or not.
+## TL;DR
+
+- Tiers measure **individual card strength in isolation**, not team synergy
+- Use tiers to identify strong cards, then build synergies around them
+- The +/-X% on card portraits shows performance vs baseline (comparable across roles)
+- Diversify your buffs: damage + crit rate + crit damage beats stacking one stat
+
+---
+
+Tier lists are useful for getting started and level-setting expectations, but they have limits. A team of MLB cards with good synergy can clear all event content regardless of tier rankings. For competitive World Boss and Challenge rankings, you'll need to dig deeper into team composition yourself.
+
+These tier lists answer one specific question: **how strong is this card in isolation?** This helps identify solid cards, but won't tell you if a card improves your specific team. Understanding synergies and availability requires more nuanced analysis that goes beyond what a simulation can measure.
 
 ## Methodology
 
@@ -28,7 +39,7 @@ Basically the goal with this tier list is if you were to grab 5 S-tier monsters 
 
 ## Cards That May Be Under/Overweight
 
-Some things also may be under/overweight because the supporting team in the sim is, well, kinda bad.
+Some cards may be under/overweight because the supporting team in the simulation uses baseline cards with minimal synergies.
 
 For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
 
@@ -36,7 +47,7 @@ For example :card[549] is probably underweight here because adding base stats to
 
 If you are a new player and you are looking for how to use this list, my suggestion would be, try to get a high tier greedy attacker or pick one you have in your friends list, and then start trying to build around that monster in the same attribute. You want "strong" monsters, so ones that have higher ratings, but you want to diversify the kinds of buffs they give to the team. Try to get damage boosts, crit boosts, crit damage boosts, etc. If you get 5 cards that all increase damage your team will be good, but it won't be as good as a team that spreads damage, crit rate, crit damage, attack speed, and skill damage boosts across the team in the right ratios. The tier list doesn't take into account these synergies, availability, etc. But if you have gotten that far you don't need a tier list telling you how to build your team!
 
-I'll also add a note here, the sim isn't perfect. It is probably 80% accurate, but the last 20% is way more work and I think this looks accurate without your glasses on, so that might be as far as I get with it for a while.
+The simulation isn't perfect - it's roughly 80% accurate. The remaining 20% involves edge cases and complex interactions that require significantly more work to model. For most team-building decisions, this level of accuracy is sufficient.
 
 ## Tier Definitions
 
@@ -52,6 +63,12 @@ Here are the tiers for each test, these are based on the mean and standard devia
 | D    | < -1.0  | Poor                              |
 
 ## Understanding the Different Tier Types
+
+**Role-Normalized Tiers (5-Round, 1-Round, Defense, Overall):** These tiers compare cards within their own role. A B-tier Melee is compared only to other Melee cards, not to Ranged or Healers. This makes the tiers useful for answering "is this card good for its role?" but means an S-tier Healer isn't directly comparable to an S-tier Ranged. However, the +/-X% shown on card portraits represents performance vs the baseline team, so you can compare that number across roles to see relative impact.
+
+**Globally-Normalized Tier (Individual DPS):** This tier compares all damage dealers (Melee and Ranged) against each other globally. It answers "who does the most damage regardless of role?" Healers and Assists are excluded since they aren't meant to be damage dealers.
+
+**Reserve Tier:** This measures how much a card contributes when placed in the reserve slot (passive abilities only). It's role-normalized and helps you pick strong reserve supports.
 
 Overall score takes a p-normalization of those scores, the goal of this is to highlight cards that are exceptional in one or more of the tests. Some of the super defensive cards will probably have higher tiers than people expect! I think that is ok, the best use of the tier ratings are to look at the categories based on what your team needs. If you are having trouble surviving in story or challenge look at the defensive, if you need something that contributes a lot of damage in longer fights look at 5-round.
 

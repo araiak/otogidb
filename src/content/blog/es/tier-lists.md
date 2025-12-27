@@ -1,16 +1,28 @@
 ---
-title: "Tier Lists: Methodology and How to Use Them"
-description: "Understanding the simulation-based tier lists and what they can (and can't) tell you about building teams"
+title: "Listas de Niveles: Metodología y Cómo Usarlas"
+description: "Comprendiendo las listas de niveles basadas en simulación y lo que pueden (y no pueden) decirte sobre la construcción de equipos"
 date: "2025-12-27"
 author: "Araiak"
-tags: ["guide", "tier-list", "analysis"]
+tags: ["guía", "tier-list", "análisis"]
+locale: "es"
 ---
 
-Tier lists. So let's get it out of the way right up front. You don't need a tier list, a team of MLB monsters with any sort of synergy can beat all of the event content. World Boss and Challenge are specialized to the point tier lists are not going to get you to the top ranks, you are going to have to do some of that work yourself. The tier lists presented here are also intended to only answer one question, and that question does not align with how you get to the best team. You need a more subjective tier list to understand the intricacies of availability and synergies to get the best possible teams, and I'm not high enough ranked to give you that information accurately. This tier list just seeks to answer how strong this card is in isolation. That is helpful for getting started, it's helpful for level setting, but it won't tell you if a card is going to improve your team or not.
+## Resumen
 
-## Methodology
+- Los niveles miden **la fuerza individual de cada carta en aislamiento**, no la sinergia del equipo
+- Usa los niveles para identificar cartas fuertes, luego construye sinergias alrededor de ellas
+- El +/-X% en los retratos de cartas muestra el rendimiento vs línea base (comparable entre roles)
+- Diversifica tus buffs: daño + tasa crítica + daño crítico supera acumular una sola estadística
 
-We take a standard looking team of low tier max limit broken and level 90 cards, we strip their abilities and set them to always match your type (Divina, Anima, Phantasma). We force conditional abilities to be on like :card[1498], the test assumes that one of the Five Swords under Heaven is on the team or for :card[616] we have an elf on the team. Leaders go in the leader slot. We swap Melee for Melee, Ranged for Ranged, and Healer for Healer. Assists go on a melee in defensive tests and a ranged on offensive tests. This is to ensure that we paint each card in its best light, if you can't meet these conditions they will be weaker. The team that supports them is:
+---
+
+Las listas de niveles son útiles para empezar y establecer expectativas, pero tienen límites. Un equipo de cartas MLB con buena sinergia puede completar todo el contenido de eventos sin importar los rankings de niveles. Para rankings competitivos en World Boss y Challenge, necesitarás profundizar más en la composición del equipo por tu cuenta.
+
+Estas listas de niveles responden una pregunta específica: **¿qué tan fuerte es esta carta en aislamiento?** Esto ayuda a identificar cartas sólidas, pero no te dirá si una carta mejora tu equipo específico. Entender las sinergias y disponibilidad requiere un análisis más matizado que va más allá de lo que una simulación puede medir.
+
+## Metodología
+
+Tomamos un equipo estándar de cartas de bajo nivel con máximo límite roto y nivel 90, eliminamos sus habilidades y las configuramos para que siempre coincidan con tu tipo (Divina, Anima, Phantasma). Forzamos las habilidades condicionales a estar activas como :card[1498], la prueba asume que una de las Cinco Espadas bajo el Cielo está en el equipo o para :card[616] tenemos un elfo en el equipo. Los líderes van en el slot de líder. Intercambiamos Cuerpo a Cuerpo por Cuerpo a Cuerpo, A Distancia por A Distancia, y Sanador por Sanador. Los Asistentes van en un cuerpo a cuerpo en pruebas defensivas y en un a distancia en pruebas ofensivas. Esto es para asegurar que pintamos cada carta en su mejor luz, si no puedes cumplir estas condiciones serán más débiles. El equipo que las apoya es:
 
 - :card[6]
 - :card[6]
@@ -18,43 +30,49 @@ We take a standard looking team of low tier max limit broken and level 90 cards,
 - :card[266]
 - :card[266]
 
-These are older cards with lower stats.
+Estas son cartas antiguas con estadísticas bajas.
 
-Then we run some simulations, first is a 5 wave simulation, second is a 1 wave simulation, and last is a defensive simulation. In the offensive simulations we measure the total damage done. In the defensive simulation we have the enemy do 10% more damage every 10s until the team wipes and measures the time. We also measure the individual damage done in the 1 wave simulation for our greedy attacker tier.
+Luego ejecutamos algunas simulaciones, primero es una simulación de 5 oleadas, segundo es una simulación de 1 oleada, y último es una simulación defensiva. En las simulaciones ofensivas medimos el daño total hecho. En la simulación defensiva el enemigo hace 10% más de daño cada 10s hasta que el equipo cae y medimos el tiempo. También medimos el daño individual hecho en la simulación de 1 oleada para nuestro nivel de atacante codicioso.
 
-The goal here is we can measure in isolation what the relative team value of each card is with the same baseline team. Now this isn't by any means perfect, you have one monster's worth of buffs and basically no real synergies. Teams that do the most damage thrive on synergies and multiplicative buffs like damage * crit * crit damage, etc.
+El objetivo aquí es que podamos medir en aislamiento cuál es el valor relativo de cada carta para el equipo con el mismo equipo base. Ahora esto no es de ninguna manera perfecto, tienes un monstruo de buffs y básicamente ninguna sinergia real. Los equipos que hacen más daño prosperan en sinergias y buffs multiplicativos como daño * crítico * daño crítico, etc.
 
-Basically the goal with this tier list is if you were to grab 5 S-tier monsters you would probably have a good team, you might not have a great team, but none of those monsters would be bad, they just may not synergize with one another.
+Básicamente el objetivo de esta lista de niveles es que si tomas 5 monstruos S-tier probablemente tendrás un buen equipo, quizás no tengas un gran equipo, pero ninguno de esos monstruos será malo, solo pueden no sinergizar entre sí.
 
-## Cards That May Be Under/Overweight
+## Cartas Que Pueden Estar Sobre/Infravaloradas
 
-Some things also may be under/overweight because the supporting team in the sim is, well, kinda bad.
+Algunas cartas pueden estar sobre/infravaloradas porque el equipo de apoyo en la simulación usa cartas base con sinergias mínimas.
 
-For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
+Por ejemplo :card[549] probablemente está infravalorada aquí porque agregar estadísticas base a monstruos débiles los hace menos débiles, pero el efecto no obtiene el efecto multiplicativo de otros boosts en tu equipo. :card[1307] y :card[1494] probablemente están infravaloradas porque no hay boosts sinérgicos de los que estas cartas puedan beneficiarse. :card[580] o cualquier carta con XP, tasa de drop, piedras del alma están infravaloradas porque estas no son medidas de ninguna manera por la simulación. Los DoTs probablemente están sobrevalorados porque no están completamente implementados, pero estos no son muy fuertes en la simulación o en el juego así que esto puede no ser muy relevante. Los efectos CC tampoco están completamente implementados, todos están implementados como un stun genérico, pero estos de nuevo solo son relevantes en la simulación defensiva y no son muy impactantes.
 
-## How to Use This List as a New Player
+## Cómo Usar Esta Lista Como Nuevo Jugador
 
-If you are a new player and you are looking for how to use this list, my suggestion would be, try to get a high tier greedy attacker or pick one you have in your friends list, and then start trying to build around that monster in the same attribute. You want "strong" monsters, so ones that have higher ratings, but you want to diversify the kinds of buffs they give to the team. Try to get damage boosts, crit boosts, crit damage boosts, etc. If you get 5 cards that all increase damage your team will be good, but it won't be as good as a team that spreads damage, crit rate, crit damage, attack speed, and skill damage boosts across the team in the right ratios. The tier list doesn't take into account these synergies, availability, etc. But if you have gotten that far you don't need a tier list telling you how to build your team!
+Si eres un nuevo jugador y estás buscando cómo usar esta lista, mi sugerencia sería, intenta obtener un atacante codicioso de alto nivel o elige uno que tengas en tu lista de amigos, y luego comienza a intentar construir alrededor de ese monstruo en el mismo atributo. Quieres monstruos "fuertes", así que los que tienen calificaciones más altas, pero quieres diversificar los tipos de buffs que dan al equipo. Intenta obtener boosts de daño, boosts de crítico, boosts de daño crítico, etc. Si obtienes 5 cartas que todas aumentan el daño tu equipo será bueno, pero no será tan bueno como un equipo que distribuye daño, tasa crítica, daño crítico, velocidad de ataque, y boosts de daño de habilidad a través del equipo en las proporciones correctas. La lista de niveles no toma en cuenta estas sinergias, disponibilidad, etc. Pero si has llegado tan lejos no necesitas una lista de niveles diciéndote cómo construir tu equipo!
 
-I'll also add a note here, the sim isn't perfect. It is probably 80% accurate, but the last 20% is way more work and I think this looks accurate without your glasses on, so that might be as far as I get with it for a while.
+La simulación no es perfecta - es aproximadamente 80% precisa. El 20% restante involucra casos extremos e interacciones complejas que requieren significativamente más trabajo para modelar. Para la mayoría de decisiones de construcción de equipos, este nivel de precisión es suficiente.
 
-## Tier Definitions
+## Definiciones de Niveles
 
-Here are the tiers for each test, these are based on the mean and standard deviation meaning that cards that scored high showed significant value over the average card:
+Aquí están los niveles para cada prueba, estos están basados en la media y desviación estándar lo que significa que las cartas que puntuaron alto mostraron valor significativo sobre la carta promedio:
 
-| Tier | Z-score | Meaning                           |
-|------|---------|-----------------------------------|
-| S+   | >= 3.0  | Elite outliers (3+ SD above mean) |
-| S    | >= 2.0  | Exceptional (2-3 SD above mean)   |
-| A    | >= 1.0  | Good (1-2 SD above mean)          |
-| B    | >= 0.0  | Average (within 1 SD)             |
-| C    | >= -1.0 | Below average                     |
-| D    | < -1.0  | Poor                              |
+| Nivel | Puntuación Z | Significado                            |
+|-------|--------------|----------------------------------------|
+| S+    | >= 3.0       | Élite (3+ SD sobre la media)           |
+| S     | >= 2.0       | Excepcional (2-3 SD sobre la media)    |
+| A     | >= 1.0       | Bueno (1-2 SD sobre la media)          |
+| B     | >= 0.0       | Promedio (dentro de 1 SD)              |
+| C     | >= -1.0      | Bajo el promedio                       |
+| D     | < -1.0       | Pobre                                  |
 
-## Understanding the Different Tier Types
+## Entendiendo los Diferentes Tipos de Niveles
 
-Overall score takes a p-normalization of those scores, the goal of this is to highlight cards that are exceptional in one or more of the tests. Some of the super defensive cards will probably have higher tiers than people expect! I think that is ok, the best use of the tier ratings are to look at the categories based on what your team needs. If you are having trouble surviving in story or challenge look at the defensive, if you need something that contributes a lot of damage in longer fights look at 5-round.
+**Niveles Normalizados por Rol (5 Rondas, 1 Ronda, Defensa, General):** Estos niveles comparan cartas dentro de su propio rol. Un Cuerpo a Cuerpo B-tier solo se compara con otras cartas Cuerpo a Cuerpo, no con A Distancia o Sanadores. Esto hace que los niveles sean útiles para responder "¿es esta carta buena para su rol?" pero significa que un Sanador S-tier no es directamente comparable a un A Distancia S-tier. Sin embargo, el +/-X% mostrado en los retratos de cartas representa el rendimiento vs el equipo base, así que puedes comparar ese número entre roles para ver el impacto relativo.
+
+**Nivel Normalizado Globalmente (DPS Individual):** Este nivel compara todos los dealers de daño (Cuerpo a Cuerpo y A Distancia) entre sí globalmente. Responde "¿quién hace más daño sin importar el rol?" Sanadores y Asistentes están excluidos ya que no están destinados a ser dealers de daño.
+
+**Nivel de Reserva:** Esto mide cuánto contribuye una carta cuando se coloca en el slot de reserva (solo habilidades pasivas). Está normalizado por rol y te ayuda a elegir soportes de reserva fuertes.
+
+La puntuación general toma una p-normalización de esas puntuaciones, el objetivo de esto es destacar cartas que son excepcionales en una o más de las pruebas. Algunas de las cartas super defensivas probablemente tendrán niveles más altos de lo que la gente espera! Creo que está bien, el mejor uso de las calificaciones de nivel es mirar las categorías basándote en lo que tu equipo necesita. Si tienes problemas para sobrevivir en historia o desafío mira la defensiva, si necesitas algo que contribuya mucho daño en peleas más largas mira 5 rondas.
 
 ---
 
-*Check out the [Tier Lists](/en/tiers) page to see the full rankings!*
+*¡Visita la página de [Listas de Niveles](/es/tiers) para ver los rankings completos!*

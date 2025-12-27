@@ -115,6 +115,8 @@
     scroll-behavior: smooth;
     /* Always show scrollbar to prevent layout shift when content changes */
     overflow-y: scroll;
+    /* Reserve space for scrollbar to prevent content shift */
+    scrollbar-gutter: stable;
   }
 
   body {

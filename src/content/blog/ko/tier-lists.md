@@ -1,16 +1,28 @@
 ---
-title: "Tier Lists: Methodology and How to Use Them"
-description: "Understanding the simulation-based tier lists and what they can (and can't) tell you about building teams"
+title: "티어 리스트: 평가 방법과 활용 가이드"
+description: "시뮬레이션 기반 티어 리스트의 작동 원리와 팀 구성에서의 활용법 및 한계에 대해"
 date: "2025-12-27"
 author: "Araiak"
-tags: ["guide", "tier-list", "analysis"]
+tags: ["가이드", "티어리스트", "분석"]
+locale: "ko"
 ---
 
-Tier lists. So let's get it out of the way right up front. You don't need a tier list, a team of MLB monsters with any sort of synergy can beat all of the event content. World Boss and Challenge are specialized to the point tier lists are not going to get you to the top ranks, you are going to have to do some of that work yourself. The tier lists presented here are also intended to only answer one question, and that question does not align with how you get to the best team. You need a more subjective tier list to understand the intricacies of availability and synergies to get the best possible teams, and I'm not high enough ranked to give you that information accurately. This tier list just seeks to answer how strong this card is in isolation. That is helpful for getting started, it's helpful for level setting, but it won't tell you if a card is going to improve your team or not.
+## 요약
 
-## Methodology
+- 티어는 **개별 카드의 단독 성능**을 측정하며, 팀 시너지는 고려하지 않습니다
+- 티어를 사용해 강한 카드를 파악하고, 그것을 중심으로 시너지를 구축하세요
+- 카드 이미지의 +/-X%는 기준 팀 대비 성능을 나타내며, 역할을 넘어 비교 가능합니다
+- 버프를 분산시키세요: 데미지 + 크리율 + 크리뎀 조합이 하나의 스탯만 쌓는 것보다 효과적입니다
 
-We take a standard looking team of low tier max limit broken and level 90 cards, we strip their abilities and set them to always match your type (Divina, Anima, Phantasma). We force conditional abilities to be on like :card[1498], the test assumes that one of the Five Swords under Heaven is on the team or for :card[616] we have an elf on the team. Leaders go in the leader slot. We swap Melee for Melee, Ranged for Ranged, and Healer for Healer. Assists go on a melee in defensive tests and a ranged on offensive tests. This is to ensure that we paint each card in its best light, if you can't meet these conditions they will be weaker. The team that supports them is:
+---
+
+티어 리스트는 시작과 기대치 설정에 유용하지만 한계가 있습니다. 좋은 시너지를 가진 MLB 카드 팀이라면 티어에 관계없이 모든 이벤트 콘텐츠를 클리어할 수 있습니다. 월드 보스와 챌린지에서 경쟁력 있는 순위를 원한다면 팀 구성을 직접 깊이 연구해야 합니다.
+
+이 티어 리스트는 하나의 질문에 답합니다: **이 카드는 단독으로 얼마나 강한가?** 이것은 좋은 카드를 파악하는 데 도움이 되지만, 그 카드가 당신의 팀을 개선하는지는 알려주지 않습니다. 시너지와 획득 가능성을 이해하려면 시뮬레이션으로 측정할 수 없는 더 세밀한 분석이 필요합니다.
+
+## 평가 방법
+
+낮은 티어의 레벨 90 완돌 카드로 구성된 표준 팀을 준비하고, 어빌리티를 제거하고 타입(디비나, 아니마, 판타즈마)을 항상 일치시킵니다. :card[1498]와 같은 조건부 어빌리티는 활성 상태로 설정하며, 오검 중 하나가 팀에 있거나 :card[616]의 경우 엘프가 팀에 있다고 가정합니다. 리더는 리더 슬롯에 배치. 근접은 근접, 원거리는 원거리, 힐러는 힐러와 교체. 어시스트는 방어 테스트에서는 근접에, 공격 테스트에서는 원거리에 장착. 이렇게 각 카드를 가장 유리한 상태로 평가합니다. 조건을 충족하지 못하면 더 약해집니다. 서포트 팀 구성:
 
 - :card[6]
 - :card[6]
@@ -18,43 +30,49 @@ We take a standard looking team of low tier max limit broken and level 90 cards,
 - :card[266]
 - :card[266]
 
-These are older cards with lower stats.
+이들은 스탯이 낮은 오래된 카드입니다.
 
-Then we run some simulations, first is a 5 wave simulation, second is a 1 wave simulation, and last is a defensive simulation. In the offensive simulations we measure the total damage done. In the defensive simulation we have the enemy do 10% more damage every 10s until the team wipes and measures the time. We also measure the individual damage done in the 1 wave simulation for our greedy attacker tier.
+시뮬레이션을 실행합니다: 5웨이브 시뮬레이션, 1웨이브 시뮬레이션, 그리고 방어 시뮬레이션. 공격 시뮬레이션에서는 총 데미지를 측정. 방어 시뮬레이션에서는 적의 데미지가 10초마다 10% 증가하며 팀이 전멸할 때까지의 시간을 측정. 또한 1웨이브 시뮬레이션에서 개인 데미지도 측정하여 그리디 어태커 티어에 사용합니다.
 
-The goal here is we can measure in isolation what the relative team value of each card is with the same baseline team. Now this isn't by any means perfect, you have one monster's worth of buffs and basically no real synergies. Teams that do the most damage thrive on synergies and multiplicative buffs like damage * crit * crit damage, etc.
+목표는 동일한 기준 팀에서 각 카드의 상대적인 팀 가치를 단독으로 측정하는 것입니다. 이것은 완벽하지 않습니다. 한 몬스터 분의 버프만 있고 실질적인 시너지가 없습니다. 최고의 데미지를 내는 팀은 데미지 × 크리율 × 크리뎀 등의 곱셈 버프 시너지로 이루어집니다.
 
-Basically the goal with this tier list is if you were to grab 5 S-tier monsters you would probably have a good team, you might not have a great team, but none of those monsters would be bad, they just may not synergize with one another.
+기본적으로 이 티어 리스트의 목적은 S-tier 카드 5장을 모으면 좋은 팀이 된다는 것입니다. 최고의 팀은 아닐 수 있지만, 나쁜 카드는 하나도 없을 것입니다. 다만 서로 시너지가 맞지 않을 수 있습니다.
 
-## Cards That May Be Under/Overweight
+## 과대/과소 평가될 수 있는 카드
 
-Some things also may be under/overweight because the supporting team in the sim is, well, kinda bad.
+시뮬레이션의 서포트 팀이 최소한의 시너지만 있는 기준 카드를 사용하기 때문에 일부 카드는 과대/과소 평가될 수 있습니다.
 
-For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
+예를 들어 :card[549]는 과소 평가되었을 수 있습니다. 약한 몬스터에 기본 스탯을 추가하면 약점이 줄어들지만, 팀 내 다른 부스트의 곱셈 효과는 얻지 못합니다. :card[1307]과 :card[1494]는 이 카드들이 혜택을 받을 시너지 부스트가 없어 과소 평가되었을 수 있습니다. :card[580]나 XP, 드롭률, 소울스톤 관련 카드는 시뮬레이션에서 측정되지 않아 과소 평가됩니다. DoT는 완전히 구현되지 않아 과대 평가되었을 수 있지만, 시뮬레이션과 게임 모두에서 그리 강하지 않아 큰 영향은 없을 것입니다. CC 효과도 완전히 구현되지 않았고 모두 일반 스턴으로 처리되지만, 방어 시뮬레이션에서만 관련이 있고 영향은 크지 않습니다.
 
-## How to Use This List as a New Player
+## 신규 플레이어를 위한 활용법
 
-If you are a new player and you are looking for how to use this list, my suggestion would be, try to get a high tier greedy attacker or pick one you have in your friends list, and then start trying to build around that monster in the same attribute. You want "strong" monsters, so ones that have higher ratings, but you want to diversify the kinds of buffs they give to the team. Try to get damage boosts, crit boosts, crit damage boosts, etc. If you get 5 cards that all increase damage your team will be good, but it won't be as good as a team that spreads damage, crit rate, crit damage, attack speed, and skill damage boosts across the team in the right ratios. The tier list doesn't take into account these synergies, availability, etc. But if you have gotten that far you don't need a tier list telling you how to build your team!
+신규 플레이어가 이 리스트를 활용하는 방법으로, 높은 티어의 그리디 어태커를 획득하거나 친구 목록에서 빌려서 같은 속성으로 그 몬스터를 중심으로 팀을 구성하는 것을 추천합니다. "강한" 몬스터, 즉 높은 평가를 받은 것이 필요하지만, 팀에 주는 버프 종류를 다양화하는 것도 중요합니다. 데미지 부스트, 크리티컬 부스트, 크리티컬 데미지 부스트 등을 갖추세요. 데미지 증가만 있는 5장의 카드도 좋은 팀이 되지만, 데미지, 크리율, 크리뎀, 공격 속도, 스킬 데미지 부스트를 적절한 비율로 분산시킨 팀에는 미치지 못합니다. 티어 리스트는 이러한 시너지나 획득 가능성을 고려하지 않습니다. 하지만 거기까지 이해했다면 팀 구성에 티어 리스트가 필요 없습니다!
 
-I'll also add a note here, the sim isn't perfect. It is probably 80% accurate, but the last 20% is way more work and I think this looks accurate without your glasses on, so that might be as far as I get with it for a while.
+시뮬레이션은 완벽하지 않습니다. 약 80%의 정확도입니다. 나머지 20%는 에지 케이스와 복잡한 상호작용으로, 모델링에 상당한 추가 작업이 필요합니다. 대부분의 팀 구성 결정에는 이 정도의 정확도면 충분합니다.
 
-## Tier Definitions
+## 티어 정의
 
-Here are the tiers for each test, these are based on the mean and standard deviation meaning that cards that scored high showed significant value over the average card:
+각 테스트의 티어는 평균과 표준편차에 기반하며, 높은 점수의 카드는 평균적인 카드보다 큰 가치를 보여줍니다:
 
-| Tier | Z-score | Meaning                           |
-|------|---------|-----------------------------------|
-| S+   | >= 3.0  | Elite outliers (3+ SD above mean) |
-| S    | >= 2.0  | Exceptional (2-3 SD above mean)   |
-| A    | >= 1.0  | Good (1-2 SD above mean)          |
-| B    | >= 0.0  | Average (within 1 SD)             |
-| C    | >= -1.0 | Below average                     |
-| D    | < -1.0  | Poor                              |
+| 티어 | Z점수  | 의미                               |
+|------|--------|-----------------------------------|
+| S+   | >= 3.0 | 엘리트 (평균보다 3SD 이상)         |
+| S    | >= 2.0 | 탁월함 (평균보다 2-3SD)            |
+| A    | >= 1.0 | 좋음 (평균보다 1-2SD)              |
+| B    | >= 0.0 | 평균 (1SD 이내)                    |
+| C    | >= -1.0| 평균 이하                          |
+| D    | < -1.0 | 낮음                               |
 
-## Understanding the Different Tier Types
+## 티어 유형 이해하기
 
-Overall score takes a p-normalization of those scores, the goal of this is to highlight cards that are exceptional in one or more of the tests. Some of the super defensive cards will probably have higher tiers than people expect! I think that is ok, the best use of the tier ratings are to look at the categories based on what your team needs. If you are having trouble surviving in story or challenge look at the defensive, if you need something that contributes a lot of damage in longer fights look at 5-round.
+**역할 정규화 티어 (5라운드, 1라운드, 방어, 종합):** 이 티어는 같은 역할 내에서 카드를 비교합니다. B-tier 근접은 다른 근접 카드와만 비교되며, 원거리나 힐러와는 비교되지 않습니다. 이로써 "이 역할에서 이 카드가 좋은가?"라는 질문에 답할 수 있지만, S-tier 힐러와 S-tier 원거리를 직접 비교할 수는 없습니다. 단, 카드 이미지에 표시되는 +/-X%는 기준 팀 대비 성능을 나타내므로, 역할을 넘어 상대적 영향을 비교할 수 있습니다.
+
+**글로벌 정규화 티어 (개인 DPS):** 이 티어는 모든 딜러(근접과 원거리)를 전체적으로 비교합니다. "역할에 관계없이 누가 가장 많은 데미지를 주는가?"라는 질문에 답합니다. 힐러와 어시스트는 딜러가 아니므로 제외됩니다.
+
+**리저브 티어:** 리저브 슬롯에 배치했을 때 카드의 기여도(패시브 어빌리티만)를 측정합니다. 역할 정규화되어 있으며, 강력한 리저브 서포트를 선택하는 데 도움이 됩니다.
+
+종합 점수는 이러한 점수들의 p-정규화를 취하며, 하나 이상의 테스트에서 탁월한 카드를 강조합니다. 초방어형 카드는 예상보다 높은 티어를 받을 수 있습니다! 괜찮습니다. 티어 평가의 가장 좋은 활용법은 팀의 필요에 따라 카테고리를 보는 것입니다. 스토리나 챌린지에서 생존에 어려움이 있다면 방어를, 장기전에서 큰 데미지가 필요하다면 5라운드를 보세요.
 
 ---
 
-*Check out the [Tier Lists](/en/tiers) page to see the full rankings!*
+*전체 순위는 [티어 리스트](/ko/tiers) 페이지에서 확인하세요!*

@@ -1,16 +1,28 @@
 ---
-title: "Tier Lists: Methodology and How to Use Them"
-description: "Understanding the simulation-based tier lists and what they can (and can't) tell you about building teams"
+title: "ティアリスト：評価方法と活用ガイド"
+description: "シミュレーションベースのティアリストの仕組みと、チーム編成における活用法と限界について"
 date: "2025-12-27"
 author: "Araiak"
-tags: ["guide", "tier-list", "analysis"]
+tags: ["ガイド", "ティアリスト", "分析"]
+locale: "ja"
 ---
 
-Tier lists. So let's get it out of the way right up front. You don't need a tier list, a team of MLB monsters with any sort of synergy can beat all of the event content. World Boss and Challenge are specialized to the point tier lists are not going to get you to the top ranks, you are going to have to do some of that work yourself. The tier lists presented here are also intended to only answer one question, and that question does not align with how you get to the best team. You need a more subjective tier list to understand the intricacies of availability and synergies to get the best possible teams, and I'm not high enough ranked to give you that information accurately. This tier list just seeks to answer how strong this card is in isolation. That is helpful for getting started, it's helpful for level setting, but it won't tell you if a card is going to improve your team or not.
+## 要約
 
-## Methodology
+- ティアは**個々のカードの単体性能**を測定し、チームシナジーは考慮しません
+- ティアを使って強いカードを特定し、それを中心にシナジーを構築しましょう
+- カード画像の+/-X%はベースラインとの性能比較を示し、役割を超えて比較可能です
+- バフを分散させましょう：ダメージ + クリ率 + クリダメの組み合わせが単一ステータスの積み重ねより効果的です
 
-We take a standard looking team of low tier max limit broken and level 90 cards, we strip their abilities and set them to always match your type (Divina, Anima, Phantasma). We force conditional abilities to be on like :card[1498], the test assumes that one of the Five Swords under Heaven is on the team or for :card[616] we have an elf on the team. Leaders go in the leader slot. We swap Melee for Melee, Ranged for Ranged, and Healer for Healer. Assists go on a melee in defensive tests and a ranged on offensive tests. This is to ensure that we paint each card in its best light, if you can't meet these conditions they will be weaker. The team that supports them is:
+---
+
+ティアリストは入門やレベル設定に役立ちますが、限界があります。良いシナジーを持つMLBカードのチームなら、ティアに関係なくすべてのイベントコンテンツをクリアできます。ワールドボスやチャレンジで競争力のある順位を目指すなら、チーム編成を自分で深く研究する必要があります。
+
+このティアリストは一つの質問に答えます：**このカードは単体でどれほど強いか？** これは優秀なカードを特定するのに役立ちますが、そのカードがあなたのチームを改善するかどうかは分かりません。シナジーや入手性を理解するには、シミュレーションでは測れないより繊細な分析が必要です。
+
+## 評価方法
+
+低ティアのレベル90完凸カードで構成された標準的なチームを用意し、アビリティを削除してタイプ（ディヴィナ、アニマ、ファンタズマ）を常に一致させます。:card[1498]のような条件付きアビリティは有効状態とし、五剣の一人がチームにいる、または:card[616]の場合はエルフがチームにいると仮定します。リーダーはリーダースロットに配置。近接は近接、遠距離は遠距離、ヒーラーはヒーラーと交換。アシストは防御テストでは近接に、攻撃テストでは遠距離に装着。これにより各カードを最も有利な状態で評価します。条件を満たせない場合は弱くなります。サポートチーム構成：
 
 - :card[6]
 - :card[6]
@@ -18,43 +30,49 @@ We take a standard looking team of low tier max limit broken and level 90 cards,
 - :card[266]
 - :card[266]
 
-These are older cards with lower stats.
+これらはステータスの低い古いカードです。
 
-Then we run some simulations, first is a 5 wave simulation, second is a 1 wave simulation, and last is a defensive simulation. In the offensive simulations we measure the total damage done. In the defensive simulation we have the enemy do 10% more damage every 10s until the team wipes and measures the time. We also measure the individual damage done in the 1 wave simulation for our greedy attacker tier.
+シミュレーションを実行します：5ウェーブシミュレーション、1ウェーブシミュレーション、そして防御シミュレーション。攻撃シミュレーションでは総ダメージを測定。防御シミュレーションでは敵のダメージが10秒ごとに10%増加し、チームが全滅するまでの時間を測定。また、1ウェーブシミュレーションで個人ダメージも測定し、グリーディアタッカーティアに使用します。
 
-The goal here is we can measure in isolation what the relative team value of each card is with the same baseline team. Now this isn't by any means perfect, you have one monster's worth of buffs and basically no real synergies. Teams that do the most damage thrive on synergies and multiplicative buffs like damage * crit * crit damage, etc.
+目標は、同じベースラインチームで各カードの相対的なチーム価値を単体で測定することです。これは完璧ではありません。1体分のバフしかなく、実質的なシナジーがありません。最高ダメージを出すチームは、ダメージ × クリ率 × クリダメなどの乗算バフによるシナジーで成り立っています。
 
-Basically the goal with this tier list is if you were to grab 5 S-tier monsters you would probably have a good team, you might not have a great team, but none of those monsters would be bad, they just may not synergize with one another.
+基本的に、このティアリストの目的は、S-tierカードを5体集めれば良いチームになるということです。最高のチームにはならないかもしれませんが、悪いカードは一つもありません。ただし、互いにシナジーしない可能性があります。
 
-## Cards That May Be Under/Overweight
+## 過大/過小評価されている可能性のあるカード
 
-Some things also may be under/overweight because the supporting team in the sim is, well, kinda bad.
+シミュレーションのサポートチームが最小限のシナジーしかないベースラインカードを使用しているため、一部のカードは過大/過小評価されている可能性があります。
 
-For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
+例えば:card[549]は過小評価されている可能性があります。弱いモンスターに基礎ステータスを追加すると弱さが軽減されますが、チーム内の他のブーストからの乗算効果は得られません。:card[1307]と:card[1494]は、これらのカードが恩恵を受けるシナジーブーストがないため過小評価されている可能性があります。:card[580]やXP、ドロップ率、ソウルストーン関連のカードは、シミュレーションで測定されないため過小評価されています。DoTはまだ完全に実装されていないため過大評価されている可能性がありますが、シミュレーションでもゲーム内でもあまり強くないので、大きな影響はないかもしれません。CC効果も完全には実装されておらず、すべて汎用スタンとして扱われていますが、これも防御シミュレーションでのみ関係し、影響は大きくありません。
 
-## How to Use This List as a New Player
+## 新規プレイヤー向けの活用法
 
-If you are a new player and you are looking for how to use this list, my suggestion would be, try to get a high tier greedy attacker or pick one you have in your friends list, and then start trying to build around that monster in the same attribute. You want "strong" monsters, so ones that have higher ratings, but you want to diversify the kinds of buffs they give to the team. Try to get damage boosts, crit boosts, crit damage boosts, etc. If you get 5 cards that all increase damage your team will be good, but it won't be as good as a team that spreads damage, crit rate, crit damage, attack speed, and skill damage boosts across the team in the right ratios. The tier list doesn't take into account these synergies, availability, etc. But if you have gotten that far you don't need a tier list telling you how to build your team!
+新規プレイヤーがこのリストを活用する方法として、高ティアのグリーディアタッカーを入手するか、フレンドリストから借りて、同じ属性でそのモンスターを中心にチームを構築することをお勧めします。「強い」モンスター、つまり高い評価のものが欲しいですが、チームに与えるバフの種類を多様化することも重要です。ダメージブースト、クリティカルブースト、クリティカルダメージブーストなどを揃えましょう。ダメージ増加だけの5枚のカードでも良いチームになりますが、ダメージ、クリ率、クリダメ、攻撃速度、スキルダメージブーストを適切な比率で分散させたチームには及びません。ティアリストはこれらのシナジーや入手性を考慮していません。でもそこまで理解できたなら、チーム編成にティアリストは必要ありません！
 
-I'll also add a note here, the sim isn't perfect. It is probably 80% accurate, but the last 20% is way more work and I think this looks accurate without your glasses on, so that might be as far as I get with it for a while.
+シミュレーションは完璧ではありません。約80%の精度です。残りの20%はエッジケースや複雑な相互作用で、モデル化にはかなりの追加作業が必要です。ほとんどのチーム編成の判断には、この精度で十分です。
 
-## Tier Definitions
+## ティアの定義
 
-Here are the tiers for each test, these are based on the mean and standard deviation meaning that cards that scored high showed significant value over the average card:
+各テストのティアは平均と標準偏差に基づいており、高スコアのカードは平均的なカードよりも大きな価値を示しています：
 
-| Tier | Z-score | Meaning                           |
-|------|---------|-----------------------------------|
-| S+   | >= 3.0  | Elite outliers (3+ SD above mean) |
-| S    | >= 2.0  | Exceptional (2-3 SD above mean)   |
-| A    | >= 1.0  | Good (1-2 SD above mean)          |
-| B    | >= 0.0  | Average (within 1 SD)             |
-| C    | >= -1.0 | Below average                     |
-| D    | < -1.0  | Poor                              |
+| ティア | Zスコア | 意味                              |
+|--------|---------|-----------------------------------|
+| S+     | >= 3.0  | エリート（平均から3SD以上）       |
+| S      | >= 2.0  | 卓越（平均から2-3SD）             |
+| A      | >= 1.0  | 良好（平均から1-2SD）             |
+| B      | >= 0.0  | 平均（1SD以内）                   |
+| C      | >= -1.0 | 平均以下                          |
+| D      | < -1.0  | 低い                              |
 
-## Understanding the Different Tier Types
+## ティアタイプの理解
 
-Overall score takes a p-normalization of those scores, the goal of this is to highlight cards that are exceptional in one or more of the tests. Some of the super defensive cards will probably have higher tiers than people expect! I think that is ok, the best use of the tier ratings are to look at the categories based on what your team needs. If you are having trouble surviving in story or challenge look at the defensive, if you need something that contributes a lot of damage in longer fights look at 5-round.
+**役割正規化ティア（5ラウンド、1ラウンド、防御、総合）：** これらのティアは同じ役割内でカードを比較します。B-tierの近接は他の近接カードとのみ比較され、遠距離やヒーラーとは比較されません。これにより「この役割でこのカードは良いか？」という質問に答えられますが、S-tierのヒーラーとS-tierの遠距離を直接比較することはできません。ただし、カード画像に表示される+/-X%はベースラインチームとの性能比較を示すので、役割を超えて相対的な影響を比較できます。
+
+**グローバル正規化ティア（個人DPS）：** このティアはすべてのダメージディーラー（近接と遠距離）をグローバルに比較します。「役割に関係なく誰が最もダメージを出すか？」という質問に答えます。ヒーラーとアシストはダメージディーラーではないため除外されています。
+
+**リザーブティア：** リザーブスロットに配置した時のカードの貢献度（パッシブアビリティのみ）を測定します。役割正規化されており、強力なリザーブサポートを選ぶのに役立ちます。
+
+総合スコアはこれらのスコアのp正規化を取り、一つ以上のテストで卓越したカードを強調します。超防御型のカードは予想より高いティアになるかもしれません！それは問題ありません。ティア評価の最良の使い方は、チームのニーズに基づいてカテゴリを見ることです。ストーリーやチャレンジで生存に苦労しているなら防御を、長期戦で大きなダメージが必要なら5ラウンドを見てください。
 
 ---
 
-*Check out the [Tier Lists](/en/tiers) page to see the full rankings!*
+*完全なランキングは[ティアリスト](/ja/tiers)ページをご覧ください！*

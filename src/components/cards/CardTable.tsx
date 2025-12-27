@@ -141,6 +141,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
   const mobilePreviewRef = useRef<HTMLDivElement>(null);
 
+  // Tier data state
+  const [tierData, setTierData] = useState<Record<string, any> | null>(null);
+
   // Sort dropdown state
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
   const sortDropdownRef = useRef<HTMLDivElement>(null);
@@ -243,6 +246,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     window.history.replaceState({}, '', newUrl);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
+
+  // Load tier data on mount
+  useEffect(() => {
+    fetch('/data/tiers.json')
+      .then(res => res.ok ? res.json() : null)
+      .then(data => {
+        if (data?.cards) {
+          setTierData(data.cards);
+        }
+      })
+      .catch(() => {
+        // Tier data is optional, don't fail if unavailable
+      });
+  }, []);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -595,7 +612,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skills={{}} locale={locale} />,
+      cell: ({ row }) => <ImageCell card={row.original} skills={{}} tierData={tierData?.[row.original.id]} locale={locale} />,
     },
     {
       accessorKey: 'id',
@@ -1358,6 +1375,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <CardPreviewContent
                 card={mobilePreviewCard}
                 skills={{}}
+                tierData={tierData?.[mobilePreviewCard.id]}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}

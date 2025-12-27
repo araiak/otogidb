@@ -1,16 +1,28 @@
 ---
-title: "Tier Lists: Methodology and How to Use Them"
-description: "Understanding the simulation-based tier lists and what they can (and can't) tell you about building teams"
+title: "角色评级：方法论与使用指南"
+description: "了解基于模拟的角色评级系统，以及它能（和不能）告诉你关于组队的信息"
 date: "2025-12-27"
 author: "Araiak"
-tags: ["guide", "tier-list", "analysis"]
+tags: ["攻略", "角色评级", "分析"]
+locale: "zh-cn"
 ---
 
-Tier lists. So let's get it out of the way right up front. You don't need a tier list, a team of MLB monsters with any sort of synergy can beat all of the event content. World Boss and Challenge are specialized to the point tier lists are not going to get you to the top ranks, you are going to have to do some of that work yourself. The tier lists presented here are also intended to only answer one question, and that question does not align with how you get to the best team. You need a more subjective tier list to understand the intricacies of availability and synergies to get the best possible teams, and I'm not high enough ranked to give you that information accurately. This tier list just seeks to answer how strong this card is in isolation. That is helpful for getting started, it's helpful for level setting, but it won't tell you if a card is going to improve your team or not.
+## 摘要
 
-## Methodology
+- 评级衡量的是**单个卡牌的独立强度**，而非队伍配合
+- 使用评级来识别强力卡牌，然后围绕它们构建配合
+- 卡牌头像上的+/-X%显示相对于基准的表现（可跨职业比较）
+- 分散你的增益效果：伤害 + 暴击率 + 暴击伤害优于只堆叠单一属性
 
-We take a standard looking team of low tier max limit broken and level 90 cards, we strip their abilities and set them to always match your type (Divina, Anima, Phantasma). We force conditional abilities to be on like :card[1498], the test assumes that one of the Five Swords under Heaven is on the team or for :card[616] we have an elf on the team. Leaders go in the leader slot. We swap Melee for Melee, Ranged for Ranged, and Healer for Healer. Assists go on a melee in defensive tests and a ranged on offensive tests. This is to ensure that we paint each card in its best light, if you can't meet these conditions they will be weaker. The team that supports them is:
+---
+
+角色评级对于入门和设定预期很有帮助，但也有其局限性。一个拥有良好配合的满突卡牌队伍可以通关所有活动内容，无论评级如何。如果想在世界Boss和挑战模式中获得有竞争力的排名，你需要自己深入研究队伍构成。
+
+这些评级回答一个特定问题：**这张卡牌单独有多强？** 这有助于识别优秀卡牌，但无法告诉你某张卡是否能改善你的特定队伍。理解配合和获取难度需要更细致的分析，这超出了模拟所能衡量的范围。
+
+## 方法论
+
+我们使用一个由低级满突90级卡牌组成的标准队伍，移除它们的能力并设置为始终匹配你的属性（神族、物族、魔族）。我们强制开启条件性能力如:card[1498]，测试假设天下五剑之一在队伍中，或对于:card[616]假设有精灵在队伍中。队长放在队长位。近战换近战，远程换远程，治疗换治疗。辅助在防御测试中装备给近战，在进攻测试中装备给远程。这是为了确保我们以最佳状态展示每张卡牌，如果你无法满足这些条件它们会更弱。支援队伍是：
 
 - :card[6]
 - :card[6]
@@ -18,43 +30,49 @@ We take a standard looking team of low tier max limit broken and level 90 cards,
 - :card[266]
 - :card[266]
 
-These are older cards with lower stats.
+这些是属性较低的老卡。
 
-Then we run some simulations, first is a 5 wave simulation, second is a 1 wave simulation, and last is a defensive simulation. In the offensive simulations we measure the total damage done. In the defensive simulation we have the enemy do 10% more damage every 10s until the team wipes and measures the time. We also measure the individual damage done in the 1 wave simulation for our greedy attacker tier.
+然后我们运行一些模拟，首先是5波模拟，其次是1波模拟，最后是防御模拟。在进攻模拟中我们测量总伤害。在防御模拟中敌人每10秒增加10%伤害直到队伍全灭，测量存活时间。我们还在1波模拟中测量个人伤害，用于贪婪输出者评级。
 
-The goal here is we can measure in isolation what the relative team value of each card is with the same baseline team. Now this isn't by any means perfect, you have one monster's worth of buffs and basically no real synergies. Teams that do the most damage thrive on synergies and multiplicative buffs like damage * crit * crit damage, etc.
+这里的目标是我们可以在相同基准队伍下单独测量每张卡牌的相对队伍价值。这绝非完美，你只有一个怪物的增益且基本没有真正的配合。输出最高的队伍依靠配合和乘法增益如伤害 × 暴击 × 暴击伤害等。
 
-Basically the goal with this tier list is if you were to grab 5 S-tier monsters you would probably have a good team, you might not have a great team, but none of those monsters would be bad, they just may not synergize with one another.
+基本上这个评级的目标是，如果你拿5个S级怪物你可能会有一个好队伍，你可能不会有一个顶级队伍，但那些怪物都不会差，只是可能彼此不配合。
 
-## Cards That May Be Under/Overweight
+## 可能被高估/低估的卡牌
 
-Some things also may be under/overweight because the supporting team in the sim is, well, kinda bad.
+由于模拟中的支援队伍使用配合最少的基准卡牌，某些卡牌可能被高估/低估。
 
-For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
+例如:card[549]可能被低估了，因为给弱怪物增加基础属性使它们不那么弱，但效果无法获得队伍中其他增益的乘法效果。:card[1307]和:card[1494]可能被低估，因为没有任何协同增益让这些卡牌受益。:card[580]或任何有经验、掉率、魂石的卡牌被低估，因为这些完全不在模拟测量范围内。持续伤害可能被高估，因为还没完全实装，但这些在模拟和游戏中都不太强，所以可能影响不大。控制效果也没有完全实装，都被当作通用眩晕处理，但这些只在防御模拟中相关且影响不大。
 
-## How to Use This List as a New Player
+## 新玩家如何使用这个列表
 
-If you are a new player and you are looking for how to use this list, my suggestion would be, try to get a high tier greedy attacker or pick one you have in your friends list, and then start trying to build around that monster in the same attribute. You want "strong" monsters, so ones that have higher ratings, but you want to diversify the kinds of buffs they give to the team. Try to get damage boosts, crit boosts, crit damage boosts, etc. If you get 5 cards that all increase damage your team will be good, but it won't be as good as a team that spreads damage, crit rate, crit damage, attack speed, and skill damage boosts across the team in the right ratios. The tier list doesn't take into account these synergies, availability, etc. But if you have gotten that far you don't need a tier list telling you how to build your team!
+如果你是新玩家并想知道如何使用这个列表，我的建议是，尝试获取一个高级贪婪输出者或从好友列表中借一个，然后开始尝试在相同属性下围绕那个怪物构建队伍。你想要"强力"怪物，即评分较高的，但你要分散它们给队伍的增益类型。尝试获得伤害增益、暴击增益、暴击伤害增益等。如果你有5张都增加伤害的卡牌，你的队伍会不错，但不如一个按正确比例分散伤害、暴击率、暴击伤害、攻击速度和技能伤害增益的队伍好。评级没有考虑这些配合、获取难度等。但如果你已经理解到这一步，你就不需要评级来告诉你如何组队了！
 
-I'll also add a note here, the sim isn't perfect. It is probably 80% accurate, but the last 20% is way more work and I think this looks accurate without your glasses on, so that might be as far as I get with it for a while.
+模拟并不完美——大约80%准确。剩余20%涉及边缘情况和复杂交互，需要大量额外工作来建模。对于大多数组队决策，这个准确度已经足够。
 
-## Tier Definitions
+## 评级定义
 
-Here are the tiers for each test, these are based on the mean and standard deviation meaning that cards that scored high showed significant value over the average card:
+以下是每个测试的评级，基于均值和标准差，意味着高分卡牌相对于平均卡牌展现出显著价值：
 
-| Tier | Z-score | Meaning                           |
-|------|---------|-----------------------------------|
-| S+   | >= 3.0  | Elite outliers (3+ SD above mean) |
-| S    | >= 2.0  | Exceptional (2-3 SD above mean)   |
-| A    | >= 1.0  | Good (1-2 SD above mean)          |
-| B    | >= 0.0  | Average (within 1 SD)             |
-| C    | >= -1.0 | Below average                     |
-| D    | < -1.0  | Poor                              |
+| 评级 | Z分数   | 含义                         |
+|------|---------|------------------------------|
+| S+   | >= 3.0  | 精英（高于均值3个标准差以上） |
+| S    | >= 2.0  | 卓越（高于均值2-3个标准差）   |
+| A    | >= 1.0  | 优秀（高于均值1-2个标准差）   |
+| B    | >= 0.0  | 平均（1个标准差以内）         |
+| C    | >= -1.0 | 低于平均                      |
+| D    | < -1.0  | 较差                          |
 
-## Understanding the Different Tier Types
+## 理解不同评级类型
 
-Overall score takes a p-normalization of those scores, the goal of this is to highlight cards that are exceptional in one or more of the tests. Some of the super defensive cards will probably have higher tiers than people expect! I think that is ok, the best use of the tier ratings are to look at the categories based on what your team needs. If you are having trouble surviving in story or challenge look at the defensive, if you need something that contributes a lot of damage in longer fights look at 5-round.
+**职业归一化评级（5回合、1回合、防御、综合）：** 这些评级在同职业内比较卡牌。一个B级近战只与其他近战卡牌比较，不与远程或治疗比较。这使得评级可以回答"这张卡对于它的职业来说好吗？"但意味着S级治疗不能直接与S级远程比较。然而，卡牌头像上显示的+/-X%代表相对于基准队伍的表现，所以你可以跨职业比较这个数字来看相对影响。
+
+**全局归一化评级（个人DPS）：** 这个评级在全局范围内比较所有输出（近战和远程）。回答"无论职业谁输出最高？"治疗和辅助被排除，因为他们本就不是输出角色。
+
+**预备评级：** 衡量卡牌放在预备位时的贡献（仅被动能力）。按职业归一化，帮助你选择强力预备支援。
+
+综合分数对这些分数进行p归一化，目的是突出在一个或多个测试中表现出色的卡牌。一些超级防御型卡牌可能会比人们预期的评级更高！我认为这没问题，评级的最佳用法是根据你队伍的需求来看类别。如果你在故事或挑战中难以生存就看防御，如果你需要在长时间战斗中贡献大量伤害就看5回合。
 
 ---
 
-*Check out the [Tier Lists](/en/tiers) page to see the full rankings!*
+*访问[角色评级](/zh-cn/tiers)页面查看完整排名！*
