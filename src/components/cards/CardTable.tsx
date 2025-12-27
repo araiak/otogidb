@@ -905,7 +905,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
       ),
     },
-  ], [locale]);
+  ], [locale, tierData]);
 
   // Create table instance
   const table = useReactTable({
