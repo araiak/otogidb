@@ -26,9 +26,14 @@ interface DataManifestFile {
   cards_index: string;
   cards_index_base: string;
 }
+interface DataManifestTiers {
+  path: string;
+  base: string;
+}
 interface DataManifest {
   generated_at: string;
   files: Record<string, DataManifestFile>;
+  tiers?: DataManifestTiers;
 }
 
 let dataManifest: DataManifest | null = null;
@@ -64,7 +69,13 @@ const contentHash = getFileHash(cardsJsonPath);
 const dataVersion = `${cardsData.version || 'unknown'}-${contentHash}`;
 
 // Build data paths object for client-side use
-const dataPaths = dataManifest?.files || {};
+const dataPaths = {
+  ...dataManifest?.files || {},
+  tiers: dataManifest?.tiers || null,
+};
+
+// Get tiers path for preloading (use hashed if available)
+const tiersPreloadPath = dataManifest?.tiers?.path || '/data/tiers.json';
 
 // Detect current locale from URL path
 const currentPath = Astro.url.pathname;
@@ -122,6 +133,9 @@ const navLinks = {
 
     <!-- SEO: Open Graph, Twitter Cards, Canonical, Hreflang -->
     <SEO title={title} description={description} image={image} type={type} locale={currentLocale} hasLocalizedUrls={hasLocalizedUrls} article={article} />
+
+    <!-- Preload tier data for faster initial load -->
+    <link rel="preload" href={tiersPreloadPath} as="fetch" crossorigin="anonymous" />
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />

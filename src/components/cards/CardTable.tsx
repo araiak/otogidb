@@ -12,6 +12,7 @@ import {
 } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
 import { getCardsData, type CardLocale } from '../../lib/cards';
+import { fetchWithCache } from '../../lib/cache';
 import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
 import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import Fuse from 'fuse.js';
@@ -247,10 +248,13 @@ export default function CardTable({ initialCards }: CardTableProps) {
     window.history.replaceState({}, '', newUrl);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
 
-  // Load tier data on mount
+  // Load tier data on mount (uses IndexedDB cache with hashed path for cache busting)
   useEffect(() => {
-    fetch('/data/tiers.json')
-      .then(res => res.ok ? res.json() : null)
+    // Get hashed path from manifest if available, fallback to base path
+    const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
+    const tiersPath = dataPaths.tiers?.path || '/data/tiers.json';
+
+    fetchWithCache<{ cards: Record<string, any> }>(tiersPath)
       .then(data => {
         if (data?.cards) {
           setTierData(data.cards);

@@ -8,11 +8,6 @@ interface CacheEntry {
   age: number;
 }
 
-interface ImageCacheStats {
-  count: number;
-  size: string;
-}
-
 interface TierDataStatus {
   loaded: boolean;
   cardCount: number;
@@ -23,7 +18,6 @@ export default function DebugPanel() {
   const [isOpen, setIsOpen] = useState(false);
   const [cacheEntries, setCacheEntries] = useState<CacheEntry[]>([]);
   const [status, setStatus] = useState<string>('');
-  const [imageCacheStats, setImageCacheStats] = useState<ImageCacheStats | null>(null);
   const [tierStatus, setTierStatus] = useState<TierDataStatus | null>(null);
 
   // Toggle with Ctrl+Shift+D
@@ -42,7 +36,6 @@ export default function DebugPanel() {
   useEffect(() => {
     if (isOpen) {
       loadCacheInfo();
-      loadImageCacheStats();
       loadTierDataStatus();
     }
   }, [isOpen]);
@@ -53,33 +46,6 @@ export default function DebugPanel() {
       setCacheEntries(entries);
     } catch (error) {
       console.error('Failed to load cache info:', error);
-    }
-  };
-
-  const loadImageCacheStats = async () => {
-    try {
-      if ('caches' in window) {
-        const cache = await caches.open('otogidb-images-v1');
-        const keys = await cache.keys();
-        // Estimate size from a sample
-        let totalSize = 0;
-        const sampleSize = Math.min(keys.length, 10);
-        for (let i = 0; i < sampleSize; i++) {
-          const response = await cache.match(keys[i]);
-          if (response) {
-            const blob = await response.clone().blob();
-            totalSize += blob.size;
-          }
-        }
-        const avgSize = sampleSize > 0 ? totalSize / sampleSize : 0;
-        const estimatedTotal = avgSize * keys.length;
-        const sizeStr = estimatedTotal > 1024 * 1024
-          ? `~${(estimatedTotal / 1024 / 1024).toFixed(1)} MB`
-          : `~${(estimatedTotal / 1024).toFixed(0)} KB`;
-        setImageCacheStats({ count: keys.length, size: sizeStr });
-      }
-    } catch (error) {
-      console.error('Failed to load image cache stats:', error);
     }
   };
 
@@ -98,24 +64,6 @@ export default function DebugPanel() {
       }
     } catch (error) {
       setTierStatus({ loaded: false, cardCount: 0 });
-    }
-  };
-
-  const handleClearImageCache = async () => {
-    try {
-      setStatus('Clearing image cache...');
-      // Send message to service worker
-      if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
-        navigator.serviceWorker.controller.postMessage('clearCache');
-      }
-      // Also clear from Cache API directly
-      if ('caches' in window) {
-        await caches.delete('otogidb-images-v1');
-      }
-      setImageCacheStats({ count: 0, size: '0 KB' });
-      setStatus('Image cache cleared! Reload to re-download images.');
-    } catch (error) {
-      setStatus(`Error: ${error}`);
     }
   };
 
@@ -238,12 +186,6 @@ export default function DebugPanel() {
               Clear JSON Cache
             </button>
             <button
-              onClick={handleClearImageCache}
-              className="btn-secondary text-xs py-2 px-3 rounded"
-            >
-              Clear Image Cache
-            </button>
-            <button
               onClick={handleClearBrowserCache}
               className="btn-secondary text-xs py-2 px-3 rounded"
             >
@@ -267,15 +209,7 @@ export default function DebugPanel() {
         {/* Data Status */}
         <div className="space-y-2">
           <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>Data Status</p>
-          <div className="grid grid-cols-2 gap-2 text-xs" style={{ color: 'var(--color-text)' }}>
-            <div className="p-2 rounded" style={{ backgroundColor: 'var(--color-bg)' }}>
-              <div style={{ color: 'var(--color-text-secondary)' }}>Image Cache</div>
-              {imageCacheStats ? (
-                <div>{imageCacheStats.count} images ({imageCacheStats.size})</div>
-              ) : (
-                <div>Loading...</div>
-              )}
-            </div>
+          <div className="text-xs" style={{ color: 'var(--color-text)' }}>
             <div className="p-2 rounded" style={{ backgroundColor: 'var(--color-bg)' }}>
               <div style={{ color: 'var(--color-text-secondary)' }}>Tier Data</div>
               {tierStatus ? (
