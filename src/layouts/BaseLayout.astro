@@ -102,6 +102,7 @@ const navLinks = {
   home: localePrefix,
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
+  tiers: `${localePrefix}/tiers`,
 };
 ---
 
@@ -209,6 +210,10 @@ const navLinks = {
             <a href={navLinks.home} class="link hover:no-underline">Cards</a>
             <a href={navLinks.updates} class="link hover:no-underline">Updates</a>
             <a href={navLinks.blog} class="link hover:no-underline">Blog</a>
+            <a href={navLinks.tiers} class="link hover:no-underline hidden" id="nav-tiers-desktop">
+              Tiers
+              <span class="ml-1 px-1 py-0.5 text-[10px] font-semibold bg-yellow-500/20 text-yellow-400 rounded">DEV</span>
+            </a>
           </div>
 
           <!-- Language Switcher, Theme Toggle & Mobile Menu -->
@@ -270,6 +275,10 @@ const navLinks = {
             <a href={navLinks.home} class="link py-2 touch-target">Cards</a>
             <a href={navLinks.updates} class="link py-2 touch-target">Updates</a>
             <a href={navLinks.blog} class="link py-2 touch-target">Blog</a>
+            <a href={navLinks.tiers} class="link py-2 touch-target hidden" id="nav-tiers-mobile">
+              Tiers
+              <span class="ml-1 px-1 py-0.5 text-[10px] font-semibold bg-yellow-500/20 text-yellow-400 rounded">DEV</span>
+            </a>
           </div>
         </div>
       </div>
@@ -477,6 +486,30 @@ const navLinks = {
               // Navigation happens via the <a> href - no need to prevent default
             }
           });
+        });
+      }
+
+      // Dev-only features: Show tier list nav in dev environments
+      function isDevEnvironment(): boolean {
+        const hostname = location.hostname;
+        const params = new URLSearchParams(location.search);
+        return hostname === 'localhost' ||
+               hostname === '127.0.0.1' ||
+               hostname.endsWith('.pages.dev') ||
+               params.get('dev') === 'true';
+      }
+
+      if (isDevEnvironment()) {
+        const tiersDesktop = document.getElementById('nav-tiers-desktop');
+        const tiersMobile = document.getElementById('nav-tiers-mobile');
+        if (tiersDesktop) tiersDesktop.classList.remove('hidden');
+        if (tiersMobile) tiersMobile.classList.remove('hidden');
+      }
+
+      // Register Service Worker for image caching (reduces Cloudinary bandwidth)
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js').catch((error) => {
+          console.warn('SW registration failed:', error);
         });
       }
     </script>

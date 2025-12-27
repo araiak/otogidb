@@ -1,12 +1,15 @@
 /**
  * Icon URL helpers for attribute, type, and rarity icons.
  *
- * In development: Uses local files from /icons/
- * In production: Uses Cloudinary CDN with auto optimization
+ * By default: Uses local files from /icons/ (served via Cloudflare, free)
+ * Optional: Set PUBLIC_USE_CLOUDINARY_ICONS=true to use Cloudinary CDN
+ *
+ * Local icons reduce Cloudinary bandwidth - icons are used on every page.
  */
 
-// Check if we should use local images (development mode)
-export const USE_LOCAL_ICONS = import.meta.env.PUBLIC_USE_LOCAL_IMAGES === 'true';
+// Use local icons by default to save Cloudinary bandwidth
+// Only use Cloudinary if explicitly enabled
+export const USE_LOCAL_ICONS = import.meta.env.PUBLIC_USE_CLOUDINARY_ICONS !== 'true';
 
 // Cloudinary base URL and optimization params
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';

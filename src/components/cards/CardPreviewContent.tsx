@@ -4,9 +4,49 @@ import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import type { SupportedLocale } from '../../lib/i18n';
 
+// Tier data type (subset of what's in tiers.json)
+interface TierCardData {
+  percentiles: {
+    five_round: number;
+    one_round: number;
+    defense: number;
+    individual: number;
+    overall: number;
+    reserve: number;
+  };
+  tiers: {
+    five_round: string;
+    one_round: string;
+    defense: string;
+    individual: string;
+    overall: string;
+    reserve: string;  // Not part of overall - measures passive ability value in reserve slot
+  };
+  reserve_breakdown?: {
+    five_round: { percentile: number; tier: string };
+    one_round: { percentile: number; tier: string };
+    defense: { percentile: number; tier: string };
+  } | null;
+}
+
+// Helper to get tier color
+function getTierColor(tier: string): string {
+  switch (tier) {
+    case 'S+': return '#FF6B6B';
+    case 'S': return '#FFD700';
+    case 'A': return '#C0C0C0';
+    case 'B': return '#CD7F32';
+    case 'C': return '#808080';
+    case 'D': return '#404040';
+    default: return '#606060';
+  }
+}
+
 interface CardPreviewContentProps {
   card: Card;
   skills?: Record<string, any>;
+  /** Tier data for this card (optional) */
+  tierData?: TierCardData | null;
   /** Compact mode uses smaller text and 4-column stats */
   compact?: boolean;
   /** Show "View Full Details" link at bottom */
@@ -24,6 +64,7 @@ interface CardPreviewContentProps {
 export default function CardPreviewContent({
   card,
   skills = {},
+  tierData = null,
   compact = true,
   showDetailsLink = false,
   locale = 'en',
@@ -95,6 +136,105 @@ export default function CardPreviewContent({
             <span className="font-mono">{formatNumber(card.stats.crit)}</span>
           </div>
         </div>
+
+        {/* Tier Ratings */}
+        {tierData && (
+          <div className={`${contentSize} mb-2 p-1.5 rounded`} style={{ backgroundColor: 'var(--color-surface)' }}>
+            <div className="grid grid-cols-5 gap-1 text-center">
+              {/* Overall */}
+              <div>
+                <div className="text-secondary text-[9px]">Overall</div>
+                <span
+                  className="font-bold px-1 py-0.5 rounded text-[10px]"
+                  style={{
+                    color: getTierColor(tierData.tiers.overall),
+                    backgroundColor: `${getTierColor(tierData.tiers.overall)}20`
+                  }}
+                >
+                  {tierData.tiers.overall}
+                </span>
+              </div>
+              {/* 5-Round */}
+              <div>
+                <div className="text-secondary text-[9px]">5-Rnd</div>
+                <span
+                  className="font-bold px-1 py-0.5 rounded text-[10px]"
+                  style={{
+                    color: getTierColor(tierData.tiers.five_round),
+                    backgroundColor: `${getTierColor(tierData.tiers.five_round)}20`
+                  }}
+                >
+                  {tierData.tiers.five_round}
+                </span>
+              </div>
+              {/* 1-Round */}
+              <div>
+                <div className="text-secondary text-[9px]">1-Rnd</div>
+                <span
+                  className="font-bold px-1 py-0.5 rounded text-[10px]"
+                  style={{
+                    color: getTierColor(tierData.tiers.one_round),
+                    backgroundColor: `${getTierColor(tierData.tiers.one_round)}20`
+                  }}
+                >
+                  {tierData.tiers.one_round}
+                </span>
+              </div>
+              {/* Defense */}
+              <div>
+                <div className="text-secondary text-[9px]">Def</div>
+                <span
+                  className="font-bold px-1 py-0.5 rounded text-[10px]"
+                  style={{
+                    color: getTierColor(tierData.tiers.defense),
+                    backgroundColor: `${getTierColor(tierData.tiers.defense)}20`
+                  }}
+                >
+                  {tierData.tiers.defense}
+                </span>
+              </div>
+              {/* Individual - only show if not N/A */}
+              <div>
+                <div className="text-secondary text-[9px]">Indiv</div>
+                {tierData.tiers.individual !== 'N/A' ? (
+                  <span
+                    className="font-bold px-1 py-0.5 rounded text-[10px]"
+                    style={{
+                      color: getTierColor(tierData.tiers.individual),
+                      backgroundColor: `${getTierColor(tierData.tiers.individual)}20`
+                    }}
+                  >
+                    {tierData.tiers.individual}
+                  </span>
+                ) : (
+                  <span className="text-secondary text-[10px]">-</span>
+                )}
+              </div>
+            </div>
+            {/* Reserve tier - show if overall B+ OR any breakdown mode is B+ */}
+            {tierData.tiers.reserve && (
+              ['S+', 'S', 'A', 'B'].includes(tierData.tiers.reserve) ||
+              (tierData.reserve_breakdown && (
+                ['S+', 'S', 'A', 'B'].includes(tierData.reserve_breakdown.five_round?.tier) ||
+                ['S+', 'S', 'A', 'B'].includes(tierData.reserve_breakdown.one_round?.tier) ||
+                ['S+', 'S', 'A', 'B'].includes(tierData.reserve_breakdown.defense?.tier)
+              ))
+            ) && (
+              <div className="mt-1 pt-1 border-t text-center" style={{ borderColor: 'var(--color-border)' }}>
+                <span className="text-secondary text-[8px]">Reserve: </span>
+                <span
+                  className="font-bold px-1 py-0.5 rounded text-[10px]"
+                  style={{
+                    color: getTierColor(tierData.tiers.reserve),
+                    backgroundColor: `${getTierColor(tierData.tiers.reserve)}20`
+                  }}
+                >
+                  {tierData.tiers.reserve}
+                </span>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* Skill */}
         {card.skill && (

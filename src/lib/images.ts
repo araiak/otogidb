@@ -112,23 +112,28 @@ export function getOptimizedImageUrl(
 // =============================================================================
 // STANDARDIZED TRANSFORMS - Keep these minimal to reduce Cloudinary credits
 // Each unique transform string × image = 1 derived asset
+//
+// Size strategy (optimized for bandwidth):
+// - thumb: 48px (displayed at 40px, 1.2x for slight retina crispness)
+// - popup: 144px (displayed at 112-144px via CSS, 1x)
+// - hdCircle: 96px (displayed at various sizes, 1.5x retina)
 // =============================================================================
 const STANDARD_TRANSFORMS = {
   // Android circle: Don't resize - serve at original size (~200px) for quality
   // CSS will handle display size, browser downscaling looks better than Cloudinary upscaling
   androidCircle: 'c_scale,r_max,f_auto,q_auto',
-  // HD circle at 120px (2x for retina) - high-res source so resize looks good
-  hdCircle: 'w_120,h_120,c_thumb,g_face,r_max,f_auto,q_auto',
-  // 80px thumbnail for table rows
-  thumb: 'w_80,f_auto,q_auto',
-  // 200px for hover/tap popups
-  popup: 'w_200,f_auto,q_auto',
+  // HD circle at 96px (1.5x for retina) - high-res source so resize looks good
+  hdCircle: 'w_96,h_96,c_thumb,g_face,r_max,f_auto,q_auto',
+  // 48px thumbnail for table rows (displayed at 40px, saves ~60% vs 80px)
+  thumb: 'w_48,f_auto,q_auto',
+  // 144px for hover/tap popups (displayed at 112-144px, saves ~50% vs 200px)
+  popup: 'w_144,f_auto,q_auto',
   // Original size with optimization for detail pages
   hd: 'f_auto,q_auto',
 } as const;
 
 /**
- * Get thumbnail URL for card table (search results) - 80px
+ * Get thumbnail URL for card table (search results) - 48px
  * Uses HD optimized and scaled down, falls back to android
  */
 export function getThumbnailUrl(card: Card): string | null {
@@ -148,7 +153,7 @@ export function getThumbnailUrl(card: Card): string | null {
 }
 
 /**
- * Get medium size image for popups - 200px
+ * Get medium size image for popups - 144px
  * Uses HD optimized, falls back to android
  */
 export function getPopupImageUrl(card: Card): string | null {

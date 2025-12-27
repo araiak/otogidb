@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import TierList from '../../../components/tiers/TierList';
+
+const currentLocale = 'en';
+
+const pageTitle = "Tier List - Card Rankings by Battle Mode";
+const pageDescription = "View tier rankings for all Otogi: Spirit Agents cards. Filter by role, attribute, and battle mode. See 5-round, 1-round, and defense rankings.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-4 md:mb-6">
+      <div class="flex items-center gap-2 mb-1 md:mb-2">
+        <h1 class="text-lg sm:text-xl md:text-3xl font-bold">Tier List</h1>
+        <span class="px-2 py-0.5 text-xs font-semibold bg-yellow-500/20 text-yellow-400 rounded">DEV</span>
+      </div>
+      <p class="text-secondary text-sm md:text-base hidden sm:block">
+        Card rankings based on battle simulation benchmarks. Filter by role, attribute, or test mode.
+      </p>
+    </div>
+
+    <!-- Tier List (React Island) -->
+    <TierList client:load />
+  </div>
+</BaseLayout>
