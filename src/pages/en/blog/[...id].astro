@@ -9,12 +9,14 @@ import TeamBlock from '../../../components/blog/TeamBlock';
 import type { CardsData, Card } from '../../../types/card';
 import { getImageUrl } from '../../../lib/images';
 
-// Import cards and skills data for popups
+// Import cards, skills, and tier data for popups
 import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
+import tiersDataRaw from '../../../data/tiers.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
+const tiersData = tiersDataRaw as any;
 
 export async function getStaticPaths() {
   // Only get English posts (locale is 'en' or unspecified)
@@ -175,16 +177,16 @@ const jsonLd = {
     </article>
 
     <!-- Card reference hover popups -->
-    <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
+    <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
 
     <!-- Filter block card grids with hover popups -->
-    <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
 
     <!-- List block card grids with hover popups -->
-    <ListBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <ListBlock client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
 
     <!-- Team composition blocks with hover popups -->
-    <TeamBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <TeamBlock client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
 
     <!-- Back to blog -->
     <div class="mt-6">

@@ -58,26 +58,13 @@ export function useCardHover({
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
     placement,
+    strategy: 'fixed', // Use fixed positioning to avoid layout shifts
     middleware: [offset(offsetDistance), flip(), shift({ padding: 10 })],
     whileElementsMounted: autoUpdate,
     elements: {
       reference: referenceElement,
     },
   });
-
-  const handleMouseEnter = useCallback((e: MouseEvent) => {
-    const target = e.currentTarget as HTMLElement;
-    const cardId = target.dataset.cardId;
-    if (cardId && cards[cardId]) {
-      setActiveCard(cards[cardId]);
-      setReferenceElement(target);
-    }
-  }, [cards]);
-
-  const handleMouseLeave = useCallback(() => {
-    setActiveCard(null);
-    setReferenceElement(null);
-  }, []);
 
   const closeMobilePreview = useCallback(() => {
     setMobilePreviewCard(null);
@@ -102,90 +89,100 @@ export function useCardHover({
     };
   }, [mobilePreviewCard]);
 
-  // Attach hover listeners to elements matching selector
+  // Use event delegation for hover - handles dynamically added elements (e.g., expanding tiers)
   useEffect(() => {
     const root = container || document;
-    const elements = root.querySelectorAll<HTMLElement>(selector);
+
+    // Event delegation: handle mouseover on the container, check if target matches selector
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest(selector) as HTMLElement | null;
+      if (target) {
+        const cardId = target.dataset.cardId;
+        if (cardId && cards[cardId]) {
+          setActiveCard(cards[cardId]);
+          setReferenceElement(target);
+        }
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest(selector) as HTMLElement | null;
+      const relatedTarget = (e.relatedTarget as HTMLElement | null)?.closest(selector);
+      // Only hide if we're leaving a card element and not entering another
+      if (target && !relatedTarget) {
+        setActiveCard(null);
+        setReferenceElement(null);
+      }
+    };
+
+    // Mobile click handler with delegation
+    const handleClick = (e: Event) => {
+      if (!window.matchMedia('(hover: none)').matches) return;
+
+      const target = (e.target as HTMLElement).closest(selector) as HTMLElement | null;
+      if (target) {
+        const cardId = target.dataset.cardId;
+        if (cardId && cards[cardId]) {
+          e.preventDefault();
+          setMobilePreviewCard(cards[cardId]);
+        }
+      }
+    };
+
+    // Attach delegated listeners to root
+    (root as HTMLElement).addEventListener('mouseover', handleMouseOver);
+    (root as HTMLElement).addEventListener('mouseout', handleMouseOut);
+    (root as HTMLElement).addEventListener('click', handleClick as EventListener);
+
+    // Handle text updates and icon injection if needed
     const injectedIcons: HTMLButtonElement[] = [];
-
-    // Track mobile click handlers for cleanup
-    const mobileClickHandlers: Array<{ el: HTMLElement; handler: EventListener }> = [];
-
-    // Track original text for restoration
     const originalTexts: Map<HTMLElement, string> = new Map();
 
-    elements.forEach(element => {
-      // Desktop: hover listeners
-      element.addEventListener('mouseenter', handleMouseEnter as EventListener);
-      element.addEventListener('mouseleave', handleMouseLeave);
-
-      // Mobile: tap to preview (intercept click on touch devices)
-      const cardId = element.dataset.cardId;
-      if (cardId && cards[cardId]) {
-        // Update link text with localized card name if enabled
-        if (updateLinkText) {
-          const card = cards[cardId];
-          const localizedName = card.name || `Card #${cardId}`;
-          // Store original text
-          originalTexts.set(element, element.textContent || '');
-          // Update to localized name
-          element.textContent = localizedName;
-        }
-        const mobileClickHandler = (e: Event) => {
-          // Only intercept on touch devices (no hover support)
-          if (window.matchMedia('(hover: none)').matches) {
-            e.preventDefault();
-            setMobilePreviewCard(cards[cardId]);
-          }
-        };
-        element.addEventListener('click', mobileClickHandler as EventListener);
-        mobileClickHandlers.push({ el: element, handler: mobileClickHandler as EventListener });
-      }
-
-      // Mobile: inject view icon if enabled and not already present
-      if (injectMobileIcons && !element.nextElementSibling?.classList.contains('card-ref-mobile-icon')) {
+    if (updateLinkText || injectMobileIcons) {
+      const elements = root.querySelectorAll<HTMLElement>(selector);
+      elements.forEach(element => {
+        const cardId = element.dataset.cardId;
         if (cardId && cards[cardId]) {
-          const icon = document.createElement('button');
-          icon.className = 'card-ref-mobile-icon';
-          icon.setAttribute('aria-label', 'Preview card');
-          icon.innerHTML = `
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-              <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-            </svg>
-          `;
-          icon.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            setMobilePreviewCard(cards[cardId]);
-          });
+          if (updateLinkText) {
+            const card = cards[cardId];
+            const localizedName = card.name || `Card #${cardId}`;
+            originalTexts.set(element, element.textContent || '');
+            element.textContent = localizedName;
+          }
 
-          element.insertAdjacentElement('afterend', icon);
-          injectedIcons.push(icon);
+          if (injectMobileIcons && !element.nextElementSibling?.classList.contains('card-ref-mobile-icon')) {
+            const icon = document.createElement('button');
+            icon.className = 'card-ref-mobile-icon';
+            icon.setAttribute('aria-label', 'Preview card');
+            icon.innerHTML = `
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+            `;
+            icon.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              setMobilePreviewCard(cards[cardId]);
+            });
+            element.insertAdjacentElement('afterend', icon);
+            injectedIcons.push(icon);
+          }
         }
-      }
-    });
+      });
+    }
 
     return () => {
-      elements.forEach(element => {
-        element.removeEventListener('mouseenter', handleMouseEnter as EventListener);
-        element.removeEventListener('mouseleave', handleMouseLeave);
-      });
+      (root as HTMLElement).removeEventListener('mouseover', handleMouseOver);
+      (root as HTMLElement).removeEventListener('mouseout', handleMouseOut);
+      (root as HTMLElement).removeEventListener('click', handleClick as EventListener);
 
-      // Clean up mobile click handlers
-      mobileClickHandlers.forEach(({ el, handler }) => {
-        el.removeEventListener('click', handler);
-      });
-
-      // Clean up injected icons
       injectedIcons.forEach(icon => icon.remove());
-
-      // Restore original text
       originalTexts.forEach((text, el) => {
         el.textContent = text;
       });
     };
-  }, [cards, selector, container, injectMobileIcons, updateLinkText, handleMouseEnter, handleMouseLeave]);
+  }, [cards, selector, container, injectMobileIcons, updateLinkText]);
 
   return {
     activeCard,
@@ -211,6 +208,7 @@ export function useCardHoverManual(cards: Record<string, Card>, placement: Place
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
     placement,
+    strategy: 'fixed', // Use fixed positioning to avoid layout shifts
     middleware: [offset(10), flip(), shift({ padding: 10 })],
     whileElementsMounted: autoUpdate,
     elements: {
