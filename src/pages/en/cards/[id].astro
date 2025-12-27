@@ -7,12 +7,13 @@ import { getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
-// Import cards, skills, card mentions, similar cards, and tier data at build time
+// Import cards, skills, card mentions, similar cards, tier data, and auction data at build time
 import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
 import tiersDataRaw from '../../../data/tiers.json';
+import auctionsDataRaw from '../../../data/auctions.json';
 
 // Type for card mentions
 interface CardMention {
@@ -75,6 +76,23 @@ type TiersData = {
   cards: Record<string, TierCardData>;
 };
 
+// Type for auction data
+interface AuctionCardData {
+  card_id: string;
+  first_seen: string;
+  last_seen: string;
+  last_price: number;
+  last_count: number;
+  min_price_ever: number;
+  max_price_ever: number;
+}
+type AuctionsData = {
+  last_updated: string;
+  active_count: number;
+  total_tracked: number;
+  cards: Record<string, AuctionCardData>;
+};
+
 export async function getStaticPaths() {
   // Cast inside getStaticPaths since it runs first during build
   const cardsData = cardsDataRaw as unknown as CardsData;
@@ -93,6 +111,7 @@ const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
 const similarCardsData = similarCardsRaw as SimilarCardsData;
 const tiersData = tiersDataRaw as TiersData;
+const auctionsData = auctionsDataRaw as AuctionsData;
 
 const { card } = Astro.props as { card: Card };
 
@@ -119,6 +138,43 @@ const similarCards = precomputedSimilar.map(entry => ({
 
 // Get tier data for this card (if available)
 const cardTierData = tiersData.cards[card.id] || null;
+
+// Get live auction data for this card (if tracked)
+const cardAuctionData = auctionsData.cards?.[card.id] || null;
+
+// Helper to calculate stock level from auction data
+function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' | 'low' | 'unavailable' {
+  if (!auctionData || !auctionData.last_seen) return 'unavailable';
+
+  const lastSeen = new Date(auctionData.last_seen);
+  const now = new Date();
+  const daysSinceLastSeen = (now.getTime() - lastSeen.getTime()) / (1000 * 60 * 60 * 24);
+
+  if (daysSinceLastSeen > 7) return 'unavailable';
+
+  const count = auctionData.last_count || 0;
+  if (count >= 5) return 'high';
+  if (count >= 2) return 'medium';
+  if (count >= 1) return 'low';
+  return 'unavailable';
+}
+
+// Helper to format relative time
+function formatRelativeTime(dateStr: string): string {
+  const date = new Date(dateStr);
+  const now = new Date();
+  const diffMs = now.getTime() - date.getTime();
+  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+  const diffDays = Math.floor(diffHours / 24);
+
+  if (diffHours < 1) return 'Just now';
+  if (diffHours < 24) return `${diffHours}h ago`;
+  if (diffDays === 1) return 'Yesterday';
+  if (diffDays < 7) return `${diffDays}d ago`;
+  return formatDate(dateStr);
+}
+
+const stockLevel = getStockLevel(cardAuctionData);
 
 // Helper to get tier color
 function getTierColor(tier: string): string {
@@ -659,23 +715,64 @@ const jsonLd = {
                 // Map currency codes to display names
                 const auctionCurrency = card.acquisition.auction.currency === 'gold' ? 'Jewels' :
                                        card.acquisition.auction.currency === 'gApple' ? 'Mochi' :
-                                       card.acquisition.auction.currency || 'Jewels';
+                                       card.acquisition.auction.currency || 'Mochi';
+
+                // Stock level colors and labels
+                const stockColors = {
+                  high: { bg: 'bg-green-500/20', text: 'text-green-700 dark:text-green-400', label: 'High Stock (5+)' },
+                  medium: { bg: 'bg-yellow-500/20', text: 'text-yellow-700 dark:text-yellow-400', label: 'Medium (2-4)' },
+                  low: { bg: 'bg-orange-500/20', text: 'text-orange-700 dark:text-orange-400', label: 'Low Stock (1)' },
+                  unavailable: { bg: 'bg-gray-500/20', text: 'text-gray-500 dark:text-gray-400', label: 'Unavailable' },
+                } as const;
+                const stockStyle = stockColors[stockLevel];
+
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                    <div class="flex items-center gap-2">
-                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-700 dark:text-yellow-300 font-medium">Auction</span>
-                      {card.acquisition.auction.available ? (
-                        <span class="text-xs text-green-700 dark:text-green-400">✓ Available</span>
-                      ) : (
-                        <span class="text-xs text-secondary">Not currently listed</span>
-                      )}
-                      {card.acquisition.auction.is_time_limited && (
-                        <span class="text-xs text-yellow-700 dark:text-yellow-400">(Limited Time)</span>
-                      )}
+                    <div class="flex items-center justify-between gap-2 mb-2">
+                      <div class="flex items-center gap-2">
+                        <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-700 dark:text-yellow-300 font-medium">Auction</span>
+                        {card.acquisition.auction.is_time_limited && (
+                          <span class="text-xs text-yellow-700 dark:text-yellow-400">(Limited Time)</span>
+                        )}
+                      </div>
+                      <span class={`px-2 py-0.5 text-xs rounded ${stockStyle.bg} ${stockStyle.text} font-medium`}>
+                        {stockStyle.label}
+                      </span>
                     </div>
-                    {card.acquisition.auction.price_min !== null && card.acquisition.auction.price_max !== null && (
-                      <div class="text-xs text-secondary mt-1">
-                        Price range: {formatNumber(card.acquisition.auction.price_min)} - {formatNumber(card.acquisition.auction.price_max)} {auctionCurrency}
+
+                    {/* Live market data */}
+                    {cardAuctionData && stockLevel !== 'unavailable' && (
+                      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs mb-2">
+                        <div>
+                          <span class="text-secondary">Last Price:</span>
+                          <span class="ml-1 font-medium">{formatNumber(cardAuctionData.last_price)} {auctionCurrency}</span>
+                        </div>
+                        <div>
+                          <span class="text-secondary">Available:</span>
+                          <span class="ml-1 font-medium">{cardAuctionData.last_count} copies</span>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                          <span class="text-secondary">Last Seen:</span>
+                          <span class="ml-1">{formatRelativeTime(cardAuctionData.last_seen)}</span>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Price history range */}
+                    {cardAuctionData && (
+                      <div class="text-xs text-secondary border-t pt-2 mt-2" style="border-color: var(--color-border);">
+                        <span>Range: </span>
+                        <span class="font-medium">{formatNumber(cardAuctionData.min_price_ever)}</span>
+                        <span> - </span>
+                        <span class="font-medium">{formatNumber(cardAuctionData.max_price_ever)}</span>
+                        <span> {auctionCurrency}</span>
+                      </div>
+                    )}
+
+                    {/* Fallback for cards never seen in auction */}
+                    {!cardAuctionData && (
+                      <div class="text-xs text-secondary">
+                        No market data available yet
                       </div>
                     )}
                   </div>
