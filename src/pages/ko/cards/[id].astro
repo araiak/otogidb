@@ -11,12 +11,14 @@ import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlacehol
 import { getSimilarityReason } from '../../../lib/similarity';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
+import CardPopups from '../../../components/cards/CardPopups';
 
 // Import locale cards data and English skills data at build time
 import cardsDataRaw from '../../../data/ko/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
+import tiersDataRaw from '../../../data/tiers.json';
 
 // For similar cards, we use English data to get names for linking
 import enCardsDataRaw from '../../../data/cards.json';
@@ -38,6 +40,50 @@ interface SimilarCardEntry {
 }
 type SimilarCardsData = Record<string, SimilarCardEntry[]>;
 
+// Type for tier data
+interface ReserveModeData {
+  percentile: number;
+  tier: string;
+}
+interface TierCardData {
+  card_id: number;
+  card_name: string;
+  unit_type: number;
+  attribute: number;
+  rarity: number;
+  raw: {
+    five_round: number;
+    one_round: number;
+    defense: number;
+    individual: number;
+  };
+  percentiles: {
+    five_round: number;
+    one_round: number;
+    defense: number;
+    individual: number;
+    overall: number;
+    reserve: number;
+  };
+  tiers: {
+    five_round: string;
+    one_round: string;
+    defense: string;
+    individual: string;
+    overall: string;
+    reserve: string;
+  };
+  reserve_breakdown?: {
+    five_round: ReserveModeData;
+    one_round: ReserveModeData;
+    defense: ReserveModeData;
+  } | null;
+}
+type TiersData = {
+  version: string;
+  cards: Record<string, TierCardData>;
+};
+
 const currentLocale = 'ko';
 const localeName = '한국어';
 
@@ -57,6 +103,7 @@ const enCardsData = enCardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
 const similarCardsData = similarCardsRaw as SimilarCardsData;
+const tiersData = tiersDataRaw as TiersData;
 
 const { card } = Astro.props as { card: Card };
 
@@ -94,6 +141,22 @@ const similarCards = precomputedSimilar.map(entry => ({
     score: entry.score,
   }
 })).filter(item => item.card);
+
+// Get tier data for this card (if available)
+const cardTierData = tiersData.cards[card.id] || null;
+
+// Helper to get tier color
+function getTierColor(tier: string): string {
+  switch (tier) {
+    case 'S+': return '#FF6B6B';
+    case 'S': return '#FFD700';
+    case 'A': return '#C0C0C0';
+    case 'B': return '#CD7F32';
+    case 'C': return '#808080';
+    case 'D': return '#404040';
+    default: return '#606060';
+  }
+}
 
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
@@ -287,6 +350,133 @@ const jsonLd = {
             </div>
           </div>
         </div>
+
+        <!-- Simulated Tier Rankings -->
+        {cardTierData && (
+          <div class="card p-3 sm:p-4">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <h2 class="font-semibold text-sm sm:text-base">Simulated Tier Rankings</h2>
+              <a href={`/${currentLocale}/tiers`} class="text-xs link">View Full Tier List →</a>
+            </div>
+
+            <!-- Overall Tier -->
+            <div class="flex items-center justify-between p-2 sm:p-3 rounded mb-3" style="background-color: var(--color-surface);">
+              <span class="text-sm font-medium">Overall</span>
+              <span
+                class="font-bold px-3 py-1 rounded text-lg"
+                style={`color: ${getTierColor(cardTierData.tiers.overall)}; background-color: ${getTierColor(cardTierData.tiers.overall)}20;`}
+              >
+                {cardTierData.tiers.overall}
+              </span>
+            </div>
+
+            <!-- Score Breakdown -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs sm:text-sm">
+              <div class="p-2 rounded text-center" style="background-color: var(--color-surface);">
+                <div class="text-secondary text-[10px] sm:text-xs mb-1">5-Round</div>
+                <span
+                  class="font-bold px-2 py-0.5 rounded text-sm"
+                  style={`color: ${getTierColor(cardTierData.tiers.five_round)}; background-color: ${getTierColor(cardTierData.tiers.five_round)}20;`}
+                >
+                  {cardTierData.tiers.five_round}
+                </span>
+              </div>
+              <div class="p-2 rounded text-center" style="background-color: var(--color-surface);">
+                <div class="text-secondary text-[10px] sm:text-xs mb-1">1-Round</div>
+                <span
+                  class="font-bold px-2 py-0.5 rounded text-sm"
+                  style={`color: ${getTierColor(cardTierData.tiers.one_round)}; background-color: ${getTierColor(cardTierData.tiers.one_round)}20;`}
+                >
+                  {cardTierData.tiers.one_round}
+                </span>
+              </div>
+              <div class="p-2 rounded text-center" style="background-color: var(--color-surface);">
+                <div class="text-secondary text-[10px] sm:text-xs mb-1">Defense</div>
+                <span
+                  class="font-bold px-2 py-0.5 rounded text-sm"
+                  style={`color: ${getTierColor(cardTierData.tiers.defense)}; background-color: ${getTierColor(cardTierData.tiers.defense)}20;`}
+                >
+                  {cardTierData.tiers.defense}
+                </span>
+              </div>
+              {cardTierData.tiers.individual !== 'N/A' && (
+                <div class="p-2 rounded text-center" style="background-color: var(--color-surface);">
+                  <div class="text-secondary text-[10px] sm:text-xs mb-1">Individual</div>
+                  <span
+                    class="font-bold px-2 py-0.5 rounded text-sm"
+                    style={`color: ${getTierColor(cardTierData.tiers.individual)}; background-color: ${getTierColor(cardTierData.tiers.individual)}20;`}
+                  >
+                    {cardTierData.tiers.individual}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {/* Reserve Tier - show if overall B+ OR any breakdown mode is B+ */}
+            {cardTierData.tiers.reserve && (
+              ['S+', 'S', 'A', 'B'].includes(cardTierData.tiers.reserve) ||
+              (cardTierData.reserve_breakdown && (
+                ['S+', 'S', 'A', 'B'].includes(cardTierData.reserve_breakdown.five_round?.tier) ||
+                ['S+', 'S', 'A', 'B'].includes(cardTierData.reserve_breakdown.one_round?.tier) ||
+                ['S+', 'S', 'A', 'B'].includes(cardTierData.reserve_breakdown.defense?.tier)
+              ))
+            ) && (
+              <div class="mt-3 p-2 sm:p-3 rounded border" style="background-color: var(--color-surface); border-color: var(--color-border);">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-sm font-medium">Reserve</span>
+                    <span class="text-[10px] sm:text-xs text-secondary ml-2">(not part of overall)</span>
+                  </div>
+                  <span
+                    class="font-bold px-2 py-0.5 rounded text-sm"
+                    style={`color: ${getTierColor(cardTierData.tiers.reserve)}; background-color: ${getTierColor(cardTierData.tiers.reserve)}20;`}
+                  >
+                    {cardTierData.tiers.reserve}
+                  </span>
+                </div>
+                {/* Reserve breakdown by mode */}
+                {cardTierData.reserve_breakdown && (
+                  <div class="grid grid-cols-3 gap-2 mt-2">
+                    <div class="p-1.5 rounded text-center" style="background-color: var(--color-bg);">
+                      <div class="text-[9px] sm:text-[10px] text-secondary mb-1">5-Round</div>
+                      <span
+                        class="font-bold px-1.5 py-0.5 rounded text-[10px] sm:text-xs"
+                        style={`color: ${getTierColor(cardTierData.reserve_breakdown.five_round.tier)}; background-color: ${getTierColor(cardTierData.reserve_breakdown.five_round.tier)}20;`}
+                      >
+                        {cardTierData.reserve_breakdown.five_round.tier}
+                      </span>
+                    </div>
+                    <div class="p-1.5 rounded text-center" style="background-color: var(--color-bg);">
+                      <div class="text-[9px] sm:text-[10px] text-secondary mb-1">1-Round</div>
+                      <span
+                        class="font-bold px-1.5 py-0.5 rounded text-[10px] sm:text-xs"
+                        style={`color: ${getTierColor(cardTierData.reserve_breakdown.one_round.tier)}; background-color: ${getTierColor(cardTierData.reserve_breakdown.one_round.tier)}20;`}
+                      >
+                        {cardTierData.reserve_breakdown.one_round.tier}
+                      </span>
+                    </div>
+                    <div class="p-1.5 rounded text-center" style="background-color: var(--color-bg);">
+                      <div class="text-[9px] sm:text-[10px] text-secondary mb-1">Defense</div>
+                      <span
+                        class="font-bold px-1.5 py-0.5 rounded text-[10px] sm:text-xs"
+                        style={`color: ${getTierColor(cardTierData.reserve_breakdown.defense.tier)}; background-color: ${getTierColor(cardTierData.reserve_breakdown.defense.tier)}20;`}
+                      >
+                        {cardTierData.reserve_breakdown.defense.tier}
+                      </span>
+                    </div>
+                  </div>
+                )}
+                <div class="text-[9px] sm:text-[10px] text-secondary mt-2">
+                  Measures passive ability value when used in the reserve slot
+                </div>
+              </div>
+            )}
+
+            <div class="text-[10px] sm:text-xs text-secondary mt-3">
+              Based on battle simulations at max level. <a href={`/${currentLocale}/tiers`} class="link">Learn more</a>
+            </div>
+          </div>
+        )}
 
         <!-- Skill -->
         {card.skill && (
@@ -547,4 +737,15 @@ const jsonLd = {
       </div>
     )}
   </div>
+
+  <!-- Card hover popups for synergy cards -->
+  {card.synergies && card.synergies.length > 0 && (
+    <CardPopups
+      client:load
+      cards={cardsData.cards}
+      skills={skillsData}
+      tiers={tiersData}
+      selector=".synergy-card"
+    />
+  )}
 </BaseLayout>

@@ -5,9 +5,34 @@ import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
+// Tier data type
+interface TierCardData {
+  percentiles: {
+    five_round: number;
+    one_round: number;
+    defense: number;
+    individual: number;
+    overall: number;
+    reserve: number;
+  };
+  tiers: {
+    five_round: string;
+    one_round: string;
+    defense: string;
+    individual: string;
+    overall: string;
+    reserve: string;
+  };
+}
+
+interface TierData {
+  cards: Record<string, TierCardData>;
+}
+
 interface TeamBlockProps {
   cards: Record<string, Card>;
   skills?: Record<string, any>;
+  tiers?: TierData | null;
 }
 
 interface TeamMember {
@@ -58,7 +83,7 @@ function parseTeamQuery(query: string): TeamMember[] {
  * TeamBlock - Hydrates all .team-block containers
  * Renders team compositions with required/optional markers and hover popups
  */
-export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
+export default function TeamBlock({ cards, skills = {}, tiers = null }: TeamBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
@@ -222,6 +247,7 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
       key={hydrationKey}
       cards={cards}
       skills={skills}
+      tiers={tiers}
       selector=".team-member-card[data-card-id]"
       placement="top"
       compact={true}

@@ -1,9 +1,34 @@
 import type { Card } from '../../types/card';
 import CardHoverProvider from '../cards/CardHoverProvider';
 
+// Tier data type
+interface TierCardData {
+  percentiles: {
+    five_round: number;
+    one_round: number;
+    defense: number;
+    individual: number;
+    overall: number;
+    reserve: number;
+  };
+  tiers: {
+    five_round: string;
+    one_round: string;
+    defense: string;
+    individual: string;
+    overall: string;
+    reserve: string;
+  };
+}
+
+interface TierData {
+  cards: Record<string, TierCardData>;
+}
+
 interface CardReferencePopupsProps {
   cards: Record<string, Card>;
   skills?: Record<string, any>;
+  tiers?: TierData | null;
 }
 
 /**
@@ -15,11 +40,12 @@ interface CardReferencePopupsProps {
  *
  * Now uses the unified CardHoverProvider for consistent behavior.
  */
-export default function CardReferencePopups({ cards, skills = {} }: CardReferencePopupsProps) {
+export default function CardReferencePopups({ cards, skills = {}, tiers = null }: CardReferencePopupsProps) {
   return (
     <CardHoverProvider
       cards={cards}
       skills={skills}
+      tiers={tiers}
       selector="a.card-ref[data-card-id]"
       placement="top"
       injectMobileIcons={true}
