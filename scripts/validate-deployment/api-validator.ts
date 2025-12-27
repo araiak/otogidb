@@ -60,6 +60,58 @@ export const DATA_ENDPOINTS: ApiEndpoint[] = [
       return { valid: true };
     },
   },
+  {
+    url: '/data/tiers.json',
+    description: 'Tier list data',
+    expectedFields: ['version', 'generated_at', 'cards'],
+    validator: (data) => {
+      const obj = data as Record<string, unknown>;
+
+      // Check version is a string
+      if (typeof obj.version !== 'string') {
+        return { valid: false, error: 'version is not a string' };
+      }
+
+      // Check generated_at is a string (ISO date)
+      if (typeof obj.generated_at !== 'string') {
+        return { valid: false, error: 'generated_at is not a string' };
+      }
+
+      // Check cards is an object with entries
+      if (typeof obj.cards !== 'object' || obj.cards === null) {
+        return { valid: false, error: 'cards is not an object' };
+      }
+      const cardCount = Object.keys(obj.cards as object).length;
+      if (cardCount < 100) {
+        return { valid: false, error: `Only ${cardCount} cards have tiers (expected 100+)` };
+      }
+
+      // Spot check a card has expected tier structure
+      const cards = obj.cards as Record<string, unknown>;
+      const firstCardKey = Object.keys(cards)[0];
+      if (firstCardKey) {
+        const card = cards[firstCardKey] as Record<string, unknown>;
+        const requiredFields = ['overall', 'role'];
+        for (const field of requiredFields) {
+          if (!(field in card)) {
+            return { valid: false, error: `Tier data missing required field: ${field}` };
+          }
+        }
+        // Check overall has tier property
+        const overall = card.overall as Record<string, unknown>;
+        if (!overall || typeof overall.tier !== 'string') {
+          return { valid: false, error: 'overall.tier is not a string' };
+        }
+        // Verify tier is valid
+        const validTiers = ['S+', 'S', 'A', 'B', 'C', 'D', 'N/A'];
+        if (!validTiers.includes(overall.tier as string)) {
+          return { valid: false, error: `Invalid tier: ${overall.tier}` };
+        }
+      }
+
+      return { valid: true };
+    },
+  },
 ];
 
 export interface ApiValidationResult extends ValidationResult {

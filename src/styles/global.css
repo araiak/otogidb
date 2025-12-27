@@ -113,6 +113,8 @@
 
   html {
     scroll-behavior: smooth;
+    /* Always show scrollbar to prevent layout shift when content changes */
+    overflow-y: scroll;
   }
 
   body {
