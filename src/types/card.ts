@@ -28,6 +28,7 @@ export interface Ability {
   unlock_level?: number;
   tags?: string[];
   synergy_partners?: string[]; // Card IDs that trigger this ability's team bonus
+  stackable?: boolean; // true = stacks, false = once per team
 }
 
 export interface ImageUrls {

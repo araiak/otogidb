@@ -11,7 +11,7 @@ interface FeatureConfig {
 }
 
 const FEATURES: Record<FeatureFlag, FeatureConfig> = {
-  tierListPage: { enabled: true }, // Enabled in production
+  tierListPage: { enabled: false }, // Disabled - tier lists hidden from UI
   experimentalFilters: { enabled: false, devOnly: true },
 };
 
