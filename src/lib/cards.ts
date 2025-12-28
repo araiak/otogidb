@@ -8,8 +8,8 @@ export type CardLocale = 'en' | 'ja' | 'ko' | 'zh-cn' | 'zh-tw' | 'es';
 // Keyed by locale
 const cardsCacheByLocale: Record<string, CardsData | null> = {};
 
-// Max age for cached data (24 hours - data updates infrequently)
-const CACHE_MAX_AGE = 24 * 60 * 60 * 1000;
+// Max age for cached data (6 hours - auction data updates daily at 4pm JST)
+const CACHE_MAX_AGE = 6 * 60 * 60 * 1000;
 
 /**
  * Get the data path for a given locale.

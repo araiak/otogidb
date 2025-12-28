@@ -13,17 +13,23 @@
 # DATA FILES - Cache with revalidation
 # =============================================================================
 
-# Hashed data files (e.g., cards_index.abc12345.json) - cache 1 month
-# These have content hashes in filenames, so they're safe to cache long-term
+# Hashed data files (e.g., cards_index.abc12345.json) - cache 1.5 days
+# Content-hashed URLs ensure fresh data on new deployments
+# 36 hours gives buffer for timing differences while clearing stale files
 /data/cards_index.*.json
-  Cache-Control: public, max-age=2592000, immutable
+  Cache-Control: public, max-age=129600, immutable
 
 /data/*/cards_index.*.json
-  Cache-Control: public, max-age=2592000, immutable
+  Cache-Control: public, max-age=129600, immutable
 
-# Other JSON data - cache 1 hour, serve stale while revalidating for 24 hours
+# Tier data only changes when new cards are added (monthly)
+/data/tiers.*.json
+  Cache-Control: public, max-age=604800, immutable
+
+# Base JSON data (fallback) - cache 15 min, serve stale while revalidating for 1 hour
+# Short cache since auction availability updates daily at 4pm JST
 /data/*
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
 
 # =============================================================================
 # IMAGES & ICONS - Long cache

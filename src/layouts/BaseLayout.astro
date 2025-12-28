@@ -375,6 +375,7 @@ const navLinks = {
         themeToggle.addEventListener('click', () => {
           const isDark = document.documentElement.classList.contains('dark');
           const newTheme = isDark ? 'light' : 'dark';
+          const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
           // Save explicit user choice
           localStorage.setItem('otogidb-theme', newTheme);
@@ -382,8 +383,13 @@ const navLinks = {
           // Apply immediately
           if (newTheme === 'dark') {
             document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light-override');
           } else {
             document.documentElement.classList.remove('dark');
+            // If system prefers dark, add override class to prevent CSS media query from applying
+            if (systemPrefersDark) {
+              document.documentElement.classList.add('light-override');
+            }
           }
         });
       }

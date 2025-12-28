@@ -2,6 +2,9 @@
 
 @import "tailwindcss";
 
+/* Override Tailwind's dark mode to use .dark class instead of media query */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* TailwindCSS 4 theme configuration (migrated from tailwind.config.mjs) */
 @theme {
   /* Custom breakpoint */
