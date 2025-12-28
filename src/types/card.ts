@@ -164,7 +164,6 @@ export interface Card {
 
 export interface CardsData {
   version: string;
-  generated_at: string;
   total_cards: number;
   cards: Record<string, Card>;
 }
