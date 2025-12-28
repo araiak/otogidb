@@ -115,8 +115,8 @@ export default function FilterDropdown({
       </button>
       {isOpen && (
         <div
-          className={`absolute z-50 mt-1 p-2 rounded-md shadow-lg border bg-primary min-w-[120px] ${dropdownClassName}`}
-          style={{ borderColor: 'var(--color-border)' }}
+          className={`absolute left-0 z-50 mt-1 p-2 rounded-md shadow-lg border bg-primary min-w-[120px] max-h-[60vh] overflow-y-auto ${dropdownClassName}`}
+          style={{ borderColor: 'var(--color-border)', maxWidth: 'calc(100vw - 2rem)' }}
           role="listbox"
           aria-multiselectable="true"
         >

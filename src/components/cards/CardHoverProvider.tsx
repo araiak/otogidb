@@ -141,7 +141,12 @@ export default function CardHoverProvider({
 
       {/* Mobile preview modal */}
       {mobilePreviewCard && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 md:hidden">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 md:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-preview-title"
+        >
           <div
             ref={mobilePreviewRef}
             className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden"
@@ -152,7 +157,7 @@ export default function CardHoverProvider({
               className="flex items-center justify-between p-3 border-b"
               style={{ borderColor: 'var(--color-border)' }}
             >
-              <h3 className="font-bold text-base truncate pr-2">
+              <h3 id="mobile-preview-title" className="font-bold text-base truncate pr-2">
                 {mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}
               </h3>
               <button

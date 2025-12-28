@@ -134,8 +134,8 @@ export default function GroupedTagDropdown({
       </button>
       {isOpen && (
         <div
-          className="absolute z-50 mt-1 rounded-md shadow-lg border bg-primary min-w-[200px] max-h-[400px] overflow-y-auto"
-          style={{ borderColor: 'var(--color-border)' }}
+          className="absolute left-0 z-50 mt-1 rounded-md shadow-lg border bg-primary min-w-[200px] max-h-[60vh] overflow-y-auto"
+          style={{ borderColor: 'var(--color-border)', maxWidth: 'calc(100vw - 2rem)' }}
           role="listbox"
           aria-multiselectable="true"
         >
