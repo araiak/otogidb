@@ -41,6 +41,8 @@ Basically the goal with this tier list is if you were to grab 5 S-tier monsters 
 
 Some cards may be under/overweight because the supporting team in the simulation uses baseline cards with minimal synergies.
 
+**Healer skills are underweight.** The simulation uses AUTO logic, which deprioritizes heals and buffs behind damage skills. More significantly, the game has a hidden energy system where units build energy through auto attacks or heals before triggering their skills. Healers typically have higher speed, which means they generate energy slower relative to their attack frequency and use their skills less often in AUTO mode. You can observe this in long fights using AUTO - healers frequently show lower skill usage counts because they're not triggering skills as often. Manual play that prioritizes healer skills would show better results than the simulation suggests.
+
 For example :card[549] is probably underweight here because adding base stats to weak monsters makes them less weak, but the effect doesn't get the multiplicative effect from other boosts in your team. :card[1307] and :card[1494] are probably underweight because there aren't any synergistic boosts for these cards to benefit from. :card[580] or any card with XP, drop rate, soulstones are underweight because these aren't measured in any way by the simulation. DoTs are probably overweight because these aren't fully implemented, but these aren't very strong in simulation or in game so this may not be super relevant. CC effects also are not fully implemented, they are all implemented as a generic stun, but these again are only relevant in the defensive sim and not super impactful.
 
 ## How to Use This List as a New Player
