@@ -80,4 +80,4 @@ Look for these helpers, specifically :card[570] and the new :card[1494] for help
 
 Look for :card[580] - sometimes players will include "Holmes" or "SH" in their name to indicate this on their helper. Same for "Obi" and :card[751]. Both of these cards are also drop rate boosters!
 
-**Note:** These cards stack with each other and themselves!
+**Note:** These cards stack with each other but not copies of themselves!

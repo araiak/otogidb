@@ -81,4 +81,4 @@ Prioriza maximizar las estadísticas de tus tanques y healers para que puedan pr
 
 Busca :card[580] - a veces los jugadores incluyen "Holmes" o "SH" en su nombre para indicar esto en su helper. Lo mismo para "Obi" y :card[751]. ¡Ambas cartas también son boosters de tasa de caída!
 
-**Nota:** ¡Estas cartas se acumulan entre sí y consigo mismas!
+**Nota:** ¡Estas cartas se acumulan entre sí pero no con copias de sí mismas!
