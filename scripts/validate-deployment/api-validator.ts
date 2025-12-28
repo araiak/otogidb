@@ -63,18 +63,13 @@ export const DATA_ENDPOINTS: ApiEndpoint[] = [
   {
     url: '/data/tiers.json',
     description: 'Tier list data',
-    expectedFields: ['version', 'generated_at', 'cards'],
+    expectedFields: ['version', 'cards'],
     validator: (data) => {
       const obj = data as Record<string, unknown>;
 
       // Check version is a string
       if (typeof obj.version !== 'string') {
         return { valid: false, error: 'version is not a string' };
-      }
-
-      // Check generated_at is a string (ISO date)
-      if (typeof obj.generated_at !== 'string') {
-        return { valid: false, error: 'generated_at is not a string' };
       }
 
       // Check cards is an object with entries

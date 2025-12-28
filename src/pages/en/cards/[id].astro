@@ -76,15 +76,12 @@ type TiersData = {
   cards: Record<string, TierCardData>;
 };
 
-// Type for auction data
+// Type for auction data (stock only, no pricing)
 interface AuctionCardData {
   card_id: string;
   first_seen: string;
   last_seen: string;
-  last_price: number;
   last_count: number;
-  min_price_ever: number;
-  max_price_ever: number;
 }
 type AuctionsData = {
   last_updated: string;
@@ -712,11 +709,6 @@ const jsonLd = {
 
               {/* Auction */}
               {card.acquisition.sources.includes('auction') && (() => {
-                // Map currency codes to display names
-                const auctionCurrency = card.acquisition.auction.currency === 'gold' ? 'Jewels' :
-                                       card.acquisition.auction.currency === 'gApple' ? 'Mochi' :
-                                       card.acquisition.auction.currency || 'Mochi';
-
                 // Stock level colors and labels
                 const stockColors = {
                   high: { bg: 'bg-green-500/20', text: 'text-green-700 dark:text-green-400', label: 'High Stock (5+)' },
@@ -740,32 +732,17 @@ const jsonLd = {
                       </span>
                     </div>
 
-                    {/* Live market data */}
+                    {/* Stock info */}
                     {cardAuctionData && stockLevel !== 'unavailable' && (
-                      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs mb-2">
-                        <div>
-                          <span class="text-secondary">Last Price:</span>
-                          <span class="ml-1 font-medium">{formatNumber(cardAuctionData.last_price)} {auctionCurrency}</span>
-                        </div>
+                      <div class="flex gap-4 text-xs">
                         <div>
                           <span class="text-secondary">Available:</span>
                           <span class="ml-1 font-medium">{cardAuctionData.last_count} copies</span>
                         </div>
-                        <div class="col-span-2 sm:col-span-1">
+                        <div>
                           <span class="text-secondary">Last Seen:</span>
                           <span class="ml-1">{formatRelativeTime(cardAuctionData.last_seen)}</span>
                         </div>
-                      </div>
-                    )}
-
-                    {/* Price history range */}
-                    {cardAuctionData && (
-                      <div class="text-xs text-secondary border-t pt-2 mt-2" style="border-color: var(--color-border);">
-                        <span>Range: </span>
-                        <span class="font-medium">{formatNumber(cardAuctionData.min_price_ever)}</span>
-                        <span> - </span>
-                        <span class="font-medium">{formatNumber(cardAuctionData.max_price_ever)}</span>
-                        <span> {auctionCurrency}</span>
                       </div>
                     )}
 
