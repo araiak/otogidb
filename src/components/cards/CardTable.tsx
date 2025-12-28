@@ -18,6 +18,7 @@ import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import Fuse from 'fuse.js';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import CardPreviewContent from './CardPreviewContent';
+import TableSkeleton from './TableSkeleton';
 import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown, type TagCategory } from './filters';
 import { ImageCell } from './cells';
 import {
@@ -144,10 +145,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Tier data state
   const [tierData, setTierData] = useState<Record<string, any> | null>(null);
+  const [tierLoading, setTierLoading] = useState(true);
+  const [tierError, setTierError] = useState(false);
 
   // Sort dropdown state
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
+  const [focusedSortIndex, setFocusedSortIndex] = useState(-1);
   const sortDropdownRef = useRef<HTMLDivElement>(null);
+  const sortOptionRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   // Read URL params on mount with input validation
   useEffect(() => {
@@ -220,50 +225,61 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }, 100);
   }, []);
 
-  // Update URL when filters change
+  // Update URL when filters change (debounced to reduce history API calls)
   useEffect(() => {
     if (typeof window === 'undefined' || isInitializing.current) return;
 
-    const params = new URLSearchParams();
+    const timeoutId = setTimeout(() => {
+      const params = new URLSearchParams();
 
-    if (globalFilter) params.set('q', globalFilter);
-    if (attributeFilter.length > 0) params.set('attr', attributeFilter.join(','));
-    if (typeFilter.length > 0) params.set('type', typeFilter.join(','));
-    if (rarityFilter.length > 0) params.set('rarity', rarityFilter.join(','));
-    if (bondFilter.length > 0) params.set('bond', bondFilter.join(','));
-    if (skillTagFilter.length > 0) params.set('skill', skillTagFilter.join(','));
-    if (abilityTagFilter.length > 0) params.set('ability', abilityTagFilter.join(','));
-    if (sourceFilter.length > 0) params.set('source', sourceFilter.join(','));
-    if (availableOnly) params.set('available', '1');
-    if (sorting.length > 0) {
-      params.set('sort', sorting[0].id);
-      params.set('dir', sorting[0].desc ? 'desc' : 'asc');
-    }
-    if (!hideNonPlayable) params.set('npc', '1');
+      if (globalFilter) params.set('q', globalFilter);
+      if (attributeFilter.length > 0) params.set('attr', attributeFilter.join(','));
+      if (typeFilter.length > 0) params.set('type', typeFilter.join(','));
+      if (rarityFilter.length > 0) params.set('rarity', rarityFilter.join(','));
+      if (bondFilter.length > 0) params.set('bond', bondFilter.join(','));
+      if (skillTagFilter.length > 0) params.set('skill', skillTagFilter.join(','));
+      if (abilityTagFilter.length > 0) params.set('ability', abilityTagFilter.join(','));
+      if (sourceFilter.length > 0) params.set('source', sourceFilter.join(','));
+      if (availableOnly) params.set('available', '1');
+      if (sorting.length > 0) {
+        params.set('sort', sorting[0].id);
+        params.set('dir', sorting[0].desc ? 'desc' : 'asc');
+      }
+      if (!hideNonPlayable) params.set('npc', '1');
 
-    const newUrl = params.toString()
-      ? `${window.location.pathname}?${params.toString()}`
-      : window.location.pathname;
+      const newUrl = params.toString()
+        ? `${window.location.pathname}?${params.toString()}`
+        : window.location.pathname;
 
-    window.history.replaceState({}, '', newUrl);
+      window.history.replaceState({}, '', newUrl);
+    }, 300);
+
+    return () => clearTimeout(timeoutId);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
 
   // Load tier data on mount (uses IndexedDB cache with hashed path for cache busting)
-  useEffect(() => {
-    // Get hashed path from manifest if available, fallback to base path
-    const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
-    const tiersPath = dataPaths.tiers?.path || '/data/tiers.json';
+  const loadTierData = useCallback(async () => {
+    setTierLoading(true);
+    setTierError(false);
+    try {
+      // Get hashed path from manifest if available, fallback to base path
+      const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
+      const tiersPath = dataPaths.tiers?.path || '/data/tiers.json';
 
-    fetchWithCache<{ cards: Record<string, any> }>(tiersPath)
-      .then(data => {
-        if (data?.cards) {
-          setTierData(data.cards);
-        }
-      })
-      .catch(() => {
-        // Tier data is optional, don't fail if unavailable
-      });
+      const data = await fetchWithCache<{ cards: Record<string, any> }>(tiersPath);
+      if (data?.cards) {
+        setTierData(data.cards);
+      }
+    } catch {
+      setTierError(true);
+    } finally {
+      setTierLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    loadTierData();
+  }, [loadTierData]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -334,6 +350,63 @@ export default function CardTable({ initialCards }: CardTableProps) {
     setSorting([]);
     setSortDropdownOpen(false);
   }, []);
+
+  // Reset focused sort index when dropdown opens/closes
+  useEffect(() => {
+    if (sortDropdownOpen) {
+      setFocusedSortIndex(0);
+    } else {
+      setFocusedSortIndex(-1);
+    }
+  }, [sortDropdownOpen]);
+
+  // Focus sort option when index changes
+  useEffect(() => {
+    if (sortDropdownOpen && focusedSortIndex >= 0 && sortOptionRefs.current[focusedSortIndex]) {
+      sortOptionRefs.current[focusedSortIndex]?.focus();
+    }
+  }, [focusedSortIndex, sortDropdownOpen]);
+
+  // Keyboard handler for sort dropdown
+  const handleSortKeyDown = useCallback((event: React.KeyboardEvent) => {
+    if (!sortDropdownOpen) {
+      if (event.key === 'ArrowDown' || event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        setSortDropdownOpen(true);
+      }
+      return;
+    }
+
+    switch (event.key) {
+      case 'Escape':
+        event.preventDefault();
+        setSortDropdownOpen(false);
+        break;
+      case 'ArrowDown':
+        event.preventDefault();
+        setFocusedSortIndex(prev => Math.min(prev + 1, sortableColumns.length - 1));
+        break;
+      case 'ArrowUp':
+        event.preventDefault();
+        setFocusedSortIndex(prev => Math.max(prev - 1, 0));
+        break;
+      case 'Enter':
+      case ' ':
+        event.preventDefault();
+        if (focusedSortIndex >= 0 && focusedSortIndex < sortableColumns.length) {
+          handleSortSelect(sortableColumns[focusedSortIndex].id);
+        }
+        break;
+      case 'Home':
+        event.preventDefault();
+        setFocusedSortIndex(0);
+        break;
+      case 'End':
+        event.preventDefault();
+        setFocusedSortIndex(sortableColumns.length - 1);
+        break;
+    }
+  }, [sortDropdownOpen, focusedSortIndex, sortableColumns, handleSortSelect]);
 
   // Copy share link to clipboard
   const handleShare = useCallback(async () => {
@@ -928,14 +1001,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
     },
   });
 
-  // Loading state
+  // Loading state - use skeleton loader for better UX
   if (loading) {
-    return (
-      <div className="p-8 text-center">
-        <div className="inline-block animate-spin rounded-full h-8 w-8 border-4 border-current border-t-transparent" style={{ color: 'var(--color-accent)' }}></div>
-        <p className="mt-4 text-secondary">Loading card data...</p>
-      </div>
-    );
+    return <TableSkeleton rows={10} />;
   }
 
   // Error state
@@ -958,25 +1026,31 @@ export default function CardTable({ initialCards }: CardTableProps) {
       {/* Search and Filters */}
       <div className="space-y-3">
         {/* Search bar - full width on mobile */}
-        <input
-          type="text"
-          value={globalFilter}
-          onChange={(e) => setGlobalFilter(e.target.value)}
-          placeholder="Search cards..."
-          className="w-full px-4 py-2 rounded-md border bg-primary"
-          style={{ borderColor: 'var(--color-border)' }}
-        />
+        <div>
+          <label htmlFor="card-search" className="sr-only">Search cards</label>
+          <input
+            id="card-search"
+            type="text"
+            value={globalFilter}
+            onChange={(e) => setGlobalFilter(e.target.value)}
+            placeholder="Search cards..."
+            className="w-full px-4 py-2 rounded-md border bg-primary"
+            style={{ borderColor: 'var(--color-border)' }}
+          />
+        </div>
 
         {/* Filter Dropdowns - wrap on small screens */}
         <div className="flex flex-wrap gap-2 items-center">
           <span className="text-sm text-secondary hidden sm:inline">Filters:</span>
 
           {/* Sort Dropdown */}
-          <div className="relative" ref={sortDropdownRef}>
+          <div className="relative" ref={sortDropdownRef} onKeyDown={handleSortKeyDown}>
             <button
               onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
               className="flex items-center gap-1 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
               style={{ borderColor: sorting.length > 0 ? 'var(--color-accent)' : 'var(--color-border)' }}
+              aria-expanded={sortDropdownOpen}
+              aria-haspopup="listbox"
             >
               <span>Sort: {currentSort.label}</span>
               {sorting.length > 0 && (
@@ -990,6 +1064,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <div
                 className="absolute z-50 mt-1 p-1 rounded-md shadow-lg border bg-primary min-w-[140px]"
                 style={{ borderColor: 'var(--color-border)' }}
+                role="listbox"
               >
                 {sorting.length > 0 && (
                   <>
@@ -1002,13 +1077,18 @@ export default function CardTable({ initialCards }: CardTableProps) {
                     <div className="border-b my-1" style={{ borderColor: 'var(--color-border)' }} />
                   </>
                 )}
-                {sortableColumns.map(col => (
+                {sortableColumns.map((col, index) => (
                   <button
                     key={col.id}
+                    ref={el => { sortOptionRefs.current[index] = el; }}
                     onClick={() => handleSortSelect(col.id)}
-                    className={`w-full text-left px-2 py-1.5 text-xs rounded hover:bg-surface transition-colors flex items-center justify-between ${
+                    tabIndex={focusedSortIndex === index ? 0 : -1}
+                    role="option"
+                    aria-selected={currentSort.column === col.id}
+                    onMouseEnter={() => setFocusedSortIndex(index)}
+                    className={`w-full text-left px-2 py-1.5 text-xs rounded transition-colors flex items-center justify-between outline-none ${
                       currentSort.column === col.id ? 'text-accent font-medium' : ''
-                    }`}
+                    } ${focusedSortIndex === index ? 'bg-surface ring-2 ring-accent' : 'hover:bg-surface'}`}
                   >
                     <span>{col.label}</span>
                     {currentSort.column === col.id && (
@@ -1133,9 +1213,31 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
       </div>
 
+      {/* Tier data loading/error notice */}
+      {tierLoading && (
+        <div className="flex items-center gap-2 text-sm text-secondary">
+          <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
+          <span>Loading tier data...</span>
+        </div>
+      )}
+      {tierError && !tierLoading && (
+        <div className="flex items-center gap-2 text-sm text-yellow-600 dark:text-yellow-400">
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <span>Tier data unavailable</span>
+          <button
+            onClick={loadTierData}
+            className="underline hover:no-underline"
+          >
+            Retry
+          </button>
+        </div>
+      )}
+
       {/* Results count and actions */}
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
-        <div>
+        <div aria-live="polite" aria-atomic="true">
           Showing {table.getRowModel().rows.length} of {cards.length} cards
           {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || !hideNonPlayable) && (
             <button
@@ -1194,6 +1296,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                   return (
                     <th
                       key={header.id}
+                      scope="col"
                       onClick={header.column.getToggleSortingHandler()}
                       style={{ width: header.getSize() }}
                       className={`${header.column.getCanSort() ? 'cursor-pointer select-none' : ''} ${hideOnSmall ? 'hidden xl:table-cell' : ''}`}
@@ -1210,24 +1313,45 @@ export default function CardTable({ initialCards }: CardTableProps) {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map(row => (
-              <tr key={row.id} className="hover:bg-surface transition-colors">
-                {row.getVisibleCells().map(cell => {
-                  const meta = cell.column.columnDef.meta as any;
-                  // Skip completely hidden columns
-                  if (meta?.hidden) return null;
-                  const hideOnSmall = meta?.hideOnSmall;
-                  return (
-                    <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''}>
-                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                    </td>
-                  );
-                })}
+            {table.getRowModel().rows.length === 0 ? (
+              <tr>
+                <td colSpan={columns.filter(c => !(c.meta as any)?.hidden).length} className="text-center py-8">
+                  <div className="text-secondary">
+                    <p className="text-lg font-medium">No cards found</p>
+                    <p className="text-sm mt-1">Try adjusting your search or filters</p>
+                  </div>
+                </td>
               </tr>
-            ))}
+            ) : (
+              table.getRowModel().rows.map(row => (
+                <tr key={row.id} className="hover:bg-surface transition-colors">
+                  {row.getVisibleCells().map(cell => {
+                    const meta = cell.column.columnDef.meta as any;
+                    // Skip completely hidden columns
+                    if (meta?.hidden) return null;
+                    const hideOnSmall = meta?.hideOnSmall;
+                    return (
+                      <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''}>
+                        {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                      </td>
+                    );
+                  })}
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>
+
+      {/* Mobile Empty State */}
+      {table.getRowModel().rows.length === 0 && (
+        <div className="md:hidden text-center py-8">
+          <div className="text-secondary">
+            <p className="text-lg font-medium">No cards found</p>
+            <p className="text-sm mt-1">Try adjusting your search or filters</p>
+          </div>
+        </div>
+      )}
 
       {/* Extra-Small Mobile (360-480px) - Minimal: Image + Name only */}
       <div className="xs:hidden md:hidden grid grid-cols-1 gap-2">
@@ -1349,7 +1473,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
       {/* Mobile Preview Modal */}
       {mobilePreviewCard && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 md:hidden">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 md:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="mobile-preview-title"
+        >
           <div
             ref={mobilePreviewRef}
             className="w-full max-w-sm rounded-lg shadow-xl overflow-hidden"
@@ -1358,7 +1487,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             {/* Header */}
             <div className="flex items-center justify-between p-3 border-b" style={{ borderColor: 'var(--color-border)' }}>
               <div className="flex items-center gap-2 min-w-0">
-                <h3 className="font-bold truncate">{mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}</h3>
+                <h3 id="mobile-preview-title" className="font-bold truncate">{mobilePreviewCard.name || `Card #${mobilePreviewCard.id}`}</h3>
                 {!mobilePreviewCard.playable && (
                   <span className="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
                 )}
