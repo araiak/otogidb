@@ -30,7 +30,7 @@ Los eventos de Historia son:
   - *Habilidades de última ola* se activan en la última ola de combate (ej. ola 5 de 5)
   - *Bonos progresivos* dicen "gana X al inicio de una ola" - un 10% de impulso se convierte en 10% en ola 1, 20% en ola 2, hasta 50% en ola 5
   - *Bonos fijos* están siempre activos
-- **Con tipo** (Divina, Anima o Phantasma), hay un bono de daño de -20% a 20% dependiendo del tipo de batalla. En la mayoría de los casos esto no es importante ya que tu equipo más fuerte probablemente sigue siendo la mejor opción.
+- **Con tipo** (Divina, Anima o Phantasma), otorgando un bono de tipo de equipo cuando tienes ventaja de tipo. Un líder del mismo tipo da +10%, más +5% por cada miembro del mismo tipo (hasta 45% total con un equipo completo del mismo tipo). Si tus equipos tienen fuerza similar, considera construir equipos tipados con líderes coincidentes. Si un equipo es significativamente más fuerte, las estadísticas base probablemente superen el bono de tipo.
 - **Costos de SE (Spirit Energy) fijos** - SE se recarga 1 cada 5 minutos, así que siempre usa un equipo completo para obtener el máximo valor.
 - **Geniales para farmear XP** - tanto los bonos de tasa de caída como los bonos de XP deberían usarse tanto como tu equipo pueda permitir y aún así limpiar.
 

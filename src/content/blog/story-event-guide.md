@@ -29,7 +29,7 @@ Story events are:
   - *Final wave abilities* activate on the last wave of combat (e.g. wave 5 of 5)
   - *Progressive bonuses* say "gain X at the start of a wave" - a 10% boost becomes 10% on wave 1, 20% on wave 2, up to 50% on wave 5
   - *Flat bonuses* are always active
-- **Typed** (Divina, Anima, or Phantasma), so there is a -20% to 20% damage bonus depending on the battle type. In most cases this is not important as your strongest team is probably still the best choice.
+- **Typed** (Divina, Anima, or Phantasma), granting a team type bonus when your team has type advantage. A matching leader gives +10%, plus +5% per same-type team member (up to 45% total for a full same-type team). If your teams are similar in strength, consider building typed teams with matching leaders. If one team is significantly stronger, raw stats will likely outweigh the type bonus.
 - **Set SE (Spirit Energy) costs** - SE recharges 1 per 5 minutes, so always use a full team to get the most value.
 - **Great for farming XP**, both drop rate bonuses and XP bonuses should be used as much as your team can allow and still clear.
 
