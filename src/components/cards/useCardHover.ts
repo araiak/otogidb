@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useFloating, offset, flip, shift, autoUpdate, type Placement } from '@floating-ui/react';
 import type { Card } from '../../types/card';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 
 export interface UseCardHoverOptions {
   /** Card data lookup */
@@ -53,7 +54,16 @@ export function useCardHover({
   const [activeCard, setActiveCard] = useState<Card | null>(null);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
-  const mobilePreviewRef = useRef<HTMLDivElement>(null);
+
+  const closeMobilePreview = useCallback(() => {
+    setMobilePreviewCard(null);
+  }, []);
+
+  // Use focus trap for mobile preview modal accessibility
+  const mobilePreviewRef = useFocusTrap<HTMLDivElement>({
+    isActive: mobilePreviewCard !== null,
+    onEscape: closeMobilePreview,
+  });
 
   const { refs, floatingStyles } = useFloating({
     open: !!activeCard,
@@ -66,15 +76,11 @@ export function useCardHover({
     },
   });
 
-  const closeMobilePreview = useCallback(() => {
-    setMobilePreviewCard(null);
-  }, []);
-
   // Handle click outside mobile preview to close it
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent | TouchEvent) => {
       if (mobilePreviewRef.current && !mobilePreviewRef.current.contains(e.target as Node)) {
-        setMobilePreviewCard(null);
+        closeMobilePreview();
       }
     };
 
@@ -87,7 +93,7 @@ export function useCardHover({
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside as EventListener);
     };
-  }, [mobilePreviewCard]);
+  }, [mobilePreviewCard, closeMobilePreview]);
 
   // Use event delegation for hover - handles dynamically added elements (e.g., expanding tiers)
   useEffect(() => {

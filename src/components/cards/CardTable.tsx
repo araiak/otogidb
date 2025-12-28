@@ -21,6 +21,7 @@ import CardPreviewContent from './CardPreviewContent';
 import TableSkeleton from './TableSkeleton';
 import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown, type TagCategory } from './filters';
 import { ImageCell } from './cells';
+import { useFocusTrap } from '../../hooks/useFocusTrap';
 import {
   extractLocaleFromPath,
   getStoredLocale,
@@ -141,7 +142,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Mobile preview state
   const [mobilePreviewCard, setMobilePreviewCard] = useState<Card | null>(null);
-  const mobilePreviewRef = useRef<HTMLDivElement>(null);
+  const closeMobilePreview = useCallback(() => setMobilePreviewCard(null), []);
+  const mobilePreviewRef = useFocusTrap<HTMLDivElement>({
+    isActive: mobilePreviewCard !== null,
+    onEscape: closeMobilePreview,
+  });
 
   // Tier data state
   const [tierData, setTierData] = useState<Record<string, any> | null>(null);
@@ -287,13 +292,13 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     function handleClickOutside(event: MouseEvent) {
       if (mobilePreviewRef.current && !mobilePreviewRef.current.contains(event.target as Node)) {
-        setMobilePreviewCard(null);
+        closeMobilePreview();
       }
     }
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [mobilePreviewCard]);
+  }, [mobilePreviewCard, closeMobilePreview]);
 
   // Close sort dropdown when clicking outside
   useEffect(() => {
@@ -1493,7 +1498,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 )}
               </div>
               <button
-                onClick={() => setMobilePreviewCard(null)}
+                onClick={closeMobilePreview}
                 className="p-1 rounded"
                 aria-label="Close preview"
               >
