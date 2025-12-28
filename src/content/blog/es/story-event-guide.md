@@ -71,7 +71,7 @@ Prioriza maximizar las estadísticas de tus tanques y healers para que puedan pr
 
 ¡Busca estos helpers, específicamente :card[570] y el nuevo :card[1494] si puedes!
 
-**Nota:** ¡Estas cartas se acumulan entre sí pero no consigo mismas!
+**Nota:** ¡Estas cartas se acumulan entre sí y consigo mismas!
 
 ---
 
@@ -81,4 +81,4 @@ Prioriza maximizar las estadísticas de tus tanques y healers para que puedan pr
 
 Busca :card[580] - a veces los jugadores incluyen "Holmes" o "SH" en su nombre para indicar esto en su helper. Lo mismo para "Obi" y :card[751]. ¡Ambas cartas también son boosters de tasa de caída!
 
-**Nota:** ¡Estas cartas se acumulan entre sí pero no consigo mismas!
+**Nota:** ¡Estas cartas se acumulan entre sí pero no con copias de sí mismas!

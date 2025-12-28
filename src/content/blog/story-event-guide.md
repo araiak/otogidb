@@ -70,7 +70,7 @@ Farm the highest battle you can reliably clear with drop rate boosters! The curr
 
 Look for these helpers, specifically :card[570] and the new :card[1494] for helpers if you can!
 
-**Note:** These cards stack with each other but not with themselves!
+**Note:** These cards stack with each other and themselves!
 
 ---
 
@@ -80,4 +80,4 @@ Look for these helpers, specifically :card[570] and the new :card[1494] for help
 
 Look for :card[580] - sometimes players will include "Holmes" or "SH" in their name to indicate this on their helper. Same for "Obi" and :card[751]. Both of these cards are also drop rate boosters!
 
-**Note:** These cards stack with each other but not with themselves!
+**Note:** These cards stack with each other but not copies of themselves!
