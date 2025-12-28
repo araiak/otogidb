@@ -387,6 +387,11 @@ const jsonLd = {
                         Lv. {ability.unlock_level}
                       </span>
                     )}
+                    {ability.stackable === false && (
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-orange-500/20 text-orange-400" title="每隊僅生效一次">
+                        1x 隊伍
+                      </span>
+                    )}
                   </div>
                   <div class="text-xs sm:text-sm text-secondary mt-0.5">
                     {ability.description}
