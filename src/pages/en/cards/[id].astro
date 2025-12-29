@@ -432,7 +432,7 @@ const jsonLd = {
                         Lv. {ability.unlock_level}
                       </span>
                     )}
-                    {ability.stackable === false && (
+                    {ability.stackable === false && !ability.tags?.includes('self') && (
                       <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-orange-500/20 text-orange-400" title="Only one of this ability type applies per team">
                         1x per team
                       </span>

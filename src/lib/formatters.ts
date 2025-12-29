@@ -95,8 +95,10 @@ export function formatNumber(num: number): string {
 /**
  * Format date string for display
  */
-export function formatDate(dateString: string): string {
+export function formatDate(dateString: string | null | undefined): string {
+  if (!dateString) return 'Unknown';
   const date = new Date(dateString);
+  if (isNaN(date.getTime())) return 'Unknown';
   return date.toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'short',
