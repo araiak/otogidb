@@ -984,6 +984,122 @@
       },
       "synergies": []
     },
+    "1062": {
+      "abilities": [
+        {
+          "description": "Reduces 25% of DMG taken.",
+          "id": "106201",
+          "name": "Japan's Greatest Warrior",
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-28 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-01-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "exchange"
+        ]
+      },
+      "asset_id": "101062",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "106201",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"I'll stake my life on defeating Ieyasu!\"</color><br/><color=#ef9843>Ultimate form</color>. A military <color=#ef9843>hero</color> from the Sengoku period of Japanese history. He fought with demonic strength as shogun of the western army, and was a constant thorn in the side of <color=#ef9843>Ieyasu Tokugawa</color>.",
+      "history": {
+        "changelog": [],
+        "first_seen_date": "2025-12-29",
+        "first_seen_version": "fcec27e",
+        "last_modified_version": "fcec27e"
+      },
+      "id": "1062",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1766977091/otogi/android/101062.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1766977091/otogi/cards_hd/101062_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "106201"
+        ],
+        "generation": 0
+      },
+      "name": "Yukimura Sanada[aya]",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1062",
+        "name": "Heroic Roar",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "107": {
       "abilities": [
         {
@@ -15512,7 +15628,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -15650,7 +15766,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -15787,7 +15903,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -16717,7 +16833,7 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 20000,
@@ -16837,7 +16953,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -16969,7 +17085,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -17514,7 +17630,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -23483,7 +23599,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -23511,7 +23627,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100206",
       "bonds": [
@@ -23604,7 +23720,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -23632,7 +23748,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100207",
       "bonds": [
@@ -31213,7 +31329,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100246",
       "bonds": [
@@ -31832,7 +31948,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100250",
       "bonds": [
@@ -33747,7 +33863,7 @@
           "price_max": 500,
           "price_min": 30
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -33775,7 +33891,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100265",
       "bonds": [
@@ -35754,7 +35870,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -35782,7 +35898,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100280",
       "bonds": [
@@ -37898,7 +38014,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -37926,7 +38042,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100297",
       "bonds": [
@@ -43098,7 +43214,7 @@
           "price_max": 500,
           "price_min": 30
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -43130,7 +43246,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100322",
       "bonds": [
@@ -47838,7 +47954,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -47866,7 +47982,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100357",
       "bonds": [
@@ -51394,7 +51510,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -51531,7 +51647,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -51667,7 +51783,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -52079,7 +52195,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100388",
       "bonds": [
@@ -52682,7 +52798,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -52847,7 +52963,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -52977,7 +53093,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -57156,7 +57272,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100424",
       "bonds": [
@@ -59355,7 +59471,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100440",
       "bonds": [
@@ -61279,7 +61395,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -61307,7 +61423,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100455",
       "bonds": [
@@ -61427,7 +61543,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100456",
       "bonds": [
@@ -65884,7 +66000,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100489",
       "bonds": [
@@ -68581,7 +68697,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100508",
       "bonds": [
@@ -70708,7 +70824,7 @@
           "price_max": 5,
           "price_min": 2
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -70736,7 +70852,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100523",
       "bonds": [
@@ -70972,7 +71088,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100525",
       "bonds": [
@@ -73060,7 +73176,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -73088,7 +73204,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100540",
       "bonds": [
@@ -73176,7 +73292,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -73204,7 +73320,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100541",
       "bonds": [
@@ -74072,7 +74188,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100548",
       "bonds": [
@@ -75585,7 +75701,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100559",
       "bonds": [
@@ -75768,7 +75884,7 @@
           "price_max": 50,
           "price_min": 5
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -75796,7 +75912,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100560",
       "bonds": [
@@ -75915,7 +76031,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100561",
       "bonds": [
@@ -77902,7 +78018,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100576",
       "bonds": [
@@ -77991,7 +78107,7 @@
           "price_max": 500,
           "price_min": 30
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78019,7 +78135,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100577",
       "bonds": [
@@ -79983,7 +80099,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100591",
       "bonds": [
@@ -80101,7 +80217,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100592",
       "bonds": [
@@ -80219,7 +80335,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100593",
       "bonds": [
@@ -81853,7 +81969,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -81988,7 +82104,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -82123,7 +82239,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 50000,
@@ -82622,7 +82738,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100610",
       "bonds": [
@@ -82973,7 +83089,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -83114,7 +83230,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "is_time_limited": true,
           "price_max": 100000,
@@ -84780,7 +84896,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100626",
       "bonds": [
@@ -84896,7 +85012,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100627",
       "bonds": [
@@ -85895,7 +86011,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100634",
       "bonds": [
@@ -86872,7 +86988,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100641",
       "bonds": [
@@ -87764,7 +87880,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100648",
       "bonds": [
@@ -89954,7 +90070,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100664",
       "bonds": [
@@ -90822,7 +90938,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100670",
       "bonds": [
@@ -90940,7 +91056,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100671",
       "bonds": [
@@ -92920,7 +93036,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100686",
       "bonds": [
@@ -93171,7 +93287,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100688",
       "bonds": [
@@ -93771,7 +93887,7 @@
           "price_max": 500,
           "price_min": 30
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -93803,7 +93919,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100692",
       "bonds": [
@@ -95967,7 +96083,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100708",
       "bonds": [
@@ -105310,6 +105426,6 @@
       ]
     }
   },
-  "total_cards": 883,
-  "version": "1f574fb"
+  "total_cards": 884,
+  "version": "fcec27e"
 }

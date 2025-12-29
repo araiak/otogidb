@@ -464,6 +464,59 @@
         "type_name": "Melee"
       }
     },
+    "1062": {
+      "abilities": [
+        {
+          "description": "所受伤害25%减少",
+          "name": "日本第一兵",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "currently_available": false,
+        "has_tower_drops": false,
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101062",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1062",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1766977091/otogi/android/101062.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1766977091/otogi/cards_hd/101062_hd.png"
+      },
+      "name": "真田幸村[aya]",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "英雄咆哮",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "107": {
       "abilities": [
         {
@@ -10695,13 +10748,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100206",
       "bonds": [
@@ -10750,13 +10803,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100207",
       "bonds": [
@@ -14280,7 +14333,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100246",
       "bonds": [
@@ -14565,7 +14618,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100250",
       "bonds": [
@@ -15438,13 +15491,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100265",
       "bonds": [
@@ -16315,13 +16368,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100280",
       "bonds": [
@@ -17259,13 +17312,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100297",
       "bonds": [
@@ -19502,13 +19555,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "exchange",
           "auction"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100322",
       "bonds": [
@@ -21637,13 +21690,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100357",
       "bonds": [
@@ -23570,7 +23623,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100388",
       "bonds": [
@@ -25901,7 +25954,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100424",
       "bonds": [
@@ -26894,7 +26947,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100440",
       "bonds": [
@@ -27783,13 +27836,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100455",
       "bonds": [
@@ -27846,7 +27899,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100456",
       "bonds": [
@@ -29866,7 +29919,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100489",
       "bonds": [
@@ -31122,7 +31175,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100508",
       "bonds": [
@@ -32080,13 +32133,13 @@
     "523": {
       "abilities": [],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100523",
       "bonds": [
@@ -32196,7 +32249,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100525",
       "bonds": [
@@ -33158,13 +33211,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100540",
       "bonds": [
@@ -33211,13 +33264,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100541",
       "bonds": [
@@ -33631,7 +33684,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100548",
       "bonds": [
@@ -34308,7 +34361,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100559",
       "bonds": [
@@ -34398,13 +34451,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "medium"
       },
       "asset_id": "100560",
       "bonds": [
@@ -34460,7 +34513,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100561",
       "bonds": [
@@ -35371,7 +35424,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100576",
       "bonds": [
@@ -35419,13 +35472,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "auction",
           "event"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100577",
       "bonds": [
@@ -36330,7 +36383,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100591",
       "bonds": [
@@ -36385,7 +36438,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100592",
       "bonds": [
@@ -36440,7 +36493,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100593",
       "bonds": [
@@ -37556,7 +37609,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100610",
       "bonds": [
@@ -38544,7 +38597,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "high"
       },
       "asset_id": "100626",
       "bonds": [
@@ -38597,7 +38650,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100627",
       "bonds": [
@@ -39068,7 +39121,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100634",
       "bonds": [
@@ -39504,7 +39557,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100641",
       "bonds": [
@@ -39926,7 +39979,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100648",
       "bonds": [
@@ -40931,7 +40984,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100664",
       "bonds": [
@@ -41316,7 +41369,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "medium"
+        "stock_level": "low"
       },
       "asset_id": "100670",
       "bonds": [
@@ -41371,7 +41424,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100671",
       "bonds": [
@@ -42282,7 +42335,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "high"
+        "stock_level": "medium"
       },
       "asset_id": "100686",
       "bonds": [
@@ -42404,7 +42457,7 @@
           "auction",
           "event"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100688",
       "bonds": [
@@ -42688,13 +42741,13 @@
         }
       ],
       "acquisition": {
-        "currently_available": false,
+        "currently_available": true,
         "has_tower_drops": false,
         "sources": [
           "exchange",
           "auction"
         ],
-        "stock_level": "unavailable"
+        "stock_level": "low"
       },
       "asset_id": "100692",
       "bonds": [
@@ -43711,7 +43764,7 @@
           "exchange",
           "auction"
         ],
-        "stock_level": "low"
+        "stock_level": "medium"
       },
       "asset_id": "100708",
       "bonds": [
@@ -48104,6 +48157,6 @@
     }
   },
   "locale": "zh-cn",
-  "total_cards": 883,
-  "version": "1f574fb"
+  "total_cards": 884,
+  "version": "fcec27e"
 }
