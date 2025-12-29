@@ -432,13 +432,18 @@ const jsonLd = {
                         Lv. {ability.unlock_level}
                       </span>
                     )}
-                    {/* TODO: Re-enable after validating stackable field accuracy
-                    {ability.stackable === false && (
+                    {/* Hybrid: Confirmed via description text */}
+                    {ability.description?.includes('only take effect once') && (
                       <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-orange-500/20 text-orange-400" title="Only one of this ability type applies per team">
                         1x per team
                       </span>
                     )}
-                    */}
+                    {/* Hybrid: Unconfirmed - game data says non-stackable + team-targeted, but no in-game text */}
+                    {ability.stackable === false && ability.tags?.includes('Team') && !ability.description?.includes('only take effect once') && (
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-500" title="Game data indicates this ability doesn't stack, but this is not confirmed in-game">
+                        1x per team?
+                      </span>
+                    )}
                   </div>
                   <div class="text-xs sm:text-sm text-secondary mt-0.5">
                     {ability.description}
