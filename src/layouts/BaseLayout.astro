@@ -26,14 +26,15 @@ interface DataManifestFile {
   cards_index: string;
   cards_index_base: string;
 }
-interface DataManifestTiers {
-  path: string;
-  base: string;
-}
+// Tier list disabled - interface kept for future use
+// interface DataManifestTiers {
+//   path: string;
+//   base: string;
+// }
 interface DataManifest {
   generated_at: string;
   files: Record<string, DataManifestFile>;
-  tiers?: DataManifestTiers;
+  // tiers?: DataManifestTiers;  // Tier list disabled
 }
 
 let dataManifest: DataManifest | null = null;
@@ -71,11 +72,8 @@ const dataVersion = `${cardsData.version || 'unknown'}-${contentHash}`;
 // Build data paths object for client-side use
 const dataPaths = {
   ...dataManifest?.files || {},
-  tiers: dataManifest?.tiers || null,
+  // tiers: dataManifest?.tiers || null,  // Tier list disabled
 };
-
-// Get tiers path for preloading (use hashed if available)
-const tiersPreloadPath = dataManifest?.tiers?.path || '/data/tiers.json';
 
 // Detect current locale from URL path
 const currentPath = Astro.url.pathname;
@@ -113,7 +111,7 @@ const navLinks = {
   home: localePrefix,
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
-  tiers: `${localePrefix}/tiers`,
+  // tiers: `${localePrefix}/tiers`,  // Disabled - page exists but not linked in navigation
 };
 ---
 

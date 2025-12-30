@@ -8,17 +8,10 @@ interface CacheEntry {
   age: number;
 }
 
-interface TierDataStatus {
-  loaded: boolean;
-  cardCount: number;
-  version?: string;
-}
-
 export default function DebugPanel() {
   const [isOpen, setIsOpen] = useState(false);
   const [cacheEntries, setCacheEntries] = useState<CacheEntry[]>([]);
   const [status, setStatus] = useState<string>('');
-  const [tierStatus, setTierStatus] = useState<TierDataStatus | null>(null);
 
   // Toggle with Ctrl+Shift+D
   useEffect(() => {
@@ -36,7 +29,6 @@ export default function DebugPanel() {
   useEffect(() => {
     if (isOpen) {
       loadCacheInfo();
-      loadTierDataStatus();
     }
   }, [isOpen]);
 
@@ -46,24 +38,6 @@ export default function DebugPanel() {
       setCacheEntries(entries);
     } catch (error) {
       console.error('Failed to load cache info:', error);
-    }
-  };
-
-  const loadTierDataStatus = async () => {
-    try {
-      const response = await fetch('/data/tiers.json');
-      if (response.ok) {
-        const data = await response.json();
-        setTierStatus({
-          loaded: true,
-          cardCount: Object.keys(data.cards || {}).length,
-          version: data.version,
-        });
-      } else {
-        setTierStatus({ loaded: false, cardCount: 0 });
-      }
-    } catch (error) {
-      setTierStatus({ loaded: false, cardCount: 0 });
     }
   };
 
@@ -203,25 +177,6 @@ export default function DebugPanel() {
             >
               Hard Reload (Bypass Cache)
             </button>
-          </div>
-        </div>
-
-        {/* Data Status */}
-        <div className="space-y-2">
-          <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>Data Status</p>
-          <div className="text-xs" style={{ color: 'var(--color-text)' }}>
-            <div className="p-2 rounded" style={{ backgroundColor: 'var(--color-bg)' }}>
-              <div style={{ color: 'var(--color-text-secondary)' }}>Tier Data</div>
-              {tierStatus ? (
-                tierStatus.loaded ? (
-                  <div>{tierStatus.cardCount} cards (v{tierStatus.version?.slice(0, 7)})</div>
-                ) : (
-                  <div style={{ color: '#f87171' }}>Not loaded</div>
-                )
-              ) : (
-                <div>Loading...</div>
-              )}
-            </div>
           </div>
         </div>
 

@@ -286,7 +286,7 @@ const jsonLd = {
         <div class="flex items-center gap-2 min-w-0">
           <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
-            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
+            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0 cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
           )}
         </div>
         <span class="text-xs font-mono text-secondary flex-shrink-0">#{card.id}</span>
@@ -352,7 +352,7 @@ const jsonLd = {
           <div class="flex items-center gap-3 mb-2">
             <h1 class="text-2xl lg:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
             {!card.playable && (
-              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">NPC</span>
+              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
             )}
             <span class="text-sm font-mono text-secondary">#{card.id}</span>
           </div>
@@ -445,7 +445,7 @@ const jsonLd = {
                     )}
                     {/* Hybrid: Confirmed via description text */}
                     {ability.description?.includes('only take effect once') && (
-                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-orange-500/20 text-orange-400" title="Only one of this ability type applies per team">
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded bg-orange-500/20 text-orange-400 cursor-help" title="Only one of this ability type applies per team - duplicates don't stack">
                         1x per team
                       </span>
                     )}
@@ -519,13 +519,15 @@ const jsonLd = {
                 return (
                   <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center gap-2 min-w-0 flex-wrap">
-                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
-                            style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}>
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                            style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}
+                            title={bond.type === 'Attack' ? 'Boosts ATK stat when bonded' : bond.type === 'Skill' ? 'Boosts Skill DMG when bonded' : bond.type === 'HP' ? 'Boosts HP stat when bonded' : 'Bond stat boost'}>
                         {bond.type}
                       </span>
                       {isSpecial && (
-                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
-                              style="background-color: var(--color-highlight); color: var(--color-bg);">
+                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                              style="background-color: var(--color-highlight); color: var(--color-bg);"
+                              title="Requires a specific partner card on the team to activate">
                           Special
                         </span>
                       )}
@@ -556,11 +558,11 @@ const jsonLd = {
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <h2 class="font-semibold text-sm sm:text-base">Availability</h2>
               {card.acquisition.currently_available ? (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-700 dark:text-green-400 font-medium">
+                <span class="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-700 dark:text-green-400 font-medium cursor-help" title="Currently obtainable through at least one method">
                   Available Now
                 </span>
               ) : (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-700 dark:text-red-400 font-medium">
+                <span class="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-700 dark:text-red-400 font-medium cursor-help" title="Not currently obtainable - may return in future events or banners">
                   Not Available
                 </span>
               )}
@@ -571,9 +573,9 @@ const jsonLd = {
               {card.acquisition.sources.includes('gacha') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-medium">Gacha</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-medium cursor-help" title="Obtainable through the summoning system using jewels">Gacha</span>
                     {card.acquisition.gacha.in_standard_pool && (
-                      <span class="text-xs text-green-700 dark:text-green-400">✓ Standard Pool</span>
+                      <span class="text-xs text-green-700 dark:text-green-400 cursor-help" title="Can be pulled from any banner at any time">✓ Standard Pool</span>
                     )}
                   </div>
                   {card.acquisition.gacha.featured_banners && card.acquisition.gacha.featured_banners.length > 0 && (
@@ -660,7 +662,7 @@ const jsonLd = {
               {card.acquisition.sources.includes('exchange') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-700 dark:text-blue-300 font-medium">Exchange</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-700 dark:text-blue-300 font-medium cursor-help" title="Purchasable with in-game currency (Mochi, Soulstones, etc.)">Exchange</span>
                   </div>
                   {card.acquisition.exchange.entries && card.acquisition.exchange.entries.length > 0 && (
                     <div class="space-y-1.5">
@@ -700,7 +702,7 @@ const jsonLd = {
               {card.acquisition.sources.includes('event') && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                   <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-700 dark:text-green-300 font-medium">Event</span>
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-700 dark:text-green-300 font-medium cursor-help" title="Obtainable from limited-time events (ranking rewards, tower drops, etc.)">Event</span>
                   </div>
                   {/* Event Reward Tiers - grouped by event */}
                   {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (() => {
@@ -775,7 +777,7 @@ const jsonLd = {
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center gap-2 mb-1.5">
-                      <span class="px-1.5 py-0.5 text-xs rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-medium">Daily Dungeon</span>
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-medium cursor-help" title="Farmable from the rotating Daily Dungeon battles">Daily Dungeon</span>
                       <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Available</span>
                     </div>
                     <div class="text-xs space-y-1">
