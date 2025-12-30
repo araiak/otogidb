@@ -60,50 +60,51 @@ export const DATA_ENDPOINTS: ApiEndpoint[] = [
       return { valid: true };
     },
   },
-  {
-    url: '/data/tiers.json',
-    description: 'Tier list data',
-    expectedFields: ['version', 'cards'],
-    validator: (data) => {
-      const obj = data as Record<string, unknown>;
-
-      // Check version is a string
-      if (typeof obj.version !== 'string') {
-        return { valid: false, error: 'version is not a string' };
-      }
-
-      // Check cards is an object with entries
-      if (typeof obj.cards !== 'object' || obj.cards === null) {
-        return { valid: false, error: 'cards is not an object' };
-      }
-      const cardCount = Object.keys(obj.cards as object).length;
-      if (cardCount < 100) {
-        return { valid: false, error: `Only ${cardCount} cards have tiers (expected 100+)` };
-      }
-
-      // Spot check a card has expected tier structure
-      const cards = obj.cards as Record<string, unknown>;
-      const firstCardKey = Object.keys(cards)[0];
-      if (firstCardKey) {
-        const card = cards[firstCardKey] as Record<string, unknown>;
-        // Check card has tiers object with overall tier
-        const tiers = card.tiers as Record<string, unknown>;
-        if (!tiers || typeof tiers !== 'object') {
-          return { valid: false, error: 'Card missing tiers object' };
-        }
-        if (typeof tiers.overall !== 'string') {
-          return { valid: false, error: 'tiers.overall is not a string' };
-        }
-        // Verify tier is valid
-        const validTiers = ['S+', 'S', 'A', 'B', 'C', 'D', 'N/A'];
-        if (!validTiers.includes(tiers.overall as string)) {
-          return { valid: false, error: `Invalid tier: ${tiers.overall}` };
-        }
-      }
-
-      return { valid: true };
-    },
-  },
+  // DISABLED - Tier list archived
+  // {
+  //   url: '/data/tiers.json',
+  //   description: 'Tier list data',
+  //   expectedFields: ['version', 'cards'],
+  //   validator: (data) => {
+  //     const obj = data as Record<string, unknown>;
+  //
+  //     // Check version is a string
+  //     if (typeof obj.version !== 'string') {
+  //       return { valid: false, error: 'version is not a string' };
+  //     }
+  //
+  //     // Check cards is an object with entries
+  //     if (typeof obj.cards !== 'object' || obj.cards === null) {
+  //       return { valid: false, error: 'cards is not an object' };
+  //     }
+  //     const cardCount = Object.keys(obj.cards as object).length;
+  //     if (cardCount < 100) {
+  //       return { valid: false, error: `Only ${cardCount} cards have tiers (expected 100+)` };
+  //     }
+  //
+  //     // Spot check a card has expected tier structure
+  //     const cards = obj.cards as Record<string, unknown>;
+  //     const firstCardKey = Object.keys(cards)[0];
+  //     if (firstCardKey) {
+  //       const card = cards[firstCardKey] as Record<string, unknown>;
+  //       // Check card has tiers object with overall tier
+  //       const tiers = card.tiers as Record<string, unknown>;
+  //       if (!tiers || typeof tiers !== 'object') {
+  //         return { valid: false, error: 'Card missing tiers object' };
+  //       }
+  //       if (typeof tiers.overall !== 'string') {
+  //         return { valid: false, error: 'tiers.overall is not a string' };
+  //       }
+  //       // Verify tier is valid
+  //       const validTiers = ['S+', 'S', 'A', 'B', 'C', 'D', 'N/A'];
+  //       if (!validTiers.includes(tiers.overall as string)) {
+  //         return { valid: false, error: `Invalid tier: ${tiers.overall}` };
+  //       }
+  //     }
+  //
+  //     return { valid: true };
+  //   },
+  // },
 ];
 
 export interface ApiValidationResult extends ValidationResult {
