@@ -73,20 +73,20 @@ function generateListUrls(): UrlSample[] {
   return samples;
 }
 
-// Generate tier list page URLs
-function generateTierUrls(): UrlSample[] {
-  const samples: UrlSample[] = [];
-
-  for (const locale of LOCALES) {
-    samples.push({
-      url: `/${locale}/tiers`,
-      category: 'static',
-      locale,
-    });
-  }
-
-  return samples;
-}
+// Generate tier list page URLs (DISABLED - tier list archived)
+// function generateTierUrls(): UrlSample[] {
+//   const samples: UrlSample[] = [];
+//
+//   for (const locale of LOCALES) {
+//     samples.push({
+//       url: `/${locale}/tiers`,
+//       category: 'static',
+//       locale,
+//     });
+//   }
+//
+//   return samples;
+// }
 
 // Generate blog URLs
 function generateBlogUrls(): UrlSample[] {
@@ -155,10 +155,10 @@ export function generateUrlSamples(options: SamplerOptions = {}): {
   // Generate page URLs
   const cardUrls = generateCardUrls(playableCards, cardsPerLocale);
   const listUrls = generateListUrls();
-  const tierUrls = generateTierUrls();
+  // const tierUrls = generateTierUrls();  // DISABLED - tier list archived
   const blogUrls = generateBlogUrls();
 
-  const pages = [...cardUrls, ...listUrls, ...tierUrls, ...blogUrls];
+  const pages = [...cardUrls, ...listUrls, ...blogUrls];
 
   // Generate image URLs
   const images = generateImageUrls(playableCards, imageCount);
@@ -168,7 +168,7 @@ export function generateUrlSamples(options: SamplerOptions = {}): {
     `  - Card pages: ${cardUrls.length} (${cardsPerLocale} per locale × ${LOCALES.length} locales)`
   );
   console.log(`  - List pages: ${listUrls.length}`);
-  console.log(`  - Tier pages: ${tierUrls.length}`);
+  // console.log(`  - Tier pages: ${tierUrls.length}`);  // DISABLED
   console.log(`  - Blog pages: ${blogUrls.length}`);
 
   return { pages, images };

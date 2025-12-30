@@ -263,14 +263,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
 
   // Load tier data on mount (uses IndexedDB cache with hashed path for cache busting)
+  // Tier list is currently disabled - skip loading silently
   const loadTierData = useCallback(async () => {
+    // Check if tiers are enabled in data paths
+    const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
+    if (!dataPaths.tiers) {
+      // Tiers disabled - skip loading silently
+      setTierLoading(false);
+      return;
+    }
+
     setTierLoading(true);
     setTierError(false);
     try {
-      // Get hashed path from manifest if available, fallback to base path
-      const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
-      const tiersPath = dataPaths.tiers?.path || '/data/tiers.json';
-
+      const tiersPath = dataPaths.tiers.path || '/data/tiers.json';
       const data = await fetchWithCache<{ cards: Record<string, any> }>(tiersPath);
       if (data?.cards) {
         setTierData(data.cards);
