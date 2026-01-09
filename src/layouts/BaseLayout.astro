@@ -142,16 +142,6 @@ const navLinks = {
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";window.OTOGIDB_DATA_PATHS=${JSON.stringify(dataPaths)};`} />
 
-    <!-- Prevent CLS from WIP banner dismissal -->
-    <script is:inline>
-      if (localStorage.getItem('otogidb-wip-dismissed') === '1') {
-        document.documentElement.classList.add('wip-dismissed');
-      }
-    </script>
-    <style>
-      .wip-dismissed #wip-banner { display: none !important; }
-    </style>
-
     <!-- PostHog Analytics (direct first, proxy fallback to reduce costs) -->
     <script is:inline>
       (function() {
@@ -286,30 +276,6 @@ const navLinks = {
       </div>
     </header>
 
-    <!-- WIP Banner -->
-    <div id="wip-banner" class="border-b" style="background: linear-gradient(90deg, rgba(234, 179, 8, 0.1) 0%, rgba(234, 179, 8, 0.05) 100%); border-color: rgba(234, 179, 8, 0.3);">
-      <div class="container mx-auto px-4 py-2">
-        <div class="flex items-center justify-between gap-3">
-          <div class="flex items-center gap-3">
-            <img src={mascotUrl} alt="Sola" class="w-8 h-8 flex-shrink-0" />
-            <p class="text-sm" style="color: var(--color-text);">
-              <span class="font-medium" style="color: rgb(234, 179, 8);">Master!</span>
-              We're still setting things up~ Please forgive any little bugs you find!
-            </p>
-          </div>
-          <button
-            id="wip-dismiss"
-            class="flex-shrink-0 p-1 rounded hover:bg-black/10 dark:hover:bg-white/10 transition-colors"
-            aria-label="Dismiss banner"
-          >
-            <svg class="w-4 h-4" style="color: var(--color-text-secondary);" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-
     <main class="flex-1" style="background-color: var(--color-bg);">
       <slot />
     </main>
@@ -404,20 +370,6 @@ const navLinks = {
           }
         }
       });
-
-      // WIP Banner dismiss
-      const wipBanner = document.getElementById('wip-banner');
-      const wipDismiss = document.getElementById('wip-dismiss');
-      if (wipBanner && wipDismiss) {
-        // Check if already dismissed
-        if (localStorage.getItem('otogidb-wip-dismissed') === '1') {
-          wipBanner.style.display = 'none';
-        }
-        wipDismiss.addEventListener('click', () => {
-          wipBanner.style.display = 'none';
-          localStorage.setItem('otogidb-wip-dismissed', '1');
-        });
-      }
 
       // Language switcher
       const langToggle = document.getElementById('lang-toggle');
