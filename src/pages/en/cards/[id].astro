@@ -4,6 +4,7 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
+import { isFeatureEnabled } from '../../../lib/features';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
@@ -162,9 +163,13 @@ const gameBugsData = gameBugsRaw as GameBugsData;
 const { card } = Astro.props as { card: Card };
 
 // Get bugs for this card (filter out fixed bugs)
-const cardBugs = gameBugsData.bugs.filter(
-  bug => bug.card_id === parseInt(card.id) && bug.status !== 'fixed'
-);
+// Only show bugs if the bugNotices feature flag is enabled (dev-only by default)
+const showBugNotices = isFeatureEnabled('bugNotices');
+const cardBugs = showBugNotices
+  ? gameBugsData.bugs.filter(
+      bug => bug.card_id === parseInt(card.id) && bug.status !== 'fixed'
+    )
+  : [];
 const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
 const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
 
