@@ -1,0 +1,637 @@
+{
+  "version": "1.2.0",
+  "last_updated": "2026-01-09",
+  "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing",
+  "bugs": [
+    {
+      "id": "BUG-001",
+      "card_id": 2373,
+      "card_name": "Harvest Moon",
+      "affected_field": "ability",
+      "affected_id": "237301",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Ability targets 1 instead of 2 units",
+      "details": {
+        "description_says": "Increases 45% of DMG of the 2 Phantasma team members with highest ATK.",
+        "target_string": "self;type<2>;max_atk",
+        "expected": "self;type<2>;count<2>;max_atk",
+        "missing": "count<2>"
+      },
+      "analysis": "Game code defaults count to 1 when not specified. All other max_atk abilities have explicit count<N>. This ability is missing it, so it only affects 1 target despite description saying 2.",
+      "evidence": {
+        "ghidra_function": "TargetStragetyData$$ParseStrategyData",
+        "ghidra_address": "0x00BC8B0C",
+        "default_count": 1
+      },
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "contains",
+        "value": "count<2>"
+      }
+    },
+    {
+      "id": "BUG-002",
+      "card_id": 748,
+      "card_name": "New Year Sunrise",
+      "affected_field": "skill",
+      "affected_id": "748",
+      "category": "unit_type",
+      "severity": "visual",
+      "summary": "Assist card has skill assigned but cannot use it",
+      "details": {
+        "unit_type": 4,
+        "unit_type_name": "Assist",
+        "has_skill": true,
+        "skill_description": "Restore {value} HP to self, increase crit rate for a limited time {delay1}",
+        "expected_description": "Can be used as bond and in guild conquest."
+      },
+      "analysis": "All 133 Assist cards have skill data in the config, but Assist cards cannot actively use skills in battle. The skill description shown is misleading - should display the standard Assist text instead.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "d",
+        "condition": "contains",
+        "value": "Can be used as bond"
+      }
+    },
+    {
+      "id": "BUG-003",
+      "card_id": 2185,
+      "card_name": "Harlequin",
+      "affected_field": "ability",
+      "affected_id": "218502",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit DMG percentage mismatch (35% vs 15%)",
+      "details": {
+        "description_says": "Increases 35% of Crit DMG by the 2 allies with the highest ATK.",
+        "de_field": "CHIT_ATK<15.00%,0%>",
+        "description_percentage": 35.0,
+        "actual_percentage": 15.0
+      },
+      "analysis": "Description says 35% Crit DMG but data shows only 15% - the ability is much weaker than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT_ATK",
+        "expected_value": 35.0
+      }
+    },
+    {
+      "id": "BUG-004",
+      "card_id": 357,
+      "card_name": "Galahad",
+      "affected_field": "skill",
+      "affected_id": "357",
+      "category": "effect_type",
+      "severity": "visual",
+      "summary": "Skill says DEF but applies damage reduction (SHIELD)",
+      "details": {
+        "description_says": "increase {delay1} DEF to targets for a limited time",
+        "de_field": "SHIELD<10.00%,0.34%,8>",
+        "expected_effect": "DEFENSE",
+        "actual_effect": "SHIELD"
+      },
+      "analysis": "Description mentions DEF (defense stat) but the actual effect is SHIELD (percentage damage reduction). These are mechanically different - DEFENSE modifies the flat defense stat while SHIELD reduces incoming damage by a percentage.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "DEFENSE<"
+      }
+    },
+    {
+      "id": "BUG-005",
+      "card_id": 115,
+      "card_name": "Kraken",
+      "affected_field": "ability",
+      "affected_id": "11501",
+      "category": "description",
+      "severity": "gameplay",
+      "summary": "Missing drop rate effect - description says 3% but not in data",
+      "details": {
+        "description_says": "Increases 5% of the number of soulstones received from battle and 3% of battle reward drop rate.",
+        "de_field": "COIN<5.00%,0%>",
+        "description_percentages": [5.0, 3.0],
+        "data_percentages": [5.0],
+        "missing_effect": "ITEM<3.00%,0%>"
+      },
+      "analysis": "Description mentions two effects (5% soulstones, 3% drop rate) but data only contains the soulstone bonus. The drop rate effect (ITEM) appears to be missing entirely.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "ITEM<"
+      }
+    },
+    {
+      "id": "BUG-006",
+      "card_id": 121,
+      "card_name": "Daidarabotchi",
+      "affected_field": "ability",
+      "affected_id": "12101",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Max HP percentage mismatch (15% vs 10%)",
+      "details": {
+        "description_says": "Increases 15% of Max HP",
+        "de_field": "HP<10.00%,0%>;HEAL_DOT<2.50%,0%,5>",
+        "description_percentage": 15.0,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 15% Max HP but data shows 10%. The heal over time (2.5%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HP",
+        "expected_value": 15.0
+      }
+    },
+    {
+      "id": "BUG-007",
+      "card_id": 148,
+      "card_name": "Commodore Perry [Demonic]",
+      "affected_field": "ability",
+      "affected_id": "14801",
+      "category": "description",
+      "severity": "visual",
+      "summary": "ATK speed percentage mismatch (25% vs 23%)",
+      "details": {
+        "description_says": "Increases 25% of ATK speed",
+        "de_field": "ATK<15.00%,0%>;SPD<23.00%,0%>",
+        "description_percentage": 25.0,
+        "actual_percentage": 23.0
+      },
+      "analysis": "Description says 25% ATK speed but data shows 23%. The DMG boost (15%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SPD",
+        "expected_value": 25.0
+      }
+    },
+    {
+      "id": "BUG-008",
+      "card_id": 171,
+      "card_name": "Gabriel",
+      "affected_field": "ability",
+      "affected_id": "17102",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Burn proc rate mismatch (10% vs 25%)",
+      "details": {
+        "description_says": "Normal attacks by Divina team members have a 10% chance of inflicting Burn.",
+        "de_field": "HIT<25.00%,0%>;BURN<5.00%,0%,5>",
+        "description_percentage": 10.0,
+        "actual_percentage": 25.0
+      },
+      "analysis": "Description says 10% chance but actual proc rate is 25% - the ability is stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HIT",
+        "expected_value": 10.0
+      }
+    },
+    {
+      "id": "BUG-009",
+      "card_id": 195,
+      "card_name": "Hydra",
+      "affected_field": "ability",
+      "affected_id": "19501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "HP regen percentage mismatch (2% vs 3.5%)",
+      "details": {
+        "description_says": "Restores 2% HP every 5 seconds.",
+        "de_field": "HEAL_DOT<3.50%,0%,5>",
+        "description_percentage": 2.0,
+        "actual_percentage": 3.5
+      },
+      "analysis": "Description says 2% but actual heal is 3.5% - the ability is stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HEAL_DOT",
+        "expected_value": 2.0
+      }
+    },
+    {
+      "id": "BUG-010",
+      "card_id": 200,
+      "card_name": "Jomon Sugi",
+      "affected_field": "ability",
+      "affected_id": "20001",
+      "category": "description",
+      "severity": "visual",
+      "summary": "DMG reduction percentage mismatch (15% vs 10%)",
+      "details": {
+        "description_says": "Reduces 15% of DMG taken",
+        "de_field": "HEAL_DOT<2.00%,0%,5>;SHIELD<10.00%,0%>",
+        "description_percentage": 15.0,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 15% damage reduction but data shows 10%. The heal over time (2%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SHIELD",
+        "expected_value": 15.0
+      }
+    },
+    {
+      "id": "BUG-011",
+      "card_id": 315,
+      "card_name": "Miyamoto Musashi",
+      "affected_field": "ability",
+      "affected_id": "31501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "DMG reduction percentage mismatch (15% vs 10%)",
+      "details": {
+        "description_says": "Reduces 15% of DMG taken",
+        "de_field": "SKILL_ATK<20.00%,0%>;SHIELD<10.00%,0%>",
+        "description_percentage": 15.0,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 15% damage reduction but data shows 10%. The skill DMG boost (20%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SHIELD",
+        "expected_value": 15.0
+      }
+    },
+    {
+      "id": "BUG-012",
+      "card_id": 478,
+      "card_name": "Shosoin",
+      "affected_field": "ability",
+      "affected_id": "47802",
+      "category": "description",
+      "severity": "visual",
+      "summary": "HP restore percentage mismatch (10% vs 8%)",
+      "details": {
+        "description_says": "Restores 10% HP to Anima team members",
+        "de_field": "HEAL<8.00%,0%,1>",
+        "description_percentage": 10.0,
+        "actual_percentage": 8.0
+      },
+      "analysis": "Description says 10% heal but data shows 8%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HEAL",
+        "expected_value": 10.0
+      }
+    },
+    {
+      "id": "BUG-013",
+      "card_id": 479,
+      "card_name": "Doppella Ganger",
+      "affected_field": "ability",
+      "affected_id": "47902",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit DMG percentage mismatch (15% vs 35%)",
+      "details": {
+        "description_says": "Increases 15% of Crit DMG when Mikazuki Munechika is on the team.",
+        "de_field": "CHIT_ATK<35.00%,0%>",
+        "description_percentage": 15.0,
+        "actual_percentage": 35.0
+      },
+      "analysis": "Description says 15% Crit DMG but data shows 35% - the ability is much stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT_ATK",
+        "expected_value": 15.0
+      }
+    },
+    {
+      "id": "BUG-014",
+      "card_id": 490,
+      "card_name": "Rutabaga",
+      "affected_field": "ability",
+      "affected_id": "49001",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Stun proc rate mismatch (10% vs 15%)",
+      "details": {
+        "description_says": "Normal attacks have 10% chances of inflicting stun.",
+        "de_field": "HIT<15.00%,0%>;STUN<2>",
+        "description_percentage": 10.0,
+        "actual_percentage": 15.0
+      },
+      "analysis": "Description says 10% chance but actual proc rate is 15% - the ability is stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HIT",
+        "expected_value": 10.0
+      }
+    },
+    {
+      "id": "BUG-015",
+      "card_id": 514,
+      "card_name": "Flying Nimbus [Awakened]",
+      "affected_field": "ability",
+      "affected_id": "51402",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit DMG percentage mismatch (80% vs 60%)",
+      "details": {
+        "description_says": "increases 80% Crit DMG",
+        "de_field": "CHIT<70.00%,0%,4>;CHIT_ATK<60.00%,0%>",
+        "description_percentage": 80.0,
+        "actual_percentage": 60.0
+      },
+      "analysis": "Description says 80% Crit DMG but data shows 60%. The crit rate (70%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT_ATK",
+        "expected_value": 80.0
+      }
+    },
+    {
+      "id": "BUG-016",
+      "card_id": 528,
+      "card_name": "Shiva",
+      "affected_field": "ability",
+      "affected_id": "52801",
+      "category": "description",
+      "severity": "visual",
+      "summary": "DMG percentage mismatch (45% vs 35%)",
+      "details": {
+        "description_says": "Increases 45% of DMG.",
+        "de_field": "ATK<35.00%,0%>",
+        "description_percentage": 45.0,
+        "actual_percentage": 35.0
+      },
+      "analysis": "Description says 45% DMG boost but data shows 35%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "ATK",
+        "expected_value": 45.0
+      }
+    },
+    {
+      "id": "BUG-017",
+      "card_id": 675,
+      "card_name": "Campanella",
+      "affected_field": "ability",
+      "affected_id": "67501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit DMG percentage mismatch (35% vs 40%)",
+      "details": {
+        "description_says": "Increases 35% of Crit DMG by the 2 allies with the highest ATK.",
+        "de_field": "CHIT_ATK<40.00%,0%>",
+        "description_percentage": 35.0,
+        "actual_percentage": 40.0
+      },
+      "analysis": "Description says 35% Crit DMG but data shows 40% - the ability is stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT_ATK",
+        "expected_value": 35.0
+      }
+    },
+    {
+      "id": "BUG-018",
+      "card_id": 741,
+      "card_name": "Senji Ryakketsu",
+      "affected_field": "ability",
+      "affected_id": "74102",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit rate percentage mismatch (43% vs 37%)",
+      "details": {
+        "description_says": "Increases 43% of crit rate",
+        "de_field": "CHIT<37.00%,0%,8>;CHIT_ATK<100.00%,0%,8>",
+        "description_percentage": 43.0,
+        "actual_percentage": 37.0
+      },
+      "analysis": "Description says 43% crit rate but data shows 37%. The crit DMG (100%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT",
+        "expected_value": 43.0
+      }
+    },
+    {
+      "id": "BUG-019",
+      "card_id": 751,
+      "card_name": "Obi Ceremony",
+      "affected_field": "ability",
+      "affected_id": "75102",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Drop rate percentage mismatch (25% vs 20%)",
+      "details": {
+        "description_says": "Increases battle reward drop rate by 25%.",
+        "de_field": "ITEM<20.00%,0%>",
+        "description_percentage": 25.0,
+        "actual_percentage": 20.0
+      },
+      "analysis": "Description says 25% drop rate but data shows 20%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "ITEM",
+        "expected_value": 25.0
+      }
+    },
+    {
+      "id": "BUG-020",
+      "card_id": 752,
+      "card_name": "Hakama Ceremony",
+      "affected_field": "ability",
+      "affected_id": "75202",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit rate percentage mismatch (40% vs 35%)",
+      "details": {
+        "description_says": "Increases 40% of crit rate",
+        "de_field": "CHIT<35.00%,0%,8>;CHIT_ATK<90.00%,0%,8>",
+        "description_percentage": 40.0,
+        "actual_percentage": 35.0
+      },
+      "analysis": "Description says 40% crit rate but data shows 35%. The crit DMG (90%) is correct.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT",
+        "expected_value": 40.0
+      }
+    },
+    {
+      "id": "BUG-021",
+      "card_id": 755,
+      "card_name": "Arko",
+      "affected_field": "ability",
+      "affected_id": "75502",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Attack Speed percentage mismatch (50% vs 45%)",
+      "details": {
+        "description_says": "Increases Attack Speed by 50% when 'Oberon' is present.",
+        "de_field": "SPD<45.00%,0%>",
+        "description_percentage": 50.0,
+        "actual_percentage": 45.0
+      },
+      "analysis": "Description says 50% Attack Speed but data shows 45%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SPD",
+        "expected_value": 50.0
+      }
+    },
+    {
+      "id": "BUG-022",
+      "card_id": 2195,
+      "card_name": "Circus Trapeze",
+      "affected_field": "ability",
+      "affected_id": "219501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "ATK speed percentage mismatch (25% vs 27%)",
+      "details": {
+        "description_says": "Increases 25% of ATK speed.",
+        "de_field": "SPD<27.00%,0%>",
+        "description_percentage": 25.0,
+        "actual_percentage": 27.0
+      },
+      "analysis": "Description says 25% ATK speed but data shows 27% - the ability is slightly stronger than described.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-08",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SPD",
+        "expected_value": 25.0
+      }
+    }
+  ],
+  "categories": {
+    "targeting": "Issues with ability/skill target selection",
+    "unit_type": "Issues related to card type (Assist, Melee, etc.)",
+    "effect_type": "Wrong effect type applied (e.g., DEFENSE vs SHIELD)",
+    "description": "Text/description percentage mismatches",
+    "stats": "Incorrect stat values"
+  },
+  "severity_levels": {
+    "gameplay": "Bug affects actual game mechanics",
+    "visual": "Bug is cosmetic/display only - actual effect differs from description"
+  }
+}
