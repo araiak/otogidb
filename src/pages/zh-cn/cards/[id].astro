@@ -9,6 +9,7 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
+import { isFeatureEnabled } from '../../../lib/features';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
@@ -19,6 +20,7 @@ import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
 import tiersDataRaw from '../../../data/tiers.json';
+import gameBugsRaw from '../../../data/game_bugs.json';
 
 // For similar cards, we use English data to get names for linking
 import enCardsDataRaw from '../../../data/cards.json';
@@ -84,6 +86,42 @@ type TiersData = {
   cards: Record<string, TierCardData>;
 };
 
+// Type for game bugs
+interface GameBug {
+  id: string;
+  card_id: number;
+  card_name: string;
+  affected_field: 'ability' | 'skill';
+  affected_id: string;
+  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats';
+  severity: 'gameplay' | 'visual';
+  summary: string;
+  details: {
+    description_says?: string;
+    de_field?: string;
+    target_string?: string;
+    missing?: string;
+    description_percentage?: number;
+    actual_percentage?: number;
+    expected_effect?: string;
+    actual_effect?: string;
+    description_percentages?: number[];
+    data_percentages?: number[];
+    missing_effect?: string;
+  };
+  analysis: string;
+  affects_gameplay: boolean;
+  visual_only: boolean;
+  status: 'open' | 'fixed' | 'wont_fix';
+  first_detected?: string;
+  last_checked?: string;
+  fixed_in_version?: string;
+}
+type GameBugsData = {
+  version: string;
+  bugs: GameBug[];
+};
+
 const currentLocale = 'zh-cn';
 const localeName = '简体中文';
 
@@ -104,8 +142,22 @@ const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
 const similarCardsData = similarCardsRaw as SimilarCardsData;
 const tiersData = tiersDataRaw as TiersData;
+const gameBugsData = gameBugsRaw as GameBugsData;
 
 const { card } = Astro.props as { card: Card };
+
+// Get bugs for this card (filter out fixed bugs)
+// Bug notices are rendered with data-dev-only attribute and hidden on production via client-side JS
+const cardBugs = gameBugsData.bugs.filter(
+  bug => bug.card_id === parseInt(card.id) && bug.status !== 'fixed'
+);
+const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
+const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
+
+// Helper to get bug for a specific ability
+function getAbilityBug(abilityId: string): GameBug | undefined {
+  return abilityBugs.find(bug => bug.affected_id === abilityId);
+}
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
@@ -368,6 +420,42 @@ const jsonLd = {
                 ))}
               </div>
             )}
+            {/* Bug notice for skill */}
+            {skillBug && (
+              <div data-dev-only class={`mt-3 p-2 sm:p-3 rounded-lg border ${skillBug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                <div class="flex items-start gap-2">
+                  <span class={`text-sm ${skillBug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                  <div class="flex-1 min-w-0">
+                    <div class="flex items-center gap-2 flex-wrap">
+                      <span class={`text-xs font-medium ${skillBug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                        {skillBug.affects_gameplay ? 'Gameplay Bug' : 'Description Mismatch'}
+                      </span>
+                      <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                        {skillBug.id}
+                      </span>
+                    </div>
+                    <p class="text-xs text-secondary mt-1">{skillBug.summary}</p>
+                    {skillBug.details.description_percentage !== undefined && skillBug.details.actual_percentage !== undefined && (
+                      <div class="text-xs mt-1.5 space-y-0.5">
+                        <div><span class="text-secondary">Description:</span> <span class="line-through opacity-60">{skillBug.details.description_percentage}%</span></div>
+                        <div><span class="text-secondary">Actual:</span> <span class="font-medium">{skillBug.details.actual_percentage}%</span></div>
+                      </div>
+                    )}
+                    {skillBug.details.expected_effect && skillBug.details.actual_effect && (
+                      <div class="text-xs mt-1.5 space-y-0.5">
+                        <div><span class="text-secondary">Description says:</span> <span class="line-through opacity-60">{skillBug.details.expected_effect}</span></div>
+                        <div><span class="text-secondary">Actual effect:</span> <span class="font-medium">{skillBug.details.actual_effect}</span></div>
+                      </div>
+                    )}
+                    {skillBug.details.missing_effect && (
+                      <div class="text-xs mt-1.5">
+                        <span class="text-secondary">Missing effect:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{skillBug.details.missing_effect}</code>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -405,6 +493,52 @@ const jsonLd = {
                       ))}
                     </div>
                   )}
+                  {/* Bug notice for this ability */}
+                  {(() => {
+                    const bug = getAbilityBug(ability.id);
+                    if (!bug) return null;
+                    return (
+                      <div data-dev-only class={`mt-2 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                        <div class="flex items-start gap-2">
+                          <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                          <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap">
+                              <span class={`text-xs font-medium ${bug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                                {bug.affects_gameplay ? 'Gameplay Bug' : 'Description Mismatch'}
+                              </span>
+                              <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                                {bug.id}
+                              </span>
+                            </div>
+                            <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                            {bug.details.description_percentage !== undefined && bug.details.actual_percentage !== undefined && (
+                              <div class="text-xs mt-1.5 space-y-0.5">
+                                <div><span class="text-secondary">Description:</span> <span class="line-through opacity-60">{bug.details.description_percentage}%</span></div>
+                                <div><span class="text-secondary">Actual:</span> <span class="font-medium">{bug.details.actual_percentage}%</span></div>
+                              </div>
+                            )}
+                            {bug.details.target_string && bug.details.missing && (
+                              <div class="text-xs mt-1.5 space-y-0.5">
+                                <div><span class="text-secondary">Actual:</span> <code class="text-[10px] bg-gray-500/20 px-1 rounded">{bug.details.target_string}</code></div>
+                                <div><span class="text-secondary">Missing:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing}</code></div>
+                              </div>
+                            )}
+                            {bug.details.expected_effect && bug.details.actual_effect && (
+                              <div class="text-xs mt-1.5 space-y-0.5">
+                                <div><span class="text-secondary">Description says:</span> <span class="line-through opacity-60">{bug.details.expected_effect}</span></div>
+                                <div><span class="text-secondary">Actual effect:</span> <span class="font-medium">{bug.details.actual_effect}</span></div>
+                              </div>
+                            )}
+                            {bug.details.missing_effect && (
+                              <div class="text-xs mt-1.5">
+                                <span class="text-secondary">Missing effect:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing_effect}</code>
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
                 </div>
               ))}
             </div>

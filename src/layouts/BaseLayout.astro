@@ -139,6 +139,26 @@ const navLinks = {
     <!-- Locale detection (soft default from browser) -->
     <script is:inline set:html={localeInitScript} />
 
+    <!-- Dev-only features: hide on production, show on dev environments -->
+    <script is:inline>
+      (function() {
+        var host = location.hostname;
+        var search = location.search;
+        var isDev = (
+          host === 'localhost' ||
+          host === '127.0.0.1' ||
+          host.endsWith('.pages.dev') ||
+          search.includes('dev=true')
+        );
+        if (!isDev) {
+          // Hide dev-only elements on production by injecting a style rule
+          var style = document.createElement('style');
+          style.textContent = '[data-dev-only]{display:none!important}';
+          document.head.appendChild(style);
+        }
+      })();
+    </script>
+
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";window.OTOGIDB_DATA_PATHS=${JSON.stringify(dataPaths)};`} />
 

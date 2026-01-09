@@ -163,13 +163,10 @@ const gameBugsData = gameBugsRaw as GameBugsData;
 const { card } = Astro.props as { card: Card };
 
 // Get bugs for this card (filter out fixed bugs)
-// Only show bugs if the bugNotices feature flag is enabled (dev-only by default)
-const showBugNotices = isFeatureEnabled('bugNotices');
-const cardBugs = showBugNotices
-  ? gameBugsData.bugs.filter(
-      bug => bug.card_id === parseInt(card.id) && bug.status !== 'fixed'
-    )
-  : [];
+// Bug notices are rendered with data-dev-only attribute and hidden on production via client-side JS
+const cardBugs = gameBugsData.bugs.filter(
+  bug => bug.card_id === parseInt(card.id) && bug.status !== 'fixed'
+);
 const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
 const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
 
@@ -492,7 +489,7 @@ const jsonLd = {
             )}
             {/* Bug notice for skill */}
             {skillBug && (
-              <div class={`mt-3 p-2 sm:p-3 rounded-lg border ${skillBug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+              <div data-dev-only class={`mt-3 p-2 sm:p-3 rounded-lg border ${skillBug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
                 <div class="flex items-start gap-2">
                   <span class={`text-sm ${skillBug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
                   <div class="flex-1 min-w-0">
@@ -576,7 +573,7 @@ const jsonLd = {
                     const bug = getAbilityBug(ability.id);
                     if (!bug) return null;
                     return (
-                      <div class={`mt-2 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                      <div data-dev-only class={`mt-2 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
                         <div class="flex items-start gap-2">
                           <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
                           <div class="flex-1 min-w-0">
