@@ -1,7 +1,7 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "last_updated": "2026-01-09",
-  "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing",
+  "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
       "id": "BUG-001",
@@ -33,6 +33,10 @@
         "field": "ts",
         "condition": "contains",
         "value": "count<2>"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "2 Phantasma"
       }
     },
     {
@@ -89,6 +93,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT_ATK",
         "expected_value": 35.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "15%"
       }
     },
     {
@@ -116,6 +124,10 @@
         "field": "de",
         "condition": "contains",
         "value": "DEFENSE<"
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(damage reduction|DMG reduction|reduces?.+damage)"
       }
     },
     {
@@ -144,6 +156,10 @@
         "field": "de",
         "condition": "contains",
         "value": "ITEM<"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "drop rate"
       }
     },
     {
@@ -172,6 +188,10 @@
         "condition": "value_equals",
         "effect_type": "HP",
         "expected_value": 15.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
       }
     },
     {
@@ -200,6 +220,10 @@
         "condition": "value_equals",
         "effect_type": "SPD",
         "expected_value": 25.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "23%"
       }
     },
     {
@@ -228,6 +252,10 @@
         "condition": "value_equals",
         "effect_type": "HIT",
         "expected_value": 10.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "25%"
       }
     },
     {
@@ -256,6 +284,10 @@
         "condition": "value_equals",
         "effect_type": "HEAL_DOT",
         "expected_value": 2.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "3.5%"
       }
     },
     {
@@ -284,6 +316,10 @@
         "condition": "value_equals",
         "effect_type": "SHIELD",
         "expected_value": 15.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
       }
     },
     {
@@ -312,6 +348,10 @@
         "condition": "value_equals",
         "effect_type": "SHIELD",
         "expected_value": 15.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
       }
     },
     {
@@ -340,6 +380,10 @@
         "condition": "value_equals",
         "effect_type": "HEAL",
         "expected_value": 10.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "8%"
       }
     },
     {
@@ -368,6 +412,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT_ATK",
         "expected_value": 15.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "35%"
       }
     },
     {
@@ -396,6 +444,10 @@
         "condition": "value_equals",
         "effect_type": "HIT",
         "expected_value": 10.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "15%"
       }
     },
     {
@@ -424,6 +476,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT_ATK",
         "expected_value": 80.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "60%"
       }
     },
     {
@@ -452,6 +508,10 @@
         "condition": "value_equals",
         "effect_type": "ATK",
         "expected_value": 45.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "35%"
       }
     },
     {
@@ -480,6 +540,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT_ATK",
         "expected_value": 35.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "40%"
       }
     },
     {
@@ -508,6 +572,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT",
         "expected_value": 43.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "37%"
       }
     },
     {
@@ -536,6 +604,10 @@
         "condition": "value_equals",
         "effect_type": "ITEM",
         "expected_value": 25.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "20%"
       }
     },
     {
@@ -564,6 +636,10 @@
         "condition": "value_equals",
         "effect_type": "CHIT",
         "expected_value": 40.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "35%"
       }
     },
     {
@@ -592,6 +668,10 @@
         "condition": "value_equals",
         "effect_type": "SPD",
         "expected_value": 50.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "45%"
       }
     },
     {
@@ -620,6 +700,10 @@
         "condition": "value_equals",
         "effect_type": "SPD",
         "expected_value": 25.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "27%"
       }
     }
   ],
