@@ -1,6 +1,6 @@
 {
   "version": "1.3.0",
-  "last_updated": "2026-01-09",
+  "last_updated": "2026-01-10",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -705,6 +705,254 @@
         "condition": "contains",
         "value": "27%"
       }
+    },
+    {
+      "id": "BUG-023",
+      "card_id": 1493,
+      "card_name": "Kishimojin [Aya]",
+      "affected_field": "ability",
+      "affected_id": "149301",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Restores 30% HP to the ally with the lowest percentage of HP at the start of each wave.",
+        "o_field": false,
+        "ts_field": "self;min_hpp",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-024",
+      "card_id": 1495,
+      "card_name": "Sakatokego no Kami",
+      "affected_field": "ability",
+      "affected_id": "149501",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 3% of max HP of Divina team members.",
+        "o_field": false,
+        "ts_field": "self;type<1>;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-025",
+      "card_id": 1476,
+      "card_name": "Hariti",
+      "affected_field": "ability",
+      "affected_id": "147601",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Restores 5% HP to all allies at the start of each wave.",
+        "o_field": false,
+        "ts_field": "self;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-026",
+      "card_id": 1452,
+      "card_name": "Go-Go",
+      "affected_field": "ability",
+      "affected_id": "145201",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "All allies deal 3% more DMG.",
+        "o_field": false,
+        "ts_field": "self;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-027",
+      "card_id": 2370,
+      "card_name": "Peculiar Raine",
+      "affected_field": "ability",
+      "affected_id": "237001",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Decreases 20% the ATK speed of all foes.",
+        "o_field": false,
+        "ts_field": "enemy;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-028",
+      "card_id": 1466,
+      "card_name": "Kyobu Tanuki",
+      "affected_field": "ability",
+      "affected_id": "146601",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increase 15% of DMG dealt by the 2 allies with the highest ATK.",
+        "o_field": false,
+        "ts_field": "self;count<2>;max_atk",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-029",
+      "card_id": 1991,
+      "card_name": "Mary Magdalene",
+      "affected_field": "ability",
+      "affected_id": "199101",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 25% of skill DMG by Divina team members.",
+        "o_field": false,
+        "ts_field": "self;type<1>;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-030",
+      "card_id": 1994,
+      "card_name": "Fir Tree Sprite",
+      "affected_field": "ability",
+      "affected_id": "199401",
+      "category": "stackable",
+      "severity": "visual",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 23% of skill DMG dealt by Divina team members at the start of the final wave.",
+        "o_field": false,
+        "ts_field": "self;type<1>;count<5>",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
     }
   ],
   "categories": {
@@ -712,7 +960,8 @@
     "unit_type": "Issues related to card type (Assist, Melee, etc.)",
     "effect_type": "Wrong effect type applied (e.g., DEFENSE vs SHIELD)",
     "description": "Text/description percentage mismatches",
-    "stats": "Incorrect stat values"
+    "stats": "Incorrect stat values",
+    "stackable": "Non-stackable abilities missing 'once per team' text in description"
   },
   "severity_levels": {
     "gameplay": "Bug affects actual game mechanics",
