@@ -9,7 +9,6 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
-import { isFeatureEnabled } from '../../../lib/features';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
@@ -123,7 +122,6 @@ type GameBugsData = {
 };
 
 const currentLocale = 'zh-cn';
-const localeName = '简体中文';
 
 export async function getStaticPaths() {
   const cardsData = cardsDataRaw as unknown as CardsData;
@@ -195,20 +193,6 @@ const similarCards = precomputedSimilar.map(entry => ({
 })).filter(item => item.card);
 
 // Get tier data for this card (if available)
-const cardTierData = tiersData.cards[card.id] || null;
-
-// Helper to get tier color
-function getTierColor(tier: string): string {
-  switch (tier) {
-    case 'S+': return '#FF6B6B';
-    case 'S': return '#FFD700';
-    case 'A': return '#C0C0C0';
-    case 'B': return '#CD7F32';
-    case 'C': return '#808080';
-    case 'D': return '#404040';
-    default: return '#606060';
-  }
-}
 
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');

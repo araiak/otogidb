@@ -4,7 +4,6 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
-import { isFeatureEnabled } from '../../../lib/features';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
@@ -197,7 +196,6 @@ const similarCards = precomputedSimilar.map(entry => ({
 })).filter(item => item.card);  // Filter out any missing cards
 
 // Get tier data for this card (if available)
-const cardTierData = tiersData.cards[card.id] || null;
 
 // Get live auction data for this card (if tracked)
 const cardAuctionData = auctionsData.cards?.[card.id] || null;
@@ -230,35 +228,7 @@ function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' |
   return 'unavailable';
 }
 
-// Helper to format relative time
-function formatRelativeTime(dateStr: string): string {
-  const date = new Date(dateStr);
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-  const diffDays = Math.floor(diffHours / 24);
-
-  if (diffHours < 1) return 'Just now';
-  if (diffHours < 24) return `${diffHours}h ago`;
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7) return `${diffDays}d ago`;
-  return formatDate(dateStr);
-}
-
 const stockLevel = getStockLevel(cardAuctionData);
-
-// Helper to get tier color
-function getTierColor(tier: string): string {
-  switch (tier) {
-    case 'S+': return '#FF6B6B';
-    case 'S': return '#FFD700';
-    case 'A': return '#C0C0C0';
-    case 'B': return '#CD7F32';
-    case 'C': return '#808080';
-    case 'D': return '#404040';
-    default: return '#606060';
-  }
-}
 
 // Get image URLs (uses fallback to construct from asset_id if needed)
 const hdImageUrl = getImageUrl(card, 'hd');
