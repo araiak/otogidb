@@ -210,33 +210,6 @@ function getTierColor(tier: string): string {
   }
 }
 
-// Get stock level for auction availability
-function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' | 'low' | 'unavailable' {
-  if (!auctionData || !auctionData.last_seen) return 'unavailable';
-
-  const lastSeen = new Date(auctionData.last_seen);
-  const now = new Date();
-  const daysSinceLastSeen = (now.getTime() - lastSeen.getTime()) / (1000 * 60 * 60 * 24);
-
-  if (daysSinceLastSeen > 7) return 'unavailable';
-
-  const count = auctionData.last_count || 0;
-
-  // Recent data (within ~24h) - show based on count
-  if (daysSinceLastSeen <= 1) {
-    if (count >= 5) return 'high';
-    if (count >= 2) return 'medium';
-    if (count >= 1) return 'low';
-  }
-
-  // Older data (1-7 days) - seen recently but may not be current
-  if (count >= 1) return 'low';
-
-  return 'unavailable';
-}
-
-const stockLevel = getStockLevel(cardAuctionData);
-
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
 const seoImage = hdImageUrl || undefined;
