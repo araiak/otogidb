@@ -95,10 +95,20 @@ export interface ExchangeAcquisition {
   entries: ExchangeEntry[];
 }
 
+export interface AuctionEstimate {
+  estimated_date: string; // ISO date format (YYYY-MM-DD)
+  event_id: string;
+  event_name: string;
+  event_date: string;
+  confidence: 'high' | 'medium' | 'low';
+  note: string; // Explanation of estimation method
+}
+
 export interface AuctionAcquisition {
   available: boolean;
   currency?: string; // 'gold' = Jewels, 'gApple' = Mochi
   is_time_limited?: boolean;
+  estimate?: AuctionEstimate; // Estimated auction date for un-auctioned event cards
 }
 
 export interface EventRewardTier {

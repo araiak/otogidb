@@ -752,7 +752,7 @@ const jsonLd = {
               )}
 
               {/* Auction */}
-              {card.acquisition.sources.includes('auction') && (() => {
+              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
                 // Stock level colors, labels, and tooltip descriptions
                 // Data updates daily; reflects auction activity within noted timeframes
                 const stockInfo = {
@@ -783,6 +783,9 @@ const jsonLd = {
                 } as const;
                 const stockStyle = stockInfo[stockLevel];
 
+                // Get auction estimate if available
+                const auctionEstimate = card.acquisition.auction.estimate;
+
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center justify-between gap-2">
@@ -799,6 +802,22 @@ const jsonLd = {
                         {stockStyle.label}
                       </span>
                     </div>
+                    {/* Auction Estimate */}
+                    {auctionEstimate && (
+                      <div class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start gap-1.5">
+                          <span class="text-xs text-secondary flex-shrink-0">Estimated Auction:</span>
+                          <div class="flex-1">
+                            <div class="text-xs font-medium text-blue-700 dark:text-blue-400">
+                              ~{formatDate(auctionEstimate.estimated_date)}
+                            </div>
+                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
+                              Based on {auctionEstimate.event_name} event pattern
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })()}

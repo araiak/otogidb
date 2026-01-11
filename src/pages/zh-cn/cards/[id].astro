@@ -210,6 +210,33 @@ function getTierColor(tier: string): string {
   }
 }
 
+// Get stock level for auction availability
+function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' | 'low' | 'unavailable' {
+  if (!auctionData || !auctionData.last_seen) return 'unavailable';
+
+  const lastSeen = new Date(auctionData.last_seen);
+  const now = new Date();
+  const daysSinceLastSeen = (now.getTime() - lastSeen.getTime()) / (1000 * 60 * 60 * 24);
+
+  if (daysSinceLastSeen > 7) return 'unavailable';
+
+  const count = auctionData.last_count || 0;
+
+  // Recent data (within ~24h) - show based on count
+  if (daysSinceLastSeen <= 1) {
+    if (count >= 5) return 'high';
+    if (count >= 2) return 'medium';
+    if (count >= 1) return 'low';
+  }
+
+  // Older data (1-7 days) - seen recently but may not be current
+  if (count >= 1) return 'low';
+
+  return 'unavailable';
+}
+
+const stockLevel = getStockLevel(cardAuctionData);
+
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
 const seoImage = hdImageUrl || undefined;
@@ -620,6 +647,38 @@ const jsonLd = {
                   )}
                 </div>
               )}
+
+              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
+                const auctionEstimate = card.acquisition.auction.estimate;
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2">
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">拍卖</span>
+                      {card.acquisition.auction.available ? (
+                        <span class="text-xs text-green-400">✓ 可购买</span>
+                      ) : (
+                        <span class="text-xs text-secondary">当前未上架</span>
+                      )}
+                    </div>
+                    {/* Auction Estimate */}
+                    {auctionEstimate && (
+                      <div class="mt-2 pt-2 border-t border-gray-700">
+                        <div class="flex items-start gap-1.5">
+                          <span class="text-xs text-secondary flex-shrink-0">预计拍卖:</span>
+                          <div class="flex-1">
+                            <div class="text-xs font-medium text-blue-400">
+                              ~{formatDate(auctionEstimate.estimated_date)}
+                            </div>
+                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
+                              基于{auctionEstimate.event_name}活动规律
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         )}
