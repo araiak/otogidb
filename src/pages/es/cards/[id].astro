@@ -9,7 +9,6 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
-import { isFeatureEnabled } from '../../../lib/features';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
@@ -123,7 +122,6 @@ type GameBugsData = {
 };
 
 const currentLocale = 'es';
-const localeName = 'Español';
 
 export async function getStaticPaths() {
   const cardsData = cardsDataRaw as unknown as CardsData;
@@ -195,20 +193,6 @@ const similarCards = precomputedSimilar.map(entry => ({
 })).filter(item => item.card);
 
 // Get tier data for this card (if available)
-const cardTierData = tiersData.cards[card.id] || null;
-
-// Helper to get tier color
-function getTierColor(tier: string): string {
-  switch (tier) {
-    case 'S+': return '#FF6B6B';
-    case 'S': return '#FFD700';
-    case 'A': return '#C0C0C0';
-    case 'B': return '#CD7F32';
-    case 'C': return '#808080';
-    case 'D': return '#404040';
-    default: return '#606060';
-  }
-}
 
 // Get image URLs
 const hdImageUrl = getImageUrl(card, 'hd');
@@ -620,6 +604,38 @@ const jsonLd = {
                   )}
                 </div>
               )}
+
+              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
+                const auctionEstimate = card.acquisition.auction.estimate;
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2">
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Subasta</span>
+                      {card.acquisition.auction.available ? (
+                        <span class="text-xs text-green-400">✓ Disponible</span>
+                      ) : (
+                        <span class="text-xs text-secondary">No listado actualmente</span>
+                      )}
+                    </div>
+                    {/* Auction Estimate */}
+                    {auctionEstimate && (
+                      <div class="mt-2 pt-2 border-t border-gray-700">
+                        <div class="flex items-start gap-1.5">
+                          <span class="text-xs text-secondary flex-shrink-0">Subasta Estimada:</span>
+                          <div class="flex-1">
+                            <div class="text-xs font-medium text-blue-400">
+                              ~{formatDate(auctionEstimate.estimated_date)}
+                            </div>
+                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
+                              Basado en el patrón del evento {auctionEstimate.event_name}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              })()}
             </div>
           </div>
         )}

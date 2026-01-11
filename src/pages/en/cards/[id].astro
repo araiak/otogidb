@@ -4,7 +4,6 @@ import { formatDescription, formatNumber, formatDate, formatSkillDescription } f
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
-import { isFeatureEnabled } from '../../../lib/features';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 
@@ -197,7 +196,6 @@ const similarCards = precomputedSimilar.map(entry => ({
 })).filter(item => item.card);  // Filter out any missing cards
 
 // Get tier data for this card (if available)
-const cardTierData = tiersData.cards[card.id] || null;
 
 // Get live auction data for this card (if tracked)
 const cardAuctionData = auctionsData.cards?.[card.id] || null;
@@ -230,35 +228,7 @@ function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' |
   return 'unavailable';
 }
 
-// Helper to format relative time
-function formatRelativeTime(dateStr: string): string {
-  const date = new Date(dateStr);
-  const now = new Date();
-  const diffMs = now.getTime() - date.getTime();
-  const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-  const diffDays = Math.floor(diffHours / 24);
-
-  if (diffHours < 1) return 'Just now';
-  if (diffHours < 24) return `${diffHours}h ago`;
-  if (diffDays === 1) return 'Yesterday';
-  if (diffDays < 7) return `${diffDays}d ago`;
-  return formatDate(dateStr);
-}
-
 const stockLevel = getStockLevel(cardAuctionData);
-
-// Helper to get tier color
-function getTierColor(tier: string): string {
-  switch (tier) {
-    case 'S+': return '#FF6B6B';
-    case 'S': return '#FFD700';
-    case 'A': return '#C0C0C0';
-    case 'B': return '#CD7F32';
-    case 'C': return '#808080';
-    case 'D': return '#404040';
-    default: return '#606060';
-  }
-}
 
 // Get image URLs (uses fallback to construct from asset_id if needed)
 const hdImageUrl = getImageUrl(card, 'hd');
@@ -752,7 +722,7 @@ const jsonLd = {
               )}
 
               {/* Auction */}
-              {card.acquisition.sources.includes('auction') && (() => {
+              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
                 // Stock level colors, labels, and tooltip descriptions
                 // Data updates daily; reflects auction activity within noted timeframes
                 const stockInfo = {
@@ -783,6 +753,9 @@ const jsonLd = {
                 } as const;
                 const stockStyle = stockInfo[stockLevel];
 
+                // Get auction estimate if available
+                const auctionEstimate = card.acquisition.auction.estimate;
+
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center justify-between gap-2">
@@ -799,6 +772,22 @@ const jsonLd = {
                         {stockStyle.label}
                       </span>
                     </div>
+                    {/* Auction Estimate */}
+                    {auctionEstimate && (
+                      <div class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
+                        <div class="flex items-start gap-1.5">
+                          <span class="text-xs text-secondary flex-shrink-0">Estimated Auction:</span>
+                          <div class="flex-1">
+                            <div class="text-xs font-medium text-blue-700 dark:text-blue-400">
+                              ~{formatDate(auctionEstimate.estimated_date)}
+                            </div>
+                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
+                              Based on {auctionEstimate.event_name} event pattern
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })()}

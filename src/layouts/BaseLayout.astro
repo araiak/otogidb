@@ -4,9 +4,6 @@ import { themeInitScript } from '../lib/theme';
 import { localeInitScript, extractLocaleFromPath, LOCALE_NAMES, SUPPORTED_LOCALES, getPathInLocale } from '../lib/i18n';
 import DebugPanel from '../components/DebugPanel';
 import SEO from '../components/SEO.astro';
-import { getPlaceholderMascot } from '../lib/images';
-
-const mascotUrl = getPlaceholderMascot();
 
 // Favicon using Cloudinary transformation of card image (Sola - card 100014)
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
@@ -169,6 +166,7 @@ const navLinks = {
         var DIRECT_HOST = 'https://us.i.posthog.com';
         var PROXY_HOST = 'https://e.otogidb.com';
         var config = {
+          api_host: DIRECT_HOST,  // Will be set to proxy if direct is blocked
           ui_host: 'https://us.posthog.com',
           defaults: '2025-11-30',
           person_profiles: 'identified_only',
