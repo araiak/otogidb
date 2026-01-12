@@ -7,8 +7,7 @@
  */
 
 import type { CardsData } from '../types/card';
-import jsonpatch from 'fast-json-patch';
-import type { Operation } from 'fast-json-patch';
+import { applyPatch, type Operation } from 'rfc6902';
 
 interface DeltaManifest {
   current_version: string;
@@ -89,12 +88,12 @@ function applyDeltaPatch(cachedData: CardsData, delta: Delta): CardsData | null 
     // Clone the cached data to avoid mutation
     const dataCopy = JSON.parse(JSON.stringify(cachedData)) as CardsData;
 
-    // Apply the jsonpatch operations
-    const patchResult = jsonpatch.applyPatch(dataCopy, delta.patch, /* validate */ true, /* mutate */ true);
+    // Apply the jsonpatch operations (rfc6902 mutates in place, returns errors)
+    const errors = applyPatch(dataCopy, delta.patch);
 
     // Check for errors in patch application
-    if (patchResult.some(result => result !== null)) {
-      console.error('[Delta] Patch application had errors:', patchResult);
+    if (errors.length > 0) {
+      console.error('[Delta] Patch application had errors:', errors);
       return null;
     }
 
