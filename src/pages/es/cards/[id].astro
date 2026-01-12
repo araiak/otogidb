@@ -12,6 +12,8 @@ import { getSimilarityReason } from '../../../lib/similarity';
 import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
+import AuctionStockBadge from '../../../components/cards/AuctionStockBadge';
+import AvailabilityBadge from '../../../components/cards/AvailabilityBadge';
 
 // Import locale cards data and English skills data at build time
 import cardsDataRaw from '../../../data/es/cards.json';
@@ -20,6 +22,7 @@ import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
 import tiersDataRaw from '../../../data/tiers.json';
 import gameBugsRaw from '../../../data/game_bugs.json';
+import auctionsDataRaw from '../../../data/auctions.json';
 
 // For similar cards, we use English data to get names for linking
 import enCardsDataRaw from '../../../data/cards.json';
@@ -121,6 +124,20 @@ type GameBugsData = {
   bugs: GameBug[];
 };
 
+// Type for auction data (stock only, no pricing)
+interface AuctionCardData {
+  card_id: string;
+  first_seen: string;
+  last_seen: string;
+  last_count: number;
+}
+type AuctionsData = {
+  last_updated: string;
+  active_count: number;
+  total_tracked: number;
+  cards: Record<string, AuctionCardData>;
+};
+
 const currentLocale = 'es';
 
 export async function getStaticPaths() {
@@ -141,8 +158,41 @@ const cardMentions = cardMentionsRaw as CardMentionsData;
 const similarCardsData = similarCardsRaw as SimilarCardsData;
 const tiersData = tiersDataRaw as TiersData;
 const gameBugsData = gameBugsRaw as GameBugsData;
+const auctionsData = auctionsDataRaw as AuctionsData;
 
 const { card } = Astro.props as { card: Card };
+
+// Get live auction data for this card (if tracked)
+const cardAuctionData = auctionsData.cards?.[card.id] || null;
+
+// Helper to calculate stock level from auction data
+// Matches pipeline's calculate_stock_level() in auction_tracker.py
+// Stock levels (based on last week's activity):
+// - high: 5+ copies available (can buy full MLB)
+// - medium: 2-4 copies available
+// - low: 1 copy available
+// - unavailable: Not seen in last week
+function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' | 'low' | 'unavailable' {
+  if (!auctionData || !auctionData.last_seen) return 'unavailable';
+
+  const lastSeen = new Date(auctionData.last_seen);
+  const now = new Date();
+  const daysSinceLastSeen = (now.getTime() - lastSeen.getTime()) / (1000 * 60 * 60 * 24);
+
+  // Not seen in last week = unavailable
+  if (daysSinceLastSeen > 7) return 'unavailable';
+
+  // Seen within last week - check count
+  const count = auctionData.last_count || 0;
+
+  if (count >= 5) return 'high';
+  if (count >= 2) return 'medium';
+  if (count >= 1) return 'low';
+
+  return 'unavailable';
+}
+
+const stockLevel = getStockLevel(cardAuctionData);
 
 // Get bugs for this card (filter out fixed bugs)
 // Bug notices are rendered with data-dev-only attribute and hidden on production via client-side JS
@@ -532,7 +582,14 @@ const jsonLd = {
         <!-- Acquisition -->
         {card.acquisition && card.acquisition.sources && card.acquisition.sources.length > 0 && (
           <div class="card p-3 sm:p-4">
-            <h2 class="font-semibold mb-2 sm:mb-3 text-sm sm:text-base">Adquisición</h2>
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <h2 class="font-semibold text-sm sm:text-base">Adquisición</h2>
+              <AvailabilityBadge
+                client:load
+                cardId={card.id}
+                initialAvailable={card.acquisition.currently_available}
+              />
+            </div>
             <div class="space-y-2">
               {card.acquisition.sources.includes('gacha') && card.acquisition.gacha.in_standard_pool && (
                 <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
@@ -609,13 +666,15 @@ const jsonLd = {
                 const auctionEstimate = card.acquisition.auction.estimate;
                 return (
                   <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                    <div class="flex items-center gap-2">
-                      <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Subasta</span>
-                      {card.acquisition.auction.available ? (
-                        <span class="text-xs text-green-400">✓ Disponible</span>
-                      ) : (
-                        <span class="text-xs text-secondary">No listado actualmente</span>
-                      )}
+                    <div class="flex items-center justify-between gap-2">
+                      <div class="flex items-center gap-2">
+                        <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">Subasta</span>
+                      </div>
+                      <AuctionStockBadge
+                        client:load
+                        cardId={card.id}
+                        initialStockLevel={stockLevel}
+                      />
                     </div>
                     {/* Auction Estimate */}
                     {auctionEstimate && (

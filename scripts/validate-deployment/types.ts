@@ -85,6 +85,7 @@ export interface ValidationSummary {
   apiEndpoints?: ValidationCategorySummary;
   performanceChecks?: ValidationCategorySummary & { warned: number };
   errorPages?: ValidationCategorySummary;
+  deltaSystem?: ValidationCategorySummary & { warned: number };
   // Success tracking
   success: boolean;
   hardFailures: number;
