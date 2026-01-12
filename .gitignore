@@ -13,8 +13,8 @@ dist/
 # Local images (synced for dev only, not committed)
 public/images/
 
-# Delta state file (generated during sync, not committed)
-public/data/delta/_previous_index.json
+# Delta files are committed for incremental updates
+# (manifest.json, {from}_to_{to}.json, and _previous_index.json)
 
 # IDE
 .vscode/
