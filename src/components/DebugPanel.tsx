@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { clearCache, getCacheInfo } from '../lib/cache';
+import { fetchAvailabilityManifest, getAvailabilitySize } from '../lib/availability';
 
 interface CacheEntry {
   key: string;
@@ -8,10 +9,19 @@ interface CacheEntry {
   age: number;
 }
 
+interface AvailabilityInfo {
+  version: string;
+  lastUpdated: string;
+  size: string;
+  cardsCount: number;
+}
+
 export default function DebugPanel() {
   const [isOpen, setIsOpen] = useState(false);
   const [cacheEntries, setCacheEntries] = useState<CacheEntry[]>([]);
   const [status, setStatus] = useState<string>('');
+  const [availabilityInfo, setAvailabilityInfo] = useState<AvailabilityInfo | null>(null);
+  const [availabilityError, setAvailabilityError] = useState<string | null>(null);
 
   // Toggle with Ctrl+Shift+D
   useEffect(() => {
@@ -25,10 +35,11 @@ export default function DebugPanel() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Load cache info when opened
+  // Load cache info and availability when opened
   useEffect(() => {
     if (isOpen) {
       loadCacheInfo();
+      loadAvailabilityInfo();
     }
   }, [isOpen]);
 
@@ -38,6 +49,28 @@ export default function DebugPanel() {
       setCacheEntries(entries);
     } catch (error) {
       console.error('Failed to load cache info:', error);
+    }
+  };
+
+  const loadAvailabilityInfo = async () => {
+    try {
+      setAvailabilityError(null);
+      const manifest = await fetchAvailabilityManifest();
+      if (manifest) {
+        setAvailabilityInfo({
+          version: manifest.current_version,
+          lastUpdated: manifest.last_updated,
+          size: getAvailabilitySize(manifest),
+          cardsCount: manifest.cards_count,
+        });
+      } else {
+        setAvailabilityError('No availability data on R2 (manifest not found)');
+        setAvailabilityInfo(null);
+      }
+    } catch (error) {
+      console.error('Failed to load availability info:', error);
+      setAvailabilityError(`Error: ${error}`);
+      setAvailabilityInfo(null);
     }
   };
 
@@ -216,6 +249,39 @@ export default function DebugPanel() {
                 </div>
               ))}
             </div>
+          )}
+        </div>
+
+        {/* R2 Availability Data */}
+        <div className="space-y-2">
+          <div className="flex items-center justify-between">
+            <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>R2 Availability Data</p>
+            <button
+              onClick={loadAvailabilityInfo}
+              className="text-xs underline"
+              style={{ color: 'var(--color-accent)' }}
+            >
+              Refresh
+            </button>
+          </div>
+
+          {availabilityError ? (
+            <p className="text-xs" style={{ color: 'var(--color-error, #ef4444)' }}>{availabilityError}</p>
+          ) : availabilityInfo ? (
+            <div className="text-xs p-2 rounded" style={{ backgroundColor: 'var(--color-bg)' }}>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-1">
+                <span style={{ color: 'var(--color-text-secondary)' }}>Version:</span>
+                <span className="font-mono" style={{ color: 'var(--color-text)' }}>{availabilityInfo.version.slice(0, 8)}</span>
+                <span style={{ color: 'var(--color-text-secondary)' }}>Last Updated:</span>
+                <span style={{ color: 'var(--color-text)' }}>{availabilityInfo.lastUpdated ? new Date(availabilityInfo.lastUpdated).toLocaleString() : 'N/A'}</span>
+                <span style={{ color: 'var(--color-text-secondary)' }}>Cards:</span>
+                <span style={{ color: 'var(--color-text)' }}>{availabilityInfo.cardsCount}</span>
+                <span style={{ color: 'var(--color-text-secondary)' }}>Size:</span>
+                <span style={{ color: 'var(--color-text)' }}>{availabilityInfo.size}</span>
+              </div>
+            </div>
+          ) : (
+            <p className="text-xs" style={{ color: 'var(--color-text-secondary)' }}>Loading...</p>
           )}
         </div>
 

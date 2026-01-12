@@ -14,6 +14,7 @@ import { validateAccessibility } from './a11y-validator.js';
 import { validateApiEndpoints } from './api-validator.js';
 import { validatePerformance } from './performance-validator.js';
 import { validate404Pages } from './error-page-validator.js';
+import { validateDeltaSystem } from './delta-validator.js';
 import { loadThresholds, evaluateThreshold, summarizeThresholds, type ThresholdResult } from './thresholds.js';
 import type { ValidationSummary } from './types.js';
 
@@ -50,6 +51,7 @@ function printResults(summary: ValidationSummary, thresholdResults: ThresholdRes
     { name: 'API Endpoints', data: summary.apiEndpoints },
     { name: 'Performance', data: summary.performanceChecks },
     { name: 'Error Pages', data: summary.errorPages },
+    { name: 'Delta System', data: summary.deltaSystem },
     { name: 'Images', data: summary.images },
   ];
 
@@ -174,6 +176,9 @@ function printFixSuggestions(hardFailures: ThresholdResult[], softFailures: Thre
       case 'performance':
         suggestions.set('perf', 'Performance: Optimize slow pages, check for blocking resources or large payloads');
         break;
+      case 'deltaSystem':
+        suggestions.set('delta', 'Delta System: Run sync_website.py to generate delta files, or check delta file structure');
+        break;
     }
   }
 
@@ -289,6 +294,11 @@ async function main(): Promise<void> {
   const errorPageResults = await validate404Pages(VALIDATION_URL, TIMEOUT_MS);
   console.log('');
 
+  // Delta system validation
+  console.log('Validating delta update system...');
+  const deltaResults = await validateDeltaSystem(VALIDATION_URL, TIMEOUT_MS);
+  console.log('');
+
   // Validate images
   console.log('Validating images...');
   const imageResults = await validateImages(images, {
@@ -309,6 +319,7 @@ async function main(): Promise<void> {
     evaluateThreshold('apiEndpoints', apiResults.passed, apiResults.passed + apiResults.failed, thresholds),
     evaluateThreshold('performance', perfResults.passed, perfResults.passed + perfResults.failed, thresholds),
     evaluateThreshold('errorPages', errorPageResults.passed, errorPageResults.passed + errorPageResults.failed, thresholds),
+    evaluateThreshold('deltaSystem', deltaResults.passed, deltaResults.passed + deltaResults.failed, thresholds),
     evaluateThreshold('images', imageResults.filter((r) => r.status === 'pass').length, imageResults.length, thresholds),
   ];
 
@@ -368,6 +379,12 @@ async function main(): Promise<void> {
       total: errorPageResults.passed + errorPageResults.failed,
       passed: errorPageResults.passed,
       failed: errorPageResults.failed,
+    },
+    deltaSystem: {
+      total: deltaResults.passed + deltaResults.failed,
+      passed: deltaResults.passed,
+      failed: deltaResults.failed,
+      warned: deltaResults.warned,
     },
     images: {
       total: imageResults.length,

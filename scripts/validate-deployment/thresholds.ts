@@ -86,6 +86,11 @@ export const DEFAULT_THRESHOLDS: Record<string, ThresholdConfig> = {
     isHardFailure: false,
     displayName: 'Performance',
   },
+  deltaSystem: {
+    minPassRate: 0.8,
+    isHardFailure: false,
+    displayName: 'Delta System',
+  },
 };
 
 export function loadThresholds(): Record<string, ThresholdConfig> {

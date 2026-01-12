@@ -6,6 +6,8 @@ import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlacehol
 import { getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
+import AuctionStockBadge from '../../../components/cards/AuctionStockBadge';
+import AvailabilityBadge from '../../../components/cards/AvailabilityBadge';
 
 // Import cards, skills, card mentions, similar cards, tier data, and auction data at build time
 import cardsDataRaw from '../../../data/cards.json';
@@ -201,9 +203,12 @@ const similarCards = precomputedSimilar.map(entry => ({
 const cardAuctionData = auctionsData.cards?.[card.id] || null;
 
 // Helper to calculate stock level from auction data
-// High/Medium: seen within last 24 hours with good stock
-// Low: seen within last 7 days (may not be currently listed)
-// Unavailable: not seen in over a week
+// Matches pipeline's calculate_stock_level() in auction_tracker.py
+// Stock levels (based on last week's activity):
+// - high: 5+ copies available (can buy full MLB)
+// - medium: 2-4 copies available
+// - low: 1 copy available
+// - unavailable: Not seen in last week
 function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' | 'low' | 'unavailable' {
   if (!auctionData || !auctionData.last_seen) return 'unavailable';
 
@@ -211,18 +216,14 @@ function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' |
   const now = new Date();
   const daysSinceLastSeen = (now.getTime() - lastSeen.getTime()) / (1000 * 60 * 60 * 24);
 
+  // Not seen in last week = unavailable
   if (daysSinceLastSeen > 7) return 'unavailable';
 
+  // Seen within last week - check count
   const count = auctionData.last_count || 0;
 
-  // Recent data (within ~24h) - show based on count
-  if (daysSinceLastSeen <= 1) {
-    if (count >= 5) return 'high';
-    if (count >= 2) return 'medium';
-    if (count >= 1) return 'low';
-  }
-
-  // Older data (1-7 days) - seen recently but may not be current
+  if (count >= 5) return 'high';
+  if (count >= 2) return 'medium';
   if (count >= 1) return 'low';
 
   return 'unavailable';
@@ -672,15 +673,11 @@ const jsonLd = {
           <div class="card p-3 sm:p-4">
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <h2 class="font-semibold text-sm sm:text-base">Availability</h2>
-              {card.acquisition.currently_available ? (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-700 dark:text-green-400 font-medium cursor-help" title="Currently obtainable through at least one method">
-                  Available Now
-                </span>
-              ) : (
-                <span class="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-700 dark:text-red-400 font-medium cursor-help" title="Not currently obtainable - may return in future events or banners">
-                  Not Available
-                </span>
-              )}
+              <AvailabilityBadge
+                client:load
+                cardId={card.id}
+                initialAvailable={card.acquisition.currently_available}
+              />
             </div>
 
             <div class="space-y-3">
@@ -765,12 +762,11 @@ const jsonLd = {
                           <span class="text-xs text-yellow-700 dark:text-yellow-400">(Limited Time)</span>
                         )}
                       </div>
-                      <span
-                        class={`px-2 py-0.5 text-xs rounded ${stockStyle.bg} ${stockStyle.text} font-medium cursor-help`}
-                        title={stockStyle.tooltip}
-                      >
-                        {stockStyle.label}
-                      </span>
+                      <AuctionStockBadge
+                        client:load
+                        cardId={card.id}
+                        initialStockLevel={stockLevel}
+                      />
                     </div>
                     {/* Auction Estimate */}
                     {auctionEstimate && (

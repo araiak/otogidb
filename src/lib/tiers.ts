@@ -12,6 +12,10 @@ import type {
   DisplayTierCard,
   TierFilters,
 } from '../types/tiers';
+import {
+  fetchAvailabilityManifest,
+  fetchAvailabilityData,
+} from './availability';
 
 let tierDataCache: TierData | null = null;
 let availabilityCache: Record<string, boolean> | null = null;
@@ -20,16 +24,16 @@ let availabilityCache: Record<string, boolean> | null = null;
  * Get data paths from manifest (set by BaseLayout at build time).
  * Falls back to base paths if manifest not available.
  */
-function getDataPaths(): { tiers: string; cardsIndex: string } {
+function getDataPaths(): { tiers: string } {
   const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
   return {
     tiers: dataPaths.tiers?.path || '/data/tiers.json',
-    cardsIndex: dataPaths.en?.cards_index || '/data/cards_index.json',
   };
 }
 
 /**
- * Load availability data from cards_index.json.
+ * Load availability data from R2 availability.json.
+ * Uses the same R2 fetch logic as AvailabilityBadge for single source of truth.
  */
 async function loadAvailabilityData(): Promise<Record<string, boolean>> {
   if (availabilityCache) {
@@ -37,16 +41,22 @@ async function loadAvailabilityData(): Promise<Record<string, boolean>> {
   }
 
   try {
-    const { cardsIndex } = getDataPaths();
-    const response = await fetch(cardsIndex);
-    if (!response.ok) {
+    // Fetch from R2 using shared availability functions
+    const manifest = await fetchAvailabilityManifest();
+    if (!manifest) {
+      console.warn('[Tiers] No availability manifest, defaulting all to available');
       return {};
     }
-    const data = await response.json();
+
+    const data = await fetchAvailabilityData(manifest.current_version);
+    if (!data) {
+      console.warn('[Tiers] Failed to fetch availability data');
+      return {};
+    }
+
     const availability: Record<string, boolean> = {};
     for (const [cardId, card] of Object.entries(data.cards || {})) {
-      const cardData = card as { acquisition?: { currently_available?: boolean } };
-      availability[cardId] = cardData.acquisition?.currently_available ?? true;
+      availability[cardId] = card.currently_available ?? true;
     }
     availabilityCache = availability;
     return availability;
