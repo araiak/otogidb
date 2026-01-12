@@ -38,6 +38,13 @@ function getDataPath(filename: string, locale: CardLocale = 'en'): string {
  * Load minimal cards index (for table display - faster loading)
  * Uses IndexedDB caching with delta updates for efficient incremental updates.
  * Fetches availability data separately from R2 and merges it.
+ *
+ * Fallback behavior:
+ * 1. Try delta update (smallest download)
+ * 2. If delta fails, use data already fetched during delta check
+ * 3. If no data yet, fetch full index
+ * 4. If fetch fails, try to return stale cached data
+ * 5. If no cache available, throw error
  */
 export async function getCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<CardsData> {
   const locale = options.locale || 'en';
@@ -48,29 +55,39 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
     return cardsCacheByLocale[cacheKey]!;
   }
 
-  // Load cards data (via delta or full fetch) in parallel with availability manifest
-  let cardsData: CardsData;
+  let cardsData: CardsData | null = null;
+  const dataPath = getDataPath('cards_index.json', locale);
 
   // If not force refresh, try delta update from IndexedDB cache
   if (!options.forceRefresh) {
     const deltaResult = await tryDeltaUpdateFlow(locale);
-    if (deltaResult) {
-      cardsData = deltaResult;
-    } else {
-      // Fallback: Load full index
-      const dataPath = getDataPath('cards_index.json', locale);
+    if (deltaResult.data) {
+      cardsData = deltaResult.data;
+      // If delta was applied OR we already fetched fresh data, no need to fetch again
+      if (deltaResult.source === 'delta' || deltaResult.source === 'fresh') {
+        console.log(`[Cards] Using ${deltaResult.source} data, skipping redundant fetch`);
+      }
+    }
+  }
+
+  // If we don't have data yet, fetch full index
+  if (!cardsData) {
+    try {
       cardsData = await fetchWithCache<CardsData>(dataPath, {
         forceRefresh: options.forceRefresh,
         maxAge: CACHE_MAX_AGE
       });
+    } catch (error) {
+      console.error('[Cards] Failed to fetch cards index:', error);
+      // Try to get ANY cached data as last resort (even if stale)
+      const staleCached = await tryGetStaleCachedData(dataPath);
+      if (staleCached) {
+        console.warn('[Cards] Using stale cached data due to fetch failure');
+        cardsData = staleCached;
+      } else {
+        throw new Error('Failed to load card data and no cached data available');
+      }
     }
-  } else {
-    // Force refresh: Load full index
-    const dataPath = getDataPath('cards_index.json', locale);
-    cardsData = await fetchWithCache<CardsData>(dataPath, {
-      forceRefresh: options.forceRefresh,
-      maxAge: CACHE_MAX_AGE
-    });
   }
 
   // Fetch and merge availability data from R2 (non-blocking for card display)
@@ -82,11 +99,22 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
   return cardsData;
 }
 
+interface DeltaUpdateResult {
+  data: CardsData | null;
+  source: 'delta' | 'fresh' | 'cached' | 'none';
+}
+
 /**
  * Try to update using delta files.
- * Returns updated data if successful, null if we need to fall back to full fetch.
+ * Returns result with data and source to avoid redundant fetches.
+ *
+ * Sources:
+ * - 'delta': Data was updated via delta patch
+ * - 'fresh': Data was freshly fetched (versions already match)
+ * - 'cached': Using existing cached data
+ * - 'none': No data available, caller should fetch full index
  */
-async function tryDeltaUpdateFlow(locale: CardLocale): Promise<CardsData | null> {
+async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult> {
   try {
     // First, fetch the current version from manifest without caching
     // This tells us what version is available on the server
@@ -96,7 +124,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<CardsData | null>
 
     if (!manifestResponse.ok) {
       console.log('[Delta] No manifest available');
-      return null;
+      return { data: null, source: 'none' };
     }
 
     const manifest = await manifestResponse.json();
@@ -104,31 +132,81 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<CardsData | null>
 
     if (!targetVersion) {
       console.log('[Delta] No target version in manifest');
-      return null;
+      return { data: null, source: 'none' };
     }
 
     // Load cached data from IndexedDB (via fetchWithCache)
-    // This will return cached data if available and valid
+    // This will return cached data if available, or fetch fresh if not
     const dataPath = getDataPath('cards_index.json', locale);
     const cachedData = await fetchWithCache<CardsData>(dataPath, {
       forceRefresh: false,
       maxAge: CACHE_MAX_AGE
     });
 
+    // Check if fetchWithCache just got fresh data (versions match)
+    if (cachedData.version === targetVersion) {
+      console.log(`[Delta] Data already at target version ${targetVersion}`);
+      return { data: cachedData, source: 'fresh' };
+    }
+
     // Try to apply delta from cached version to target version
     const updatedData = await tryDeltaUpdate(cachedData, targetVersion);
 
     if (updatedData && updatedData !== cachedData) {
-      // Delta was successfully applied, update cache with new data
-      console.log('[Delta] Updating cache with delta result');
-      // Note: We rely on the next fetchWithCache to update the cache
-      // For now, just return the updated data
-      return updatedData;
+      // Delta was successfully applied
+      console.log('[Delta] Delta applied successfully');
+      return { data: updatedData, source: 'delta' };
     }
 
-    return null; // Delta update not applicable or failed
+    // Delta not available or failed, but we have cached data
+    if (cachedData) {
+      console.log('[Delta] Using cached data (delta not available)');
+      return { data: cachedData, source: 'cached' };
+    }
+
+    return { data: null, source: 'none' };
   } catch (error) {
     console.warn('[Delta] Delta update flow failed:', error);
+    return { data: null, source: 'none' };
+  }
+}
+
+/**
+ * Try to get stale cached data as a last resort when network fails.
+ * This ignores cache expiry and version checks.
+ */
+async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
+  try {
+    // Access IndexedDB directly to get any cached data
+    const dbName = 'otogidb-cache';
+    const storeName = 'json-cache';
+
+    return new Promise((resolve) => {
+      const request = indexedDB.open(dbName, 1);
+
+      request.onerror = () => resolve(null);
+      request.onsuccess = () => {
+        const db = request.result;
+        try {
+          const transaction = db.transaction(storeName, 'readonly');
+          const store = transaction.objectStore(storeName);
+          const getRequest = store.get(url);
+
+          getRequest.onerror = () => resolve(null);
+          getRequest.onsuccess = () => {
+            const entry = getRequest.result;
+            if (entry && entry.data) {
+              resolve(entry.data as CardsData);
+            } else {
+              resolve(null);
+            }
+          };
+        } catch {
+          resolve(null);
+        }
+      };
+    });
+  } catch {
     return null;
   }
 }

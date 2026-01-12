@@ -8,7 +8,8 @@
  * - Applying deltas produces valid results
  */
 
-import { applyPatch, type Operation } from 'fast-json-patch';
+import jsonpatch from 'fast-json-patch';
+import type { Operation } from 'fast-json-patch';
 
 interface DeltaManifest {
   current_version: string;
@@ -207,7 +208,7 @@ function testDeltaApplication(delta: Delta): string[] {
 
   try {
     // Try to apply the patch
-    const result = applyPatch(testData, delta.patch, /* validate */ true, /* mutate */ false);
+    const result = jsonpatch.applyPatch(testData, delta.patch, /* validate */ true, /* mutate */ false);
 
     // Check if there were any errors
     const errors = result.filter(r => r !== null);
