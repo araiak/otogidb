@@ -47,23 +47,6 @@ new ApiCheck('data-manifest', {
   },
 })
 
-// Check delta manifest (for incremental updates)
-// Note: Disabled until deltas are generated (currently returns 404)
-// Enable once sync_website.py generates delta files
-new ApiCheck('data-delta-manifest', {
-  name: 'Data - Delta Manifest',
-  group: cdnGroup,
-  activated: false,
-  frequency: Frequency.EVERY_24H,
-  locations: ['us-east-1'],
-  maxResponseTime: 5000,
-  request: {
-    method: 'GET',
-    url: `${BASE_URL}/data/delta/manifest.json`,
-    followRedirects: true,
-    assertions: [
-      // Only check response time - 200 (exists) or 404 (not generated) are both valid
-      AssertionBuilder.responseTime().lessThan(5000),
-    ],
-  },
-})
+// TODO: Add delta manifest check once sync_website.py generates delta files
+// Currently returns 404 which fails even with activated: false (runs locally)
+// Re-add when /data/delta/manifest.json exists

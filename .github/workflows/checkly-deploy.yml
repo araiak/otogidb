@@ -32,7 +32,7 @@ jobs:
         run: npm ci
 
       - name: Test checks locally
-        run: npx checkly test
+        run: npx checkly test --reporter ci
         env:
           CHECKLY_API_KEY: ${{ secrets.CHECKLY_API_KEY }}
           CHECKLY_ACCOUNT_ID: 526a1723-59d3-40b5-8bc3-8ce5741ff801
