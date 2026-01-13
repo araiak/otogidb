@@ -20,7 +20,7 @@ new ApiCheck('r2-availability-manifest', {
   group: cdnGroup,
   activated: true,
   frequency: Frequency.EVERY_1H,
-  locations: ['us-east-1', 'ap-northeast-1'],
+  locations: ['us-east-1', 'ap-southeast-1'],
   maxResponseTime: 5000,
   degradedResponseTime: 2000,
   request: {

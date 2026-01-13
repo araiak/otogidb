@@ -12,7 +12,7 @@ export default defineConfig({
     muted: false,
     runtimeId: '2025.04',
     frequency: Frequency.EVERY_12H, // Default for browser checks (free tier optimization)
-    locations: ['us-east-1', 'eu-west-1'],
+    locations: ['us-east-1', 'eu-central-1'],
     tags: ['otogidb', 'production'],
     alertChannels: [discordChannel], // Global alert channel for all checks
     checkMatch: 'src/**/*.check.ts',

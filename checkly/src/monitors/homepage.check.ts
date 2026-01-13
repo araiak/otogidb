@@ -29,7 +29,7 @@ new ApiCheck('homepage-ja', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_6H,
-  locations: ['ap-northeast-1'],
+  locations: ['ap-southeast-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {
