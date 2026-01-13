@@ -9,6 +9,46 @@
 import type { CardsData } from '../types/card';
 import { applyPatch, type Operation } from 'rfc6902';
 
+/**
+ * DEPRECATED: Old delta manifest format at /data/delta/manifest.json
+ * Will be removed once all clients migrate to unified manifest.
+ */
+interface LegacyDeltaManifest {
+  current_version: string;
+  oldest_supported_version: string | null;
+  deltas: Array<{
+    from_version: string;
+    to_version: string;
+    patch_size: number;
+    total_operations: number;
+  }>;
+}
+
+/**
+ * New unified manifest format at /data/manifest.json
+ * Contains version, file paths, and delta info in one place.
+ */
+interface UnifiedManifest {
+  version: string;
+  generated_at: string;
+  files: Record<string, { cards_index: string; cards_index_base: string }>;
+  delta?: {
+    current_version: string;
+    oldest_supported_version: string | null;
+    available_deltas: Array<{
+      from_version: string;
+      to_version: string;
+      file: string;
+      size_bytes: number;
+      operations: number;
+    }>;
+  };
+}
+
+/**
+ * Normalized delta manifest interface for internal use.
+ * Converts both legacy and unified formats to this common structure.
+ */
 interface DeltaManifest {
   current_version: string;
   oldest_supported_version: string | null;
@@ -34,12 +74,55 @@ interface Delta {
 }
 
 /**
- * Fetch delta manifest to check available deltas
+ * Convert unified manifest delta section to normalized format
+ */
+function convertUnifiedToDeltaManifest(unified: UnifiedManifest): DeltaManifest | null {
+  if (!unified.delta) {
+    return null;
+  }
+
+  return {
+    current_version: unified.delta.current_version,
+    oldest_supported_version: unified.delta.oldest_supported_version,
+    deltas: unified.delta.available_deltas.map(d => ({
+      from_version: d.from_version,
+      to_version: d.to_version,
+      patch_size: d.size_bytes,
+      total_operations: d.operations,
+    })),
+  };
+}
+
+/**
+ * Fetch delta manifest to check available deltas.
+ *
+ * Phase 3: Backwards compatible - tries unified manifest first,
+ * falls back to legacy delta manifest if not found.
  */
 async function fetchDeltaManifest(): Promise<DeltaManifest | null> {
+  // Try unified manifest first (new canonical location)
+  try {
+    const unifiedResponse = await fetch('/data/manifest.json', {
+      cache: 'no-cache' // Always check for new manifest
+    });
+
+    if (unifiedResponse.ok) {
+      const unified: UnifiedManifest = await unifiedResponse.json();
+      const deltaManifest = convertUnifiedToDeltaManifest(unified);
+      if (deltaManifest) {
+        console.log('[Delta] Using unified manifest');
+        return deltaManifest;
+      }
+    }
+  } catch (error) {
+    console.log('[Delta] Unified manifest not available, trying legacy');
+  }
+
+  // DEPRECATED: Fall back to legacy delta manifest
+  // This fallback will be removed once all environments are updated
   try {
     const response = await fetch('/data/delta/manifest.json', {
-      cache: 'no-cache' // Always check for new manifest
+      cache: 'no-cache'
     });
 
     if (!response.ok) {
@@ -47,7 +130,8 @@ async function fetchDeltaManifest(): Promise<DeltaManifest | null> {
       return null;
     }
 
-    return await response.json();
+    console.log('[Delta] Using legacy delta manifest');
+    return await response.json() as LegacyDeltaManifest;
   } catch (error) {
     console.warn('[Delta] Failed to fetch manifest:', error);
     return null;
@@ -185,4 +269,49 @@ export async function tryDeltaUpdate(
 export function calculateSavings(fullSize: number, deltaSize: number): number {
   if (fullSize === 0) return 0;
   return Math.round((1 - deltaSize / fullSize) * 100);
+}
+
+/**
+ * Get the current version from the unified manifest.
+ *
+ * Phase 3: Used by cards.ts to determine target version for delta updates.
+ *
+ * @returns Current version string, or null if manifest not available
+ */
+export async function getCurrentVersion(): Promise<string | null> {
+  // Try unified manifest first
+  try {
+    const response = await fetch('/data/manifest.json', {
+      cache: 'no-cache'
+    });
+
+    if (response.ok) {
+      const manifest: UnifiedManifest = await response.json();
+      if (manifest.version) {
+        return manifest.version;
+      }
+      // Fall back to delta.current_version if version not at top level
+      if (manifest.delta?.current_version) {
+        return manifest.delta.current_version;
+      }
+    }
+  } catch (error) {
+    console.log('[Delta] Could not get version from unified manifest');
+  }
+
+  // DEPRECATED: Fall back to legacy delta manifest
+  try {
+    const response = await fetch('/data/delta/manifest.json', {
+      cache: 'no-cache'
+    });
+
+    if (response.ok) {
+      const manifest: LegacyDeltaManifest = await response.json();
+      return manifest.current_version || null;
+    }
+  } catch (error) {
+    console.warn('[Delta] Could not get version from any manifest');
+  }
+
+  return null;
 }

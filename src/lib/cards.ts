@@ -1,6 +1,6 @@
 import type { CardsData } from '../types/card';
 import { fetchWithCache } from './cache';
-import { tryDeltaUpdate } from './delta';
+import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
 
 // Supported locales for card data
@@ -108,6 +108,9 @@ interface DeltaUpdateResult {
  * Try to update using delta files.
  * Returns result with data and source to avoid redundant fetches.
  *
+ * Phase 3: Uses unified manifest via getCurrentVersion() with
+ * backwards compatible fallback to legacy delta manifest.
+ *
  * Sources:
  * - 'delta': Data was updated via delta patch
  * - 'fresh': Data was freshly fetched (versions already match)
@@ -116,22 +119,11 @@ interface DeltaUpdateResult {
  */
 async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult> {
   try {
-    // First, fetch the current version from manifest without caching
-    // This tells us what version is available on the server
-    const manifestResponse = await fetch('/data/delta/manifest.json', {
-      cache: 'no-cache'
-    });
-
-    if (!manifestResponse.ok) {
-      console.log('[Delta] No manifest available');
-      return { data: null, source: 'none' };
-    }
-
-    const manifest = await manifestResponse.json();
-    const targetVersion = manifest.current_version;
+    // Get current version from unified manifest (with legacy fallback)
+    const targetVersion = await getCurrentVersion();
 
     if (!targetVersion) {
-      console.log('[Delta] No target version in manifest');
+      console.log('[Delta] No target version available from any manifest');
       return { data: null, source: 'none' };
     }
 
