@@ -48,12 +48,12 @@ new ApiCheck('data-manifest', {
 })
 
 // Check delta manifest (for incremental updates)
-// Note: This may return 404 if no deltas have been generated yet
-// We only check response time - both 200 and 404 are valid states
+// Note: Disabled until deltas are generated (currently returns 404)
+// Enable once sync_website.py generates delta files
 new ApiCheck('data-delta-manifest', {
   name: 'Data - Delta Manifest',
   group: cdnGroup,
-  activated: true,
+  activated: false,
   frequency: Frequency.EVERY_24H,
   locations: ['us-east-1'],
   maxResponseTime: 5000,
