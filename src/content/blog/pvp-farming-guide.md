@@ -93,7 +93,7 @@ These cards deal damage without buffs, so they don't require any extra damage fr
 
 :card[102] will show as "Awful" at level 61, which is very easy. At level 70 the random speed down ability may bump her to medium difficulty.
 
-:card[634] is available on auction and generally pretty cheap. Keep her uncapped for safety - she's perfect due to low stats and an irrelevant skill.
+:card[634] is available on auction and generally pretty cheap. Keep him uncapped for safety - he's perfect due to low stats and an irrelevant skill.
 
 ### Medium Difficulty
 
