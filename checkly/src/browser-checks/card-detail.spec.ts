@@ -6,7 +6,7 @@ test.describe('Card Detail Page', () => {
   test('card detail page renders correctly on desktop @critical', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'domcontentloaded' })
 
     // Verify main card image loads (in the .card container)
     const cardImage = page.locator('.card img').first()
@@ -31,7 +31,7 @@ test.describe('Card Detail Page', () => {
   test('card detail page on mobile (iPhone 14)', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.iphone14)
 
-    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'domcontentloaded' })
 
     // Verify main card image loads
     const cardImage = page.locator('.card img').first()

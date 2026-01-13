@@ -59,15 +59,22 @@ export type { CardAvailability, AvailabilityData };
  * Fetch availability manifest from R2.
  *
  * The manifest is always fetched fresh (no-cache) to ensure we have
- * the latest version pointer.
+ * the latest version pointer. Uses a 5 second timeout to avoid blocking
+ * page load if R2 is unreachable.
  *
  * @returns Availability manifest or null if not found/failed
  */
 export async function fetchAvailabilityManifest(): Promise<AvailabilityManifest | null> {
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 5000);
+
     const response = await fetch(`${R2_BASE_URL}/availability/manifest.json`, {
       cache: 'no-cache', // Always check for new version
+      signal: controller.signal,
     });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       console.warn('[Availability] Manifest not found:', response.status);
@@ -76,7 +83,11 @@ export async function fetchAvailabilityManifest(): Promise<AvailabilityManifest 
 
     return await response.json();
   } catch (error) {
-    console.error('[Availability] Failed to fetch manifest:', error);
+    if (error instanceof Error && error.name === 'AbortError') {
+      console.warn('[Availability] Manifest fetch timed out');
+    } else {
+      console.error('[Availability] Failed to fetch manifest:', error);
+    }
     return null;
   }
 }
@@ -85,15 +96,22 @@ export async function fetchAvailabilityManifest(): Promise<AvailabilityManifest 
  * Fetch versioned availability data from R2.
  *
  * Versioned files are immutable and can be cached forever.
+ * Uses a 10 second timeout to avoid blocking page load.
  *
  * @param version - Version hash for the availability file
  * @returns Availability data or null if not found/failed
  */
 export async function fetchAvailabilityData(version: string): Promise<AvailabilityData | null> {
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000);
+
     const response = await fetch(`${R2_BASE_URL}/availability/${version}.json`, {
       cache: 'force-cache', // Immutable file, cache forever
+      signal: controller.signal,
     });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
       console.warn('[Availability] Data not found for version:', version, response.status);
@@ -102,7 +120,11 @@ export async function fetchAvailabilityData(version: string): Promise<Availabili
 
     return await response.json();
   } catch (error) {
-    console.error('[Availability] Failed to fetch data:', error);
+    if (error instanceof Error && error.name === 'AbortError') {
+      console.warn('[Availability] Data fetch timed out for version:', version);
+    } else {
+      console.error('[Availability] Failed to fetch data:', error);
+    }
     return null;
   }
 }

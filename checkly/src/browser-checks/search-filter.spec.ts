@@ -6,7 +6,7 @@ test.describe('Search and Filter', () => {
   test('fuzzy search returns relevant results', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table
     await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
@@ -36,7 +36,7 @@ test.describe('Search and Filter', () => {
   test('attribute filter works', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table
     await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
@@ -63,7 +63,7 @@ test.describe('Search and Filter', () => {
   test('combined search and filter', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table
     await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })

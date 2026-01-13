@@ -1,6 +1,7 @@
 // Base URLs (configurable via environment variable for CI testing)
 export const BASE_URL = process.env.BASE_URL || 'https://otogidb.com'
 export const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload'
+export const R2_BASE_URL = 'https://r2.otogidb.com'
 
 // Supported locales
 export const LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'] as const
