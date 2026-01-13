@@ -6,10 +6,10 @@ test.describe('Image Loading', () => {
   test('card detail images load correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/cards/${SAMPLE_CARD_IDS.primary}`, { waitUntil: 'domcontentloaded' })
 
     // Wait for images to load
-    await page.waitForLoadState('networkidle')
+    await page.waitForSelector('.card img', { timeout: TIMEOUTS.pageLoad })
 
     // Find the main card image (first img in .card container)
     const cardImage = page.locator('.card img').first()
@@ -29,7 +29,7 @@ test.describe('Image Loading', () => {
   test('table thumbnails load correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table
     await page.waitForSelector('table.data-table', { timeout: TIMEOUTS.pageLoad })

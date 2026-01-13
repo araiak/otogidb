@@ -7,7 +7,7 @@ test.describe('Card Hover Popups', () => {
     // Must use desktop viewport for hover to work (popup has hidden md:block)
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table to load
     await page.waitForSelector('table.data-table tbody tr', { timeout: TIMEOUTS.pageLoad })

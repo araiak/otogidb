@@ -7,7 +7,7 @@ test.describe('Card Table', () => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
     // Navigate to homepage
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for card table to load
     await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
@@ -33,7 +33,7 @@ test.describe('Card Table', () => {
   test('loads card grid on mobile (iPhone 14)', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.iphone14)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // On mobile, should show card grid instead of table
     await page.waitForSelector(SELECTORS.mobileCardItem, { timeout: TIMEOUTS.pageLoad })
@@ -50,7 +50,7 @@ test.describe('Card Table', () => {
   test('loads card grid on mobile (Galaxy S21)', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.galaxyS21)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for mobile card grid
     await page.waitForSelector(SELECTORS.mobileCardItem, { timeout: TIMEOUTS.pageLoad })

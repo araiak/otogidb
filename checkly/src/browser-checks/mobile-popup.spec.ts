@@ -7,11 +7,10 @@ test.describe('Mobile Card Preview', () => {
     // Set viewport BEFORE navigation to ensure proper responsive rendering
     await page.setViewportSize(VIEWPORTS.galaxyS21)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for page to be fully loaded and React to hydrate
     await page.waitForLoadState('domcontentloaded')
-    await page.waitForLoadState('networkidle')
 
     // Wait for either the mobile grid or pagination to appear (React rendered)
     await page.waitForSelector('.card-grid-item, [class*="Page"]', { timeout: TIMEOUTS.pageLoad })
@@ -54,11 +53,10 @@ test.describe('Mobile Card Preview', () => {
     // Set viewport BEFORE navigation
     await page.setViewportSize(VIEWPORTS.iphone14)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for React to fully hydrate
     await page.waitForLoadState('domcontentloaded')
-    await page.waitForLoadState('networkidle')
 
     // Wait for the card grid to render
     await page.waitForSelector('.card-grid-item, [class*="Page"]', { timeout: TIMEOUTS.pageLoad })

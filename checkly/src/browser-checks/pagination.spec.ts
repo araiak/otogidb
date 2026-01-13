@@ -6,7 +6,7 @@ test.describe('Pagination', () => {
   test('table pagination works', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
 
     // Wait for table
     await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })

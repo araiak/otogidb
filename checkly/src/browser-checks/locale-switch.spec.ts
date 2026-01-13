@@ -6,7 +6,7 @@ test.describe('Locale Switching', () => {
   test('Japanese locale loads correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/ja/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/ja/`, { waitUntil: 'domcontentloaded' })
 
     // Verify Japanese content loaded via lang attribute
     await expect(page.locator('html[lang="ja"]')).toBeAttached()
@@ -18,7 +18,7 @@ test.describe('Locale Switching', () => {
   test('Korean locale loads correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/ko/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/ko/`, { waitUntil: 'domcontentloaded' })
 
     // Verify Korean content loaded
     await expect(page.locator('html[lang="ko"]')).toBeAttached()
@@ -27,7 +27,7 @@ test.describe('Locale Switching', () => {
   test('Chinese (Simplified) locale loads correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/zh-cn/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/zh-cn/`, { waitUntil: 'domcontentloaded' })
 
     // Verify Chinese content loaded
     await expect(page.locator('html[lang="zh-cn"], html[lang="zh-CN"]')).toBeAttached()
@@ -36,7 +36,7 @@ test.describe('Locale Switching', () => {
   test('Spanish locale loads correctly', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/es/`, { waitUntil: 'networkidle' })
+    await page.goto(`${BASE_URL}/es/`, { waitUntil: 'domcontentloaded' })
 
     // Verify Spanish content loaded
     await expect(page.locator('html[lang="es"]')).toBeAttached()
