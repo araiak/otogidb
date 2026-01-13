@@ -83,25 +83,6 @@ new ApiCheck('data-unified-manifest', {
   },
 })
 
-// DEPRECATED: Legacy delta manifest at /data/delta/manifest.json
-// This check verifies backwards compatibility until all clients migrate.
-// Will be removed once clients use unified manifest exclusively.
-new ApiCheck('data-delta-manifest-legacy', {
-  name: 'Data - Delta Manifest (Legacy)',
-  group: cdnGroup,
-  activated: true,
-  frequency: Frequency.EVERY_12H,
-  locations: ['us-east-1'],
-  maxResponseTime: 5000,
-  request: {
-    method: 'GET',
-    url: `${BASE_URL}/data/delta/manifest.json`,
-    followRedirects: true,
-    assertions: [
-      AssertionBuilder.statusCode().equals(200),
-      AssertionBuilder.headers('content-type').contains('application/json'),
-      // Legacy format uses current_version, not version
-      AssertionBuilder.jsonBody('$.current_version').notEmpty(),
-    ],
-  },
-})
+// NOTE: Legacy delta manifest check removed (2026-01-13)
+// /data/delta/manifest.json is no longer generated.
+// Delta info is now in the unified manifest at /data/manifest.json
