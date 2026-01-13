@@ -49,7 +49,7 @@ new ApiCheck('data-manifest', {
 
 // Check delta manifest (for incremental updates)
 // Note: This may return 404 if no deltas have been generated yet
-// So we just check that the endpoint responds (not necessarily 200)
+// We only check response time - both 200 and 404 are valid states
 new ApiCheck('data-delta-manifest', {
   name: 'Data - Delta Manifest',
   group: cdnGroup,
@@ -62,8 +62,7 @@ new ApiCheck('data-delta-manifest', {
     url: `${BASE_URL}/data/delta/manifest.json`,
     followRedirects: true,
     assertions: [
-      // Accept 200 (exists) or 404 (not yet generated) - both are valid states
-      AssertionBuilder.statusCode().isGreaterThan(0),
+      // Only check response time - 200 (exists) or 404 (not generated) are both valid
       AssertionBuilder.responseTime().lessThan(5000),
     ],
   },
