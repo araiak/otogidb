@@ -55,13 +55,13 @@ Let's identify required cards that cover these niches. This assumes they have th
 
 :card[744] is an Anima Ranged unit that increases damage 15% per wave unconditionally and is available in the standard gacha pool. She is a great choice for reserve even for non-Anima teams, and may be better in reserve even for Anima teams due to her low base skill damage.
 
-:card[740] is a Phantasma Ranged that increases Phantasma damage 10% per wave and is an excellent choice for Phantasma teams due to being a strong unit by itself with a strong skill, high attack, and the ability making it core. It is not available.
+:card[740] is a Phantasma Ranged that increases Phantasma damage 10% per wave and is an excellent choice for Phantasma teams due to being a strong unit by himself with a strong skill, high attack, and the ability making him core. He is not available.
 
 #### Progressive Damage Assists
 
 :filter["?type=Assist&ability=DMG+Boost%2CWave+Start"]
 
-:card[728] boosts both damage and crit damage at MLB so it can be a stand-in for a lack of damage boosters, or a way to increase clear speed.
+:card[728] boosts both damage and crit damage at MLB so he can be a stand-in for a lack of damage boosters, or a way to increase clear speed.
 
 *Note: If you have :card[744] or :card[740] you should focus mostly on defensive assists.*
 
@@ -75,7 +75,7 @@ Let's identify required cards that cover these niches. This assumes they have th
 
 :card[599] is a Phantasma Melee unit that boosts Phantasma max HP 2% per wave. Available in the standard pool.
 
-:card[658] is a Divina Ranged unit that boosts Divina max HP 2% per wave. It is not available.
+:card[658] is a Divina Ranged unit that boosts Divina max HP 2% per wave. He is not available.
 
 ### +Defensive Options
 
@@ -109,13 +109,13 @@ Let's identify required cards that cover these niches. This assumes they have th
 
 :filter["?ability=Crit+Rate%2CDivina%2CWave+Start"]
 
-:card[1494] is a Divina reserve that will boost crit rate to 100% by wave 14, reducing clear time. It is not available.
+:card[1494] is a Divina reserve that will boost crit rate to 100% by wave 14, reducing clear time. She is not available.
 
 #### Phantasma
 
 :filter["?ability=Crit+Rate%2CWave+Start%2CPhantasma"]
 
-:card[1307] is a Phantasma reserve that will boost crit rate to 100% by wave 10, significantly reducing clear time. It is not available.
+:card[1307] is a Phantasma reserve that will boost crit rate to 100% by wave 10, significantly reducing clear time. She is not available.
 
 #### Anima
 

@@ -48,7 +48,7 @@ There's a **5-star bonus orb available at half price** until the event ends! Giv
 
 :card[1439] is a ranking reward and uh... yeah nothing really comes together here, tanky damage leeching ranged... maybe freeze could be something, but if you wanted freeze its likely other freeze cards that are just straight up better would be coming through the Christmas Auction (assuming there is one, see :card[383]).
 
-:card[1438] is the overall ranking reward, and is quite good. Big progressive boost and a little defensive help with a high single-target damage skill that debuffs enemies to take more damage. It's not game breaking, but it's pretty good. I wrote my last info assuming this required 5 copies from gacha, but if you're ranking fairly high (top 200-300), this card is a lot better than I originally thought.
+:card[1438] is the overall ranking reward, and is quite good. Big progressive boost and a little defensive help with a high single-target damage skill that debuffs enemies to take more damage. She's not game breaking, but she's pretty good. I wrote my last info assuming she required 5 copies from gacha, but if you're ranking fairly high (top 200-300), she's a lot better than I originally thought.
 
 ---
 
@@ -58,7 +58,7 @@ There's a **5-star bonus orb available at half price** until the event ends! Giv
 
 :card[1437] is still good for a defensive assist.
 
-:card[1992] is still fine, but there are other alternatives. I rated this assuming it was a ranking reward, being a gacha card drops it down a bit, since :card[655] is also dirt cheap although it's more single target than team buffing, but at 5 copies for the team buff big pass from me.
+:card[1992] is still fine, but there are other alternatives. I rated her assuming she was a ranking reward, being a gacha card drops her down a bit, since :card[655] is also dirt cheap although she's more single target than team buffing, but at 5 copies for the team buff big pass from me.
 
 ---
 
