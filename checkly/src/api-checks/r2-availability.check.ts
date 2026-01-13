@@ -32,8 +32,8 @@ new ApiCheck('r2-availability-manifest', {
       AssertionBuilder.headers('content-type').contains('application/json'),
       AssertionBuilder.responseTime().lessThan(5000),
       // Verify manifest has required fields
-      AssertionBuilder.jsonBody('$.current_version').isNotEmpty(),
-      AssertionBuilder.jsonBody('$.file_url').isNotEmpty(),
+      AssertionBuilder.jsonBody('$.current_version').notEmpty(),
+      AssertionBuilder.jsonBody('$.file_url').notEmpty(),
     ],
   },
 })
