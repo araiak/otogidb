@@ -13,11 +13,9 @@ const t = getTranslations(currentLocale);
 // Import localized cards, skills, and tier data for hover popups
 import cardsDataRaw from '../../../data/zh-cn/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
-import tiersDataRaw from '../../../data/tiers.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
-const tiersData = tiersDataRaw as any;
 
 interface CardIndexEntry {
   id: string;
@@ -227,6 +225,6 @@ function renderStars(rarity: number): string {
       </div>
     )}
 
-    <CardPopups client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
   </div>
 </BaseLayout>

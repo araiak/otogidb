@@ -304,3 +304,68 @@ Displays cards matching the filter query (same syntax as /cards page URL params)
 :team["req=10001,10002&opt=10003,10004"]
 ```
 Displays a team composition with required and optional cards.
+
+---
+
+## AI Extension Points
+
+### Adding New Components
+
+| Component Type | Where to Create | Pattern to Follow |
+|----------------|-----------------|-------------------|
+| New card-related component | `src/components/cards/` | Follow `CardImage.tsx` pattern |
+| New filter component | `src/components/cards/filters/` | Follow `FilterDropdown.tsx` |
+| New cell renderer | `src/components/cards/cells/` | Follow `ImageCell.tsx` |
+| New tier component | `src/components/tiers/` | Follow `TierCard.tsx` |
+
+### Component Template
+
+When creating new React components:
+
+```tsx
+import { useState } from 'react';
+import type { Card } from '@/types/card';
+
+interface MyComponentProps {
+  card: Card;
+  compact?: boolean;
+}
+
+export default function MyComponent({ card, compact = false }: MyComponentProps) {
+  // Component logic
+  return (
+    <div className="...">
+      {/* Use Tailwind classes, reference CSS variables */}
+    </div>
+  );
+}
+```
+
+### DO NOT Modify Directly
+
+| File | Why | Instead |
+|------|-----|---------|
+| `CardTable.tsx` | 1,500+ lines | Extract new sub-component first |
+
+### When Extracting from CardTable
+
+If you need to add features to the card table:
+
+1. **Identify the concern** (filtering, sorting, pagination, mobile layout)
+2. **Extract to new component** in `src/components/cards/`
+3. **Import back into CardTable**
+4. **Add tests** to Checkly specs if user-facing
+
+### Type Definitions
+
+All card-related types are in `src/types/card.ts`. Add new fields there:
+
+```typescript
+// In src/types/card.ts
+interface Card {
+  id: string;
+  name: string;
+  // Add new fields here with proper types
+  newField?: string;
+}
+```

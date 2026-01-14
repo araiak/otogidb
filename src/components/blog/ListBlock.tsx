@@ -4,34 +4,9 @@ import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/ima
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
-// Tier data type
-interface TierCardData {
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;
-  };
-}
-
-interface TierData {
-  cards: Record<string, TierCardData>;
-}
-
 interface ListBlockProps {
   cards: Record<string, Card>;
   skills?: Record<string, any>;
-  tiers?: TierData | null;
 }
 
 /**
@@ -43,7 +18,7 @@ interface ListBlockProps {
  *
  * The cards will be displayed in the order specified.
  */
-export default function ListBlock({ cards, skills = {}, tiers = null }: ListBlockProps) {
+export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
@@ -148,7 +123,6 @@ export default function ListBlock({ cards, skills = {}, tiers = null }: ListBloc
       key={hydrationKey}
       cards={cards}
       skills={skills}
-      tiers={tiers}
       selector=".list-card[data-card-id]"
       placement="top"
       compact={true}

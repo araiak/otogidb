@@ -5,34 +5,9 @@ import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
-// Tier data type
-interface TierCardData {
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;
-  };
-}
-
-interface TierData {
-  cards: Record<string, TierCardData>;
-}
-
 interface FilteredCardsBlockProps {
   cards: Record<string, Card>;
   skills?: Record<string, any>;
-  tiers?: TierData | null;
 }
 
 interface ParsedFilters {
@@ -224,7 +199,7 @@ function matchesFilters(card: Card, filters: ParsedFilters): boolean {
  * FilteredCardsBlock - Hydrates all .filtered-cards-block containers
  * Renders matching cards as a grid with hover popups (desktop) and tap preview (mobile)
  */
-export default function FilteredCardsBlock({ cards, skills = {}, tiers = null }: FilteredCardsBlockProps) {
+export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCardsBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
@@ -333,7 +308,6 @@ export default function FilteredCardsBlock({ cards, skills = {}, tiers = null }:
       key={hydrationKey}
       cards={cards}
       skills={skills}
-      tiers={tiers}
       selector=".filter-result-card[data-card-id]"
       placement="top"
       compact={true}

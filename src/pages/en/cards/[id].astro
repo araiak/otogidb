@@ -14,7 +14,6 @@ import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
 import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
-import tiersDataRaw from '../../../data/tiers.json';
 import auctionsDataRaw from '../../../data/auctions.json';
 import gameBugsRaw from '../../../data/game_bugs.json';
 
@@ -35,49 +34,6 @@ interface SimilarCardEntry {
 }
 type SimilarCardsData = Record<string, SimilarCardEntry[]>;
 
-// Type for tier data
-interface ReserveModeData {
-  percentile: number;
-  tier: string;
-}
-interface TierCardData {
-  card_id: number;
-  card_name: string;
-  unit_type: number;
-  attribute: number;
-  rarity: number;
-  raw: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-  };
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;  // Not part of overall - measures passive ability value in reserve slot
-  };
-  reserve_breakdown?: {
-    five_round: ReserveModeData;
-    one_round: ReserveModeData;
-    defense: ReserveModeData;
-  } | null;
-}
-type TiersData = {
-  version: string;
-  cards: Record<string, TierCardData>;
-};
 
 // Type for auction data (stock only, no pricing)
 interface AuctionCardData {
@@ -157,7 +113,6 @@ const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
 const cardMentions = cardMentionsRaw as CardMentionsData;
 const similarCardsData = similarCardsRaw as SimilarCardsData;
-const tiersData = tiersDataRaw as TiersData;
 const auctionsData = auctionsDataRaw as AuctionsData;
 const gameBugsData = gameBugsRaw as GameBugsData;
 
@@ -1047,7 +1002,6 @@ const jsonLd = {
       client:load
       cards={cardsData.cards}
       skills={skillsData}
-      tiers={tiersData}
       selector=".synergy-card"
     />
   )}
