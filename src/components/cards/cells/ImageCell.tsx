@@ -5,30 +5,9 @@ import type { SupportedLocale } from '../../../lib/i18n';
 import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../../lib/images';
 import { CardFloatingPopup } from '../CardHoverProvider';
 
-// Tier data type for a single card (must match CardPreviewContent)
-interface TierCardData {
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;
-  };
-}
-
 interface ImageCellProps {
   card: Card;
   skills: Record<string, SkillData>;
-  tierData?: TierCardData | null;
   locale: SupportedLocale;
 }
 
@@ -41,7 +20,7 @@ const MAX_RETRIES = 2;
  * Displays a thumbnail that links to the card page and shows a preview popup on hover.
  * Includes automatic retry for failed image loads before falling back to placeholder.
  */
-export default function ImageCell({ card, skills, tierData = null, locale }: ImageCellProps) {
+export default function ImageCell({ card, skills, locale }: ImageCellProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const url = getThumbnailUrl(card);
@@ -93,7 +72,6 @@ export default function ImageCell({ card, skills, tierData = null, locale }: Ima
         isOpen={isHovered}
         referenceElement={referenceElement}
         skills={skills}
-        tierData={tierData}
         placement="right-start"
         compact={true}
         locale={locale}

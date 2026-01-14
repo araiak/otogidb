@@ -21,7 +21,10 @@ import CardPreviewContent from './CardPreviewContent';
 import TableSkeleton from './TableSkeleton';
 import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown, type TagCategory } from './filters';
 import { ImageCell } from './cells';
+import MobileCardGrid from './MobileCardGrid';
+import { getCardTableColumns } from './cardTableColumns';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
+import { useCardFilterOptions } from '../../hooks/useCardFilterOptions';
 import {
   extractLocaleFromPath,
   getStoredLocale,
@@ -148,11 +151,6 @@ export default function CardTable({ initialCards }: CardTableProps) {
     onEscape: closeMobilePreview,
   });
 
-  // Tier data state
-  const [tierData, setTierData] = useState<Record<string, any> | null>(null);
-  const [tierLoading, setTierLoading] = useState(true);
-  const [tierError, setTierError] = useState(false);
-
   // Sort dropdown state
   const [sortDropdownOpen, setSortDropdownOpen] = useState(false);
   const [focusedSortIndex, setFocusedSortIndex] = useState(-1);
@@ -261,36 +259,6 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     return () => clearTimeout(timeoutId);
   }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
-
-  // Load tier data on mount (uses IndexedDB cache with hashed path for cache busting)
-  // Tier list is currently disabled - skip loading silently
-  const loadTierData = useCallback(async () => {
-    // Check if tiers are enabled in data paths
-    const dataPaths = (window as any).OTOGIDB_DATA_PATHS || {};
-    if (!dataPaths.tiers) {
-      // Tiers disabled - skip loading silently
-      setTierLoading(false);
-      return;
-    }
-
-    setTierLoading(true);
-    setTierError(false);
-    try {
-      const tiersPath = dataPaths.tiers.path || '/data/tiers.json';
-      const data = await fetchWithCache<{ cards: Record<string, any> }>(tiersPath);
-      if (data?.cards) {
-        setTierData(data.cards);
-      }
-    } catch {
-      setTierError(true);
-    } finally {
-      setTierLoading(false);
-    }
-  }, []);
-
-  useEffect(() => {
-    loadTierData();
-  }, [loadTierData]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -492,191 +460,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
     setColumnFilters(filters);
   }, [attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, hideNonPlayable]);
 
-  // Get unique filter options
-  const filterOptions = useMemo(() => {
-    const attributes = new Set<string>();
-    const types = new Set<string>();
-    const rarities = new Set<number>();
-    const bondTypes = new Set<string>();
-    const skillTags = new Set<string>();
-    const abilityTags = new Set<string>();
-
-    cards.forEach(card => {
-      if (card.stats.attribute_name) attributes.add(card.stats.attribute_name);
-      if (card.stats.type_name) types.add(card.stats.type_name);
-      if (card.stats.rarity) rarities.add(card.stats.rarity);
-      if (card.bonds && card.bonds.length > 0) {
-        card.bonds.forEach(bond => {
-          if (bond.type) bondTypes.add(bond.type);
-        });
-      }
-      if (card.skill?.tags) {
-        card.skill.tags.forEach(tag => skillTags.add(tag));
-      }
-      if (card.abilities) {
-        card.abilities.forEach(ability => {
-          if (ability.tags) {
-            ability.tags.forEach(tag => abilityTags.add(tag));
-          }
-        });
-      }
-    });
-
-    // Sort attributes: known attributes first (Divina, Anima, Phantasma), then others/unknown at bottom
-    const knownAttributes = ['Divina', 'Anima', 'Phantasma'];
-    const sortedAttributes = Array.from(attributes).sort((a, b) => {
-      const aKnown = knownAttributes.indexOf(a);
-      const bKnown = knownAttributes.indexOf(b);
-      // Both known: sort by predefined order
-      if (aKnown !== -1 && bKnown !== -1) return aKnown - bKnown;
-      // Only a is known: a comes first
-      if (aKnown !== -1) return -1;
-      // Only b is known: b comes first
-      if (bKnown !== -1) return 1;
-      // Neither known: alphabetical (Unknown, Neutral, etc. at end)
-      return a.localeCompare(b);
-    });
-
-    // Sort bond types: Attack, Skill, HP first, then others
-    const knownBondTypes = ['Attack', 'Skill', 'HP'];
-    const sortedBondTypes = Array.from(bondTypes).sort((a, b) => {
-      const aKnown = knownBondTypes.indexOf(a);
-      const bKnown = knownBondTypes.indexOf(b);
-      if (aKnown !== -1 && bKnown !== -1) return aKnown - bKnown;
-      if (aKnown !== -1) return -1;
-      if (bKnown !== -1) return 1;
-      return a.localeCompare(b);
-    });
-
-    // Sort skill tags: effect types first, then status effects, then secondary effects
-    const tagOrder = ['DMG', 'Heal', 'Buff', 'Debuff', 'Single', 'Multi', 'AoE', 'Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify', 'Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Cleanse'];
-    const sortedSkillTags = Array.from(skillTags).sort((a, b) => {
-      const aIndex = tagOrder.indexOf(a);
-      const bIndex = tagOrder.indexOf(b);
-      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-      if (aIndex !== -1) return -1;
-      if (bIndex !== -1) return 1;
-      return a.localeCompare(b);
-    });
-
-    // Sort ability tags: buff effects first, then defensive, then status, then scope
-    const abilityTagOrder = ['DMG Boost', 'Crit Rate', 'Crit DMG', 'ATK Speed', 'Skill DMG', 'Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Slow', 'DMG Amp', 'Enemy DMG Down', 'Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify', 'Immunity', 'Team', 'Divina', 'Anima', 'Phantasma', 'Melee', 'Ranged', 'Healer', 'Leader', 'Wave Start', 'Final Wave', 'Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost'];
-    const sortedAbilityTags = Array.from(abilityTags).sort((a, b) => {
-      const aIndex = abilityTagOrder.indexOf(a);
-      const bIndex = abilityTagOrder.indexOf(b);
-      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-      if (aIndex !== -1) return -1;
-      if (bIndex !== -1) return 1;
-      return a.localeCompare(b);
-    });
-
-    // Collect acquisition sources
-    const sources = new Set<string>();
-    cards.forEach(card => {
-      if (card.acquisition?.sources) {
-        card.acquisition.sources.forEach(s => sources.add(s));
-      }
-    });
-    // Define source order
-    const sourceOrder = ['gacha', 'auction', 'exchange', 'event', 'daily'];
-    const sortedSources = Array.from(sources).sort((a, b) => {
-      const aIndex = sourceOrder.indexOf(a);
-      const bIndex = sourceOrder.indexOf(b);
-      if (aIndex !== -1 && bIndex !== -1) return aIndex - bIndex;
-      if (aIndex !== -1) return -1;
-      if (bIndex !== -1) return 1;
-      return a.localeCompare(b);
-    });
-
-    return {
-      attributes: sortedAttributes,
-      types: Array.from(types).sort(),
-      rarities: Array.from(rarities).sort((a, b) => b - a), // Descending
-      bondTypes: sortedBondTypes,
-      skillTags: sortedSkillTags,
-      abilityTags: sortedAbilityTags,
-      sources: sortedSources,
-    };
-  }, [cards]);
-
-  // Build skill tag categories for grouped dropdown
-  const skillTagCategories = useMemo<TagCategory[]>(() => {
-    const available = new Set(filterOptions.skillTags);
-    return [
-      {
-        name: 'Effect',
-        tags: ['DMG', 'Heal', 'DMG Boost', 'Debuff'].filter(t => available.has(t)),
-        colorClass: 'text-yellow-500'
-      },
-      {
-        name: 'Target',
-        tags: ['Self', 'Single', 'Multi', 'AoE'].filter(t => available.has(t)),
-        colorClass: 'text-blue-600 dark:text-blue-400'
-      },
-      {
-        name: 'Status',
-        tags: ['Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify'].filter(t => available.has(t)),
-        colorClass: 'text-red-600 dark:text-red-400'
-      },
-      {
-        name: 'Buffs',
-        tags: ['DEF Up', 'Speed Up', 'Crit Rate', 'DMG Reduction', 'Cleanse'].filter(t => available.has(t)),
-        colorClass: 'text-green-600 dark:text-green-400'
-      },
-      {
-        name: 'Debuffs',
-        tags: ['Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Dispel'].filter(t => available.has(t)),
-        colorClass: 'text-purple-600 dark:text-purple-400'
-      },
-    ];
-  }, [filterOptions.skillTags]);
-
-  // Build ability tag categories for grouped dropdown
-  const abilityTagCategories = useMemo<TagCategory[]>(() => {
-    const available = new Set(filterOptions.abilityTags);
-    return [
-      {
-        name: 'Offensive',
-        tags: ['DMG Boost', 'Crit Rate', 'Crit DMG', 'ATK Speed', 'Skill DMG'].filter(t => available.has(t)),
-        colorClass: 'text-yellow-500'
-      },
-      {
-        name: 'Defensive',
-        tags: ['Max HP', 'DMG Reduction', 'Lifesteal', 'Heal', 'Immunity', 'Counter'].filter(t => available.has(t)),
-        colorClass: 'text-green-600 dark:text-green-400'
-      },
-      {
-        name: 'Debuffs',
-        tags: ['Slow', 'DMG Amp', 'Enemy DMG Down'].filter(t => available.has(t)),
-        colorClass: 'text-purple-600 dark:text-purple-400'
-      },
-      {
-        name: 'Status',
-        tags: ['Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify'].filter(t => available.has(t)),
-        colorClass: 'text-red-600 dark:text-red-400'
-      },
-      {
-        name: 'Target',
-        tags: ['Self', 'Single', 'Multi', 'AoE', 'Team'].filter(t => available.has(t)),
-        colorClass: 'text-blue-600 dark:text-blue-400'
-      },
-      {
-        name: 'Scope',
-        tags: ['Divina', 'Anima', 'Phantasma', 'Neutral', 'Melee', 'Ranged', 'Leader'].filter(t => available.has(t)),
-        colorClass: 'text-teal-600 dark:text-teal-400'
-      },
-      {
-        name: 'Timing',
-        tags: ['Wave Start', 'Final Wave', 'On Skill', 'On Attack', 'Conditional'].filter(t => available.has(t)),
-        colorClass: 'text-orange-400'
-      },
-      {
-        name: 'Special',
-        tags: ['Drop Rate', 'Time Limit', 'EXP Boost', 'Soulstone Boost', 'Level Boost'].filter(t => available.has(t)),
-        colorClass: 'text-cyan-400'
-      },
-    ];
-  }, [filterOptions.abilityTags]);
+  // Get filter options and tag categories from hook
+  const { filterOptions, skillTagCategories, abilityTagCategories } = useCardFilterOptions(cards);
 
   // Filter data based on global search - lazily creates search index on first search
   const filteredData = useMemo(() => {
@@ -693,303 +478,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
     return results.map(result => result.item);
   }, [cards, globalFilter]);
 
-  // Column definitions
-  const columns = useMemo<ColumnDef<Card>[]>(() => [
-    {
-      id: 'image',
-      header: '',
-      size: 50,
-      enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} skills={{}} tierData={tierData?.[row.original.id]} locale={locale} />,
-    },
-    {
-      accessorKey: 'id',
-      header: 'ID',
-      size: 60,
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{getValue() as string}</span>
-      ),
-    },
-    {
-      accessorKey: 'name',
-      header: 'Name',
-      size: 140,
-      cell: ({ row }) => (
-        <div className="flex items-center gap-1.5">
-          <a
-            href={getCardUrl(row.original.id)}
-            className="link font-medium hover:underline"
-          >
-            {row.original.name || `Card #${row.original.id}`}
-          </a>
-          {!row.original.playable && (
-            <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">
-              NPC
-            </span>
-          )}
-        </div>
-      ),
-    },
-    {
-      id: 'attribute',
-      accessorFn: (row) => row.stats.attribute_name,
-      header: 'Attr',
-      size: 50,
-      cell: ({ row }) => (
-        <AttributeIcon value={row.original.stats.attribute_name} size="md" />
-      ),
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        return filterValue.includes(row.original.stats.attribute_name);
-      },
-    },
-    {
-      id: 'type',
-      accessorFn: (row) => row.stats.type_name,
-      header: 'Type',
-      size: 50,
-      cell: ({ row }) => (
-        <TypeIcon value={row.original.stats.type_name} size="md" />
-      ),
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        return filterValue.includes(row.original.stats.type_name);
-      },
-    },
-    {
-      id: 'rarity',
-      accessorFn: (row) => row.stats.rarity,
-      header: 'Rarity',
-      size: 80,
-      cell: ({ getValue }) => (
-        <RarityStars value={getValue() as number} size="sm" />
-      ),
-      filterFn: (row, _columnId, filterValue: number[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        return filterValue.includes(row.original.stats.rarity);
-      },
-    },
-    {
-      id: 'sources',
-      accessorFn: (row) => row.acquisition?.sources || [],
-      header: 'Source',
-      size: 90,
-      cell: ({ row }) => {
-        const sources = row.original.acquisition?.sources || [];
-        const available = row.original.acquisition?.currently_available || false;
-        if (sources.length === 0) return <span className="text-secondary text-sm">-</span>;
-
-        return (
-          <div className="flex flex-wrap gap-0.5">
-            {sources.map(source => {
-              const label = source === 'gacha' ? 'G' :
-                           source === 'auction' ? 'A' :
-                           source === 'exchange' ? 'E' :
-                           source === 'event' ? 'Ev' :
-                           source === 'daily' ? 'D' : source;
-              const colorClass = source === 'gacha' ? 'bg-purple-500/20 text-purple-700 dark:text-purple-300' :
-                                source === 'auction' ? 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-300' :
-                                source === 'exchange' ? 'bg-blue-500/20 text-blue-700 dark:text-blue-300' :
-                                source === 'event' ? 'bg-green-500/20 text-green-700 dark:text-green-300' :
-                                source === 'daily' ? 'bg-cyan-500/20 text-cyan-700 dark:text-cyan-300' : 'bg-gray-500/20';
-              const title = source === 'gacha' ? 'Gacha' :
-                           source === 'auction' ? 'Auction' :
-                           source === 'exchange' ? 'Exchange' :
-                           source === 'event' ? 'Event' :
-                           source === 'daily' ? 'Daily Dungeon' : source;
-              return (
-                <span
-                  key={source}
-                  className={`px-1 py-0.5 text-xs rounded ${colorClass} ${available ? '' : 'opacity-50'}`}
-                  title={`${title}${available ? '' : ' (not currently available)'}`}
-                >
-                  {label}
-                </span>
-              );
-            })}
-          </div>
-        );
-      },
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        const cardSources = row.original.acquisition?.sources || [];
-        if (cardSources.length === 0) return false;
-        // Show card if it has ANY of the selected sources (OR logic)
-        return filterValue.some(f => cardSources.includes(f as AcquisitionSource));
-      },
-    },
-    {
-      id: 'bonds',
-      accessorFn: (row) => row.bonds?.[0]?.type || '',
-      header: 'Bond',
-      size: 70,
-      cell: ({ row }) => {
-        const bonds = row.original.bonds || [];
-        if (bonds.length === 0) return <span className="text-secondary text-sm">-</span>;
-        const bondType = bonds[0]?.type || '-';
-        const colorClass = bondType === 'Attack' ? 'text-red-600 dark:text-red-400' :
-                          bondType === 'Skill' ? 'text-blue-600 dark:text-blue-400' :
-                          bondType === 'HP' ? 'text-green-600 dark:text-green-400' : '';
-        return <span className={`text-sm font-medium ${colorClass}`}>{bondType}</span>;
-      },
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        const bonds = row.original.bonds || [];
-        if (bonds.length === 0) return false;
-        // Check if any of the card's bond types match the filter
-        return bonds.some(bond => filterValue.includes(bond.type));
-      },
-    },
-    {
-      id: 'skillTags',
-      accessorFn: (row) => row.skill?.tags || [],
-      header: 'Skill Tags',
-      size: 0,
-      enableSorting: false,
-      meta: { hidden: true },
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        const tags = row.original.skill?.tags || [];
-        if (tags.length === 0) return false;
-        // Check if ALL selected filter tags are present in the card's skill tags
-        return filterValue.every(f => tags.includes(f));
-      },
-    },
-    {
-      id: 'abilityTags',
-      accessorFn: (row) => {
-        const allTags: string[] = [];
-        row.abilities?.forEach(a => {
-          if (a.tags) allTags.push(...a.tags);
-        });
-        return allTags;
-      },
-      header: 'Ability Tags',
-      size: 0,
-      enableSorting: false,
-      meta: { hidden: true },
-      filterFn: (row, _columnId, filterValue: string[]) => {
-        if (!filterValue || filterValue.length === 0) return true;
-        const abilities = row.original.abilities || [];
-        if (abilities.length === 0) return false;
-        // Check if ANY single ability has ALL the selected filter tags
-        return abilities.some(ability => {
-          const tags = ability.tags || [];
-          return filterValue.every(f => tags.includes(f));
-        });
-      },
-    },
-    {
-      id: 'playable',
-      accessorFn: (row) => row.playable,
-      header: 'Playable',
-      size: 0,
-      enableSorting: false,
-      meta: { hidden: true },
-      filterFn: (row, _columnId, filterValue: boolean) => {
-        // When filter is true, only show playable cards
-        if (filterValue === true) {
-          return row.original.playable === true;
-        }
-        // When filter is false/undefined, show all cards
-        return true;
-      },
-    },
-    {
-      id: 'available',
-      accessorFn: (row) => row.acquisition?.currently_available || false,
-      header: 'Available',
-      size: 0,
-      enableSorting: false,
-      meta: { hidden: true },
-      filterFn: (row, _columnId, filterValue: boolean) => {
-        // When filter is true, only show currently available cards
-        if (filterValue === true) {
-          return row.original.acquisition?.currently_available === true;
-        }
-        return true;
-      },
-    },
-    {
-      id: 'skill',
-      accessorFn: (row) => row.skill?.description || '',
-      header: 'Skill',
-      size: 300,
-      cell: ({ row }) => {
-        const skill = row.original.skill;
-        if (!skill) return <span className="text-secondary text-sm">-</span>;
-        // Note: skill.description is pre-calculated in cards_index.json, so skillData is not needed
-        const formattedDesc = formatSkillDescription(skill.description, null, row.original.stats.rarity);
-        return (
-          <span
-            className="text-sm block max-w-[300px] leading-snug"
-            title={skill.name}
-            dangerouslySetInnerHTML={{ __html: formattedDesc }}
-          />
-        );
-      },
-    },
-    {
-      id: 'ability1',
-      accessorFn: (row) => row.abilities?.[0]?.description || '',
-      header: 'Ability 1',
-      size: 200,
-      cell: ({ row }) => {
-        const ability = row.original.abilities?.[0];
-        if (!ability) return <span className="text-secondary text-sm">-</span>;
-        return (
-          <span className="text-sm block max-w-[200px] leading-snug" title={ability.name}>
-            {ability.description}
-          </span>
-        );
-      },
-    },
-    {
-      id: 'ability2',
-      accessorFn: (row) => row.abilities?.[1]?.description || '',
-      header: 'Ability 2',
-      size: 200,
-      cell: ({ row }) => {
-        const ability = row.original.abilities?.[1];
-        if (!ability) return <span className="text-secondary text-sm">-</span>;
-        return (
-          <span className="text-sm block max-w-[200px] leading-snug" title={ability.name}>
-            {ability.description}
-          </span>
-        );
-      },
-    },
-    {
-      id: 'max_atk',
-      accessorFn: (row) => row.stats.max_atk,
-      header: 'ATK',
-      size: 70,
-      meta: { hideOnSmall: true },
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
-      ),
-    },
-    {
-      id: 'max_hp',
-      accessorFn: (row) => row.stats.max_hp,
-      header: 'HP',
-      size: 70,
-      meta: { hideOnSmall: true },
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
-      ),
-    },
-    {
-      id: 'speed',
-      accessorFn: (row) => row.stats.speed,
-      header: 'SPD',
-      size: 60,
-      meta: { hideOnSmall: true },
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
-      ),
-    },
-  ], [locale, tierData]);
+  // Column definitions (extracted to cardTableColumns.tsx)
+  const columns = useMemo(
+    () => getCardTableColumns({ getCardUrl, locale }),
+    [getCardUrl, locale]
+  );
 
   // Create table instance
   const table = useReactTable({
@@ -1224,28 +717,6 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
       </div>
 
-      {/* Tier data loading/error notice */}
-      {tierLoading && (
-        <div className="flex items-center gap-2 text-sm text-secondary">
-          <div className="w-4 h-4 border-2 border-current border-t-transparent rounded-full animate-spin" />
-          <span>Loading tier data...</span>
-        </div>
-      )}
-      {tierError && !tierLoading && (
-        <div className="flex items-center gap-2 text-sm text-yellow-600 dark:text-yellow-400">
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-          </svg>
-          <span>Tier data unavailable</span>
-          <button
-            onClick={loadTierData}
-            className="underline hover:no-underline"
-          >
-            Retry
-          </button>
-        </div>
-      )}
-
       {/* Results count and actions */}
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
         <div aria-live="polite" aria-atomic="true">
@@ -1354,110 +825,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </table>
       </div>
 
-      {/* Mobile Empty State */}
-      {table.getRowModel().rows.length === 0 && (
-        <div className="md:hidden text-center py-8">
-          <div className="text-secondary">
-            <p className="text-lg font-medium">No cards found</p>
-            <p className="text-sm mt-1">Try adjusting your search or filters</p>
-          </div>
-        </div>
-      )}
-
-      {/* Extra-Small Mobile (360-480px) - Minimal: Image + Name only */}
-      <div className="xs:hidden md:hidden grid grid-cols-1 gap-2">
-        {table.getRowModel().rows.map(row => {
-          const card = row.original;
-          const imgUrl = getThumbnailUrl(card);
-          return (
-            <div key={row.id} className="card-grid-item flex items-center gap-3 py-2">
-              <a href={getCardUrl(card.id)} className="flex-shrink-0">
-                <img
-                  src={imgUrl || PLACEHOLDER_IMAGE}
-                  alt={card.name || `Card #${card.id}`}
-                  className="w-10 h-10 rounded object-cover"
-                  loading="lazy"
-                />
-              </a>
-              <a href={getCardUrl(card.id)} className="flex-1 min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</span>
-                  {!card.playable && (
-                    <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
-                  )}
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <AttributeIcon value={card.stats.attribute_name} size="sm" />
-                  <TypeIcon value={card.stats.type_name} size="sm" />
-                  <RarityStars value={card.stats.rarity} size="sm" />
-                </div>
-              </a>
-              <button
-                onClick={() => setMobilePreviewCard(card)}
-                className="p-2 rounded-full flex-shrink-0 touch-target"
-                style={{ backgroundColor: 'var(--color-surface)' }}
-                aria-label="Preview card"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </button>
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Small-Medium Mobile (480-768px) - More detail */}
-      <div className="hidden xs:grid md:hidden grid-cols-1 gap-3">
-        {table.getRowModel().rows.map(row => {
-          const card = row.original;
-          const imgUrl = getThumbnailUrl(card);
-          return (
-            <div key={row.id} className="card-grid-item flex items-center gap-3">
-              <a href={getCardUrl(card.id)} className="flex-shrink-0">
-                <img
-                  src={imgUrl || PLACEHOLDER_IMAGE}
-                  alt={card.name || `Card #${card.id}`}
-                  className="w-12 h-12 rounded object-cover"
-                  loading="lazy"
-                />
-              </a>
-              <a href={getCardUrl(card.id)} className="flex-1 min-w-0">
-                <div className="flex items-center gap-1.5">
-                  <span className="font-medium truncate">{card.name || `Card #${card.id}`}</span>
-                  {!card.playable && (
-                    <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
-                  )}
-                </div>
-                <div className="flex items-center gap-2 text-sm">
-                  <AttributeIcon value={card.stats.attribute_name} size="sm" />
-                  <TypeIcon value={card.stats.type_name} size="sm" />
-                  <RarityStars value={card.stats.rarity} size="sm" />
-                </div>
-                {card.skill && (
-                  <div className="text-xs text-secondary truncate">{card.skill.name}</div>
-                )}
-              </a>
-              <div className="text-right text-sm mr-2">
-                <div>ATK: {formatNumber(card.stats.max_atk)}</div>
-                <div className="text-secondary">HP: {formatNumber(card.stats.max_hp)}</div>
-              </div>
-              <button
-                onClick={() => setMobilePreviewCard(card)}
-                className="p-2 rounded-full flex-shrink-0 touch-target"
-                style={{ backgroundColor: 'var(--color-surface)' }}
-                aria-label="Preview card"
-              >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </button>
-            </div>
-          );
-        })}
-      </div>
+      {/* Mobile Card Grid */}
+      <MobileCardGrid
+        rows={table.getRowModel().rows}
+        getCardUrl={getCardUrl}
+        onPreviewCard={setMobilePreviewCard}
+      />
 
       {/* Pagination */}
       <div className="flex items-center justify-between">
@@ -1519,7 +892,6 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <CardPreviewContent
                 card={mobilePreviewCard}
                 skills={{}}
-                tierData={tierData?.[mobilePreviewCard.id]}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}

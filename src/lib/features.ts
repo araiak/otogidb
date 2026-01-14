@@ -3,7 +3,7 @@
  * Dev-only features are only enabled in development environments.
  */
 
-export type FeatureFlag = 'tierListPage' | 'experimentalFilters' | 'bugNotices';
+export type FeatureFlag = 'experimentalFilters' | 'bugNotices';
 
 interface FeatureConfig {
   enabled: boolean;
@@ -12,7 +12,6 @@ interface FeatureConfig {
 }
 
 const FEATURES: Record<FeatureFlag, FeatureConfig> = {
-  tierListPage: { enabled: false }, // Disabled - tier lists hidden from UI
   experimentalFilters: { enabled: false, devOnly: true },
   bugNotices: { enabled: true, devOnly: true }, // Show data/description mismatch warnings on card pages (dev only)
 };

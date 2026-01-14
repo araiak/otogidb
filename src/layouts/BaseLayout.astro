@@ -31,7 +31,6 @@ interface DataManifestFile {
 interface DataManifest {
   generated_at: string;
   files: Record<string, DataManifestFile>;
-  // tiers?: DataManifestTiers;  // Tier list disabled
 }
 
 let dataManifest: DataManifest | null = null;
@@ -69,7 +68,6 @@ const dataVersion = `${cardsData.version || 'unknown'}-${contentHash}`;
 // Build data paths object for client-side use
 const dataPaths = {
   ...dataManifest?.files || {},
-  // tiers: dataManifest?.tiers || null,  // Tier list disabled
 };
 
 // Detect current locale from URL path
@@ -108,7 +106,6 @@ const navLinks = {
   home: localePrefix,
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
-  // tiers: `${localePrefix}/tiers`,  // Disabled - page exists but not linked in navigation
 };
 ---
 

@@ -4,49 +4,9 @@ import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import type { SupportedLocale } from '../../lib/i18n';
 
-// Tier data type (subset of what's in tiers.json)
-interface TierCardData {
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;  // Not part of overall - measures passive ability value in reserve slot
-  };
-  reserve_breakdown?: {
-    five_round: { percentile: number; tier: string };
-    one_round: { percentile: number; tier: string };
-    defense: { percentile: number; tier: string };
-  } | null;
-}
-
-// Helper to get tier color
-function getTierColor(tier: string): string {
-  switch (tier) {
-    case 'S+': return '#FF6B6B';
-    case 'S': return '#FFD700';
-    case 'A': return '#C0C0C0';
-    case 'B': return '#CD7F32';
-    case 'C': return '#808080';
-    case 'D': return '#404040';
-    default: return '#606060';
-  }
-}
-
 interface CardPreviewContentProps {
   card: Card;
   skills?: Record<string, any>;
-  /** Tier data for this card (optional) */
-  tierData?: TierCardData | null;
   /** Compact mode uses smaller text and 4-column stats */
   compact?: boolean;
   /** Show "View Full Details" link at bottom */
@@ -64,7 +24,6 @@ interface CardPreviewContentProps {
 export default function CardPreviewContent({
   card,
   skills = {},
-  tierData = null,
   compact = true,
   showDetailsLink = false,
   locale = 'en',

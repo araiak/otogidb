@@ -6,37 +6,11 @@ import { useCardHover } from './useCardHover';
 import CardPreviewContent from './CardPreviewContent';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 
-// Tier data type (must match TierCardData in CardPreviewContent)
-interface TierCardData {
-  percentiles: {
-    five_round: number;
-    one_round: number;
-    defense: number;
-    individual: number;
-    overall: number;
-    reserve: number;
-  };
-  tiers: {
-    five_round: string;
-    one_round: string;
-    defense: string;
-    individual: string;
-    overall: string;
-    reserve: string;  // Not part of overall - measures passive ability value in reserve slot
-  };
-}
-
-interface TierData {
-  cards: Record<string, TierCardData>;
-}
-
 interface CardHoverProviderProps {
   /** Card data lookup by ID */
   cards: Record<string, Card>;
   /** Skill data for formatting descriptions */
   skills?: Record<string, any>;
-  /** Tier data for all cards (optional) */
-  tiers?: TierData | null;
   /** CSS selector for elements with data-card-id attribute */
   selector?: string;
   /** Floating popup placement */
@@ -74,7 +48,6 @@ interface CardHoverProviderProps {
 export default function CardHoverProvider({
   cards,
   skills = {},
-  tiers = null,
   selector = '[data-card-id]',
   placement = 'top',
   offsetDistance = 8,
@@ -131,7 +104,6 @@ export default function CardHoverProvider({
             <CardPreviewContent
               card={activeCard}
               skills={skills}
-              tierData={tiers?.cards[activeCard.id] || null}
               compact={compact}
               locale={locale}
             />
@@ -176,7 +148,6 @@ export default function CardHoverProvider({
               <CardPreviewContent
                 card={mobilePreviewCard}
                 skills={skills}
-                tierData={tiers?.cards[mobilePreviewCard.id] || null}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}
@@ -198,7 +169,6 @@ export function CardFloatingPopup({
   isOpen,
   referenceElement,
   skills = {},
-  tierData = null,
   placement = 'right-start',
   compact = true,
   locale = 'en',
@@ -207,7 +177,6 @@ export function CardFloatingPopup({
   isOpen: boolean;
   referenceElement: HTMLElement | null;
   skills?: Record<string, any>;
-  tierData?: TierCardData | null;
   placement?: Placement;
   compact?: boolean;
   locale?: SupportedLocale;
@@ -235,7 +204,6 @@ export function CardFloatingPopup({
         <CardPreviewContent
           card={card}
           skills={skills}
-          tierData={tierData}
           compact={compact}
           locale={locale}
         />

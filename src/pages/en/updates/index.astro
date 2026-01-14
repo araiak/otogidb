@@ -6,11 +6,9 @@ import type { CardsData } from '../../../types/card';
 // Import full cards, skills, and tier data for hover popups
 import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
-import tiersDataRaw from '../../../data/tiers.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
-const tiersData = tiersDataRaw as any;
 
 // Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
 interface CardIndexEntry {
@@ -378,6 +376,6 @@ function renderStars(rarity: number): string {
     )}
 
     <!-- Card hover popups with mobile modal support -->
-    <CardPopups client:load cards={cardsData.cards} skills={skillsData} tiers={tiersData} />
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
   </div>
 </BaseLayout>
