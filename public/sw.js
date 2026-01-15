@@ -11,7 +11,7 @@ const CACHE_NAME = 'otogidb-images-v1';
 const CLOUDINARY_HOST = 'res.cloudinary.com';
 
 // Install: Skip waiting to activate immediately
-self.addEventListener('install', (event) => {
+self.addEventListener('install', () => {
   self.skipWaiting();
 });
 

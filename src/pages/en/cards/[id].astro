@@ -730,36 +730,6 @@ const jsonLd = {
 
               {/* Auction */}
               {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
-                // Stock level colors, labels, and tooltip descriptions
-                // Data updates daily; reflects auction activity within noted timeframes
-                const stockInfo = {
-                  high: {
-                    bg: 'bg-green-500/20',
-                    text: 'text-green-700 dark:text-green-400',
-                    label: 'Commonly Available',
-                    tooltip: 'Many copies listed within the last 24 hours'
-                  },
-                  medium: {
-                    bg: 'bg-yellow-500/20',
-                    text: 'text-yellow-700 dark:text-yellow-400',
-                    label: 'Available',
-                    tooltip: 'Some copies listed within the last 24 hours'
-                  },
-                  low: {
-                    bg: 'bg-orange-500/20',
-                    text: 'text-orange-700 dark:text-orange-400',
-                    label: 'Rarely Listed',
-                    tooltip: 'Listed within the last week - may not be currently available'
-                  },
-                  unavailable: {
-                    bg: 'bg-gray-500/20',
-                    text: 'text-gray-500 dark:text-gray-400',
-                    label: 'Not Listed',
-                    tooltip: 'Not seen in the auction house in over a week'
-                  },
-                } as const;
-                const stockStyle = stockInfo[stockLevel];
-
                 // Get auction estimate if available
                 const auctionEstimate = card.acquisition.auction.estimate;
 

@@ -33,8 +33,6 @@ const milestoneData = milestones.map(lv => {
   return { level: lv, totalXp, xpToNext: entry.xp, hp: entry.hp, friend: entry.friend };
 });
 
-// Pagination for full table - show first 100 levels, rest loaded client-side
-const initialLevels = levels.slice(0, 100);
 ---
 
 <BaseLayout title="Player Level Data" description="Otogi Spirit Agents player level requirements - XP, HP/Stamina, and Friend slots by level">
