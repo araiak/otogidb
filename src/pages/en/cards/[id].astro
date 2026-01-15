@@ -155,6 +155,29 @@ const similarCards = precomputedSimilar.map(entry => ({
 
 // Get tier data for this card (if available)
 
+// Compute reverse special bonds: which cards have special bonds targeting THIS card
+interface ReverseBond {
+  fromCardId: string;
+  fromCardName: string;
+  bondType: string;
+  bonusPercent: number;
+}
+const receivesSpecialBondsFrom: ReverseBond[] = [];
+for (const [otherId, otherCard] of Object.entries(cardsData.cards)) {
+  if (!otherCard || otherId === card.id) continue;
+  const bonds = (otherCard as Card).bonds || [];
+  for (const bond of bonds) {
+    if (bond.target_id === card.id) {
+      receivesSpecialBondsFrom.push({
+        fromCardId: otherId,
+        fromCardName: (otherCard as Card).name,
+        bondType: bond.type,
+        bonusPercent: bond.bonus_percent,
+      });
+    }
+  }
+}
+
 // Get live auction data for this card (if tracked)
 const cardAuctionData = auctionsData.cards?.[card.id] || null;
 
@@ -620,6 +643,36 @@ const jsonLd = {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        )}
+
+        <!-- Receives Special Bonds From -->
+        {receivesSpecialBondsFrom.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Receives Special Bond From</h2>
+            <div class="space-y-2 sm:space-y-3">
+              {receivesSpecialBondsFrom.map(bond => (
+                <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 min-w-0 flex-wrap">
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                          style={`background-color: var(--color-${bond.bondType === 'Attack' || bond.bondType === 'Skill' ? 'error' : bond.bondType === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}
+                          title={bond.bondType === 'Attack' ? 'Boosts ATK stat when bonded' : bond.bondType === 'Skill' ? 'Boosts Skill DMG when bonded' : bond.bondType === 'HP' ? 'Boosts HP stat when bonded' : 'Bond stat boost'}>
+                      {bond.bondType}
+                    </span>
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
+                          style="background-color: var(--color-highlight); color: var(--color-bg);">
+                      Special
+                    </span>
+                    <a href={`/en/cards/${bond.fromCardId}`} data-card-id={bond.fromCardId} class="text-xs sm:text-sm truncate link">
+                      {bond.fromCardName}
+                    </a>
+                  </div>
+                  <div class="text-sm sm:text-base font-bold font-mono flex-shrink-0" style="color: var(--color-accent);">
+                    +{bond.bonusPercent}%
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         )}
