@@ -7,6 +7,7 @@ import { getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 import AuctionStockBadge from '../../../components/cards/AuctionStockBadge';
+import AuctionEstimate from '../../../components/cards/AuctionEstimate';
 import AvailabilityBadge from '../../../components/cards/AvailabilityBadge';
 
 // Import cards, skills, card mentions, similar cards, tier data, and auction data at build time
@@ -153,6 +154,30 @@ const similarCards = precomputedSimilar.map(entry => ({
 })).filter(item => item.card);  // Filter out any missing cards
 
 // Get tier data for this card (if available)
+
+// Compute reverse special bonds: which cards have special bonds targeting THIS card
+interface ReverseBond {
+  fromCardId: string;
+  fromCardName: string;
+  bondType: string;
+  bonusPercent: number;
+}
+const receivesSpecialBondsFrom: ReverseBond[] = [];
+for (const [otherId, otherCard] of Object.entries(cardsData.cards)) {
+  if (!otherCard || otherId === card.id) continue;
+  const typedCard = otherCard as Card;
+  const bonds = typedCard.bonds || [];
+  for (const bond of bonds) {
+    if (bond.target_id === card.id) {
+      receivesSpecialBondsFrom.push({
+        fromCardId: otherId,
+        fromCardName: typedCard.name || 'Unknown',
+        bondType: bond.type,
+        bonusPercent: bond.bonus_percent,
+      });
+    }
+  }
+}
 
 // Get live auction data for this card (if tracked)
 const cardAuctionData = auctionsData.cards?.[card.id] || null;
@@ -623,6 +648,36 @@ const jsonLd = {
           </div>
         )}
 
+        <!-- Receives Special Bonds From -->
+        {receivesSpecialBondsFrom.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Receives Special Bond From</h2>
+            <div class="space-y-2 sm:space-y-3">
+              {receivesSpecialBondsFrom.map(bond => (
+                <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 min-w-0 flex-wrap">
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                          style={`background-color: var(--color-${bond.bondType === 'Attack' || bond.bondType === 'Skill' ? 'error' : bond.bondType === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}
+                          title={bond.bondType === 'Attack' ? 'Boosts ATK stat when bonded' : bond.bondType === 'Skill' ? 'Boosts Skill DMG when bonded' : bond.bondType === 'HP' ? 'Boosts HP stat when bonded' : 'Bond stat boost'}>
+                      {bond.bondType}
+                    </span>
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
+                          style="background-color: var(--color-highlight); color: var(--color-bg);">
+                      Special
+                    </span>
+                    <a href={`/en/cards/${bond.fromCardId}`} data-card-id={bond.fromCardId} class="text-xs sm:text-sm truncate link">
+                      {bond.fromCardName}
+                    </a>
+                  </div>
+                  <div class="text-sm sm:text-base font-bold font-mono flex-shrink-0" style="color: var(--color-accent);">
+                    +{bond.bonusPercent}%
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         <!-- Availability -->
         {card.acquisition && card.acquisition.sources.length > 0 && (
           <div class="card p-3 sm:p-4">
@@ -723,21 +778,16 @@ const jsonLd = {
                         initialStockLevel={stockLevel}
                       />
                     </div>
-                    {/* Auction Estimate */}
+                    {/* Auction Estimate - client component checks R2 for live auction data */}
                     {auctionEstimate && (
-                      <div class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex items-start gap-1.5">
-                          <span class="text-xs text-secondary flex-shrink-0">Estimated Auction:</span>
-                          <div class="flex-1">
-                            <div class="text-xs font-medium text-blue-700 dark:text-blue-400">
-                              ~{formatDate(auctionEstimate.estimated_date)}
-                            </div>
-                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
-                              Based on {auctionEstimate.event_name} event pattern
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <AuctionEstimate
+                        client:load
+                        cardId={card.id}
+                        estimatedDate={formatDate(auctionEstimate.estimated_date)}
+                        eventName={auctionEstimate.event_name}
+                        note={auctionEstimate.note}
+                        hasAuctionData={!!cardAuctionData}
+                      />
                     )}
                   </div>
                 );

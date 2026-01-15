@@ -1,0 +1,419 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+// Load the user exp levels data
+import userExpLevels from '../../../data/user_exp_levels.json';
+
+const levels = userExpLevels.levels;
+const maxLevel = levels.length;
+
+// Note: The 'xp' field is the XP needed to level up FROM that level (not cumulative)
+// So level 1 xp=15 means you need 15 XP to go from level 1 to level 2
+
+// Calculate cumulative XP for each level (total XP to reach that level)
+// To reach level N, you need sum of xp[0] through xp[N-2]
+const cumulativeXp: number[] = [0]; // Level 1 requires 0 XP to reach
+let runningTotal = 0;
+for (let i = 0; i < levels.length - 1; i++) {
+  runningTotal += levels[i].xp;
+  cumulativeXp.push(runningTotal);
+}
+
+// Calculate some summary stats
+const totalXpToMax = cumulativeXp[cumulativeXp.length - 1];
+const maxHp = levels[levels.length - 1].hp;
+const maxFriends = levels[levels.length - 1].friend;
+
+// Key milestones for the summary table
+const milestones = [1, 10, 25, 50, 100, 200, 500, 1000, 2000, 5000, 8000];
+const milestoneData = milestones.map(lv => {
+  const entry = levels[lv - 1];
+  const totalXp = cumulativeXp[lv - 1];
+  // xp field is already "XP to next level"
+  return { level: lv, totalXp, xpToNext: entry.xp, hp: entry.hp, friend: entry.friend };
+});
+
+// Pagination for full table - show first 100 levels, rest loaded client-side
+const initialLevels = levels.slice(0, 100);
+---
+
+<BaseLayout title="Player Level Data" description="Otogi Spirit Agents player level requirements - XP, HP/Stamina, and Friend slots by level">
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">Player Level Data</h1>
+      <p class="text-secondary">Complete XP requirements, HP/Stamina values, and Friend slot progression for all {maxLevel.toLocaleString()} player levels.</p>
+    </div>
+
+    <!-- Summary Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div class="card p-4 text-center">
+        <div class="text-3xl font-bold" style="color: var(--color-accent);">{maxLevel.toLocaleString()}</div>
+        <div class="text-sm text-secondary">Max Level</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl font-bold" style="color: rgb(234, 179, 8);">{totalXpToMax.toLocaleString()}</div>
+        <div class="text-sm text-secondary">Total XP to Max</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl font-bold" style="color: rgb(34, 197, 94);">{maxHp.toLocaleString()}</div>
+        <div class="text-sm text-secondary">Max HP/Stamina</div>
+      </div>
+      <div class="card p-4 text-center">
+        <div class="text-3xl font-bold" style="color: rgb(59, 130, 246);">{maxFriends}</div>
+        <div class="text-sm text-secondary">Max Friend Slots</div>
+      </div>
+    </div>
+
+    <!-- Level Calculator -->
+    <div class="card p-6 mb-8">
+      <h2 class="text-xl font-bold mb-4">Level Calculator</h2>
+      <div class="flex flex-col md:flex-row gap-4 items-start md:items-end">
+        <div class="flex-1 max-w-xs">
+          <label for="level-input" class="block text-sm font-medium mb-2">Enter Level (1-{maxLevel.toLocaleString()})</label>
+          <input
+            type="number"
+            id="level-input"
+            min="1"
+            max={maxLevel}
+            value="1"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
+            style="background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
+          />
+        </div>
+        <button
+          id="lookup-btn"
+          class="btn-primary px-6 py-2 rounded-lg font-medium"
+        >
+          Look Up
+        </button>
+      </div>
+
+      <!-- Calculator Results -->
+      <div id="calc-results" class="mt-6 hidden">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+            <div class="text-sm text-secondary mb-1">Total XP to Reach Level</div>
+            <div class="text-2xl font-bold" id="result-xp-total" style="color: rgb(234, 179, 8);">-</div>
+            <div class="text-xs text-secondary mt-1">Cumulative from level 1</div>
+          </div>
+          <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+            <div class="text-sm text-secondary mb-1">XP to Next Level</div>
+            <div class="text-2xl font-bold" id="result-xp-next" style="color: rgb(251, 146, 60);">-</div>
+            <div class="text-xs text-secondary mt-1" id="result-xp-next-info"></div>
+          </div>
+          <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+            <div class="text-sm text-secondary mb-1">HP / Stamina</div>
+            <div class="text-2xl font-bold" id="result-hp" style="color: rgb(34, 197, 94);">-</div>
+            <div class="text-xs text-secondary mt-1" id="result-hp-delta"></div>
+          </div>
+          <div class="p-4 rounded-lg" style="background-color: var(--color-surface);">
+            <div class="text-sm text-secondary mb-1">Friend Slots</div>
+            <div class="text-2xl font-bold" id="result-friends" style="color: rgb(59, 130, 246);">-</div>
+            <div class="text-xs text-secondary mt-1" id="result-friends-delta"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Level Range Calculator -->
+    <div class="card p-6 mb-8">
+      <h2 class="text-xl font-bold mb-4">XP Between Levels</h2>
+      <p class="text-secondary text-sm mb-4">Calculate total XP needed to go from one level to another.</p>
+      <div class="flex flex-col md:flex-row gap-4 items-start md:items-end">
+        <div class="flex-1 max-w-xs">
+          <label for="from-level" class="block text-sm font-medium mb-2">From Level</label>
+          <input
+            type="number"
+            id="from-level"
+            min="1"
+            max={maxLevel - 1}
+            value="1"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
+            style="background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
+          />
+        </div>
+        <div class="flex-1 max-w-xs">
+          <label for="to-level" class="block text-sm font-medium mb-2">To Level</label>
+          <input
+            type="number"
+            id="to-level"
+            min="2"
+            max={maxLevel}
+            value="100"
+            class="w-full px-4 py-2 rounded-lg border focus:outline-none focus:ring-2"
+            style="background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
+          />
+        </div>
+        <button
+          id="range-btn"
+          class="btn-primary px-6 py-2 rounded-lg font-medium"
+        >
+          Calculate
+        </button>
+      </div>
+      <div id="range-result" class="mt-4 p-4 rounded-lg hidden" style="background-color: var(--color-surface);">
+        <div class="text-sm text-secondary mb-1">Total XP Needed</div>
+        <div class="text-2xl font-bold" id="range-xp" style="color: rgb(234, 179, 8);">-</div>
+      </div>
+    </div>
+
+    <!-- Key Milestones Table -->
+    <div class="card p-6 mb-8">
+      <h2 class="text-xl font-bold mb-4">Key Milestones</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <th class="text-left py-3 px-4 font-medium">Level</th>
+              <th class="text-right py-3 px-4 font-medium">Total XP</th>
+              <th class="text-right py-3 px-4 font-medium">XP to Next</th>
+              <th class="text-right py-3 px-4 font-medium">HP/Stamina</th>
+              <th class="text-right py-3 px-4 font-medium">Friend Slots</th>
+            </tr>
+          </thead>
+          <tbody>
+            {milestoneData.map((row, i) => (
+              <tr style={`border-bottom: 1px solid var(--color-border); ${i % 2 === 0 ? 'background-color: var(--color-surface);' : ''}`}>
+                <td class="py-3 px-4 font-medium">{row.level.toLocaleString()}</td>
+                <td class="py-3 px-4 text-right" style="color: rgb(234, 179, 8);">{row.totalXp.toLocaleString()}</td>
+                <td class="py-3 px-4 text-right" style="color: rgb(251, 146, 60);">{row.xpToNext !== null ? row.xpToNext.toLocaleString() : '-'}</td>
+                <td class="py-3 px-4 text-right" style="color: rgb(34, 197, 94);">{row.hp.toLocaleString()}</td>
+                <td class="py-3 px-4 text-right" style="color: rgb(59, 130, 246);">{row.friend}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Full Data Table (paginated) -->
+    <div class="card p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-4">
+        <h2 class="text-xl font-bold">Full Level Data</h2>
+        <div class="flex items-center gap-2">
+          <label for="page-size" class="text-sm text-secondary">Show:</label>
+          <select
+            id="page-size"
+            class="px-3 py-1 rounded border text-sm"
+            style="background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
+          >
+            <option value="50">50</option>
+            <option value="100" selected>100</option>
+            <option value="500">500</option>
+            <option value="1000">1000</option>
+          </select>
+          <span class="text-sm text-secondary">levels</span>
+        </div>
+      </div>
+
+      <!-- Pagination Controls -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+        <div class="flex items-center gap-2">
+          <button id="prev-page" class="btn-secondary px-3 py-1 rounded text-sm" disabled>Previous</button>
+          <span id="page-info" class="text-sm text-secondary">Page 1 of 80</span>
+          <button id="next-page" class="btn-secondary px-3 py-1 rounded text-sm">Next</button>
+        </div>
+        <div class="flex items-center gap-2">
+          <label for="jump-page" class="text-sm text-secondary">Jump to page:</label>
+          <input
+            type="number"
+            id="jump-page"
+            min="1"
+            value="1"
+            class="w-16 px-2 py-1 rounded border text-sm text-center"
+            style="background-color: var(--color-surface); border-color: var(--color-border); color: var(--color-text);"
+          />
+        </div>
+      </div>
+
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" id="full-table">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--color-border);">
+              <th class="text-left py-3 px-4 font-medium">Level</th>
+              <th class="text-right py-3 px-4 font-medium">Total XP</th>
+              <th class="text-right py-3 px-4 font-medium">XP to Next</th>
+              <th class="text-right py-3 px-4 font-medium">HP/Stamina</th>
+              <th class="text-right py-3 px-4 font-medium">Friend Slots</th>
+            </tr>
+          </thead>
+          <tbody id="table-body">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Bottom Pagination -->
+      <div class="flex items-center justify-center gap-2 mt-4">
+        <button id="prev-page-bottom" class="btn-secondary px-3 py-1 rounded text-sm" disabled>Previous</button>
+        <span id="page-info-bottom" class="text-sm text-secondary">Page 1 of 80</span>
+        <button id="next-page-bottom" class="btn-secondary px-3 py-1 rounded text-sm">Next</button>
+      </div>
+    </div>
+
+    <!-- Data Source -->
+    <div class="mt-6 text-center text-sm text-secondary">
+      Data extracted from game config version: {userExpLevels.source}
+    </div>
+  </div>
+
+  <!-- Client-side JavaScript for interactivity -->
+  <script define:vars={{ levels, maxLevel, cumulativeXp }}>
+    // Store levels data for client-side use
+    // Note: xp field = XP needed to level up FROM that level (not cumulative)
+    const levelData = levels;
+    const maxLevelNum = maxLevel;
+    const cumXp = cumulativeXp; // Total XP to reach each level
+
+    // Level lookup calculator
+    const levelInput = document.getElementById('level-input');
+    const lookupBtn = document.getElementById('lookup-btn');
+    const calcResults = document.getElementById('calc-results');
+
+    function lookupLevel() {
+      const level = parseInt(levelInput.value);
+      if (level < 1 || level > maxLevelNum || isNaN(level)) {
+        alert(`Please enter a level between 1 and ${maxLevelNum.toLocaleString()}`);
+        return;
+      }
+
+      const entry = levelData[level - 1];
+      const prevEntry = level > 1 ? levelData[level - 2] : null;
+
+      // Total XP to reach this level (cumulative)
+      document.getElementById('result-xp-total').textContent = cumXp[level - 1].toLocaleString();
+
+      // XP needed to reach NEXT level (this is the xp field itself)
+      if (level < maxLevelNum) {
+        document.getElementById('result-xp-next').textContent = entry.xp.toLocaleString();
+        document.getElementById('result-xp-next-info').textContent = `To reach level ${level + 1}`;
+      } else {
+        document.getElementById('result-xp-next').textContent = 'Max Level';
+        document.getElementById('result-xp-next-info').textContent = 'You\'ve reached the cap!';
+      }
+
+      document.getElementById('result-hp').textContent = entry.hp.toLocaleString();
+      document.getElementById('result-friends').textContent = entry.friend;
+
+      // Show deltas from previous level
+      if (prevEntry) {
+        const hpDelta = entry.hp - prevEntry.hp;
+        const friendDelta = entry.friend - prevEntry.friend;
+        document.getElementById('result-hp-delta').textContent = hpDelta > 0 ? `+${hpDelta} from previous` : 'Same as previous';
+        document.getElementById('result-friends-delta').textContent = friendDelta > 0 ? `+${friendDelta} from previous` : 'Same as previous';
+      } else {
+        document.getElementById('result-hp-delta').textContent = 'Starting level';
+        document.getElementById('result-friends-delta').textContent = 'Starting level';
+      }
+
+      calcResults.classList.remove('hidden');
+    }
+
+    lookupBtn.addEventListener('click', lookupLevel);
+    levelInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') lookupLevel();
+    });
+
+    // Range calculator
+    const fromLevel = document.getElementById('from-level');
+    const toLevel = document.getElementById('to-level');
+    const rangeBtn = document.getElementById('range-btn');
+    const rangeResult = document.getElementById('range-result');
+
+    function calculateRange() {
+      const from = parseInt(fromLevel.value);
+      const to = parseInt(toLevel.value);
+
+      if (from < 1 || from >= maxLevelNum || to <= from || to > maxLevelNum || isNaN(from) || isNaN(to)) {
+        alert('Please enter valid level range');
+        return;
+      }
+
+      // XP needed = cumulative XP to reach 'to' - cumulative XP to reach 'from'
+      const totalXp = cumXp[to - 1] - cumXp[from - 1];
+
+      document.getElementById('range-xp').textContent = totalXp.toLocaleString() + ' XP';
+      rangeResult.classList.remove('hidden');
+    }
+
+    rangeBtn.addEventListener('click', calculateRange);
+
+    // Full table pagination
+    let currentPage = 1;
+    let pageSize = 100;
+
+    const tableBody = document.getElementById('table-body');
+    const pageSizeSelect = document.getElementById('page-size');
+    const prevBtn = document.getElementById('prev-page');
+    const nextBtn = document.getElementById('next-page');
+    const prevBtnBottom = document.getElementById('prev-page-bottom');
+    const nextBtnBottom = document.getElementById('next-page-bottom');
+    const pageInfo = document.getElementById('page-info');
+    const pageInfoBottom = document.getElementById('page-info-bottom');
+    const jumpPage = document.getElementById('jump-page');
+
+    function renderTable() {
+      const totalPages = Math.ceil(maxLevelNum / pageSize);
+      const start = (currentPage - 1) * pageSize;
+      const end = Math.min(start + pageSize, maxLevelNum);
+
+      let html = '';
+      for (let i = start; i < end; i++) {
+        const entry = levelData[i];
+        const totalXp = cumXp[i]; // Cumulative XP to reach this level
+        const xpToNext = i < maxLevelNum - 1 ? entry.xp : null; // XP field = cost to level up
+        const rowBg = (i - start) % 2 === 0 ? 'background-color: var(--color-surface);' : '';
+
+        html += `
+          <tr style="border-bottom: 1px solid var(--color-border); ${rowBg}">
+            <td class="py-2 px-4 font-medium">${(i + 1).toLocaleString()}</td>
+            <td class="py-2 px-4 text-right" style="color: rgb(234, 179, 8);">${totalXp.toLocaleString()}</td>
+            <td class="py-2 px-4 text-right" style="color: rgb(251, 146, 60);">${xpToNext !== null ? xpToNext.toLocaleString() : '-'}</td>
+            <td class="py-2 px-4 text-right" style="color: rgb(34, 197, 94);">${entry.hp.toLocaleString()}</td>
+            <td class="py-2 px-4 text-right" style="color: rgb(59, 130, 246);">${entry.friend}</td>
+          </tr>
+        `;
+      }
+      tableBody.innerHTML = html;
+
+      // Update pagination controls
+      const pageText = `Page ${currentPage} of ${totalPages}`;
+      pageInfo.textContent = pageText;
+      pageInfoBottom.textContent = pageText;
+
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages;
+      prevBtnBottom.disabled = currentPage === 1;
+      nextBtnBottom.disabled = currentPage === totalPages;
+
+      jumpPage.max = totalPages;
+      jumpPage.value = currentPage;
+    }
+
+    pageSizeSelect.addEventListener('change', () => {
+      pageSize = parseInt(pageSizeSelect.value);
+      currentPage = 1;
+      renderTable();
+    });
+
+    prevBtn.addEventListener('click', () => { currentPage--; renderTable(); });
+    nextBtn.addEventListener('click', () => { currentPage++; renderTable(); });
+    prevBtnBottom.addEventListener('click', () => { currentPage--; renderTable(); });
+    nextBtnBottom.addEventListener('click', () => { currentPage++; renderTable(); });
+
+    jumpPage.addEventListener('change', () => {
+      const page = parseInt(jumpPage.value);
+      const totalPages = Math.ceil(maxLevelNum / pageSize);
+      if (page >= 1 && page <= totalPages) {
+        currentPage = page;
+        renderTable();
+      }
+    });
+
+    // Initial render
+    renderTable();
+
+    // Also do initial lookup for level 1
+    lookupLevel();
+  </script>
+</BaseLayout>

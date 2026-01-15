@@ -28,9 +28,23 @@ For auction this month should be Dolls Festival, anticipated to start Jan 15th. 
 
 > **Data Note:** The game data actually has the drop rate boost as 20% not 25% but I don't have the card to validate (and it would be very hard to validate). Just be aware it might be slightly worse than it says for the drop rate, but I don't think that will change anyone's buying decisions.
 
-:card[752] is a weird one. He's in the spirit of :card[741] in being a single target 3 buff card, but they forgot that no one really cares about defensive buffs, so he's a 2 buff card that makes your highest attack target take significantly less damage. That probably would be very good in PvP, but in most of the game your front line is tanking the damage or in world boss you need to play to be able to handle random target damage on your backline. So he just kinda falls short. **I wouldn't recommend him, but if you want him or have a use for him, go for it.**
+:card[752] is a weird one. He's in the spirit of :card[741] in being a single target 3 buff card, but they forgot that no one really cares about defensive buffs, so he's a 2 buff card that makes your highest attack target take significantly less damage. He does also get a skill damage bonus, which puts him just a tad behind :card[741] in that regard - but that defensive buff really drags him down. That probably would be very good in PvP, but in most of the game your front line is tanking the damage or in world boss you need to play to be able to handle random target damage on your backline. So he just kinda falls short. **I wouldn't recommend him, but if you want him or have a use for him, go for it.**
 
 > **Data Note:** The second skill says crit rate is 40% but game data says 35%. This probably isn't make or break and again I don't have the card to validate, but be aware it might be slightly less crit than described.
+
+---
+
+## Update: Additional Auction Cards
+
+A few more cards showed up in the auction worth mentioning:
+
+**:card[645]** is essentially a :card[707] for cash instead of a ton of mochi. Since :card[707] is in low stock most of the time, you're looking at 2500 mochi and some time to collect even if you can sell some back. These are both strong greedy attacker bonds. The only real difference is attribute and bond, with Cheshire being Attack instead of Skill bond. These are nice to have 1 or 2 unlocked. **Recommend considering** if the price is right and you don't already have :card[707] unlocked.
+
+**:card[644]** is an XP buffer with a small AoE speed boost. It looks very expensive at the moment and it's not something you need - **probably for collectors**.
+
+**:card[696]** is a decent last round 50% damage boost on an attack bond. This can be nice for newer players, which will probably keep it fairly cheap. % Damage assists aren't actually all that common or that large - notable is :card[1991] but that gets value from the team skill damage. Damage buffs in more mature teams tend to already be stacked fairly high, meaning the marginal damage increase is fairly low. But in newer teams this is a big boost in the last round, which is often when you need it most. **I'd recommend having a copy uncapped for most players** if the price is right.
+
+**:card[267]** is an older exchange demon in fairly low supply. What's notable is the battle time limit, which can be very powerful in world boss. He has low attack and very high HP which might be nice for effective HP in some places. There isn't much special here, but there's probably some niche use for battle time limit in reserve - though it's not likely a top choice. **If you want that in your pocket** and the price is right, go for it!
 
 ---
 
@@ -41,6 +55,10 @@ For auction this month should be Dolls Festival, anticipated to start Jan 15th. 
 - :card[227] - **Solid Phantasma tank** if you don't have or don't want to wait for :card[738]
 - :card[751] - **Must have for min/maxers** who want XP/drop rate boosts; potentially expensive but stacks with :card[580]
 - :card[752] - **Pass** unless you have a specific PvP use case
+- :card[645] - **Worth considering** - cash alternative to :card[707] if you don't have it unlocked
+- :card[696] - **Recommended** for most players - solid last round damage boost, especially for newer teams
+- :card[267] - **Niche pickup** - battle time limit for world boss if the price is right
+- :card[644] - **Collectors only** - XP buffer, overpriced
 
 ---
 
