@@ -5,22 +5,17 @@ import {
   getFilteredRowModel,
   getSortedRowModel,
   getPaginationRowModel,
-  type ColumnDef,
   type SortingState,
   type ColumnFiltersState,
   flexRender,
 } from '@tanstack/react-table';
-import type { Card, AcquisitionSource } from '../../types/card';
+import type { Card } from '../../types/card';
 import { getCardsData, type CardLocale } from '../../lib/cards';
-import { fetchWithCache } from '../../lib/cache';
-import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../lib/images';
-import { formatNumber, formatSkillDescription } from '../../lib/formatters';
 import Fuse from 'fuse.js';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import CardPreviewContent from './CardPreviewContent';
 import TableSkeleton from './TableSkeleton';
-import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown, type TagCategory } from './filters';
-import { ImageCell } from './cells';
+import { FilterInfoTooltip, FilterDropdown, GroupedTagDropdown } from './filters';
 import MobileCardGrid from './MobileCardGrid';
 import { getCardTableColumns } from './cardTableColumns';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
