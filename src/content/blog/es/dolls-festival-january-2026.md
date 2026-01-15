@@ -27,7 +27,7 @@ La subasta de este mes debería ser Festival de Muñecas, anticipada para el 15 
 
 :card[751] - **Si eres min-maxer, consíguelo; si no, pásalo.**
 
-:card[752] - **No lo recomiendo, pero si lo quieres, adelante.**
+:card[752] - También tiene bonus de daño de habilidad, quedando justo detrás de :card[741] en ese aspecto, pero ese buff defensivo lo perjudica. **No lo recomiendo, pero si lo quieres, adelante.**
 
 ---
 
