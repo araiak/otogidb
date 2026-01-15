@@ -165,12 +165,13 @@ interface ReverseBond {
 const receivesSpecialBondsFrom: ReverseBond[] = [];
 for (const [otherId, otherCard] of Object.entries(cardsData.cards)) {
   if (!otherCard || otherId === card.id) continue;
-  const bonds = (otherCard as Card).bonds || [];
+  const typedCard = otherCard as Card;
+  const bonds = typedCard.bonds || [];
   for (const bond of bonds) {
     if (bond.target_id === card.id) {
       receivesSpecialBondsFrom.push({
         fromCardId: otherId,
-        fromCardName: (otherCard as Card).name,
+        fromCardName: typedCard.name || 'Unknown',
         bondType: bond.type,
         bonusPercent: bond.bonus_percent,
       });
