@@ -7,6 +7,7 @@ import { getSimilarityReason } from '../../../lib/similarity';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 import AuctionStockBadge from '../../../components/cards/AuctionStockBadge';
+import AuctionEstimate from '../../../components/cards/AuctionEstimate';
 import AvailabilityBadge from '../../../components/cards/AvailabilityBadge';
 
 // Import cards, skills, card mentions, similar cards, tier data, and auction data at build time
@@ -723,21 +724,16 @@ const jsonLd = {
                         initialStockLevel={stockLevel}
                       />
                     </div>
-                    {/* Auction Estimate */}
+                    {/* Auction Estimate - client component checks R2 for live auction data */}
                     {auctionEstimate && (
-                      <div class="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
-                        <div class="flex items-start gap-1.5">
-                          <span class="text-xs text-secondary flex-shrink-0">Estimated Auction:</span>
-                          <div class="flex-1">
-                            <div class="text-xs font-medium text-blue-700 dark:text-blue-400">
-                              ~{formatDate(auctionEstimate.estimated_date)}
-                            </div>
-                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
-                              Based on {auctionEstimate.event_name} event pattern
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <AuctionEstimate
+                        client:load
+                        cardId={card.id}
+                        estimatedDate={formatDate(auctionEstimate.estimated_date)}
+                        eventName={auctionEstimate.event_name}
+                        note={auctionEstimate.note}
+                        hasAuctionData={!!cardAuctionData}
+                      />
                     )}
                   </div>
                 );
