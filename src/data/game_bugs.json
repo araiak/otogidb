@@ -1,6 +1,6 @@
 {
-  "version": "1.3.0",
-  "last_updated": "2026-01-10",
+  "version": "1.4.0",
+  "last_updated": "2026-01-16",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -713,7 +713,7 @@
       "affected_field": "ability",
       "affected_id": "149301",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Restores 30% HP to the ally with the lowest percentage of HP at the start of each wave.",
@@ -721,9 +721,9 @@
         "ts_field": "self;min_hpp",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -744,7 +744,7 @@
       "affected_field": "ability",
       "affected_id": "149501",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Increases 3% of max HP of Divina team members.",
@@ -752,9 +752,9 @@
         "ts_field": "self;type<1>;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -775,7 +775,7 @@
       "affected_field": "ability",
       "affected_id": "147601",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Restores 5% HP to all allies at the start of each wave.",
@@ -783,9 +783,9 @@
         "ts_field": "self;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -806,7 +806,7 @@
       "affected_field": "ability",
       "affected_id": "145201",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "All allies deal 3% more DMG.",
@@ -814,9 +814,9 @@
         "ts_field": "self;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -837,7 +837,7 @@
       "affected_field": "ability",
       "affected_id": "237001",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Decreases 20% the ATK speed of all foes.",
@@ -845,9 +845,9 @@
         "ts_field": "enemy;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -868,7 +868,7 @@
       "affected_field": "ability",
       "affected_id": "146601",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Increase 15% of DMG dealt by the 2 allies with the highest ATK.",
@@ -876,9 +876,9 @@
         "ts_field": "self;count<2>;max_atk",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -899,7 +899,7 @@
       "affected_field": "ability",
       "affected_id": "199101",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Increases 25% of skill DMG by Divina team members.",
@@ -907,9 +907,9 @@
         "ts_field": "self;type<1>;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
@@ -930,7 +930,7 @@
       "affected_field": "ability",
       "affected_id": "199401",
       "category": "stackable",
-      "severity": "visual",
+      "severity": "gameplay",
       "summary": "Non-stackable ability missing 'once per team' text",
       "details": {
         "description_says": "Increases 23% of skill DMG dealt by Divina team members at the start of the final wave.",
@@ -938,12 +938,229 @@
         "ts_field": "self;type<1>;count<5>",
         "expected_text": "Description should mention that effects don't stack"
       },
-      "analysis": "Ability has o=false (non-stackable) but description doesn't mention this. Players may think multiple copies stack.",
-      "affects_gameplay": false,
-      "visual_only": true,
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy's ability applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked effects.",
+      "affects_gameplay": true,
+      "visual_only": false,
       "source": "automated",
       "status": "open",
       "first_detected": "2026-01-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-031",
+      "card_id": 1496,
+      "card_name": "Hive Hunter",
+      "affected_field": "ability",
+      "affected_id": "149601",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 10% of DMG dealt; Increases 10% of skill DMG.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-032",
+      "card_id": 2370,
+      "card_name": "Peculiar Raine",
+      "affected_field": "ability",
+      "affected_id": "237002",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 75% of skill DMG.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-033",
+      "card_id": 1430,
+      "card_name": "Poli'ahu [Xmas]",
+      "affected_field": "ability",
+      "affected_id": "143001",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Absorbs a 15% of DMG dealt as HP.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-034",
+      "card_id": 1991,
+      "card_name": "Mary Magdalene",
+      "affected_field": "ability",
+      "affected_id": "199102",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Increases 45% of DMG dealt.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-035",
+      "card_id": 1993,
+      "card_name": "Gift Box",
+      "affected_field": "ability",
+      "affected_id": "199301",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Reduces 40% of DMG taken at the start of the final wave.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-036",
+      "card_id": 1995,
+      "card_name": "Wish-Filled Stocking",
+      "affected_field": "ability",
+      "affected_id": "199501",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Restores 3% HP every 5 seconds.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      }
+    },
+    {
+      "id": "BUG-037",
+      "card_id": 1062,
+      "card_name": "Yukimura Sanada[aya]",
+      "affected_field": "ability",
+      "affected_id": "106201",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable self-buff ability missing 'once per team' text",
+      "details": {
+        "description_says": "Reduces 25% of DMG taken.",
+        "o_field": false,
+        "ts_field": "self_ime",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Self-targeting ability with o=false (OverlayFlag). Only the first copy's ability activates; the second copy's ability is entirely skipped and doesn't even apply to itself. Players may use duplicate cards expecting both to get the buff.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-16",
       "resolution_check": {
         "field": "o",
         "condition": "equals",
@@ -961,7 +1178,7 @@
     "effect_type": "Wrong effect type applied (e.g., DEFENSE vs SHIELD)",
     "description": "Text/description percentage mismatches",
     "stats": "Incorrect stat values",
-    "stackable": "Non-stackable abilities missing 'once per team' text in description"
+    "stackable": "Non-stackable abilities (o=false) missing 'once per team' text - affects all targeting including self_ime"
   },
   "severity_levels": {
     "gameplay": "Bug affects actual game mechanics",
