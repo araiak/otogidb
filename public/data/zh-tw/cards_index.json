@@ -3431,6 +3431,107 @@
         "type_name": "Melee"
       }
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方血量百分比最低的隊員血量15%回復",
+          "name": "重力場",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "name": "卡史提拉",
+      "playable": true,
+      "skill": {
+        "description": "對2名敵人（近戰優先）造成2,982點傷害",
+        "name": "全部掃射",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "敵方全體攻擊速度15%減少",
+          "name": "活火焰",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "name": "克圖格亞",
+      "playable": true,
+      "skill": {
+        "description": "一定時間內，敵方全體防禦降低555",
+        "name": "熾熱火舞",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "rarity": 4,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "139": {
       "abilities": [
         {
@@ -3479,6 +3580,216 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Melee"
+      }
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方全體隊員血量10%回復（除助戰外，己方全體僅生效1次）",
+          "name": "聖獸的加護",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "name": "獨角獸",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "name": "光波",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員技能傷害10%增加",
+          "name": "召喚觸媒",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "name": "光輝之偏方面體",
+      "playable": true,
+      "skill": {
+        "description": "81.25%使敵方全體中強毒",
+        "name": "偏方面體",
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "血量低於1/2時，血量每5秒回復10%，同時血量低於1/2時，戰鬥傷害50%增加",
+          "name": "無面之神",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "name": "奈亞魯法特（亂）",
+      "playable": true,
+      "skill": {
+        "description": "對1名血量最高的敵人造成6,160點傷害",
+        "name": "混沌波動",
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "技能傷害25%增加",
+          "name": "千種面相",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "血量上限15%增加",
+          "name": "夜之吼",
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "name": "奈亞魯法特（鎮）",
+      "playable": true,
+      "skill": {
+        "description": "對敵方全體造成2,329點傷害，並使目標50.49%沉默",
+        "name": "混沌世界",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "14": {
@@ -3583,6 +3894,231 @@
         "type_name": "Ranged"
       }
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "免疫中毒狀態（除助戰外，己方全體僅生效1次）",
+          "name": "學習能力",
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "name": "邪神的面具",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "最終回合，己方全體怪屬性隊員沉默，同時戰鬥傷害25%增加",
+          "name": "銀河精靈",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴擊率30%增加，同時暴擊傷害60%增加",
+          "name": "宇宙平衡",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "name": "仙女座",
+      "playable": true,
+      "skill": {
+        "description": "對1名HP最高的敵人造成7,529點傷害，並使目標一定時間內所受傷害提升89.08%",
+        "name": "超新星",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "每回合開始時，自身技能傷害15%增加",
+          "name": "恩凱之神",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，攻擊最高的敵人攻擊速度50%減少",
+          "name": "無形之子",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "name": "札特瓜",
+      "playable": true,
+      "skill": {
+        "description": "對3名敵人（近戰優先）造成2,847點傷害",
+        "name": "黑暗之書",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "己方全體靈屬性隊員技能傷害15%增加",
+          "name": "弱點識破",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最終回合，敵方全體暴擊傷害20%減少",
+          "name": "銀河巡警",
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "name": "瑪莎",
+      "playable": true,
+      "skill": {
+        "description": "對身前大範圍內的敵人造成1,865點傷害，並使目標一定時間內傷害降低35.81%\t",
+        "name": "分析",
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
     "141": {
       "abilities": [
         {
@@ -3644,6 +4180,58 @@
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員暴擊率10%增加",
+          "name": "鋼鐵堡壘",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "name": "凱蒂",
+      "playable": true,
+      "skill": {
+        "description": "對1名血量最高的敵人造成5,216點傷害，並使目標一定時間內戰鬥傷害降低48.49%",
+        "name": "大炮發射",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "142": {
@@ -4350,6 +4938,253 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "暴擊率40%增加",
+          "name": "妖精女王",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "身為隊長時，己方全體怪屬性隊員暴擊傷害50%增加",
+          "name": "新年盛宴",
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "name": "泰坦妮婭[新年2]",
+      "playable": true,
+      "skill": {
+        "description": "對3名ATK最高的敵人造成3,194點傷害，並使目標一定時間內傷害降低53.27%",
+        "name": "女王的祝福",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "妖石結算獎勵40%增加，同時獎勵掉落概率20%增加（除助戰外，己方全體僅生效1次）",
+          "name": "岩戶之舞",
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "每回合開始時，己方全體靈屬性隊員戰鬥傷害10%增加（除助戰外，己方全體僅生效1次）",
+          "name": "神樂",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "name": "天鈿女命[新年]",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "name": "戰舞",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "暴擊傷害75%增加。（除助戰外，己方全體僅生效1次）",
+          "name": "罪業洗淨",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "技能傷害75%增加。（除助戰外，己方全體僅生效1次）",
+          "name": "新生",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "name": "死神[新年]",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "name": "最後審判",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員所受傷害12%減少",
+          "name": "五芳人偶",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，己方全體付屬性隊員血量上限4%增加",
+          "name": "長姐的祈願",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "name": "香子蘭[新年]",
+      "playable": true,
+      "skill": {
+        "description": "恢復3名血量百分比最低的隊員1,746點血量，並使目標一定時間內戰鬥傷害增加71.62%",
+        "name": "香草精",
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
       }
     },
     "145": {
@@ -46445,6 +47280,6 @@
     }
   },
   "locale": "zh-tw",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }
