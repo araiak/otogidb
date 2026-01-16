@@ -14,11 +14,67 @@ export interface CardStats {
   crit: number;
 }
 
+export interface ParsedSkillTarget {
+  type: 'self' | 'self_ime' | 'team' | 'attribute' | 'ranked' | 'enemy' | 'current_target' | 'ally';
+  count: number;
+  attribute?: string;
+  filter?: string;
+}
+
+export interface ParsedSkillEffect {
+  type: string;
+  value: number;
+  scale?: number;
+}
+
+export interface ParsedSkillImmediate {
+  type: string;
+  base: number;
+  scale: number;
+}
+
+export interface ParsedSkill {
+  target?: ParsedSkillTarget;
+  effects?: ParsedSkillEffect[];
+  immediate?: ParsedSkillImmediate;
+  slv1?: number;    // Skill base damage at level 1
+  slvup?: number;   // Skill damage increase per level
+  ml?: number;      // Max skill level
+}
+
 export interface Skill {
   id: string;
   name: string;
   description: string;
   tags?: string[];
+  parsed?: ParsedSkill;
+  // Skill value fields for damage calculation
+  slv1?: number;    // Skill value at level 1
+  slvup?: number;   // Skill value increase per level
+  ml?: number;      // Max skill level
+  de?: string;      // Description template with {value} placeholder
+}
+
+export interface ParsedAbilityTarget {
+  type: 'self' | 'self_ime' | 'team' | 'attribute' | 'ranked' | 'enemy' | 'current_target' | 'ally';
+  count: number;
+  attribute?: string;  // 'Divina' | 'Anima' | 'Phantasma'
+  filter?: string;     // 'max_atk' | 'max_spd' | 'max_hp' for deterministic targeting
+}
+
+export interface ParsedAbilityEffect {
+  stat: string;
+  type: string;
+  value: number;
+  scale?: number;
+  isPercent: boolean;
+}
+
+export interface ParsedAbility {
+  target?: ParsedAbilityTarget;
+  effects?: ParsedAbilityEffect[];
+  trigger?: string;
+  conditions?: string[];
 }
 
 export interface Ability {
@@ -29,6 +85,7 @@ export interface Ability {
   tags?: string[];
   synergy_partners?: string[]; // Card IDs that trigger this ability's team bonus
   stackable?: boolean; // true = stacks, false = once per team
+  parsed?: ParsedAbility;
 }
 
 export interface ImageUrls {

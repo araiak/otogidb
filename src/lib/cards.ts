@@ -1,7 +1,32 @@
-import type { CardsData } from '../types/card';
+import type { CardsData, Card } from '../types/card';
 import { fetchWithCache } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
+
+// Skill data types
+export interface SkillData {
+  id: string;
+  name: string;
+  description: string;
+  value?: number;
+  cooldown?: number;
+  // Skill value fields for damage calculation
+  slv1?: number;    // Skill value at level 1
+  slvup?: number;   // Skill value increase per level
+  ml?: number;      // Max skill level
+  de?: string;      // Description template with {value} placeholder
+}
+
+export interface SkillsData {
+  skills: Record<string, SkillData>;
+}
+
+// Full cards data (includes all card details)
+export interface FullCardsData {
+  version: string;
+  total_cards: number;
+  cards: Record<string, Card>;
+}
 
 // Supported locales for card data
 export type CardLocale = 'en' | 'ja' | 'ko' | 'zh-cn' | 'zh-tw' | 'es';
@@ -9,6 +34,8 @@ export type CardLocale = 'en' | 'ja' | 'ko' | 'zh-cn' | 'zh-tw' | 'es';
 // In-memory cache for card data (faster than IndexedDB for repeat access)
 // Keyed by locale
 const cardsCacheByLocale: Record<string, CardsData | null> = {};
+const fullCardsCacheByLocale: Record<string, FullCardsData | null> = {};
+let skillsCache: SkillsData | null = null;
 
 // Max age for cached data (6 hours - auction data updates daily at 4pm JST)
 const CACHE_MAX_AGE = 6 * 60 * 60 * 1000;
@@ -201,6 +228,53 @@ async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
   } catch {
     return null;
   }
+}
+
+/**
+ * Load full cards data (for calculator - includes all card details)
+ */
+export async function getFullCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<FullCardsData> {
+  const locale = options.locale || 'en';
+  const cacheKey = locale;
+
+  if (fullCardsCacheByLocale[cacheKey] && !options.forceRefresh) {
+    return fullCardsCacheByLocale[cacheKey]!;
+  }
+
+  // Load full cards.json
+  const dataPath = locale === 'en' ? '/data/cards.json' : `/data/${locale}/cards.json`;
+  fullCardsCacheByLocale[cacheKey] = await fetchWithCache<FullCardsData>(dataPath, {
+    forceRefresh: options.forceRefresh,
+    maxAge: CACHE_MAX_AGE
+  });
+
+  return fullCardsCacheByLocale[cacheKey]!;
+}
+
+/**
+ * Load skills data
+ */
+export async function getSkillsData(options: { forceRefresh?: boolean } = {}): Promise<SkillsData> {
+  if (skillsCache && !options.forceRefresh) {
+    return skillsCache;
+  }
+
+  skillsCache = await fetchWithCache<SkillsData>('/data/skills.json', {
+    forceRefresh: options.forceRefresh,
+    maxAge: CACHE_MAX_AGE
+  });
+
+  return skillsCache;
+}
+
+/**
+ * Calculate skill damage value from description template
+ */
+export function calculateSkillDamage(skill: SkillData, atk: number): number {
+  // Skills have a base value that scales with ATK
+  // This is a simplified calculation - actual formula may vary by skill
+  const baseValue = skill.value || 100;
+  return Math.round((atk / 10) * (baseValue / 100));
 }
 
 // Re-export cache utilities for debugging
