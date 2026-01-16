@@ -10109,6 +10109,288 @@
       },
       "synergies": []
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "Restores 15% HP to the ally with the lowest percentage of HP at the start of each wave.",
+          "id": "138801",
+          "name": "Gravity Field",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "min_hpp",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "138801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Agh...! So they've finally made their move! Master. I tell you, you are the ray of hope for this world!\"</color><br/>The <color=#ef9843>soul of a gravity gun</color> developed in top secrecy by a certain defense organization. Her orders have been to invade Akihabara and carry out an undercover investigation of the area, so she now goes about in maid uniform, even though she's all Anima on the inside. This rather unusual figure is actually a gravity gun capable of protecting the world!",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001479+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001479+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138801"
+        ],
+        "generation": 1
+      },
+      "name": "Castela",
+      "playable": true,
+      "skill": {
+        "description": "Causa {value} de daño a 2 rivales (prioridad CaC).",
+        "id": "1388",
+        "name": "Spring Clean",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 770.0,
+            "scale": 28.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2665,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "Decreases 15% the ATK speed of all foes.",
+          "id": "138901",
+          "name": "Living Flame",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "138901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"C'mon, you gotta get a bit hotter than that! If you don't start making an effort, I'm just gonna burn you...\" </color><br/>One of the <color=#ef9843>Great Old Ones</color> from the <color=#ef9843>Cthulhu Mythos</color> universe, whose body is cloaked in numerous flames. Archenemy of the <color=#ef9843>Evil Gods</color>.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002413+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002413+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138901"
+        ],
+        "generation": 0
+      },
+      "name": "Cthugha",
+      "playable": true,
+      "skill": {
+        "description": "Reduces all enemies' DEF by {delay1} for a limited time.",
+        "id": "1389",
+        "name": "White Hot Dancing Flames",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -160.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 640,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2400,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "139": {
       "abilities": [
         {
@@ -10246,6 +10528,612 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "Restores 10% HP to all allies at the start of each wave.(only take effect once to the team)",
+          "id": "139001",
+          "name": "Beast's Protection",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "139001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Now, draw closer to my horn... I shall bring joy and vitality to your life.\"</color><br/>A mythical <color=#ef9843>holy creature</color> with a single horn on its brow. The horn is imbued with divine power, and only those with pure hearts can approach it.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001709+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001709+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139001"
+        ],
+        "generation": 1
+      },
+      "name": "Unicorn",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1390",
+        "name": "Wave of Light",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 750.0,
+            "scale": 25.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "Increases 10% of skill DMG of all anima allies.",
+          "id": "139101",
+          "name": "Summon Catalyst",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "139101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"My soul shall not be at rest...until there's things wandering through the darkness beside me...\" </color><br/><color=#ef9843>The soul of an object</color> from the Cthulhu Mythos universe that has the power to summon <color=#ef9843>Evil Gods</color>. When Nyarlathotep disappears as a result of the demons' summoning ceremony, Shining Trapezohedron uses her power to summon a great number of <color=#ef9843>Evil Gods</color> as a replacement.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002164+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002164+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139101"
+        ],
+        "generation": 0
+      },
+      "name": "Shining Trapezohedron",
+      "playable": true,
+      "skill": {
+        "description": "Hay {probability} de envenenar gravemente a todos los rivales.",
+        "id": "1391",
+        "name": "Trapezohedron",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.51,
+              "type": "POISON",
+              "value": 15.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 495,
+          "slvup": 15,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2565,
+        "base_hp": 2130,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "When HP is 1/2 or less, slowly restores HP over time and Increases 50% of DMG dealt.",
+          "id": "139801",
+          "name": "Faceless God",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "139801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"SHWOOOOOAAAAARRRRGGHHH!!!\"</color><br/> One of the <color=#ef9843>Evil Gods</color> from the <color=#ef9843>Cthulhu Mythos</color> who is summoned out of the cosmic chaos. Her other names include The Faceless God and Crawling Chaos. She disappeared one day, only to be summoned in great numbers by <color=#ef9843>Shining Trapezohedron</color>. You won her aid after managing to quell her fury.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002649+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002649+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139801"
+        ],
+        "generation": 1
+      },
+      "name": "Nyarlathotep (Wild)",
+      "playable": true,
+      "skill": {
+        "description": "Causa {value} de daño al rival con más PS.",
+        "id": "1398",
+        "name": "Wave of Purity",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1710.0,
+            "scale": 50.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1505,
+          "slvup": 44,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "Increases 25% of skill DMG.",
+          "id": "139901",
+          "name": "Thousand Faces",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 15% of Max HP.",
+          "id": "139902",
+          "name": "Howl of the Night",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "139901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"You're the only person who I can really be my true self with, you know...\"</color><br/> One of the <color=#ef9843>Evil Gods</color> from the <color=#ef9843>Cthulhu Mythos</color> who was called out of the cosmic chaos by the demons' summoning accident, and begun drifting around subspace. Thanks to the help of you, she began to enjoy all the delights that chaos had to offer.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002894+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002894+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139901"
+        ],
+        "generation": 0
+      },
+      "name": "Nyarlathotep (Calm)",
+      "playable": true,
+      "skill": {
+        "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Silence.",
+        "id": "1399",
+        "name": "Chaotic World",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SILENCE",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 638.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 765,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4430,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
       },
       "synergies": []
     },
@@ -10546,6 +11434,653 @@
       },
       "synergies": []
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "Immune to Poison.(only take effect once to the team)",
+          "id": "140001",
+          "name": "Learning Ability",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "140001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"What's that round, squishy thing, then? A hotcake, you say...? Mm, looks good.\" </color><br/>A <color=#ef9843>material substance</color> that emerged from one of the <color=#ef9843>Evil God Nyarlathotep</color>'s alternate personalities. When she first appeared she couldn't tell her right from her left, but she's gradually learning a great deal under your care and guidance.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001926+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001926+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140001"
+        ],
+        "generation": 0
+      },
+      "name": "Mask of Mischief",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "Inflicts Silence on all Phantasma team members and Increases 25% of their DMG dealt at the start of the final wave.",
+          "id": "140101",
+          "name": "Galaxy Spirit",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 30% of Crit Rate and 60% of Crit DMG.",
+          "id": "140102",
+          "name": "Cosmic Balance",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 30.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "140101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"To think that you could win over a galaxy... I shall be needing to remain here and investigate your mysterious powers further...\"</color><br/> The <color=#ef9843>soul of a galaxy</color> 2.3 million light years away from Earth. She decided to come over here when <color=#ef9843>Nyarlathotep</color> disappeared, fearing the disturbance to the cosmic balance. She has struck up a strange friendship with Mira's Professor, Yata.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003409+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003409+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140101"
+        ],
+        "generation": 1
+      },
+      "name": "Andromeda",
+      "playable": true,
+      "skill": {
+        "description": "Causa {value} de daño al rival con más PS. Los objetivos sufren un +{delay1} de daño temporalmente.",
+        "id": "1401",
+        "name": "Supernova",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.72,
+              "type": "SHIELD",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4730,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "Increases 15% of skill DMG dealt at the start of each wave.",
+          "id": "140201",
+          "name": "God of N'kai",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Reduces 50% of ATK speed of the enemy with the highest ATK at the start of each wave.",
+          "id": "140202",
+          "name": "Formless Spawn",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "140201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Thanks for helping Nyarly! </color><br/>One of the <color=#ef9843>Great Old Ones</color> from the <color=#ef9843>Cthulhu Mythos</color> universe. She accompanied Andromeda to Earth out of concern for Nyarlathotep's fate, and now she'd like nothing more than to get closer to you.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003139+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003139+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140201"
+        ],
+        "generation": 1
+      },
+      "name": "Tsathoggua",
+      "playable": true,
+      "skill": {
+        "description": "Causa {value} de daño a 3 rivales (prioridad CaC).",
+        "id": "1402",
+        "name": "Dark Scroll",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 750,
+          "slvup": 22,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4230,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "Increases 15% of skill DMG by Divina team members.",
+          "id": "140401",
+          "name": "Weakness Detection",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Reduces 20% of Crit DMG by all foes at the start of the final wave.",
+          "id": "140402",
+          "name": "Galactic Patrol",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": -20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "140401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"When's your birthday, then? ...Oh, really! Okay, then... Now describe your ideal partner...\"</color><br/>A member of the <color=#ef9843>Intergalactic Security Force</color> responsible for keeping cosmic peace and order. She has come to earth to investigate the <color=#ef9843>Evil Gods</color> who have suddenly started wreaking havoc. She is interested in the agents that fight against the Evil Gods, and is currently conducting an in-depth investigation into you.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001191+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001191+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140401"
+        ],
+        "generation": 0
+      },
+      "name": "Marsha",
+      "playable": true,
+      "skill": {
+        "description": "Deals {value} DMG to further enemies; Targets deal {delay1} less DMG for a limited time.",
+        "id": "1404",
+        "name": "Analysis",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.29,
+              "type": "ATK",
+              "value": -10.0
+            }
+          ],
+          "immediate": {
+            "base": 530.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 713,
+          "slvup": 20,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4300,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
     "141": {
       "abilities": [
         {
@@ -10725,6 +12260,154 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "Increases 10% of Crit Rate of Anima allies.",
+          "id": "141301",
+          "name": "Steel Fortress",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "141301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Commander! Please watch as I exterminate all enemies of the human race!\"</color><br/>The <color=#ef9843>soul</color> of the largest and strongest <color=#ef9843>battleship</color> ever made. She has been dispatched by a secret defense organization to help protect the earth from the <color=#ef9843>Evil Gods</color>. She discovered a deep admiration for you as her commander, and has decided not to return to the organization.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004703+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004703+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "141301"
+        ],
+        "generation": 0
+      },
+      "name": "Katie",
+      "playable": true,
+      "skill": {
+        "description": "Deals {value} DMG to the enemy with the most HP. Targets deal {delay1} less DMG for a limited time.",
+        "id": "1413",
+        "name": "Cannon Battery",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.41,
+              "type": "ATK",
+              "value": -12.0
+            }
+          ],
+          "immediate": {
+            "base": 1300.0,
+            "scale": 44.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1338,
+          "slvup": 45,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4000,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -13127,6 +14810,715 @@
       "synergies": [
         "142"
       ]
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "Increases 40% of Crit Rate.",
+          "id": "144201",
+          "name": "Fairy Queen",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "Increases 50% of Crit DMG by Phantasma team members when this daemon is Team Leader.",
+          "id": "144202",
+          "name": "New Year Feast",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Let's enjoy a Japanese new year! Special sushi... Tasty noodles... It's just the best!\"</color><br/>The <color=#ef9843>Queen of the Fairies</color> who reigns over the other sylvan sprites. She came to Japan to take part in the winter festivities. This year, she will serve you, before heading off to Kansai as promised.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003945+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003945+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144201"
+        ],
+        "generation": 0
+      },
+      "name": "Titania [New Year2]",
+      "playable": true,
+      "skill": {
+        "description": "Deals {value} DMG to the 3 enemies with the highest ATK. Target deals {delay1} less DMG for a limited time.",
+        "id": "1442",
+        "name": "A Queen's Blessing",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.43,
+              "type": "ATK",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 880.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1635,
+          "slvup": 48,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4500,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "Increases 40% of the number of soulstones received from battle and increases 20% of battle reward drop rate.(only take effect once to the team)",
+          "id": "144301",
+          "name": "Dance of Iwato",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "COIN",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "All Divina team members deal 10% more DMG at the start of each wave.(only take effect once to the team)",
+          "id": "144302",
+          "name": "Kagura",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-23 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-01-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Happy new year! I look forward to another year of entertaining everyone with my dancing!\"</color><br/>A <color=#ef9843>goddess</color> with extraordinary artistic talents. She is keen to entertain the agents with her dancing at new year, and has chosen a special outfit in which to do so. She is always practicing in the hope of impressing you!",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004198+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004198+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144301"
+        ],
+        "generation": 0
+      },
+      "name": "Ameno Uzume [New Year]",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1443",
+        "name": "War Dance",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "Increases 75% of Crit DMG.(only take effect once to the team)",
+          "id": "144401",
+          "name": "Sin Cleansing",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 75% of skill DMG.(only take effect once to the team)",
+          "id": "144402",
+          "name": "Rebirth",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "144401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Care to wash away all your sins? There's no time like the new year to make a fresh start...\"</color><br/><color=#ef9843>A goddess with dominion over death itself</color>. She is one of the <color=#ef9843>Three Goddesses of Trouble</color>, along with the Goddesses of Poverty and Misfortune. She also symbolizes rebirth and new beginnings. Her motto is \"It's never too late.\" She will never stop emphasizing the importance of taking the first step toward making a change.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003661+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003661+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144401"
+        ],
+        "generation": 1
+      },
+      "name": "Grim Reaper [New Year]",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1444",
+        "name": "Final Judgment",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "All Anima team members take 12% less DMG",
+          "id": "144501",
+          "name": "Five Aromas Doll",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 4% of Max HP to Anima team members at the start of each wave.",
+          "id": "144502",
+          "name": "Eldest Sister's Prayer",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "144501",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Happy new year. I wish you all the joy this world has to offer.\"</color><br/>The soul of an <color=#ef9843>automated doll</color> made by <color=#ef9843>the genius doll-maker, Abel</color>. She is <color=#ef9843>Doll No. 1</color> in the hard-to-come-by <color=#ef9843>Five Fragrances Series</color>. She makes a pilgrimage with you at new year, praying for the siblings' happiness.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004465+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004465+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144501"
+        ],
+        "generation": 0
+      },
+      "name": "Vanilla [New Year]",
+      "playable": true,
+      "skill": {
+        "description": "Restores {value} HP to 3 allies with the lowest percentage of HP. Targets deal {delay1} more DMG for a limited time.",
+        "id": "1445",
+        "name": "Vanilla Essence",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.58,
+              "type": "ATK",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 500.0,
+            "scale": 14.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 1565,
+          "slvup": 45,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4065,
+        "base_hp": 3930,
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
     },
     "145": {
       "abilities": [
@@ -140303,6 +142695,6 @@
     }
   },
   "locale": "es_ES",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }

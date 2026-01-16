@@ -10109,6 +10109,288 @@
       },
       "synergies": []
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、最大ＨＰと残ＨＰの割合が低い味方式神のＨＰを15%回復",
+          "id": "138801",
+          "name": "重力フィールド",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "min_hpp",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "138801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「チッ…あいつら、遂に動きだしたか…！ご主人様。あなたこそ地球の希望です！」</color><br/>極秘の防衛機関で開発された<color=#ef9843>重力銃の精霊</color>。秋葉原に潜入して特務調査をしていた。見た目はメイド、中身は九十九神！その実体は地球を防衛する重力銃！",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001479+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001479+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138801"
+        ],
+        "generation": 1
+      },
+      "name": "重力銃 ステラ",
+      "playable": true,
+      "skill": {
+        "description": "敵２体（近接型優先）に{value}のダメージを与える",
+        "id": "1388",
+        "name": "一斉掃射",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 770.0,
+            "scale": 28.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2665,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "敵全体のスピードが15%軽減",
+          "id": "138901",
+          "name": "生ける炎",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "138901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「ホラ、もっと熱くなって！本気出さなきゃ燃やすわよ！！ファイヤー☆」</color><br/><color=#ef9843>クトゥルフ神話</color>に登場する、無数の炎を従えた<color=#ef9843>旧支配者</color>。<color=#ef9843>邪神</color>の天敵。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002413+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002413+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138901"
+        ],
+        "generation": 0
+      },
+      "name": "クトゥグア",
+      "playable": true,
+      "skill": {
+        "description": "敵全体の防御力を、一時的に{delay1}低下させる",
+        "id": "1389",
+        "name": "灼熱炎舞",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -160.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 640,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2400,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "139": {
       "abilities": [
         {
@@ -10246,6 +10528,612 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、味方式神全体のＨＰを10%回復（助っ人以外、味方陣容一回有効）",
+          "id": "139001",
+          "name": "聖獣の加護",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "139001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「サア、ワタシの角に触れて…。あなたのイノチを躍動させマス…」</color><br/>額に一本の角が生えた、伝説の<color=#ef9843>聖獣</color>。角には神聖な力が秘められており、清らかな心を持つ者しか触れることが出来ない。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001709+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001709+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139001"
+        ],
+        "generation": 1
+      },
+      "name": "一角獣",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1390",
+        "name": "光の波動",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 750.0,
+            "scale": 25.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神の特技の威力向上10%",
+          "id": "139101",
+          "name": "召喚触媒",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "139101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「……闇を彷徨うものが…そばにいないと…落ち着きません。ダメです」</color><br/>クトゥルフ神話に登場する、<color=#ef9843>邪神</color>を喚び寄せる力を持つ<color=#ef9843>物質の精霊</color>。悪魔達が行った召喚儀式によってニャルラトホテプが消失した後、その力を使い数多くの<color=#ef9843>邪神</color>を喚び寄せた。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002164+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002164+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139101"
+        ],
+        "generation": 0
+      },
+      "name": "輝くトラペゾヘドロン",
+      "playable": true,
+      "skill": {
+        "description": "{probability}で敵全体を猛毒状態にする",
+        "id": "1391",
+        "name": "トラペゾヘドロン",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.51,
+              "type": "POISON",
+              "value": 15.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 495,
+          "slvup": 15,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2565,
+        "base_hp": 2130,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "ＨＰが１／２以下の時、ＨＰ自動回復（ゆっくり）、与ダメージ値が50%に増加",
+          "id": "139801",
+          "name": "無貌の神",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "139801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「シュゲェェェェェェェェ！！！」</color><br/> <color=#ef9843>クトゥルフ神話</color>に登場する、宇宙の混沌より召喚された<color=#ef9843>邪神の一柱</color>。別名は無貌の神、這い寄る混沌など。ある日その存在が消失し、<color=#ef9843>輝くトラペゾヘドロン</color>が大量に召喚した。あなたが制圧しその力を得た。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002649+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002649+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139801"
+        ],
+        "generation": 1
+      },
+      "name": "ニャルラトホテプ[乱]",
+      "playable": true,
+      "skill": {
+        "description": "HP最高敵１体に{value}のダメージを与える",
+        "id": "1398",
+        "name": "混沌の波動",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1710.0,
+            "scale": 50.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1505,
+          "slvup": 44,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "特技の威力が25%向上",
+          "id": "139901",
+          "name": "千の顔",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最大ＨＰが15%上昇",
+          "id": "139902",
+          "name": "夜の咆哮",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "139901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「私が素顔で、こんなに本音を話せるのは、キミにだけみたい」</color><br/><color=#ef9843>クトゥルフ神話</color>に登場する、宇宙の混沌より召喚された<color=#ef9843>邪神の一柱</color>。悪魔達の召喚事故により亜空間に漂っていた。あなたに助けられドタバタ混沌ワールドをくり広げている。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002894+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002894+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139901"
+        ],
+        "generation": 0
+      },
+      "name": "ニャルラトホテプ[鎮]",
+      "playable": true,
+      "skill": {
+        "description": "敵全体に{value}のダメージを与え、対象を{probability}で沈黙状態にする",
+        "id": "1399",
+        "name": "カオス・ワールド",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SILENCE",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 638.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 765,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4430,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
       },
       "synergies": []
     },
@@ -10546,6 +11434,653 @@
       },
       "synergies": []
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "毒状態を無効化する（助っ人以外、味方陣容一回有効）",
+          "id": "140001",
+          "name": "学習能力",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "140001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「あの…このモチモチは、なんですか。すあま…？すーあーまー…」</color><br/><color=#ef9843>邪神ニャルラトホテプ</color>の別人格から生まれた<color=#ef9843>物質</color>。生まれたばかりで右も左も分からなかったが、あなたに保護され色々なことを教わっている。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001926+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001926+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140001"
+        ],
+        "generation": 0
+      },
+      "name": "邪神の仮面",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、怪異属性の味方式神を沈黙状態にする代わりに、与ダメージ値を25%増加させる",
+          "id": "140101",
+          "name": "銀河の精霊",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "クリティカル率が30%上昇し、クリティカルダメージ値が60%増加",
+          "id": "140102",
+          "name": "宇宙の均衡",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 30.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "140101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「銀河の力を従える術を持つとは。この星に滞在して調べる必要がありますね」</color><br/>地球から約230万光年の距離にある<color=#ef9843>銀河の精霊</color>。宇宙の均衡を崩しかねない<color=#ef9843>ニャルラトホテプ</color>の消失に、自ら地球まで来た。カガミの師匠の八咫(やた)とは不思議な友情が生まれた。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003409+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003409+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140101"
+        ],
+        "generation": 1
+      },
+      "name": "アンドロメダ(銀河)",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰが最も高い敵１体に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "id": "1401",
+        "name": "スーパーノヴァ",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.72,
+              "type": "SHIELD",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4730,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の特技の威力が向上15%",
+          "id": "140201",
+          "name": "ンカイの神",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、最も攻撃力が高い敵のスピードを50%軽減する",
+          "id": "140202",
+          "name": "無形の落とし子",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "140201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「ニャルちゃんを助けてくれてありがとー！今度私の宇宙船に乗せてあげるねっ」</color><br/><color=#ef9843>クトゥルフ神話</color>に登場する<color=#ef9843>旧支配者</color>。消失したニャルラトホテプを心配しアンドロメダについてきた。もっと、あなたと仲良くなりたいと思っている。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003139+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003139+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140201"
+        ],
+        "generation": 1
+      },
+      "name": "ツァトゥグァ",
+      "playable": true,
+      "skill": {
+        "description": "敵３体（近接型優先）に{value}のダメージを与える",
+        "id": "1402",
+        "name": "暗黒の書",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 750,
+          "slvup": 22,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4230,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神の特技ダメージ値が15%増加",
+          "id": "140401",
+          "name": "弱点看破",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最終のＷＡＶＥに、敵全体のクリティカルダメージ値を20%軽減",
+          "id": "140402",
+          "name": "銀河パトロール",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": -20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "140401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「キミの誕生日は？…ふむふむ。じゃあキミの好きなタイプは？」</color><br/>宇宙の治安を守る<color=#ef9843>星間治安隊の一員</color>。突然暴れ出した<color=#ef9843>邪神</color>について調べるべく、地球にやって来た。邪神と戦った陰陽師に興味を持ち、あなたのことを根掘り葉掘り聞き込み調査中。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001191+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001191+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140401"
+        ],
+        "generation": 0
+      },
+      "name": "異星人 スレイ",
+      "playable": true,
+      "skill": {
+        "description": "前方広範囲の敵に{value}のダメージを与え、対象の攻撃力を一時的に{delay1}低下させる\t",
+        "id": "1404",
+        "name": "アナライズ",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.29,
+              "type": "ATK",
+              "value": -10.0
+            }
+          ],
+          "immediate": {
+            "base": 530.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 713,
+          "slvup": 20,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4300,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
     "141": {
       "abilities": [
         {
@@ -10725,6 +12260,154 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神のクリティカル率10%上昇",
+          "id": "141301",
+          "name": "鋼鉄の要塞",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "141301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「司令官！このケイティ、必ずや人類の敵を壊滅させてみせます！」</color><br/>最大最強の<color=#ef9843>軍艦の精霊</color>。<color=#ef9843>邪神</color>の襲撃から地球を守るべく、極秘の防衛機関から派遣されてきた。あなたを司令官として尊敬し、機関へ戻らず側にいることを決めた。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004703+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004703+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "141301"
+        ],
+        "generation": 0
+      },
+      "name": "航空母艦 ケイティ",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰが最も高い敵１体に{value}のダメージを与え、対象の攻撃力を一時的に{delay1}低下させる",
+        "id": "1413",
+        "name": "主砲発射",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.41,
+              "type": "ATK",
+              "value": -12.0
+            }
+          ],
+          "immediate": {
+            "base": 1300.0,
+            "scale": 44.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1338,
+          "slvup": 45,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4000,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -13127,6 +14810,715 @@
       "synergies": [
         "142"
       ]
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "クリティカル率が40%に増加",
+          "id": "144201",
+          "name": "妖精女王",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "大将の場合、怪異属性の味方式神のクリティカルダメージ値が50%増加",
+          "id": "144202",
+          "name": "新年の宴",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「これがジャパニーズお正月…！黒豆！伊達巻！栗きんとん…キャー、感動！」</color><br/>妖精の森に君臨する<color=#ef9843>妖精の女王</color>。冬の有明の大イベントに参加しないわけがなく、日本に来ていた。今年はあなたもお供し、その後関西へ初詣に行くお約束となっております。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003945+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003945+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144201"
+        ],
+        "generation": 0
+      },
+      "name": "ティターニア[新年2]",
+      "playable": true,
+      "skill": {
+        "description": "最も攻撃力が高い敵３体に{value}のダメージを与え、対象の攻撃力を一時的に{delay1}低下させる",
+        "id": "1442",
+        "name": "女王の祝福",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.43,
+              "type": "ATK",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 880.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1635,
+          "slvup": 48,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4500,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "妖石清算ボーナスが40%増加し、ボーナスのドロップ率が20%上昇（助っ人以外、味方陣容一回有効）",
+          "id": "144301",
+          "name": "岩戸の舞",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "COIN",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "WAVE開始ごとに、霊験属性の味方式神の与ダメージ値が10%増加（助っ人以外、味方陣容一回有効）",
+          "id": "144302",
+          "name": "神楽",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-23 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-01-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「今年も来年もよろしく☆ずーっと皆のために踊るからね！」</color><br/>芸能を司る<color=#ef9843>女神</color>。正月のお祝いとして陰陽師たちに舞を披露するべく、自分で選んだ晴れ着に身を包んだ。あなたに楽しんでもらえるよう、いつも陰で舞踊の練習に励んでいる。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004198+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004198+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144301"
+        ],
+        "generation": 0
+      },
+      "name": "アメノウズメ[正月]",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1443",
+        "name": "戦いの舞踏",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "クリティカルダメージ値75%上昇（助っ人以外、味方陣容一回有効）",
+          "id": "144401",
+          "name": "罪業洗浄",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "特技の威力が75%向上（助っ人以外、味方陣容一回有効）",
+          "id": "144402",
+          "name": "新生",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "144401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「罪を洗い流したい？じゃ、正月でキリもいいし、一緒に新しい人生を始めようか」</color><br/><color=#ef9843>死を司る神様</color>。死神、厄病神、貧乏神からなる<color=#ef9843>三大迷惑神</color>の一柱。終焉からの始まりも司る。何事もいつ初めても遅くはない。一歩踏み出すことが大切ということをそっと耳打ちしてくれる。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003661+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003661+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144401"
+        ],
+        "generation": 1
+      },
+      "name": "死神[正月]",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1444",
+        "name": "断罪",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神の被ダメージを12%軽減",
+          "id": "144501",
+          "name": "五芳人形",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、付喪属性の味方式神の最大ＨＰが4%上昇",
+          "id": "144502",
+          "name": "長女の祈り",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "144501",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「あけまして…おめでとう。この世すべての幸いが、あなたに訪れますように」</color><br/><color=#ef9843>天才人形師アベル</color>が作った<color=#ef9843>自動人形の精霊</color>。入手困難な<color=#ef9843>フレグランスシリーズ</color>5体のうちの<color=#ef9843>第1ドール</color>。あなたと一緒に初詣に行き、弟妹の幸せが続きますようにと、祈った。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004465+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004465+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144501"
+        ],
+        "generation": 0
+      },
+      "name": "ヴァニラ[正月]",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰのパセントの比率が最も低い味方3体のＨＰを{value}回復し、攻撃力を一時的に{delay1}上昇させる",
+        "id": "1445",
+        "name": "ヴァニラ・エッセンス",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.58,
+              "type": "ATK",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 500.0,
+            "scale": 14.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 1565,
+          "slvup": 45,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4065,
+        "base_hp": 3930,
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
     },
     "145": {
       "abilities": [
@@ -140303,6 +142695,6 @@
     }
   },
   "locale": "ja_JP",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }

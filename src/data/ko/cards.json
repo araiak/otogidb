@@ -10109,6 +10109,288 @@
       },
       "synergies": []
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 가장 HP 비율이 낮은 아군의 HP를 15% 회복한다",
+          "id": "138801",
+          "name": "중력장",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "min_hpp",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "138801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"으악...! 드디어 움직이기 시작했어요! 주인님. 주인님이 이 세상의 유일한 희망의 빛이에요!\"</color><br/>한 방위 기관에서 극비리에 개발한 <color=#ef9843>중력 총의 정령</color>. 은밀하게 아키하바라 지역을 조사하라는 그녀의 명령을 받아서, 내부의 99신이지만 하녀 복장을 하려고 해요. 이 특이한 인물의 실체는 지구를 방위하는 중력 총입니다!",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001479+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001479+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138801"
+        ],
+        "generation": 1
+      },
+      "name": "카스텔라",
+      "playable": true,
+      "skill": {
+        "description": "적 2명(근접형 우선)에게 {value}의 데미지를 입힌다",
+        "id": "1388",
+        "name": "봄맞이 청소",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 770.0,
+            "scale": 28.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2665,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "모든 적의 공격 속도를 15% 감소시킨다",
+          "id": "138901",
+          "name": "살아있는 불꽃",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "138901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"이것보단 더 뜨거워야 해! 노력하지 않으면, 널 그냥 태워버릴 거야...\" </color><br/>셀 수 없이 많은 화염으로 만든 망토를 입고 있는 <color=#ef9843>크툴루 신화</color> 우주의 <color=#ef9843>아주 오래된 신</color> 중 하나. <color=#ef9843>악한 신들</color>의 최대의 적.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002413+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002413+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138901"
+        ],
+        "generation": 0
+      },
+      "name": "크투가",
+      "playable": true,
+      "skill": {
+        "description": "일정 시간 동안 모든 적의 방어력을 {delay1} 감소시킨다",
+        "id": "1389",
+        "name": "뜨겁게 춤추는 흰색 불꽃",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -160.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 640,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2400,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "139": {
       "abilities": [
         {
@@ -10246,6 +10528,612 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 아군의 HP를 10% 회복한다(조력자이외 아군파티 1회유효)",
+          "id": "139001",
+          "name": "성수의 가호",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "139001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>이제, 제 뿔에 더 가까이 오세요. 인생의 즐거움과 활력을 가져다 드릴게요.\"</color><br/>미간 사이에 뿔이 하나 달린 신화 속의 <color=#ef9843>신성한 존재</color>. 그 뿔에 강령한 힘이 있는데, 순수한 마음을 가진 사람만 가까이 다가갈 수 있습니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001709+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001709+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139001"
+        ],
+        "generation": 1
+      },
+      "name": "유니콘",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1390",
+        "name": "빛의 파동",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 750.0,
+            "scale": 25.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "모든 영물 속성 파티원의 스킬 데미지가 10% 증가한다",
+          "id": "139101",
+          "name": "소환 촉매",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "139101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"제 영혼은 안식을 얻지 못할 거예요... 제 옆의 어둠 속을 헤매고 존재들이 곁에 없으면...\" <color=#ef9843>악한 신</color>을 소환하는 힘을 가졌다는 크툴루 신화 세계에 나오는 </color><br/><color=#ef9843>물건의 정령</color>. 식신의 소환 의식의 결과로 니알라토텝이 사라질 때, 빛나는 트레피조헤드론이 힘을 써서 대신 많은 <color=#ef9843>악한 신들</color>을 소환했어요.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002164+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002164+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139101"
+        ],
+        "generation": 0
+      },
+      "name": "빛나는 트레피조헤드론",
+      "playable": true,
+      "skill": {
+        "description": "{probability}로 모든 적을 맹독 상태로 만든다",
+        "id": "1391",
+        "name": "트레피조헤드론",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.51,
+              "type": "POISON",
+              "value": 15.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 495,
+          "slvup": 15,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2565,
+        "base_hp": 2130,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "HP가 1/2 이하일 때 시간 경과에 따라 HP가 조금씩 회복되고, 전투 데미지가 50% 증가한다",
+          "id": "139801",
+          "name": "얼굴 없는 신",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "139801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"으아아아악!!!\"</color><br/>우주 대혼란에서 소환한 <color=#ef9843>크툴루 신화</color>에 나오는 <color=#ef9843>악한 신들</color> 중 하나. 그녀의 또 다른 이름으로는 얼굴 없는 신, 서서히 움직이는 대혼란 등이 있다. 어느날 사라졌지만 <color=#ef9843>빛나는 트레피조헤드론</color>에 의해 대량으로 소환되었다. 당신의 도움으로 분노를 가라앉히게 되었다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002649+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002649+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139801"
+        ],
+        "generation": 1
+      },
+      "name": "니알라토텝 (난폭상태)",
+      "playable": true,
+      "skill": {
+        "description": "HP가 가장 높은 적 1명에게  {value}의 데미지를 입힌다",
+        "id": "1398",
+        "name": "순수의 물결",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1710.0,
+            "scale": 50.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1505,
+          "slvup": 44,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "스킬 데미지 25% 증가한다",
+          "id": "139901",
+          "name": "천의 얼굴",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최대 HP가 15% 증가한다",
+          "id": "139902",
+          "name": "밤의 울부짖음",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "139901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"당신은 진정으로 저를 만족하게 할 수 있는 유일한 분이세요...\"</color><br/> 악귀의 소환 사건으로 우주 대혼란에서 부름을 받게 된 <color=#ef9843>크툴루 신화</color>의 <color=#ef9843>악한 신들</color> 중 하나로, 부공간 주변을 표류하기 시작했습니다. 당신의 도움 덕분에, 대혼란의 즐거움을 즐기기 시작했습니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002894+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002894+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139901"
+        ],
+        "generation": 0
+      },
+      "name": "니알라토텝(진정상태)",
+      "playable": true,
+      "skill": {
+        "description": "모든 적에게 {value}의 데미지를 입히고 {probability}로 침묵 상태로 만든다",
+        "id": "1399",
+        "name": "대혼돈의 세계",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SILENCE",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 638.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 765,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4430,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
       },
       "synergies": []
     },
@@ -10546,6 +11434,653 @@
       },
       "synergies": []
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "독 상태를 무효화한다(조력자이외 아군파티 1회유효)",
+          "id": "140001",
+          "name": "학습 능력",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "140001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"그건 또 뭐죠? 핫케이크 말인가요...? 음, 맛있게 생겼네요.\" </color><br/><color=#ef9843>악한 신 니알라토텝</color>의 다른 성격으로 인해 나타난 <color=#ef9843>물질</color>. 처음 나타났을 때, 전혀 말을 할 줄 몰랐지만, 당신의 보살핌과 보호로 점차 많은 것들을 배우게 되었습니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001926+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001926+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140001"
+        ],
+        "generation": 0
+      },
+      "name": "장난의 가면",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "최종 WAVE 시 모든 요괴 속성 파티원을 침묵 상태로 만드는 대신 전투 데미지를 25% 증가시킨다",
+          "id": "140101",
+          "name": "은하의 정령",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "치명타율이 30% 증가하고 치명타 데미지가 60% 증가한다",
+          "id": "140102",
+          "name": "우주의 균형",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 30.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "140101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"당신이 은하계를 정복할 수 있다고 생각한다면... 여기에 남아서 당신의 이상한 힘에 대해 더 조사하겠습니다...\"</color><br/>지구에서 2.3백만 광년 떨어진 <color=#ef9843>은하계의 혼령</color>. 그녀는 <color=#ef9843>니알라토텝</color>이 사라졌을 때 우주 균형이 깨지는 것을 두려워하며 이곳에 오기로 했습니다. 미라의 교수인 야타와 이상한 우정 관계입니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003409+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003409+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140101"
+        ],
+        "generation": 1
+      },
+      "name": "안드로메다",
+      "playable": true,
+      "skill": {
+        "description": "HP가 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 받는 데미지를 {delay1} 증가시킨다",
+        "id": "1401",
+        "name": "초신성",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.72,
+              "type": "SHIELD",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4730,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 자신의 스킬 데미지가 15% 증가한다",
+          "id": "140201",
+          "name": "응카이의 신",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 공격력이 가장 높은 적에게 공격 속도를 50% 감소시킨다",
+          "id": "140202",
+          "name": "무형의 자손",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "140201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"니알리를 도와주셔서 고마워요! </color><br/><color=#ef9843>크툴루 신화</color> 우주의 <color=#ef9843>아주 오래된 신들</color> 중 하나. 니알라토텝의 운명을 걱정하며 지구에 올 때 안드로메다를 데려왔고, 지금은 누구보다도 당신과 가까워지고 싶어합니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003139+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003139+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140201"
+        ],
+        "generation": 1
+      },
+      "name": "차토구아",
+      "playable": true,
+      "skill": {
+        "description": "적 3명(근접형 우선)에게 {value}의 데미지를 입힌다",
+        "id": "1402",
+        "name": "어둠의 두루마리",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 750,
+          "slvup": 22,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4230,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "신령 속성 파티원의 스킬 데미지가 15% 증가한다",
+          "id": "140401",
+          "name": "약점 간파",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최종 WAVE 시 모든 적의 치명타 데미지를 20% 감소시킨다",
+          "id": "140402",
+          "name": "은하 순찰",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": -20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "140401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"그럼 생일이 언제죠? 아, 정말요! 좋아요, 그럼... 이제 이상적인 파트너에 대해 설명 드리죠...\"</color><br/><color=#ef9843>은하계 보안군</color> 소속의 우주 평화와 균형을 지키는 책임감 있는 자. 갑자기 아수라장을 만들기 시작한 <color=#ef9843>악한 신</color>들을 조사하기 위해 지구에 파견되었습니다. 악한 신에 맞서 싸우는 음양사들에 대해 관심이 있고, 현재는 당신에 대해 자세히 조사하고 있습니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001191+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001191+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140401"
+        ],
+        "generation": 0
+      },
+      "name": "마샤",
+      "playable": true,
+      "skill": {
+        "description": "전방 광범위의 적에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 {delay1} 감소시킨다",
+        "id": "1404",
+        "name": "분석",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.29,
+              "type": "ATK",
+              "value": -10.0
+            }
+          ],
+          "immediate": {
+            "base": 530.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 713,
+          "slvup": 20,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4300,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
     "141": {
       "abilities": [
         {
@@ -10725,6 +12260,154 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "모든 영물 속성의 파티원의 치명타율이 10% 증가한다",
+          "id": "141301",
+          "name": "강철의 요새",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "141301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"사령관! 내가 인간의 모든 적을 몰살하는 것을 지켜보도록 해!\"</color><br/>사상 최대이자 최고인 <color=#ef9843>전함</color>의 <color=#ef9843>혼령</color>. <color=#ef9843>악한 신들</color>로부터 지구를 지키는 것을 돕기 위해 비밀 방어 기관에서 파견되었다. 당신을 사령관으로서 깊이 존경한 나머지 기관으로 돌아가지 않기로 했다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004703+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004703+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "141301"
+        ],
+        "generation": 0
+      },
+      "name": "케이티",
+      "playable": true,
+      "skill": {
+        "description": "HP가 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정시간 동안 공격력을 {delay1}감소시킨다",
+        "id": "1413",
+        "name": "캐논 배터리",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.41,
+              "type": "ATK",
+              "value": -12.0
+            }
+          ],
+          "immediate": {
+            "base": 1300.0,
+            "scale": 44.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1338,
+          "slvup": 45,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4000,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -13127,6 +14810,715 @@
       "synergies": [
         "142"
       ]
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "치명타율이 40% 증가한다",
+          "id": "144201",
+          "name": "요정 여왕",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "파티장일 때 모든 요괴 속성 파티원의 치명타 데미지가 50% 증가한다",
+          "id": "144202",
+          "name": "신년 연회",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"일본식으로 새해를 즐겨요! 특별 초밥... 맛있는 우동... 최고죠!\"</color><br/> 다른 요정 혼령들을 통치하는 <color=#ef9843>요정 여왕</color>. 겨울 축제에 참석하기 위해 일본에 왔어요. 올해 약속한 대로 간사이로 떠나기 전에, 당신을 모실 거예요.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003945+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003945+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144201"
+        ],
+        "generation": 0
+      },
+      "name": "티타니아 [새해2]",
+      "playable": true,
+      "skill": {
+        "description": "공격력이 가장 높은 적 3명에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 {delay1} 감소시킨다",
+        "id": "1442",
+        "name": "여왕의 축복",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.43,
+              "type": "ATK",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 880.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1635,
+          "slvup": 48,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4500,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "영혼석 보상이 40% 증가와 동시에 보상의 드랍률이 20% 상승한다(조력자이외 아군파티 1회유효)",
+          "id": "144301",
+          "name": "이와토의 춤",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "COIN",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 신령 속성 파티원의 전투 데미지가 10% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "144302",
+          "name": "카구라",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-23 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-01-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"새해 복 많이 받으세요! 모두가 저와 춤추며 또 한 해를 즐겁게 보내기를 바라요!\"</color><br/>특별한 <color=#ef9843>예술적 재능을 가진</color> 여신. 새해에는 춤으로 음양사를 즐겁게 하고 싶어서 특별한 의상도 준비했어요. 항상 당신에게 감동을 주기 위해 연습해요!",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004198+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004198+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144301"
+        ],
+        "generation": 0
+      },
+      "name": "아메노 우즈메 [새해]",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1443",
+        "name": "전쟁의 춤",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "치명타 데미지가 75% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "144401",
+          "name": "죄업 세정",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "스킬 데미지 75% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "144402",
+          "name": "신생",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "144401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"모든 죄를 씻고 싶은가? 새로운 시작을 하기에 새해처럼 좋은 때는 없어...\"</color><br/><color=#ef9843>죽음을 다스리는 여신</color>. 죽음의 여신은 가난의 여신, 불운의 여신과 함께 <color=#ef9843>3대 미혹신</color> 중 한 명이다. 부활과 새로운 시작을 상징한다. 좌우명은 \"너무 늦은 때란 없다\"이다. 변화를 이끌기 위한 첫걸음의 중요성에 대해 끊임없이 강조하곤 한다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003661+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003661+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144401"
+        ],
+        "generation": 1
+      },
+      "name": "죽음의 신 [새해]",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1444",
+        "name": "최후의 심판",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "모든 영물 속성 파티원이 받는 데미지가 12% 감소한다",
+          "id": "144501",
+          "name": "오방 인형",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 영물 속성 파티원의 최대 HP가 4% 증가한다",
+          "id": "144502",
+          "name": "맏언니의 기도",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "144501",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"새해 복 많이 받으세요. 이 세상의 모든 즐거움을 누리시기를 바라요.\"</color><br/>천재적인 인형<color=#ef9843> 제조자, 아벨이</color> 만든 <color=#ef9843>자동인형의 혼령이에요</color>. <color=#ef9843>희귀한</color> 5개의 향 시리즈의 <color=#ef9843>첫 번째 인형이다</color>. 새해에는 자매들의 행복을 빌며 당신과 함께 순례를 합니다.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004465+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004465+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144501"
+        ],
+        "generation": 0
+      },
+      "name": "바닐라 [새해]",
+      "playable": true,
+      "skill": {
+        "description": "남은 HP비율이 가장 낮은 아군3명의 HP를 {value}회복시키고 전투데미지를 {delay1} 증가시킨다",
+        "id": "1445",
+        "name": "바닐라의 정령",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.58,
+              "type": "ATK",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 500.0,
+            "scale": 14.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 1565,
+          "slvup": 45,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4065,
+        "base_hp": 3930,
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
     },
     "145": {
       "abilities": [
@@ -140303,6 +142695,6 @@
     }
   },
   "locale": "ko_KR",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }

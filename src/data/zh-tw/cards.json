@@ -10109,6 +10109,288 @@
       },
       "synergies": []
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方血量百分比最低的隊員血量15%回復",
+          "id": "138801",
+          "name": "重力場",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "min_hpp",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "138801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「啊...！他們終於動了！主人，我說了，你是這世界的希望之光！」</color><br/>重力槍之靈<color=#ef9843>，</color>重力槍是某個機密防衛組織所開發的祕密武器。她的任務是臥底調查秋葉原，所以她表面上穿著女僕裝，但實際上是九十九神。這個非比尋常的角色，其實是負責保護世界的重力槍！",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001479+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001479+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138801"
+        ],
+        "generation": 1
+      },
+      "name": "卡史提拉",
+      "playable": true,
+      "skill": {
+        "description": "對2名敵人（近戰優先）造成{value}點傷害",
+        "id": "1388",
+        "name": "全部掃射",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 770.0,
+            "scale": 28.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2665,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "敵方全體攻擊速度15%減少",
+          "id": "138901",
+          "name": "活火焰",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "138901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「拜託更熱血一點！如果你再不加把勁，我就要放火囉！」</color><br/>來自<color=#ef9843>克蘇魯神話</color>宇宙的一位<color=#ef9843>古代神祇</color>，身體被籠罩在火海之中。<color=#ef9843>邪神</color>的死敵。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002413+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002413+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "138901"
+        ],
+        "generation": 0
+      },
+      "name": "克圖格亞",
+      "playable": true,
+      "skill": {
+        "description": "一定時間內，敵方全體防禦降低{delay1}",
+        "id": "1389",
+        "name": "熾熱火舞",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -160.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 640,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2400,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "139": {
       "abilities": [
         {
@@ -10246,6 +10528,612 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方全體隊員血量10%回復（除助戰外，己方全體僅生效1次）",
+          "id": "139001",
+          "name": "聖獸的加護",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "139001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「現在，靠近我的角... 我可以為你的生命帶來歡樂和活力。」</color><br/>一隻神祕的<color=#ef9843>聖獸</color>，額頭上長了一支角。這支角充滿神聖的力量，只有懷著純潔的心才能接近。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001709+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001709+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139001"
+        ],
+        "generation": 1
+      },
+      "name": "獨角獸",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "id": "1390",
+        "name": "光波",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 750.0,
+            "scale": 25.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 750,
+          "slvup": 25,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員技能傷害10%增加",
+          "id": "139101",
+          "name": "召喚觸媒",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "139101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「若身邊沒有徬徨於黑暗的事物...我的靈魂將無法平靜...」</color><br/><color=#ef9843></color>克蘇魯神話宇宙之物的靈魂，擁有召喚<color=#ef9843>邪神</color>的力量。奈亞魯法特因為惡魔的召喚儀式而消失後，光輝之偏方面體用她的力量召喚了大量的<color=#ef9843>邪神</color>做為替代品。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002164+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002164+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139101"
+        ],
+        "generation": 0
+      },
+      "name": "光輝之偏方面體",
+      "playable": true,
+      "skill": {
+        "description": "{probability}使敵方全體中強毒",
+        "id": "1391",
+        "name": "偏方面體",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.51,
+              "type": "POISON",
+              "value": 15.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 495,
+          "slvup": 15,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2565,
+        "base_hp": 2130,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "血量低於1/2時，血量每5秒回復10%，同時血量低於1/2時，戰鬥傷害50%增加",
+          "id": "139801",
+          "name": "無面之神",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "139801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「嗚喔喔喔喔喔！！！」</color><br/>克蘇魯神話中的<color=#ef9843>邪神</color>之一，由<color=#ef9843>宇宙混沌</color>所召喚而來。別名是無面神，以及爬行之混沌。由於<color=#ef9843>光輝之偏方面體</color>的過度召喚，有一天她消失了。你鎮壓她的憤怒後，獲得了她的幫助。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002649+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002649+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139801"
+        ],
+        "generation": 1
+      },
+      "name": "奈亞魯法特（亂）",
+      "playable": true,
+      "skill": {
+        "description": "對1名血量最高的敵人造成{value}點傷害",
+        "id": "1398",
+        "name": "混沌波動",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1710.0,
+            "scale": 50.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1505,
+          "slvup": 44,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "技能傷害25%增加",
+          "id": "139901",
+          "name": "千種面相",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "血量上限15%增加",
+          "id": "139902",
+          "name": "夜之吼",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "139901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「你知道，你是唯一一位我能以真面目相待的...」</color><br/><color=#ef9843>克蘇魯神話</color>中的<color=#ef9843>邪神</color>之一，因式神召喚意外而從宇宙混沌被召喚而來，從此在亞空間漂流。感謝你的大力襄助，她開始享受混沌帶來的喜悅。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.002894+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.002894+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "139901"
+        ],
+        "generation": 0
+      },
+      "name": "奈亞魯法特（鎮）",
+      "playable": true,
+      "skill": {
+        "description": "對敵方全體造成{value}點傷害，並使目標{probability}沉默",
+        "id": "1399",
+        "name": "混沌世界",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SILENCE",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 638.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 765,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4430,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
       },
       "synergies": []
     },
@@ -10546,6 +11434,653 @@
       },
       "synergies": []
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "免疫中毒狀態（除助戰外，己方全體僅生效1次）",
+          "id": "140001",
+          "name": "學習能力",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "140001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「這個圓圓、黏黏的東西是什麼啊？你說這叫煎薄餅...？嗯，看起來很好吃。」</color><br/>從<color=#ef9843>邪神奈亞魯法特</color>另一人格變化而來的<color=#ef9843>物質型態</color>。她第一次出現時，還無法分辨左右，但由於你的悉心照顧與指導，她逐漸學會了很多事物。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001926+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001926+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140001"
+        ],
+        "generation": 0
+      },
+      "name": "邪神的面具",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "最終回合，己方全體怪屬性隊員沉默，同時戰鬥傷害25%增加",
+          "id": "140101",
+          "name": "銀河精靈",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴擊率30%增加，同時暴擊傷害60%增加",
+          "id": "140102",
+          "name": "宇宙平衡",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 30.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "140101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「由於我認為你的力量能牽動銀河... 我會待在這裡，進一步調查你所擁有的神祕力量...」</color><br/><color=#ef9843>銀河的精靈</color>，和地球的距離約 230 萬光年。<color=#ef9843>奈亞魯法特</color>消失後，由於擔心宇宙平衡會被打亂，因而決定來到此地。她和鏡的師父，八咫，建立了不可思議的友誼。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003409+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003409+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140101"
+        ],
+        "generation": 1
+      },
+      "name": "仙女座",
+      "playable": true,
+      "skill": {
+        "description": "對1名HP最高的敵人造成{value}點傷害，並使目標一定時間內所受傷害提升{delay1}",
+        "id": "1401",
+        "name": "超新星",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.72,
+              "type": "SHIELD",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4730,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "每回合開始時，自身技能傷害15%增加",
+          "id": "140201",
+          "name": "恩凱之神",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，攻擊最高的敵人攻擊速度50%減少",
+          "id": "140202",
+          "name": "無形之子",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "140201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「謝謝你幫助了奈亞！</color><br/>來自<color=#ef9843>克蘇魯神話</color>宇宙的一位<color=#ef9843>古代神祇</color>。因為擔心奈亞魯法特的命運，她和仙女座一同來到地球，而現在她最喜歡和你待在一起。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003139+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003139+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140201"
+        ],
+        "generation": 1
+      },
+      "name": "札特瓜",
+      "playable": true,
+      "skill": {
+        "description": "對3名敵人（近戰優先）造成{value}點傷害",
+        "id": "1402",
+        "name": "黑暗之書",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 750,
+          "slvup": 22,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4230,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "己方全體靈屬性隊員技能傷害15%增加",
+          "id": "140401",
+          "name": "弱點識破",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最終回合，敵方全體暴擊傷害20%減少",
+          "id": "140402",
+          "name": "銀河巡警",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": -20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "140401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「那你生日是什麼時候？...哦，告訴我嘛！好啦，那... 現在形容一下你的理想伴侶...」</color><br/>身為<color=#ef9843>星際安全警衛</color>的一員，有責任保衛宇宙的和平和秩序。來到地球調查<color=#ef9843>邪神</color>突然開始作亂的原因。對於對抗邪神的陰陽師們很有興趣，如今正在對你進行一項刨根究柢的深入調查。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.001191+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.001191+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140401"
+        ],
+        "generation": 0
+      },
+      "name": "瑪莎",
+      "playable": true,
+      "skill": {
+        "description": "對身前大範圍內的敵人造成{value}點傷害，並使目標一定時間內傷害降低{delay1}\t",
+        "id": "1404",
+        "name": "分析",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.29,
+              "type": "ATK",
+              "value": -10.0
+            }
+          ],
+          "immediate": {
+            "base": 530.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 713,
+          "slvup": 20,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4300,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
     "141": {
       "abilities": [
         {
@@ -10725,6 +12260,154 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員暴擊率10%增加",
+          "id": "141301",
+          "name": "鋼鐵堡壘",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "141301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「司令官！請看著，我會消滅所有人類的敵人！」</color><br/>史上最強大的<color=#ef9843>戰艦</color>之<color=#ef9843>靈</color>。獲令前往一個機密防衛組織，幫助地球免於<color=#ef9843>邪神</color>肆虐。她認定你為司令官並對其十分崇敬，因而決定脫離組織。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004703+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004703+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "141301"
+        ],
+        "generation": 0
+      },
+      "name": "凱蒂",
+      "playable": true,
+      "skill": {
+        "description": "對1名血量最高的敵人造成{value}點傷害，並使目標一定時間內戰鬥傷害降低{delay1}",
+        "id": "1413",
+        "name": "大炮發射",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.41,
+              "type": "ATK",
+              "value": -12.0
+            }
+          ],
+          "immediate": {
+            "base": 1300.0,
+            "scale": 44.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1338,
+          "slvup": 45,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4000,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -13127,6 +14810,715 @@
       "synergies": [
         "142"
       ]
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "暴擊率40%增加",
+          "id": "144201",
+          "name": "妖精女王",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "身為隊長時，己方全體怪屬性隊員暴擊傷害50%增加",
+          "id": "144202",
+          "name": "新年盛宴",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「讓我們來享受一個日式新年吧！伊達捲... 栗子地瓜泥... 太棒了！」</color><br/>她是統治所有森林妖精的<color=#ef9843>妖精女王</color>。遠道前來日本參加這場冬季盛會。今天她會按照約定服侍你，再出發去關西。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003945+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003945+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144201"
+        ],
+        "generation": 0
+      },
+      "name": "泰坦妮婭[新年2]",
+      "playable": true,
+      "skill": {
+        "description": "對3名ATK最高的敵人造成{value}點傷害，並使目標一定時間內傷害降低{delay1}",
+        "id": "1442",
+        "name": "女王的祝福",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -0.43,
+              "type": "ATK",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 880.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1635,
+          "slvup": 48,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4500,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "妖石結算獎勵40%增加，同時獎勵掉落概率20%增加（除助戰外，己方全體僅生效1次）",
+          "id": "144301",
+          "name": "岩戶之舞",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "COIN",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "每回合開始時，己方全體靈屬性隊員戰鬥傷害10%增加（除助戰外，己方全體僅生效1次）",
+          "id": "144302",
+          "name": "神樂",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-23 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-01-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "144301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「新年快樂！今年和明年都請多多指教，我會繼續為大家跳舞的！」</color><br/>一位極富藝術天分的<color=#ef9843>女神</color>。她熱愛在新年時為陰陽師獻舞，還為此刻精挑細選了一件特別的服裝。為了能讓你對她的舞蹈印像深刻而一直勤練不輟。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004198+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004198+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144301"
+        ],
+        "generation": 0
+      },
+      "name": "天鈿女命[新年]",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "id": "1443",
+        "name": "戰舞",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "暴擊傷害75%增加。（除助戰外，己方全體僅生效1次）",
+          "id": "144401",
+          "name": "罪業洗淨",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "技能傷害75%增加。（除助戰外，己方全體僅生效1次）",
+          "id": "144402",
+          "name": "新生",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 75.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "144401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「想要洗去所有的罪孽嗎？新的一年正適合新的開始...」</color><br/><color=#ef9843>她是執掌死亡的女神</color>。她也是<color=#ef9843>三大災禍神</color>之一，其他兩位是窮神和厄病神。她同時也象徵復活和新生。她的座右銘是「永不嫌遲」。而且會不斷強調踏出改變的第一步的重要性。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.003661+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.003661+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144401"
+        ],
+        "generation": 1
+      },
+      "name": "死神[新年]",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "id": "1444",
+        "name": "最後審判",
+        "parsed": {
+          "effects": [
+            {
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員所受傷害12%減少",
+          "id": "144501",
+          "name": "五芳人偶",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，己方全體付屬性隊員血量上限4%增加",
+          "id": "144502",
+          "name": "長姐的祈願",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "144501",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「新年快樂。希望你們能獲得世界上的所有幸福。」</color><br/>由天才人偶師<color=#ef9843>阿貝爾</color>製作的<color=#ef9843>機器人偶</color>之靈。她是極難入手的<color=#ef9843>五芳人偶系列</color>編號<color=#ef9843>第一號</color>的人偶。她和你在新年時一起去參拜，並祈禱弟妹們能幸福快樂。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-16T02:26:52.004465+00:00",
+        "first_seen_version": "6ba4beb",
+        "last_modified": "2026-01-16T02:26:52.004465+00:00",
+        "last_modified_version": "6ba4beb"
+      },
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "144501"
+        ],
+        "generation": 0
+      },
+      "name": "香子蘭[新年]",
+      "playable": true,
+      "skill": {
+        "description": "恢復3名血量百分比最低的隊員{value}點血量，並使目標一定時間內戰鬥傷害增加{delay1}",
+        "id": "1445",
+        "name": "香草精",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.58,
+              "type": "ATK",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 500.0,
+            "scale": 14.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 1565,
+          "slvup": 45,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4065,
+        "base_hp": 3930,
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
     },
     "145": {
       "abilities": [
@@ -140303,6 +142695,6 @@
     }
   },
   "locale": "zh_TW",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }

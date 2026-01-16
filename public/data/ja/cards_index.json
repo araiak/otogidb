@@ -3431,6 +3431,107 @@
         "type_name": "Melee"
       }
     },
+    "1388": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、最大ＨＰと残ＨＰの割合が低い味方式神のＨＰを15%回復",
+          "name": "重力フィールド",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 54
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101388",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1388",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101388.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101388_hd.png"
+      },
+      "name": "重力銃 ステラ",
+      "playable": true,
+      "skill": {
+        "description": "敵２体（近接型優先）に2,982のダメージを与える",
+        "name": "一斉掃射",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1389": {
+      "abilities": [
+        {
+          "description": "敵全体のスピードが15%軽減",
+          "name": "生ける炎",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101389",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1389",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530392/otogi/android/101389.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101389_hd.png"
+      },
+      "name": "クトゥグア",
+      "playable": true,
+      "skill": {
+        "description": "敵全体の防御力を、一時的に555低下させる",
+        "name": "灼熱炎舞",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7200,
+        "max_hp": 8000,
+        "rarity": 4,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "139": {
       "abilities": [
         {
@@ -3479,6 +3580,216 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Melee"
+      }
+    },
+    "1390": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、味方式神全体のＨＰを10%回復（助っ人以外、味方陣容一回有効）",
+          "name": "聖獣の加護",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101390",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1390",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101390.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530400/otogi/cards_hd/101390_hd.png"
+      },
+      "name": "一角獣",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "name": "光の波動",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1391": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神の特技の威力向上10%",
+          "name": "召喚触媒",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101391",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1391",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530387/otogi/android/101391.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101391_hd.png"
+      },
+      "name": "輝くトラペゾヘドロン",
+      "playable": true,
+      "skill": {
+        "description": "81.25%で敵全体を猛毒状態にする",
+        "name": "トラペゾヘドロン",
+        "tags": [
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7700,
+        "max_hp": 6400,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1398": {
+      "abilities": [
+        {
+          "description": "ＨＰが１／２以下の時、ＨＰ自動回復（ゆっくり）、与ダメージ値が50%に増加",
+          "name": "無貌の神",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101398",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1398",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530394/otogi/android/101398.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/cards_hd/101398_hd.png"
+      },
+      "name": "ニャルラトホテプ[乱]",
+      "playable": true,
+      "skill": {
+        "description": "HP最高敵１体に6,160のダメージを与える",
+        "name": "混沌の波動",
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1399": {
+      "abilities": [
+        {
+          "description": "特技の威力が25%向上",
+          "name": "千の顔",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最大ＨＰが15%上昇",
+          "name": "夜の咆哮",
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101399",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1399",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530393/otogi/android/101399.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530406/otogi/cards_hd/101399_hd.png"
+      },
+      "name": "ニャルラトホテプ[鎮]",
+      "playable": true,
+      "skill": {
+        "description": "敵全体に2,329のダメージを与え、対象を50.49%で沈黙状態にする",
+        "name": "カオス・ワールド",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13300,
+        "max_hp": 9800,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "14": {
@@ -3583,6 +3894,231 @@
         "type_name": "Ranged"
       }
     },
+    "1400": {
+      "abilities": [
+        {
+          "description": "毒状態を無効化する（助っ人以外、味方陣容一回有効）",
+          "name": "学習能力",
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison"
+          ],
+          "unlock_level": 38
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101400",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1400",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101400.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png"
+      },
+      "name": "邪神の仮面",
+      "playable": true,
+      "skill": null,
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1401": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、怪異属性の味方式神を沈黙状態にする代わりに、与ダメージ値を25%増加させる",
+          "name": "銀河の精霊",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "クリティカル率が30%上昇し、クリティカルダメージ値が60%増加",
+          "name": "宇宙の均衡",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101401",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1401",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101401.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530407/otogi/cards_hd/101401_hd.png"
+      },
+      "name": "アンドロメダ(銀河)",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰが最も高い敵１体に7,529のダメージを与え、対象の被ダメージ値を一時的に89.08%増加させる",
+        "name": "スーパーノヴァ",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 9000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1402": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の特技の威力が向上15%",
+          "name": "ンカイの神",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、最も攻撃力が高い敵のスピードを50%軽減する",
+          "name": "無形の落とし子",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Slow"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101402",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1402",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530389/otogi/android/101402.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530401/otogi/cards_hd/101402_hd.png"
+      },
+      "name": "ツァトゥグァ",
+      "playable": true,
+      "skill": {
+        "description": "敵３体（近接型優先）に2,847のダメージを与える",
+        "name": "暗黒の書",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12700,
+        "max_hp": 10200,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1404": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神の特技ダメージ値が15%増加",
+          "name": "弱点看破",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最終のＷＡＶＥに、敵全体のクリティカルダメージ値を20%軽減",
+          "name": "銀河パトロール",
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101404",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1404",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530397/otogi/android/101404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530402/otogi/cards_hd/101404_hd.png"
+      },
+      "name": "異星人 スレイ",
+      "playable": true,
+      "skill": {
+        "description": "前方広範囲の敵に1,865のダメージを与え、対象の攻撃力を一時的に35.81%低下させる\t",
+        "name": "アナライズ",
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12900,
+        "max_hp": 9900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
     "141": {
       "abilities": [
         {
@@ -3644,6 +4180,58 @@
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1413": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神のクリティカル率10%上昇",
+          "name": "鋼鉄の要塞",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101413",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1413",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530391/otogi/android/101413.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530411/otogi/cards_hd/101413_hd.png"
+      },
+      "name": "航空母艦 ケイティ",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰが最も高い敵１体に5,216のダメージを与え、対象の攻撃力を一時的に48.49%低下させる",
+        "name": "主砲発射",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 8900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "142": {
@@ -4350,6 +4938,253 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1442": {
+      "abilities": [
+        {
+          "description": "クリティカル率が40%に増加",
+          "name": "妖精女王",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "大将の場合、怪異属性の味方式神のクリティカルダメージ値が50%増加",
+          "name": "新年の宴",
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101442",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1442",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530395/otogi/android/101442.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530410/otogi/cards_hd/101442_hd.png"
+      },
+      "name": "ティターニア[新年2]",
+      "playable": true,
+      "skill": {
+        "description": "最も攻撃力が高い敵３体に3,194のダメージを与え、対象の攻撃力を一時的に53.27%低下させる",
+        "name": "女王の祝福",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1443": {
+      "abilities": [
+        {
+          "description": "妖石清算ボーナスが40%増加し、ボーナスのドロップ率が20%上昇（助っ人以外、味方陣容一回有効）",
+          "name": "岩戸の舞",
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "WAVE開始ごとに、霊験属性の味方式神の与ダメージ値が10%増加（助っ人以外、味方陣容一回有効）",
+          "name": "神楽",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101443",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1443",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530388/otogi/android/101443.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530404/otogi/cards_hd/101443_hd.png"
+      },
+      "name": "アメノウズメ[正月]",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "name": "戦いの舞踏",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1444": {
+      "abilities": [
+        {
+          "description": "クリティカルダメージ値75%上昇（助っ人以外、味方陣容一回有効）",
+          "name": "罪業洗浄",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "特技の威力が75%向上（助っ人以外、味方陣容一回有効）",
+          "name": "新生",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101444",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1444",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101444.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101444_hd.png"
+      },
+      "name": "死神[正月]",
+      "playable": true,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "name": "断罪",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1445": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神の被ダメージを12%軽減",
+          "name": "五芳人形",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、付喪属性の味方式神の最大ＨＰが4%上昇",
+          "name": "長女の祈り",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101445",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1445",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530390/otogi/android/101445.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530408/otogi/cards_hd/101445_hd.png"
+      },
+      "name": "ヴァニラ[正月]",
+      "playable": true,
+      "skill": {
+        "description": "残ＨＰのパセントの比率が最も低い味方3体のＨＰを1,746回復し、攻撃力を一時的に71.62%上昇させる",
+        "name": "ヴァニラ・エッセンス",
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12200,
+        "max_hp": 11800,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
       }
     },
     "145": {
@@ -46445,6 +47280,6 @@
     }
   },
   "locale": "ja",
-  "total_cards": 884,
-  "version": "fc95c57"
+  "total_cards": 899,
+  "version": "6ba4beb"
 }
