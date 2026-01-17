@@ -25,6 +25,7 @@ export interface ParsedSkillEffect {
   type: string;
   value: number;
   scale?: number;
+  duration?: number;  // Duration in seconds for buffs/debuffs/CC
 }
 
 export interface ParsedSkillImmediate {

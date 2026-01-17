@@ -9,6 +9,7 @@ import type { Card, Ability } from '../types/card';
 // Bond Types
 // ============================================================================
 
+// Legacy bond type (kept for backwards compatibility with saved states)
 export type BondType =
   | 'none'
   | 'atk15'
@@ -22,6 +23,29 @@ export type BondType =
   | 'split5'
   | 'split7';
 
+// New single bond slot type
+export type BondSlotType = 'none' | 'atk5' | 'atk7' | 'skill5' | 'skill7';
+
+export const BOND_SLOT_VALUES: Record<BondSlotType, { atk: number; skill: number }> = {
+  'none': { atk: 0, skill: 0 },
+  'atk5': { atk: 0.05, skill: 0 },
+  'atk7': { atk: 0.075, skill: 0 },
+  'skill5': { atk: 0, skill: 0.05 },
+  'skill7': { atk: 0, skill: 0.075 },
+};
+
+export const BOND_SLOT_LABELS: Record<BondSlotType, string> = {
+  'none': 'None',
+  'atk5': '+5% ATK',
+  'atk7': '+7.5% ATK',
+  'skill5': '+5% Skill',
+  'skill7': '+7.5% Skill',
+};
+
+// Default bond slot value
+export const DEFAULT_BOND_SLOT: BondSlotType = 'none';
+
+// Legacy BOND_VALUES kept for backwards compatibility
 export const BOND_VALUES: Record<BondType, { atk: number; skill: number }> = {
   'none': { atk: 0, skill: 0 },
   'atk15': { atk: 0.15, skill: 0 },
@@ -35,6 +59,17 @@ export const BOND_VALUES: Record<BondType, { atk: number; skill: number }> = {
   'split5': { atk: 0.05, skill: 0.05 },
   'split7': { atk: 0.075, skill: 0.075 },
 };
+
+// Helper to combine bond slots into total values
+export function combineBondSlots(bond1: BondSlotType, bond2: BondSlotType, bond3: BondSlotType): { atk: number; skill: number } {
+  const v1 = BOND_SLOT_VALUES[bond1];
+  const v2 = BOND_SLOT_VALUES[bond2];
+  const v3 = BOND_SLOT_VALUES[bond3];
+  return {
+    atk: v1.atk + v2.atk + v3.atk,
+    skill: v1.skill + v2.skill + v3.skill,
+  };
+}
 
 // ============================================================================
 // Ability Parsing Types
@@ -57,7 +92,7 @@ export type AbilityTiming =
   | 'entry';      // When card enters battle
 
 export interface AbilityEffect {
-  stat: 'atk' | 'critRate' | 'critDmg' | 'dmg' | 'skillDmg' | 'speed' | 'level' | 'shield' | 'normalDmg' | 'hp';
+  stat: 'atk' | 'critRate' | 'critDmg' | 'dmg' | 'skillDmg' | 'speed' | 'level' | 'shield' | 'defense' | 'normalDmg' | 'hp';
   value: number;  // Percentage as decimal (0.15 = 15%)
   isDebuff?: boolean;  // True if this reduces enemy stats
 }
@@ -87,6 +122,40 @@ export interface ParsedAbility {
   // Stacking
   stackable: boolean;
 }
+
+// ============================================================================
+// Random Targeting Mode
+// ============================================================================
+
+/**
+ * How to resolve random/ambiguous ability targets
+ * Used for abilities like "2 random Divina allies" where no stat-based sorting exists
+ */
+export type RandomTargetMode =
+  | 'average'  // Distribute effect proportionally across all eligible (default)
+  | 'first'    // First N eligible members (deterministic)
+  | 'last'     // Last N eligible members
+  | 'best'     // Members with highest relevant stats (optimistic)
+  | 'worst'    // Members with lowest relevant stats (pessimistic)
+  | 'random';  // True random selection
+
+export const RANDOM_TARGET_MODE_LABELS: Record<RandomTargetMode, string> = {
+  average: 'Average',
+  first: 'First N',
+  last: 'Last N',
+  best: 'Best Case',
+  worst: 'Worst Case',
+  random: 'Random',
+};
+
+export const RANDOM_TARGET_MODE_DESCRIPTIONS: Record<RandomTargetMode, string> = {
+  average: 'Distribute effect proportionally to all eligible members',
+  first: 'Select first N eligible members (slots 1→5)',
+  last: 'Select last N eligible members (slots 5→1)',
+  best: 'Select members with highest relevant stats',
+  worst: 'Select members with lowest relevant stats',
+  random: 'Randomly select from eligible members',
+};
 
 // ============================================================================
 // Stat Breakdown Types
@@ -129,15 +198,27 @@ export interface ComputedMemberStats {
 
 export interface MemberDamageResult {
   normalDamage: number;
+  normalDamageMin: number;        // Min damage (no exceed bonus)
+  normalDamageMax: number;        // Max damage (full exceed bonus)
   normalDamageCrit: number;
+  normalDamageCritMin: number;
+  normalDamageCritMax: number;
   normalDamageExpected: number;
   normalDamageCapped: boolean;
   normalDps: number;
+  normalDpsMin: number;           // Min DPS (based on min expected damage)
+  normalDpsMax: number;           // Max DPS (based on max expected damage)
 
   skillBaseDamage: number;        // Raw skill damage before modifiers
   skillDamage: number;
+  skillDamageMin: number;         // Min skill damage (no exceed)
+  skillDamageMax: number;         // Max skill damage (full exceed)
   skillDamageCrit: number;
+  skillDamageCritMin: number;
+  skillDamageCritMax: number;
   skillDamageExpected: number;
+  skillDamageExpectedMin: number; // Min expected skill damage (with crit, no exceed)
+  skillDamageExpectedMax: number; // Max expected skill damage (with crit, full exceed)
   skillDamageCapped: boolean;
 }
 
@@ -162,6 +243,7 @@ export interface ParsedSkillEffect {
   targetCount: number;        // 1 = single, 2-5 = multi, 99 = all
   targetPriority: 'highest_atk' | 'lowest_hp' | 'current' | 'random' | 'all' | null;
   buffs: SkillBuff;
+  duration?: number;          // Duration in seconds (from effect data)
 }
 
 // ============================================================================
@@ -180,7 +262,10 @@ export interface TeamMemberState {
   // Configuration
   limitBreak: number;             // 0-4 (MLB = 4)
   levelBonus: number;             // 0-30
-  bondType: BondType;
+  bond1: BondSlotType;            // First bond slot (default: atk7)
+  bond2: BondSlotType;            // Second bond slot (default: atk7)
+  bond3: BondSlotType;            // Third bond slot (locked to 'none' if assist selected, default: atk7)
+  bondType: BondType;             // Legacy (kept for backwards compatibility)
 
   // Skill activation toggle
   // When active, skill buffs are applied to targets
@@ -192,6 +277,7 @@ export interface TeamMemberState {
   // Computed values (populated after calculation phases)
   computedStats: ComputedMemberStats | null;
   damageResult: MemberDamageResult | null;  // null for reserve slots
+  abilityContributions: Phase3AbilityContribution[];  // Source tracking for UI tooltips
 
   // Parsed skill effects (populated when card is set)
   skillEffect: ParsedSkillEffect | null;
@@ -284,6 +370,9 @@ export interface EnemyState {
   isFinalWave: boolean;           // Enable Final Wave abilities
   waveCount: number;              // Number of waves passed (for Wave Start stacking)
   attribute: EnemyAttribute;      // Enemy attribute for race bonus (default: 'None')
+  ignoreShieldCap: boolean;       // If true, skip -75%/+85% shield cap (World Boss mode)
+  worldBossBonus: number;         // Additional multiplier for World Boss (e.g., 1.0 = none, 2.0 = 2x)
+  healersDontAttack: boolean;     // If true, healers deal 0 damage (busy healing)
 }
 
 // ============================================================================
@@ -304,6 +393,9 @@ export interface TeamState {
   // Maps ability ID to array of target member indices
   abilityTargetOverrides: Record<string, number[]>;
 
+  // How to resolve random ability targets (default: 'first')
+  randomTargetMode: RandomTargetMode;
+
   // Calculated context (populated after Phase 2)
   teamContext: TeamContext | null;
 
@@ -321,7 +413,10 @@ export interface StoredMemberState {
   assistCardId: string | null;
   limitBreak: number;
   levelBonus: number;
-  bondType: BondType;
+  bond1?: BondSlotType;           // Optional for backwards compatibility
+  bond2?: BondSlotType;           // Optional for backwards compatibility
+  bond3?: BondSlotType;           // Optional for backwards compatibility
+  bondType: BondType;             // Legacy, kept for backwards compatibility
   skillActive: boolean;
 }
 
@@ -333,6 +428,9 @@ export interface StoredTeamState {
     isFinalWave: boolean;
     waveCount: number;
     attribute?: EnemyAttribute; // Optional for backwards compatibility
+    ignoreShieldCap?: boolean; // Optional for backwards compatibility (World Boss mode)
+    worldBossBonus?: number;   // Optional for backwards compatibility
+    healersDontAttack?: boolean; // Optional for backwards compatibility
   };
   activeTabIndex: number;
   abilityTargetOverrides?: Record<string, number[]>;
@@ -347,7 +445,8 @@ export type TeamAction =
   | { type: 'SET_ASSIST'; memberIndex: number; cardId: string | null }
   | { type: 'SET_LIMIT_BREAK'; memberIndex: number; value: number }
   | { type: 'SET_LEVEL_BONUS'; memberIndex: number; value: number }
-  | { type: 'SET_BOND_TYPE'; memberIndex: number; bondType: BondType }
+  | { type: 'SET_BOND_SLOT'; memberIndex: number; slot: 1 | 2 | 3; value: BondSlotType }
+  | { type: 'SET_BOND_TYPE'; memberIndex: number; bondType: BondType }  // Legacy
   | { type: 'TOGGLE_SKILL'; memberIndex: number }
   | { type: 'SET_ACTIVE_TAB'; index: number }
   | { type: 'SET_ENEMY_BASE_SHIELD'; value: number }
@@ -355,7 +454,11 @@ export type TeamAction =
   | { type: 'SET_ENEMY_ATTRIBUTE'; value: EnemyAttribute }
   | { type: 'SET_FINAL_WAVE'; value: boolean }
   | { type: 'SET_WAVE_COUNT'; value: number }
+  | { type: 'SET_IGNORE_SHIELD_CAP'; value: boolean }
+  | { type: 'SET_WORLD_BOSS_BONUS'; value: number }
+  | { type: 'SET_HEALERS_DONT_ATTACK'; value: boolean }
   | { type: 'SET_ABILITY_TARGETS'; abilityId: string; targets: number[] }
+  | { type: 'SET_RANDOM_TARGET_MODE'; mode: RandomTargetMode }
   | { type: 'CLEAR_MEMBER'; memberIndex: number }
   | { type: 'CLEAR_ALL' }
   | { type: 'SET_LOADING'; isLoading: boolean }
@@ -404,6 +507,7 @@ export interface Phase3Result {
 
   // Enemy debuffs applied by this member's abilities
   enemyShieldDebuff: number;
+  enemyDefenseDebuff: number;  // Defense reduction (multiplicative with shield)
 
   // Source tracking for breakdown
   abilityContributions: Phase3AbilityContribution[];
@@ -413,6 +517,7 @@ export interface Phase4Result {
   memberIndex: number;
   computedStats: ComputedMemberStats;
   damageResult: MemberDamageResult | null;  // null for reserve
+  abilityContributions: Phase3AbilityContribution[];  // Source tracking for tooltips
 }
 
 export interface TeamCalculationResult {
@@ -428,6 +533,9 @@ export interface TeamCalculationResult {
 
   // Ability debuffs (from DMG Amp abilities like Final Wave)
   abilityDebuffTotal: number;
+
+  // Defense debuffs from abilities (reduces enemy defense)
+  defenseDebuffTotal: number;
 
   // Race bonus (team attribute advantage over enemy)
   raceBonus: number;
@@ -458,3 +566,74 @@ export const ATTRIBUTE_IDS = {
 // Card type for assist filtering
 export const ASSIST_TYPE = 4;
 export const ASSIST_TYPE_NAME = 'Assist';
+
+// ============================================================================
+// Fight Calculator Types
+// ============================================================================
+
+/**
+ * Snapshot of member damage values at a specific skill configuration
+ * Captures ALL damage skills regardless of skill toggle (toggle is for buffs)
+ */
+export interface FightSnapshotMember {
+  memberIndex: number;
+  cardName: string | null;
+  dps: number;
+  dpsMin: number;
+  dpsMax: number;
+  // Skill damage per cast (only populated if skill deals damage)
+  hasDamageSkill: boolean;
+  skillDamage: number;          // Expected damage per cast
+  skillDamageMin: number;       // Min damage per cast
+  skillDamageMax: number;       // Max damage per cast
+  skillCasts: number;           // User-configured cast count for this snapshot
+}
+
+/**
+ * A snapshot of team damage output at a specific configuration
+ * Used to model different phases of a fight (e.g., with/without skills)
+ */
+export interface FightSnapshot {
+  id: string;
+  name: string;
+
+  // Captured member damage values (with per-member skill casts)
+  members: FightSnapshotMember[];
+
+  // Team totals at time of capture (DPS only, skill damage is per-member)
+  totalDps: number;
+  totalDpsMin: number;
+  totalDpsMax: number;
+
+  // User-configurable fight parameters
+  durationSeconds: number;    // How long this phase lasts (ignored if isBase)
+  isBase: boolean;            // If true, fills remaining fight time automatically
+}
+
+/**
+ * Results from fight damage calculation
+ */
+export interface FightCalculationResult {
+  // Per-snapshot breakdown
+  snapshotResults: Array<{
+    snapshotId: string;
+    dpsDamage: number;
+    dpsDamageMin: number;
+    dpsDamageMax: number;
+    skillDamage: number;
+    skillDamageMin: number;
+    skillDamageMax: number;
+    totalDamage: number;
+    totalDamageMin: number;
+    totalDamageMax: number;
+  }>;
+
+  // Fight totals
+  totalDamage: number;
+  totalDamageMin: number;
+  totalDamageMax: number;
+
+  // Time accounting
+  totalDurationUsed: number;
+  remainingDuration: number;
+}

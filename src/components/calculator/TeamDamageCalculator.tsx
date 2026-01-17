@@ -3,19 +3,22 @@
  * Main container component for the 5-member team + 2 reserve calculator
  */
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useTeamState } from './useTeamReducer';
 import { TeamTabs } from './TeamTabs';
 import { TeamMemberPanel } from './TeamMemberPanel';
 import { EnemyConfig } from './EnemyConfig';
 import { TeamSummary } from './TeamSummary';
 import { AbilityTargetOverrides } from './AbilityTargetOverrides';
+import { FightCalculator, type FightCalculatorHandle, FIGHT_STORAGE_KEY } from './FightCalculator';
 
 export function TeamDamageCalculator() {
   const [showImportModal, setShowImportModal] = useState(false);
   const [importText, setImportText] = useState('');
   const [importError, setImportError] = useState<string | null>(null);
   const [copySuccess, setCopySuccess] = useState(false);
+
+  const fightCalculatorRef = useRef<FightCalculatorHandle>(null);
 
   const {
     state,
@@ -25,15 +28,18 @@ export function TeamDamageCalculator() {
     setAssist,
     setLimitBreak,
     setLevelBonus,
-    setBondType,
+    setBondSlot,
     toggleSkill,
     setActiveTab,
     setEnemyBaseShield,
-    setEnemyBaseDefense,
     setEnemyAttribute,
     setFinalWave,
     setWaveCount,
+    setIgnoreShieldCap,
+    setWorldBossBonus,
+    setHealersDontAttack,
     setAbilityTargets,
+    setRandomTargetMode,
     clearMember,
     clearAll,
     exportTeam,
@@ -42,7 +48,16 @@ export function TeamDamageCalculator() {
   } = useTeamState();
 
   const handleExport = async () => {
-    const json = exportTeam();
+    // Combine team and fight data
+    const teamJson = exportTeam();
+    const teamData = JSON.parse(teamJson);
+    const fightData = fightCalculatorRef.current?.exportFight();
+    const combined = {
+      ...teamData,
+      fight: fightData ? JSON.parse(fightData) : undefined,
+    };
+    const json = JSON.stringify(combined, null, 2);
+
     try {
       await navigator.clipboard.writeText(json);
       setCopySuccess(true);
@@ -65,12 +80,37 @@ export function TeamDamageCalculator() {
       setImportError('Please paste team configuration JSON');
       return;
     }
-    const success = importTeam(importText);
-    if (success) {
+
+    try {
+      const data = JSON.parse(importText);
+
+      // Import team data
+      const success = importTeam(importText);
+      if (!success) {
+        setImportError('Invalid team configuration format');
+        return;
+      }
+
+      // Import fight data if present
+      if (data.fight && fightCalculatorRef.current) {
+        fightCalculatorRef.current.importFight(JSON.stringify(data.fight));
+      }
+
       setShowImportModal(false);
       setImportText('');
-    } else {
-      setImportError('Invalid team configuration format');
+    } catch (e) {
+      setImportError('Invalid JSON format');
+    }
+  };
+
+  const handleResetAll = () => {
+    clearAll();
+    fightCalculatorRef.current?.clearAll();
+    // Also clear fight storage directly in case ref isn't ready
+    try {
+      localStorage.removeItem(FIGHT_STORAGE_KEY);
+    } catch (e) {
+      console.warn('Failed to clear fight storage:', e);
     }
   };
 
@@ -102,7 +142,6 @@ export function TeamDamageCalculator() {
   const skillDebuffTotal = calculationResults?.skillDebuffTotal ?? 0;
   const abilityDebuffTotal = calculationResults?.abilityDebuffTotal ?? 0;
   const effectiveEnemyShield = calculationResults?.effectiveEnemyShield ?? state.enemy.baseShield;
-  const effectiveEnemyDefense = calculationResults?.effectiveEnemyDefense ?? state.enemy.baseDefense;
   const raceBonus = calculationResults?.raceBonus ?? 0;
 
   return (
@@ -132,7 +171,7 @@ export function TeamDamageCalculator() {
           </button>
           <button
             type="button"
-            onClick={clearAll}
+            onClick={handleResetAll}
             className="px-4 py-2 bg-red-500/20 text-red-400 rounded-lg hover:bg-red-500/30 transition-colors"
           >
             Reset All
@@ -152,15 +191,18 @@ export function TeamDamageCalculator() {
           <EnemyConfig
             enemy={state.enemy}
             onBaseShieldChange={setEnemyBaseShield}
-            onBaseDefenseChange={setEnemyBaseDefense}
             onAttributeChange={setEnemyAttribute}
             onFinalWaveChange={setFinalWave}
             onWaveCountChange={setWaveCount}
+            onIgnoreShieldCapChange={setIgnoreShieldCap}
+            onWorldBossBonusChange={setWorldBossBonus}
+            onHealersDontAttackChange={setHealersDontAttack}
             effectiveShield={effectiveEnemyShield}
-            effectiveDefense={effectiveEnemyDefense}
             skillDebuffTotal={skillDebuffTotal}
             abilityDebuffTotal={abilityDebuffTotal}
             raceBonus={raceBonus}
+            randomTargetMode={state.randomTargetMode}
+            onRandomTargetModeChange={setRandomTargetMode}
           />
         </div>
 
@@ -183,8 +225,7 @@ export function TeamDamageCalculator() {
               onSetCard={(cardId) => setCard(state.activeTabIndex, cardId)}
               onSetAssist={(cardId) => setAssist(state.activeTabIndex, cardId)}
               onSetLimitBreak={(value) => setLimitBreak(state.activeTabIndex, value)}
-              onSetLevelBonus={(value) => setLevelBonus(state.activeTabIndex, value)}
-              onSetBondType={(bondType) => setBondType(state.activeTabIndex, bondType)}
+              onSetBondSlot={(slot, value) => setBondSlot(state.activeTabIndex, slot, value)}
               onToggleSkill={() => toggleSkill(state.activeTabIndex)}
               onClear={() => clearMember(state.activeTabIndex)}
             />
@@ -198,6 +239,9 @@ export function TeamDamageCalculator() {
         abilityTargetOverrides={state.abilityTargetOverrides}
         onSetAbilityTargets={setAbilityTargets}
       />
+
+      {/* Fight Calculator (collapsible) */}
+      <FightCalculator ref={fightCalculatorRef} members={state.members} />
 
       {/* Formula reference (collapsible) */}
       <details className="bg-surface rounded-lg">

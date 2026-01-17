@@ -162,6 +162,11 @@ function SkillToggleSection({
             }`}>
               {targetDesc}
             </span>
+            {skillEffect.duration && skillEffect.duration > 0 && (
+              <span className="text-xs px-1.5 py-0.5 rounded bg-orange-500/30 text-orange-300">
+                {skillEffect.duration}s
+              </span>
+            )}
           </div>
           <div className="text-xs text-secondary line-clamp-2 mb-2">
             {skill.description}

@@ -10,6 +10,7 @@ import {
   type TeamContext,
   type EnemyState,
   type EnemyAttribute,
+  type RandomTargetMode,
   type Phase1Result,
   type Phase3Result,
   type Phase3AbilityContribution,
@@ -23,6 +24,7 @@ import {
   type MemberDamageResult,
   type StatBreakdown,
   BOND_VALUES,
+  combineBondSlots,
   MAIN_TEAM_SIZE,
   TOTAL_SLOTS,
   ATTRIBUTE_NAMES,
@@ -37,8 +39,31 @@ import {
   BASE_CRIT_MULT,
   LEVELS_PER_LB,
   LB_EXCEED_AVERAGE,
+  LB_EXCEED_MIN,
+  LB_EXCEED_MAX,
   calcAtkAtLevel,
 } from './damage-calc';
+
+// ============================================================================
+// Resolved Targets with Scale Factor
+// ============================================================================
+
+/**
+ * Result from resolveAbilityTargets when using average mode
+ * For random-N abilities (like "2 random Divina allies"), average mode
+ * distributes the effect proportionally across all eligible targets.
+ *
+ * Example: Ability targets "2 Divina allies" with +20% buff
+ * - If 3 Divina are present: all 3 get 20% * (2/3) = 13.33% each
+ * - If 2 Divina are present: both get 20% * (2/2) = 20% each
+ * - If 1 Divina is present: that 1 gets 20% * (1/1) = 20%
+ */
+interface ResolvedTargets {
+  /** Target member indices (in average mode, may include all eligible targets) */
+  indices: number[];
+  /** Scale factor to apply to effects (1.0 for non-average modes, N/eligible for average) */
+  scaleFactor: number;
+}
 
 // ============================================================================
 // Ability Parsing
@@ -52,6 +77,7 @@ const EFFECT_TYPE_MAP: Record<string, AbilityEffect['stat']> = {
   'CHIT_ATK': 'critDmg',
   'SPD': 'speed',
   'SHIELD': 'shield',
+  'DEFENSE': 'defense',  // Enemy defense reduction (153 abilities use this)
   'LEVEL': 'level',
   'HP': 'hp',
   'NORM_ATK': 'normalDmg',
@@ -146,6 +172,10 @@ function parseAbilityFromParsedData(
     case 'attribute':
       targetType = 'attribute';
       attributeFilter = parseAttributeFilter(parsed.target.filter || null);
+      // Store count for attribute targeting (e.g., "2 allies Anima" = count 2)
+      if (parsed.target.count && parsed.target.count > 0) {
+        rankCount = parsed.target.count;
+      }
       break;
     case 'ranked':
       // If tags indicate enemy targeting, treat as enemy ability
@@ -186,16 +216,18 @@ function parseAbilityFromParsedData(
 
     // Mark as debuff if:
     // 1. Ability targets enemies, OR
-    // 2. SHIELD effect with negative value (enemies take more damage)
-    const isDebuff = targetsEnemy || (stat === 'shield' && rawValue < 0);
+    // 2. SHIELD/DEFENSE effect with negative value (enemies take more damage)
+    const isDebuff = targetsEnemy || ((stat === 'shield' || stat === 'defense') && rawValue < 0);
 
-    // Skip defensive abilities that don't affect our outgoing damage:
-    // - "Enemy DMG Down" (ATK debuff on enemy) reduces incoming damage, not outgoing
-    // We DO want to include:
-    // - "DMG Amp" (SHIELD debuff on enemy) increases our damage
-    // - "Slow" on enemy could affect their damage output but not ours directly
-    if (targetsEnemy && stat === 'dmg' && rawValue < 0) {
-      // Enemy deals less damage - defensive, skip for damage calc
+    // Enemy-targeting abilities should NOT affect team stats
+    // Shield/Defense debuffs are handled separately in damage calculation
+    // All other enemy debuffs (speed, dmg down) are defensive and don't affect our damage
+    if (targetsEnemy) {
+      // Track shield debuffs (damage amp) and defense debuffs (defense reduction)
+      if ((stat === 'shield' || stat === 'defense') && rawValue < 0) {
+        effects.push({ stat, value: Math.abs(rawValue), isDebuff: true });
+      }
+      // Skip all other enemy-targeting effects - they don't change team stats
       continue;
     }
 
@@ -226,7 +258,9 @@ function parseAbilityFromParsedData(
 }
 
 /**
- * Legacy regex-based parsing for abilities without parsed data
+ * Fallback parsing for abilities without parsed data.
+ * NOTE: Does NOT extract effect values from descriptions - descriptions can have typos/bugs.
+ * Only uses tags for basic targeting. Abilities without parsed data will have empty effects.
  */
 function parseAbilityFromDescription(
   ability: Ability,
@@ -234,9 +268,12 @@ function parseAbilityFromDescription(
   isFromAssist: boolean,
   tags: string[]
 ): ParsedAbility {
-  const description = ability.description || '';
+  // Warn in development - all abilities should have parsed data
+  if (typeof console !== 'undefined' && console.warn) {
+    console.warn(`[team-calc] Ability "${ability.name}" (${ability.id}) has no parsed data, falling back to tag-based targeting only. Effects will be empty.`);
+  }
 
-  // Determine targeting
+  // Determine targeting from tags only (no regex on descriptions)
   let targetType: AbilityTarget = 'self';
   let attributeFilter: 'Divina' | 'Phantasma' | 'Anima' | null = null;
   let rankCount: number | null = null;
@@ -259,25 +296,15 @@ function parseAbilityFromDescription(
     if (targetType === 'team') targetType = 'attribute';
   }
 
-  // Check for ranked targeting (Multi tag or "2 allies with highest ATK" pattern)
+  // Check for ranked targeting (Multi tag)
   if (tags.includes('Multi')) {
     targetType = 'ranked';
-    // Parse count from description
-    const countMatch = description.match(/(\d+)\s+allies?\s+with\s+(highest|lowest)\s+(ATK|ATK speed|HP)/i);
-    if (countMatch) {
-      rankCount = parseInt(countMatch[1], 10);
-      const statMatch = countMatch[3].toLowerCase();
-      if (statMatch === 'atk') rankSortBy = 'atk';
-      else if (statMatch === 'atk speed') rankSortBy = 'speed';
-      else if (statMatch === 'hp') rankSortBy = 'hp';
-    } else {
-      // Default to top 2 ATK if Multi tag but no pattern match
-      rankCount = 2;
-      rankSortBy = 'atk';
-    }
+    // Default to top 2 by ATK - can't extract count without regex
+    rankCount = 2;
+    rankSortBy = 'atk';
   }
 
-  // Determine timing
+  // Determine timing from tags
   let timing: AbilityTiming = 'passive';
   if (tags.includes('Wave Start')) {
     timing = 'wave_start';
@@ -285,65 +312,9 @@ function parseAbilityFromDescription(
     timing = 'final_wave';
   }
 
-  // Parse effects from description and tags
+  // No effect extraction from descriptions - return empty effects
+  // This avoids bugs where description says 80% but actual value is 60%
   const effects: AbilityEffect[] = [];
-
-  // DMG Boost
-  if (tags.includes('DMG Boost')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:more\s+)?DMG/i);
-    if (match) {
-      effects.push({ stat: 'dmg', value: parseFloat(match[1]) / 100 });
-    }
-  }
-
-  // Crit Rate
-  if (tags.includes('Crit Rate')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?Crit\s*(?:Rate|rate)/i);
-    if (match) {
-      effects.push({ stat: 'critRate', value: parseFloat(match[1]) / 100 });
-    }
-  }
-
-  // Crit DMG
-  if (tags.includes('Crit DMG')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?Crit\s*(?:DMG|damage)/i);
-    if (match) {
-      effects.push({ stat: 'critDmg', value: parseFloat(match[1]) / 100 });
-    }
-  }
-
-  // Skill DMG
-  if (tags.includes('Skill DMG')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?skill\s*DMG/i);
-    if (match) {
-      effects.push({ stat: 'skillDmg', value: parseFloat(match[1]) / 100 });
-    }
-  }
-
-  // ATK Speed
-  if (tags.includes('ATK Speed')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?(?:ATK\s+)?speed/i);
-    if (match) {
-      effects.push({ stat: 'speed', value: parseFloat(match[1]) / 100 });
-    }
-  }
-
-  // Level Boost
-  if (tags.includes('Level Boost')) {
-    const match = description.match(/level\s+by\s+(\d+)/i);
-    if (match) {
-      effects.push({ stat: 'level', value: parseInt(match[1], 10) });
-    }
-  }
-
-  // DMG Reduction (as shield for enemy)
-  if (tags.includes('DMG Reduction')) {
-    const match = description.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:less\s+)?DMG\s*(?:taken|reduction)/i);
-    if (match) {
-      // This is defensive, but we'll track it anyway
-      effects.push({ stat: 'shield', value: parseFloat(match[1]) / 100 });
-    }
-  }
 
   return {
     id: ability.id,
@@ -374,65 +345,120 @@ function matchesAttribute(card: Card | null, filter: 'Divina' | 'Phantasma' | 'A
 
 /**
  * Resolve which team members an ability targets
+ *
+ * @param ability - The parsed ability to resolve targets for
+ * @param sourceIndex - Index of the member with this ability
+ * @param teamContext - Team context with sorted indices
+ * @param members - All team members
+ * @param abilityTargetOverrides - User overrides for specific abilities
+ * @param randomTargetMode - How to handle random/N-target abilities (default: 'best')
+ * @returns ResolvedTargets with indices and scale factor
  */
 export function resolveAbilityTargets(
   ability: ParsedAbility,
   sourceIndex: number,
   teamContext: TeamContext,
   members: TeamMemberState[],
-  abilityTargetOverrides?: Record<string, number[]>
-): number[] {
+  abilityTargetOverrides?: Record<string, number[]>,
+  randomTargetMode: RandomTargetMode = 'best'
+): ResolvedTargets {
+  const noTargets: ResolvedTargets = { indices: [], scaleFactor: 1.0 };
+
   // Check synergy condition
   if (ability.synergyPartners.length > 0) {
     const hasPartner = ability.synergyPartners.some(partnerId =>
       teamContext.presentCardIds.has(partnerId) || teamContext.presentAssistIds.has(partnerId)
     );
-    if (!hasPartner) return [];
+    if (!hasPartner) return noTargets;
   }
 
   // Check leader condition
   if (ability.requiresLeader) {
     const sourceCard = members[sourceIndex]?.card;
     if (!sourceCard || sourceCard.id !== teamContext.leaderCardId) {
-      return [];
+      return noTargets;
     }
   }
 
   switch (ability.targetType) {
     case 'self':
       // For assists, "self" means the card they're attached to
-      if (ability.isFromAssist) {
-        return [sourceIndex];
-      }
-      return [sourceIndex];
+      return { indices: [sourceIndex], scaleFactor: 1.0 };
 
     case 'team':
       // All team members (main team only for damage purposes)
-      return Array.from({ length: MAIN_TEAM_SIZE }, (_, i) => i)
-        .filter(i => members[i]?.card != null);
+      return {
+        indices: Array.from({ length: MAIN_TEAM_SIZE }, (_, i) => i)
+          .filter(i => members[i]?.card != null),
+        scaleFactor: 1.0,
+      };
 
-    case 'attribute':
-      // Filter by attribute
-      return Array.from({ length: MAIN_TEAM_SIZE }, (_, i) => i)
+    case 'attribute': {
+      // Filter by attribute, respecting count limit if specified
+      // E.g., "2 allies Anima" = filter Anima, take first 2 by ATK
+      const matchingIndices = Array.from({ length: MAIN_TEAM_SIZE }, (_, i) => i)
         .filter(i => {
           const member = members[i];
           return member?.card && matchesAttribute(member.card, ability.attributeFilter);
         });
 
-    case 'ranked':
+      // If no count limit or count >= eligible, return all with full effect
+      if (!ability.rankCount || ability.rankCount <= 0 || ability.rankCount >= matchingIndices.length) {
+        return { indices: matchingIndices, scaleFactor: 1.0 };
+      }
+
+      // Count is specified and less than eligible targets
+      // Handle based on randomTargetMode
+      if (randomTargetMode === 'average') {
+        // Average mode: distribute effect proportionally across ALL eligible targets
+        // Scale = requestedCount / eligibleCount
+        const scaleFactor = ability.rankCount / matchingIndices.length;
+        return { indices: matchingIndices, scaleFactor };
+      }
+
+      // For 'best' mode (default): select top N by ATK
+      // Sort matching indices by ATK (descending)
+      const sortedByAtk = [...matchingIndices].sort((a, b) => {
+        const atkA = members[a]?.card?.stats.max_atk || 0;
+        const atkB = members[b]?.card?.stats.max_atk || 0;
+        return atkB - atkA;
+      });
+
+      if (randomTargetMode === 'worst') {
+        // Worst mode: select bottom N by ATK
+        return { indices: sortedByAtk.slice(-ability.rankCount), scaleFactor: 1.0 };
+      }
+      if (randomTargetMode === 'first') {
+        // First mode: select first N by slot order
+        return { indices: matchingIndices.slice(0, ability.rankCount), scaleFactor: 1.0 };
+      }
+      if (randomTargetMode === 'last') {
+        // Last mode: select last N by slot order
+        return { indices: matchingIndices.slice(-ability.rankCount), scaleFactor: 1.0 };
+      }
+
+      // Default 'best' mode: top N by ATK
+      return { indices: sortedByAtk.slice(0, ability.rankCount), scaleFactor: 1.0 };
+    }
+
+    case 'ranked': {
       // Check for user override first
       if (abilityTargetOverrides?.[ability.id]) {
         const override = abilityTargetOverrides[ability.id];
         // Validate override targets exist and are in main team
-        return override.filter(idx =>
-          idx >= 0 && idx < MAIN_TEAM_SIZE && members[idx]?.card != null
-        );
+        return {
+          indices: override.filter(idx =>
+            idx >= 0 && idx < MAIN_TEAM_SIZE && members[idx]?.card != null
+          ),
+          scaleFactor: 1.0,
+        };
       }
 
       // Top N by stat (automatic selection)
       if (!ability.rankCount || !ability.rankSortBy) {
-        return [];
+        return noTargets;
       }
+
       let sortedIndices: number[];
       switch (ability.rankSortBy) {
         case 'atk':
@@ -447,10 +473,14 @@ export function resolveAbilityTargets(
         default:
           sortedIndices = teamContext.byAtk;
       }
-      return sortedIndices.slice(0, ability.rankCount);
+
+      // For ranked targeting (like "top 2 ATK"), averaging doesn't apply
+      // because the stat-based ranking is deterministic
+      return { indices: sortedIndices.slice(0, ability.rankCount), scaleFactor: 1.0 };
+    }
 
     default:
-      return [sourceIndex];
+      return { indices: [sourceIndex], scaleFactor: 1.0 };
   }
 }
 
@@ -495,8 +525,9 @@ export function calculatePhase1BaseStats(
     const baseSpeed = stats.speed;
     const baseHp = calcAtkAtLevel(stats.base_hp, stats.max_hp, stats.max_level, effectiveLevel);
 
-    // Bond contributions
-    const bondValues = BOND_VALUES[member.bondType];
+    // Bond contributions (three bond slots combined)
+    // Note: bond3 is locked to 'none' if assist is selected
+    const bondValues = combineBondSlots(member.bond1, member.bond2, member.bond3);
     let atkBondBonus = bondValues.atk;
     let skillBondBonus = bondValues.skill;
 
@@ -620,13 +651,21 @@ export function calculatePhase2TeamContext(
 
 /**
  * Apply abilities and calculate bonus stats for each member
+ *
+ * @param members - All team members
+ * @param phase1Results - Base stats from Phase 1
+ * @param teamContext - Team context with sorted indices
+ * @param enemy - Enemy state (for wave conditions)
+ * @param abilityTargetOverrides - User overrides for specific abilities
+ * @param randomTargetMode - How to handle random/N-target abilities (default: 'best')
  */
 export function calculatePhase3ApplyAbilities(
   members: TeamMemberState[],
   phase1Results: Phase1Result[],
   teamContext: TeamContext,
   enemy: EnemyState,
-  abilityTargetOverrides?: Record<string, number[]>
+  abilityTargetOverrides?: Record<string, number[]>,
+  randomTargetMode: RandomTargetMode = 'best'
 ): Phase3Result[] {
   // Initialize results for all members
   const results: Phase3Result[] = members.map((_, index) => ({
@@ -640,6 +679,7 @@ export function calculatePhase3ApplyAbilities(
     hpBonus: 0,
     normalDmgBonus: 0,
     enemyShieldDebuff: 0,
+    enemyDefenseDebuff: 0,
     abilityContributions: [],
   }));
 
@@ -700,12 +740,12 @@ export function calculatePhase3ApplyAbilities(
       // Wave Start abilities stack based on wave count
       const waveMultiplier = ability.timing === 'wave_start' ? enemy.waveCount : 1;
 
-      // Resolve targets
-      const targetIndices = resolveAbilityTargets(ability, sourceIndex, teamContext, members, abilityTargetOverrides);
-      if (targetIndices.length === 0) continue;
+      // Resolve targets (includes scale factor for average mode)
+      const resolved = resolveAbilityTargets(ability, sourceIndex, teamContext, members, abilityTargetOverrides, randomTargetMode);
+      if (resolved.indices.length === 0) continue;
 
       // Apply effects to each target
-      for (const targetIndex of targetIndices) {
+      for (const targetIndex of resolved.indices) {
         if (targetIndex >= results.length) continue;
 
         const contribution: Phase3AbilityContribution = {
@@ -718,7 +758,8 @@ export function calculatePhase3ApplyAbilities(
         };
 
         for (const effect of ability.effects) {
-          const scaledValue = effect.value * waveMultiplier;
+          // Apply scale factor for average mode (distributes effect across eligible targets)
+          const scaledValue = effect.value * waveMultiplier * resolved.scaleFactor;
           contribution.effects.push({ stat: effect.stat, value: scaledValue });
 
           switch (effect.stat) {
@@ -755,6 +796,16 @@ export function calculatePhase3ApplyAbilities(
                   appliedEnemyDebuffs.add(debuffKey);
                   // Apply to first target only (index 0) since this is a team-wide enemy debuff
                   results[0].enemyShieldDebuff += scaledValue;
+                }
+              }
+              break;
+            case 'defense':
+              if (effect.isDebuff) {
+                // Enemy defense debuffs - applied ONCE per ability like shield
+                const debuffKey = `${ability.id}-defense`;
+                if (!appliedEnemyDebuffs.has(debuffKey)) {
+                  appliedEnemyDebuffs.add(debuffKey);
+                  results[0].enemyDefenseDebuff += scaledValue;
                 }
               }
               break;
@@ -869,6 +920,7 @@ export function calculatePhase4FinalDamage(
   members: TeamMemberState[],
   skillDebuffTotal: number = 0,
   totalEnemyShieldDebuff: number = 0,
+  totalEnemyDefenseDebuff: number = 0,
   raceBonus: number = 0
 ): Phase4Result[] {
   return members.map((member, index) => {
@@ -880,6 +932,7 @@ export function calculatePhase4FinalDamage(
         memberIndex: index,
         computedStats: createEmptyComputedStats(),
         damageResult: null,
+        abilityContributions: [],
       };
     }
 
@@ -923,6 +976,7 @@ export function calculatePhase4FinalDamage(
 
     // Total DMG and Skill DMG bonuses
     const totalDmgBonus = phase3.dmgBonus;
+    const totalNormalDmgBonus = phase3.normalDmgBonus;  // Normal attack specific modifier
     const totalSkillDmgBonus = phase1.skillBondBonus + phase3.skillDmgBonus;
 
     // Build stat breakdown
@@ -989,76 +1043,158 @@ export function calculatePhase4FinalDamage(
     // Calculate damage only for main team members
     let damageResult: MemberDamageResult | null = null;
     if (!member.isReserve) {
+      // Check if card is a healer (HEAL or HEAL_DOT skill type)
+      const isHealer = member.card.skill?.parsed?.immediate?.type === 'HEAL' ||
+                       member.card.skill?.parsed?.immediate?.type === 'HEAL_DOT';
+
+      // If healersDontAttack is enabled and this is a healer, return 0 damage
+      if (enemy.healersDontAttack && isHealer) {
+        damageResult = {
+          normalDamage: 0,
+          normalDamageMin: 0,
+          normalDamageMax: 0,
+          normalDamageCrit: 0,
+          normalDamageCritMin: 0,
+          normalDamageCritMax: 0,
+          normalDamageExpected: 0,
+          normalDamageCapped: false,
+          normalDps: 0,
+          normalDpsMin: 0,
+          normalDpsMax: 0,
+          skillBaseDamage: 0,
+          skillDamage: 0,
+          skillDamageMin: 0,
+          skillDamageMax: 0,
+          skillDamageCrit: 0,
+          skillDamageCritMin: 0,
+          skillDamageCritMax: 0,
+          skillDamageExpected: 0,
+          skillDamageExpectedMin: 0,
+          skillDamageExpectedMax: 0,
+          skillDamageCapped: false,
+        };
+      } else {
       // LB Exceed multiplier (RE Validated 2025-12-24)
-      // Average bonus: 0% at LB0, up to 12.5% at LB5
-      const lbLevel = Math.min(member.limitBreak + 1, 5); // LB0-4 -> 1-5 for exceed lookup
-      const exceedMult = LB_EXCEED_AVERAGE[lbLevel] || 1.0;
+      // Formula: Random(0, 5% × LB_level), see CalculateExceedValue.md
+      // LB0 = 0%, LB1 = 0-5% (avg 2.5%), LB2 = 0-10% (avg 5%), etc.
+      // LB4/MLB = 0-20% (avg 10%)
+      const exceedMult = LB_EXCEED_AVERAGE[member.limitBreak] ?? 1.0;
+      const exceedMultMin = LB_EXCEED_MIN[member.limitBreak] ?? 1.0;
+      const exceedMultMax = LB_EXCEED_MAX[member.limitBreak] ?? 1.0;
 
       // Apply enemy defense (separate from shield, multiplicative)
       // RE Validated: Defense uses LINEAR formula same as shield
-      const effectiveDefense = Math.max(0, Math.min(enemy.baseDefense, STAT_CAPS.shieldMax));
+      // Apply defense debuffs from abilities (reduces enemy defense = we deal more damage)
+      const rawDefense = enemy.baseDefense - totalEnemyDefenseDebuff;
+      const effectiveDefense = Math.max(0, Math.min(rawDefense, STAT_CAPS.shieldMax));
       const defenseMult = 1 - effectiveDefense;
 
       // Apply enemy shield with ability debuffs + skill debuffs (team-wide)
-      const effectiveShield = Math.max(
-        STAT_CAPS.shieldMin,
-        Math.min(enemy.baseShield - totalEnemyShieldDebuff - skillDebuffTotal, STAT_CAPS.shieldMax)
-      );
+      // RE Validated: All debuffs go into same pool, stacking is ADDITIVE
+      // World Boss mode: ignoreShieldCap bypasses the -75% floor
+      const rawShieldValue = enemy.baseShield - totalEnemyShieldDebuff - skillDebuffTotal;
+      const effectiveShield = enemy.ignoreShieldCap
+        ? Math.min(rawShieldValue, STAT_CAPS.shieldMax)
+        : Math.max(STAT_CAPS.shieldMin, Math.min(rawShieldValue, STAT_CAPS.shieldMax));
       const shieldMult = 1 - effectiveShield;
+
+      // Apply World Boss bonus multiplier (manual adjustment for testing)
+      const worldBossMult = enemy.worldBossBonus ?? 1.0;
 
       // Race bonus multiplier (RE Validated 2025-12-24)
       const raceMult = 1 + raceBonus;
 
       // Normal damage calculation
-      // Formula: ATK × exceedMult × dmgMult × comboMult × raceMult × defenseMult × shieldMult
-      // Note: comboMult is already baked into effectiveAtk via AVERAGE_COMBO_BONUS in damage-calc.ts
+      // Formula: ATK × exceedMult × dmgMult × normalDmgMult × raceMult × defenseMult × shieldMult × worldBossMult
+      // RE Validated: DoNormalDamageModify is a separate multiplier from DoDamageModify
+      // RE Validated 2026-01-16: Combo bonus is cosmetic only (no damage effect)
       const dmgMult = 1 + totalDmgBonus;
-      const normalBase = effectiveAtk * exceedMult * dmgMult * raceMult * defenseMult * shieldMult;
+      const normalDmgMult = 1 + totalNormalDmgBonus;  // Normal attack specific (DoNormalDamageModify)
+      const normalBase = effectiveAtk * exceedMult * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const normalBaseMin = effectiveAtk * exceedMultMin * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const normalBaseMax = effectiveAtk * exceedMultMax * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
       const normalDamage = Math.min(Math.round(normalBase), DAMAGE_CAPS.normal);
+      const normalDamageMin = Math.min(Math.round(normalBaseMin), DAMAGE_CAPS.normal);
+      const normalDamageMax = Math.min(Math.round(normalBaseMax), DAMAGE_CAPS.normal);
       const normalDamageCrit = Math.min(Math.round(normalBase * effectiveCritDmg), DAMAGE_CAPS.normal);
+      const normalDamageCritMin = Math.min(Math.round(normalBaseMin * effectiveCritDmg), DAMAGE_CAPS.normal);
+      const normalDamageCritMax = Math.min(Math.round(normalBaseMax * effectiveCritDmg), DAMAGE_CAPS.normal);
       const normalDamageExpected = Math.min(Math.round(normalBase * expectedCritMult), DAMAGE_CAPS.normal);
+      const normalDamageExpectedMin = Math.min(Math.round(normalBaseMin * expectedCritMult), DAMAGE_CAPS.normal);
+      const normalDamageExpectedMax = Math.min(Math.round(normalBaseMax * expectedCritMult), DAMAGE_CAPS.normal);
       const normalDamageCapped = normalDamageCrit >= DAMAGE_CAPS.normal;
 
       // DPS
       const attacksPerSecond = 1 / attackInterval;
       const normalDps = Math.round(normalDamageExpected * attacksPerSecond);
+      const normalDpsMin = Math.round(normalDamageExpectedMin * attacksPerSecond);
+      const normalDpsMax = Math.round(normalDamageExpectedMax * attacksPerSecond);
 
       // Skill damage - uses parsed data embedded in card
-      // The skill value (slv1 + slvup*(level-1)) matches the description value
+      // Only count damage for attack skills (immediate.type === 'ATK')
+      // HEAL skills and pure buff skills have slv1/slvup for non-damage values
       // e.g., "Deals 4,682 DMG" = slv1 + slvup*(level-1) = 4682
       let skillBaseDamage = 0;
       if (member.card.skill?.parsed) {
         const parsed = member.card.skill.parsed;
-        const skillLevel = finalLevel;
-        // Skill base damage = slv1 + (level-1) * slvup (matches description)
-        skillBaseDamage = (parsed.slv1 || 0) + (skillLevel - 1) * (parsed.slvup || 0);
+        // Only count as damage if skill is an attack (not heal or buff)
+        const isAttackSkill = parsed.immediate?.type === 'ATK';
+        if (isAttackSkill) {
+          // Skill level scales with card level (NOT capped at ml)
+          // User verified: level 90 cards show skill values above ml calculation
+          const skillLevel = finalLevel;
+          // Skill base damage = slv1 + (level-1) * slvup
+          skillBaseDamage = (parsed.slv1 || 0) + (skillLevel - 1) * (parsed.slvup || 0);
+        }
       }
 
       const skillDmgMult = 1 + totalSkillDmgBonus;
-      const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult;
+      const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBaseMin = skillBaseDamage * exceedMultMin * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBaseMax = skillBaseDamage * exceedMultMax * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
       const skillDamage = Math.min(Math.round(skillBase), DAMAGE_CAPS.skill);
+      const skillDamageMin = Math.min(Math.round(skillBaseMin), DAMAGE_CAPS.skill);
+      const skillDamageMax = Math.min(Math.round(skillBaseMax), DAMAGE_CAPS.skill);
       const skillDamageCrit = Math.min(Math.round(skillBase * effectiveCritDmg), DAMAGE_CAPS.skill);
+      const skillDamageCritMin = Math.min(Math.round(skillBaseMin * effectiveCritDmg), DAMAGE_CAPS.skill);
+      const skillDamageCritMax = Math.min(Math.round(skillBaseMax * effectiveCritDmg), DAMAGE_CAPS.skill);
       const skillDamageExpected = Math.min(Math.round(skillBase * expectedCritMult), DAMAGE_CAPS.skill);
+      const skillDamageExpectedMin = Math.min(Math.round(skillBaseMin * expectedCritMult), DAMAGE_CAPS.skill);
+      const skillDamageExpectedMax = Math.min(Math.round(skillBaseMax * expectedCritMult), DAMAGE_CAPS.skill);
       const skillDamageCapped = skillDamageCrit >= DAMAGE_CAPS.skill;
 
       damageResult = {
         normalDamage,
+        normalDamageMin,
+        normalDamageMax,
         normalDamageCrit,
+        normalDamageCritMin,
+        normalDamageCritMax,
         normalDamageExpected,
         normalDamageCapped,
         normalDps,
+        normalDpsMin,
+        normalDpsMax,
         skillBaseDamage,
         skillDamage,
+        skillDamageMin,
+        skillDamageMax,
         skillDamageCrit,
+        skillDamageCritMin,
+        skillDamageCritMax,
         skillDamageExpected,
+        skillDamageExpectedMin,
+        skillDamageExpectedMax,
         skillDamageCapped,
       };
+      } // End else (non-healer damage calculation)
     }
 
     return {
       memberIndex: index,
       computedStats,
       damageResult,
+      abilityContributions: phase3.abilityContributions,
     };
   });
 }
@@ -1091,11 +1227,17 @@ function createEmptyComputedStats(): ComputedMemberStats {
 
 /**
  * Run all 4 phases and return complete team calculation results
+ *
+ * @param members - All team members
+ * @param enemy - Enemy state
+ * @param abilityTargetOverrides - User overrides for specific abilities
+ * @param randomTargetMode - How to handle random/N-target abilities (default: 'best')
  */
 export function calculateTeamDamage(
   members: TeamMemberState[],
   enemy: EnemyState,
-  abilityTargetOverrides?: Record<string, number[]>
+  abilityTargetOverrides?: Record<string, number[]>,
+  randomTargetMode: RandomTargetMode = 'best'
 ): TeamCalculationResult {
   // Phase 1: Base stats
   const phase1Results = calculatePhase1BaseStats(members);
@@ -1104,53 +1246,79 @@ export function calculateTeamDamage(
   const teamContext = calculatePhase2TeamContext(phase1Results, members);
 
   // Phase 3: Apply abilities (with wave-based conditions)
-  const phase3Results = calculatePhase3ApplyAbilities(members, phase1Results, teamContext, enemy, abilityTargetOverrides);
+  const phase3Results = calculatePhase3ApplyAbilities(members, phase1Results, teamContext, enemy, abilityTargetOverrides, randomTargetMode);
 
   // Apply skill buffs from active skills to phase3 results
   // This handles ally buffs (dmgBonus, critRate, etc.) from activated skills
+  // Now with attribution tracking
   for (let i = 0; i < MAIN_TEAM_SIZE; i++) {
     const member = members[i];
     if (!member.skillActive || !member.skillEffect) continue;
 
     const skillEffect = member.skillEffect;
     const buffs = skillEffect.buffs;
+    const skillName = member.card?.skill?.name || 'Skill';
+    const sourceCardId = member.card?.id || '';
+
+    // Helper to apply buffs with attribution
+    const applySkillBuffs = (targetIdx: number) => {
+      if (!members[targetIdx]?.card) return;
+
+      const effects: Phase3AbilityContribution['effects'] = [];
+
+      if (buffs.dmgBonus) {
+        phase3Results[targetIdx].dmgBonus += buffs.dmgBonus;
+        effects.push({ stat: 'dmg', value: buffs.dmgBonus });
+      }
+      if (buffs.critRateBonus) {
+        phase3Results[targetIdx].critRateBonus += buffs.critRateBonus;
+        effects.push({ stat: 'critRate', value: buffs.critRateBonus });
+      }
+      if (buffs.critDmgBonus) {
+        phase3Results[targetIdx].critDmgBonus += buffs.critDmgBonus;
+        effects.push({ stat: 'critDmg', value: buffs.critDmgBonus });
+      }
+      if (buffs.speedBonus) {
+        phase3Results[targetIdx].speedBonus += buffs.speedBonus;
+        effects.push({ stat: 'speed', value: buffs.speedBonus });
+      }
+
+      // Add contribution for attribution
+      if (effects.length > 0) {
+        phase3Results[targetIdx].abilityContributions.push({
+          abilityId: `skill-${sourceCardId}`,
+          abilityName: `${skillName} (Skill)`,
+          sourceCardId,
+          sourceMemberIndex: i,
+          isFromAssist: false,
+          effects,
+        });
+      }
+    };
 
     // Determine which members receive the buff based on target type
     if (skillEffect.targetType === 'ally') {
       // AoE ally buff - apply to all main team members
       if (skillEffect.targetCount === 99 || skillEffect.targetCount >= 5) {
         for (let j = 0; j < MAIN_TEAM_SIZE; j++) {
-          if (!members[j]?.card) continue;
-          phase3Results[j].dmgBonus += buffs.dmgBonus || 0;
-          phase3Results[j].critRateBonus += buffs.critRateBonus || 0;
-          phase3Results[j].critDmgBonus += buffs.critDmgBonus || 0;
-          phase3Results[j].speedBonus += buffs.speedBonus || 0;
+          applySkillBuffs(j);
         }
       } else if (skillEffect.targetCount > 1) {
         // Multi-target - apply to top N by ATK
         const targets = teamContext.byAtk.slice(0, skillEffect.targetCount);
         for (const targetIdx of targets) {
-          phase3Results[targetIdx].dmgBonus += buffs.dmgBonus || 0;
-          phase3Results[targetIdx].critRateBonus += buffs.critRateBonus || 0;
-          phase3Results[targetIdx].critDmgBonus += buffs.critDmgBonus || 0;
-          phase3Results[targetIdx].speedBonus += buffs.speedBonus || 0;
+          applySkillBuffs(targetIdx);
         }
       } else {
         // Single target - apply to highest ATK ally
         const targetIdx = teamContext.byAtk[0];
         if (targetIdx !== undefined) {
-          phase3Results[targetIdx].dmgBonus += buffs.dmgBonus || 0;
-          phase3Results[targetIdx].critRateBonus += buffs.critRateBonus || 0;
-          phase3Results[targetIdx].critDmgBonus += buffs.critDmgBonus || 0;
-          phase3Results[targetIdx].speedBonus += buffs.speedBonus || 0;
+          applySkillBuffs(targetIdx);
         }
       }
     } else if (skillEffect.targetType === 'self') {
       // Self-only buff
-      phase3Results[i].dmgBonus += buffs.dmgBonus || 0;
-      phase3Results[i].critRateBonus += buffs.critRateBonus || 0;
-      phase3Results[i].critDmgBonus += buffs.critDmgBonus || 0;
-      phase3Results[i].speedBonus += buffs.speedBonus || 0;
+      applySkillBuffs(i);
     }
     // Note: enemy-targeting skills don't add ally buffs, only debuffs handled below
   }
@@ -1167,8 +1335,10 @@ export function calculateTeamDamage(
 
   // Calculate total enemy shield debuff from abilities (must be before Phase 4)
   let totalEnemyShieldDebuff = 0;
+  let totalEnemyDefenseDebuff = 0;
   for (let i = 0; i < MAIN_TEAM_SIZE; i++) {
     totalEnemyShieldDebuff += phase3Results[i].enemyShieldDebuff;
+    totalEnemyDefenseDebuff += phase3Results[i].enemyDefenseDebuff;
   }
 
   // Calculate race bonus (RE Validated 2025-12-24)
@@ -1177,7 +1347,7 @@ export function calculateTeamDamage(
 
   // Phase 4: Final damage (with skill debuffs, ability debuffs, and race bonus applied)
   const phase4Results = calculatePhase4FinalDamage(
-    phase1Results, phase3Results, enemy, members, skillDebuffTotal, totalEnemyShieldDebuff, raceBonus
+    phase1Results, phase3Results, enemy, members, skillDebuffTotal, totalEnemyShieldDebuff, totalEnemyDefenseDebuff, raceBonus
   );
 
   // Calculate team totals (main team only)
@@ -1192,12 +1362,14 @@ export function calculateTeamDamage(
     }
   }
 
-  const effectiveEnemyShield = Math.max(
-    STAT_CAPS.shieldMin,
-    Math.min(enemy.baseShield - totalEnemyShieldDebuff - skillDebuffTotal, STAT_CAPS.shieldMax)
-  );
+  // Calculate effective shield with optional cap bypass (World Boss mode)
+  const rawShield = enemy.baseShield - totalEnemyShieldDebuff - skillDebuffTotal;
+  const effectiveEnemyShield = enemy.ignoreShieldCap
+    ? Math.min(rawShield, STAT_CAPS.shieldMax) // Only cap at +85%, no floor
+    : Math.max(STAT_CAPS.shieldMin, Math.min(rawShield, STAT_CAPS.shieldMax)); // Full cap: -75% to +85%
 
-  const effectiveEnemyDefense = Math.max(0, Math.min(enemy.baseDefense, STAT_CAPS.shieldMax));
+  const rawDefense = enemy.baseDefense - totalEnemyDefenseDebuff;
+  const effectiveEnemyDefense = Math.max(0, Math.min(rawDefense, STAT_CAPS.shieldMax));
 
   return {
     members: phase4Results,
@@ -1208,6 +1380,7 @@ export function calculateTeamDamage(
     totalSkillDamageExpected,
     skillDebuffTotal,
     abilityDebuffTotal: totalEnemyShieldDebuff,
+    defenseDebuffTotal: totalEnemyDefenseDebuff,
     raceBonus,
   };
 }

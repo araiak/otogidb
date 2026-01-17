@@ -99,24 +99,25 @@ interface DamageDisplayProps {
   isDamageSkill: boolean;
   skillDmgPercent: number;
   skillBondPercent: number; // Skill bond multiplier (multiplicative to base)
-  critDmgBonus: number;
-  effectiveCritRate: number;
 }
 
-function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent, skillBondPercent, critDmgBonus, effectiveCritRate }: DamageDisplayProps) {
+function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent, skillBondPercent }: DamageDisplayProps) {
   const formatNum = (n: number) => n.toLocaleString();
 
   // Calculate actual skill damage using skill base damage
   // Skill bond is multiplicative to base skill damage
   const bondedSkillDamage = Math.round(skillBaseDamage * (1 + skillBondPercent));
   const skillDmgMult = 1 + skillDmgPercent;
-  const critMult = 2.0 + critDmgBonus;
-  const expectedCritMult = 1 + effectiveCritRate * (critMult - 1);
 
+  // Use skill-specific crit stats from result (includes skill-triggered ability bonuses)
   const actualSkillDamage = Math.round(bondedSkillDamage * skillDmgMult);
-  const actualSkillCrit = Math.round(bondedSkillDamage * skillDmgMult * critMult);
-  const actualSkillExpected = Math.round(bondedSkillDamage * skillDmgMult * expectedCritMult);
+  const actualSkillCrit = Math.round(bondedSkillDamage * skillDmgMult * result.skillCritMult);
+  const actualSkillExpected = Math.round(bondedSkillDamage * skillDmgMult * result.skillExpectedCritMult);
   const skillCapped = actualSkillCrit >= DAMAGE_CAPS.skill;
+
+  // Check if skill has different crit stats (from skill-triggered abilities)
+  const hasSkillCritBonus = result.skillCritRate !== result.effectiveCritRate ||
+                           result.skillCritMult !== result.effectiveCritMult;
 
   return (
     <div className="grid grid-cols-2 gap-4 mb-4">
@@ -193,6 +194,19 @@ function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent
                 {formatNum(Math.min(actualSkillExpected, DAMAGE_CAPS.skill))}
               </span>
             </div>
+            {hasSkillCritBonus && (
+              <div className="mt-2 pt-2 border-t border-border">
+                <div className="text-xs text-cyan-400 mb-1">Skill-triggered ability bonus:</div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-secondary">Skill Crit Rate:</span>
+                  <span className="font-mono text-cyan-400">{(result.skillCritRate * 100).toFixed(1)}%</span>
+                </div>
+                <div className="flex justify-between text-xs">
+                  <span className="text-secondary">Skill Crit DMG:</span>
+                  <span className="font-mono text-cyan-400">{(result.skillCritMult * 100).toFixed(0)}%</span>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <div className="text-secondary text-sm italic">
@@ -400,6 +414,7 @@ export function DamageCalculator() {
   const [skillDmgPercent, setSkillDmgPercent] = useState(0);
   const [speedBonus, setSpeedBonus] = useState(0);
   const [enemyDebuff, setEnemyDebuff] = useState(0);
+  const [ignoreShieldCap, setIgnoreShieldCap] = useState(false);
 
   // UI state
   const [comparisonMode, setComparisonMode] = useState<'dps' | 'skill'>('dps');
@@ -535,20 +550,16 @@ export function DamageCalculator() {
       speedBonus: totalBuffs.speed,
       levelBonus: 0, // Level bonuses now come from team abilities
       enemyShieldDebuff: -enemyDebuff, // Convert to negative for vulnerability
+      ignoreShieldCap: ignoreShieldCap, // World boss testing flag
     };
 
     const calcResult = calculateDamage(input);
     const statComparisons = compareStatIncrements(input, calcResult);
 
-    // Calculate skill base damage at effective level using embedded skill data
-    let skillDmg = 0;
-    if (skillParsedData && skillParsedData.slv1 && skillParsedData.slv1 > 0) {
-      const skillLevel = calcResult.effectiveLevel;
-      skillDmg = skillParsedData.slv1 + (skillLevel - 1) * (skillParsedData.slvup || 0);
-    }
-
-    return { result: calcResult, comparisons: statComparisons, calcInput: input, skillBaseDamage: skillDmg };
-  }, [selectedCard, skillParsedData, limitBreak, totalBuffs, enemyDebuff]);
+    // Skill base damage is now calculated in damage-calc.ts (RE Validated 2026-01-17)
+    // Uses: slv1 + (effectiveSkillLevel - 1) * slvup, capped at skillMaxLevel
+    return { result: calcResult, comparisons: statComparisons, calcInput: input, skillBaseDamage: calcResult.skillBaseDamage };
+  }, [selectedCard, skillParsedData, limitBreak, totalBuffs, enemyDebuff, ignoreShieldCap]);
 
   // Feature flag check
   if (!isDev) {
@@ -703,8 +714,6 @@ export function DamageCalculator() {
               isDamageSkill={isDamageSkill}
               skillDmgPercent={totalBuffs.skillDmg}
               skillBondPercent={totalBuffs.skillBonus}
-              critDmgBonus={totalBuffs.critDmg}
-              effectiveCritRate={result.effectiveCritRate}
             />
           </div>
 
@@ -770,6 +779,23 @@ export function DamageCalculator() {
                 unit="%"
                 onChange={setEnemyDebuff}
               />
+              <div className="flex items-center gap-2 mt-2">
+                <input
+                  type="checkbox"
+                  id="ignoreShieldCap"
+                  checked={ignoreShieldCap}
+                  onChange={(e) => setIgnoreShieldCap(e.target.checked)}
+                  className="w-4 h-4 rounded border-border bg-surface"
+                />
+                <label htmlFor="ignoreShieldCap" className="text-sm text-secondary">
+                  Ignore Shield Cap (World Boss mode)
+                </label>
+              </div>
+              {!ignoreShieldCap && enemyDebuff > 0.75 && (
+                <p className="text-xs text-yellow-500 mt-1">
+                  Note: Shield debuff capped at 75% (175% damage). Enable "Ignore Shield Cap" to test higher values.
+                </p>
+              )}
             </div>
           </div>
 

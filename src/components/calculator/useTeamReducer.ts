@@ -12,13 +12,16 @@ import {
   type TeamMemberState,
   type TeamAction,
   type BondType,
+  type BondSlotType,
   type TeamContext,
   type ParsedSkillEffect,
   type SkillBuff,
   type StoredTeamState,
   type EnemyAttribute,
+  type RandomTargetMode,
   MAIN_TEAM_SIZE,
   TOTAL_SLOTS,
+  DEFAULT_BOND_SLOT,
 } from '../../lib/team-calc-types';
 import {
   calculateTeamDamage,
@@ -39,7 +42,10 @@ function saveToStorage(state: TeamState): void {
         assistCardId: m.assistCardId,
         limitBreak: m.limitBreak,
         levelBonus: m.levelBonus,
-        bondType: m.bondType,
+        bond1: m.bond1,
+        bond2: m.bond2,
+        bond3: m.bond3,
+        bondType: m.bondType,  // Legacy, kept for backwards compatibility
         skillActive: m.skillActive,
       })),
       enemy: state.enemy,
@@ -116,8 +122,14 @@ export function parseSkillEffect(
     } else if (parsedTarget.type === 'enemy' || parsedTarget.type === 'current_target') {
       targetType = 'enemy';
     } else if (parsedTarget.type === 'ranked') {
-      // Ranked targeting (highest ATK, lowest HP, etc.) targets allies
-      targetType = 'ally';
+      // Ranked targeting can be for enemies (damage) or allies (heal)
+      // Check immediate type or tags to determine actual target
+      const immediate = skill.parsed?.immediate as { type?: string } | undefined;
+      if (immediate?.type === 'ATK' || tags.includes('DMG') || description.includes('Deals')) {
+        targetType = 'enemy';
+      } else {
+        targetType = 'ally';
+      }
     } else if (parsedTarget.type === 'ally') {
       targetType = 'ally';
     }
@@ -138,13 +150,14 @@ export function parseSkillEffect(
       targetPriority = 'all';
     }
   } else {
-    // Fallback to tag-based detection
-    if (tags.includes('Heal') || description.includes('Restores')) {
+    // Fallback to tag-based detection only (no description parsing)
+    // NOTE: All skills should have parsed data - this is just a safety fallback
+    if (tags.includes('Heal')) {
       targetType = 'ally';
-    } else if (tags.includes('DMG') || description.includes('Deals')) {
+    } else if (tags.includes('DMG')) {
       targetType = 'enemy';
     }
-    if (tags.includes('Self') || description.includes('Restores {value} HP and')) {
+    if (tags.includes('Self')) {
       targetType = 'self';
     }
 
@@ -152,27 +165,25 @@ export function parseSkillEffect(
       targetCount = 99;
       targetPriority = 'all';
     } else if (tags.includes('Multi')) {
-      const countMatch = description.match(/(\d+)\s+(allies?|enemies?)/i);
-      targetCount = countMatch ? parseInt(countMatch[1], 10) : 2;
-    }
-
-    if (description.includes('highest ATK')) {
-      targetPriority = 'highest_atk';
-    } else if (description.includes('lowest') && description.includes('HP')) {
-      targetPriority = 'lowest_hp';
-    } else if (description.includes('current target')) {
-      targetPriority = 'current';
-    } else if (description.includes('random')) {
-      targetPriority = 'random';
+      // Default to 2 targets - can't extract count without regex
+      targetCount = 2;
     }
   }
 
   // Parse effects - prefer parsed data from pipeline
+  // Track duration for display (use max duration from all effects)
+  let effectDuration: number | undefined;
+
   if (skill.parsed?.effects && skill.parsed.effects.length > 0) {
     for (const effect of skill.parsed.effects) {
       const baseValue = effect.value / 100;
       const scaling = (effect.scale || 0) / 100;
       const totalValue = baseValue + scaling * (skillLevel - 1);
+
+      // Track duration from effect data
+      if (effect.duration && effect.duration > 0) {
+        effectDuration = Math.max(effectDuration ?? 0, effect.duration);
+      }
 
       switch (effect.type) {
         case 'ATK':
@@ -220,6 +231,7 @@ export function parseSkillEffect(
 
   // Parse "On Skill" abilities that modify the skill effect
   // Check both the main card's abilities and the assist card's abilities
+  // Use parsed data (source of truth) instead of description parsing
   const allAbilities = [
     ...(card.abilities || []),
     ...(assistCard?.abilities || []),
@@ -233,37 +245,38 @@ export function parseSkillEffect(
     const unlockLevel = ability.unlock_level || 1;
     if (effectiveLevel < unlockLevel) continue;
 
-    const abilityDesc = ability.description || '';
-
-    // Parse crit rate bonus: "Increases X% of crit rate"
-    const critRateMatch = abilityDesc.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?crit\s*rate/i);
-    if (critRateMatch) {
-      buffs.critRateBonus += parseFloat(critRateMatch[1]) / 100;
+    // Use parsed data if available (source of truth - description may have typos like 80% vs 60%)
+    if (ability.parsed?.effects && ability.parsed.effects.length > 0) {
+      for (const effect of ability.parsed.effects) {
+        const value = (effect.value || 0) / 100;
+        switch (effect.type) {
+          case 'CHIT':
+            buffs.critRateBonus += value;
+            break;
+          case 'CHIT_ATK':
+            buffs.critDmgBonus += value;
+            break;
+          case 'SPD':
+            if (value > 0) {
+              buffs.speedBonus += value;
+            } else {
+              buffs.speedDebuff += Math.abs(value);
+            }
+            break;
+          case 'SHIELD':
+            if (value < 0) {
+              buffs.dmgTakenDebuff += Math.abs(value);
+            }
+            break;
+          case 'ATK':
+            if (value > 0) {
+              buffs.dmgBonus += value;
+            }
+            break;
+        }
+      }
     }
-
-    // Parse crit DMG bonus: "Increases X% of crit DMG"
-    const critDmgMatch = abilityDesc.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:of\s+)?crit\s*DMG/i);
-    if (critDmgMatch) {
-      buffs.critDmgBonus += parseFloat(critDmgMatch[1]) / 100;
-    }
-
-    // Parse speed bonus: "increase target's ATK speed by X%"
-    const speedMatch = abilityDesc.match(/(?:increase|increases)\s+.*ATK\s+speed\s+by\s+(\d+(?:\.\d+)?)\s*%/i);
-    if (speedMatch) {
-      buffs.speedBonus += parseFloat(speedMatch[1]) / 100;
-    }
-
-    // Parse speed debuff: "decrease target's ATK speed by X%"
-    const speedDebuffMatch = abilityDesc.match(/(?:decrease|decreases)\s+.*ATK\s+speed\s+by\s+(\d+(?:\.\d+)?)\s*%/i);
-    if (speedDebuffMatch) {
-      buffs.speedDebuff += parseFloat(speedDebuffMatch[1]) / 100;
-    }
-
-    // Parse DMG bonus: "increasing DMG taken by the target"
-    const dmgTakenMatch = abilityDesc.match(/(\d+(?:\.\d+)?)\s*%?\s*(?:increasing|more)\s+DMG\s+taken/i);
-    if (dmgTakenMatch) {
-      buffs.dmgTakenDebuff += parseFloat(dmgTakenMatch[1]) / 100;
-    }
+    // Note: No fallback to description parsing - all abilities have parsed data
   }
 
   // Only return if skill has meaningful buffs
@@ -275,6 +288,7 @@ export function parseSkillEffect(
     targetCount,
     targetPriority,
     buffs,
+    duration: effectDuration,
   };
 }
 
@@ -290,11 +304,15 @@ function createEmptyMember(index: number): TeamMemberState {
     assistCard: null,
     limitBreak: 4, // Default to MLB
     levelBonus: 0,
-    bondType: 'atk15', // Default to +15% ATK
+    bond1: DEFAULT_BOND_SLOT,  // Default to +7.5% ATK
+    bond2: DEFAULT_BOND_SLOT,  // Default to +7.5% ATK
+    bond3: DEFAULT_BOND_SLOT,  // Default to +7.5% ATK (locked to 'none' if assist selected)
+    bondType: 'atk15',         // Legacy (kept for backwards compatibility)
     skillActive: false,
     isReserve: index >= MAIN_TEAM_SIZE,
     computedStats: null,
     damageResult: null,
+    abilityContributions: [],
     skillEffect: null,
   };
 }
@@ -309,8 +327,12 @@ function createInitialState(): TeamState {
       isFinalWave: false,
       waveCount: 1,
       attribute: 'None',  // Default: race bonus disabled
+      ignoreShieldCap: false, // Default: apply -75%/+85% shield cap
+      worldBossBonus: 1.0, // Default: no bonus (1.0x)
+      healersDontAttack: true, // Default: healers don't deal damage (busy healing)
     },
     abilityTargetOverrides: {},
+    randomTargetMode: 'average',  // Default: distribute effect proportionally
     teamContext: null,
     isLoading: true,
     error: null,
@@ -349,6 +371,11 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
       member.assistCardId = cardId;
       member.assistCard = null;
 
+      // Lock bond3 to 'none' when an assist is selected
+      if (cardId) {
+        member.bond3 = 'none';
+      }
+
       newMembers[memberIndex] = member;
       return { ...state, members: newMembers };
     }
@@ -373,7 +400,23 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
       return { ...state, members: newMembers };
     }
 
+    case 'SET_BOND_SLOT': {
+      const { memberIndex, slot, value } = action;
+      if (memberIndex < 0 || memberIndex >= TOTAL_SLOTS) return state;
+
+      const newMembers = [...state.members];
+      if (slot === 1) {
+        newMembers[memberIndex] = { ...newMembers[memberIndex], bond1: value };
+      } else if (slot === 2) {
+        newMembers[memberIndex] = { ...newMembers[memberIndex], bond2: value };
+      } else {
+        newMembers[memberIndex] = { ...newMembers[memberIndex], bond3: value };
+      }
+      return { ...state, members: newMembers };
+    }
+
     case 'SET_BOND_TYPE': {
+      // Legacy action - kept for backwards compatibility
       const { memberIndex, bondType } = action;
       if (memberIndex < 0 || memberIndex >= TOTAL_SLOTS) return state;
 
@@ -428,6 +471,19 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
       return { ...state, enemy: { ...state.enemy, waveCount: value } };
     }
 
+    case 'SET_IGNORE_SHIELD_CAP': {
+      return { ...state, enemy: { ...state.enemy, ignoreShieldCap: action.value } };
+    }
+
+    case 'SET_WORLD_BOSS_BONUS': {
+      const clampedValue = Math.max(1.0, Math.min(5.0, action.value)); // 1.0x to 5.0x
+      return { ...state, enemy: { ...state.enemy, worldBossBonus: clampedValue } };
+    }
+
+    case 'SET_HEALERS_DONT_ATTACK': {
+      return { ...state, enemy: { ...state.enemy, healersDontAttack: action.value } };
+    }
+
     case 'SET_ABILITY_TARGETS': {
       const { abilityId, targets } = action;
       // Validate targets are main team members (0-4)
@@ -440,6 +496,10 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
         newOverrides[abilityId] = validTargets;
       }
       return { ...state, abilityTargetOverrides: newOverrides };
+    }
+
+    case 'SET_RANDOM_TARGET_MODE': {
+      return { ...state, randomTargetMode: action.mode };
     }
 
     case 'CLEAR_MEMBER': {
@@ -489,7 +549,10 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
           assistCardId: storedMember.assistCardId ?? null,
           limitBreak: storedMember.limitBreak ?? 4,
           levelBonus: storedMember.levelBonus ?? 0,
-          bondType: storedMember.bondType ?? 'atk15',
+          bond1: storedMember.bond1 ?? DEFAULT_BOND_SLOT,
+          bond2: storedMember.bond2 ?? DEFAULT_BOND_SLOT,
+          bond3: storedMember.bond3 ?? (storedMember.assistCardId ? 'none' : DEFAULT_BOND_SLOT),
+          bondType: storedMember.bondType ?? 'atk15',  // Legacy
           skillActive: storedMember.skillActive ?? false,
         };
       });
@@ -501,6 +564,9 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
         isFinalWave: stored.enemy.isFinalWave ?? false,
         waveCount: stored.enemy.waveCount ?? 1,
         attribute: stored.enemy.attribute ?? 'None',  // Default disabled for old saves
+        ignoreShieldCap: stored.enemy.ignoreShieldCap ?? false,  // Default capped for old saves
+        worldBossBonus: stored.enemy.worldBossBonus ?? 1.0,  // Default no bonus
+        healersDontAttack: stored.enemy.healersDontAttack ?? false, // Default off
       } : state.enemy;
 
       return {
@@ -534,7 +600,10 @@ export interface ExportedTeamState {
     assistCardName?: string;
     limitBreak: number;
     levelBonus: number;
-    bondType: BondType;
+    bond1: BondSlotType;
+    bond2: BondSlotType;
+    bond3: BondSlotType;
+    bondType?: BondType;  // Legacy, for backwards compatibility
     skillActive: boolean;
   }>;
   enemy: {
@@ -543,6 +612,7 @@ export interface ExportedTeamState {
     isFinalWave: boolean;
     waveCount: number;
     attribute: EnemyAttribute;
+    ignoreShieldCap?: boolean; // Optional for backwards compatibility
   };
   abilityTargetOverrides?: Record<string, number[]>;
 }
@@ -561,7 +631,8 @@ export interface UseTeamStateResult {
   setAssist: (memberIndex: number, cardId: string | null) => void;
   setLimitBreak: (memberIndex: number, value: number) => void;
   setLevelBonus: (memberIndex: number, value: number) => void;
-  setBondType: (memberIndex: number, bondType: BondType) => void;
+  setBondSlot: (memberIndex: number, slot: 1 | 2 | 3, value: BondSlotType) => void;
+  setBondType: (memberIndex: number, bondType: BondType) => void;  // Legacy
   toggleSkill: (memberIndex: number) => void;
   setActiveTab: (index: number) => void;
   setEnemyBaseShield: (value: number) => void;
@@ -569,7 +640,11 @@ export interface UseTeamStateResult {
   setEnemyAttribute: (value: EnemyAttribute) => void;
   setFinalWave: (value: boolean) => void;
   setWaveCount: (value: number) => void;
+  setIgnoreShieldCap: (value: boolean) => void;
+  setWorldBossBonus: (value: number) => void;
+  setHealersDontAttack: (value: boolean) => void;
   setAbilityTargets: (abilityId: string, targets: number[]) => void;
+  setRandomTargetMode: (mode: RandomTargetMode) => void;
   clearMember: (memberIndex: number) => void;
   clearAll: () => void;
   exportTeam: () => string;
@@ -651,8 +726,13 @@ export function useTeamState(): UseTeamStateResult {
     if (state.isLoading || !cardsData) return;
 
     // Resolve card references
+    // Important: Clear abilityContributions to prevent stale data
+    // They will be recalculated fresh by calculateTeamDamage
     const resolvedMembers = state.members.map((member, index) => {
       const newMember = { ...member };
+
+      // Clear ability contributions - they'll be recalculated
+      newMember.abilityContributions = [];
 
       // Resolve main card
       if (member.cardId && member.cardId !== member.card?.id) {
@@ -673,7 +753,8 @@ export function useTeamState(): UseTeamStateResult {
     });
 
     // Calculate team damage (this gives us effective levels)
-    const result = calculateTeamDamage(resolvedMembers, state.enemy, state.abilityTargetOverrides);
+    // Pass randomTargetMode to control how N-target abilities are resolved
+    const result = calculateTeamDamage(resolvedMembers, state.enemy, state.abilityTargetOverrides, state.randomTargetMode);
 
     // Update members with computed results AND parse skill effects with correct level
     const updatedMembers = resolvedMembers.map((member, index) => {
@@ -691,6 +772,7 @@ export function useTeamState(): UseTeamStateResult {
         ...member,
         computedStats: phase4.computedStats,
         damageResult: phase4.damageResult,
+        abilityContributions: phase4.abilityContributions,
         skillEffect,
       };
     });
@@ -716,6 +798,9 @@ export function useTeamState(): UseTeamStateResult {
     state.enemy.attribute,
     state.enemy.isFinalWave,
     state.enemy.waveCount,
+    state.enemy.ignoreShieldCap,
+    state.enemy.worldBossBonus,
+    state.randomTargetMode,
     JSON.stringify(state.abilityTargetOverrides),
     cardsData,
     state.isLoading,
@@ -759,6 +844,10 @@ export function useTeamState(): UseTeamStateResult {
     dispatch({ type: 'SET_LEVEL_BONUS', memberIndex, value });
   }, []);
 
+  const setBondSlot = useCallback((memberIndex: number, slot: 1 | 2 | 3, value: BondSlotType) => {
+    dispatch({ type: 'SET_BOND_SLOT', memberIndex, slot, value });
+  }, []);
+
   const setBondType = useCallback((memberIndex: number, bondType: BondType) => {
     dispatch({ type: 'SET_BOND_TYPE', memberIndex, bondType });
   }, []);
@@ -791,8 +880,24 @@ export function useTeamState(): UseTeamStateResult {
     dispatch({ type: 'SET_WAVE_COUNT', value });
   }, []);
 
+  const setIgnoreShieldCap = useCallback((value: boolean) => {
+    dispatch({ type: 'SET_IGNORE_SHIELD_CAP', value });
+  }, []);
+
+  const setWorldBossBonus = useCallback((value: number) => {
+    dispatch({ type: 'SET_WORLD_BOSS_BONUS', value });
+  }, []);
+
+  const setHealersDontAttack = useCallback((value: boolean) => {
+    dispatch({ type: 'SET_HEALERS_DONT_ATTACK', value });
+  }, []);
+
   const setAbilityTargets = useCallback((abilityId: string, targets: number[]) => {
     dispatch({ type: 'SET_ABILITY_TARGETS', abilityId, targets });
+  }, []);
+
+  const setRandomTargetMode = useCallback((mode: RandomTargetMode) => {
+    dispatch({ type: 'SET_RANDOM_TARGET_MODE', mode });
   }, []);
 
   const clearMember = useCallback((memberIndex: number) => {
@@ -815,12 +920,14 @@ export function useTeamState(): UseTeamStateResult {
       version: 1,
       members: state.members.map(m => ({
         cardId: m.cardId,
-        cardName: m.card?.name,
+        cardName: m.card?.name ?? undefined,
         assistCardId: m.assistCardId,
-        assistCardName: m.assistCard?.name,
+        assistCardName: m.assistCard?.name ?? undefined,
         limitBreak: m.limitBreak,
         levelBonus: m.levelBonus,
-        bondType: m.bondType,
+        bond1: m.bond1,
+        bond2: m.bond2,
+        bond3: m.bond3,
         skillActive: m.skillActive,
       })),
       enemy: {
@@ -829,6 +936,7 @@ export function useTeamState(): UseTeamStateResult {
         isFinalWave: state.enemy.isFinalWave,
         waveCount: state.enemy.waveCount,
         attribute: state.enemy.attribute,
+        ignoreShieldCap: state.enemy.ignoreShieldCap,
       },
       abilityTargetOverrides: Object.keys(state.abilityTargetOverrides).length > 0
         ? state.abilityTargetOverrides
@@ -855,7 +963,10 @@ export function useTeamState(): UseTeamStateResult {
           assistCardId: m.assistCardId ?? null,
           limitBreak: m.limitBreak ?? 4,
           levelBonus: m.levelBonus ?? 0,
-          bondType: m.bondType ?? 'atk15',
+          bond1: m.bond1 ?? 'none',  // Default to 'none' for new imports
+          bond2: m.bond2 ?? 'none',
+          bond3: m.bond3 ?? (m.assistCardId ? 'none' : 'none'),
+          bondType: m.bondType ?? 'atk15',  // Legacy
           skillActive: m.skillActive ?? false,
         })),
         enemy: {
@@ -864,6 +975,7 @@ export function useTeamState(): UseTeamStateResult {
           isFinalWave: data.enemy?.isFinalWave ?? false,
           waveCount: data.enemy?.waveCount ?? 1,
           attribute: data.enemy?.attribute ?? 'None',
+          ignoreShieldCap: data.enemy?.ignoreShieldCap ?? false,
         },
         activeTabIndex: 0,
         abilityTargetOverrides: data.abilityTargetOverrides ?? {},
@@ -887,6 +999,7 @@ export function useTeamState(): UseTeamStateResult {
     setAssist,
     setLimitBreak,
     setLevelBonus,
+    setBondSlot,
     setBondType,
     toggleSkill,
     setActiveTab,
@@ -895,7 +1008,11 @@ export function useTeamState(): UseTeamStateResult {
     setEnemyAttribute,
     setFinalWave,
     setWaveCount,
+    setIgnoreShieldCap,
+    setWorldBossBonus,
+    setHealersDontAttack,
     setAbilityTargets,
+    setRandomTargetMode,
     clearMember,
     clearAll,
     exportTeam,

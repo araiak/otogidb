@@ -28,25 +28,6 @@ export const BASE_CRIT_MULT = 2.0;
 export const ATTACK_INTERVAL_OFFSET = 750;
 export const ATTACK_INTERVAL_DIVISOR = 900;
 
-/**
- * Average combo bonus for sustained combat DPS calculations.
- * Actual combo tiers from RE: +0% (1), +5% (2), +10% (3), +20% (4), +30% (5+)
- * 29% approximates average sustained combat (~combo 4.5 average).
- * Single-hit damage calculations should note this variance.
- */
-export const AVERAGE_COMBO_BONUS = 0.29;
-
-/**
- * Combo bonus tiers from RE validation (2025-12-18 via Frida hooks)
- * See docs/re-findings/formulas/ for details
- */
-export const COMBO_BONUS_TIERS: Record<number, number> = {
-  1: 0.00,
-  2: 0.05,
-  3: 0.10,
-  4: 0.20,
-  5: 0.30, // 5+ uses same
-};
 
 /**
  * Limit Break Exceed damage multiplier (average values)
@@ -64,6 +45,26 @@ export const LB_EXCEED_AVERAGE: Record<number, number> = {
   5: 1.125, // Random(0, 25%) avg - MLB (Max Limit Break)
 };
 
+// Minimum exceed multipliers (always 1.0, no random bonus)
+export const LB_EXCEED_MIN: Record<number, number> = {
+  0: 1.000,
+  1: 1.000,
+  2: 1.000,
+  3: 1.000,
+  4: 1.000,
+  5: 1.000,
+};
+
+// Maximum exceed multipliers (full random bonus)
+export const LB_EXCEED_MAX: Record<number, number> = {
+  0: 1.000, // No LB bonus
+  1: 1.050, // Max 5%
+  2: 1.100, // Max 10%
+  3: 1.150, // Max 15%
+  4: 1.200, // Max 20%
+  5: 1.250, // Max 25%
+};
+
 // Limit break levels and their bonus
 export const LB_BONUS_PER_LEVEL = 0.05; // 5% per LB
 export const LEVELS_PER_LB = 5;
@@ -77,6 +78,11 @@ export interface DamageCalcInput {
   baseCrit: number; // Base crit rate (e.g., 750 = 7.5%)
   baseSpeed: number; // Base speed stat
 
+  // Skill stats (RE Validated: skills use slv1 + (level-1) * slvup, NOT ATK)
+  skillSlv1: number; // Base skill damage at level 1
+  skillSlvup: number; // Skill damage increase per level
+  skillMaxLevel: number; // Max skill level (usually 62-70)
+
   // Build settings
   limitBreak: number; // 0-5
 
@@ -88,8 +94,17 @@ export interface DamageCalcInput {
   speedBonus: number;
   levelBonus: number; // Flat level bonus
 
+  // Skill-triggered ability bonuses (trigger: 'attack_skill')
+  // These bonuses are applied on top of normal bonuses when skill is used
+  // Example: Flying Nimbus "Magical Moving Cloud" adds +70% crit, +60% crit dmg on skill
+  skillCritRateBonus: number; // Additional crit rate from skill-triggered abilities
+  skillCritDmgBonus: number; // Additional crit dmg from skill-triggered abilities
+
   // Enemy debuffs
   enemyShieldDebuff: number; // Negative = vulnerability (e.g., -0.25 = 25% more damage)
+
+  // Testing flags
+  ignoreShieldCap?: boolean; // If true, skip the -75%/+85% shield cap (for world boss testing)
 }
 
 export interface DamageCalcResult {
@@ -102,6 +117,15 @@ export interface DamageCalcResult {
   expectedCritMult: number; // 1 + critRate * (critMult - 1)
   effectiveSpeed: number;
   attackInterval: number; // Seconds between attacks
+
+  // Skill-specific crit stats (includes skill-triggered ability bonuses)
+  skillCritRate: number; // Crit rate when using skill (capped at 100%)
+  skillCritMult: number; // Crit multiplier when using skill
+  skillExpectedCritMult: number; // Expected crit multiplier for skill
+
+  // Skill base (RE Validated: slv1 + (level-1) * slvup)
+  skillBaseDamage: number; // Pre-multiplier skill damage
+  effectiveSkillLevel: number; // Skill level (scales with card level)
 
   // Damage values
   normalDamage: number;
@@ -155,6 +179,7 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const rawAtk = calcAtkAtLevel(input.baseAtk, input.maxAtk, input.maxLevel, effectiveLevel);
 
   // Internal ATK (display ATK / 10)
+  // RE Validated: Display ATK is 10x Combat ATK
   const effectiveAtk = rawAtk / 10;
   const displayAtk = rawAtk;
 
@@ -185,23 +210,51 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   // Calculate damage multipliers
   const dmgMult = 1 + input.dmgPercent;
   const skillDmgMult = 1 + input.skillDmgPercent;
-  const comboMult = 1 + AVERAGE_COMBO_BONUS; // ~29% average combo bonus
-  const enemyVulnerability = 1 - input.enemyShieldDebuff; // -0.25 becomes 1.25x
+
+  // Apply shield cap unless ignoreShieldCap is set
+  // RE Validated: CheckShieldModifyLimit at 0x00E3665C clamps to [-75%, +85%]
+  // World boss may use ignoreShieldMaxLimit flag to bypass this cap
+  const clampedShieldDebuff = input.ignoreShieldCap
+    ? input.enemyShieldDebuff
+    : Math.max(input.enemyShieldDebuff, STAT_CAPS.shieldMin); // Clamp to -75% min
+  const enemyVulnerability = 1 - clampedShieldDebuff; // -0.25 becomes 1.25x
+
+  // LB Exceed multiplier (RE Validated 2025-12-24)
+  // Formula: Random(0, 5% × LB_level), average used for deterministic calculation
+  const exceedMult = LB_EXCEED_AVERAGE[input.limitBreak] ?? 1.0;
 
   // Normal damage calculation
-  // Damage = ATK * (1 + DMG%) * (1 + combo%) * (1 - enemyShield)
-  const normalBase = effectiveAtk * dmgMult * comboMult * enemyVulnerability;
+  // RE Validated 2026-01-16: Combo bonus is cosmetic only (no damage effect)
+  // Damage = ATK * exceedMult * (1 + DMG%) * (1 - enemyShield)
+  const normalBase = effectiveAtk * exceedMult * dmgMult * enemyVulnerability;
   const normalDamage = Math.round(normalBase);
   const normalDamageCrit = Math.round(normalBase * effectiveCritMult);
   const normalDamageExpected = Math.round(normalBase * expectedCritMult);
   const normalDamageCapped = normalDamageCrit >= DAMAGE_CAPS.normal;
 
+  // Skill-specific crit stats (includes skill-triggered ability bonuses)
+  // Example: Flying Nimbus "Magical Moving Cloud" adds +70% crit, +60% crit dmg on skill
+  const skillCritRate = Math.min(
+    baseCritRate + input.critRateBonus + (input.skillCritRateBonus || 0),
+    STAT_CAPS.critRate
+  );
+  const skillCritMult = BASE_CRIT_MULT + input.critDmgBonus + (input.skillCritDmgBonus || 0);
+  const skillExpectedCritMult = 1 + skillCritRate * (skillCritMult - 1);
+
   // Skill damage calculation
-  // Damage = ATK * (1 + DMG%) * (1 + combo%) * (1 + SkillDMG%) * (1 - enemyShield)
-  const skillBase = effectiveAtk * dmgMult * comboMult * skillDmgMult * enemyVulnerability;
+  // RE Validated 2026-01-17: Skills do NOT use ATK!
+  // Base = GetBattleValue(slv1, slvup) = slv1 + (skillLevel - 1) * slvup
+  // See: docs/re-findings/functions/combat/GetBattleValue.md
+  // Skill level scales with card level (NOT capped at ml - user verified in-game)
+  const effectiveSkillLevel = effectiveLevel;
+  const skillBaseDamage = input.skillSlv1 + (effectiveSkillLevel - 1) * input.skillSlvup;
+
+  // Damage = SkillBase * exceedMult * (1 + DMG%) * (1 + SkillDMG%) * (1 - enemyShield)
+  // Uses skill-specific crit stats (includes skill-triggered ability bonuses)
+  const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
   const skillDamage = Math.round(skillBase);
-  const skillDamageCrit = Math.round(skillBase * effectiveCritMult);
-  const skillDamageExpected = Math.round(skillBase * expectedCritMult);
+  const skillDamageCrit = Math.round(skillBase * skillCritMult);
+  const skillDamageExpected = Math.round(skillBase * skillExpectedCritMult);
   const skillDamageCapped = skillDamageCrit >= DAMAGE_CAPS.skill;
 
   // Apply caps
@@ -228,6 +281,15 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
     expectedCritMult,
     effectiveSpeed,
     attackInterval,
+
+    // Skill-specific crit stats (includes skill-triggered ability bonuses)
+    skillCritRate,
+    skillCritMult,
+    skillExpectedCritMult,
+
+    // Skill base (RE Validated)
+    skillBaseDamage,
+    effectiveSkillLevel,
 
     normalDamage: cappedNormalDamage,
     normalDamageCrit: cappedNormalCrit,
@@ -383,15 +445,58 @@ export function generateHeatmap(
 }
 
 /**
+ * Extract skill-triggered ability bonuses from a card
+ * Finds abilities with trigger: 'attack_skill' and extracts CHIT/CHIT_ATK effects
+ */
+export function extractSkillTriggeredBonuses(card: Card): { skillCritRateBonus: number; skillCritDmgBonus: number } {
+  let skillCritRateBonus = 0;
+  let skillCritDmgBonus = 0;
+
+  // Check for abilities with trigger: 'attack_skill'
+  if (card.abilities) {
+    for (const ability of card.abilities) {
+      if (ability.parsed?.trigger === 'attack_skill' && ability.parsed?.effects) {
+        for (const effect of ability.parsed.effects) {
+          if (effect.type === 'CHIT') {
+            // CHIT is crit rate bonus (e.g., 70.0 = 70%)
+            skillCritRateBonus += (effect.value || 0) / 100;
+          } else if (effect.type === 'CHIT_ATK') {
+            // CHIT_ATK is crit damage bonus (e.g., 60.0 = 60%)
+            skillCritDmgBonus += (effect.value || 0) / 100;
+          }
+        }
+      }
+    }
+  }
+
+  return { skillCritRateBonus, skillCritDmgBonus };
+}
+
+/**
  * Create input from a Card object
  */
 export function createInputFromCard(card: Card, limitBreak: number = 0): DamageCalcInput {
+  // Get skill data from parsed skill (RE Validated: slv1 + (level-1) * slvup)
+  const skillParsed = card.skill?.parsed;
+  const skillSlv1 = skillParsed?.slv1 ?? 0;
+  const skillSlvup = skillParsed?.slvup ?? 0;
+  const skillMaxLevel = skillParsed?.ml ?? 70;
+
+  // Extract skill-triggered ability bonuses (trigger: 'attack_skill')
+  const { skillCritRateBonus, skillCritDmgBonus } = extractSkillTriggeredBonuses(card);
+
   return {
     baseAtk: card.stats.base_atk,
     maxAtk: card.stats.max_atk,
     maxLevel: card.stats.max_level,
     baseCrit: card.stats.crit,
     baseSpeed: card.stats.speed,
+
+    // Skill stats (RE Validated 2026-01-17)
+    skillSlv1,
+    skillSlvup,
+    skillMaxLevel,
+
     limitBreak,
     dmgPercent: 0,
     critRateBonus: 0,
@@ -399,6 +504,12 @@ export function createInputFromCard(card: Card, limitBreak: number = 0): DamageC
     skillDmgPercent: 0,
     speedBonus: 0,
     levelBonus: 0,
+
+    // Skill-triggered ability bonuses (auto-extracted from card abilities)
+    skillCritRateBonus,
+    skillCritDmgBonus,
+
     enemyShieldDebuff: 0,
+    ignoreShieldCap: false,
   };
 }
