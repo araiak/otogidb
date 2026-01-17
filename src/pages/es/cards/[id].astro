@@ -49,9 +49,9 @@ interface GameBug {
   id: string;
   card_id: number;
   card_name: string;
-  affected_field: 'ability' | 'skill';
+  affected_field: 'ability' | 'skill' | 'stats';
   affected_id: string;
-  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats';
+  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats' | 'missing_duration';
   severity: 'gameplay' | 'visual';
   summary: string;
   details: {
@@ -66,6 +66,12 @@ interface GameBug {
     description_percentages?: number[];
     data_percentages?: number[];
     missing_effect?: string;
+    chit_atk_effect?: string;
+    expected_format?: string;
+    current_crit?: number;
+    expected_crit?: number;
+    unit_type?: string;
+    explanation?: string;
   };
   analysis: string;
   affects_gameplay: boolean;
@@ -156,10 +162,11 @@ const cardBugs = gameBugsData.bugs.filter(
 );
 const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
 const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
+const statsBugs = cardBugs.filter(bug => bug.affected_field === 'stats');
 
-// Helper to get bug for a specific ability
-function getAbilityBug(abilityId: string): GameBug | undefined {
-  return abilityBugs.find(bug => bug.affected_id === abilityId);
+// Helper to get all bugs for a specific ability
+function getAbilityBugs(abilityId: string): GameBug[] {
+  return abilityBugs.filter(bug => bug.affected_id === abilityId);
 }
 
 // Get skill data for formatting
@@ -390,6 +397,35 @@ const jsonLd = {
               <div class="text-xl font-bold font-mono">{formatNumber(card.stats.crit)}</div>
             </div>
           </div>
+          {/* Stats bugs notice */}
+          {statsBugs.length > 0 && (
+            <>
+              {statsBugs.map(bug => (
+                <div data-dev-only class={`mt-3 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                  <div class="flex items-start gap-2">
+                    <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-2 flex-wrap">
+                        <span class={`text-xs font-medium ${bug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                          {bug.affects_gameplay ? 'Stats Bug' : 'Stats Issue'}
+                        </span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                          {bug.id}
+                        </span>
+                      </div>
+                      <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                      {bug.details.current_crit !== undefined && bug.details.expected_crit !== undefined && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Current:</span> <span class="line-through opacity-60">{bug.details.current_crit}</span></div>
+                          <div><span class="text-secondary">Expected:</span> <span class="font-medium">{bug.details.expected_crit}</span></div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
         </div>
 
         <!-- Skill -->
@@ -482,49 +518,61 @@ const jsonLd = {
                       ))}
                     </div>
                   )}
-                  {/* Bug notice for this ability */}
+                  {/* Bug notices for this ability */}
                   {(() => {
-                    const bug = getAbilityBug(ability.id);
-                    if (!bug) return null;
+                    const bugs = getAbilityBugs(ability.id);
+                    if (bugs.length === 0) return null;
                     return (
-                      <div data-dev-only class={`mt-2 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
-                        <div class="flex items-start gap-2">
-                          <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
-                          <div class="flex-1 min-w-0">
-                            <div class="flex items-center gap-2 flex-wrap">
-                              <span class={`text-xs font-medium ${bug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
-                                {bug.affects_gameplay ? 'Gameplay Bug' : 'Description Mismatch'}
-                              </span>
-                              <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
-                                {bug.id}
-                              </span>
+                      <div class="mt-2 space-y-2">
+                        {bugs.map(bug => (
+                          <div data-dev-only class={`p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                            <div class="flex items-start gap-2">
+                              <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                              <div class="flex-1 min-w-0">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                  <span class={`text-xs font-medium ${bug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                                    {bug.affects_gameplay ? 'Gameplay Bug' : 'Description Mismatch'}
+                                  </span>
+                                  <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                                    {bug.id}
+                                  </span>
+                                </div>
+                                <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                                {bug.details.description_percentage !== undefined && bug.details.actual_percentage !== undefined && (
+                                  <div class="text-xs mt-1.5 space-y-0.5">
+                                    <div><span class="text-secondary">Description:</span> <span class="line-through opacity-60">{bug.details.description_percentage}%</span></div>
+                                    <div><span class="text-secondary">Actual:</span> <span class="font-medium">{bug.details.actual_percentage}%</span></div>
+                                  </div>
+                                )}
+                                {bug.details.target_string && bug.details.missing && (
+                                  <div class="text-xs mt-1.5 space-y-0.5">
+                                    <div><span class="text-secondary">Actual:</span> <code class="text-[10px] bg-gray-500/20 px-1 rounded">{bug.details.target_string}</code></div>
+                                    <div><span class="text-secondary">Missing:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing}</code></div>
+                                  </div>
+                                )}
+                                {bug.details.expected_effect && bug.details.actual_effect && (
+                                  <div class="text-xs mt-1.5 space-y-0.5">
+                                    <div><span class="text-secondary">Description says:</span> <span class="line-through opacity-60">{bug.details.expected_effect}</span></div>
+                                    <div><span class="text-secondary">Actual effect:</span> <span class="font-medium">{bug.details.actual_effect}</span></div>
+                                  </div>
+                                )}
+                                {bug.details.missing_effect && (
+                                  <div class="text-xs mt-1.5">
+                                    <span class="text-secondary">Missing effect:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing_effect}</code>
+                                  </div>
+                                )}
+                                {bug.details.chit_atk_effect && (
+                                  <div class="text-xs mt-1.5 space-y-0.5">
+                                    <div><span class="text-secondary">Effect:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.chit_atk_effect}</code></div>
+                                    {bug.details.expected_format && (
+                                      <div><span class="text-secondary">Expected:</span> <code class="text-[10px] bg-green-500/20 px-1 rounded">{bug.details.expected_format}</code></div>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
                             </div>
-                            <p class="text-xs text-secondary mt-1">{bug.summary}</p>
-                            {bug.details.description_percentage !== undefined && bug.details.actual_percentage !== undefined && (
-                              <div class="text-xs mt-1.5 space-y-0.5">
-                                <div><span class="text-secondary">Description:</span> <span class="line-through opacity-60">{bug.details.description_percentage}%</span></div>
-                                <div><span class="text-secondary">Actual:</span> <span class="font-medium">{bug.details.actual_percentage}%</span></div>
-                              </div>
-                            )}
-                            {bug.details.target_string && bug.details.missing && (
-                              <div class="text-xs mt-1.5 space-y-0.5">
-                                <div><span class="text-secondary">Actual:</span> <code class="text-[10px] bg-gray-500/20 px-1 rounded">{bug.details.target_string}</code></div>
-                                <div><span class="text-secondary">Missing:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing}</code></div>
-                              </div>
-                            )}
-                            {bug.details.expected_effect && bug.details.actual_effect && (
-                              <div class="text-xs mt-1.5 space-y-0.5">
-                                <div><span class="text-secondary">Description says:</span> <span class="line-through opacity-60">{bug.details.expected_effect}</span></div>
-                                <div><span class="text-secondary">Actual effect:</span> <span class="font-medium">{bug.details.actual_effect}</span></div>
-                              </div>
-                            )}
-                            {bug.details.missing_effect && (
-                              <div class="text-xs mt-1.5">
-                                <span class="text-secondary">Missing effect:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.missing_effect}</code>
-                              </div>
-                            )}
                           </div>
-                        </div>
+                        ))}
                       </div>
                     );
                   })()}
