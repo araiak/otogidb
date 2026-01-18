@@ -1,6 +1,6 @@
 {
-  "version": "1.4.0",
-  "last_updated": "2026-01-16",
+  "version": "1.5.0",
+  "last_updated": "2026-01-17",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -1170,6 +1170,103 @@
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
       }
+    },
+    {
+      "id": "BUG-038",
+      "card_id": 1311,
+      "card_name": "Grim Reaper [HW]",
+      "affected_field": "stats",
+      "affected_id": "crit",
+      "category": "stats",
+      "severity": "gameplay",
+      "summary": "Wrong crit stat: has 750 (melee value) instead of 2250 (ranged value)",
+      "details": {
+        "current_crit": 750,
+        "expected_crit": 2250,
+        "unit_type": "Ranged",
+        "explanation": "Ranged units should have crit rate of 2250 but this card has 750 which is the melee value"
+      },
+      "analysis": "Grim Reaper [HW] is a Ranged unit but has crit stat of 750 instead of the expected 2250. This significantly reduces her damage potential.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-01-17",
+      "resolution_check": {
+        "field": "stats.crit",
+        "condition": "equals",
+        "value": 2250
+      }
+    },
+    {
+      "id": "BUG-039",
+      "card_id": 750,
+      "card_name": "Snow Sprite",
+      "affected_field": "stats",
+      "affected_id": "crit",
+      "category": "stats",
+      "severity": "gameplay",
+      "summary": "Wrong crit stat: has 750 (melee value) instead of 2250 (ranged value)",
+      "details": {
+        "current_crit": 750,
+        "expected_crit": 2250,
+        "unit_type": "Ranged",
+        "explanation": "Ranged units should have crit rate of 2250 but this card has 750 which is the melee value"
+      },
+      "analysis": "Snow Sprite is a Ranged unit but has crit stat of 750 instead of the expected 2250. This significantly reduces damage potential.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-17",
+      "resolution_check": {
+        "field": "stats.crit",
+        "condition": "equals",
+        "value": 2250
+      }
+    },
+    {
+      "id": "BUG-040",
+      "card_id": 514,
+      "card_name": "Flying Nimbus [Awakened]",
+      "affected_field": "ability",
+      "affected_id": "51402",
+      "category": "missing_duration",
+      "severity": "gameplay",
+      "summary": "CHIT_ATK effect missing duration - permanent buff on attack_skill trigger",
+      "details": {
+        "de_field": "CHIT<70.00%,0%,4>;CHIT_ATK<60.00%,0%>",
+        "chit_effect": "CHIT<70.00%,0%,4> - has 4 wave duration",
+        "chit_atk_effect": "CHIT_ATK<60.00%,0%> - NO DURATION (permanent)",
+        "trigger": "attack_skill",
+        "expected_format": "CHIT_ATK<60.00%,0%,4> or similar with duration"
+      },
+      "analysis": "This is the ONLY attack_skill ability with CHIT_ATK that has no duration. All 9 other similar abilities have 8 wave duration. The CHIT effect on the same ability has 4 wave duration, suggesting CHIT_ATK should also have had a duration but it was omitted. When duration is missing, the game treats it as permanent (time=-1.0f). Since this triggers on every skill use (attack_skill), the +60% crit damage buff is applied permanently each time the card uses its skill.",
+      "comparison": {
+        "this_ability": "CHIT_ATK<60.00%,0%> - NO duration",
+        "similar_abilities": [
+          {"card": "#270 Apollo's Harp", "effect": "CHIT_ATK<25.00%,0%,8>"},
+          {"card": "#359 Holy Grail", "effect": "CHIT_ATK<100.00%,0%,8>"},
+          {"card": "#741 Senji Ryakketsu", "effect": "CHIT_ATK<100.00%,0%,8>"},
+          {"card": "#752 Hakama Ceremony", "effect": "CHIT_ATK<90.00%,0%,8>"}
+        ]
+      },
+      "code_path": {
+        "buff_class": "AbilityDataLogicBuffAction",
+        "apply_function": "ApplyData case 2 (CHIT_ATK)",
+        "target_field": "MonsterStat.CHitDamageModifer (+0x50)",
+        "duration_handling": "No duration = time set to -1.0f (infinite)"
+      },
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-01-17",
+      "resolution_check": {
+        "field": "de",
+        "condition": "matches_regex",
+        "value": "CHIT_ATK<[^>]+,[^>]+,[^>]+>"
+      }
     }
   ],
   "categories": {
@@ -1178,7 +1275,8 @@
     "effect_type": "Wrong effect type applied (e.g., DEFENSE vs SHIELD)",
     "description": "Text/description percentage mismatches",
     "stats": "Incorrect stat values",
-    "stackable": "Non-stackable abilities (o=false) missing 'once per team' text - affects all targeting including self_ime"
+    "stackable": "Non-stackable abilities (o=false) missing 'once per team' text - affects all targeting including self_ime",
+    "missing_duration": "Effect missing duration parameter - becomes permanent when it should be temporary"
   },
   "severity_levels": {
     "gameplay": "Bug affects actual game mechanics",
