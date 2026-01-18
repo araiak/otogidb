@@ -88,6 +88,7 @@ export interface DamageCalcInput {
 
   // Buff percentages (0-1 scale, e.g., 0.4 = 40%)
   dmgPercent: number;
+  normalDmgPercent: number; // Normal attack specific modifier (DoNormalDamageModify)
   critRateBonus: number;
   critDmgBonus: number;
   skillDmgPercent: number;
@@ -225,8 +226,10 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
 
   // Normal damage calculation
   // RE Validated 2026-01-16: Combo bonus is cosmetic only (no damage effect)
-  // Damage = ATK * exceedMult * (1 + DMG%) * (1 - enemyShield)
-  const normalBase = effectiveAtk * exceedMult * dmgMult * enemyVulnerability;
+  // RE Validated: DoNormalDamageModify applies separately from DoDamageModify
+  // Damage = ATK * exceedMult * (1 + DMG%) * (1 + NormalDMG%) * (1 - enemyShield)
+  const normalDmgMult = 1 + input.normalDmgPercent;
+  const normalBase = effectiveAtk * exceedMult * dmgMult * normalDmgMult * enemyVulnerability;
   const normalDamage = Math.round(normalBase);
   const normalDamageCrit = Math.round(normalBase * effectiveCritMult);
   const normalDamageExpected = Math.round(normalBase * expectedCritMult);
@@ -499,6 +502,7 @@ export function createInputFromCard(card: Card, limitBreak: number = 0): DamageC
 
     limitBreak,
     dmgPercent: 0,
+    normalDmgPercent: 0,
     critRateBonus: 0,
     critDmgBonus: 0,
     skillDmgPercent: 0,
