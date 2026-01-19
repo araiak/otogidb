@@ -2,7 +2,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { isFeatureEnabled } from '../../../lib/features';
 
-const baseTools = [
+interface Tool {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  beta?: boolean;
+}
+
+const baseTools: Tool[] = [
   {
     id: 'player-levels',
     name: '玩家等級資料',
@@ -12,7 +21,7 @@ const baseTools = [
   },
 ];
 
-const devTools = [];
+const devTools: Tool[] = [];
 
 if (isFeatureEnabled('worldBoss')) {
   devTools.push({
@@ -21,6 +30,7 @@ if (isFeatureEnabled('worldBoss')) {
     description: '4個世界Boss的技能、屬性、HP、防禦、技能輪換。',
     icon: 'skull',
     color: 'rgb(239, 68, 68)',
+    beta: true,
   });
 }
 
@@ -31,10 +41,16 @@ if (isFeatureEnabled('damageCalculator')) {
     description: '構建並優化您的5人團隊。配置卡牌、助手、羈絆和技能以最大化傷害輸出。',
     icon: 'calculator',
     color: 'rgb(168, 85, 247)',
+    beta: true,
   });
 }
 
-const tools = [...baseTools, ...devTools];
+// Sort: released tools first (alphabetically), then beta tools (alphabetically)
+const tools = [...baseTools, ...devTools].sort((a, b) => {
+  if (a.beta && !b.beta) return 1;
+  if (!a.beta && b.beta) return -1;
+  return a.name.localeCompare(b.name);
+});
 
 const icons: Record<string, string> = {
   chart: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>`,
@@ -64,7 +80,12 @@ const icons: Record<string, string> = {
               set:html={icons[tool.icon] || icons.wrench}
             />
             <div class="flex-1 min-w-0">
-              <h2 class="text-lg font-bold mb-2 group-hover:underline">{tool.name}</h2>
+              <h2 class="text-lg font-bold mb-2 group-hover:underline">
+                {tool.name}
+                {tool.beta && (
+                  <span class="ml-2 text-xs font-medium px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400">Beta</span>
+                )}
+              </h2>
               <p class="text-sm text-secondary">{tool.description}</p>
             </div>
           </div>

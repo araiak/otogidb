@@ -2,8 +2,17 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { isFeatureEnabled } from '../../../lib/features';
 
+interface Tool {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  color: string;
+  beta?: boolean;
+}
+
 // Base tools always available
-const baseTools = [
+const baseTools: Tool[] = [
   {
     id: 'player-levels',
     name: 'Player Level Data',
@@ -14,7 +23,7 @@ const baseTools = [
 ];
 
 // Feature-flagged tools (dev only)
-const devTools = [];
+const devTools: Tool[] = [];
 
 if (isFeatureEnabled('worldBoss')) {
   devTools.push({
@@ -23,6 +32,7 @@ if (isFeatureEnabled('worldBoss')) {
     description: 'Boss skills, level stats, HP values, defense, and skill rotations for all 4 World Bosses.',
     icon: 'skull',
     color: 'rgb(239, 68, 68)',
+    beta: true,
   });
 }
 
@@ -33,10 +43,18 @@ if (isFeatureEnabled('damageCalculator')) {
     description: 'Build and optimize your 5-member team. Configure cards, assists, bonds, and abilities to maximize damage output.',
     icon: 'calculator',
     color: 'rgb(168, 85, 247)',
+    beta: true,
   });
 }
 
-const tools = [...baseTools, ...devTools];
+// Sort: released tools first (alphabetically), then beta tools (alphabetically)
+const tools = [...baseTools, ...devTools].sort((a, b) => {
+  // Beta tools go after released tools
+  if (a.beta && !b.beta) return 1;
+  if (!a.beta && b.beta) return -1;
+  // Alphabetical within each group
+  return a.name.localeCompare(b.name);
+});
 
 // Simple SVG icons
 const icons: Record<string, string> = {
@@ -69,7 +87,12 @@ const icons: Record<string, string> = {
               set:html={icons[tool.icon] || icons.wrench}
             />
             <div class="flex-1 min-w-0">
-              <h2 class="text-lg font-bold mb-2 group-hover:underline">{tool.name}</h2>
+              <h2 class="text-lg font-bold mb-2 group-hover:underline">
+                {tool.name}
+                {tool.beta && (
+                  <span class="ml-2 text-xs font-medium px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-400">Beta</span>
+                )}
+              </h2>
               <p class="text-sm text-secondary">{tool.description}</p>
             </div>
           </div>
