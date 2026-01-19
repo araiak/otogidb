@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { WorldBossViewer } from '../../../components/tools/WorldBossViewer';
+
+const currentLocale = 'ko';
+
+const pageTitle = "월드 보스 가이드 - 스킬, 스탯, 로테이션";
+const pageDescription = "Otogi: Spirit Agents 월드 보스 이벤트 완벽 가이드. 4개의 보스 스킬, 레벨 스탯, HP, 방어력, 스킬 로테이션.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <WorldBossViewer client:load />
+  </div>
+</BaseLayout>

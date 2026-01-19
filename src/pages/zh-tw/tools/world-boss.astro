@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { WorldBossViewer } from '../../../components/tools/WorldBossViewer';
+
+const currentLocale = 'zh-tw';
+
+const pageTitle = "世界Boss指南 - 技能、屬性、輪換";
+const pageDescription = "Otogi: Spirit Agents世界Boss活動完整指南。4個Boss的技能、等級屬性、HP、防禦、技能輪換。";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <WorldBossViewer client:load />
+  </div>
+</BaseLayout>
