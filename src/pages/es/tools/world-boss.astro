@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { WorldBossViewer } from '../../../components/tools/WorldBossViewer';
+
+const currentLocale = 'es';
+
+const pageTitle = "Guia de World Boss - Habilidades, Estadisticas y Rotaciones";
+const pageDescription = "Guia completa de eventos de World Boss en Otogi: Spirit Agents. Habilidades, estadisticas, valores de HP, defensa y rotaciones de habilidades para los 4 bosses.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <WorldBossViewer client:load />
+  </div>
+</BaseLayout>

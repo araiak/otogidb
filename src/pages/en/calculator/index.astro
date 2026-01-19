@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { TeamDamageCalculator } from '../../../components/calculator/TeamDamageCalculator';
+
+const currentLocale = 'en';
+
+const pageTitle = "Team Damage Calculator - Build & Optimize Your Team";
+const pageDescription = "Build and optimize your 5-member team in Otogi: Spirit Agents. Configure cards, assists, bonds, and abilities to maximize damage output.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <!-- Calculator (React Island) -->
+    <TeamDamageCalculator client:load />
+  </div>
+</BaseLayout>

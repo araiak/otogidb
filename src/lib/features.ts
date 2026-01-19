@@ -3,7 +3,7 @@
  * Dev-only features are only enabled in development environments.
  */
 
-export type FeatureFlag = 'experimentalFilters' | 'bugNotices';
+export type FeatureFlag = 'experimentalFilters' | 'bugNotices' | 'worldBoss' | 'damageCalculator';
 
 interface FeatureConfig {
   enabled: boolean;
@@ -14,6 +14,8 @@ interface FeatureConfig {
 const FEATURES: Record<FeatureFlag, FeatureConfig> = {
   experimentalFilters: { enabled: false, devOnly: true },
   bugNotices: { enabled: true, devOnly: true }, // Show data/description mismatch warnings on card pages (dev only)
+  worldBoss: { enabled: true, devOnly: true }, // World Boss Guide page (dev only)
+  damageCalculator: { enabled: true, devOnly: true }, // Link to damage calculator in tools (dev only)
 };
 
 /**
