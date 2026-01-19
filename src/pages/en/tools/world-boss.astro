@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { WorldBossViewer } from '../../../components/tools/WorldBossViewer';
+
+const currentLocale = 'en';
+
+const pageTitle = "World Boss Guide - Skills, Stats & Rotations";
+const pageDescription = "Complete guide to World Boss events in Otogi: Spirit Agents. Boss skills, level stats, HP values, defense, and skill rotations for all 4 bosses.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <!-- World Boss Viewer (React Island) -->
+    <WorldBossViewer client:load />
+  </div>
+</BaseLayout>
