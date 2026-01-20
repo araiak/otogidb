@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { fetchAvailabilityManifest, fetchAvailabilityData } from '../../lib/availability';
+import {
+  fetchAvailabilityManifest,
+  fetchAvailabilityData,
+  computeClientSideAvailability,
+} from '../../lib/availability';
 
 interface AvailabilityBadgeProps {
   cardId: string;
@@ -40,8 +44,9 @@ export default function AvailabilityBadge({
 
         const cardAvailability = data.cards[cardId];
         if (cardAvailability?.currently_available !== undefined) {
-          // Use currently_available directly from R2 - already calculated by pipeline
-          setIsAvailable(cardAvailability.currently_available);
+          // Use shared function for client-side end_date check
+          const computed = computeClientSideAvailability(cardAvailability);
+          setIsAvailable(computed.currentlyAvailable);
           setIsLive(true);
         }
       } catch (error) {

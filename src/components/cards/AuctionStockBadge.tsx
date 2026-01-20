@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
-import { fetchAvailabilityManifest, fetchAvailabilityData } from '../../lib/availability';
+import {
+  fetchAvailabilityManifest,
+  fetchAvailabilityData,
+  computeClientSideAvailability,
+} from '../../lib/availability';
 
 type StockLevel = 'high' | 'medium' | 'low' | 'unavailable';
 
@@ -65,9 +69,10 @@ export default function AuctionStockBadge({
         }
 
         const cardAvailability = data.cards[cardId];
-        if (cardAvailability?.auction?.stock_level) {
-          // Use stock_level directly from R2 - already calculated by pipeline
-          setStockLevel(cardAvailability.auction.stock_level);
+        if (cardAvailability?.auction) {
+          // Use shared function for client-side end_date check
+          const computed = computeClientSideAvailability(cardAvailability);
+          setStockLevel(computed.auctionStockLevel);
           setIsLive(true);
         }
       } catch (error) {
