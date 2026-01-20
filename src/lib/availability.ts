@@ -41,6 +41,7 @@ interface CardAvailability {
     last_seen: string | null;
     last_count: number | null;
     stock_level: 'high' | 'medium' | 'low' | 'unavailable';
+    end_date?: string | null; // "YYYY-MM-DD HH:MM:SS" in UTC+8
   };
   daily?: {
     available: boolean;
@@ -130,6 +131,92 @@ export async function fetchAvailabilityData(version: string): Promise<Availabili
 }
 
 /**
+ * Check if auction window is active based on end_date.
+ * Game dates are UTC+8 timezone.
+ *
+ * @param endDateStr - End date string in "YYYY-MM-DD HH:MM:SS" format (UTC+8)
+ * @returns true if auction window is still active, false if expired
+ */
+export function isAuctionWindowActive(endDateStr: string | null | undefined): boolean {
+  if (!endDateStr) return true; // No end_date = permanent auction
+
+  try {
+    // Parse "YYYY-MM-DD HH:MM:SS" format (UTC+8)
+    const [datePart, timePart] = endDateStr.split(' ');
+    const [year, month, day] = datePart.split('-').map(Number);
+    const [hour, minute, second] = timePart.split(':').map(Number);
+
+    // Create date as UTC by subtracting 8 hours offset
+    const endDateUTC = new Date(Date.UTC(year, month - 1, day, hour - 8, minute, second));
+    return new Date() < endDateUTC;
+  } catch {
+    return true; // Parse error = assume active
+  }
+}
+
+/**
+ * Computed availability values after client-side end_date check.
+ */
+export interface ComputedAvailability {
+  /** Whether card is currently available from any source */
+  currentlyAvailable: boolean;
+  /** Auction stock level (or 'unavailable' if window expired) */
+  auctionStockLevel: 'high' | 'medium' | 'low' | 'unavailable';
+  /** Whether auction is available (window active + has stock) */
+  auctionAvailable: boolean;
+}
+
+/**
+ * Compute client-side availability from raw R2 data.
+ *
+ * Checks auction end_date and recalculates availability if the auction
+ * window has expired. Use this in components that fetch R2 data directly.
+ *
+ * @param cardAvailability - Raw availability data from R2
+ * @returns Computed availability with corrected values
+ */
+export function computeClientSideAvailability(
+  cardAvailability: CardAvailability
+): ComputedAvailability {
+  let currentlyAvailable = cardAvailability.currently_available;
+  let auctionStockLevel: ComputedAvailability['auctionStockLevel'] =
+    cardAvailability.auction?.stock_level ?? 'unavailable';
+  let auctionAvailable = cardAvailability.auction?.available ?? false;
+
+  // Check if auction window has expired (client-side)
+  if (cardAvailability.auction?.end_date) {
+    const windowActive = isAuctionWindowActive(cardAvailability.auction.end_date);
+
+    if (!windowActive) {
+      // Auction window expired - override values
+      auctionStockLevel = 'unavailable';
+      auctionAvailable = false;
+
+      // Recalculate currently_available if auction was contributing
+      if (cardAvailability.currently_available) {
+        // Check if card is still available via other sources in R2 data
+        // (R2 data only has auction, daily, and gacha featured banners)
+        const hasOtherSource =
+          cardAvailability.daily?.available ||
+          (cardAvailability.gacha?.featured_banners &&
+            cardAvailability.gacha.featured_banners.length > 0);
+        currentlyAvailable = !!hasOtherSource;
+      }
+    } else {
+      // Window still active - use stock level to determine availability
+      auctionAvailable =
+        windowActive && cardAvailability.auction.stock_level !== 'unavailable';
+    }
+  }
+
+  return {
+    currentlyAvailable,
+    auctionStockLevel,
+    auctionAvailable,
+  };
+}
+
+/**
  * Merge availability data into cards data.
  *
  * Updates cards in-place with availability information.
@@ -168,11 +255,35 @@ export function mergeAvailability(
     }
 
     if (cardAvailability.auction) {
+      // Check if auction window is still active (client-side)
+      const windowActive = isAuctionWindowActive(cardAvailability.auction.end_date);
+      const hasStock = cardAvailability.auction.stock_level !== 'unavailable';
+
       acquisition.auction = {
         ...acquisition.auction,
-        available: cardAvailability.auction.available,
+        available: windowActive && hasStock, // Compute client-side
         // Keep existing fields, availability only updates availability status
       };
+
+      // Recalculate currently_available if auction window expired
+      if (!windowActive && cardAvailability.currently_available) {
+        // Check if other sources still make card available
+        const gacha = acquisition.gacha;
+        const gachaAvail =
+          gacha?.in_standard_pool || gacha?.featured_banners?.some((b) => b.is_current);
+        const eventAvail =
+          acquisition.event?.reward_tiers?.some((e) => e.is_current) ||
+          acquisition.event?.tower_drops?.some((t) => t.is_current);
+        const exchangeAvail = acquisition.exchange?.entries?.some((e) => e.is_current);
+        const dailyAvail = acquisition.daily?.available;
+
+        acquisition.currently_available = !!(
+          gachaAvail ||
+          eventAvail ||
+          exchangeAvail ||
+          dailyAvail
+        );
+      }
     }
 
     if (cardAvailability.daily && acquisition.daily) {
