@@ -35,7 +35,7 @@ El gacha de la segunda mitad va a drenar los invokers y mochi de todos.
 
 :card[1444] es una nueva potencia con 75% de habilidad y 75% de daño crítico. Nota la restricción de uno por equipo. **Muy recomendado - invoker + mochi si puedes.**
 
-:card[1401] es un atacante codicioso muy fuerte. Tiene 5s de silencio como desventaja, pero los buffs propios de 30% crítico y 60% daño crítico la hacen muy fuerte. **Buena elección para builds de carry codicioso.**
+:card[1401] es un atacante codicioso muy fuerte. Tiene 5s de silencio como desventaja, pero los buffs propios de 30% crítico y 60% daño crítico la hacen muy fuerte. **Buena elección para equipos Phantasma.**
 
 ### Adiciones al Gacha Estándar
 
@@ -59,7 +59,7 @@ El gacha de la segunda mitad va a drenar los invokers y mochi de todos.
 - :card[1399] (Ranking Mitad) - **Baja prioridad** - consíguelo barato
 - :card[1402] (Ranking General) - **No te esfuerces** - consíguelo si estás cerca del corte
 - :card[1444] (Gacha) - **Muy recomendado** - invoker + mochi si tienes recursos
-- :card[1401] (Gacha) - **Buena elección** - excelente carry codicioso
+- :card[1401] (Gacha) - **Buena elección** - excelente para Phantasma
 - :card[1443] (Estándar) - **Fuerte assist Divina** - vale la pena si puedes
 - :card[1442] (Estándar) - **Difícil recomendar** - restricciones de recursos
 - :card[1445] (Estándar) - **Nicho** - solo Anima endless

@@ -36,7 +36,7 @@ Second half gacha is going to bleed everyone of their invokers and mochi.
 
 :card[1444] is a new powerhouse with 75% skill and 75% crit damage. Highly recommended for most players if you have the resources - invoker one and mochi one for at least the crit damage, which is great on a carry you own. Do note the once per team restriction, so you can try to borrow one if you don't get it. But even if you don't plan to use it, I'd try to mochi one because that is guaranteed to sell on auction later if she doesn't get power crept. **Highly recommended - invoker + mochi if you can.**
 
-:card[1401] is a very strong greedy attacker. Her downside silence is only 5s, and outside of that she has :card[740] skill and attack power, but her self buffs of 30% crit and 60% crit damage make her way stronger as your carry. Even if you have :card[740], a team with both cards - :card[1401] as the greedy carry and :card[740] as your support carry - is going to be crazy strong! With her natural crit of 52%, you can hit 77% with :card[734] or even 97% with :card[1319]. I don't know if she's game breaking, but she's going to be very strong. **Strong pickup for greedy carry builds.**
+:card[1401] is a very strong greedy attacker. Her downside silence is only 5s, and outside of that she has :card[740] skill and attack power, but her self buffs of 30% crit and 60% crit damage make her way stronger as your carry. Even if you have :card[740], a team with both cards - :card[1401] as the greedy carry and :card[740] as your support carry - is going to be crazy strong! With her natural crit of 52%, you can hit 77% with :card[734] or even 97% with :card[1319]. I don't know if she's game breaking, but she's going to be very strong. **Strong pickup for Phantasma teams.**
 
 ### Standard Gacha Additions
 
@@ -62,7 +62,7 @@ These next few look to join the standard gacha:
 - :card[1399] (Half Ranking) - **Low priority** - grab cheaply if you can
 - :card[1402] (Overall Ranking) - **Don't go hard** - niche endless use, grab if near cutoffs
 - :card[1444] (Gacha) - **Highly recommended** - invoker + mochi if you have resources
-- :card[1401] (Gacha) - **Strong pickup** - excellent greedy carry
+- :card[1401] (Gacha) - **Strong pickup** - excellent for Phantasma
 - :card[1443] (Standard Gacha) - **Strong Divina assist** - worth grabbing if you can
 - :card[1442] (Standard Gacha) - **Hard to recommend** - interesting but resource-constrained
 - :card[1445] (Standard Gacha) - **Niche** - Anima endless only
