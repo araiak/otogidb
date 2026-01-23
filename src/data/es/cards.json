@@ -10333,7 +10333,50 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -10343,7 +10386,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101389",
@@ -10359,11 +10404,23 @@
       ],
       "description": "<color=#f4e48e>\"C'mon, you gotta get a bit hotter than that! If you don't start making an effort, I'm just gonna burn you...\" </color><br/>One of the <color=#ef9843>Great Old Ones</color> from the <color=#ef9843>Cthulhu Mythos</color> universe, whose body is cloaked in numerous flames. Archenemy of the <color=#ef9843>Evil Gods</color>.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "6 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002413+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002413+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1389",
       "image_urls": {
@@ -10608,7 +10665,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -10621,13 +10678,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-01-28 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-01-21 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101390",
@@ -10643,11 +10719,23 @@
       ],
       "description": "<color=#f4e48e>\"Now, draw closer to my horn... I shall bring joy and vitality to your life.\"</color><br/>A mythical <color=#ef9843>holy creature</color> with a single horn on its brow. The horn is imbued with divine power, and only those with pure hearts can approach it.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001709+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001709+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1390",
       "image_urls": {
@@ -10757,7 +10845,50 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -10767,7 +10898,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101391",
@@ -10783,11 +10916,23 @@
       ],
       "description": "<color=#f4e48e>\"My soul shall not be at rest...until there's things wandering through the darkness beside me...\" </color><br/><color=#ef9843>The soul of an object</color> from the Cthulhu Mythos universe that has the power to summon <color=#ef9843>Evil Gods</color>. When Nyarlathotep disappears as a result of the demons' summoning ceremony, Shining Trapezohedron uses her power to summon a great number of <color=#ef9843>Evil Gods</color> as a replacement.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "6 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002164+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002164+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1391",
       "image_urls": {
@@ -11075,7 +11220,57 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11085,7 +11280,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101399",
@@ -11101,11 +11298,23 @@
       ],
       "description": "<color=#f4e48e>\"You're the only person who I can really be my true self with, you know...\"</color><br/> One of the <color=#ef9843>Evil Gods</color> from the <color=#ef9843>Cthulhu Mythos</color> who was called out of the cosmic chaos by the demons' summoning accident, and begun drifting around subspace. Thanks to the help of you, she began to enjoy all the delights that chaos had to offer.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "7 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002894+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002894+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1399",
       "image_urls": {
@@ -11520,7 +11729,29 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11530,7 +11761,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101400",
@@ -11546,11 +11779,23 @@
       ],
       "description": "<color=#f4e48e>\"What's that round, squishy thing, then? A hotcake, you say...? Mm, looks good.\" </color><br/>A <color=#ef9843>material substance</color> that emerged from one of the <color=#ef9843>Evil God Nyarlathotep</color>'s alternate personalities. When she first appeared she couldn't tell her right from her left, but she's gradually learning a great deal under your care and guidance.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "3 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001926+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001926+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1400",
       "image_urls": {
@@ -11681,13 +11926,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-02-01 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-05 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101401",
@@ -11703,11 +11967,23 @@
       ],
       "description": "<color=#f4e48e>\"To think that you could win over a galaxy... I shall be needing to remain here and investigate your mysterious powers further...\"</color><br/> The <color=#ef9843>soul of a galaxy</color> 2.3 million light years away from Earth. She decided to come over here when <color=#ef9843>Nyarlathotep</color> disappeared, fearing the disturbance to the cosmic balance. She has struck up a strange friendship with Mira's Professor, Yata.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003409+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003409+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1401",
       "image_urls": {
@@ -11853,7 +12129,43 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "Evil Gods Attack",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11863,7 +12175,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101402",
@@ -11879,11 +12193,23 @@
       ],
       "description": "<color=#f4e48e>\"Thanks for helping Nyarly! </color><br/>One of the <color=#ef9843>Great Old Ones</color> from the <color=#ef9843>Cthulhu Mythos</color> universe. She accompanied Andromeda to Earth out of concern for Nyarlathotep's fate, and now she'd like nothing more than to get closer to you.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "5 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003139+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003139+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1402",
       "image_urls": {
@@ -11942,6 +12268,169 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1403": {
+      "abilities": [
+        {
+          "description": "Increases 20% of skill DMG of all anima allies at the start of the final wave.(only take effect once to the team)",
+          "id": "140301",
+          "name": "Precision Shot",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 84
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-28 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-01-21 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101403",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "140301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Target identified... Lockdown... Slayer, ready to fire...\"</color><br/>The <color=#ef9843>soul of a space gun</color> used by the alien <color=#ef9843>Marsha</color> from the Intergalactic Security Force. She loves robot anime and shooting games.",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-23T07:04:58.840549+00:00",
+        "first_seen_version": "ffd99c6",
+        "last_modified": "2026-01-23T07:04:58.840549+00:00",
+        "last_modified_version": "ffd99c6"
+      },
+      "id": "1403",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530396/otogi/android/101403.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530398/otogi/cards_hd/101403_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140301"
+        ],
+        "generation": 0
+      },
+      "name": "Slayer",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1403",
+        "name": "Full Power Mode",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -12025,13 +12514,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 200,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-01 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-01-28 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101404",
@@ -12047,11 +12555,23 @@
       ],
       "description": "<color=#f4e48e>\"When's your birthday, then? ...Oh, really! Okay, then... Now describe your ideal partner...\"</color><br/>A member of the <color=#ef9843>Intergalactic Security Force</color> responsible for keeping cosmic peace and order. She has come to earth to investigate the <color=#ef9843>Evil Gods</color> who have suddenly started wreaking havoc. She is interested in the agents that fight against the Evil Gods, and is currently conducting an in-depth investigation into you.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001191+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001191+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1404",
       "image_urls": {
@@ -12356,13 +12876,24 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-03-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-02-01 00:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101413",
@@ -13005,50 +13536,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -13368,50 +13856,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -14320,43 +14765,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -14538,57 +14947,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -14928,7 +15287,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -14944,10 +15303,19 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false
+          "featured_banners": [
+            {
+              "end": "2026-02-12 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-08 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101442",
@@ -14963,11 +15331,23 @@
       ],
       "description": "<color=#f4e48e>\"Let's enjoy a Japanese new year! Special sushi... Tasty noodles... It's just the best!\"</color><br/>The <color=#ef9843>Queen of the Fairies</color> who reigns over the other sylvan sprites. She came to Japan to take part in the winter festivities. This year, she will serve you, before heading off to Kansai as promised.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003945+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003945+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1442",
       "image_urls": {
@@ -15131,7 +15511,7 @@
           "featured_banners": [
             {
               "end": "2026-01-23 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-01-15 15:00:00"
             }
@@ -15303,13 +15683,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-02-01 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-05 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-01 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101444",
@@ -15325,11 +15724,23 @@
       ],
       "description": "<color=#f4e48e>\"Care to wash away all your sins? There's no time like the new year to make a fresh start...\"</color><br/><color=#ef9843>A goddess with dominion over death itself</color>. She is one of the <color=#ef9843>Three Goddesses of Trouble</color>, along with the Goddesses of Poverty and Misfortune. She also symbolizes rebirth and new beginnings. Her motto is \"It's never too late.\" She will never stop emphasizing the importance of taking the first step toward making a change.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003661+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003661+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1444",
       "image_urls": {
@@ -15464,7 +15875,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -15480,10 +15891,19 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false
+          "featured_banners": [
+            {
+              "end": "2026-02-15 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-12 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101445",
@@ -15499,11 +15919,23 @@
       ],
       "description": "<color=#f4e48e>\"Happy new year. I wish you all the joy this world has to offer.\"</color><br/>The soul of an <color=#ef9843>automated doll</color> made by <color=#ef9843>the genius doll-maker, Abel</color>. She is <color=#ef9843>Doll No. 1</color> in the hard-to-come-by <color=#ef9843>Five Fragrances Series</color>. She makes a pilgrimage with you at new year, praying for the siblings' happiness.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.004465+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.004465+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1445",
       "image_urls": {
@@ -28492,29 +28924,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "172",
-              "event_name": "O Holy Night",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -38934,7 +39344,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -39133,7 +39543,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -39309,7 +39719,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117065,7 +117475,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117237,7 +117647,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117410,7 +117820,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -118721,7 +119131,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -118926,7 +119336,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -138739,7 +139149,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -138949,7 +139359,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -143260,6 +143670,6 @@
     }
   },
   "locale": "es_ES",
-  "total_cards": 899,
-  "version": "9b8fb4e"
+  "total_cards": 900,
+  "version": "ffd99c6"
 }

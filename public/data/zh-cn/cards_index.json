@@ -3497,7 +3497,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101389",
       "bonds": [
@@ -3598,7 +3600,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101390",
       "bonds": [
@@ -3648,7 +3653,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101391",
       "bonds": [
@@ -3756,7 +3763,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101399",
       "bonds": [
@@ -3909,7 +3918,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101400",
       "bonds": [
@@ -3964,7 +3975,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101401",
       "bonds": [
@@ -4024,7 +4038,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101402",
       "bonds": [
@@ -4058,6 +4074,61 @@
         "type_name": "Ranged"
       }
     },
+    "1403": {
+      "abilities": [
+        {
+          "description": "最终回合，己方全体付属性队员技能伤害25%增加。(除助战外，己方全体仅生效1次)",
+          "name": "精密射击",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 84
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101403",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1403",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530396/otogi/android/101403.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530398/otogi/cards_hd/101403_hd.png"
+      },
+      "name": "杀戮者",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "火力全开模式",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1404": {
       "abilities": [
         {
@@ -4083,7 +4154,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101404",
       "bonds": [
@@ -4198,7 +4272,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101413",
       "bonds": [
@@ -4966,7 +5042,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101442",
       "bonds": [
@@ -5089,7 +5167,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101444",
       "bonds": [
@@ -5152,7 +5233,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101445",
       "bonds": [
@@ -47280,6 +47363,6 @@
     }
   },
   "locale": "zh-cn",
-  "total_cards": 899,
-  "version": "9b8fb4e"
+  "total_cards": 900,
+  "version": "ffd99c6"
 }
