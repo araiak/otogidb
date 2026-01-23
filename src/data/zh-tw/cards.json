@@ -10333,7 +10333,50 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -10343,7 +10386,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101389",
@@ -10359,11 +10404,23 @@
       ],
       "description": "<color=#f4e48e>「拜託更熱血一點！如果你再不加把勁，我就要放火囉！」</color><br/>來自<color=#ef9843>克蘇魯神話</color>宇宙的一位<color=#ef9843>古代神祇</color>，身體被籠罩在火海之中。<color=#ef9843>邪神</color>的死敵。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "6 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002413+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002413+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1389",
       "image_urls": {
@@ -10608,7 +10665,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -10621,13 +10678,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-01-28 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-01-21 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101390",
@@ -10643,11 +10719,23 @@
       ],
       "description": "<color=#f4e48e>「現在，靠近我的角... 我可以為你的生命帶來歡樂和活力。」</color><br/>一隻神祕的<color=#ef9843>聖獸</color>，額頭上長了一支角。這支角充滿神聖的力量，只有懷著純潔的心才能接近。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001709+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001709+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1390",
       "image_urls": {
@@ -10757,7 +10845,50 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -10767,7 +10898,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101391",
@@ -10783,11 +10916,23 @@
       ],
       "description": "<color=#f4e48e>「若身邊沒有徬徨於黑暗的事物...我的靈魂將無法平靜...」</color><br/><color=#ef9843></color>克蘇魯神話宇宙之物的靈魂，擁有召喚<color=#ef9843>邪神</color>的力量。奈亞魯法特因為惡魔的召喚儀式而消失後，光輝之偏方面體用她的力量召喚了大量的<color=#ef9843>邪神</color>做為替代品。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "6 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002164+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002164+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1391",
       "image_urls": {
@@ -11075,7 +11220,57 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11085,7 +11280,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101399",
@@ -11101,11 +11298,23 @@
       ],
       "description": "<color=#f4e48e>「你知道，你是唯一一位我能以真面目相待的...」</color><br/><color=#ef9843>克蘇魯神話</color>中的<color=#ef9843>邪神</color>之一，因式神召喚意外而從宇宙混沌被召喚而來，從此在亞空間漂流。感謝你的大力襄助，她開始享受混沌帶來的喜悅。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "7 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.002894+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002894+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1399",
       "image_urls": {
@@ -11520,7 +11729,29 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11530,7 +11761,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101400",
@@ -11546,11 +11779,23 @@
       ],
       "description": "<color=#f4e48e>「這個圓圓、黏黏的東西是什麼啊？你說這叫煎薄餅...？嗯，看起來很好吃。」</color><br/>從<color=#ef9843>邪神奈亞魯法特</color>另一人格變化而來的<color=#ef9843>物質型態</color>。她第一次出現時，還無法分辨左右，但由於你的悉心照顧與指導，她逐漸學會了很多事物。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "3 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001926+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001926+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1400",
       "image_urls": {
@@ -11681,13 +11926,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-02-01 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-05 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101401",
@@ -11703,11 +11967,23 @@
       ],
       "description": "<color=#f4e48e>「由於我認為你的力量能牽動銀河... 我會待在這裡，進一步調查你所擁有的神祕力量...」</color><br/><color=#ef9843>銀河的精靈</color>，和地球的距離約 230 萬光年。<color=#ef9843>奈亞魯法特</color>消失後，由於擔心宇宙平衡會被打亂，因而決定來到此地。她和鏡的師父，八咫，建立了不可思議的友誼。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003409+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003409+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1401",
       "image_urls": {
@@ -11853,7 +12129,43 @@
         },
         "event": {
           "from_description": [],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "175",
+              "event_name": "邪神來襲",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -11863,7 +12175,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101402",
@@ -11879,11 +12193,23 @@
       ],
       "description": "<color=#f4e48e>「謝謝你幫助了奈亞！</color><br/>來自<color=#ef9843>克蘇魯神話</color>宇宙的一位<color=#ef9843>古代神祇</color>。因為擔心奈亞魯法特的命運，她和仙女座一同來到地球，而現在她最喜歡和你待在一起。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.reward_tiers",
+                "new": "5 tiers (added: 175)",
+                "old": "0 tiers"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003139+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003139+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1402",
       "image_urls": {
@@ -11942,6 +12268,169 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1403": {
+      "abilities": [
+        {
+          "description": "最終回合，己方全體付屬性隊員技能傷害20%增加（除助戰外，己方全體僅生效1次）",
+          "id": "140301",
+          "name": "精密射擊",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 84
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-01-28 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-01-21 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101403",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "140301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「目標確認... 鎖定。殺戮者，準備發射！」</color><br/>身為星際安全警衛一員的<color=#ef9843>瑪莎</color>所使用的<color=#ef9843>太空槍之靈</color>。喜愛機器人動漫和射擊遊戲。",
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-01-23T07:04:58.840549+00:00",
+        "first_seen_version": "ffd99c6",
+        "last_modified": "2026-01-23T07:04:58.840549+00:00",
+        "last_modified_version": "ffd99c6"
+      },
+      "id": "1403",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530396/otogi/android/101403.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530398/otogi/cards_hd/101403_hd.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "140301"
+        ],
+        "generation": 0
+      },
+      "name": "殺戮者",
+      "playable": true,
+      "skill": {
+        "description": "可用於羈絆和公會討伐",
+        "id": "1403",
+        "name": "火力全開模式",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -12025,13 +12514,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 200,
+              "start": "2026-02-05 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-01 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-01-28 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101404",
@@ -12047,11 +12555,23 @@
       ],
       "description": "<color=#f4e48e>「那你生日是什麼時候？...哦，告訴我嘛！好啦，那... 現在形容一下你的理想伴侶...」</color><br/>身為<color=#ef9843>星際安全警衛</color>的一員，有責任保衛宇宙的和平和秩序。來到地球調查<color=#ef9843>邪神</color>突然開始作亂的原因。對於對抗邪神的陰陽師們很有興趣，如今正在對你進行一項刨根究柢的深入調查。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.001191+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001191+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1404",
       "image_urls": {
@@ -12356,13 +12876,24 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-03-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-02-01 00:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101413",
@@ -13005,50 +13536,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -13368,50 +13856,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -14320,43 +14765,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -14538,57 +14947,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -14928,7 +15287,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -14944,10 +15303,19 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false
+          "featured_banners": [
+            {
+              "end": "2026-02-12 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-08 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101442",
@@ -14963,11 +15331,23 @@
       ],
       "description": "<color=#f4e48e>「讓我們來享受一個日式新年吧！伊達捲... 栗子地瓜泥... 太棒了！」</color><br/>她是統治所有森林妖精的<color=#ef9843>妖精女王</color>。遠道前來日本參加這場冬季盛會。今天她會按照約定服侍你，再出發去關西。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003945+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003945+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1442",
       "image_urls": {
@@ -15131,7 +15511,7 @@
           "featured_banners": [
             {
               "end": "2026-01-23 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-01-15 15:00:00"
             }
@@ -15303,13 +15683,32 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-02-08 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-02-01 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-02-05 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-01 15:00:00"
+            }
+          ],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101444",
@@ -15325,11 +15724,23 @@
       ],
       "description": "<color=#f4e48e>「想要洗去所有的罪孽嗎？新的一年正適合新的開始...」</color><br/><color=#ef9843>她是執掌死亡的女神</color>。她也是<color=#ef9843>三大災禍神</color>之一，其他兩位是窮神和厄病神。她同時也象徵復活和新生。她的座右銘是「永不嫌遲」。而且會不斷強調踏出改變的第一步的重要性。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.003661+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003661+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1444",
       "image_urls": {
@@ -15464,7 +15875,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -15480,10 +15891,19 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false
+          "featured_banners": [
+            {
+              "end": "2026-02-15 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-02-12 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101445",
@@ -15499,11 +15919,23 @@
       ],
       "description": "<color=#f4e48e>「新年快樂。希望你們能獲得世界上的所有幸福。」</color><br/>由天才人偶師<color=#ef9843>阿貝爾</color>製作的<color=#ef9843>機器人偶</color>之靈。她是極難入手的<color=#ef9843>五芳人偶系列</color>編號<color=#ef9843>第一號</color>的人偶。她和你在新年時一起去參拜，並祈禱弟妹們能幸福快樂。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.featured_banners",
+                "new": "1 banners",
+                "old": "0 banners"
+              }
+            ],
+            "date": "2026-01-23",
+            "version": "ffd99c6"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.004465+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.004465+00:00",
-        "last_modified_version": "6ba4beb"
+        "last_modified_version": "ffd99c6"
       },
       "id": "1445",
       "image_urls": {
@@ -28492,29 +28924,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "172",
-              "event_name": "平安夜",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "172",
@@ -38934,7 +39344,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -39133,7 +39543,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -39309,7 +39719,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117065,7 +117475,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117237,7 +117647,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -117410,7 +117820,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -118721,7 +119131,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -118926,7 +119336,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -138739,7 +139149,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -138949,7 +139359,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-01-18 15:00:00",
           "is_time_limited": true,
@@ -143260,6 +143670,6 @@
     }
   },
   "locale": "zh_TW",
-  "total_cards": 899,
-  "version": "9b8fb4e"
+  "total_cards": 900,
+  "version": "ffd99c6"
 }
