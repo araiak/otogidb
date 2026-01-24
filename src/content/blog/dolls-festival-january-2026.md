@@ -3,7 +3,7 @@ title: "Dolls Festival & January 2026 Cards"
 description: "Analysis of the story event assist, ranking card, exchange card, and gacha cards for the Dolls Festival auction"
 date: "2026-01-13"
 author: "Araiak"
-tags: ["analysis", "auction", "dolls-festival", "anima", "phantasma"]
+tags: ["analysis", "auction", "gacha"]
 ---
 
 A bit late but here's some notes on this month's cards!

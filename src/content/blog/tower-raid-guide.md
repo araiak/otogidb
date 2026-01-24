@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents Tower Raid Guide: SE Efficiency & Climbing Strategie
 description: "Complete guide to Tower Raid events in Otogi Spirit Agents. Learn SE cost optimization, team composition strategies, and how to climb efficiently with guild support."
 date: "2026-01-20"
 author: "Araiak"
-tags: ["guide", "tower-raid", "events"]
+tags: ["guide", "events"]
 ---
 
 This is intended as a new(er) player guide to Tower Raid events. Tower events are very good for new players because you can request help from guild mates - if you find a kind guild, there's a good chance you can get several 5-star cards with help.

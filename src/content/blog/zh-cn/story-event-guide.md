@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents 剧情活动攻略：刷分与经验值策略"
 description: "Otogi Spirit Agents 剧情活动完整攻略。了解货币刷取效率、经验值提升策略，以及在助战中寻找什么卡片。"
 date: "2025-12-23"
 author: "Araiak"
-tags: ["攻略", "剧情", "刷分", "活动"]
+tags: ["攻略", "活动"]
 locale: "zh-cn"
 ---
 

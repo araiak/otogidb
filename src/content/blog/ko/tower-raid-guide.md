@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents 타워 레이드 가이드: SE 효율 & 등반 전�
 description: "Otogi Spirit Agents 타워 레이드 이벤트 완전 가이드. SE 비용 최적화, 팀 구성 전략, 길드 지원으로 효율적으로 등반하는 방법을 알아보세요."
 date: "2026-01-20"
 author: "Araiak"
-tags: ["가이드", "타워-레이드", "이벤트"]
+tags: ["가이드", "이벤트"]
 locale: "ko"
 ---
 

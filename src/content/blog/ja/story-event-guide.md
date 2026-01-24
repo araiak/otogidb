@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents ストーリーイベント攻略：ファーミン�
 description: "Otogi Spirit Agentsのストーリーイベント完全ガイド。通貨ファーミング効率、XPブースト戦略、ヘルパーで探すべきカードを解説。"
 date: "2025-12-23"
 author: "Araiak"
-tags: ["攻略", "ストーリー", "ファーミング", "イベント"]
+tags: ["攻略", "イベント"]
 locale: "ja"
 ---
 

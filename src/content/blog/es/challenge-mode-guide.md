@@ -3,7 +3,7 @@ title: "Modo Desafío: Llegando al Nivel 100"
 description: "Guía para construir equipos para el modo Endless/Challenge - habilidades clave y recomendaciones de cartas"
 date: "2025-12-16"
 author: "Araiak"
-tags: ["guía", "desafío", "endless", "equipos"]
+tags: ["guía"]
 locale: "es"
 ---
 

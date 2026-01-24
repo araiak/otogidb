@@ -3,7 +3,7 @@ title: "Guía de Farmeo PvP en Otogi Spirit Agents: Obtén Orbes de 5 Estrellas 
 description: "Guía completa de intercambio de victorias en PvP de Otogi Spirit Agents. Aprende a ganar 8,000 puntos de desafío mensuales para orbes de mejora de 5 estrellas con configuraciones de equipo eficientes."
 date: "2025-12-19"
 author: "Araiak"
-tags: ["guía", "pvp", "farmeo"]
+tags: ["guía"]
 locale: "es"
 ---
 

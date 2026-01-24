@@ -3,7 +3,7 @@ title: "Evento de Historia O Holy Night: Análisis de Cartas"
 description: "Resumen rápido de las cartas del evento O Holy Night, recompensas de ranking y cartas gacha con recomendaciones para nuevos jugadores."
 date: "2025-12-23"
 author: "Araiak"
-tags: ["análisis", "historia", "navidad", "eventos"]
+tags: ["análisis", "gacha", "eventos"]
 locale: "es"
 ---
 

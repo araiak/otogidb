@@ -3,7 +3,7 @@ title: "O Holy Night Story Event: Card Analysis"
 description: "Quick rundown of the O Holy Night story event cards, ranking rewards, and gacha cards with new player recommendations."
 date: "2025-12-23"
 author: "Araiak"
-tags: ["analysis", "story", "christmas", "events"]
+tags: ["analysis", "gacha", "events"]
 ---
 
 I wanted to do a quick rundown of the O Holy Night story event now that we have full card information. For general story event tips, check out the [Story Event Guide](/blog/story-event-guide).

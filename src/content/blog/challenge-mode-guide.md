@@ -3,7 +3,7 @@ title: "Challenge Mode: Pushing to Level 100"
 description: "A guide to building teams for Endless/Challenge mode, covering key abilities and card recommendations for high floor progression"
 date: "2025-12-16"
 author: "Araiak"
-tags: ["guide", "challenge", "endless", "team-building"]
+tags: ["guide"]
 ---
 
 I saw today that I have a MLB Harvest Moon on my friends list and had been thinking about doing a run for level 100 in Endless/Challenge mode. My current limit is level 90, but this is without fully optimizing my team. I thought maybe it would be helpful to some to have a quick guide on the current state of challenge, or what makes a good team for pushing.

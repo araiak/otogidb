@@ -3,7 +3,7 @@ title: "OtogiDBへようこそ"
 description: "あやかし百鬼夜行カードデータベースのご紹介 - 2024年リリース版の正確なデータ"
 date: "2025-12-13"
 author: "Araiak"
-tags: ["お知らせ", "ガイド"]
+tags: ["お知らせ", "攻略"]
 locale: "ja"
 ---
 

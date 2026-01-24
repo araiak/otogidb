@@ -3,7 +3,7 @@ title: "Christmas Auction Analysis"
 description: "Quick analysis of the standout auction cards for Phantasma players - no gacha cards covered"
 date: "2025-12-25"
 author: "Araiak"
-tags: ["analysis", "auction", "christmas", "phantasma"]
+tags: ["analysis", "auction"]
 ---
 
 I'll do a really quick one here, generally these cards have been power crept and that is a bit evident in the lower prices. There are 3 that could stand out so I'll throw out my thoughts on those here.

@@ -3,7 +3,7 @@ title: "Intercambio de Enero y Subasta de Año Nuevo"
 description: "Vistazo rápido a las cartas de la subasta de Año Nuevo y la nueva carta de intercambio de enero"
 date: "2026-01-01"
 author: "Araiak"
-tags: ["análisis", "subasta", "intercambio", "año-nuevo"]
+tags: ["análisis", "subasta", "intercambio"]
 locale: "es"
 ---
 

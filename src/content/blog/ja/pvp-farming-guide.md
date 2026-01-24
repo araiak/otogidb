@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents PvPファーミング攻略：毎月5つ星オーブ
 description: "Otogi Spirit AgentsのPvP勝ちトレード完全ガイド。効率的なチーム編成で毎月8,000チャレンジポイントを稼ぎ、5つ星強化オーブを確実に入手する方法を解説。"
 date: "2025-12-19"
 author: "Araiak"
-tags: ["攻略", "pvp", "ファーミング"]
+tags: ["攻略"]
 locale: "ja"
 ---
 

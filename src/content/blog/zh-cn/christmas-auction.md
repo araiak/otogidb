@@ -3,7 +3,7 @@ title: "圣诞拍卖分析"
 description: "为幻灵玩家快速分析拍卖亮点卡牌 - 不包含抽卡池卡牌"
 date: "2025-12-25"
 author: "Araiak"
-tags: ["分析", "拍卖", "圣诞", "幻灵"]
+tags: ["分析", "拍卖"]
 locale: "zh-cn"
 ---
 

@@ -3,7 +3,7 @@ title: "Festival de Muñecas y Cartas de Enero 2026"
 description: "Análisis del asistente del evento de historia, carta de ranking, carta de intercambio y cartas gacha para la subasta del Festival de Muñecas"
 date: "2026-01-13"
 author: "Araiak"
-tags: ["análisis", "subasta", "festival-muñecas", "anima", "phantasma"]
+tags: ["análisis", "subasta", "gacha"]
 locale: "es"
 ---
 

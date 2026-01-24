@@ -3,7 +3,7 @@ title: "Ataque de los Dioses Malignos: Análisis de Cartas"
 description: "Vista previa del tower raid Ataque de los Dioses Malignos con Nyarlathotep, recompensas de ranking y poderosas cartas gacha"
 date: "2026-01-23"
 author: "Araiak"
-tags: ["análisis", "tower-raid", "divina", "phantasma", "anima", "gacha"]
+tags: ["análisis", "gacha", "eventos"]
 locale: "es"
 ---
 

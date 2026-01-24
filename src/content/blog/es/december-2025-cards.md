@@ -3,7 +3,7 @@ title: "Diciembre 2025: Cartas Navideñas y Análisis de Subastas"
 description: "Análisis personal de las nuevas cartas navideñas y las ofertas actuales de subastas - para jugadores intermedios"
 date: "2025-12-15"
 author: "Araiak"
-tags: ["análisis", "navidad", "subasta", "guía"]
+tags: ["análisis", "subasta"]
 locale: "es"
 ---
 

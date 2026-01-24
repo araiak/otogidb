@@ -3,7 +3,7 @@ title: "Evil Gods Attack: Card Analysis"
 description: "Preview of the upcoming Evil Gods Attack tower raid featuring Nyarlathotep, ranking rewards, and powerful new gacha cards"
 date: "2026-01-23"
 author: "Araiak"
-tags: ["analysis", "tower-raid", "divina", "phantasma", "anima", "gacha"]
+tags: ["analysis", "gacha", "events"]
 ---
 
 We just got ranking data but not tower data for Evil Gods Attack. Note: any of these could change or be re-arranged before the event starts. For general tower raid tips, check out the [Tower Raid Guide](/blog/tower-raid-guide).
