@@ -3602,7 +3602,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101390",
@@ -3706,7 +3707,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101398",
       "bonds": [
@@ -3977,7 +3980,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101401",
@@ -4086,14 +4090,15 @@
             "AoE",
             "Skill DMG"
           ],
-          "unlock_level": 84
+          "unlock_level": 64
         }
       ],
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101403",
@@ -4156,7 +4161,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101404",
@@ -5169,7 +5175,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101444",
@@ -47364,5 +47371,5 @@
   },
   "locale": "zh-cn",
   "total_cards": 900,
-  "version": "ffd99c6"
+  "version": "860a7ef"
 }
