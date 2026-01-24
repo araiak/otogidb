@@ -17,8 +17,13 @@ const posts = await getCollection('blog', ({ data, id }) => !data.draft && id.st
 // Sort by date descending
 posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-// Collect all unique tags
-const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+// Main categories for filtering (subset of all tags for cleaner navigation)
+const mainCategories = ['分析', '公告', '拍賣', '交換所', '抽卡', '攻略', '活動'];
+
+// Only show main categories that have posts
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))]
+  .filter(tag => mainCategories.includes(tag))
+  .sort((a, b) => mainCategories.indexOf(a) - mainCategories.indexOf(b));
 ---
 
 <BaseLayout title={t.blog} description="百鬼夜行卡牌資料庫部落格 - 攻略、分析和更新" hasLocalizedUrls={true} lang={currentLocale}>

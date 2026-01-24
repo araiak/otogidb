@@ -9,8 +9,13 @@ const posts = await getCollection('blog', ({ data }) => !data.draft && (!data.lo
 // Sort by date descending
 posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-// Collect all unique tags
-const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+// Main categories for filtering (subset of all tags for cleaner navigation)
+const mainCategories = ['analysis', 'announcement', 'auction', 'exchange', 'gacha', 'guide', 'events'];
+
+// Only show main categories that have posts
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))]
+  .filter(tag => mainCategories.includes(tag))
+  .sort((a, b) => mainCategories.indexOf(a) - mainCategories.indexOf(b));
 ---
 
 <BaseLayout title="Blog" description="Otogi Spirit Agents card database blog - guides, analysis, and updates" hasLocalizedUrls={true}>

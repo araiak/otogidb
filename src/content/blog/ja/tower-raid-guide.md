@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents タワーレイド攻略：SE効率と登頂戦略"
 description: "Otogi Spirit Agentsのタワーレイドイベント完全ガイド。SEコスト最適化、チーム編成戦略、ギルドサポートで効率的に登る方法を解説。"
 date: "2026-01-20"
 author: "Araiak"
-tags: ["攻略", "タワー", "レイド", "イベント"]
+tags: ["攻略", "タワーレイド", "イベント"]
 locale: "ja"
 ---
 

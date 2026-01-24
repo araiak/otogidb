@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents 塔樓副本攻略：SE效率與爬塔策略"
 description: "Otogi Spirit Agents塔樓副本活動完全指南。學習SE消耗優化、隊伍配置策略，以及如何透過公會支援高效爬塔。"
 date: "2026-01-20"
 author: "Araiak"
-tags: ["攻略", "塔樓", "副本", "活動"]
+tags: ["攻略", "塔樓突襲", "活動"]
 locale: "zh-tw"
 ---
 

@@ -127,6 +127,9 @@ const navLinks = {
     <!-- SEO: Open Graph, Twitter Cards, Canonical, Hreflang -->
     <SEO title={title} description={description} image={image} type={type} locale={currentLocale} hasLocalizedUrls={hasLocalizedUrls} article={article} />
 
+    <!-- RSS Feed Discovery -->
+    <link rel="alternate" type="application/rss+xml" title="OtogiDB Blog" href={`/${currentLocale}/blog/rss.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="OtogiDB Card Updates" href={`/${currentLocale}/updates/rss.xml`} />
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />

@@ -3,7 +3,7 @@ title: "Guía de Torre Raid en Otogi Spirit Agents: Eficiencia de SE y Estrategi
 description: "Guía completa de eventos de Torre Raid en Otogi Spirit Agents. Aprende optimización de costos de SE, estrategias de composición de equipo y cómo escalar eficientemente con apoyo del gremio."
 date: "2026-01-20"
 author: "Araiak"
-tags: ["guía", "torre", "raid", "eventos"]
+tags: ["guía", "torre-raid", "eventos"]
 locale: "es"
 ---
 
