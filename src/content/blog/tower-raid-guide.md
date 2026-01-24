@@ -22,7 +22,7 @@ In tower events, you get attacked by a raid boss either from doing normal conten
 5. **If you need a tank**, check auction for one
 
 ### During the Event
-1. **Run:** borrowed carry + 1 of your tanky cards (3-5 SE)
+1. **Run:** borrowed carry + 1 of your tanky cards (4-5 SE)
 2. **Survive to timer** → share to guild for help
 3. **Wipe?** Don't revive (unless card drop floor)
 4. **Hit a wall?** Add more of your own cards or upgrade your tank so you can survive to the timer to share
@@ -46,9 +46,9 @@ Tower events are:
 
 **Important:** Only YOUR cards count toward SE cost. Borrowed friends and reserves are free!
 
-SE cost = sum of stars from your 1-4 cards (min 3, max 18)
+SE cost = sum of stars from your 1-4 cards (min 4, max 18)
 
-- Your 1× 3-star = 3 SE
+- Your 1× 4-star = 4 SE
 - Your 1× 5-star = 5 SE
 - Your 2× 5-stars = 10 SE
 - Borrowed friend's card = free
@@ -72,7 +72,7 @@ If you survive to the timer, you can share the boss for help or attack again for
 
 ## Low SE Climbing Strategy
 
-Since borrowed helpers are free, the optimal strategy is to borrow a strong damage carry and provide just 1 card of your own. You can push as far as possible with just 1 of your own cards - a 3-star costs only 3 SE, or a 5-star for 5 SE.
+Since borrowed helpers are free, the optimal strategy is to borrow a strong damage carry and provide just 1 card of your own. You can push as far as possible with just 1 of your own cards - a 4-star costs only 4 SE, or a 5-star for 5 SE.
 
 **Always fill your reserves!** Reserves don't count toward SE cost, so load them with strong assists and support abilities.
 
@@ -165,7 +165,7 @@ You can find a full list of monsters with team-wide abilities by using the filte
 
 ## Scaling Up Your Team
 
-Once you hit a wall, progressively add your own cards to the team. You always have 1 borrowed friend, then your SE cost is the sum of stars from your 1-4 cards (min 3, max 18).
+Once you hit a wall, progressively add your own cards to the team. You always have 1 borrowed friend, then your SE cost is the sum of stars from your 1-4 cards (min 4, max 18).
 
 **Your second card should probably be a healer** - this helps you survive to the timer so you can share with your guild for help.
 
@@ -188,7 +188,7 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 
 | Situation | Strategy |
 |-----------|----------|
-| Starting out | Borrow a strong carry, provide 1 tanky card of your own (3-5 SE) |
+| Starting out | Borrow a strong carry, provide 1 tanky card of your own (4-5 SE) |
 | Need more survival | Use a tankier card or add a DR assist |
 | Hit a wall | Share boss to guild for help, or add more of your own cards |
 | Card drop floor (2x HP) | Consider adding cards temporarily for the HP spike |
