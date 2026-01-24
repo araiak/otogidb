@@ -3,7 +3,7 @@ title: "Análisis de la Subasta de Navidad"
 description: "Análisis rápido de las cartas destacadas de la subasta para jugadores de Phantasma - sin cartas de gacha"
 date: "2025-12-25"
 author: "Araiak"
-tags: ["análisis", "subasta", "navidad", "phantasma"]
+tags: ["análisis", "subasta"]
 locale: "es"
 ---
 

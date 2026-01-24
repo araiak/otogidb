@@ -3,7 +3,7 @@ title: "Guía de Eventos de Historia en Otogi Spirit Agents: Estrategias de Farm
 description: "Guía completa de eventos de Historia en Otogi Spirit Agents. Aprende la eficiencia del farmeo de moneda, estrategias de aumento de XP y qué cartas buscar en helpers."
 date: "2025-12-23"
 author: "Araiak"
-tags: ["guía", "historia", "farmeo", "eventos"]
+tags: ["guía", "eventos"]
 locale: "es"
 ---
 

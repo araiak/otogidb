@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents PvP Farming Guide: Get 5-Star Orbs Monthly"
 description: "Complete guide to PvP win trading in Otogi Spirit Agents. Learn how to reliably earn 8,000 challenge points monthly for 5-star upgrade orbs using efficient team setups."
 date: "2025-12-19"
 author: "Araiak"
-tags: ["guide", "pvp", "farming"]
+tags: ["guide"]
 ---
 
 Today I ran into a few newer players with an incorrect PvP setup, so I thought I'd write a quick guide. Many years ago there were many groups and guides for this, but now a lot of that information is lost and fragmented. I wanted to capture my understanding of PvP farming based on my and my guild's experiences, so maybe more players can standardize their PvP farming and improve the overall experience.

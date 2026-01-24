@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents Story Event Guide: Farming & XP Strategies"
 description: "Complete guide to Story events in Otogi Spirit Agents. Learn currency farming efficiency, XP boosting strategies, and which cards to look for in helpers."
 date: "2025-12-23"
 author: "Araiak"
-tags: ["guide", "story", "farming", "events"]
+tags: ["guide", "events"]
 ---
 
 This is intended as a new(er) player guide to Story events. Unfortunately for very new players, Story events can tend to be very difficult. Don't worry if you get stuck and need to focus on building your team.

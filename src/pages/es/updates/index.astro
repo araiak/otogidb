@@ -102,6 +102,49 @@ function formatDate(dateStr: string): string {
 function renderStars(rarity: number): string {
   return '★'.repeat(Math.min(Math.max(rarity, 0), 5));
 }
+
+// Group updates by month/year
+function getCurrentMonthKey(): string {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+}
+
+interface MonthGroup {
+  key: string;
+  label: string;
+  updates: PatchNotes[];
+  isCurrentMonth: boolean;
+}
+
+function groupByMonth(updates: PatchNotes[]): MonthGroup[] {
+  const groups = new Map<string, PatchNotes[]>();
+
+  for (const update of updates) {
+    const dateStr = update.version_date || update.generated_at || '';
+    const date = new Date(dateStr);
+    const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
+
+    if (!groups.has(key)) {
+      groups.set(key, []);
+    }
+    groups.get(key)!.push(update);
+  }
+
+  const currentMonthKey = getCurrentMonthKey();
+
+  return Array.from(groups.entries())
+    .sort((a, b) => b[0].localeCompare(a[0]))
+    .map(([key, updates]) => ({
+      key,
+      label: updates[0]
+        ? new Date(updates[0].version_date || updates[0].generated_at || '').toLocaleDateString('es-ES', { year: 'numeric', month: 'long' })
+        : key,
+      updates,
+      isCurrentMonth: key === currentMonthKey
+    }));
+}
+
+const groupedUpdates = groupByMonth(visiblePatchNotes);
 ---
 
 <BaseLayout title={t.updates} description="あやかし百鬼夜行 カードパッチノート - 新カードとバランス調整" hasLocalizedUrls={true} lang={currentLocale}>
@@ -134,14 +177,27 @@ function renderStars(rarity: number): string {
       <p class="text-secondary">{t.patchNotesDescription}</p>
     </div>
 
-    {visiblePatchNotes.length === 0 ? (
+    {groupedUpdates.length === 0 ? (
       <div class="card p-6 text-center">
         <p class="text-secondary">{t.noPatchNotes}</p>
       </div>
     ) : (
-      <div class="space-y-8">
-        {visiblePatchNotes.map((notes) => (
-          <article class="card overflow-hidden">
+      <div class="space-y-6">
+        {groupedUpdates.map((group, groupIndex) => (
+          <details class="group" open={group.isCurrentMonth || groupIndex === 0}>
+            <summary class="cursor-pointer p-4 bg-base-200 rounded-lg flex items-center justify-between hover:bg-base-300 transition-colors list-none [&::-webkit-details-marker]:hidden">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <span class="text-xl font-semibold">{group.label}</span>
+              </div>
+              <span class="badge badge-neutral">{group.updates.length} {group.updates.length === 1 ? 'actualización' : 'actualizaciones'}</span>
+            </summary>
+
+            <div class="mt-4 space-y-8">
+              {group.updates.map((notes) => (
+                <article class="card overflow-hidden">
             <div class="p-4 md:p-6 border-b" style="border-color: var(--color-border);">
               <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                 <div>
@@ -219,8 +275,11 @@ function renderStars(rarity: number): string {
                   </div>
                 </section>
               )}
+                </div>
+              </article>
+              ))}
             </div>
-          </article>
+          </details>
         ))}
       </div>
     )}

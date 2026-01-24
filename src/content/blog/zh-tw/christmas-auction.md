@@ -3,7 +3,7 @@ title: "聖誕拍賣分析"
 description: "為幻靈玩家快速分析拍賣亮點卡牌 - 不包含抽卡池卡牌"
 date: "2025-12-25"
 author: "Araiak"
-tags: ["分析", "拍賣", "聖誕", "幻靈"]
+tags: ["分析", "拍賣"]
 locale: "zh-tw"
 ---
 

@@ -3,7 +3,7 @@ title: "1月交换所与新年拍卖"
 description: "新年拍卖卡牌和1月新交换卡牌简介"
 date: "2026-01-01"
 author: "Araiak"
-tags: ["分析", "拍卖", "交换所", "新年"]
+tags: ["分析", "拍卖", "交换所"]
 locale: "zh-cn"
 ---
 

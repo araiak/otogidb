@@ -3,7 +3,7 @@ title: "January Exchange & New Year's Auction"
 description: "Quick look at the NY auction cards and the new exchange card for January"
 date: "2026-01-01"
 author: "Araiak"
-tags: ["analysis", "auction", "exchange", "new-year"]
+tags: ["analysis", "auction", "exchange"]
 ---
 
 I'll keep this one short. The New Year's auction is mostly older cards that have been powercrept quite a bit - this is more of an opportunity for collectors than meta chasers.

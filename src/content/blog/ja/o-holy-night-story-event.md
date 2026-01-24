@@ -3,7 +3,7 @@ title: "O Holy Night ストーリーイベント：カード分析"
 description: "O Holy Nightストーリーイベントのカード、ランキング報酬、ガチャカードの新規プレイヤー向け解説。"
 date: "2025-12-23"
 author: "Araiak"
-tags: ["分析", "ストーリー", "クリスマス", "イベント"]
+tags: ["分析", "ガチャ", "イベント"]
 locale: "ja"
 ---
 

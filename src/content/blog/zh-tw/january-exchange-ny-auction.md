@@ -3,7 +3,7 @@ title: "1月交換所與新年拍賣"
 description: "新年拍賣卡牌和1月新交換卡牌簡介"
 date: "2026-01-01"
 author: "Araiak"
-tags: ["分析", "拍賣", "交換所", "新年"]
+tags: ["分析", "拍賣", "交換所"]
 locale: "zh-tw"
 ---
 

@@ -3,7 +3,7 @@ title: "Otogi Spirit Agents PvP刷分攻略：每月稳定获取5星升级球"
 description: "Otogi Spirit Agents PvP互刷完整攻略。学习如何用高效阵容每月赚取8,000挑战积分，稳定获取5星升级球。"
 date: "2025-12-19"
 author: "Araiak"
-tags: ["攻略", "pvp", "刷分"]
+tags: ["攻略"]
 locale: "zh-cn"
 ---
 

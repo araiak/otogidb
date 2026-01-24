@@ -3,7 +3,7 @@ title: "挑战模式：突破100层"
 description: "无尽/挑战模式队伍配置指南 - 关键能力和卡牌推荐助你攻克高层"
 date: "2025-12-16"
 author: "Araiak"
-tags: ["攻略", "挑战", "无尽", "队伍配置"]
+tags: ["攻略"]
 locale: "zh-cn"
 ---
 

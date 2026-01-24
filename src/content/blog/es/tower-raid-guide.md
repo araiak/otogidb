@@ -3,7 +3,7 @@ title: "Guía de Torre Raid en Otogi Spirit Agents: Eficiencia de SE y Estrategi
 description: "Guía completa de eventos de Torre Raid en Otogi Spirit Agents. Aprende optimización de costos de SE, estrategias de composición de equipo y cómo escalar eficientemente con apoyo del gremio."
 date: "2026-01-20"
 author: "Araiak"
-tags: ["guía", "torre", "raid", "eventos"]
+tags: ["guía", "eventos"]
 locale: "es"
 ---
 
@@ -23,7 +23,7 @@ En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal 
 5. **Si necesitas un tanque**, busca uno en la subasta
 
 ### Durante el Evento
-1. **Usa:** carry prestado + 1 de tus cartas resistentes (3-5 SE)
+1. **Usa:** carry prestado + 1 de tus cartas resistentes (4-5 SE)
 2. **Sobrevive hasta el temporizador** → comparte con el gremio para pedir ayuda
 3. **¿Mueres?** No revivas (excepto en pisos de drop de cartas)
 4. **¿Llegas a un muro?** Añade más de tus propias cartas o mejora tu tanque para sobrevivir hasta el temporizador y compartir
@@ -47,9 +47,9 @@ Los eventos de torre son:
 
 **Importante:** ¡Solo TUS cartas cuentan para el costo de SE. Amigos prestados y reservas son gratis!
 
-Costo de SE = suma de estrellas de tus 1-4 cartas (mín 3, máx 18)
+Costo de SE = suma de estrellas de tus 1-4 cartas (mín 4, máx 18)
 
-- Tu 1× 3 estrellas = 3 SE
+- Tu 1× 4 estrellas = 4 SE
 - Tu 1× 5 estrellas = 5 SE
 - Tus 2× 5 estrellas = 10 SE
 - Carta de amigo prestado = gratis
@@ -73,7 +73,7 @@ Si sobrevives hasta el temporizador, puedes compartir el jefe para pedir ayuda o
 
 ## Estrategia de Escalada con Bajo SE
 
-Dado que los ayudantes prestados son gratis, la estrategia óptima es pedir prestado un carry de daño fuerte y proporcionar solo 1 carta tuya. Puedes avanzar lo más posible con solo 1 de tus propias cartas - una de 3 estrellas cuesta solo 3 SE, o una de 5 estrellas por 5 SE.
+Dado que los ayudantes prestados son gratis, la estrategia óptima es pedir prestado un carry de daño fuerte y proporcionar solo 1 carta tuya. Puedes avanzar lo más posible con solo 1 de tus propias cartas - una de 4 estrellas cuesta solo 4 SE, o una de 5 estrellas por 5 SE.
 
 **¡Siempre llena tus reservas!** Las reservas no cuentan para el costo de SE, así que cárgalas con asistentes fuertes y habilidades de soporte.
 
@@ -108,7 +108,7 @@ Esta es la configuración más accesible debido a que :card[740] está ampliamen
 
 La misma estrategia funciona para Divina, aunque los tanques carecen de reducción de daño así que un asistente de RD es recomendado en niveles altos o puede que necesites un curador antes.
 
-**Prestar:** :card[1311], :card[739], o :card[553]
+**Prestar:** :card[1311] o :card[553]
 
 **Tu carta (en orden de prioridad):**
 
@@ -121,7 +121,7 @@ La misma estrategia funciona para Divina, aunque los tanques carecen de reducci�
 
 Anima tiene menos opciones accesibles y los carries no son tan comunes en listas de amigos - puede que necesites añadir jugadores de Anima específicamente.
 
-**Prestar:** :card[674], :card[630], :card[543], o :card[514]
+**Prestar:** :card[630], :card[543], o :card[514]
 
 **Tu carta (en orden de prioridad):**
 
@@ -138,13 +138,11 @@ Dado que las reservas son gratis, maximiza su valor:
 - :card[723] (Nv. 75) - Daño multi-objetivo
 - :card[643] (Nv. 75) - Daño multi-objetivo
 - :card[656] (Nv. 75+) - Aumento de daño solo para Anima
-- :card[688] (Nv. 70+) - Daño/defensa equilibrado para cuerpo a cuerpo con habilidad de ataque
-
 Cualquier aumento de daño multi-objetivo funciona. Incluso asistentes de objetivo único que solo buffean tu carry están bien.
 
 **Aumentos de daño crítico** son especialmente poderosos si tienes :card[1307] o :card[1494] en reservas.
 
-**Asistentes de reducción de daño (RD)** ayudan a tu tanque a sobrevivir en niveles altos. Ejemplos: :card[1062], :card[688], :card[1437], :card[749], :card[657], :card[677]
+**Asistentes de reducción de daño (RD)** ayudan a tu tanque a sobrevivir en niveles altos. Ejemplos: :card[1062], :card[1437], :card[749], :card[657], :card[677]
 
 ### Monstruos de Reserva (No-Asistentes)
 
@@ -168,7 +166,7 @@ Puedes encontrar una lista completa de monstruos con habilidades de equipo usand
 
 ## Escalando tu Equipo
 
-Una vez que llegas a un muro, añade progresivamente tus propias cartas al equipo. Siempre tienes 1 amigo prestado, luego tu costo de SE es la suma de estrellas de tus 1-4 cartas (mín 3, máx 18).
+Una vez que llegas a un muro, añade progresivamente tus propias cartas al equipo. Siempre tienes 1 amigo prestado, luego tu costo de SE es la suma de estrellas de tus 1-4 cartas (mín 4, máx 18).
 
 **Tu segunda carta probablemente debería ser un curador** - esto te ayuda a sobrevivir hasta el temporizador para que puedas compartir con tu gremio para pedir ayuda.
 
@@ -191,7 +189,7 @@ Puedes decidir cuánto quieres optimizar los costos de SE, pero para la mayoría
 
 | Situación | Estrategia |
 |-----------|------------|
-| Empezando | Pide prestado un carry fuerte, proporciona 1 carta resistente tuya (3-5 SE) |
+| Empezando | Pide prestado un carry fuerte, proporciona 1 carta resistente tuya (4-5 SE) |
 | Necesitas más supervivencia | Usa una carta más resistente o añade un asistente de RD |
 | Llegas a un muro | Comparte el jefe con el gremio para pedir ayuda, o añade más de tus propias cartas |
 | Piso de drop de cartas (2x HP) | Considera añadir cartas temporalmente para el pico de HP |

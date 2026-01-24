@@ -3,7 +3,7 @@ title: "O Holy Night 劇情活動：卡片分析"
 description: "O Holy Night 劇情活動卡片、排名獎勵和抽卡卡片的新手玩家推薦指南。"
 date: "2025-12-23"
 author: "Araiak"
-tags: ["分析", "劇情", "聖誕", "活動"]
+tags: ["分析", "抽卡", "活動"]
 locale: "zh-tw"
 ---
 

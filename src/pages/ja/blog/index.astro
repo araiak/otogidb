@@ -17,8 +17,13 @@ const posts = await getCollection('blog', ({ data, id }) => !data.draft && id.st
 // Sort by date descending
 posts.sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
 
-// Collect all unique tags
-const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))].sort();
+// Main categories for filtering (subset of all tags for cleaner navigation)
+const mainCategories = ['分析', 'お知らせ', 'オークション', '交換所', 'ガチャ', '攻略', 'イベント'];
+
+// Only show main categories that have posts
+const allTags = [...new Set(posts.flatMap(post => post.data.tags || []))]
+  .filter(tag => mainCategories.includes(tag))
+  .sort((a, b) => mainCategories.indexOf(a) - mainCategories.indexOf(b));
 ---
 
 <BaseLayout title={t.blog} description="あやかし百鬼夜行 カードデータベースブログ - ガイド、分析、アップデート" hasLocalizedUrls={true} lang={currentLocale}>

@@ -3,7 +3,7 @@ title: "December 2025: Christmas Cards & Auction Analysis"
 description: "Personal analysis of the new Christmas cards and current auction offerings for mid-game players"
 date: "2025-12-15"
 author: "Araiak"
-tags: ["analysis", "christmas", "auction", "guide"]
+tags: ["analysis", "auction", "gacha"]
 ---
 
 Christmas cards and the December auctions are live, so I wanted to give some personal notes on these cards. I won't cover every card here, just the more relevant or eye-catching ones - full card info is available on the [Cards](/) and [Updates](/updates) pages.

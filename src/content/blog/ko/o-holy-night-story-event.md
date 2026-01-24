@@ -3,7 +3,7 @@ title: "O Holy Night 스토리 이벤트: 카드 분석"
 description: "O Holy Night 스토리 이벤트 카드, 랭킹 보상, 가챠 카드에 대한 신규 플레이어 추천 가이드."
 date: "2025-12-23"
 author: "Araiak"
-tags: ["분석", "스토리", "크리스마스", "이벤트"]
+tags: ["분석", "가챠", "이벤트"]
 locale: "ko"
 ---
 
