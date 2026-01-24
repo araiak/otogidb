@@ -108,7 +108,7 @@ Esta es la configuración más accesible debido a que :card[740] está ampliamen
 
 La misma estrategia funciona para Divina, aunque los tanques carecen de reducción de daño así que un asistente de RD es recomendado en niveles altos o puede que necesites un curador antes.
 
-**Prestar:** :card[1311], :card[739], o :card[553]
+**Prestar:** :card[1311] o :card[553]
 
 **Tu carta (en orden de prioridad):**
 
@@ -121,7 +121,7 @@ La misma estrategia funciona para Divina, aunque los tanques carecen de reducci�
 
 Anima tiene menos opciones accesibles y los carries no son tan comunes en listas de amigos - puede que necesites añadir jugadores de Anima específicamente.
 
-**Prestar:** :card[674], :card[630], :card[543], o :card[514]
+**Prestar:** :card[630], :card[543], o :card[514]
 
 **Tu carta (en orden de prioridad):**
 
@@ -138,13 +138,11 @@ Dado que las reservas son gratis, maximiza su valor:
 - :card[723] (Nv. 75) - Daño multi-objetivo
 - :card[643] (Nv. 75) - Daño multi-objetivo
 - :card[656] (Nv. 75+) - Aumento de daño solo para Anima
-- :card[688] (Nv. 70+) - Daño/defensa equilibrado para cuerpo a cuerpo con habilidad de ataque
-
 Cualquier aumento de daño multi-objetivo funciona. Incluso asistentes de objetivo único que solo buffean tu carry están bien.
 
 **Aumentos de daño crítico** son especialmente poderosos si tienes :card[1307] o :card[1494] en reservas.
 
-**Asistentes de reducción de daño (RD)** ayudan a tu tanque a sobrevivir en niveles altos. Ejemplos: :card[1062], :card[688], :card[1437], :card[749], :card[657], :card[677]
+**Asistentes de reducción de daño (RD)** ayudan a tu tanque a sobrevivir en niveles altos. Ejemplos: :card[1062], :card[1437], :card[749], :card[657], :card[677]
 
 ### Monstruos de Reserva (No-Asistentes)
 

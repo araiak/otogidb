@@ -107,7 +107,7 @@ This is the most accessible setup due to :card[740] being widely available as a 
 
 The same strategy works for Divina, though tanks lack damage reduction so a DR assist is recommended at higher levels or you may need a healer sooner.
 
-**Borrow:** :card[1311], :card[739], or :card[553]
+**Borrow:** :card[1311] or :card[553]
 
 **Your card (in priority order):**
 
@@ -120,7 +120,7 @@ The same strategy works for Divina, though tanks lack damage reduction so a DR a
 
 Anima has fewer accessible options and carries aren't as common in friend lists - you may need to target add Anima players.
 
-**Borrow:** :card[674], :card[630], :card[543], or :card[514]
+**Borrow:** :card[630], :card[543], or :card[514]
 
 **Your card (in priority order):**
 
@@ -137,13 +137,11 @@ Since reserves are free, maximize their value:
 - :card[723] (Lv. 75) - Multi-target damage
 - :card[643] (Lv. 75) - Multi-target damage
 - :card[656] (Lv. 75+) - Anima only damage boost
-- :card[688] (Lv. 70+) - Balanced damage/defense for a melee with an attack skill
-
 Any multi-target damage boosts work. Even single-target assists that only buff your carry are fine.
 
 **Crit damage boosts** are especially powerful if you have :card[1307] or :card[1494] in reserves.
 
-**Damage reduction (DR) assists** help your tank survive at higher levels. Examples: :card[1062], :card[688], :card[1437], :card[749], :card[657], :card[677]
+**Damage reduction (DR) assists** help your tank survive at higher levels. Examples: :card[1062], :card[1437], :card[749], :card[657], :card[677]
 
 ### Reserve Monsters (Non-Assists)
 
