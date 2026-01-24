@@ -4,15 +4,26 @@
   "previous_version": "ffd99c6",
   "summary": {
     "new_cards": 0,
-    "modified_cards": 0
+    "modified_cards": 1
   },
   "new_cards": [],
-  "modified_cards": [],
-  "section_changes": {
-    "monsterAbility": {
-      "old_count": 984,
-      "new_count": 984,
-      "diff": 0
+  "modified_cards": [
+    {
+      "id": "1403",
+      "name": "Slayer",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530398/otogi/cards_hd/101403_hd.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.unlock_level",
+          "field_label": "Unlock Level",
+          "old": 84,
+          "new": 64,
+          "display": "Unlock Level: 84 → 64 (-20)"
+        }
+      ]
     }
-  }
+  ]
 }

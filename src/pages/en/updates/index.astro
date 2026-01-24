@@ -349,10 +349,20 @@ function renderStars(rarity: number): string {
                                         style={`background-color: ${
                                           change.category === 'stats' ? 'rgba(234, 179, 8, 0.15)' :
                                           change.category === 'skill' ? 'rgba(168, 85, 247, 0.15)' :
+                                          change.category === 'ability' ? 'rgba(59, 130, 246, 0.15)' :
+                                          change.category === 'acquisition' ? 'rgba(34, 197, 94, 0.15)' :
+                                          change.category === 'bond' ? 'rgba(236, 72, 153, 0.15)' :
+                                          change.category === 'synergy' ? 'rgba(6, 182, 212, 0.15)' :
+                                          change.category === 'meta' ? 'rgba(249, 115, 22, 0.15)' :
                                           'rgba(107, 114, 128, 0.15)'
                                         }; color: ${
                                           change.category === 'stats' ? 'rgb(234, 179, 8)' :
                                           change.category === 'skill' ? 'rgb(168, 85, 247)' :
+                                          change.category === 'ability' ? 'rgb(59, 130, 246)' :
+                                          change.category === 'acquisition' ? 'rgb(34, 197, 94)' :
+                                          change.category === 'bond' ? 'rgb(236, 72, 153)' :
+                                          change.category === 'synergy' ? 'rgb(6, 182, 212)' :
+                                          change.category === 'meta' ? 'rgb(249, 115, 22)' :
                                           'rgb(156, 163, 175)'
                                         };`}>
                                     {change.category_label}
