@@ -12424,11 +12424,23 @@
       ],
       "description": "<color=#f4e48e>\"Target identified... Lockdown... Slayer, ready to fire...\"</color><br/>The <color=#ef9843>soul of a space gun</color> used by the alien <color=#ef9843>Marsha</color> from the Intergalactic Security Force. She loves robot anime and shooting games.",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "abilities.0.unlock_level",
+                "new": 64,
+                "old": 84
+              }
+            ],
+            "date": "2026-01-24",
+            "version": "860a7ef"
+          }
+        ],
         "first_seen": "2026-01-23T07:04:58.840549+00:00",
         "first_seen_version": "ffd99c6",
-        "last_modified": "2026-01-23T07:04:58.840549+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified": "2026-01-24T00:00:00+00:00",
+        "last_modified_version": "860a7ef"
       },
       "id": "1403",
       "image_urls": {

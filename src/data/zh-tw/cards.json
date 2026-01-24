@@ -12424,11 +12424,23 @@
       ],
       "description": "<color=#f4e48e>「目標確認... 鎖定。殺戮者，準備發射！」</color><br/>身為星際安全警衛一員的<color=#ef9843>瑪莎</color>所使用的<color=#ef9843>太空槍之靈</color>。喜愛機器人動漫和射擊遊戲。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "abilities.0.unlock_level",
+                "new": 64,
+                "old": 84
+              }
+            ],
+            "date": "2026-01-24",
+            "version": "860a7ef"
+          }
+        ],
         "first_seen": "2026-01-23T07:04:58.840549+00:00",
         "first_seen_version": "ffd99c6",
-        "last_modified": "2026-01-23T07:04:58.840549+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified": "2026-01-24T00:00:00+00:00",
+        "last_modified_version": "860a7ef"
       },
       "id": "1403",
       "image_urls": {
