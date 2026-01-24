@@ -3,7 +3,7 @@ title: "2025年12月：圣诞卡牌与拍卖分析"
 description: "新圣诞卡牌和当前拍卖商品的个人分析 - 面向中级玩家"
 date: "2025-12-15"
 author: "Araiak"
-tags: ["分析", "拍卖"]
+tags: ["分析", "拍卖", "抽卡"]
 locale: "zh-cn"
 ---
 

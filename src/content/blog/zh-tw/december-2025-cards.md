@@ -3,7 +3,7 @@ title: "2025年12月：聖誕卡牌與拍賣分析"
 description: "新聖誕卡牌和當前拍賣商品的個人分析 - 面向中級玩家"
 date: "2025-12-15"
 author: "Araiak"
-tags: ["分析", "拍賣"]
+tags: ["分析", "拍賣", "抽卡"]
 locale: "zh-tw"
 ---
 
