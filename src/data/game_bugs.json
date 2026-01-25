@@ -1299,6 +1299,37 @@
         "condition": "contains",
         "value": "25%"
       }
+    },
+    {
+      "id": "BUG-042",
+      "card_id": 1398,
+      "card_name": "Nyarlathotep (Wild)",
+      "affected_field": "ability",
+      "affected_id": "139801",
+      "category": "effect_type",
+      "severity": "gameplay",
+      "summary": "Description says DMG dealt increase but effect is DMG taken reduction",
+      "details": {
+        "description_says": "When HP is 1/2 or less, slowly restores HP over time and Increases 50% of DMG dealt.",
+        "de_field": "SHIELD<50.00%,0%>",
+        "description_effect": "Increases outgoing damage by 50%",
+        "actual_effect": "Reduces incoming damage by 50% (SHIELD)"
+      },
+      "analysis": "Description says 'Increases 50% of DMG dealt' suggesting an outgoing damage buff, but data shows SHIELD<50%> which is damage reduction. SHIELD consistently means 'reduces DMG taken' across 100+ other abilities. This is a fundamental mismatch - the ability either buffs outgoing damage (as described) or reduces incoming damage (as coded). Players may choose this card expecting a damage buff when it's actually a tank ability.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-25",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "ATK<50"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "DMG taken"
+      }
     }
   ],
   "categories": {
