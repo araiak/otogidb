@@ -3938,7 +3938,15 @@
       },
       "name": "邪神の仮面",
       "playable": true,
-      "skill": null,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "name": "ヒドゥンフォース",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
       "stats": {
         "attribute_name": "Anima",
         "cost": 1,
@@ -47371,5 +47379,5 @@
   },
   "locale": "ja",
   "total_cards": 900,
-  "version": "b19a4d9"
+  "version": "a11bbbf"
 }

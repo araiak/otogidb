@@ -10324,7 +10324,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -10336,49 +10336,49 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -10394,7 +10394,7 @@
                 120,
                 160
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -10461,12 +10461,23 @@
             ],
             "date": "2026-01-25",
             "version": "b19a4d9"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002413+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002413+00:00",
-        "last_modified_version": "b19a4d9"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1389",
       "image_urls": {
@@ -10723,7 +10734,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -10783,12 +10794,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001709+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001709+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1390",
       "image_urls": {
@@ -10889,7 +10911,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -10901,49 +10923,49 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -10959,7 +10981,7 @@
                 140,
                 180
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -11026,12 +11048,23 @@
             ],
             "date": "2026-01-25",
             "version": "b19a4d9"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002164+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002164+00:00",
-        "last_modified_version": "b19a4d9"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1391",
       "image_urls": {
@@ -11144,7 +11177,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -11156,7 +11189,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -11172,7 +11205,7 @@
                 175,
                 200
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -11229,12 +11262,23 @@
             ],
             "date": "2026-01-25",
             "version": "b19a4d9"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002649+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002649+00:00",
-        "last_modified_version": "b19a4d9"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1398",
       "image_urls": {
@@ -11361,7 +11405,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -11373,56 +11417,56 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -11465,12 +11509,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002894+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.002894+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1399",
       "image_urls": {
@@ -11876,7 +11931,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -11888,28 +11943,28 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -11924,7 +11979,7 @@
                 20,
                 30
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -11990,12 +12045,55 @@
             ],
             "date": "2026-01-25",
             "version": "b19a4d9"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "skill",
+                "new": {
+                  "description": "Can be used as bond and in guild conquest.",
+                  "id": "1400",
+                  "name": "Hidden Face",
+                  "parsed": {
+                    "effects": [
+                      {
+                        "duration": 8,
+                        "scale": -4.0,
+                        "type": "DEFENSE",
+                        "value": -100.0
+                      }
+                    ],
+                    "ml": 50,
+                    "slv1": 400,
+                    "slvup": 16,
+                    "target": {
+                      "count": 5,
+                      "filter": null,
+                      "type": "enemy"
+                    }
+                  },
+                  "tags": [
+                    "AoE",
+                    "DEF Down",
+                    "Debuff"
+                  ]
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001926+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001926+00:00",
-        "last_modified_version": "b19a4d9"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1400",
       "image_urls": {
@@ -12015,7 +12113,34 @@
       },
       "name": "邪神的面具",
       "playable": true,
-      "skill": null,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1400",
+        "name": "蒙面",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
       "stats": {
         "attribute": 3,
         "attribute_name": "Anima",
@@ -12113,7 +12238,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -12125,7 +12250,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -12185,12 +12310,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003409+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003409+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1401",
       "image_urls": {
@@ -12327,7 +12463,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -12339,42 +12475,42 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -12417,12 +12553,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003139+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003139+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1402",
       "image_urls": {
@@ -12536,7 +12683,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -12596,12 +12743,23 @@
             ],
             "date": "2026-01-24",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-23T07:04:58.840549+00:00",
         "first_seen_version": "ffd99c6",
         "last_modified": "2026-01-24T00:00:00+00:00",
-        "last_modified_version": "860a7ef"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1403",
       "image_urls": {
@@ -12733,7 +12891,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -12745,7 +12903,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -12805,12 +12963,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001191+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001191+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1404",
       "image_urls": {
@@ -15909,7 +16078,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -15921,7 +16090,7 @@
             {
               "event_id": "175",
               "event_name": "邪神來襲",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -15981,12 +16150,23 @@
             ],
             "date": "2026-01-23",
             "version": "ffd99c6"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.0.is_current",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-01-25",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003661+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.003661+00:00",
-        "last_modified_version": "ffd99c6"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1444",
       "image_urls": {
@@ -143917,5 +144097,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 900,
-  "version": "b19a4d9"
+  "version": "a11bbbf"
 }

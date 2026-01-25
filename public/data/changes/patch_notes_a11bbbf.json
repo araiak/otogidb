@@ -1,0 +1,63 @@
+{
+  "version": "a11bbbf",
+  "version_date": "2026-01-25",
+  "previous_version": "b19a4d9",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1400",
+      "name": "Mask of Mischief",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1768530403/otogi/cards_hd/101400_hd.png",
+      "changes": [
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill",
+          "field_label": "Skill",
+          "old": null,
+          "new": {
+            "id": "1400",
+            "name": "Hidden Face",
+            "description": "Can be used as bond and in guild conquest.",
+            "tags": [
+              "AoE",
+              "DEF Down",
+              "Debuff"
+            ],
+            "parsed": {
+              "target": {
+                "type": "enemy",
+                "filter": null,
+                "count": 5
+              },
+              "effects": [
+                {
+                  "type": "DEFENSE",
+                  "value": -100.0,
+                  "scale": -4.0,
+                  "duration": 8
+                }
+              ],
+              "slv1": 400,
+              "slvup": 16,
+              "ml": 50
+            }
+          },
+          "display": "Skill: Added ({'id': '1400', 'name': 'Hidden Face', 'description': 'Can be used as bond and in guild conquest.', 'tags': ['AoE', 'DEF Down', 'Debuff'], 'parsed': {'target': {'type': 'enemy', 'filter': None, 'count': 5}, 'effects': [{'type': 'DEFENSE', 'value': -100.0, 'scale': -4.0, 'duration': 8}], 'slv1': 400, 'slvup': 16, 'ml': 50}})"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monsterSkill": {
+      "old_count": 877,
+      "new_count": 878,
+      "diff": 1
+    }
+  }
+}

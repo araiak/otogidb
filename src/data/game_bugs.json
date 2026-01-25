@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "last_updated": "2026-01-17",
+  "last_updated": "2026-01-25",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -1266,6 +1266,69 @@
         "field": "de",
         "condition": "matches_regex",
         "value": "CHIT_ATK<[^>]+,[^>]+,[^>]+>"
+      }
+    },
+    {
+      "id": "BUG-041",
+      "card_id": 1403,
+      "card_name": "Slayer",
+      "affected_field": "ability",
+      "affected_id": "140301",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Skill DMG percentage mismatch (20% vs 25%)",
+      "details": {
+        "description_says": "Increases 20% of skill DMG of all anima allies at the start of the final wave.",
+        "de_field": "SKILL_ATK<25.00%,0%>",
+        "description_percentage": 20.0,
+        "actual_percentage": 25.0
+      },
+      "analysis": "Description says 20% skill DMG but data shows 25% - the ability is actually stronger than described. Players may undervalue this card.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-01-25",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SKILL_ATK",
+        "expected_value": 20.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "25%"
+      }
+    },
+    {
+      "id": "BUG-042",
+      "card_id": 1398,
+      "card_name": "Nyarlathotep (Wild)",
+      "affected_field": "ability",
+      "affected_id": "139801",
+      "category": "effect_type",
+      "severity": "gameplay",
+      "summary": "Description says DMG dealt increase but effect is DMG taken reduction",
+      "details": {
+        "description_says": "When HP is 1/2 or less, slowly restores HP over time and Increases 50% of DMG dealt.",
+        "de_field": "SHIELD<50.00%,0%>",
+        "description_effect": "Increases outgoing damage by 50%",
+        "actual_effect": "Reduces incoming damage by 50% (SHIELD)"
+      },
+      "analysis": "Description says 'Increases 50% of DMG dealt' suggesting an outgoing damage buff, but data shows SHIELD<50%> which is damage reduction. SHIELD consistently means 'reduces DMG taken' across 100+ other abilities. This is a fundamental mismatch - the ability either buffs outgoing damage (as described) or reduces incoming damage (as coded). Players may choose this card expecting a damage buff when it's actually a tank ability.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-01-25",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "ATK<50"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "DMG taken"
       }
     }
   ],
