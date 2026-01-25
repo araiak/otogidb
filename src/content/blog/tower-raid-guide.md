@@ -23,9 +23,9 @@ In tower events, you get attacked by a raid boss either from doing normal conten
 
 ### During the Event
 1. **Run:** borrowed carry + 1 of your tanky cards (4-5 SE)
-2. **Survive to timer** → share to guild for help
-3. **Wipe?** Don't revive (unless card drop floor)
-4. **Hit a wall?** Add more of your own cards or upgrade your tank so you can survive to the timer to share
+2. **Share to guild** for help when needed
+3. **Wipe?** Don't revive (unless card drop floor) - you can still share after
+4. **Hit a wall?** Share to guild for help, or add more of your own cards
 
 ---
 
@@ -60,9 +60,9 @@ This means you can run a powerful borrowed carry alongside a cheap card of your 
 
 ## New Player Tips
 
-### Prioritize Survival!
+### Avoid Wiping
 
-If you survive to the timer, you can share the boss for help or attack again for SE. If you wipe, you have to revive which is expensive.
+If you wipe, you have to revive to continue attacking, which is expensive. You can always share the boss to your guild for help regardless of whether you survived or wiped.
 
 **Do not revive** outside of critical card drop floors!
 
@@ -100,7 +100,7 @@ This is the most accessible setup due to :card[740] being widely available as a 
 2. :card[227] (Lv. 70) - Good self-sustain
 3. :card[1489] (Lv. 80) - Skill damage synergy with borrowed Shuten, plus self-sustain at low health
 4. :card[1436] (Lv. 75) - Tanky recent event card, easy to obtain
-5. :card[267] (Lv. 75) - From auction, battle time is helpful for weaker teams, good EHP (note: extra battle time can work against you if trying to survive to share with guild)
+5. :card[267] (Lv. 75) - From auction, battle time is helpful for weaker teams, good EHP
 6. :card[687] (Lv. 80) - Offensive option from auction, but may need a DR assist or healer sooner
 
 ### Divina Setup
@@ -167,7 +167,7 @@ You can find a full list of monsters with team-wide abilities by using the filte
 
 Once you hit a wall, progressively add your own cards to the team. You always have 1 borrowed friend, then your SE cost is the sum of stars from your 1-4 cards (min 4, max 18).
 
-**Your second card should probably be a healer** - this helps you survive to the timer so you can share with your guild for help.
+**Your second card should probably be a healer** - this helps you avoid wiping (and expensive revives).
 
 For example:
 - Your 1× 5-star + friend = 5 SE
