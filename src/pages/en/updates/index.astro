@@ -2,6 +2,7 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CardPopups from '../../../components/cards/CardPopups';
 import type { CardsData } from '../../../types/card';
+import { formatChangeDisplay } from '../../../lib/changeFormatters';
 
 // Import full cards, skills, and tier data for hover popups
 import cardsDataRaw from '../../../data/cards.json';
@@ -424,7 +425,7 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
                                         };`}>
                                     {change.category_label}
                                   </span>
-                                  <span class="text-secondary">{change.display}</span>
+                                  <span class="text-secondary">{formatChangeDisplay(change)}</span>
                                 </li>
                               ))}
                             </ul>
