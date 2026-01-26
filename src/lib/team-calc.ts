@@ -709,16 +709,13 @@ export function calculatePhase3ApplyAbilities(
       }
     }
 
-    // Assist abilities - auto-activate based on main card's level
+    // Assist abilities - always unlocked (we don't track assist card level separately)
     if (member.assistCard) {
       for (const ability of member.assistCard.abilities || []) {
-        const unlockLevel = ability.unlock_level || 1;
-        if (effectiveLevel >= unlockLevel) {
-          // Skip "On Skill" abilities
-          if (ability.tags?.includes('On Skill')) continue;
-          // For assists, the source index is still the member index (abilities apply relative to main card)
-          abilities.push(parseAbility(ability, member.assistCard.id, true));
-        }
+        // Skip "On Skill" abilities
+        if (ability.tags?.includes('On Skill')) continue;
+        // For assists, the source index is still the member index (abilities apply relative to main card)
+        abilities.push(parseAbility(ability, member.assistCard.id, true));
       }
     }
 
@@ -1429,12 +1426,11 @@ export function getMemberAbilities(member: TeamMemberState, effectiveLevel: numb
 
   if (member.assistCard) {
     for (const ability of member.assistCard.abilities || []) {
-      const unlockLevel = ability.unlock_level || 1;
       abilities.push({
         ability,
         isFromAssist: true,
         sourceCard: member.assistCard,
-        isActive: effectiveLevel >= unlockLevel,
+        isActive: true, // Assist abilities always unlocked (we don't track assist card level)
         isOnSkill: ability.tags?.includes('On Skill') || false,
       });
     }
