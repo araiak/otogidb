@@ -22,12 +22,14 @@ import {
   type AbilityTiming,
   type ComputedMemberStats,
   type MemberDamageResult,
+  type DamageBreakdown,
   type StatBreakdown,
   BOND_VALUES,
   combineBondSlots,
   MAIN_TEAM_SIZE,
   TOTAL_SLOTS,
   ATTRIBUTE_NAMES,
+  HEALER_TYPE,
   ASSIST_TYPE,
   RACE_BONUS_CONSTANTS,
   getAdvantageAttribute,
@@ -1040,9 +1042,9 @@ export function calculatePhase4FinalDamage(
     // Calculate damage only for main team members
     let damageResult: MemberDamageResult | null = null;
     if (!member.isReserve) {
-      // Check if card is a healer (HEAL or HEAL_DOT skill type)
-      const isHealer = member.card.skill?.parsed?.immediate?.type === 'HEAL' ||
-                       member.card.skill?.parsed?.immediate?.type === 'HEAL_DOT';
+      // Check if card is a healer by role (stats.type === 3)
+      // Note: checking skill type (HEAL/HEAL_DOT) misses healers with buff skills (e.g. Campanella)
+      const isHealer = member.card.stats.type === HEALER_TYPE;
 
       // If healersDontAttack is enabled and this is a healer, return 0 damage
       if (enemy.healersDontAttack && isHealer) {
@@ -1160,6 +1162,26 @@ export function calculatePhase4FinalDamage(
       const skillDamageExpectedMax = Math.min(Math.round(skillBaseMax * expectedCritMult), DAMAGE_CAPS.skill);
       const skillDamageCapped = skillDamageCrit >= DAMAGE_CAPS.skill;
 
+      // Build damage breakdown for debug display
+      const dmgBreakdown: DamageBreakdown = {
+        effectiveAtk,
+        skillBaseDamage,
+        attackInterval,
+        exceedMult,
+        dmgMult,
+        normalDmgMult,
+        skillDmgMult,
+        defenseMult,
+        shieldMult,
+        raceMult,
+        worldBossMult,
+        effectiveCritRate,
+        effectiveCritDmg,
+        expectedCritMult,
+        normalBaseRaw: normalBase,
+        skillBaseRaw: skillBase,
+      };
+
       damageResult = {
         normalDamage,
         normalDamageMin,
@@ -1183,6 +1205,7 @@ export function calculatePhase4FinalDamage(
         skillDamageExpectedMin,
         skillDamageExpectedMax,
         skillDamageCapped,
+        breakdown: dmgBreakdown,
       };
       } // End else (non-healer damage calculation)
     }

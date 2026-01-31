@@ -196,6 +196,32 @@ export interface ComputedMemberStats {
 // Damage Result Types
 // ============================================================================
 
+export interface DamageBreakdown {
+  // Input values
+  effectiveAtk: number;        // displayAtk / 10
+  skillBaseDamage: number;     // slv1 + (level-1) * slvup
+  attackInterval: number;      // seconds between attacks
+
+  // Multiplier chain (each is the final multiplier value, e.g. 1.25 for +25%)
+  exceedMult: number;          // LB exceed average
+  dmgMult: number;             // 1 + totalDmgBonus
+  normalDmgMult: number;       // 1 + totalNormalDmgBonus
+  skillDmgMult: number;        // 1 + totalSkillDmgBonus
+  defenseMult: number;         // 1 - effectiveDefense
+  shieldMult: number;          // 1 - effectiveShield
+  raceMult: number;            // 1 + raceBonus
+  worldBossMult: number;       // manual multiplier
+
+  // Crit values
+  effectiveCritRate: number;   // capped
+  effectiveCritDmg: number;    // base + bonus
+  expectedCritMult: number;    // 1 + critRate * (critDmg - 1)
+
+  // Pre-cap results
+  normalBaseRaw: number;       // before Math.round and cap
+  skillBaseRaw: number;        // before Math.round and cap
+}
+
 export interface MemberDamageResult {
   normalDamage: number;
   normalDamageMin: number;        // Min damage (no exceed bonus)
@@ -220,6 +246,8 @@ export interface MemberDamageResult {
   skillDamageExpectedMin: number; // Min expected skill damage (with crit, no exceed)
   skillDamageExpectedMax: number; // Max expected skill damage (with crit, full exceed)
   skillDamageCapped: boolean;
+
+  breakdown?: DamageBreakdown;    // Detailed multiplier chain for debug display
 }
 
 // ============================================================================
@@ -563,7 +591,8 @@ export const ATTRIBUTE_IDS = {
   'Neutral': 4,
 } as const;
 
-// Card type for assist filtering
+// Card type constants
+export const HEALER_TYPE = 3;
 export const ASSIST_TYPE = 4;
 export const ASSIST_TYPE_NAME = 'Assist';
 

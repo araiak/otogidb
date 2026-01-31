@@ -104,6 +104,7 @@ const {
 const localePrefix = `/${currentLocale}`;
 const navLinks = {
   home: localePrefix,
+  calendar: `${localePrefix}/calendar`,
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
   tools: `${localePrefix}/tools`,
@@ -227,6 +228,7 @@ const navLinks = {
           <!-- Desktop Navigation -->
           <div class="hidden md:flex items-center gap-6">
             <a href={navLinks.home} class="link hover:no-underline">Cards</a>
+            <a href={navLinks.calendar} class="link hover:no-underline">Calendar</a>
             <a href={navLinks.updates} class="link hover:no-underline">Updates</a>
             <a href={navLinks.blog} class="link hover:no-underline">Blog</a>
             <a href={navLinks.tools} class="link hover:no-underline">Tools</a>
@@ -289,6 +291,7 @@ const navLinks = {
         <div id="mobile-menu" class="hidden md:hidden pb-4">
           <div class="flex flex-col gap-2">
             <a href={navLinks.home} class="link py-2 touch-target">Cards</a>
+            <a href={navLinks.calendar} class="link py-2 touch-target">Calendar</a>
             <a href={navLinks.updates} class="link py-2 touch-target">Updates</a>
             <a href={navLinks.blog} class="link py-2 touch-target">Blog</a>
             <a href={navLinks.tools} class="link py-2 touch-target">Tools</a>

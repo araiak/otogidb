@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CalendarPage from '../../../components/calendar/CalendarPage';
+
+let calendarData: any = { generated_at: '', events: [], banners: [], exchanges: [], daily_dungeons: [] };
+try {
+  const raw = await import('../../../../public/data/calendar.json');
+  calendarData = raw.default || raw;
+} catch (_e) {
+  console.warn('Failed to load calendar.json');
+}
+---
+
+<BaseLayout title="活動日曆" description="御伽靈魂代理當前及即將到來的活動、橫幅和日程" hasLocalizedUrls={true}>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">活動日曆</h1>
+      <p class="text-secondary">當前及即將到來的活動、精選卡池、交換商店和每日副本。</p>
+    </div>
+
+    <CalendarPage client:load data={calendarData} />
+  </div>
+</BaseLayout>
