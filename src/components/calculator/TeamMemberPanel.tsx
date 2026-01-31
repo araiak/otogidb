@@ -4,7 +4,7 @@
  */
 
 import type { Card } from '../../types/card';
-import type { TeamMemberState, BondSlotType } from '../../lib/team-calc-types';
+import type { TeamMemberState, BondSlotType, DamageBreakdown } from '../../lib/team-calc-types';
 import { BOND_SLOT_VALUES, BOND_SLOT_LABELS } from '../../lib/team-calc-types';
 import { CardSelector, AssistSelector } from './CardSelector';
 import { AbilityToggles } from './AbilityToggles';
@@ -354,12 +354,103 @@ interface DamageDisplayProps {
   result: NonNullable<TeamMemberState['damageResult']>;
 }
 
+function buildDpsTooltip(bd: DamageBreakdown): string {
+  const f = (n: number) => n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+  const lines = [
+    `ATK: ${f(bd.effectiveAtk)} (internal)`,
+    `x LB Exceed: ${f(bd.exceedMult)}`,
+    `x DMG%: ${f(bd.dmgMult)}`,
+    `x Normal DMG%: ${f(bd.normalDmgMult)}`,
+    `x Race: ${f(bd.raceMult)}`,
+    `x Defense: ${f(bd.defenseMult)}`,
+    `x Shield: ${f(bd.shieldMult)}`,
+    `x World Boss: ${f(bd.worldBossMult)}`,
+    `= Base: ${f(bd.normalBaseRaw)}`,
+    `x Crit (expected): ${f(bd.expectedCritMult)}`,
+    `= Expected: ${f(bd.normalBaseRaw * bd.expectedCritMult)}`,
+    `/ Interval: ${bd.attackInterval.toFixed(2)}s`,
+    `= DPS: ${f(bd.normalBaseRaw * bd.expectedCritMult / bd.attackInterval)}/s`,
+  ];
+  return lines.join('\n');
+}
+
+function buildSkillTooltip(bd: DamageBreakdown): string {
+  const f = (n: number) => n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+  const lines = [
+    `Skill Base: ${f(bd.skillBaseDamage)}`,
+    `x LB Exceed: ${f(bd.exceedMult)}`,
+    `x DMG%: ${f(bd.dmgMult)}`,
+    `x Skill DMG%: ${f(bd.skillDmgMult)}`,
+    `x Race: ${f(bd.raceMult)}`,
+    `x Defense: ${f(bd.defenseMult)}`,
+    `x Shield: ${f(bd.shieldMult)}`,
+    `x World Boss: ${f(bd.worldBossMult)}`,
+    `= Base: ${f(bd.skillBaseRaw)}`,
+    `x Crit (expected): ${f(bd.expectedCritMult)}`,
+    `= Expected: ${f(bd.skillBaseRaw * bd.expectedCritMult)}`,
+  ];
+  return lines.join('\n');
+}
+
+function BreakdownRow({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
+  return (
+    <div className="flex justify-between text-xs">
+      <span className="text-secondary">{label}</span>
+      <span className={`font-mono ${highlight ? 'text-yellow-400' : 'text-primary'}`}>{value}</span>
+    </div>
+  );
+}
+
+function DamageBreakdownSection({ bd, type }: { bd: DamageBreakdown; type: 'normal' | 'skill' }) {
+  const f = (n: number) => n.toLocaleString(undefined, { maximumFractionDigits: 2 });
+  const fp = (n: number) => `${(n * 100).toFixed(1)}%`;
+  const isNonDefault = (n: number) => Math.abs(n - 1) > 0.0001;
+
+  const inputLabel = type === 'normal' ? 'ATK (internal)' : 'Skill Base Damage';
+  const inputValue = type === 'normal' ? bd.effectiveAtk : bd.skillBaseDamage;
+  const typeDmgLabel = type === 'normal' ? 'Normal DMG%' : 'Skill DMG%';
+  const typeDmgMult = type === 'normal' ? bd.normalDmgMult : bd.skillDmgMult;
+  const baseRaw = type === 'normal' ? bd.normalBaseRaw : bd.skillBaseRaw;
+
+  return (
+    <div className="space-y-1">
+      <div className="text-xs font-medium text-primary mb-1">
+        {type === 'normal' ? 'Normal Attack Chain' : 'Skill Attack Chain'}
+      </div>
+      <BreakdownRow label={inputLabel} value={f(inputValue)} />
+      <BreakdownRow label="x LB Exceed" value={f(bd.exceedMult)} highlight={isNonDefault(bd.exceedMult)} />
+      <BreakdownRow label="x DMG%" value={f(bd.dmgMult)} highlight={isNonDefault(bd.dmgMult)} />
+      <BreakdownRow label={`x ${typeDmgLabel}`} value={f(typeDmgMult)} highlight={isNonDefault(typeDmgMult)} />
+      <BreakdownRow label="x Race" value={f(bd.raceMult)} highlight={isNonDefault(bd.raceMult)} />
+      <BreakdownRow label="x Defense" value={f(bd.defenseMult)} highlight={isNonDefault(bd.defenseMult)} />
+      <BreakdownRow label="x Shield" value={f(bd.shieldMult)} highlight={isNonDefault(bd.shieldMult)} />
+      <BreakdownRow label="x World Boss" value={f(bd.worldBossMult)} highlight={isNonDefault(bd.worldBossMult)} />
+      <div className="border-t border-border my-1" />
+      <BreakdownRow label="= Pre-crit base" value={f(baseRaw)} />
+      <BreakdownRow label="Crit Rate" value={fp(bd.effectiveCritRate)} />
+      <BreakdownRow label="Crit DMG" value={`${(bd.effectiveCritDmg * 100).toFixed(0)}%`} />
+      <BreakdownRow label="x Expected Crit" value={f(bd.expectedCritMult)} />
+      <BreakdownRow label="= Expected Damage" value={f(baseRaw * bd.expectedCritMult)} />
+      {type === 'normal' && (
+        <>
+          <BreakdownRow label="/ Interval" value={`${bd.attackInterval.toFixed(2)}s`} />
+          <BreakdownRow label="= DPS" value={`${f(baseRaw * bd.expectedCritMult / bd.attackInterval)}/s`} />
+        </>
+      )}
+    </div>
+  );
+}
+
 function DamageDisplay({ result }: DamageDisplayProps) {
   const formatNum = (n: number) => n.toLocaleString();
+  const bd = result.breakdown;
 
   // Check if there's a damage range (min != max means LB exceed variance)
   const hasNormalRange = result.normalDamageMin !== result.normalDamageMax;
   const hasSkillRange = result.skillDamageMin !== result.skillDamageMax;
+
+  const dpsTooltip = bd ? buildDpsTooltip(bd) : undefined;
+  const skillTooltip = bd && result.skillBaseDamage > 0 ? buildSkillTooltip(bd) : undefined;
 
   return (
     <div className="space-y-3">
@@ -389,16 +480,16 @@ function DamageDisplay({ result }: DamageDisplayProps) {
               </div>
             )}
           </div>
-          <div title="Expected: Average damage per hit accounting for crit rate. Formula: Base × (1 + CritRate × (CritDmg - 1))">
+          <div title="Expected: Average damage per hit accounting for crit rate. Formula: Base x (1 + CritRate x (CritDmg - 1))">
             <span className="text-secondary cursor-help underline decoration-dotted">Exp: </span>
             <span className="font-mono text-blue-400">
               {formatNum(result.normalDamageExpected)}
             </span>
           </div>
         </div>
-        <div className="mt-1">
+        <div className="mt-1" title={dpsTooltip}>
           <span className="text-secondary text-sm">DPS: </span>
-          <span className="font-mono text-lg font-bold text-purple-400">
+          <span className={`font-mono text-lg font-bold text-purple-400 ${dpsTooltip ? 'cursor-help underline decoration-dotted' : ''}`}>
             {formatNum(result.normalDps)}/s
           </span>
         </div>
@@ -431,7 +522,7 @@ function DamageDisplay({ result }: DamageDisplayProps) {
                 </div>
               )}
             </div>
-            <div title="Expected: Average damage per hit accounting for crit rate. Formula: Base × (1 + CritRate × (CritDmg - 1))">
+            <div title={skillTooltip || "Expected: Average damage per hit accounting for crit rate."}>
               <span className="text-secondary cursor-help underline decoration-dotted">Exp: </span>
               <span className="font-mono text-blue-400">
                 {formatNum(result.skillDamageExpected)}
@@ -439,6 +530,24 @@ function DamageDisplay({ result }: DamageDisplayProps) {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Expandable Damage Breakdown */}
+      {bd && (
+        <details className="border-t border-border pt-2">
+          <summary className="text-xs text-secondary cursor-pointer hover:text-primary select-none">
+            Damage Breakdown
+          </summary>
+          <div className="mt-2 space-y-3 bg-surface-hover rounded p-2">
+            <DamageBreakdownSection bd={bd} type="normal" />
+            {result.skillBaseDamage > 0 && (
+              <>
+                <div className="border-t border-border my-1" />
+                <DamageBreakdownSection bd={bd} type="skill" />
+              </>
+            )}
+          </div>
+        </details>
       )}
     </div>
   );

@@ -49,7 +49,8 @@ interface CardAvailability {
     schedule: string[];
   };
   gacha?: {
-    featured_banners: string[];
+    in_standard_pool?: boolean;
+    featured_banners?: string[];
   };
 }
 
@@ -195,8 +196,8 @@ export function computeClientSideAvailability(
       // Recalculate currently_available if auction was contributing
       if (cardAvailability.currently_available) {
         // Check if card is still available via other sources in R2 data
-        // (R2 data only has auction, daily, and gacha featured banners)
         const hasOtherSource =
+          cardAvailability.gacha?.in_standard_pool ||
           cardAvailability.daily?.available ||
           (cardAvailability.gacha?.featured_banners &&
             cardAvailability.gacha.featured_banners.length > 0);

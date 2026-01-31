@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CalendarPage from '../../../components/calendar/CalendarPage';
+
+let calendarData: any = { generated_at: '', events: [], banners: [], exchanges: [], daily_dungeons: [] };
+try {
+  const raw = await import('../../../../public/data/calendar.json');
+  calendarData = raw.default || raw;
+} catch (_e) {
+  console.warn('Failed to load calendar.json');
+}
+---
+
+<BaseLayout title="이벤트 캘린더" description="오토기 스피릿 에이전트의 현재 및 예정된 이벤트, 배너, 일정" hasLocalizedUrls={true}>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">이벤트 캘린더</h1>
+      <p class="text-secondary">현재 및 예정된 이벤트, 픽업 가챠, 교환, 일일 던전.</p>
+    </div>
+
+    <CalendarPage client:load data={calendarData} />
+  </div>
+</BaseLayout>

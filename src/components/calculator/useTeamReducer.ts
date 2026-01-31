@@ -792,14 +792,10 @@ export function useTeamState(): UseTeamStateResult {
       raceBonus: result.raceBonus,
     });
   }, [
-    state.members.map(m => `${m.cardId}-${m.assistCardId}-${m.limitBreak}-${m.levelBonus}-${m.bondType}-${m.skillActive}`).join('|'),
-    state.enemy.baseShield,
-    state.enemy.baseDefense,
-    state.enemy.attribute,
-    state.enemy.isFinalWave,
-    state.enemy.waveCount,
-    state.enemy.ignoreShieldCap,
-    state.enemy.worldBossBonus,
+    // Serialize all member fields that affect calculation (auto-captures new fields like bond1/2/3)
+    state.members.map(m => `${m.cardId}-${m.assistCardId}-${m.limitBreak}-${m.levelBonus}-${m.bond1}-${m.bond2}-${m.bond3}-${m.bondType}-${m.skillActive}`).join('|'),
+    // Serialize entire enemy object so new fields (like healersDontAttack) are automatically captured
+    JSON.stringify(state.enemy),
     state.randomTargetMode,
     JSON.stringify(state.abilityTargetOverrides),
     cardsData,

@@ -24,9 +24,9 @@ En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal 
 
 ### Durante el Evento
 1. **Usa:** carry prestado + 1 de tus cartas resistentes (4-5 SE)
-2. **Sobrevive hasta el temporizador** → comparte con el gremio para pedir ayuda
-3. **¿Mueres?** No revivas (excepto en pisos de drop de cartas)
-4. **¿Llegas a un muro?** Añade más de tus propias cartas o mejora tu tanque para sobrevivir hasta el temporizador y compartir
+2. **Comparte con el gremio** para pedir ayuda cuando lo necesites
+3. **¿Mueres?** No revivas (excepto en pisos de drop de cartas) - aún puedes compartir después
+4. **¿Llegas a un muro?** Comparte con el gremio para pedir ayuda, o añade más de tus propias cartas
 
 ---
 
@@ -61,9 +61,9 @@ Esto significa que puedes usar un carry prestado poderoso junto con una carta ba
 
 ## Consejos para Jugadores Nuevos
 
-### ¡Prioriza la Supervivencia!
+### Evita Morir
 
-Si sobrevives hasta el temporizador, puedes compartir el jefe para pedir ayuda o atacar de nuevo por SE. Si mueres, tienes que revivir lo cual es costoso.
+Si mueres, tienes que revivir para seguir atacando, lo cual es costoso. Siempre puedes compartir el jefe con tu gremio para pedir ayuda sin importar si sobreviviste o moriste.
 
 **No revivas** fuera de pisos críticos de drop de cartas!
 
@@ -101,7 +101,7 @@ Esta es la configuración más accesible debido a que :card[740] está ampliamen
 2. :card[227] (Nv. 70) - Buena auto-sustentación
 3. :card[1489] (Nv. 80) - Sinergia de daño de habilidad con Shuten prestado, más auto-sustentación con poca vida
 4. :card[1436] (Nv. 75) - Carta de evento reciente resistente, fácil de obtener
-5. :card[267] (Nv. 75) - De subasta, el tiempo de batalla es útil para equipos más débiles, buen EHP (nota: tiempo extra de batalla puede jugar en tu contra si intentas sobrevivir para compartir con el gremio)
+5. :card[267] (Nv. 75) - De subasta, el tiempo de batalla es útil para equipos más débiles, buen EHP
 6. :card[687] (Nv. 80) - Opción ofensiva de subasta, pero puede necesitar un asistente de RD o curador antes
 
 ### Configuración Divina
@@ -168,7 +168,7 @@ Puedes encontrar una lista completa de monstruos con habilidades de equipo usand
 
 Una vez que llegas a un muro, añade progresivamente tus propias cartas al equipo. Siempre tienes 1 amigo prestado, luego tu costo de SE es la suma de estrellas de tus 1-4 cartas (mín 4, máx 18).
 
-**Tu segunda carta probablemente debería ser un curador** - esto te ayuda a sobrevivir hasta el temporizador para que puedas compartir con tu gremio para pedir ayuda.
+**Tu segunda carta probablemente debería ser un curador** - esto te ayuda a evitar morir (y las costosas resurrecciones).
 
 Por ejemplo:
 - Tu 1× 5 estrellas + amigo = 5 SE

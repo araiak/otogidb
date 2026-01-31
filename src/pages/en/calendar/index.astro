@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CalendarPage from '../../../components/calendar/CalendarPage';
+
+// Load calendar data at build time
+let calendarData: any = { generated_at: '', events: [], banners: [], exchanges: [], daily_dungeons: [] };
+try {
+  const raw = await import('../../../../public/data/calendar.json');
+  calendarData = raw.default || raw;
+} catch (_e) {
+  console.warn('Failed to load calendar.json');
+}
+---
+
+<BaseLayout title="Event Calendar" description="Current and upcoming events, banners, and schedules for Otogi Spirit Agents" hasLocalizedUrls={true}>
+  <div class="container mx-auto px-4 py-6">
+    <div class="mb-6">
+      <h1 class="text-2xl md:text-3xl font-bold mb-2">Event Calendar</h1>
+      <p class="text-secondary">Current and upcoming events, featured banners, exchanges, and daily dungeons.</p>
+    </div>
+
+    <CalendarPage client:load data={calendarData} />
+  </div>
+</BaseLayout>
