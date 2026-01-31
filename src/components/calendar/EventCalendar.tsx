@@ -418,12 +418,15 @@ function DungeonSection({ dungeons, cards, locale }: { dungeons: DailyDungeon[];
 
   return (
     <section className="mb-8">
-      <h2 className="text-lg font-bold mb-3 flex items-center gap-2">
+      <h2 className="text-lg font-bold mb-1 flex items-center gap-2">
         <span>Daily Dungeons</span>
         <span className="text-xs font-normal px-2 py-0.5 rounded-full" style={{ backgroundColor: 'var(--color-surface)', color: 'var(--color-text-secondary)' }}>
           {timed.length}
         </span>
       </h2>
+      <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+        Times shown are server local time.
+      </p>
       <div className="overflow-x-auto">
         <table className="w-full text-sm">
           <thead>
@@ -514,11 +517,12 @@ export default function EventCalendar({ data, cards }: Props) {
       <EventSection events={data.events} cards={cards} locale={locale} />
       <BannerSection banners={data.banners} cards={cards} locale={locale} />
       <ExchangeSection exchanges={data.exchanges} cards={cards} locale={locale} />
-      <DungeonSection dungeons={data.daily_dungeons} cards={cards} locale={locale} />
 
-      <div className="text-xs mt-8" style={{ color: 'var(--color-text-secondary)' }}>
-        Data generated: {generatedDate} UTC. All times in UTC.
+      <div className="text-xs mt-4 mb-6" style={{ color: 'var(--color-text-secondary)' }}>
+        All times in UTC. Data generated: {generatedDate} UTC.
       </div>
+
+      <DungeonSection dungeons={data.daily_dungeons} cards={cards} locale={locale} />
     </div>
   );
 }
