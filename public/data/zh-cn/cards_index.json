@@ -3938,7 +3938,15 @@
       },
       "name": "邪神的面具",
       "playable": true,
-      "skill": null,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "蒙面",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
       "stats": {
         "attribute_name": "Anima",
         "cost": 1,
@@ -47371,5 +47379,5 @@
   },
   "locale": "zh-cn",
   "total_cards": 900,
-  "version": "860a7ef"
+  "version": "a11bbbf"
 }

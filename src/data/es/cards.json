@@ -12552,12 +12552,50 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "skill",
+                "new": {
+                  "description": "Can be used as bond and in guild conquest.",
+                  "id": "1400",
+                  "name": "Hidden Face",
+                  "parsed": {
+                    "effects": [
+                      {
+                        "duration": 8,
+                        "scale": -4.0,
+                        "type": "DEFENSE",
+                        "value": -100.0
+                      }
+                    ],
+                    "ml": 50,
+                    "slv1": 400,
+                    "slvup": 16,
+                    "target": {
+                      "count": 5,
+                      "filter": null,
+                      "type": "enemy"
+                    }
+                  },
+                  "tags": [
+                    "AoE",
+                    "DEF Down",
+                    "Debuff"
+                  ]
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-02-03",
+            "version": "a11bbbf"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001926+00:00",
         "first_seen_version": "6ba4beb",
         "last_modified": "2026-01-16T02:26:52.001926+00:00",
-        "last_modified_version": "860a7ef"
+        "last_modified_version": "a11bbbf"
       },
       "id": "1400",
       "image_urls": {
@@ -12577,7 +12615,34 @@
       },
       "name": "Mask of Mischief",
       "playable": true,
-      "skill": null,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1400",
+        "name": "Hidden Face",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
       "stats": {
         "attribute": 3,
         "attribute_name": "Anima",
@@ -145360,5 +145425,5 @@
   },
   "locale": "es_ES",
   "total_cards": 900,
-  "version": "860a7ef"
+  "version": "a11bbbf"
 }

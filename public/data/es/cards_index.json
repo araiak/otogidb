@@ -3938,7 +3938,15 @@
       },
       "name": "Mask of Mischief",
       "playable": true,
-      "skill": null,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Hidden Face",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
       "stats": {
         "attribute_name": "Anima",
         "cost": 1,
@@ -47371,5 +47379,5 @@
   },
   "locale": "es",
   "total_cards": 900,
-  "version": "860a7ef"
+  "version": "a11bbbf"
 }
