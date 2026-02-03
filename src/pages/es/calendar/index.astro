@@ -9,6 +9,29 @@ try {
 } catch (_e) {
   console.warn('Failed to load calendar.json');
 }
+
+// Enrich auction predictions with card IDs from full cards.json (build-time only)
+if (calendarData.auction_predictions?.length) {
+  try {
+    const cardsRaw = await import('../../../../public/data/cards.json');
+    const cardsData = (cardsRaw.default || cardsRaw) as { cards: Record<string, any> };
+
+    const eventCardMap: Record<string, { id: string }[]> = {};
+    for (const [cardId, card] of Object.entries(cardsData.cards)) {
+      const eventId = card.acquisition?.auction?.estimate?.event_id;
+      if (eventId) {
+        if (!eventCardMap[eventId]) eventCardMap[eventId] = [];
+        eventCardMap[eventId].push({ id: cardId });
+      }
+    }
+
+    for (const prediction of calendarData.auction_predictions) {
+      prediction.cards = eventCardMap[prediction.event_id] || [];
+    }
+  } catch (_e) {
+    console.warn('Failed to enrich auction predictions with card data');
+  }
+}
 ---
 
 <BaseLayout title="Calendario de Eventos" description="Eventos actuales y próximos, banners y horarios de Otogi Spirit Agents" hasLocalizedUrls={true}>

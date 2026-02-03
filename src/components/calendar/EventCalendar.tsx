@@ -58,12 +58,21 @@ interface DailyDungeon {
   drop_cards?: CardRef[];
 }
 
+interface AuctionPrediction {
+  event_id: string;
+  event_name: string;
+  event_date: string;
+  estimated_date: string;
+  cards?: CardRef[];
+}
+
 interface CalendarData {
   generated_at: string;
   events: CalendarEvent[];
   banners: Banner[];
   exchanges: Exchange[];
   daily_dungeons: DailyDungeon[];
+  auction_predictions?: AuctionPrediction[];
 }
 
 interface Props {
@@ -92,6 +101,13 @@ function formatDateFull(isoStr: string | undefined): string {
     month: 'short', day: 'numeric', year: 'numeric',
     hour: '2-digit', minute: '2-digit', timeZone: 'UTC',
   });
+}
+
+function formatDateOnly(dateStr: string): string {
+  // Parse "YYYY-MM-DD" without timezone shift by splitting manually
+  const [y, m, d] = dateStr.split('-').map(Number);
+  const date = new Date(y, m - 1, d);
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 }
 
 function getTimeRemaining(targetStr: string): string {
@@ -481,6 +497,53 @@ function DungeonSection({ dungeons, cards, locale }: { dungeons: DailyDungeon[];
   );
 }
 
+function AuctionPredictionSection({ predictions, cards, locale }: { predictions: AuctionPrediction[]; cards?: Record<string, Card>; locale: SupportedLocale }) {
+  if (predictions.length === 0) return null;
+
+  return (
+    <section className="mb-8">
+      <h2 className="text-lg font-bold mb-1 flex items-center gap-2">
+        <span>Event Auction</span>
+        <span className="text-xs font-normal px-2 py-0.5 rounded-full" style={{ backgroundColor: 'var(--color-surface)', color: 'var(--color-text-secondary)' }}>
+          {predictions.length}
+        </span>
+      </h2>
+      <p className="text-xs mb-3" style={{ color: 'var(--color-text-secondary)' }}>
+        Predicted based on ~7 month lag pattern. Dates are estimates.
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+        {predictions.map((prediction) => {
+          const eventCards = prediction.cards || [];
+          return (
+            <div key={prediction.event_id} className="card p-4">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold text-sm">
+                    {prediction.event_name || `Event #${prediction.event_id}`}
+                  </div>
+                  <div className="text-xs mt-0.5" style={{ color: 'var(--color-text-secondary)' }}>
+                    Est. {formatDateOnly(prediction.estimated_date)}
+                  </div>
+                </div>
+                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-400 flex-shrink-0">
+                  Predicted
+                </span>
+              </div>
+              {eventCards.length > 0 && (
+                <div className="flex flex-wrap gap-1">
+                  {eventCards.map((card) => (
+                    <CardCircle key={card.id} card={card} cards={cards} locale={locale} size="sm" />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 // ============================================================================
 // Main component
 // ============================================================================
@@ -517,6 +580,7 @@ export default function EventCalendar({ data, cards }: Props) {
       <EventSection events={data.events} cards={cards} locale={locale} />
       <BannerSection banners={data.banners} cards={cards} locale={locale} />
       <ExchangeSection exchanges={data.exchanges} cards={cards} locale={locale} />
+      <AuctionPredictionSection predictions={data.auction_predictions || []} cards={cards} locale={locale} />
 
       <div className="text-xs mt-4 mb-6" style={{ color: 'var(--color-text-secondary)' }}>
         All times in UTC. Data generated: {generatedDate} UTC.

@@ -13,6 +13,7 @@ import { getCollection } from 'astro:content';
 import type { Card, CardsData } from '../../../types/card';
 import CardPopups from '../../../components/cards/CardPopups';
 import AuctionStockBadge from '../../../components/cards/AuctionStockBadge';
+import AuctionEstimate from '../../../components/cards/AuctionEstimate';
 import AvailabilityBadge from '../../../components/cards/AvailabilityBadge';
 
 // Import locale cards data and English skills data at build time
@@ -155,6 +156,30 @@ function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' |
 
 const stockLevel = getStockLevel(cardAuctionData);
 
+// Compute reverse special bonds: which cards have special bonds targeting THIS card
+interface ReverseBond {
+  fromCardId: string;
+  fromCardName: string;
+  bondType: string;
+  bonusPercent: number;
+}
+const receivesSpecialBondsFrom: ReverseBond[] = [];
+for (const [otherId, otherCard] of Object.entries(cardsData.cards)) {
+  if (!otherCard || otherId === card.id) continue;
+  const typedCard = otherCard as Card;
+  const bonds = typedCard.bonds || [];
+  for (const bond of bonds) {
+    if (bond.target_id === card.id) {
+      receivesSpecialBondsFrom.push({
+        fromCardId: otherId,
+        fromCardName: typedCard.name || 'Unknown',
+        bondType: bond.type,
+        bonusPercent: bond.bonus_percent,
+      });
+    }
+  }
+}
+
 // Get bugs for this card (filter out fixed bugs)
 // Bug notices are rendered with data-dev-only attribute and hidden on production via client-side JS
 const cardBugs = gameBugsData.bugs.filter(
@@ -274,12 +299,12 @@ const jsonLd = {
     </nav>
 
     <!-- Mobile Header -->
-    <div class="md:hidden mb-3">
+    <div class="md:hidden mb-3" aria-hidden="true">
       <div class="flex items-center justify-between gap-2 mb-2">
         <div class="flex items-center gap-2 min-w-0">
           <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
-            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0" title="NPC/Enemy card - not obtainable">NPC</span>
+            <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0 cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
           )}
         </div>
         <span class="text-xs font-mono text-secondary flex-shrink-0">#{card.id}</span>
@@ -308,7 +333,7 @@ const jsonLd = {
           <div class="flex justify-center md:block">
             <img
               src={hdImageUrl || getPlaceholderHD()}
-              alt={card.name || `Card #${card.id}`}
+              alt={`${card.name || `Card #${card.id}`} - Otogi Spirit Agents ${card.stats.rarity}★ ${card.stats.attribute_name} ${card.stats.type_name} daemon artwork`}
               class="w-full max-w-[280px] sm:max-w-none h-auto rounded-lg"
               loading="eager"
               onerror={`this.onerror=null; this.src='${getPlaceholderHD()}';`}
@@ -344,7 +369,7 @@ const jsonLd = {
           <div class="flex items-center gap-3 mb-2">
             <h1 class="text-2xl lg:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
             {!card.playable && (
-              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">NPC</span>
+              <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
             )}
             <span class="text-sm font-mono text-secondary">#{card.id}</span>
           </div>
@@ -522,8 +547,10 @@ const jsonLd = {
                   {(() => {
                     const bugs = getAbilityBugs(ability.id);
                     if (bugs.length === 0) return null;
-                    return bugs.map(bug => (
-                      <div data-dev-only class={`mt-2 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                    return (
+                      <div class="mt-2 space-y-2">
+                        {bugs.map(bug => (
+                      <div data-dev-only class={`p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
                         <div class="flex items-start gap-2">
                           <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
                           <div class="flex-1 min-w-0">
@@ -568,7 +595,9 @@ const jsonLd = {
                           </div>
                         </div>
                       </div>
-                    ));
+                    ))}
+                      </div>
+                    );
                   })()}
                 </div>
               ))}
@@ -576,122 +605,22 @@ const jsonLd = {
           </div>
         )}
 
-        <!-- Acquisition -->
-        {card.acquisition && card.acquisition.sources && card.acquisition.sources.length > 0 && (
+        <!-- Synergy Partners -->
+        {card.synergies && card.synergies.length > 0 && (
           <div class="card p-3 sm:p-4">
-            <div class="flex items-center justify-between mb-3 sm:mb-4">
-              <h2 class="font-semibold text-sm sm:text-base">획득처</h2>
-              <AvailabilityBadge
-                client:load
-                cardId={card.id}
-                initialAvailable={card.acquisition.currently_available}
-              />
-            </div>
-            <div class="space-y-2">
-              {card.acquisition.sources.includes('gacha') && card.acquisition.gacha.in_standard_pool && (
-                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                  <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-300 font-medium">스탠다드 가챠</span>
-                </div>
-              )}
-
-              {card.acquisition.sources.includes('exchange') && (
-                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                  <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-300 font-medium">교환</span>
-                </div>
-              )}
-
-              {card.acquisition.sources.includes('event') && (
-                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                  <div class="flex items-center gap-2 mb-1.5">
-                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-300 font-medium">이벤트</span>
-                  </div>
-                  {/* Event Reward Tiers */}
-                  {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (() => {
-                    const seen = new Set();
-                    const uniqueEvents = card.acquisition.event.reward_tiers.filter(tier => {
-                      if (seen.has(tier.event_id)) return false;
-                      seen.add(tier.event_id);
-                      return true;
-                    });
-                    return (
-                      <div class="space-y-1">
-                        {uniqueEvents.map(tier => (
-                          <div class="text-xs flex items-center justify-between gap-2">
-                            <span>랭킹 보상</span>
-                            <div class="flex items-center gap-2">
-                              <span class="text-secondary">{tier.event_name || `Event #${tier.event_id}`}</span>
-                              {tier.is_current && (
-                                <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">진행 중</span>
-                              )}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    );
-                  })()}
-                  {/* Tower Drops */}
-                  {card.acquisition.event.tower_drops && card.acquisition.event.tower_drops.length > 0 && (
-                    <div class="space-y-1 mt-2">
-                      {card.acquisition.event.tower_drops.map(drop => (
-                        <div class="text-xs flex items-center justify-between gap-2">
-                          <span>타워 드롭 <span class="text-secondary">({drop.floors.join(', ')}층)</span></span>
-                          <div class="flex items-center gap-2">
-                            <span class="text-secondary">{drop.event_name || `Event #${drop.event_id}`}</span>
-                            {drop.is_current && (
-                              <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-400 text-[10px]">진행 중</span>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                  {/* From Description */}
-                  {card.acquisition.event.from_description && card.acquisition.event.from_description.length > 0 && (
-                    <div class="space-y-1 mt-2">
-                      {card.acquisition.event.from_description.map(desc => (
-                        <div class="text-xs flex items-center justify-between gap-2">
-                          <span>이벤트 카드</span>
-                          <span class="text-secondary">{desc.event_name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              )}
-
-              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
-                const auctionEstimate = card.acquisition.auction.estimate;
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">시너지 파트너</h2>
+            <p class="text-xs text-secondary mb-3">이 카드의 팀 보너스를 발동하는 카드</p>
+            <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-2">
+              {card.synergies.map(partnerId => {
+                const partner = cardsData.cards[partnerId];
+                if (!partner) return null;
                 return (
-                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
-                    <div class="flex items-center justify-between gap-2">
-                      <div class="flex items-center gap-2">
-                        <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-300 font-medium">경매</span>
-                      </div>
-                      <AuctionStockBadge
-                        client:load
-                        cardId={card.id}
-                        initialStockLevel={stockLevel}
-                      />
-                    </div>
-                    {/* Auction Estimate */}
-                    {auctionEstimate && (
-                      <div class="mt-2 pt-2 border-t border-gray-700">
-                        <div class="flex items-start gap-1.5">
-                          <span class="text-xs text-secondary flex-shrink-0">예상 경매:</span>
-                          <div class="flex-1">
-                            <div class="text-xs font-medium text-blue-400">
-                              ~{formatDate(auctionEstimate.estimated_date)}
-                            </div>
-                            <div class="text-[10px] text-secondary italic mt-0.5 cursor-help" title={auctionEstimate.note}>
-                              {auctionEstimate.event_name}이벤트 패턴 기반
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
+                  <a href={getCardUrl(partnerId)} class="synergy-card text-center group" data-card-id={partnerId}>
+                    <img src={getAndroidImageWithFallback(partner)} alt={partner.name || `Card #${partnerId}`} class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mx-auto object-cover group-hover:ring-2 ring-offset-1 transition-all" style="--tw-ring-color: var(--color-accent); --tw-ring-offset-color: var(--color-bg);" loading="lazy" onerror={`this.onerror=null; this.src='${getPlaceholderCircle()}';`} />
+                    <div class="text-[9px] sm:text-[10px] truncate mt-1 group-hover:text-accent transition-colors">{partner.name || `#${partnerId}`}</div>
+                  </a>
                 );
-              })()}
+              })}
             </div>
           </div>
         )}
@@ -707,13 +636,15 @@ const jsonLd = {
                 return (
                   <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
                     <div class="flex items-center gap-2 min-w-0 flex-wrap">
-                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
-                            style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}>
+                      <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                            style={`background-color: var(--color-${bond.type === 'Attack' || bond.type === 'Skill' ? 'error' : bond.type === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}
+                            title={bond.type === 'Attack' ? 'Boosts ATK stat when bonded' : bond.type === 'Skill' ? 'Boosts Skill DMG when bonded' : bond.type === 'HP' ? 'Boosts HP stat when bonded' : 'Bond stat boost'}>
                           {bond.type}
                       </span>
                       {isSpecial && (
-                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0"
-                              style="background-color: var(--color-highlight); color: var(--color-bg);">
+                        <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                              style="background-color: var(--color-highlight); color: var(--color-bg);"
+                              title="Requires a specific partner card on the team to activate">
                           Special
                         </span>
                       )}
@@ -734,6 +665,151 @@ const jsonLd = {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        )}
+
+        <!-- Receives Special Bonds From -->
+        {receivesSpecialBondsFrom.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">특수 인연 대상</h2>
+            <div class="space-y-2 sm:space-y-3">
+              {receivesSpecialBondsFrom.map(bond => (
+                <div class="flex items-center justify-between gap-2 p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 min-w-0 flex-wrap">
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0 cursor-help"
+                          style={`background-color: var(--color-${bond.bondType === 'Attack' || bond.bondType === 'Skill' ? 'error' : bond.bondType === 'HP' ? 'highlight' : 'accent'}); color: var(--color-bg); opacity: 0.9;`}
+                          title={bond.bondType === 'Attack' ? 'Boosts ATK stat when bonded' : bond.bondType === 'Skill' ? 'Boosts Skill DMG when bonded' : bond.bondType === 'HP' ? 'Boosts HP stat when bonded' : 'Bond stat boost'}>
+                      {bond.bondType}
+                    </span>
+                    <span class="text-[10px] sm:text-xs px-1.5 sm:px-2 py-0.5 rounded font-medium flex-shrink-0" style="background-color: var(--color-highlight); color: var(--color-bg);">Special</span>
+                    <a href={getCardUrl(bond.fromCardId)} data-card-id={bond.fromCardId} class="text-xs sm:text-sm truncate link">{bond.fromCardName}</a>
+                  </div>
+                  <div class="text-sm sm:text-base font-bold font-mono flex-shrink-0" style="color: var(--color-accent);">+{bond.bonusPercent}%</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Acquisition -->
+        {card.acquisition && card.acquisition.sources.length > 0 && (
+          <div class="card p-3 sm:p-4">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <h2 class="font-semibold text-sm sm:text-base">획득처</h2>
+              <AvailabilityBadge client:load cardId={card.id} initialAvailable={card.acquisition.currently_available} />
+            </div>
+            <div class="space-y-3">
+              {card.acquisition.sources.includes('gacha') && (
+                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-purple-500/20 text-purple-700 dark:text-purple-300 font-medium cursor-help" title="보석을 사용한 소환 시스템으로 획득 가능">Gacha</span>
+                    {card.acquisition.gacha.in_standard_pool && (
+                      <span class="text-xs text-green-700 dark:text-green-400 cursor-help" title="언제든지 모든 배너에서 획득 가능">✓ 상시 배출</span>
+                    )}
+                  </div>
+                  {card.acquisition.gacha.featured_banners && card.acquisition.gacha.featured_banners.length > 0 && (
+                    <div class="mt-2 space-y-1.5">
+                      <div class="text-xs text-secondary">픽업 배너:</div>
+                      {card.acquisition.gacha.featured_banners.slice(0, 5).map(banner => (
+                        <div class="text-xs flex items-center justify-between gap-2">
+                          <span class="text-secondary">{formatDate(banner.start)} - {formatDate(banner.end)}</span>
+                          <div class="flex items-center gap-2">
+                            {banner.pity > 0 && (<span class="text-yellow-700 dark:text-yellow-400" title="천장">Pity: {banner.pity}</span>)}
+                            {banner.is_current && (<span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">진행중</span>)}
+                          </div>
+                        </div>
+                      ))}
+                      {card.acquisition.gacha.featured_banners.length > 5 && (<div class="text-xs text-secondary">+{card.acquisition.gacha.featured_banners.length - 5} more banners</div>)}
+                    </div>
+                  )}
+                </div>
+              )}
+              {(card.acquisition.sources.includes('auction') || card.acquisition.auction?.estimate) && (() => {
+                const auctionEstimate = card.acquisition.auction.estimate;
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center justify-between gap-2">
+                      <div class="flex items-center gap-2">
+                        <span class="px-1.5 py-0.5 text-xs rounded bg-yellow-500/20 text-yellow-700 dark:text-yellow-300 font-medium">경매</span>
+                        {card.acquisition.auction.is_time_limited && (<span class="text-xs text-yellow-700 dark:text-yellow-400">(기간 한정)</span>)}
+                      </div>
+                      <AuctionStockBadge client:load cardId={card.id} initialStockLevel={stockLevel} />
+                    </div>
+                    {auctionEstimate && (
+                      <AuctionEstimate client:load cardId={card.id} estimatedDate={formatDate(auctionEstimate.estimated_date)} eventName={auctionEstimate.event_name} note={auctionEstimate.note} hasAuctionData={!!cardAuctionData} />
+                    )}
+                  </div>
+                );
+              })()}
+              {card.acquisition.sources.includes('exchange') && (
+                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-blue-500/20 text-blue-700 dark:text-blue-300 font-medium cursor-help" title="게임 내 화폐(Mochi, 소울스톤 등)로 구매 가능">교환</span>
+                  </div>
+                  {card.acquisition.exchange.entries && card.acquisition.exchange.entries.length > 0 && (
+                    <div class="space-y-1.5">
+                      {card.acquisition.exchange.entries.slice(0, 5).map(entry => {
+                        const currencyDisplay = entry.currency === 'gApple' ? 'Mochi' : entry.currency === 'soulstone' ? 'Soulstones' : entry.currency;
+                        return (
+                          <div class="text-xs flex items-center justify-between gap-2">
+                            <span class="text-secondary">{formatDate(entry.start)} - {formatDate(entry.end)}</span>
+                            <div class="flex items-center gap-2">
+                              <span>{formatNumber(entry.price)} {currencyDisplay}</span>
+                              {entry.limit > 0 && (<span class="text-secondary">(Limit: {entry.limit})</span>)}
+                              {entry.is_current && (<span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">진행중</span>)}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      {card.acquisition.exchange.entries.length > 5 && (<div class="text-xs text-secondary">+{card.acquisition.exchange.entries.length - 5} more entries</div>)}
+                    </div>
+                  )}
+                </div>
+              )}
+              {card.acquisition.sources.includes('event') && (
+                <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                  <div class="flex items-center gap-2 mb-1.5">
+                    <span class="px-1.5 py-0.5 text-xs rounded bg-green-500/20 text-green-700 dark:text-green-300 font-medium cursor-help" title="기간 한정 이벤트에서 획득 가능 (랭킹 보상, 타워 드롭 등)">이벤트</span>
+                  </div>
+                  {card.acquisition.event.reward_tiers && card.acquisition.event.reward_tiers.length > 0 && (() => {
+                    const seen = new Set();
+                    const uniqueEvents = card.acquisition.event.reward_tiers.filter(tier => { if (seen.has(tier.event_id)) return false; seen.add(tier.event_id); return true; });
+                    return (<div class="space-y-1">{uniqueEvents.map(tier => (<div class="text-xs flex items-center justify-between gap-2"><span>랭킹 보상</span><div class="flex items-center gap-2"><span class="text-secondary" title={`Event #${tier.event_id}`}>{tier.event_name || `Event #${tier.event_id}`}</span>{tier.is_current && (<span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">진행중</span>)}</div></div>))}</div>);
+                  })()}
+                  {card.acquisition.event.tower_drops && card.acquisition.event.tower_drops.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.tower_drops.map(drop => (
+                        <div class="text-xs"><div class="flex items-center justify-between gap-2"><span>타워 드롭<span class="text-secondary ml-1">({drop.floors.join(', ')}층)</span></span><div class="flex items-center gap-2"><span class="text-secondary" title={`Event #${drop.event_id}`}>{drop.event_name || `Event #${drop.event_id}`}</span>{drop.is_current && (<span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">진행중</span>)}</div></div></div>
+                      ))}
+                    </div>
+                  )}
+                  {card.acquisition.event.from_description && card.acquisition.event.from_description.length > 0 && (
+                    <div class="space-y-1 mt-2">
+                      {card.acquisition.event.from_description.map(desc => (<div class="text-xs flex items-center justify-between gap-2"><span>이벤트 카드</span><span class="text-secondary">{desc.event_name}</span></div>))}
+                    </div>
+                  )}
+                </div>
+              )}
+              {card.acquisition.sources.includes('daily') && card.acquisition.daily?.available && (() => {
+                const weekdayNames = ['', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+                const schedule = card.acquisition.daily.schedule || [];
+                const scheduleDays = schedule.map((d) => weekdayNames[d] || `Day ${d}`).join(', ');
+                const dropRate = card.acquisition.daily.drop_rate;
+                return (
+                  <div class="p-2 sm:p-3 rounded" style="background-color: var(--color-surface);">
+                    <div class="flex items-center gap-2 mb-1.5">
+                      <span class="px-1.5 py-0.5 text-xs rounded bg-cyan-500/20 text-cyan-700 dark:text-cyan-300 font-medium cursor-help" title="로테이션 데일리 던전 전투에서 파밍 가능">데일리 던전</span>
+                      <span class="px-1.5 py-0.5 rounded bg-green-500/20 text-green-700 dark:text-green-400 text-[10px]">Available</span>
+                    </div>
+                    <div class="text-xs space-y-1">
+                      {dropRate !== null && (<div>드롭률: <span class="font-medium">{dropRate}%</span></div>)}
+                      {schedule.length > 0 && (<div>일정: <span class="font-medium">{scheduleDays}</span></div>)}
+                      {schedule.length === 7 && (<div class="text-secondary italic">매일 진행</div>)}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           </div>
         )}
@@ -800,6 +876,14 @@ const jsonLd = {
                     loading="lazy"
                     onerror={`this.onerror=null; this.src='${getPlaceholderCircle()}';`}
                   />
+                  <div class="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 flex gap-0.5">
+                    {details.sameAttribute && (
+                      <img src={getAttributeIconUrl(related.stats.attribute_name, { width: 20 })} alt={related.stats.attribute_name} class="w-4 h-4 sm:w-5 sm:h-5 object-contain rounded-full" style="background-color: var(--color-surface); padding: 1px;" title="Same attribute" />
+                    )}
+                    {details.sameType && (
+                      <img src={getTypeIconUrl(related.stats.type_name, { width: 20 })} alt={related.stats.type_name} class="w-4 h-4 sm:w-5 sm:h-5 object-contain rounded-full" style="background-color: var(--color-surface); padding: 1px;" title="Same type" />
+                    )}
+                  </div>
                 </div>
                 <div class="text-[10px] sm:text-xs md:text-sm font-medium truncate mt-1.5">{displayName}</div>
                 <div class="flex items-center justify-center gap-0.5 sm:gap-1 text-[10px] sm:text-xs">
