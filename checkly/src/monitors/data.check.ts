@@ -9,7 +9,7 @@ new ApiCheck('data-cards-en', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_1H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {

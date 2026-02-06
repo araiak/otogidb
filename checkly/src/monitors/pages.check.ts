@@ -9,7 +9,7 @@ new ApiCheck('card-detail-page', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_1H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 10000,
   degradedResponseTime: 5000,
   request: {
@@ -29,7 +29,7 @@ new ApiCheck('blog-index', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_6H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',
@@ -47,7 +47,7 @@ new ApiCheck('updates-page', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_6H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',
@@ -65,7 +65,7 @@ new ApiCheck('sitemap', {
   group: criticalGroup,
   activated: true,
   frequency: Frequency.EVERY_12H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 10000,
   request: {
     method: 'GET',
