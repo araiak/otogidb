@@ -498,6 +498,8 @@ function DungeonSection({ dungeons, cards, locale }: { dungeons: DailyDungeon[];
 }
 
 function AuctionPredictionSection({ predictions, cards, locale }: { predictions: AuctionPrediction[]; cards?: Record<string, Card>; locale: SupportedLocale }) {
+  const [expandedId, setExpandedId] = useState<string | null>(null);
+
   if (predictions.length === 0) return null;
 
   return (
@@ -514,8 +516,14 @@ function AuctionPredictionSection({ predictions, cards, locale }: { predictions:
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {predictions.map((prediction) => {
           const eventCards = prediction.cards || [];
+          const isExpanded = expandedId === prediction.event_id;
+
           return (
-            <div key={prediction.event_id} className="card p-4">
+            <div
+              key={prediction.event_id}
+              className={`card p-4 cursor-pointer transition-all ${isExpanded ? 'md:col-span-2' : ''}`}
+              onClick={() => setExpandedId(isExpanded ? null : prediction.event_id)}
+            >
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex-1 min-w-0">
                   <div className="font-semibold text-sm">
@@ -528,12 +536,59 @@ function AuctionPredictionSection({ predictions, cards, locale }: { predictions:
                 <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-amber-500/20 text-amber-400 flex-shrink-0">
                   Predicted
                 </span>
+                <svg
+                  className={`w-4 h-4 flex-shrink-0 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                  style={{ color: 'var(--color-text-secondary)' }}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
-              {eventCards.length > 0 && (
+
+              {/* Collapsed: small icons */}
+              {!isExpanded && eventCards.length > 0 && (
                 <div className="flex flex-wrap gap-1">
                   {eventCards.map((card) => (
                     <CardCircle key={card.id} card={card} cards={cards} locale={locale} size="sm" />
                   ))}
+                </div>
+              )}
+
+              {/* Expanded: large icons with names */}
+              {isExpanded && eventCards.length > 0 && (
+                <div
+                  className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  {eventCards.map((card) => {
+                    const imgUrl = getCardImage(card, cards);
+                    const displayName = cards?.[card.id]?.name || card.name || '';
+                    if (!imgUrl) return null;
+                    return (
+                      <a
+                        key={card.id}
+                        href={`/${locale}/cards/${card.id}`}
+                        data-card-id={card.id}
+                        className="flex flex-col items-center gap-1 text-center"
+                      >
+                        <img
+                          src={imgUrl}
+                          alt={displayName}
+                          className="w-14 h-14 rounded-full object-cover"
+                          loading="lazy"
+                        />
+                        <span
+                          className="text-xs truncate w-full"
+                          style={{ color: 'var(--color-text-secondary)' }}
+                        >
+                          {displayName}
+                        </span>
+                      </a>
+                    );
+                  })}
                 </div>
               )}
             </div>

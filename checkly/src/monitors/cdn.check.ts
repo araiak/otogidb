@@ -9,7 +9,7 @@ new ApiCheck('cloudinary-thumb', {
   group: cdnGroup,
   activated: true,
   frequency: Frequency.EVERY_6H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 5000,
   request: {
     method: 'HEAD', // HEAD request - no body downloaded

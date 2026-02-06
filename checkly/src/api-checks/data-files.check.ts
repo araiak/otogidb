@@ -13,7 +13,7 @@ localesToCheck.forEach((locale) => {
     group: cdnGroup,
     activated: true,
     frequency: Frequency.EVERY_12H,
-    locations: ['us-east-1'],
+    locations: ['eu-central-1'],
     maxResponseTime: 10000,
     request: {
       method: 'GET',
@@ -35,7 +35,7 @@ new ApiCheck('data-patch-notes-manifest', {
   group: cdnGroup,
   activated: true,
   frequency: Frequency.EVERY_24H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 5000,
   request: {
     method: 'GET',
@@ -64,7 +64,7 @@ new ApiCheck('data-unified-manifest', {
   group: cdnGroup,
   activated: true,
   frequency: Frequency.EVERY_1H,
-  locations: ['us-east-1'],
+  locations: ['eu-central-1'],
   maxResponseTime: 5000,
   degradedResponseTime: 2000,
   request: {
