@@ -11060,7 +11060,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 50,
               "start": "2026-02-05 15:00:00"
@@ -12848,7 +12848,7 @@
           "featured_banners": [
             {
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-02-05 15:00:00"
             }
@@ -13344,7 +13344,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 50,
               "start": "2026-02-05 15:00:00"
@@ -13601,7 +13601,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 200,
               "start": "2026-02-05 15:00:00"
@@ -17075,7 +17075,7 @@
           "featured_banners": [
             {
               "end": "2026-02-05 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-02-01 15:00:00"
             }
@@ -40010,14 +40010,6 @@
       "acquisition": {
         "auction": {
           "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-04-15",
-            "event_date": "2025-09-23",
-            "event_id": "168",
-            "event_name": "Greatest Show On Earth",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
           "price_max": null,
           "price_min": null
         },
@@ -40065,11 +40057,30 @@
       ],
       "description": "<color=#f4e48e>「烧吧！」</color><br/><color=#ef9843>燃烧火圈之九十九神。</color>她通常非常地狂暴及热血，甚至到了傲慢的程度，但当她的火焰消退，她的热情也跟着降到低点。甚至有人说她常常因情绪不稳定所苦。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-04-15",
+                  "event_date": "2025-09-23",
+                  "event_id": "168",
+                  "event_name": "Greatest Show On Earth",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              }
+            ],
+            "date": "2026-02-06",
+            "version": "a1597cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.575654+00:00",
         "first_seen_version": "f044a9d",
         "last_modified": "2025-12-12T23:26:10.575654+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified_version": "a1597cc"
       },
       "id": "2191",
       "image_urls": {
