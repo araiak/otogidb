@@ -11060,7 +11060,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 50,
               "start": "2026-02-05 15:00:00"
@@ -12848,7 +12848,7 @@
           "featured_banners": [
             {
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-02-05 15:00:00"
             }
@@ -13344,7 +13344,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 50,
               "start": "2026-02-05 15:00:00"
@@ -13601,7 +13601,7 @@
             {
               "currency": "gApple",
               "end": "2026-02-08 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 5,
               "price": 200,
               "start": "2026-02-05 15:00:00"
@@ -17075,7 +17075,7 @@
           "featured_banners": [
             {
               "end": "2026-02-05 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-02-01 15:00:00"
             }
@@ -40010,14 +40010,6 @@
       "acquisition": {
         "auction": {
           "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-04-15",
-            "event_date": "2025-09-23",
-            "event_id": "168",
-            "event_name": "Greatest Show On Earth",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
           "price_max": null,
           "price_min": null
         },
@@ -40029,13 +40021,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "168",
-              "event_name": "Greatest Show On Earth",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -40054,8 +40040,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -40072,11 +40057,30 @@
       ],
       "description": "<color=#f4e48e>\"Let it burn!\"</color><br/><color=#ef9843>The Anima of a blazing circle of fire.</color> She's ordinarily quite fiery and hot-blooded, even to the point of being somewhat overbearing, but when her flames subside, her passion bottoms out, too. Some would even say she suffers from bipolar mood swings. ",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-04-15",
+                  "event_date": "2025-09-23",
+                  "event_id": "168",
+                  "event_name": "Greatest Show On Earth",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              }
+            ],
+            "date": "2026-02-06",
+            "version": "a1597cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.575654+00:00",
         "first_seen_version": "f044a9d",
         "last_modified": "2025-12-12T23:26:10.575654+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified_version": "a1597cc"
       },
       "id": "2191",
       "image_urls": {
@@ -75184,13 +75188,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "123",
-              "event_name": "c4d9004",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -75209,8 +75207,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -75796,13 +75793,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "123",
-              "event_name": "c4d9004",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -75821,8 +75812,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -100546,13 +100536,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "35",
-              "event_name": "The Great Feudal Music Festival",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -100571,8 +100555,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -100738,13 +100721,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "35",
-              "event_name": "The Great Feudal Music Festival",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -100763,8 +100740,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -112594,13 +112570,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "43",
-              "event_name": "Maze of Red Leaves",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -112619,8 +112589,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -115892,13 +115861,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "154",
-              "event_name": "Two Santas",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -115917,8 +115880,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -116397,13 +116359,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "154",
-              "event_name": "Two Santas",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -116422,8 +116378,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -118882,13 +118837,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "156",
-              "event_name": "New Year Spirit Battle Marathon",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -118908,8 +118857,7 @@
         },
         "sources": [
           "gacha",
-          "auction",
-          "event"
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -124150,13 +124098,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "51",
-              "event_name": "Black cherry blossom and demon blade",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -124175,8 +124117,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -133556,13 +133497,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "57",
-              "event_name": "The Definitive Eating Competition for Spirits!",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -133581,8 +133516,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },
@@ -136621,13 +136555,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "165",
-              "event_name": "Incoming! The hunter of demons",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -136647,8 +136575,7 @@
         },
         "sources": [
           "gacha",
-          "auction",
-          "event"
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -140594,13 +140521,7 @@
           "schedule": []
         },
         "event": {
-          "from_description": [
-            {
-              "event_id": "160",
-              "event_name": "Galaxy Express and the mysterious signal",
-              "is_current": false
-            }
-          ],
+          "from_description": [],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -140619,8 +140540,7 @@
           "in_standard_pool": true
         },
         "sources": [
-          "gacha",
-          "event"
+          "gacha"
         ],
         "stock_level": "unavailable"
       },

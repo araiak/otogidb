@@ -163,7 +163,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
     });
 
     // Check if fetchWithCache just got fresh data (versions match)
-    if (cachedData.version === targetVersion) {
+    if ((cachedData.data_hash ?? cachedData.version) === targetVersion) {
       console.log(`[Delta] Data already at target version ${targetVersion}`);
       return { data: cachedData, source: 'fresh' };
     }

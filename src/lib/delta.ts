@@ -15,6 +15,7 @@ import { applyPatch, type Operation } from 'rfc6902';
  */
 interface UnifiedManifest {
   version: string;
+  data_hash?: string;
   generated_at: string;
   files: Record<string, { cards_index: string; cards_index_base: string }>;
   delta?: {
@@ -165,7 +166,7 @@ export async function tryDeltaUpdate(
   cachedData: CardsData,
   targetVersion: string
 ): Promise<CardsData | null> {
-  const currentVersion = cachedData.version;
+  const currentVersion = cachedData.data_hash ?? cachedData.version;
 
   if (!currentVersion) {
     console.log('[Delta] No version in cached data, skipping delta update');
@@ -251,6 +252,10 @@ export async function getCurrentVersion(): Promise<string | null> {
 
     if (response.ok) {
       const manifest: UnifiedManifest = await response.json();
+      // Prefer data_hash (content identity) for delta versioning
+      if (manifest.data_hash) {
+        return manifest.data_hash;
+      }
       if (manifest.version) {
         return manifest.version;
       }

@@ -522,7 +522,12 @@ function AuctionPredictionSection({ predictions, cards, locale }: { predictions:
             <div
               key={prediction.event_id}
               className={`card p-4 cursor-pointer transition-all ${isExpanded ? 'md:col-span-2' : ''}`}
-              onClick={() => setExpandedId(isExpanded ? null : prediction.event_id)}
+              onClick={(e) => {
+                // Don't toggle expand/collapse when clicking a card link
+                // (let the click bubble to useCardHover for mobile preview)
+                if ((e.target as HTMLElement).closest('[data-card-id]')) return;
+                setExpandedId(isExpanded ? null : prediction.event_id);
+              }}
             >
               <div className="flex items-center gap-2 mb-2">
                 <div className="flex-1 min-w-0">
@@ -561,7 +566,6 @@ function AuctionPredictionSection({ predictions, cards, locale }: { predictions:
               {isExpanded && eventCards.length > 0 && (
                 <div
                   className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-3"
-                  onClick={(e) => e.stopPropagation()}
                 >
                   {eventCards.map((card) => {
                     const imgUrl = getCardImage(card, cards);

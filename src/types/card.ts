@@ -233,6 +233,7 @@ export interface Card {
 
 export interface CardsData {
   version: string;
+  data_hash?: string;  // Content identity hash for delta versioning
   total_cards: number;
   cards: Record<string, Card>;
 }
