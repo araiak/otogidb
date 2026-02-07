@@ -228,7 +228,7 @@ export interface Card {
   image_urls: ImageUrls;
   meta: CardMeta;
   history: CardHistory;
-  acquisition?: CardAcquisition; // Optional for backwards compatibility
+  acquisition: CardAcquisition;
 }
 
 export interface CardsData {
