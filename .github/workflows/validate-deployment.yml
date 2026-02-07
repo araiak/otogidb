@@ -56,6 +56,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run unit tests
+        run: npm run test
+
       - name: Wait for Cloudflare deployment
         id: cloudflare
         run: npx tsx scripts/validate-deployment/cloudflare-poller.ts
