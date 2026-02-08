@@ -46,6 +46,7 @@ export function sanitizeSearchQuery(query: string | null): string {
   let sanitized = query.trim().slice(0, MAX_SEARCH_LENGTH);
 
   // Remove null bytes and control characters
+  // eslint-disable-next-line no-control-regex
   sanitized = sanitized.replace(/[\x00-\x1f\x7f]/g, '');
 
   return sanitized;

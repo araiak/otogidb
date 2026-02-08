@@ -18,7 +18,6 @@ import {
   getAdvantageAttribute,
   getDisadvantageAttribute,
   type TeamMemberState,
-  type EnemyAttribute,
 } from '../team-calc-types';
 import type { Card } from '../../types/card';
 

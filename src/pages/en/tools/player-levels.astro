@@ -256,7 +256,7 @@ const milestoneData = milestones.map(lv => {
   </div>
 
   <!-- Client-side JavaScript for interactivity -->
-  <script define:vars={{ levels, maxLevel, cumulativeXp }}>
+  <script is:inline define:vars={{ levels, maxLevel, cumulativeXp }}>
     // Store levels data for client-side use
     // Note: xp field = XP needed to level up FROM that level (not cumulative)
     const levelData = levels;

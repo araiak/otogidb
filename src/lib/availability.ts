@@ -6,7 +6,6 @@
  */
 
 import type { CardsData } from '../types/card';
-import { fetchWithCache } from './cache';
 
 /**
  * R2 base URL for availability data.

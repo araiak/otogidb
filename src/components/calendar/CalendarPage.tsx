@@ -21,7 +21,7 @@ function detectLocale(): SupportedLocale {
     if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
       return stored as SupportedLocale;
     }
-  } catch {}
+  } catch { /* localStorage unavailable */ }
   return 'en';
 }
 

@@ -3,7 +3,7 @@
  * Type definitions for the 5-member team + 2 reserve calculator
  */
 
-import type { Card, Ability } from '../types/card';
+import type { Card } from '../types/card';
 
 // ============================================================================
 // Bond Types

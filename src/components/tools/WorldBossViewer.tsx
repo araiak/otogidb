@@ -17,7 +17,6 @@ import type {
 import {
   parseAllBosses,
   getActiveBoss,
-  formatHp,
 } from '../../lib/worldBossParser';
 
 // Status effect colors
@@ -140,8 +139,8 @@ function EffectBadge({ effect }: { effect: ParsedEffect }) {
   const bgClass = isDebuff ? 'bg-red-500/20 text-red-400' : 'bg-blue-500/20 text-blue-400';
 
   // Simplify the display
-  let label = effect.type.toUpperCase();
-  let value = effect.value || '';
+  const label = effect.type.toUpperCase();
+  const value = effect.value || '';
 
   // Handle specific effect types
   if (effect.type === 'hit') {
@@ -300,7 +299,7 @@ interface TimelineMarkerProps {
   isKillPhase?: boolean;
 }
 
-function TimelineMarker({ time, skillId, skill, maxTime, isKillPhase }: TimelineMarkerProps) {
+function TimelineMarker({ time, skill, maxTime, isKillPhase }: TimelineMarkerProps) {
   const position = (time / maxTime) * 100;
   const bgColor = isKillPhase ? 'bg-red-500/20' : 'bg-surface-hover';
   const borderColor = isKillPhase ? 'border-red-500' : 'border-accent';

@@ -3,7 +3,7 @@
  * Implements the validated damage formula from docs/battle/DAMAGE.md
  */
 
-import type { Card, CardStats } from '../types/card';
+import type { Card } from '../types/card';
 
 // Damage caps from game constants
 export const DAMAGE_CAPS = {

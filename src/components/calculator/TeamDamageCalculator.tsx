@@ -27,7 +27,6 @@ export function TeamDamageCalculator() {
     setCard,
     setAssist,
     setLimitBreak,
-    setLevelBonus,
     setBondSlot,
     toggleSkill,
     setActiveTab,
@@ -62,7 +61,7 @@ export function TeamDamageCalculator() {
       await navigator.clipboard.writeText(json);
       setCopySuccess(true);
       setTimeout(() => setCopySuccess(false), 2000);
-    } catch (e) {
+    } catch {
       // Fallback: download as file
       const blob = new Blob([json], { type: 'application/json' });
       const url = URL.createObjectURL(blob);
@@ -98,7 +97,7 @@ export function TeamDamageCalculator() {
 
       setShowImportModal(false);
       setImportText('');
-    } catch (e) {
+    } catch {
       setImportError('Invalid JSON format');
     }
   };

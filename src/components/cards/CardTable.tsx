@@ -267,6 +267,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mobilePreviewCard, closeMobilePreview]);
 
   // Close sort dropdown when clicking outside

@@ -13,7 +13,6 @@ import {
   type TeamAction,
   type BondType,
   type BondSlotType,
-  type TeamContext,
   type ParsedSkillEffect,
   type SkillBuff,
   type StoredTeamState,
@@ -728,7 +727,7 @@ export function useTeamState(): UseTeamStateResult {
     // Resolve card references
     // Important: Clear abilityContributions to prevent stale data
     // They will be recalculated fresh by calculateTeamDamage
-    const resolvedMembers = state.members.map((member, index) => {
+    const resolvedMembers = state.members.map((member) => {
       const newMember = { ...member };
 
       // Clear ability contributions - they'll be recalculated
@@ -791,12 +790,16 @@ export function useTeamState(): UseTeamStateResult {
       abilityDebuffTotal: result.abilityDebuffTotal,
       raceBonus: result.raceBonus,
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     // Serialize all member fields that affect calculation (auto-captures new fields like bond1/2/3)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     state.members.map(m => `${m.cardId}-${m.assistCardId}-${m.limitBreak}-${m.levelBonus}-${m.bond1}-${m.bond2}-${m.bond3}-${m.bondType}-${m.skillActive}`).join('|'),
     // Serialize entire enemy object so new fields (like healersDontAttack) are automatically captured
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     JSON.stringify(state.enemy),
     state.randomTargetMode,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     JSON.stringify(state.abilityTargetOverrides),
     cardsData,
     state.isLoading,
@@ -811,7 +814,9 @@ export function useTeamState(): UseTeamStateResult {
     }, 500);
 
     return () => clearTimeout(timeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     state.members.map(m => `${m.cardId}-${m.assistCardId}-${m.limitBreak}-${m.levelBonus}-${m.bondType}-${m.skillActive}`).join('|'),
     state.enemy.baseShield,
     state.enemy.baseDefense,
@@ -819,6 +824,7 @@ export function useTeamState(): UseTeamStateResult {
     state.enemy.isFinalWave,
     state.enemy.waveCount,
     state.activeTabIndex,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     JSON.stringify(state.abilityTargetOverrides),
     state.isLoading,
   ]);

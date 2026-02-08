@@ -90,7 +90,7 @@ const jsonLd = {
   hasLocalizedUrls={true}
   article={{ publishedTime: publishedDate, author: post.data.author, tags: post.data.tags }}
 >
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <script is:inline define:vars={{ currentLocale }}>
     (function() {

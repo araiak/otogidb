@@ -1,9 +1,7 @@
 import { useMemo } from 'react';
 import {
-  calculateDamage,
   generateHeatmap,
   type DamageCalcInput,
-  type HeatmapCell,
 } from '../../lib/damage-calc';
 
 type StatType = 'dmg' | 'critRate' | 'critDmg' | 'skillDmg' | 'speed' | 'level';
