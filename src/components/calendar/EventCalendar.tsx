@@ -148,13 +148,6 @@ function formatCurrency(code: string): string {
   return CURRENCY_NAMES[code] || code;
 }
 
-function parseRewards(rf: string): string {
-  // Parse "coin[200]" format
-  const match = rf.match(/^(\w+)\[(\d+)\]$/);
-  if (match) return `${match[2]} ${formatCurrency(match[1])}`;
-  return rf;
-}
-
 function getCardImage(cardRef: CardRef, cards?: Record<string, Card>): string | null {
   if (!cards) return null;
   const fullCard = cards[cardRef.id];
@@ -623,7 +616,7 @@ export default function EventCalendar({ data, cards }: Props) {
       if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
         setLocale(stored as SupportedLocale);
       }
-    } catch {}
+    } catch { /* localStorage unavailable */ }
   }, []);
 
   // Re-render every minute for countdown updates

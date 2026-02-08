@@ -37,7 +37,7 @@ const FIGHT_STORAGE_KEY = 'otogidb-fight-calculator';
  * Generate a unique ID for snapshots
  */
 function generateId(): string {
-  return `snap_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  return `snap_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
 }
 
 /**
@@ -225,13 +225,6 @@ export const FightCalculator = forwardRef<FightCalculatorHandle, FightCalculator
     () => calculateFightDamage(snapshots, fightDuration),
     [snapshots, fightDuration]
   );
-
-  // Check if any member has a skill toggled on
-  const hasActiveSkills = useCallback((membersList: TeamMemberState[]) => {
-    return membersList.slice(0, MAIN_TEAM_SIZE).some(
-      (m) => m.skillActive && m.card
-    );
-  }, []);
 
   // Get active slot labels (s1, s2, etc.) for naming
   const getActiveSlotLabels = useCallback((membersList: TeamMemberState[]) => {

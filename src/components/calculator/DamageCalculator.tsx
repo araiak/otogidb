@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
-import type { Card, CardsData } from '../../types/card';
+import type { Card } from '../../types/card';
 import { getFullCardsData } from '../../lib/cards';
 import { isDevEnvironment } from '../../lib/features';
 import {
@@ -320,8 +320,7 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
     );
   };
 
-  // Calculate ATK and Skill bond multipliers
-  const atkBondTotal = breakdown.atkBonus.bond + breakdown.atkBonus.assist;
+  // Calculate Skill bond multiplier
   const skillBondTotal = breakdown.skillBonus.bond + breakdown.skillBonus.assist;
   const baseAtk = card.stats.max_atk;
 
@@ -459,12 +458,6 @@ export function DamageCalculator() {
     return cards.find(c => c.id === selectedCardId) || null;
   }, [cards, selectedCardId]);
 
-  // Get skill data for selected card (embedded in card.skill.parsed)
-  const skillParsedData = useMemo(() => {
-    if (!selectedCard?.skill?.parsed) return null;
-    return selectedCard.skill.parsed;
-  }, [selectedCard]);
-
   // Check if skill is a damage skill
   const isDamageSkill = useMemo(() => {
     if (!selectedCard?.skill?.tags) return false;
@@ -517,6 +510,7 @@ export function DamageCalculator() {
     }
 
     return sources;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dmgPercent, critRateBonus, critDmgBonus, skillDmgPercent, speedBonus, bondType, assistCard, selectedCard]);
 
   // Calculate totals from breakdown
@@ -559,7 +553,7 @@ export function DamageCalculator() {
     // Skill base damage is now calculated in damage-calc.ts (RE Validated 2026-01-17)
     // Uses: slv1 + (effectiveSkillLevel - 1) * slvup, capped at skillMaxLevel
     return { result: calcResult, comparisons: statComparisons, calcInput: input, skillBaseDamage: calcResult.skillBaseDamage };
-  }, [selectedCard, skillParsedData, limitBreak, totalBuffs, enemyDebuff, ignoreShieldCap]);
+  }, [selectedCard, limitBreak, totalBuffs, enemyDebuff, ignoreShieldCap]);
 
   // Feature flag check
   if (!isDev) {

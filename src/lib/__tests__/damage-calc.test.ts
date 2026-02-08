@@ -782,15 +782,15 @@ describe('LB Range Validation', () => {
   };
 
   it('LB4 (MLB) uses correct exceed multiplier of 1.10', () => {
-    const result = calculateDamage({ ...baseInput, limitBreak: 4 });
+    calculateDamage({ ...baseInput, limitBreak: 4 });
     // LB4 = MLB, exceed average = 1.10 (10% bonus)
     expect(LB_EXCEED_AVERAGE[4]).toBe(1.10);
   });
 
   it('LB values outside 0-4 fall back to 1.0 multiplier', () => {
     // Invalid LB values should use fallback: LB_EXCEED_AVERAGE[x] ?? 1.0
-    const lb5 = calculateDamage({ ...baseInput, limitBreak: 5 });
-    const lb10 = calculateDamage({ ...baseInput, limitBreak: 10 });
+    calculateDamage({ ...baseInput, limitBreak: 5 });
+    calculateDamage({ ...baseInput, limitBreak: 10 });
 
     // Both should still calculate (level increases), but exceed uses fallback
     // Note: The code has LB_EXCEED_AVERAGE[5] = 1.125, so LB5 won't fallback

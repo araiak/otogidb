@@ -37,7 +37,6 @@ export function EnemyConfig({
   onFinalWaveChange,
   onWaveCountChange,
   onIgnoreShieldCapChange,
-  onWorldBossBonusChange,
   onHealersDontAttackChange,
   effectiveShield,
   skillDebuffTotal = 0,

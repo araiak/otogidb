@@ -294,7 +294,7 @@ const jsonLd = {
   hasLocalizedUrls={true}
 >
   <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6">
     <!-- Breadcrumb with language indicator -->

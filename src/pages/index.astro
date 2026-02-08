@@ -14,7 +14,7 @@ import { localeInitScript } from '../lib/i18n';
     <title>OtogiDB - Redirecting...</title>
     <meta name="robots" content="noindex" />
     <!-- Redirect script runs immediately -->
-    <script set:html={localeInitScript} />
+    <script is:inline set:html={localeInitScript} />
     <!-- Fallback for no-JS: redirect to English -->
     <noscript>
       <meta http-equiv="refresh" content="0;url=/en/" />

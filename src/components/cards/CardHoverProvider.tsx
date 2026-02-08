@@ -72,7 +72,7 @@ export default function CardHoverProvider({
       if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
         setLocale(stored as SupportedLocale);
       }
-    } catch {}
+    } catch { /* localStorage unavailable */ }
   }, []);
 
   const {

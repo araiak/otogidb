@@ -247,7 +247,6 @@ interface AbilityRowProps {
 
 function AbilityRow({
   ability,
-  isActive,
   isLeader,
   effectiveLevel,
   isAssist = false,
@@ -268,17 +267,6 @@ function AbilityRow({
 
   // Fully active only if all conditions met
   const fullyActive = levelMet && leaderMet;
-
-  // Determine ability type icon/color
-  let typeColor = 'text-gray-400';
-
-  if (tags.includes('Team') || tags.includes('AoE')) {
-    typeColor = 'text-blue-400';
-  } else if (tags.includes('Self')) {
-    typeColor = 'text-green-400';
-  } else if (tags.includes('Multi')) {
-    typeColor = 'text-yellow-400';
-  }
 
   // Get effect type
   let effectType = '';

@@ -53,13 +53,13 @@ export default function FilterDropdown({
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  const toggleOption = (opt: string | number) => {
+  const toggleOption = useCallback((opt: string | number) => {
     if (value.includes(opt)) {
       onChange(value.filter(v => v !== opt));
     } else {
       onChange([...value, opt]);
     }
-  };
+  }, [value, onChange]);
 
   const handleKeyDown = useCallback((event: React.KeyboardEvent) => {
     if (!isOpen) {

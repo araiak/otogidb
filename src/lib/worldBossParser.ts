@@ -157,7 +157,7 @@ export function parseEffect(effectStr: string): ParsedEffect | null {
     case 'ATK':
     case 'SHIELD':
     case 'CHIT':
-    case 'CHIT_ATK':
+    case 'CHIT_ATK': {
       // Stat modifier: SPD<-50.00%,-2.63%,8>
       const value = paramList[0];
       const duration = paramList[2] || paramList[1];
@@ -168,6 +168,7 @@ export function parseEffect(effectStr: string): ParsedEffect | null {
         duration: duration ? `${duration}s` : undefined,
         description: `${effectName} ${sign}${value}${duration ? ` (${duration}s)` : ''}`,
       };
+    }
 
     case 'HIT':
       // Accuracy modifier: HIT<10.00%,0.55%>

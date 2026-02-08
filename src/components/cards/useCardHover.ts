@@ -93,6 +93,7 @@ export function useCardHover({
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside as EventListener);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mobilePreviewCard, closeMobilePreview]);
 
   // Use event delegation for hover - handles dynamically added elements (e.g., expanding tiers)
