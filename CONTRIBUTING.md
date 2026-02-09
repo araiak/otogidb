@@ -60,12 +60,12 @@ Your content starts here...
 
 - `guide` - How-to guides and tutorials
 - `analysis` - Card or team analysis
-- `tier-list` - Tier rankings
-- `team-building` - Team composition advice
-- `event` - Event-specific content
-- `announcement` - Site announcements
-- `christmas`, `halloween`, etc. - Seasonal content
 - `auction` - Auction analysis
+- `events` - Event-specific content
+- `gacha` - Gacha card analysis
+- `exchange` - Exchange card analysis
+- `team-building` - Team composition advice
+- `announcement` - Site announcements
 
 ### Using Card References
 

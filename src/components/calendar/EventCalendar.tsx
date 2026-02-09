@@ -137,6 +137,11 @@ function isUpcoming(start: string | undefined): boolean {
   return Date.now() < new Date(start).getTime();
 }
 
+function isEnded(end: string | undefined): boolean {
+  if (!end) return false;
+  return Date.now() >= new Date(end).getTime();
+}
+
 const CURRENCY_NAMES: Record<string, string> = {
   gApple: 'Mochi',
   coin: 'Coin',
@@ -630,8 +635,8 @@ export default function EventCalendar({ data, cards }: Props) {
   return (
     <div>
       <EventSection events={data.events} cards={cards} locale={locale} />
-      <BannerSection banners={data.banners} cards={cards} locale={locale} />
-      <ExchangeSection exchanges={data.exchanges} cards={cards} locale={locale} />
+      <BannerSection banners={data.banners.filter(b => !isEnded(b.end))} cards={cards} locale={locale} />
+      <ExchangeSection exchanges={data.exchanges.filter(e => !isEnded(e.end))} cards={cards} locale={locale} />
       <AuctionPredictionSection predictions={data.auction_predictions || []} cards={cards} locale={locale} />
 
       <div className="text-xs mt-4 mb-6" style={{ color: 'var(--color-text-secondary)' }}>
