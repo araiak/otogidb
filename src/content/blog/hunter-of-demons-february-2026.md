@@ -1,7 +1,7 @@
 ---
 title: "The Hunter of Demons: February 2026 Auction"
 description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, including exchange and rerun predictions"
-date: "2026-02-09"
+date: "2026-02-14"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
