@@ -1,12 +1,30 @@
 ---
 title: "The Hunter of Demons: February 2026 Auction"
-description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, including exchange and rerun predictions"
+description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, plus Valentine's Day special auction"
 date: "2026-02-14"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
 
-This auction should be Incoming! The Hunter of Demons which has some heavy hitters. The auction is expected around the 15th.
+A Valentine's Day special auction dropped today with some older Valentine's themed cards. These are mostly powercrept, so this is more for collectors than meta chasers. The regular Hunter of Demons auction is expected around the 15th and has some heavy hitters - see below.
+
+---
+
+## Valentine's Day Special Auction
+
+These cards are available in a limited-time Valentine's auction through February 17th. Most of these are powercrept, so this is mostly a collector's opportunity.
+
+:card[632] is probably the best card of the bunch. She can cap crit rate and give 100% crit damage for the duration plus another 20% crit damage to the whole team, making her a decent fit into a ranged/support slot. She competes with :card[741] that should be coming next month and is better overall, but will probably be much more expensive. Not a bad pickup option for Anima players, but also not worth spending a lot because she probably isn't in your best team, and there are other better options for single target buffers. **Decent Anima support if cheap, but :card[741] is better.**
+
+:card[434] is a decent Phantasma carry if you can get her for cheap, but she competes with :card[725] in the regular auction which is better because her damage reduction affects any targets, not just herself, and :card[740] is coming next month. **Grab :card[725] instead or wait for :card[740] next month.**
+
+:card[567] offers a full team skill damage boost for 4 copies, but her ATK is on the lower side at 11,000. She's also in the standard pool, so she could make a decent reserve if you're looking for skill damage or just want to complete a copy. It's also possible to unlock her lv. 85 and seal if you're planning to use her in reserve. Not bad, but there are lots of good Phantasma reserve options, so hard to justify spending real money on her. **Standard pool - niche reserve option.**
+
+:card[418] is more of a greedy attacker, but she's a bit unreliable given her 50% chance on her damage buff, which could lead to inconsistent clears. She's decent in Endless, and her progressive skill doesn't require multiple copies to unlock, so one copy could be OK if that's something you're really after. But she's nothing special. **Skip unless you want her for Endless.**
+
+:card[435] is alright - 30% damage as leader is fine, but :card[724] is a better card in almost all ways and is coming in a few days in the regular auction, and requires fewer copies to unlock his damage ability. **Pass - :card[724] is better and cheaper.**
+
+:card[426] is powercrept. 9% DR alone just isn't enough to justify a spot on a team, let alone for real cash. **Pass.**
 
 ---
 
@@ -34,6 +52,15 @@ I think we will see a second rerun of gacha cards from Get Ready! The October Sp
 
 ## TL;DR
 
+**Valentine's Day Special** (through Feb 17th):
+- :card[632] - **Decent if cheap** - Anima crit support, but :card[741] coming next month is better
+- :card[567] - **Niche reserve** - AoE skill damage, also in standard pool
+- :card[418] - **Skip** unless you want her for Endless
+- :card[435] - **Pass** - :card[724] is better and cheaper in a few days
+- :card[434] - **Pass** - grab :card[725] instead or wait for :card[740]
+- :card[426] - **Pass** - 9% DR is too low to matter
+
+**The Hunter of Demons Auction** (expected ~15th):
 - :card[723] - **Must buy** up to 2 copies for everyone - top tier 60% crit damage assist
 - :card[722] - **Buy if you need Anima melee** - direct upgrade to :card[1413], not a long term option
 - :card[725] - **World Boss option** - ranged support with slow and skill damage boost
