@@ -90175,9 +90175,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -90208,7 +90212,8 @@
           "in_standard_pool": false
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -90225,11 +90230,63 @@
       ],
       "description": "<color=#f4e48e>\"想要命令我？不要笑掉人家的大牙了。\"</color><br/><color=#ef9843>恶魔之王所化身的妖怪。</color><br/>自嘲地说她本来在天界有着相当崇高的身份为人尊敬，但觉得厌倦了才堕入魔道。可是真相不得而知。然而以强大的力量自豪这点则是无庸置疑，似乎强大到只要力道没抓好就会一瞬间让大地变成焦土。当然，在现代要是做了那种事会一发不可收拾，所以有好好在拿捏分寸。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.520512+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.520512+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.098673+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "477",
       "image_urls": {
@@ -95330,9 +95387,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -95400,11 +95457,28 @@
       ],
       "description": "<color=#f4e48e>“往这走，要好好跟上唷！”</color><br/><color=#ef9843>描写一位僧侣和伙伴们前往天竺旅途的故事－西游记中重要人物化身而成的妖怪。</color>原本她就具备足以引导人的高尚风范，加上越过困难之旅的经验和自信，而领会到了坚韧的领导能力。虽然乍看之下难以接近让人误解她的性格刚烈，但实际上她却是一个深思远虑，信仰之心浓厚，且有条有理的妖怪。<br/><color=#f45d68>[活动]银河，溯流而上</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.525512+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.525512+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.136851+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "504",
       "image_urls": {
@@ -95512,9 +95586,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -95582,11 +95656,28 @@
       ],
       "description": "<color=#f4e48e>“要吸进去囉～”</color><br/><color=#ef9843>在西游记登场的宝物化身而成的妖怪。</color>尊太上老君为师，打从心底尊敬着他。和金角・银角是死党，就算到了现代，也依然会大聊在西游记中与三藏一行人战斗聊到天亮。虽然有着拼命三郎的性格，但有点健忘是美中不足之处。<br/><color=#f45d68>[活动]银河，溯流而上</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.525512+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.525512+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.138289+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "505",
       "image_urls": {
@@ -95730,9 +95821,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -95800,11 +95891,28 @@
       ],
       "description": "<color=#f4e48e>“喂喂，你不知道我是谁吗？”</color><br/><color=#ef9843>在西游记中支援著三藏法师的妖怪。</color>以猪八戒之名广为人知。天蓬元帅是他在天界现身的状态。虽然乍看之下大胆无畏又是个豪爽的无法无天的人，但他那热心的本性，还有为伙伴着想的一面却容易招致误会。虽说如此，他那对女性狂热的部分却是无法辩解的。<br/><color=#f45d68>[活动]银河，溯流而上</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.526512+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.526512+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.140079+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "506",
       "image_urls": {
@@ -97090,9 +97198,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -97160,11 +97268,28 @@
       ],
       "description": "<color=#f4e48e>“究竟人们在从我们身上追求什么呢…？”</color><br/><color=#ef9843>七夕传说中登场的牧牛人化身而成的妖怪。</color>与织女过着相亲相爱的日子，虽说对于那段日子也没有任何不满，也满足于现状，但…",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.527513+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.150034+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "513",
       "image_urls": {
@@ -97304,9 +97429,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -97393,12 +97518,28 @@
             ],
             "date": "2025-12-13",
             "version": "3d06ec7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-13T00:00:00+00:00",
-        "last_modified_version": "3d06ec7"
+        "last_modified": "2026-02-14T15:54:13.151855+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "514",
       "image_urls": {
@@ -97544,9 +97685,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-01-18 15:00:00",
+          "end_date": "2026-02-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -97599,11 +97740,28 @@
       ],
       "description": "<color=#f4e48e>“呵…又有什么问题了吗？”</color><br/><color=#ef9843>西游记中支撑著三藏法师的妖怪。</color>人称沙悟净而闻名的他，在天界的名字为卷帘大将，每天持续著自己的工作。虽然是头脑劳动的类型，但有只要得到结论之后就会变得视野狭隘的毛病。但是他非常的诚实率直，虽然有些笨拙，但相信自己的结论往前迈进的姿态，在他人眼中显得无比纯洁。虽然是话不多的类型，但只要说到就一定会做到，也绝对不会做会损及自己骄傲的事情。但是伙伴们豁达地活下去的样子，在他的价值观中激起了小小的涟漪。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": "2025-01-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.527513+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.153486+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "515",
       "image_urls": {
@@ -134411,17 +134569,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -134467,6 +134621,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -134484,11 +134639,80 @@
       ],
       "description": "<color=#f4e48e>“我只是想平静度日而已。”</color><br/><color=#ef9843>服从役小角的鬼族妖怪。</color>同时是后鬼的丈夫，是以力量为自豪的红鬼。平常生性温和到让人觉得很愚蠢，一旦进入战斗，就会用宛如狂牛般的气势以铁斧粉碎敌人，简直是男人中的男人。其钢铁的肉体任何刀刃都打不穿，简直就是活动要塞般的存在。为了回避与爱说谎的人类的交集，在深山里和妻子后鬼过著隐密的生活。另外，比任何人都深爱着后鬼，只要是她的要求，不管有多辛苦都会达成，是个爱妻家。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.567653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.567653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.435609+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "716",
       "image_urls": {
@@ -134587,17 +134811,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -134643,6 +134863,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -134660,11 +134881,80 @@
       ],
       "description": "<color=#f4e48e>“我绝对不是什么存在感薄弱的人”</color><br/><color=#ef9843>是守护佛法的八部鬼众，为守护北方的鬼族妖怪</color>擅长隐形，以优秀的密探身分活跃着，是阴阳寮情报收集部门之长。忍者般的身段和使用铁丝的暗杀术只能用非常恐怖来说明，以她为目标的人，没有一个能平安无事。乍看之下，她的个性冷酷又寡言，但却出乎意料之外地守不住口风，听说曾经不小心说溜嘴泄漏了机密情报…。同族还有天夜叉、地夜叉。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.567653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.567653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.437064+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "717",
       "image_urls": {
@@ -134769,17 +135059,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -134825,6 +135111,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -134842,11 +135129,80 @@
       ],
       "description": "<color=#f4e48e>“哭也是过一生，笑也是过一生。那么，当然是笑比较好吧？”</color><br/><color=#ef9843>以给鬼铁棒这句成语而成名，是有名的带刺铁棒的妖怪。</color>无论对谁都会直言的武侠女杰。拥有强大的单兵实力，真正的力量是被当成武器使用，拥有让使用者的力量增加数倍的能力。也是熊童子的搭档（武器），受四天王仰慕的热心姊姊般存在。另外，和其他鬼的相性大为不同，虎熊童子是打击武器因为很慢所以被拒绝，金熊童子因为会随便乱用，所以受到金碎棒的拒绝。星熊童子因为太重无法举起而受到打击，认真考虑起是否该减肥…。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.568653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.568653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.438593+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "718",
       "image_urls": {
@@ -134951,17 +135307,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -134989,6 +135341,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -135006,11 +135359,80 @@
       ],
       "description": "<color=#f4e48e>“不懂得爱人者将无法获得幸。”</color><br/><color=#ef9843>服从役小角的鬼族妖怪。</color>是前鬼的妻子，以灵水治愈伤者的温柔蓝鬼。对简朴的生活不曾有过怨言，总是认真支持丈夫的贤妻良母。战斗力不算高，但擅长操纵水，拥有能应变各种情况的柔软性。和前鬼度过了漫长的生活，对他的爱从未冷却，即使有其他人在也会毫不在意地跟他调情，听说单身的妖怪光是在一旁就会觉得很心酸…。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.568653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.568653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.439896+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "719",
       "image_urls": {
@@ -135284,17 +135706,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -135322,6 +135740,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -135339,11 +135758,80 @@
       ],
       "description": "<color=#f4e48e>“喂！　没有人有勇气敢和我正面相对吗！”</color><br/><color=#ef9843>侍奉酒呑童子的鬼族妖怪。</color>武力是四天王最强的泼辣大姊。是最早发现茨木童子力量的前师傅，实力反转过来后成为他的部下。阶级虽然相同，但其他四天王把她当成姊姊般仰慕并惧怕著。值得一提的是，当她把搭档的金碎棒当成武器来战斗时，其破坏力几乎跟酒吞童子不相上下…。另外，非常不会喝酒，只要稍微喝一小杯就会醉倒，所以似乎拿神便鬼毒酒没辙。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.568653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.568653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.441209+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "720",
       "image_urls": {
@@ -135441,17 +135929,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -135479,6 +135963,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -135496,11 +135981,80 @@
       ],
       "description": "<color=#f4e48e>“啊啊…好耶…那表情让人兴奋起来了♪”</color><br/><color=#ef9843>守护佛法的八部鬼众，为守护北方的鬼族妖怪。</color>最喜欢对手痛苦表情的虐待狂大姊。隶属于阴阳寮，因为个性的关系，常以间谍身分潜入敌方，最有名的就是她混在秽魔之间毫无违和感这一点。应该说常常太过入戏，连秽魔都会对她的辛辣退避三尺…。和地狱大伯爵是旧友，听说是能在床上互相抗衡的交情。在床上做什么？这就不能问囉。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.568653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.568653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.442572+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "721",
       "image_urls": {
@@ -135634,17 +136188,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -135672,6 +136222,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -135689,11 +136240,80 @@
       ],
       "description": "<color=#f4e48e>“杀鬼就是我的使命…。为了完成大愿，你的头我就收下了！”</color><br/><color=#ef9843>很久以前切下茨木童子右腕的刀之妖怪。</color>因为该典故所以别名为“鬼切丸”“髭切”，被称为是鬼之天敌的妖刀。也是童子切安纲的双胞胎姊姊，听说两人长得一模一样，即使是认识的人也分不太清楚…。在两人之间以“吸血”“鬼切”互相称呼，但她们的感情不算好，听说还拥有知名度比妹妹低的自卑感。另外，因为被强硬改名为“国纲”的过去，所以反过来憎恨起“鬼丸国纲”的样子…。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.569653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.569653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.444195+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "722",
       "image_urls": {
@@ -135829,17 +136449,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -135867,6 +136483,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -135884,11 +136501,80 @@
       ],
       "description": "<color=#f4e48e>“和平的世界很无趣。所以，才决定作乱。”</color><br/><color=#ef9843>以击退酒呑童子出名的平安中期武将的妖怪。</color>打倒的妖怪不知其数，被称为国内最强退魔士的有名帅哥，是王之锁骨的干部。自尊心很高的人类至上主义者，认为除了人类以外的妖怪――尤其是付丧神，都只不过是隶属于人类的道具。因为那样的个性，导致他和其他干部的交情非常不好。处于一点小事就会一触即发的关系，因为拥有触摸付丧神就会使其强制隶属‧武器化的能力，即使是干部们也无法出手，所以仍保持着这样的平衡关系。对武士受到轻视的和平现世感到不满，打算让世界受秽气污染、进入战乱。<br/><color=#f45d68>[活动]强袭！狩猎鬼族之人</color>",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.569653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.569653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.445801+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "723",
       "image_urls": {
@@ -136017,17 +136703,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -136073,6 +136755,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -136090,11 +136773,80 @@
       ],
       "description": "<color=#f4e48e>“我不认为这样就能赎罪…”</color><br/><color=#ef9843>让狗、雉鸡、猿猴服从并前往击退鬼族的童话中之武者。</color>虽说是因为被秽气附身导致暴走，但对伤害了大量无辜鬼族而感到后悔，发誓下次要为了保护鬼而挥剑。为了惩罚没用的自己而定下了更多严格修练的结果，就是身为武者又更上一层楼了。让刀缠绕着桃子果实的神圣灵气所放出的攻击，拥有可净化成千上万的秽魔能力。即使以温柔微笑面对小鬼，但会有从全力冲刺就能逃跑的日常生活中获得解放的一天吗？",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.569653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.569653+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.447487+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "724",
       "image_urls": {
@@ -136222,17 +136974,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-02-15",
-            "event_date": "2025-07-26",
-            "event_id": "165",
-            "event_name": "Incoming! The hunter of demons",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -136278,6 +137026,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -136295,11 +137044,80 @@
       ],
       "description": "<color=#f4e48e>“现在不是做那种事的时候！　给我看清楚场合！”</color><br/><color=#ef9843>最喜欢针对人心恶作剧的妖怪。</color>但是，现在已经不太恶作剧了。因为她恋爱了，所以没空做那种事。原本只是想捉弄一个超爱战斗的笨蛋，却在不知不觉中在意起对方，一直跟在他身后，最后发现光是听到对方的声音就会很高兴。已经是每天24小时都无法不想他的状态。因此逮住了听说最近有了恋人的鬼丸国纲来商量…。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.estimate",
+                "new": null,
+                "old": {
+                  "confidence": "high",
+                  "estimated_date": "2026-02-15",
+                  "event_date": "2025-07-26",
+                  "event_id": "165",
+                  "event_name": "Incoming! The hunter of demons",
+                  "note": "Auctions typically start on the 15th, ~7 months after event"
+                }
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.570656+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.570656+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.449194+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "725",
       "image_urls": {
@@ -136403,9 +137221,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-02-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -136436,7 +137258,8 @@
           "in_standard_pool": false
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -136453,11 +137276,63 @@
       ],
       "description": "<color=#f4e48e>“无论有多少背后故事，我尽忠职守的方式都不会改变。”</color><br/><color=#ef9843>頼光四天王“碓井贞光”拥有的佩刀之妖怪。</color>用有相同名称的刀非常多，但每一把都是以自己的意思显现出来，虽然有精神不安定的一面，但对还没显现的过往主人“碓井贞光”非常忠诚，为了让他复活于现世而服从赖光。个性沉默又服从。克制自己的感情，默默地服从命令。战斗模式是将坚固的身体当成武器进行肉斩骨断战法，知道自己没有武术的才能，所以把舍身反击当作必杀技。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-02-14",
+            "version": "253036a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.570656+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.570656+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-14T15:54:13.450546+00:00",
+        "last_modified_version": "253036a"
       },
       "id": "726",
       "image_urls": {
@@ -145674,5 +146549,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 900,
-  "version": "cbda21e"
+  "version": "253036a"
 }
