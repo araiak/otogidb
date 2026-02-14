@@ -1,0 +1,1493 @@
+{
+  "version": "253036a",
+  "version_date": "2026-02-14",
+  "previous_version": "cbda21e",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 18
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "477",
+      "name": "Belial",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588147/otogi/cards_hd/100477_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "auction",
+          "display": "Sources: Added (auction)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    },
+    {
+      "id": "513",
+      "name": "Hikoboshi [Formal Wear]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588195/otogi/cards_hd/100513_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "514",
+      "name": "Flying Nimbus [Awakened]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588196/otogi/cards_hd/100514_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "722",
+      "name": "Onikiri Yasutsuna",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588464/otogi/cards_hd/100722_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    },
+    {
+      "id": "723",
+      "name": "Minamotono Yorimitsu",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588465/otogi/cards_hd/100723_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    },
+    {
+      "id": "724",
+      "name": "Momotaro [Demon Savior]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588467/otogi/cards_hd/100724_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 1000,
+          "display": "Min Auction Price: Added (1000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 100000,
+          "display": "Max Auction Price: Added (100000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "725",
+      "name": "Amanojaku[Strife]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588467/otogi/cards_hd/100725_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 1000,
+          "display": "Min Auction Price: Added (1000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 100000,
+          "display": "Max Auction Price: Added (100000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "504",
+      "name": "Tang Sanzang",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588181/otogi/cards_hd/100504_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "505",
+      "name": "Redda Gourdo",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588184/otogi/cards_hd/100505_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "506",
+      "name": "Marshal Tianpeng",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588187/otogi/cards_hd/100506_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "515",
+      "name": "General Juan Lian",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588197/otogi/cards_hd/100515_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-01-18 15:00:00",
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: 2025-01-18 15:00:00 → 2026-02-18 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "716",
+      "name": "Zenki",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588458/otogi/cards_hd/100716_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "717",
+      "name": "Yaksha",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588459/otogi/cards_hd/100717_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "718",
+      "name": "Konsaibo",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588460/otogi/cards_hd/100718_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "720",
+      "name": "Kuma Doji",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588462/otogi/cards_hd/100720_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Min Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50,
+          "display": "Max Auction Price: Added (50)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    },
+    {
+      "id": "721",
+      "name": "Rakshasa",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588463/otogi/cards_hd/100721_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Min Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50,
+          "display": "Max Auction Price: Added (50)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    },
+    {
+      "id": "726",
+      "name": "Ishikirimaru",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588468/otogi/cards_hd/100726_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "auction",
+          "display": "Sources: Added (auction)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-02-18 15:00:00",
+          "display": "End Date: Added (2026-02-18 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        }
+      ]
+    },
+    {
+      "id": "719",
+      "name": "Goki",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588461/otogi/cards_hd/100719_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 2,
+          "display": "Min Auction Price: Added (2)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Max Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": {
+            "estimated_date": "2026-02-15",
+            "event_id": "165",
+            "event_name": "Incoming! The hunter of demons",
+            "event_date": "2025-07-26",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "new": null,
+          "display": "Estimate: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "tradeMonster": {
+      "old_count": 481,
+      "new_count": 493,
+      "diff": 12
+    }
+  }
+}

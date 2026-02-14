@@ -1,12 +1,12 @@
 ---
 title: "The Hunter of Demons: February 2026 Auction"
 description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, plus Valentine's Day special auction"
-date: "2026-02-14"
+date: "2026-02-15"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
 
-A Valentine's Day special auction dropped today with some older Valentine's themed cards. These are mostly powercrept, so this is more for collectors than meta chasers. The regular Hunter of Demons auction is expected around the 15th and has some heavy hitters - see below.
+A Valentine's Day special auction dropped today with some older Valentine's themed cards. These are mostly powercrept, so this is more for collectors than meta chasers. The regular Hunter of Demons auction is now live with some heavy hitters - see below.
 
 ---
 
@@ -40,13 +40,15 @@ The ranking card is :card[723], a top tier assist card. At two copies you get 60
 
 ---
 
-## Predictions
+## Exchange & Rerun
 
-These are more educated guesses and I'll update this section once the auction is released. I'm 99% sure on the above; the below is more like 75%, but they fit some patterns.
+:card[477] is the exchange card as predicted. She is not a very strong option - her crit is nice, but her attack is too low for her to be a solid carry, and burn isn't very good for overall damage. **Probably a pass unless she is very cheap.**
 
-I think :card[477] will be the exchange card. She is not a very strong option - her crit is nice, but her attack is too low for her to be a solid carry, and burn isn't very good for overall damage. **Probably a pass unless she is very cheap.**
+The rerun cards were not the Sports Meet cards I expected. Instead we got :card[514] and :card[513].
 
-I think we will see a second rerun of gacha cards from Get Ready! The October Sports Meet at the Tokyo Blue Cemetery! following last month's Alice in the Serious Kingdom gacha re-run. If that is the case, :card[361], :card[362], and :card[363] are all significantly powercrept and are probably not worth considering except for collections.
+:card[514] is a top tier card and a staple in world boss rankings. There's a bug where her critical damage buff has no duration, so it lasts until the end of battle. World boss teams use her to cap damage on the highest attacker and time extend to take advantage of the ramped up card. The critical rate duration was also reduced to 4s at some point, and the critical damage is actually 60% not the 80% listed in game data - but even the bugged values make her incredibly strong in world boss. Outside of world boss she's fine as a 3-stat buffer in any format, but in longer battles other elements can compete through progressive buffs, so she isn't a standout in story or towers like she is in world boss. She's going to be extremely expensive. **Must buy for world boss meta chasers.**
+
+:card[513] is nothing too special. He requires :card[510] for full value, and she has been powercrept for Divina, so this doesn't generate a strong combo. **Collectors only.**
 
 ---
 
@@ -60,13 +62,14 @@ I think we will see a second rerun of gacha cards from Get Ready! The October Sp
 - :card[434] - **Pass** - grab :card[725] instead or wait for :card[740]
 - :card[426] - **Pass** - 9% DR is too low to matter
 
-**The Hunter of Demons Auction** (expected ~15th):
+**The Hunter of Demons Auction**:
 - :card[723] - **Must buy** up to 2 copies for everyone - top tier 60% crit damage assist
 - :card[722] - **Buy if you need Anima melee** - direct upgrade to :card[1413], not a long term option
 - :card[725] - **World Boss option** - ranged support with slow and skill damage boost
 - :card[724] - **Strong Divina melee/lead** - one of the best Divina melee, compare with :card[733] next month
-- :card[477] (Exchange, predicted) - **Pass** unless very cheap
-- :card[361] :card[362] :card[363] (Rerun, predicted) - **Collectors only** - significantly powercrept
+- :card[477] (Exchange) - **Pass** unless very cheap
+- :card[514] (Rerun) - **Must buy for world boss** - bugged crit damage lasts all battle, extremely expensive
+- :card[513] (Rerun) - **Collectors only** - needs :card[510] who is powercrept
 
 ---
 

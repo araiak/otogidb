@@ -140,8 +140,10 @@ export function TeamDamageCalculator() {
   // Get debuff values from calculation results
   const skillDebuffTotal = calculationResults?.skillDebuffTotal ?? 0;
   const abilityDebuffTotal = calculationResults?.abilityDebuffTotal ?? 0;
+  const defenseDebuffTotal = calculationResults?.defenseDebuffTotal ?? 0;
   const effectiveEnemyShield = calculationResults?.effectiveEnemyShield ?? state.enemy.baseShield;
   const raceBonus = calculationResults?.raceBonus ?? 0;
+  const enemyDebuffContributions = calculationResults?.enemyDebuffContributions ?? [];
 
   return (
     <div className="space-y-6">
@@ -199,6 +201,8 @@ export function TeamDamageCalculator() {
             effectiveShield={effectiveEnemyShield}
             skillDebuffTotal={skillDebuffTotal}
             abilityDebuffTotal={abilityDebuffTotal}
+            defenseDebuffTotal={defenseDebuffTotal}
+            enemyDebuffContributions={enemyDebuffContributions}
             raceBonus={raceBonus}
             randomTargetMode={state.randomTargetMode}
             onRandomTargetModeChange={setRandomTargetMode}

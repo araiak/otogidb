@@ -11,15 +11,22 @@ import { describe, it, expect } from 'vitest';
 import {
   calculatePhase1BaseStats,
   calculatePhase2TeamContext,
+  calculatePhase3ApplyAbilities,
   calculateRaceBonus,
 } from '../team-calc';
 import {
   RACE_BONUS_CONSTANTS,
+  HELPER_SLOT_INDEX,
+  MAIN_TEAM_SIZE,
+  TOTAL_SLOTS,
   getAdvantageAttribute,
   getDisadvantageAttribute,
   type TeamMemberState,
+  type TeamContext,
+  type EnemyState,
+  type Phase1Result,
 } from '../team-calc-types';
-import type { Card } from '../../types/card';
+import type { Card, Ability } from '../../types/card';
 
 // =============================================================================
 // Test Helpers
@@ -432,5 +439,333 @@ describe('Mixed Team Edge Cases', () => {
       5 * RACE_BONUS_CONSTANTS.memberBonus +  // 5 members including leader
       5 * RACE_BONUS_CONSTANTS.assistBonus;
     expect(bonus).toBeCloseTo(expected, 3);
+  });
+});
+
+// =============================================================================
+// Phase 3: Helper Slot & Enemy Debuff Stacking
+// =============================================================================
+
+function createDefaultEnemy(): EnemyState {
+  return {
+    baseShield: 0,
+    baseDefense: 0,
+    isFinalWave: false,
+    waveCount: 1,
+    attribute: 'None',
+    ignoreShieldCap: false,
+    worldBossBonus: 1.0,
+    healersDontAttack: false,
+  };
+}
+
+function createDefaultTeamContext(): TeamContext {
+  return {
+    byAtk: [0, 1, 2, 3, 4],
+    bySpeed: [0, 1, 2, 3, 4],
+    byHp: [0, 1, 2, 3, 4],
+    allByAtk: [0, 1, 2, 3, 4, 5, 6],
+    attributeCounts: { divina: 0, phantasma: 0, anima: 0 },
+    presentCardIds: new Set(),
+    presentAssistIds: new Set(),
+    leaderCardId: null,
+  };
+}
+
+function createDefaultPhase1Result(index: number): Phase1Result {
+  return {
+    memberIndex: index,
+    effectiveLevel: 70,
+    baseAtk: 10000,
+    baseCritRate: 0.15,
+    baseSpeed: 500,
+    baseHp: 5000,
+    atkBondBonus: 0,
+    skillBondBonus: 0,
+  };
+}
+
+function makeAbility(overrides: Partial<Ability> = {}): Ability {
+  return {
+    id: 'ability-1',
+    name: 'Test Ability',
+    description: 'All allies DMG +20%',
+    stackable: true,
+    parsed: {
+      target: { type: 'team', count: 0 },
+      effects: [{ stat: 'ATK', type: 'ATK', value: 20, isPercent: true }],
+    },
+    ...overrides,
+  };
+}
+
+/** Build a full 7-slot team with only the specified slots filled */
+function buildTeam(
+  slots: Record<number, { card: Card; abilities?: Ability[] }>
+): TeamMemberState[] {
+  const members: TeamMemberState[] = [];
+  for (let i = 0; i < TOTAL_SLOTS; i++) {
+    const slot = slots[i];
+    if (slot) {
+      const card = { ...slot.card, abilities: slot.abilities ?? slot.card.abilities };
+      members.push(createMemberWithCard(card, { isReserve: i >= MAIN_TEAM_SIZE }));
+    } else {
+      members.push(createEmptyMemberState(i >= MAIN_TEAM_SIZE));
+    }
+  }
+  return members;
+}
+
+describe('Phase 3: Helper Slot Once-Per-Team Bypass', () => {
+  it('helper slot with same non-stackable ability as team card: both apply', () => {
+    const sharedAbility = makeAbility({
+      id: 'shared-ability',
+      stackable: false,
+      parsed: {
+        target: { type: 'self', count: 0 },
+        effects: [{ stat: 'ATK', type: 'ATK', value: 15, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '100' });
+    const card2 = createMockCard({ id: '200' });
+
+    // Slot 0 = regular team member, Slot 4 = helper
+    const members = buildTeam({
+      0: { card: card1, abilities: [sharedAbility] },
+      [HELPER_SLOT_INDEX]: { card: card2, abilities: [sharedAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    // Slot 0's ability applies to self (dmg +15% = 0.15 internal)
+    expect(results[0].dmgBonus).toBeCloseTo(0.15, 5);
+    // Helper's same non-stackable ability also applies (not deduped)
+    expect(results[HELPER_SLOT_INDEX].dmgBonus).toBeCloseTo(0.15, 5);
+  });
+
+  it('two non-helper cards with same non-stackable ability: only first applies', () => {
+    const sharedAbility = makeAbility({
+      id: 'shared-ability',
+      stackable: false,
+      parsed: {
+        target: { type: 'self', count: 0 },
+        effects: [{ stat: 'ATK', type: 'ATK', value: 15, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '100' });
+    const card2 = createMockCard({ id: '200' });
+
+    // Slots 0 and 1 = regular team members (not helper)
+    const members = buildTeam({
+      0: { card: card1, abilities: [sharedAbility] },
+      1: { card: card2, abilities: [sharedAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    // First card's ability applies (dmg +15% = 0.15 internal)
+    expect(results[0].dmgBonus).toBeCloseTo(0.15, 5);
+    // Second card's same ability is deduplicated (once-per-team)
+    expect(results[1].dmgBonus).toBe(0);
+  });
+});
+
+describe('Phase 3: Enemy Debuff Stacking Between Sources', () => {
+  it('two copies of same card with enemy shield debuff: both stack', () => {
+    const shieldDebuffAbility = makeAbility({
+      id: 'shield-debuff-1',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'SHIELD', type: 'SHIELD', value: -30, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '500' });
+    const card2 = createMockCard({ id: '500' });
+
+    const members = buildTeam({
+      0: { card: card1, abilities: [shieldDebuffAbility] },
+      1: { card: card2, abilities: [shieldDebuffAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    // Both debuffs should stack: 0.30 + 0.30 = 0.60 (values stored as positive after Math.abs)
+    expect(results[0].enemyShieldDebuff).toBeCloseTo(0.60, 5);
+  });
+
+  it('same card enemy defense debuff from two slots stacks', () => {
+    const defenseDebuffAbility = makeAbility({
+      id: 'def-debuff-1',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'DEFENSE', type: 'DEFENSE', value: -20, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '600' });
+    const card2 = createMockCard({ id: '600' });
+
+    const members = buildTeam({
+      0: { card: card1, abilities: [defenseDebuffAbility] },
+      2: { card: card2, abilities: [defenseDebuffAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    // Both debuffs should stack: 0.20 + 0.20 = 0.40 (values stored as positive after Math.abs)
+    expect(results[0].enemyDefenseDebuff).toBeCloseTo(0.40, 5);
+  });
+
+  it('single card enemy shield debuff is not double-counted across targets', () => {
+    const shieldDebuffAbility = makeAbility({
+      id: 'shield-debuff-solo',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'SHIELD', type: 'SHIELD', value: -25, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '700' });
+
+    const members = buildTeam({
+      0: { card: card1, abilities: [shieldDebuffAbility] },
+      1: { card: createMockCard({ id: '701' }) },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    // Only applied once despite potentially multiple targets
+    expect(results[0].enemyShieldDebuff).toBeCloseTo(0.25, 5);
+  });
+});
+
+// =============================================================================
+// Phase 3: Enemy Debuff Contribution Tracking
+// =============================================================================
+
+describe('Phase 3: Enemy Debuff Contribution Tracking', () => {
+  it('shield debuff contribution is tracked with correct source info', () => {
+    const shieldDebuffAbility = makeAbility({
+      id: 'shield-track-1',
+      name: 'DMG Amp Ability',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'SHIELD', type: 'SHIELD', value: -25, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '800', name: 'Test Card A' });
+
+    const members = buildTeam({
+      0: { card: card1, abilities: [shieldDebuffAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    expect(results[0].enemyDebuffContributions).toHaveLength(1);
+    const contrib = results[0].enemyDebuffContributions[0];
+    expect(contrib.abilityName).toBe('DMG Amp Ability');
+    expect(contrib.sourceMemberIndex).toBe(0);
+    expect(contrib.sourceCardId).toBe('800');
+    expect(contrib.effects).toEqual([{ stat: 'shield', value: 0.25 }]);
+  });
+
+  it('defense debuff contribution is tracked with correct source info', () => {
+    const defenseDebuffAbility = makeAbility({
+      id: 'def-track-1',
+      name: 'Def Down Ability',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'DEFENSE', type: 'DEFENSE', value: -20, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '900', name: 'Test Card B' });
+
+    const members = buildTeam({
+      2: { card: card1, abilities: [defenseDebuffAbility] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    expect(results[0].enemyDebuffContributions).toHaveLength(1);
+    const contrib = results[0].enemyDebuffContributions[0];
+    expect(contrib.abilityName).toBe('Def Down Ability');
+    expect(contrib.sourceMemberIndex).toBe(2);
+    expect(contrib.sourceCardId).toBe('900');
+    expect(contrib.effects).toEqual([{ stat: 'defense', value: 0.20 }]);
+  });
+
+  it('multiple debuff sources produce multiple contribution entries', () => {
+    const shieldDebuff1 = makeAbility({
+      id: 'shield-multi-1',
+      name: 'Shield Break A',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'SHIELD', type: 'SHIELD', value: -30, isPercent: true }],
+      },
+    });
+
+    const shieldDebuff2 = makeAbility({
+      id: 'shield-multi-2',
+      name: 'Shield Break B',
+      stackable: true,
+      parsed: {
+        target: { type: 'enemy', count: 0 },
+        effects: [{ stat: 'SHIELD', type: 'SHIELD', value: -15, isPercent: true }],
+      },
+    });
+
+    const card1 = createMockCard({ id: '1000' });
+    const card2 = createMockCard({ id: '1001' });
+
+    const members = buildTeam({
+      0: { card: card1, abilities: [shieldDebuff1] },
+      3: { card: card2, abilities: [shieldDebuff2] },
+    });
+
+    const phase1 = members.map((_, i) => createDefaultPhase1Result(i));
+    const results = calculatePhase3ApplyAbilities(
+      members, phase1, createDefaultTeamContext(), createDefaultEnemy()
+    );
+
+    const shieldContribs = results[0].enemyDebuffContributions.filter(
+      c => c.effects.some(e => e.stat === 'shield')
+    );
+    expect(shieldContribs).toHaveLength(2);
+    expect(shieldContribs[0].sourceMemberIndex).toBe(0);
+    expect(shieldContribs[0].effects[0].value).toBeCloseTo(0.30, 5);
+    expect(shieldContribs[1].sourceMemberIndex).toBe(3);
+    expect(shieldContribs[1].effects[0].value).toBeCloseTo(0.15, 5);
   });
 });
