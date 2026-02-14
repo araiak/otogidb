@@ -4,7 +4,7 @@
  */
 
 import type { TeamMemberState } from '../../lib/team-calc-types';
-import { MAIN_TEAM_SIZE, TOTAL_SLOTS } from '../../lib/team-calc-types';
+import { MAIN_TEAM_SIZE, TOTAL_SLOTS, HELPER_SLOT_INDEX } from '../../lib/team-calc-types';
 import { getAndroidImageWithFallback } from '../../lib/images';
 
 interface TeamTabsProps {
@@ -117,7 +117,7 @@ function TabButton({
 
       {/* Tab number - L for Leader (slot 0) */}
       <span className={`text-xs mt-1 ${index === 0 ? 'text-yellow-400 font-bold' : 'text-secondary'}`}>
-        {isReserve ? `R${index - MAIN_TEAM_SIZE + 1}` : index === 0 ? 'L' : index + 1}
+        {isReserve ? `R${index - MAIN_TEAM_SIZE + 1}` : index === 0 ? 'L' : index === HELPER_SLOT_INDEX ? 'H' : index + 1}
       </span>
 
       {/* Status indicators */}

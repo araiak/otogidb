@@ -410,6 +410,7 @@ export interface EnemyState {
 export const MAIN_TEAM_SIZE = 5;
 export const RESERVE_SIZE = 2;
 export const TOTAL_SLOTS = MAIN_TEAM_SIZE + RESERVE_SIZE;
+export const HELPER_SLOT_INDEX = 4;
 
 export interface TeamState {
   // 5 main members + 2 reserve slots (indices 0-4 = main, 5-6 = reserve)
@@ -539,6 +540,9 @@ export interface Phase3Result {
 
   // Source tracking for breakdown
   abilityContributions: Phase3AbilityContribution[];
+
+  // Enemy debuff source tracking (for tooltip breakdowns)
+  enemyDebuffContributions: Phase3AbilityContribution[];
 }
 
 export interface Phase4Result {
@@ -564,6 +568,9 @@ export interface TeamCalculationResult {
 
   // Defense debuffs from abilities (reduces enemy defense)
   defenseDebuffTotal: number;
+
+  // Enemy debuff source tracking (for tooltip breakdowns)
+  enemyDebuffContributions: Phase3AbilityContribution[];
 
   // Race bonus (team attribute advantage over enemy)
   raceBonus: number;

@@ -45,6 +45,8 @@ export function TeamMemberPanel({
             ? `Reserve ${memberIndex - 4}`
             : memberIndex === 0
             ? 'Team Leader'
+            : memberIndex === 4
+            ? 'Helper'
             : `Team Member ${memberIndex + 1}`}
         </h3>
         {member.card && (

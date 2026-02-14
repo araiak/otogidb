@@ -637,7 +637,14 @@ export default function EventCalendar({ data, cards }: Props) {
       <EventSection events={data.events} cards={cards} locale={locale} />
       <BannerSection banners={data.banners.filter(b => !isEnded(b.end))} cards={cards} locale={locale} />
       <ExchangeSection exchanges={data.exchanges.filter(e => !isEnded(e.end))} cards={cards} locale={locale} />
-      <AuctionPredictionSection predictions={data.auction_predictions || []} cards={cards} locale={locale} />
+      <AuctionPredictionSection predictions={(data.auction_predictions || []).filter(p => {
+        // Hide predictions whose estimated date has arrived (auction is live)
+        const [y, m, d] = p.estimated_date.split('-').map(Number);
+        const est = new Date(y, m - 1, d);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        return est > today;
+      })} cards={cards} locale={locale} />
 
       <div className="text-xs mt-4 mb-6" style={{ color: 'var(--color-text-secondary)' }}>
         All times in UTC. Data generated: {generatedDate} UTC.

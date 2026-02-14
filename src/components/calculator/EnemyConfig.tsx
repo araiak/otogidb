@@ -6,7 +6,7 @@
  * Note: Defense removed from UI as world boss defense is negligible (~5% at most)
  */
 
-import type { EnemyState, EnemyAttribute, RandomTargetMode } from '../../lib/team-calc-types';
+import type { EnemyState, EnemyAttribute, RandomTargetMode, Phase3AbilityContribution } from '../../lib/team-calc-types';
 import {
   getAdvantageAttribute,
   RANDOM_TARGET_MODE_LABELS,
@@ -25,6 +25,8 @@ interface EnemyConfigProps {
   effectiveShield?: number;
   skillDebuffTotal?: number;
   abilityDebuffTotal?: number;
+  defenseDebuffTotal?: number;
+  enemyDebuffContributions?: Phase3AbilityContribution[];
   raceBonus?: number;
   randomTargetMode?: RandomTargetMode;
   onRandomTargetModeChange?: (mode: RandomTargetMode) => void;
@@ -41,6 +43,8 @@ export function EnemyConfig({
   effectiveShield,
   skillDebuffTotal = 0,
   abilityDebuffTotal = 0,
+  defenseDebuffTotal = 0,
+  enemyDebuffContributions = [],
   raceBonus = 0,
   randomTargetMode = 'average',
   onRandomTargetModeChange,
@@ -51,6 +55,7 @@ export function EnemyConfig({
     : displayPercent;
   const skillDebuffPercent = Math.round(skillDebuffTotal * 100);
   const abilityDebuffPercent = Math.round(abilityDebuffTotal * 100);
+  const defenseDebuffPercent = Math.round(defenseDebuffTotal * 100);
   const raceBonusPercent = Math.round(raceBonus * 100);
   const advantageAttr = getAdvantageAttribute(enemy.attribute);
 
@@ -181,7 +186,7 @@ export function EnemyConfig({
           </div>
 
           {/* Debuff breakdown */}
-          {(skillDebuffTotal > 0 || abilityDebuffTotal > 0) && (
+          {(skillDebuffTotal > 0 || abilityDebuffTotal > 0 || defenseDebuffTotal > 0) && (
             <div className="p-2 bg-surface rounded border border-green-500/30">
               <div className="text-xs text-secondary mb-1">Enemy Debuffs Applied:</div>
               {skillDebuffTotal > 0 && (
@@ -193,10 +198,36 @@ export function EnemyConfig({
                 </div>
               )}
               {abilityDebuffTotal > 0 && (
-                <div className="flex justify-between text-sm">
-                  <span className="text-blue-300">From Abilities:</span>
+                <div className="flex justify-between text-sm"
+                  title={enemyDebuffContributions
+                    .filter(c => c.effects.some(e => e.stat === 'shield'))
+                    .map(c => {
+                      const effect = c.effects.find(e => e.stat === 'shield');
+                      return `${c.abilityName} (Slot ${c.sourceMemberIndex + 1}): -${((effect?.value ?? 0) * 100).toFixed(0)}%`;
+                    })
+                    .join('\n')
+                  }
+                >
+                  <span className="text-blue-300 cursor-help underline decoration-dotted">From Abilities:</span>
                   <span className="font-mono text-green-400">
-                    +{abilityDebuffPercent}% DMG taken
+                    -{abilityDebuffPercent}% Shield
+                  </span>
+                </div>
+              )}
+              {defenseDebuffTotal > 0 && (
+                <div className="flex justify-between text-sm"
+                  title={enemyDebuffContributions
+                    .filter(c => c.effects.some(e => e.stat === 'defense'))
+                    .map(c => {
+                      const effect = c.effects.find(e => e.stat === 'defense');
+                      return `${c.abilityName} (Slot ${c.sourceMemberIndex + 1}): -${((effect?.value ?? 0) * 100).toFixed(0)}%`;
+                    })
+                    .join('\n')
+                  }
+                >
+                  <span className="text-blue-300 cursor-help underline decoration-dotted">From Abilities:</span>
+                  <span className="font-mono text-green-400">
+                    -{defenseDebuffPercent}% Defense
                   </span>
                 </div>
               )}

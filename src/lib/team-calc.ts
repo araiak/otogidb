@@ -27,6 +27,7 @@ import {
   combineBondSlots,
   MAIN_TEAM_SIZE,
   TOTAL_SLOTS,
+  HELPER_SLOT_INDEX,
   HEALER_TYPE,
   ASSIST_TYPE,
   RACE_BONUS_CONSTANTS,
@@ -681,6 +682,7 @@ export function calculatePhase3ApplyAbilities(
     enemyShieldDebuff: 0,
     enemyDefenseDebuff: 0,
     abilityContributions: [],
+    enemyDebuffContributions: [],
   }));
 
   // Track non-stackable abilities to avoid applying twice
@@ -723,7 +725,8 @@ export function calculatePhase3ApplyAbilities(
     for (const ability of abilities) {
       // Skip if non-stackable and already applied
       // Non-stackable abilities (o: false) only take effect ONCE per team, regardless of source
-      if (!ability.stackable) {
+      // Exception: helper slot (index 4) bypasses once-per-team restriction (separate overlay in game)
+      if (!ability.stackable && sourceIndex !== HELPER_SLOT_INDEX) {
         const stackKey = ability.id; // Just ability ID for true once-per-team
         if (appliedNonStackable.has(stackKey)) continue;
         appliedNonStackable.add(stackKey);
@@ -786,23 +789,39 @@ export function calculatePhase3ApplyAbilities(
               break;
             case 'shield':
               if (effect.isDebuff) {
-                // Enemy shield debuffs should only be applied ONCE per ability, not per target
-                // Use ability.id as the key to ensure each ability's debuff is only counted once
-                const debuffKey = `${ability.id}-shield`;
+                // Enemy shield debuffs should only be applied ONCE per source card, not per target
+                // Use sourceIndex + ability.id to allow different cards with the same ability to stack
+                const debuffKey = `${sourceIndex}-${ability.id}-shield`;
                 if (!appliedEnemyDebuffs.has(debuffKey)) {
                   appliedEnemyDebuffs.add(debuffKey);
                   // Apply to first target only (index 0) since this is a team-wide enemy debuff
                   results[0].enemyShieldDebuff += scaledValue;
+                  results[0].enemyDebuffContributions.push({
+                    abilityId: ability.id,
+                    abilityName: ability.name,
+                    sourceCardId: ability.sourceCardId,
+                    sourceMemberIndex: sourceIndex,
+                    isFromAssist: ability.isFromAssist,
+                    effects: [{ stat: 'shield', value: scaledValue }],
+                  });
                 }
               }
               break;
             case 'defense':
               if (effect.isDebuff) {
-                // Enemy defense debuffs - applied ONCE per ability like shield
-                const debuffKey = `${ability.id}-defense`;
+                // Enemy defense debuffs - applied ONCE per source card like shield
+                const debuffKey = `${sourceIndex}-${ability.id}-defense`;
                 if (!appliedEnemyDebuffs.has(debuffKey)) {
                   appliedEnemyDebuffs.add(debuffKey);
                   results[0].enemyDefenseDebuff += scaledValue;
+                  results[0].enemyDebuffContributions.push({
+                    abilityId: ability.id,
+                    abilityName: ability.name,
+                    sourceCardId: ability.sourceCardId,
+                    sourceMemberIndex: sourceIndex,
+                    isFromAssist: ability.isFromAssist,
+                    effects: [{ stat: 'defense', value: scaledValue }],
+                  });
                 }
               }
               break;
@@ -1399,6 +1418,7 @@ export function calculateTeamDamage(
     skillDebuffTotal,
     abilityDebuffTotal: totalEnemyShieldDebuff,
     defenseDebuffTotal: totalEnemyDefenseDebuff,
+    enemyDebuffContributions: phase3Results.flatMap(r => r.enemyDebuffContributions),
     raceBonus,
   };
 }

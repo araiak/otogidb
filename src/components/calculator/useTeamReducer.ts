@@ -654,6 +654,8 @@ export interface UseTeamStateResult {
     effectiveEnemyDefense: number;
     skillDebuffTotal: number;
     abilityDebuffTotal: number;
+    defenseDebuffTotal: number;
+    enemyDebuffContributions: import('../../lib/team-calc-types').Phase3AbilityContribution[];
     raceBonus: number;
   } | null;
 }
@@ -671,6 +673,8 @@ export function useTeamState(): UseTeamStateResult {
     effectiveEnemyDefense: number;
     skillDebuffTotal: number;
     abilityDebuffTotal: number;
+    defenseDebuffTotal: number;
+    enemyDebuffContributions: import('../../lib/team-calc-types').Phase3AbilityContribution[];
     raceBonus: number;
   } | null>(null);
 
@@ -788,6 +792,8 @@ export function useTeamState(): UseTeamStateResult {
       effectiveEnemyDefense: result.effectiveEnemyDefense,
       skillDebuffTotal: result.skillDebuffTotal,
       abilityDebuffTotal: result.abilityDebuffTotal,
+      defenseDebuffTotal: result.defenseDebuffTotal,
+      enemyDebuffContributions: result.enemyDebuffContributions,
       raceBonus: result.raceBonus,
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
