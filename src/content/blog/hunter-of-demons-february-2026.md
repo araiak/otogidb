@@ -46,7 +46,7 @@ The ranking card is :card[723], a top tier assist card. At two copies you get 60
 
 The rerun cards were not the Sports Meet cards I expected. Instead we got :card[514] and :card[513].
 
-:card[514] is a top tier card and a staple in world boss rankings. There's a bug where her critical damage buff has no duration, so it lasts until the end of battle. World boss teams use her to cap damage on the highest attacker and time extend to take advantage of the ramped up card. The critical rate duration was also reduced to 4s at some point, and the critical damage is actually 60% not the 80% listed in game data - but even the bugged values make her incredibly strong in world boss. Outside of world boss she's fine as a 3-stat buffer in any format, but in longer battles other elements can compete through progressive buffs, so she isn't a standout in story or towers like she is in world boss. She's going to be extremely expensive. **Must buy for world boss meta chasers.**
+:card[514] is a top tier card and a staple in world boss rankings. There's a bug where her critical damage buff has no duration, so it lasts until the end of battle. World boss teams use her to cap damage on the highest attacker and time extend to take advantage of the ramped up card. The critical rate duration was also reduced to 4s at some point, and the critical damage is actually 60% not the 80% listed in game data - but even the bugged values make her incredibly strong in world boss. Outside of world boss she's fine as a 3-stat buffer in any format, but in longer battles other elements can compete through progressive buffs, so she isn't a standout in story or towers like she is in world boss. If you want to compete for top world boss rankings, she's still mandatory. But for most players, the monthly 20 invoker rewards are very accessible without her - :card[1401] has added power creep and teams are getting closer to capping without :card[514]. It may still be years before she's fully power crept out of top rankings, but don't stress if she's priced out of your range. There's also some risk her skill gets fixed or nerfed, but since it's already been adjusted once (crit rate duration reduced to 4s, crit damage lowered from 80% to 60%) it seems unlikely to be significantly changed again. She's going to be extremely expensive. **Mandatory for top WB rankings, but most players can hit max invoker rewards without her.**
 
 :card[513] is nothing too special. He requires :card[510] for full value, and she has been powercrept for Divina, so this doesn't generate a strong combo. **Collectors only.**
 
@@ -68,7 +68,7 @@ The rerun cards were not the Sports Meet cards I expected. Instead we got :card[
 - :card[725] - **World Boss option** - ranged support with slow and skill damage boost
 - :card[724] - **Strong Divina melee/lead** - one of the best Divina melee, compare with :card[733] next month
 - :card[477] (Exchange) - **Pass** unless very cheap
-- :card[514] (Rerun) - **Must buy for world boss** - bugged crit damage lasts all battle, extremely expensive
+- :card[514] (Rerun) - **Mandatory for top WB rankings, not for rewards** - bugged crit damage lasts all battle, but 20 invokers/month is doable without her
 - :card[513] (Rerun) - **Collectors only** - needs :card[510] who is powercrept
 
 ---
