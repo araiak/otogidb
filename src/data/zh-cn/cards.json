@@ -17317,7 +17317,7 @@
           "featured_banners": [
             {
               "end": "2026-02-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-02-12 15:00:00"
             }
@@ -29325,9 +29325,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -29371,11 +29371,28 @@
       ],
       "description": "<color=#f4e48e>“强大的秘诀……就是弯曲。”</color><br/><color=#ef9843>与三国志中登场的武将张飞一起征战沙场的矛化身的妖怪。</color>他异常固执地拘泥于“弯曲”，甚至将张飞的强悍也归功于弯曲。而且他还夸下海口，说只要模仿自己的战斗方法，任谁都能成为猛将。但是，只要看到他那扭来扭去的战斗方式后，谁都不会再相信他所说的话。即便如此，他依然坚信弯曲正是强大的秘诀，今天也在努力练习弯弯曲曲的战斗步法。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.466343+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.466343+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.517860+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "196",
       "image_urls": {
@@ -42932,9 +42949,9 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 20000,
           "price_min": 200,
@@ -42978,11 +42995,28 @@
       ],
       "description": "<color=#f4e48e>“千万不能大意唷。”</color><br/>诱惑、玩弄过无数男人的妖怪。<color=#ef9843>暗器专家。</color>她伪装成天真无邪的模样，却在暗中做出相当残忍的事。操控迷恋自己的男人、使之毁灭，这种事对她而言是家常便饭。她不停做坏事似乎是有什么特别的原因，内心的阴暗面深不可测。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.432280+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.432280+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.307750+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "23",
       "image_urls": {
@@ -45320,9 +45354,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -45366,11 +45400,28 @@
       ],
       "description": "<color=#f4e48e>“能够决定自己价值的，只有你自己。”</color><br/><color=#ef9843>珍贵的宝石妖怪，曾被两位王断定为一文不值的石头。</color>被单方面的价值观贬低自己的价值，这件事在她心里留下了不小的疙瘩。于是，她暗自发誓，自己绝对不会做同样的事。每当看到有人骄横地欺压他人时，她都会勇敢地站出来与之对抗。因此，她结识了许多不同领域的人，人脉非常广。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.475374+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.475374+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.574448+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "239",
       "image_urls": {
@@ -47154,9 +47205,9 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -47200,11 +47251,28 @@
       ],
       "description": "<color=#f4e48e>“开心～上学超开心的～”</color><br/><color=#ef9843>世界历史上首屈一指的恶女妖怪。</color>以美貌与智谋为武器，以一己之力就使东亚大国没落。据说她的真实身分似乎是很强大的妖怪，但详细情况不明。她利用过剩的妖力伪装成人类的样子，混入了人类社会。谣传她在现代依然持续改变外表，以<color=#ef9843>女高中生</color>的身分在人群中生活。但是，当她变成人类的模样时，似乎连原本妖力的几分之一都无法发挥。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.432280+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.432280+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.310134+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "25",
       "image_urls": {
@@ -48045,9 +48113,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -48091,11 +48159,28 @@
       ],
       "description": "<color=#f4e48e>“你的价值，是什么呢？”</color><br/><color=#ef9843>传说中的幻兽的妖怪。</color>以“平等”为座右铭，平等地与所有存在建立关系。不知不觉中，她开始被称为“灵兽之王”，对此最吃惊的反而是她本人。累积的力量越多，盯上她力量的人也源源不绝，但那些人特别容易被麒麟的精神性所感化，进而加入她的麾下。然而，她日益膨胀的手下们，在组织化的过程中逐渐进化，完全脱离了原本的种族特性。对于这一点，麒麟开始感到恐惧。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.477374+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.477374+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.594157+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "254",
       "image_urls": {
@@ -48956,9 +49041,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -49021,12 +49106,28 @@
             ],
             "date": "2025-12-13",
             "version": "3d06ec7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.433279+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-13T00:00:00+00:00",
-        "last_modified_version": "3d06ec7"
+        "last_modified": "2026-02-16T13:57:54.311523+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "26",
       "image_urls": {
@@ -59820,9 +59921,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -59866,11 +59967,28 @@
       ],
       "description": "<color=#f4e48e>“好了，接下来的任务要往哪里？”</color><br/><color=#ef9843>传说中的幻兽所化身的妖怪。</color>当足以治理天下之人现身时就会现身。那是因为他在一直寻找着能够与自身分庭抗礼的人物。由于他为了要成为比任何人都强，又被所有人尊崇的存在，因此日以继夜不停锻炼。这勤勉的态度也受到了其他幻兽的赞赏。在他面前，就连魅角都要敬畏三分。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.487435+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.487435+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.669430+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "311",
       "image_urls": {
@@ -129516,9 +129634,9 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 20000,
           "price_min": 200,
@@ -129562,11 +129680,28 @@
       ],
       "description": "<color=#f4e48e>“你也想要这个吗？”</color><br/><color=#ef9843>三国时代的吴国公主。</color>像哥哥们一样才华横溢，虽然身为女子但也拥有高强的武艺。出于政治原因，跟比她年长近三十岁的<color=#ef9843>刘备</color>结婚，但他们夫妻之间感情很好。对她来说，刘备就像是亲切的大叔般的存在，会给她最爱的桃子馒头。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.441293+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.441293+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.354861+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "69",
       "image_urls": {
@@ -144238,9 +144373,9 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-02-02 15:00:00",
+          "end_date": "2026-02-20 15:00:00",
           "is_time_limited": true,
           "price_max": 20000,
           "price_min": 200,
@@ -144285,11 +144420,28 @@
       ],
       "description": "<color=#f4e48e>“离我远一点。要是敢靠近我，我就把你踢飞。”</color><br/><color=#ef9843>《三国志》里最勇猛的男子汉吕布驰骋沙场时所骑的战马。</color>他拥有一头火红的长发，如同在战场上燃烧的火焰。他认为唯有吕布才有资格驾驭自己，因此即使现在他已成了妖怪，也很少对他人卸下心防。",
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-02-20 15:00:00",
+                "old": "2025-02-02 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-02-16",
+            "version": "ae584cc"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.443291+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2025-12-12T23:26:10.443291+00:00",
-        "last_modified_version": "f044a9d"
+        "last_modified": "2026-02-16T13:57:54.373542+00:00",
+        "last_modified_version": "ae584cc"
       },
       "id": "86",
       "image_urls": {
@@ -146549,5 +146701,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 900,
-  "version": "253036a"
+  "version": "ae584cc"
 }
