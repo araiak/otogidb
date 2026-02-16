@@ -1,12 +1,12 @@
 ---
 title: "The Hunter of Demons: February 2026 Auction"
-description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, plus Valentine's Day special auction"
+description: "Analysis of the February auction cards from Incoming! The Hunter of Demons, plus Valentine's Day and Chinese New Year special auctions"
 date: "2026-02-15"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
 
-A Valentine's Day special auction dropped today with some older Valentine's themed cards. These are mostly powercrept, so this is more for collectors than meta chasers. The regular Hunter of Demons auction is now live with some heavy hitters - see below.
+A Valentine's Day special auction dropped today with some older Valentine's themed cards. These are mostly powercrept, so this is more for collectors than meta chasers. A Chinese New Year auction also appeared with a couple of older cards. The regular Hunter of Demons auction is now live with some heavy hitters - see below.
 
 ---
 
@@ -25,6 +25,14 @@ These cards are available in a limited-time Valentine's auction through February
 :card[435] is alright - 30% damage as leader is fine, but :card[724] is a better card in almost all ways and is coming in a few days in the regular auction, and requires fewer copies to unlock his damage ability. **Pass - :card[724] is better and cheaper.**
 
 :card[426] is powercrept. 9% DR alone just isn't enough to justify a spot on a team, let alone for real cash. **Pass.**
+
+---
+
+## Chinese New Year Auction
+
+:card[254] is an older melee card with a crit boosting skill - a rarity for melee cards. She's a nice option for team building if you don't run :card[1494], especially in Divina. She also brings minor damage reduction and a small progressive critical damage boost that synergizes well with her skill. I'm not sure she's worth jewels, but she's not a bad card if you're looking for buffs from a melee slot. That said, :card[724] is probably a better deal at the same price. **Not bad for melee buffs, but :card[724] is better value.**
+
+:card[311] is pretty powercrept at this point. While he shares :card[254]'s progressive critical damage, his skill doesn't synergize well with his skill damage boost. **Pass.**
 
 ---
 
@@ -61,6 +69,10 @@ The rerun cards were not the Sports Meet cards I expected. Instead we got :card[
 - :card[435] - **Pass** - :card[724] is better and cheaper in a few days
 - :card[434] - **Pass** - grab :card[725] instead or wait for :card[740]
 - :card[426] - **Pass** - 9% DR is too low to matter
+
+**Chinese New Year Auction**:
+- :card[254] - **Not bad for melee buffs** - crit boosting melee with progressive crit damage, but :card[724] is better value
+- :card[311] - **Pass** - powercrept, skill doesn't synergize with his own buffs
 
 **The Hunter of Demons Auction**:
 - :card[723] - **Must buy** up to 2 copies for everyone - top tier 60% crit damage assist
