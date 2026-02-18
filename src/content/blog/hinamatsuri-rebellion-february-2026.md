@@ -24,6 +24,8 @@ After all the auction madness, we've got the new event card drops. We will updat
 
 :card[1531] is a small upgrade to :card[715], increasing the effect by 2%. That's not enough to make the card especially relevant, but it's probably usable in some team comps if it's easily accessible. **Niche - pick up if easy to get.**
 
+:card[1527] is a 4★ but punches well above its rarity - 44% Crit DMG to the 2 allies with the highest ATK is a lot for a 4★, comparable to :card[600]. A strong reserve option for newer players who don't have better crit damage supports yet. **Strong reserve for newer players - grab if accessible.**
+
 :card[1539] is an extremely tanky Anima melee. 40% damage reduction is more than most content requires, but if you run into any situation where you need a rock-solid tank, this is one of the best options available. When her HP drops to 10% or below, she gains a permanent 50% damage boost and heals 10% HP over 5 seconds - so the lower she gets, the harder she hits. **Strong niche pick for any content where survivability is the bottleneck.**
 
 :card[1540] is a 10% progressive crit rate alternative to :card[1494]. He's probably better in Endless or reserve, while :card[1494] still edges out in XP modes thanks to the XP boost. If you don't have :card[1494] at level 75, this is one to target. **Good Divina reserve option, especially for Endless.**
@@ -42,6 +44,7 @@ After all the auction madness, we've got the new event card drops. We will updat
 - :card[1539] - **Strong Anima tank** - 40% DR if you need survivability
 - :card[1540] - **Good Divina reserve** - better than :card[1494] in Endless
 - :card[1590] - **Solid Divina reserve** - defensive support for WB and story/tower
+- :card[1527] - **Strong reserve for newer players** - 44% Crit DMG to top 2 ATK allies, comparable to :card[600]
 - :card[1531] - **Niche** - small upgrade to :card[715], grab if accessible
 
 ---
