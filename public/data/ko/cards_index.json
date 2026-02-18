@@ -6546,6 +6546,343 @@
         "type_name": "Melee"
       }
     },
+    "1523": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 근접형 적이 받는 데미지가 13% 증가한다",
+          "name": "정밀 사격",
+          "tags": [
+            "Wave Start",
+            "Melee",
+            "AoE",
+            "DMG Amp"
+          ],
+          "unlock_level": 73
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101523",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1523",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398340/otogi/android/101523.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101523_hd.png"
+      },
+      "name": "좌대신",
+      "playable": true,
+      "skill": {
+        "description": "적 2명(근접형 우선)에게 2,834의 데미지를 입힌다",
+        "name": "저격 화살",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 3,
+        "crit": 2250,
+        "max_atk": 7000,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1525": {
+      "abilities": [
+        {
+          "description": "공격력이 가장 높은 아군 2명의 HP가 자동으로 회복된다 (5초당 최대 HP의 3%)(조력자이외 아군파티 1회유효)",
+          "name": "전직 특수부대",
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101525",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1525",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398352/otogi/android/101525.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398357/otogi/cards_hd/101525_hd.png"
+      },
+      "name": "산닌 칸조",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "대학살",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1526": {
+      "abilities": [
+        {
+          "description": "{#MonsterName#1529}가 있으면 치명타율이 40% 증가하고 치명타 데미지가 50% 증가한다",
+          "name": "선택받은 자",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최종 WAVE 시 자신의 전투 데미지가 60% 증가한다",
+          "name": "익애",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101526",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1526",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398345/otogi/android/101526.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398365/otogi/cards_hd/101526_hd.png"
+      },
+      "name": "오다이리",
+      "playable": true,
+      "skill": {
+        "description": "현재 대상에게 6,061의 데미지를 입히고 일정 시간 동안 대상이 받는 데미지를 71.62% 증가시킨다.",
+        "name": "호의",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14000,
+        "max_hp": 9000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1527": {
+      "abilities": [
+        {
+          "description": "공격력이 가장 높은 아군 2명의 치명타 데미지가 44% 증가한다",
+          "name": "황금 방벽",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101527",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1527",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398349/otogi/android/101527.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398366/otogi/cards_hd/101527_hd.png"
+      },
+      "name": "금 병풍",
+      "playable": true,
+      "skill": {
+        "description": "아군 3명(근접형 우선)의 HP를 1,219 회복시키고 일정 시간 동안 속도를 51.13% 증가시킨다",
+        "name": "기교의 혼",
+        "tags": [
+          "Heal",
+          "Multi",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 7200,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1528": {
+      "abilities": [
+        {
+          "description": "모든 신령 속성 파티원의 공격 속도가 25% 증가한다",
+          "name": "절세가선",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최종 WAVE 시 모든 신령 속성 파티원의 전투 데미지가 35% 증가한다",
+          "name": "무상의 미",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101528",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1528",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398338/otogi/android/101528.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101528_hd.png"
+      },
+      "name": "오노노 코마치",
+      "playable": true,
+      "skill": {
+        "description": "모든 적에게 1,935의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 17.46% 감소시킨다",
+        "name": "만개한 방울",
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12400,
+        "max_hp": 9900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1529": {
+      "abilities": [
+        {
+          "description": "파티에 {#MonsterName#1526}가 있으면 모든 영물 속성 파티원의 치명타율이 20% 증가한다",
+          "name": "액막이 인형",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 파티원의 치명타 데미지가 15% 증가한다",
+          "name": "히나의 사랑",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101529",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1529",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398351/otogi/android/101529.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398364/otogi/cards_hd/101529_hd.png"
+      },
+      "name": "오히나",
+      "playable": true,
+      "skill": {
+        "description": "모든 아군의 HP를 1,716 회복시키고 일정 시간 동안 속도를 92.98% 증가시킨다",
+        "name": "인형 페스티벌",
+        "tags": [
+          "Heal",
+          "AoE",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13700,
+        "max_hp": 9200,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "153": {
       "abilities": [
         {
@@ -6592,6 +6929,423 @@
         "max_atk": 3600,
         "max_hp": 4150,
         "rarity": 3,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1530": {
+      "abilities": [
+        {
+          "description": "최종 WAVE 시 받는 데미지가 43% 감소한다",
+          "name": "지지 않아",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101530",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1530",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101530.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101530_hd.png"
+      },
+      "name": "캐서린",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "변장",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1531": {
+      "abilities": [
+        {
+          "description": "모든 원거리형 아군의 전투 데미지가 30% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "매드 사이언티스트",
+          "tags": [
+            "Team",
+            "Ranged",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101531",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1531",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398342/otogi/android/101531.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398361/otogi/cards_hd/101531_hd.png"
+      },
+      "name": "인형 제조자 피",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "소중한 인형",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1532": {
+      "abilities": [
+        {
+          "description": "최종 WAVE 시 모든 신령 속성 파티원의 스킬 데미지가 24% 증가한다",
+          "name": "다이쇼 로망",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101532",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1532",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101532.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101532_hd.png"
+      },
+      "name": "종이등 하나",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "그늘진 빛",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1535": {
+      "abilities": [
+        {
+          "description": "전투 데미지가 5% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "열정의 무대",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 50
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101535",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1535",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398341/otogi/android/101535.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398358/otogi/cards_hd/101535_hd.png"
+      },
+      "name": "수베리코",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "공연 특집",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1536": {
+      "abilities": [
+        {
+          "description": "전투 데미지가 13% 증가하고 스킬 데미지가 13% 증가한다",
+          "name": "차 대접",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101536",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1536",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398350/otogi/android/101536.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398356/otogi/cards_hd/101536_hd.png"
+      },
+      "name": "오마츠",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "형태 변형기",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1537": {
+      "abilities": [
+        {
+          "description": "HP가 자동으로 회복된다 (5초당 최대 HP의 6%)",
+          "name": "정보 수집",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101537",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1537",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398347/otogi/android/101537.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101537_hd.png"
+      },
+      "name": "우대신",
+      "playable": true,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "삼중 계약",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1538": {
+      "abilities": [
+        {
+          "description": "파티장일 때 모든 요괴 속성 파티원의 전투 데미지가 13% 증가한다",
+          "name": "학문의 신",
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 64
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101538",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1538",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101538.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101538_hd.png"
+      },
+      "name": "스가와 노 미치자네",
+      "playable": true,
+      "skill": {
+        "description": "공격력이 가장 높은 적 3명에게 2,244의 데미지를 입히고 40.23%로 마비상태로 만든다",
+        "name": "분노의 천둥",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 8400,
+        "max_hp": 6000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1539": {
+      "abilities": [
+        {
+          "description": "빈사 상태일 때 시간 경과에 따라 HP가 조금씩 회복되고, 전투 데미지가 50% 증가한다",
+          "name": "서양 혈통",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "받는 데미지가 40% 감소한다",
+          "name": "소박함",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101539",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1539",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398337/otogi/android/101539.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101539_hd.png"
+      },
+      "name": "비스크 인형",
+      "playable": true,
+      "skill": {
+        "description": "랜덤으로 적 2명에게 4,067의 데미지를 입히고 96.42%로 마비 상태로 만든다",
+        "name": "세라믹 인형",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 12300,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Melee"
       }
@@ -6653,6 +7407,68 @@
         "crit": 2250,
         "max_atk": 11400,
         "max_hp": 8000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1540": {
+      "abilities": [
+        {
+          "description": "모든 신령 속성 파티원의 최대 HP가 15% 증가한다",
+          "name": "가성",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 신령 속성 파티원의 치명타율이 10% 증가한다",
+          "name": "고독한 시인",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101540",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1540",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398339/otogi/android/101540.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101540_hd.png"
+      },
+      "name": "카키노모토 노 히토마로",
+      "playable": true,
+      "skill": {
+        "description": "일정 시간 동안 모든 아군이 입히는 데미지를 72.29% 증가시킨다",
+        "name": "시적 비밀",
+        "tags": [
+          "AoE",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9500,
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
@@ -6850,6 +7666,70 @@
         "type_name": "Ranged"
       }
     },
+    "1584": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 신령 속성 파티원의 스킬 데미지가 15% 증가한다",
+          "name": "벚꽃의 여신",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "전투 경험치가 15% 증가하는 동시에 보상의 드랍률이 15% 상승한다",
+          "name": "덧없는 생명",
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101584",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1584",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101584.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398359/otogi/cards_hd/101584_hd.png"
+      },
+      "name": "목화 사쿠야 공주",
+      "playable": true,
+      "skill": {
+        "description": "HP 비율이 가장 낮은 아군 2명의 HP를 3,194 회복시키고 모든 상태이상을 해제한다",
+        "name": "꽃안개",
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12500,
+        "max_hp": 12200,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "159": {
       "abilities": [
         {
@@ -6903,6 +7783,68 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Melee"
+      }
+    },
+    "1590": {
+      "abilities": [
+        {
+          "description": "최종 WAVE 시 공격력이 가장 높은 적의 전투 데미지를 30% 감소시키고, 치명타 데미지를 30% 감소시킨다",
+          "name": "일본의 상징",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "공격력이 가장 높은 신령 속성 아군 2명의 전투 데미지가 45% 증가한다",
+          "name": "영봉의 주인",
+          "tags": [
+            "Team",
+            "Divina",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101590",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1590",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398353/otogi/android/101590.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398355/otogi/cards_hd/101590_hd.png"
+      },
+      "name": "센겐타이샤",
+      "playable": true,
+      "skill": {
+        "description": "공격력이 가장 높은 적 1명에게 6,428의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 78.96% 감소시킨다",
+        "name": "후지산의 춤",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 10300,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "16": {
@@ -47377,8 +48319,8 @@
       }
     }
   },
-  "data_hash": "cb7fbb3b",
+  "data_hash": "e71e4dac",
   "locale": "ko",
-  "total_cards": 900,
-  "version": "ae584cc"
+  "total_cards": 917,
+  "version": "6fbeec8"
 }

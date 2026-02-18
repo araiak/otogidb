@@ -13310,6 +13310,280 @@
       "Debuff"
     ]
   },
+  "1525": {
+    "id": "1525",
+    "name": "Carnage",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1525",
+    "card_name": "Sannin Kanjo",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1530": {
+    "id": "1530",
+    "name": "Dressing Up",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1530",
+    "card_name": "Catherine",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1536": {
+    "id": "1536",
+    "name": "Shape Shifter",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1536",
+    "card_name": "Omatsu",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1535": {
+    "id": "1535",
+    "name": "Stand-Up Special",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1535",
+    "card_name": "Suberinko",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1523": {
+    "id": "1523",
+    "name": "Sniper Arrow",
+    "description": "Deals {value} DMG to 2 enemies (melee priority).",
+    "card_id": "1523",
+    "card_name": "Sadaijin",
+    "ie": "ATK<780,26>",
+    "ts": "enemy;count<2>;prof<1,2,3>",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1537": {
+    "id": "1537",
+    "name": "Trio Contract",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1537",
+    "card_name": "Udaijin",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1538": {
+    "id": "1538",
+    "name": "Resentful Thunder",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK, with a {probability} of inflicting Paralysis.",
+    "card_id": "1538",
+    "card_name": "Sugawa no Michizane",
+    "ie": "ATK<585,21>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "NUMB<8>;HIT<11.00%,0.37%>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Paralysis",
+      "Debuff"
+    ]
+  },
+  "1539": {
+    "id": "1539",
+    "name": "Ceramic Doll",
+    "description": "Deals {value} DMG to 2 random enemies, with a {probability} of inflicting Paralysis.",
+    "card_id": "1539",
+    "card_name": "Bisque Doll",
+    "ie": "ATK<1130,33>",
+    "ts": "enemy;count<2>",
+    "de": "NUMB<8>;HIT<27.00%,0.78%>",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Paralysis",
+      "Debuff"
+    ]
+  },
+  "1528": {
+    "id": "1528",
+    "name": "Blooming Bubbles",
+    "description": "Deals {value} DMG to all enemies. Targets deal {delay1} less DMG for a limited time.",
+    "card_id": "1528",
+    "card_name": "Ono no Komachi",
+    "ie": "ATK<600,15>",
+    "ts": "enemy;count<5>",
+    "de": "ATK<-5.00%,-0.14%,8>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "DMG Down",
+      "Debuff"
+    ]
+  },
+  "1529": {
+    "id": "1529",
+    "name": "Doll Festival",
+    "description": "Restores {value} HP to all allies; increases targets' speed by {delay1} for a limited time.",
+    "card_id": "1529",
+    "card_name": "Ohina",
+    "ie": "HEAL<470,14>",
+    "ts": "self;count<5>",
+    "de": "SPD<20.00%,0.82%,8>",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "AoE",
+      "Speed Up"
+    ]
+  },
+  "1526": {
+    "id": "1526",
+    "name": "Well Wishes",
+    "description": "Deals {value} DMG to current target. Target receives {delay1} more DMG for a limited time.",
+    "card_id": "1526",
+    "card_name": "Odairi",
+    "ie": "ATK<1700,49>",
+    "ts": "current_target",
+    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1540": {
+    "id": "1540",
+    "name": "Poetic Secrets",
+    "description": "Increases DMG dealt by all allies by {delay1} for a limited time.",
+    "card_id": "1540",
+    "card_name": "Kakinomoto no Hitomaro",
+    "ie": "none",
+    "ts": "self;count<5>",
+    "de": "SHIELD<-18.00%,-0.61%,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DMG Up"
+    ]
+  },
+  "1584": {
+    "id": "1584",
+    "name": "Floral Fog",
+    "description": "Restores {value} HP to 2 allies with the lowest percentage of HP and cures them of all negative status effects.",
+    "card_id": "1584",
+    "card_name": "Princess Konohanasakuya",
+    "ie": "HEAL<880,26>;ERASE_DEBUFF<0>",
+    "ts": "self;count<2>;min_hpp",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "Heal",
+      "Cleanse",
+      "Multi"
+    ]
+  },
+  "1532": {
+    "id": "1532",
+    "name": "Shaded Light",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1532",
+    "card_name": "Paper Lantern Hana",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1590": {
+    "id": "1590",
+    "name": "The Dance of Mount Fuji",
+    "description": "Deals {value} DMG to the enemy with the highest ATK. Target deals {delay1} less DMG for a limited time.",
+    "card_id": "1590",
+    "card_name": "Sengen Taisha",
+    "ie": "ATK<1800,52>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "ATK<-22.00%,-0.64%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Down",
+      "Debuff"
+    ]
+  },
+  "1527": {
+    "id": "1527",
+    "name": "Artful Soul",
+    "description": "Restores {value} HP to 3 allies (melee priority); increases targets' speed by {delay1} for a limited time.",
+    "card_id": "1527",
+    "card_name": "Kin Byobu",
+    "ie": "HEAL<350,11>",
+    "ts": "self;count<3>;prof<1,2,3>",
+    "de": "SPD<14.00%,0.47%,8>",
+    "tn": 3,
+    "tags": [
+      "Heal",
+      "Multi",
+      "Speed Up"
+    ]
+  },
+  "1531": {
+    "id": "1531",
+    "name": "Prized Doll",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1531",
+    "card_name": "Dollmaker Phee",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

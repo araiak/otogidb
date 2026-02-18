@@ -6546,6 +6546,343 @@
         "type_name": "Melee"
       }
     },
+    "1523": {
+      "abilities": [
+        {
+          "description": "All melee foes take 13% more DMG at the start of each wave.",
+          "name": "Precision Shot",
+          "tags": [
+            "Wave Start",
+            "Melee",
+            "AoE",
+            "DMG Amp"
+          ],
+          "unlock_level": 73
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101523",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1523",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398340/otogi/android/101523.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101523_hd.png"
+      },
+      "name": "Sadaijin",
+      "playable": true,
+      "skill": {
+        "description": "Causa 2,834 de daño a 2 rivales (prioridad CaC).",
+        "name": "Sniper Arrow",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 3,
+        "crit": 2250,
+        "max_atk": 7000,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1525": {
+      "abilities": [
+        {
+          "description": "Restores 3% of HP every 5 seconds by the 2 allies with the highest ATK.(only take effect once to the team)",
+          "name": "Ex-Special Forces",
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101525",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1525",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398352/otogi/android/101525.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398357/otogi/cards_hd/101525_hd.png"
+      },
+      "name": "Sannin Kanjo",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Carnage",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1526": {
+      "abilities": [
+        {
+          "description": "Increases 40% of Crit Rate and increases 50% Crit DMG when {#MonsterName#1529} is on the team.",
+          "name": "The Chosen One",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 60% of DMG dealt at the start of the final wave.",
+          "name": "Doting",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101526",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1526",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398345/otogi/android/101526.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398365/otogi/cards_hd/101526_hd.png"
+      },
+      "name": "Odairi",
+      "playable": true,
+      "skill": {
+        "description": "Deals 6,061 DMG to current target. Target receives 71.62% more DMG for a limited time.",
+        "name": "Well Wishes",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14000,
+        "max_hp": 9000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1527": {
+      "abilities": [
+        {
+          "description": "Increases 44% of Crit DMG by the 2 allies with the highest ATK.",
+          "name": "Golden Barrier",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101527",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1527",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398349/otogi/android/101527.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398366/otogi/cards_hd/101527_hd.png"
+      },
+      "name": "Kin Byobu",
+      "playable": true,
+      "skill": {
+        "description": "Restores 1,219 HP to 3 allies (melee priority); increases targets' speed by 51.13% for a limited time.",
+        "name": "Artful Soul",
+        "tags": [
+          "Heal",
+          "Multi",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 7200,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1528": {
+      "abilities": [
+        {
+          "description": "Increases the ATK speed of all divina allies by 25%.",
+          "name": "Peerless Poet",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 35% of DMG dealt by Divina team members at the start of the final wave.",
+          "name": "Ephemeral Beauty",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101528",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1528",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398338/otogi/android/101528.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101528_hd.png"
+      },
+      "name": "Ono no Komachi",
+      "playable": true,
+      "skill": {
+        "description": "Deals 1,935 DMG to all enemies. Targets deal 17.46% less DMG for a limited time.",
+        "name": "Blooming Bubbles",
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12400,
+        "max_hp": 9900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1529": {
+      "abilities": [
+        {
+          "description": "Increases 20% of all Anima team members' Crit Rate when {#MonsterName#1526} is on the team.",
+          "name": "Warding Doll",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+          "name": "Hina's Love",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101529",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1529",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398351/otogi/android/101529.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398364/otogi/cards_hd/101529_hd.png"
+      },
+      "name": "Ohina",
+      "playable": true,
+      "skill": {
+        "description": "Restaura 1,716 de PS a todos los aliados y aumenta temporalmente su velocidad un 92.98%.",
+        "name": "Doll Festival",
+        "tags": [
+          "Heal",
+          "AoE",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13700,
+        "max_hp": 9200,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "153": {
       "abilities": [
         {
@@ -6592,6 +6929,423 @@
         "max_atk": 3600,
         "max_hp": 4150,
         "rarity": 3,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1530": {
+      "abilities": [
+        {
+          "description": "Reduces 43% of DMG taken at the start of the final wave.",
+          "name": "Sore Loser",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101530",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1530",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101530.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101530_hd.png"
+      },
+      "name": "Catherine",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Dressing Up",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1531": {
+      "abilities": [
+        {
+          "description": "Increases 30% of the DMG of all ranged allies. (only take effect once to the team)",
+          "name": "Mad Scientist",
+          "tags": [
+            "Team",
+            "Ranged",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101531",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1531",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398342/otogi/android/101531.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398361/otogi/cards_hd/101531_hd.png"
+      },
+      "name": "Dollmaker Phee",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Prized Doll",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1532": {
+      "abilities": [
+        {
+          "description": "Increases 24% of skill DMG dealt by Divina team members at the start of the final wave.",
+          "name": "Taisho Romance",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101532",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1532",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101532.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101532_hd.png"
+      },
+      "name": "Paper Lantern Hana",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Shaded Light",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1535": {
+      "abilities": [
+        {
+          "description": "Increases 5% of DMG.(only take effect once to the team)",
+          "name": "Hard Sell",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 50
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101535",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1535",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398341/otogi/android/101535.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398358/otogi/cards_hd/101535_hd.png"
+      },
+      "name": "Suberinko",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Stand-Up Special",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1536": {
+      "abilities": [
+        {
+          "description": "Increases 13% of DMG dealt; Increases 13% of skill DMG.",
+          "name": "Tea Service",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101536",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1536",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398350/otogi/android/101536.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398356/otogi/cards_hd/101536_hd.png"
+      },
+      "name": "Omatsu",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Shape Shifter",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1537": {
+      "abilities": [
+        {
+          "description": "Restores 6% HP every 5 seconds.",
+          "name": "Info Gathering",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101537",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1537",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398347/otogi/android/101537.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101537_hd.png"
+      },
+      "name": "Udaijin",
+      "playable": true,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Trio Contract",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1538": {
+      "abilities": [
+        {
+          "description": "Increases 13% of DMG dealt by Phantasma team members when this daemon is Team Leader.",
+          "name": "God of Learning",
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 64
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101538",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1538",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101538.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101538_hd.png"
+      },
+      "name": "Sugawa no Michizane",
+      "playable": true,
+      "skill": {
+        "description": "Deals 2,244 DMG to the 3 enemies with the highest ATK, with a 40.23% of inflicting Paralysis.",
+        "name": "Resentful Thunder",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 8400,
+        "max_hp": 6000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1539": {
+      "abilities": [
+        {
+          "description": "Slowly restores HP over time and Increases 50% of DMG dealt when near death.",
+          "name": "Western Lineage",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "Reduces 40% of DMG taken.",
+          "name": "Plain & Simple",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101539",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1539",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398337/otogi/android/101539.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101539_hd.png"
+      },
+      "name": "Bisque Doll",
+      "playable": true,
+      "skill": {
+        "description": "Deals 4,067 DMG to 2 random enemies, with a 96.42% of inflicting Paralysis.",
+        "name": "Ceramic Doll",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 12300,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Melee"
       }
@@ -6653,6 +7407,68 @@
         "crit": 2250,
         "max_atk": 11400,
         "max_hp": 8000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1540": {
+      "abilities": [
+        {
+          "description": "Increases 15% of max HP of Divina team members.",
+          "name": "Sage of Poetry",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 10% all Divina team members' Crit Rate at the start of each wave.",
+          "name": "Solitary Poet",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101540",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1540",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398339/otogi/android/101540.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101540_hd.png"
+      },
+      "name": "Kakinomoto no Hitomaro",
+      "playable": true,
+      "skill": {
+        "description": "Sube temporalmente el daño causado de todos los aliados un 72.29%.",
+        "name": "Poetic Secrets",
+        "tags": [
+          "AoE",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9500,
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
@@ -6850,6 +7666,70 @@
         "type_name": "Ranged"
       }
     },
+    "1584": {
+      "abilities": [
+        {
+          "description": "Increases 15% of skill DMG by Divina team members at the start of each wave.",
+          "name": "Goddess of Sakura",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 15% of the EXP gained from battle and increases 15% of battle reward drop rate.",
+          "name": "Ephemeral Life",
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101584",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1584",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101584.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398359/otogi/cards_hd/101584_hd.png"
+      },
+      "name": "Princess Konohanasakuya",
+      "playable": true,
+      "skill": {
+        "description": "Restaura 3,194 de PS a los 2 aliados con menos % de PS y cura todos sus efectos negativos.",
+        "name": "Floral Fog",
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12500,
+        "max_hp": 12200,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "159": {
       "abilities": [
         {
@@ -6903,6 +7783,68 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Melee"
+      }
+    },
+    "1590": {
+      "abilities": [
+        {
+          "description": "Reduces 30% of DMG dealt by opponent with highest ATK and reduces 30% of Crit DMG at the start of the final wave.",
+          "name": "Symbol of Japan",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 45% of DMG dealt by the 2 divina allies with the highest ATK.",
+          "name": "Master of the Sacred Peak",
+          "tags": [
+            "Team",
+            "Divina",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101590",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1590",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398353/otogi/android/101590.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398355/otogi/cards_hd/101590_hd.png"
+      },
+      "name": "Sengen Taisha",
+      "playable": true,
+      "skill": {
+        "description": "Causa 6,428 de daño al rival con más ATQ. El objetivo daña un 78.96% menos temporalmente.",
+        "name": "The Dance of Mount Fuji",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 10300,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "16": {
@@ -47377,8 +48319,8 @@
       }
     }
   },
-  "data_hash": "e6b06793",
+  "data_hash": "96b5a46e",
   "locale": "es",
-  "total_cards": 900,
-  "version": "ae584cc"
+  "total_cards": 917,
+  "version": "6fbeec8"
 }

@@ -15307,5 +15307,405 @@
       "AoE",
       "Crit Rate"
     ]
+  },
+  "152501": {
+    "id": "152501",
+    "name": "Ex-Special Forces",
+    "description": "Restores 3% of HP every 5 seconds by the 2 allies with the highest ATK.(only take effect once to the team)",
+    "card_id": "1525",
+    "card_name": "Sannin Kanjo",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "HEAL_DOT<3.00%,0%,5>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Multi",
+      "Heal"
+    ]
+  },
+  "153001": {
+    "id": "153001",
+    "name": "Sore Loser",
+    "description": "Reduces 43% of DMG taken at the start of the final wave.",
+    "card_id": "1530",
+    "card_name": "Catherine",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SHIELD<43.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "DMG Reduction"
+    ]
+  },
+  "153601": {
+    "id": "153601",
+    "name": "Tea Service",
+    "description": "Increases 13% of DMG dealt; Increases 13% of skill DMG.",
+    "card_id": "1536",
+    "card_name": "Omatsu",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<13.00%,0%>;SKILL_ATK<13.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost",
+      "Skill DMG"
+    ]
+  },
+  "153501": {
+    "id": "153501",
+    "name": "Hard Sell",
+    "description": "Increases 5% of DMG.(only take effect once to the team)",
+    "card_id": "1535",
+    "card_name": "Suberinko",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<5.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost"
+    ]
+  },
+  "152301": {
+    "id": "152301",
+    "name": "Precision Shot",
+    "description": "All melee foes take 13% more DMG at the start of each wave.",
+    "card_id": "1523",
+    "card_name": "Sadaijin",
+    "er": "entry_wave",
+    "ts": "enemy;prof<1>;count<5>",
+    "de": "SHIELD<-13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Melee",
+      "AoE",
+      "DMG Amp"
+    ]
+  },
+  "153701": {
+    "id": "153701",
+    "name": "Info Gathering",
+    "description": "Restores 6% HP every 5 seconds.",
+    "card_id": "1537",
+    "card_name": "Udaijin",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HEAL_DOT<6.00%,0%,5>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Heal"
+    ]
+  },
+  "153801": {
+    "id": "153801",
+    "name": "God of Learning",
+    "description": "Increases 13% of DMG dealt by Phantasma team members when this daemon is Team Leader.",
+    "card_id": "1538",
+    "card_name": "Sugawa no Michizane",
+    "er": "entry_leader",
+    "ts": "self;type<2>;count<5>",
+    "de": "ATK<13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "DMG Boost"
+    ]
+  },
+  "153901": {
+    "id": "153901",
+    "name": "Western Lineage",
+    "description": "Slowly restores HP over time and Increases 50% of DMG dealt when near death.",
+    "card_id": "1539",
+    "card_name": "Bisque Doll",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HPP_IN<0.00%,10.00%>;HEAL_DOT<10.00%,0%,5>;ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Conditional",
+      "Heal",
+      "DMG Boost"
+    ]
+  },
+  "153902": {
+    "id": "153902",
+    "name": "Plain & Simple",
+    "description": "Reduces 40% of DMG taken.",
+    "card_id": "1539",
+    "card_name": "Bisque Doll",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SHIELD<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Reduction"
+    ]
+  },
+  "152801": {
+    "id": "152801",
+    "name": "Peerless Poet",
+    "description": "Increases the ATK speed of all divina allies by 25%.",
+    "card_id": "1528",
+    "card_name": "Ono no Komachi",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "SPD<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "ATK Speed"
+    ]
+  },
+  "152802": {
+    "id": "152802",
+    "name": "Ephemeral Beauty",
+    "description": "Increases 35% of DMG dealt by Divina team members at the start of the final wave.",
+    "card_id": "1528",
+    "card_name": "Ono no Komachi",
+    "er": "last_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "ATK<35.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Divina",
+      "AoE",
+      "DMG Boost"
+    ]
+  },
+  "152901": {
+    "id": "152901",
+    "name": "Warding Doll",
+    "description": "Increases 20% of all Anima team members' Crit Rate when Odairi is on the team.",
+    "card_id": "1529",
+    "card_name": "Ohina",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ]
+  },
+  "152902": {
+    "id": "152902",
+    "name": "Hina's Love",
+    "description": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+    "card_id": "1529",
+    "card_name": "Ohina",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit DMG"
+    ]
+  },
+  "152601": {
+    "id": "152601",
+    "name": "The Chosen One",
+    "description": "Increases 40% of Crit Rate and increases 50% Crit DMG when Ohina is on the team.",
+    "card_id": "1526",
+    "card_name": "Odairi",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<40.00%,0%>;CHIT_ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit Rate",
+      "Crit DMG"
+    ]
+  },
+  "152602": {
+    "id": "152602",
+    "name": "Doting",
+    "description": "Increases 60% of DMG dealt at the start of the final wave.",
+    "card_id": "1526",
+    "card_name": "Odairi",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "ATK<60.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "DMG Boost"
+    ]
+  },
+  "154001": {
+    "id": "154001",
+    "name": "Sage of Poetry",
+    "description": "Increases 15% of max HP of Divina team members.",
+    "card_id": "1540",
+    "card_name": "Kakinomoto no Hitomaro",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "HP<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Max HP"
+    ]
+  },
+  "154002": {
+    "id": "154002",
+    "name": "Solitary Poet",
+    "description": "Increases 10% all Divina team members' Crit Rate at the start of each wave.",
+    "card_id": "1540",
+    "card_name": "Kakinomoto no Hitomaro",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit Rate"
+    ]
+  },
+  "158401": {
+    "id": "158401",
+    "name": "Goddess of Sakura",
+    "description": "Increases 15% of skill DMG by Divina team members at the start of each wave.",
+    "card_id": "1584",
+    "card_name": "Princess Konohanasakuya",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "Skill DMG"
+    ]
+  },
+  "158402": {
+    "id": "158402",
+    "name": "Ephemeral Life",
+    "description": "Increases 15% of the EXP gained from battle and increases 15% of battle reward drop rate.",
+    "card_id": "1584",
+    "card_name": "Princess Konohanasakuya",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "EXP<15.00%,0%>;ITEM<15.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "EXP Boost",
+      "Drop Rate"
+    ]
+  },
+  "153201": {
+    "id": "153201",
+    "name": "Taisho Romance",
+    "description": "Increases 24% of skill DMG dealt by Divina team members at the start of the final wave.",
+    "card_id": "1532",
+    "card_name": "Paper Lantern Hana",
+    "er": "last_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "SKILL_ATK<24.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Divina",
+      "AoE",
+      "Skill DMG"
+    ]
+  },
+  "159001": {
+    "id": "159001",
+    "name": "Symbol of Japan",
+    "description": "Reduces 30% of DMG dealt by opponent with highest ATK and reduces 30% of Crit DMG at the start of the final wave.",
+    "card_id": "1590",
+    "card_name": "Sengen Taisha",
+    "er": "last_wave",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "ATK<-30.00%,0%>;CHIT_ATK<-30.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Single",
+      "Enemy DMG Down"
+    ]
+  },
+  "159002": {
+    "id": "159002",
+    "name": "Master of the Sacred Peak",
+    "description": "Increases 45% of DMG dealt by the 2 divina allies with the highest ATK.",
+    "card_id": "1590",
+    "card_name": "Sengen Taisha",
+    "er": "entry",
+    "ts": "self;type<1>;count<2>;max_atk",
+    "de": "ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "Multi",
+      "DMG Boost"
+    ]
+  },
+  "152701": {
+    "id": "152701",
+    "name": "Golden Barrier",
+    "description": "Increases 44% of Crit DMG by the 2 allies with the highest ATK.",
+    "card_id": "1527",
+    "card_name": "Kin Byobu",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT_ATK<44.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "Crit DMG"
+    ]
+  },
+  "153101": {
+    "id": "153101",
+    "name": "Mad Scientist",
+    "description": "Increases 30% of the DMG of all ranged allies. (only take effect once to the team)",
+    "card_id": "1531",
+    "card_name": "Dollmaker Phee",
+    "er": "entry",
+    "ts": "self;prof<2>;count<5>",
+    "de": "ATK<30.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Ranged",
+      "AoE",
+      "DMG Boost"
+    ]
   }
 }
