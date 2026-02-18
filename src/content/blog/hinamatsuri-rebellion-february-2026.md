@@ -1,0 +1,47 @@
+---
+title: "Elegance! Hina-matsuri Rebellion: Card Analysis"
+description: "Analysis of the new event cards from Elegance! Hina-matsuri Rebellion, including the Odairi and Ohina combo, new Divina supports, and a tanky Anima melee"
+date: "2026-02-18"
+author: "Araiak"
+tags: ["analysis", "gacha", "events"]
+---
+
+After all the auction madness, we've got the new event card drops. We will update once we know the sources.
+
+---
+
+## Pre-Event Gacha
+
+:card[1584] is an XP and drop rate boosting healer now in the standard pool. I don't think she displaces :card[1321] in most content - her skill is worse, and Divina doesn't have that many damaging spells to boost. She's usable if you find yourself with 5 copies, but probably not worth orbing. **Skip.**
+
+---
+
+## Event Cards
+
+:card[1526] and :card[1529] are the pair to watch. Together they give :card[1526] +60% crit rate, 65% crit damage (progressive), and 60% final wave damage. I don't know yet if this will crack into the world boss meta - it's possible but we may have to wait and see. In any case the combo is very good across all content. :card[1526] probably already dethrones :card[1401] as the highest single-round damage card, though :card[1401] doesn't have the conditional requiring two card slots. Note that only :card[1529] grants the bonus to :card[1526] - :card[228] does not apply. These two will be the main targets for most players this event. **High priority pair - the best thing this event has to offer.**
+
+:card[1528] is a fairly strong support or reserve pick for Divina teams. Her skill isn't very impactful, but her passives are solid - 25% attack speed for all Divina allies and 35% final wave damage for Divina team members. **Good Divina support, weak skill.**
+
+:card[1531] is a small upgrade to :card[715], increasing the effect by 2%. That's not enough to make the card especially relevant, but it's probably usable in some team comps if it's easily accessible. **Niche - pick up if easy to get.**
+
+:card[1539] is an extremely tanky Anima melee. 40% damage reduction is more than most content requires, but if you run into any situation where you need a rock-solid tank, this is one of the best options available. When her HP drops to 10% or below, she gains a permanent 50% damage boost and heals 10% HP over 5 seconds - so the lower she gets, the harder she hits. **Strong niche pick for any content where survivability is the bottleneck.**
+
+:card[1540] is a 10% progressive crit rate alternative to :card[1494]. He's probably better in Endless or reserve, while :card[1494] still edges out in XP modes thanks to the XP boost. If you don't have :card[1494] at level 75, this is one to target. **Good Divina reserve option, especially for Endless.**
+
+:card[1590] is a decent defensive support that boosts damage for the top two Divina allies, while also providing major damage reduction on the final wave. She's comparable to :card[672] in reserve, but more defensive - :card[672] is the higher damage option for Divina reserve slots. **Solid Divina reserve for survivability-focused builds; :card[672] if you want more damage.**
+
+---
+
+## TL;DR
+
+- :card[1526] + :card[1529] - **High priority pair** - top single-round Anima damage with the combo active, potential WB meta
+- :card[1584] (Standard Gacha) - **Skip** - XP/drop healer, doesn't displace :card[1321]
+- :card[1528] - **Good Divina support** - solid passive, weak skill
+- :card[1539] - **Strong Anima tank** - 40% DR if you need survivability
+- :card[1540] - **Good Divina reserve** - better than :card[1494] in Endless
+- :card[1590] - **Solid Divina reserve** - defensive support for WB and story/tower
+- :card[1531] - **Niche** - small upgrade to :card[715], grab if accessible
+
+---
+
+*A note on recommendations: Play how you like! If you want a card, go for it. My recommendations highlight cards I see as standouts - ones unlikely to be replaced for some time - while being mindful of cost. The game is fairly generous, so you can pick up cards that aren't super strong and still have resources for the next event. Don't hesitate to buy a card you like!*
