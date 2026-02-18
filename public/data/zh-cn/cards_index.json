@@ -6546,6 +6546,343 @@
         "type_name": "Melee"
       }
     },
+    "1523": {
+      "abilities": [
+        {
+          "description": "每回合开始时，敌方全体近战职业所受伤害13%增加",
+          "name": "精准射击",
+          "tags": [
+            "Wave Start",
+            "Melee",
+            "AoE",
+            "DMG Amp"
+          ],
+          "unlock_level": 73
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101523",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1523",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398340/otogi/android/101523.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101523_hd.png"
+      },
+      "name": "左大臣",
+      "playable": true,
+      "skill": {
+        "description": "对2名敌方（近战优先）造成2,834点伤害",
+        "name": "狙击箭",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 3,
+        "crit": 2250,
+        "max_atk": 7000,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1525": {
+      "abilities": [
+        {
+          "description": "使己方攻击力最高的2名队员血量每5秒回复3%。(除助战外，己方全体仅生效1次)",
+          "name": "前特种部队",
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101525",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1525",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398352/otogi/android/101525.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398357/otogi/cards_hd/101525_hd.png"
+      },
+      "name": "三人官女",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "杀戮",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1526": {
+      "abilities": [
+        {
+          "description": "{#MonsterName#1529}在场时，暴击率40%增加，同时暴击伤害50%增加",
+          "name": "天选之人",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最终回合，自身战斗伤害60%增加",
+          "name": "溺爱",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101526",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1526",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398345/otogi/android/101526.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398365/otogi/cards_hd/101526_hd.png"
+      },
+      "name": "天皇",
+      "playable": true,
+      "skill": {
+        "description": "对当前目标造成6,061点伤害，并使目标一定时间内所受伤害提升71.62%",
+        "name": "祝愿",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14000,
+        "max_hp": 9000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1527": {
+      "abilities": [
+        {
+          "description": "使己方攻击力最高的2名队员暴击伤害44%增加",
+          "name": "黄金防壁",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101527",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1527",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398349/otogi/android/101527.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398366/otogi/cards_hd/101527_hd.png"
+      },
+      "name": "金屏风",
+      "playable": true,
+      "skill": {
+        "description": "恢复3名己方（近战优先）1,219点血量，并使目标一定时间内速度提升51.13%",
+        "name": "机灵之魂",
+        "tags": [
+          "Heal",
+          "Multi",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 7200,
+        "max_hp": 5700,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1528": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员攻击速度25%增加",
+          "name": "绝世歌仙",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最终回合，己方全体灵属性队员战斗伤害35%增加",
+          "name": "无常之美",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101528",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1528",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398338/otogi/android/101528.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101528_hd.png"
+      },
+      "name": "小野小町",
+      "playable": true,
+      "skill": {
+        "description": "对敌方全体造成1,935点伤害，并使目标一定时间内战斗伤害降低17.46%",
+        "name": "泡沫盛开",
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12400,
+        "max_hp": 9900,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1529": {
+      "abilities": [
+        {
+          "description": "{#MonsterName#1526}在场时，己方全体付属性队员暴击率20%增加",
+          "name": "驱厄人偶",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体队员暴击伤害15%增加",
+          "name": "雏之爱",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101529",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1529",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398351/otogi/android/101529.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398364/otogi/cards_hd/101529_hd.png"
+      },
+      "name": "皇后",
+      "playable": true,
+      "skill": {
+        "description": "恢复己方全体队员1,716点血量，并使目标一定时间内速度提升92.98%",
+        "name": "女儿节",
+        "tags": [
+          "Heal",
+          "AoE",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13700,
+        "max_hp": 9200,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "153": {
       "abilities": [
         {
@@ -6592,6 +6929,423 @@
         "max_atk": 3600,
         "max_hp": 4150,
         "rarity": 3,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1530": {
+      "abilities": [
+        {
+          "description": "最终回合，自身所受伤害43%减少。(除助战外，己方全体仅生效1次)",
+          "name": "不服输",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101530",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1530",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101530.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101530_hd.png"
+      },
+      "name": "凯瑟琳",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "扮装秀",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1531": {
+      "abilities": [
+        {
+          "description": "己方全体远程职业战斗伤害30%增加。(除助战外，己方全体仅生效1次)",
+          "name": "疯狂科学家",
+          "tags": [
+            "Team",
+            "Ranged",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101531",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1531",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398342/otogi/android/101531.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398361/otogi/cards_hd/101531_hd.png"
+      },
+      "name": "人偶师菲",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "珍奇人偶",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1532": {
+      "abilities": [
+        {
+          "description": "最终回合，己方全体灵属性队员技能伤害24%增加",
+          "name": "大正浪漫",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101532",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1532",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398348/otogi/android/101532.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101532_hd.png"
+      },
+      "name": "纸灯笼花",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "幽暗冥光",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1535": {
+      "abilities": [
+        {
+          "description": "战斗伤害5%增加。(除助战外，己方全体仅生效1次)",
+          "name": "卖力演出",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 50
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101535",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1535",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398341/otogi/android/101535.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398358/otogi/cards_hd/101535_hd.png"
+      },
+      "name": "万岁师滑凛子",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "一枝独秀",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1536": {
+      "abilities": [
+        {
+          "description": "战斗伤害13%增加，同时技能伤害13%增加。(除助战外，己方全体仅生效1次)",
+          "name": "奉茶",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101536",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1536",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398350/otogi/android/101536.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398356/otogi/cards_hd/101536_hd.png"
+      },
+      "name": "活动人偶阿松",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "移形换影",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1537": {
+      "abilities": [
+        {
+          "description": "血量每5秒回复6%",
+          "name": "情报收集",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101537",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1537",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398347/otogi/android/101537.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101537_hd.png"
+      },
+      "name": "右大臣",
+      "playable": true,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "name": "契约三重奏",
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1538": {
+      "abilities": [
+        {
+          "description": "身为队长时，己方全体怪属性队员战斗伤害13%增加",
+          "name": "学问之神",
+          "tags": [
+            "Leader",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 64
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101538",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1538",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101538.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101538_hd.png"
+      },
+      "name": "菅原道真",
+      "playable": true,
+      "skill": {
+        "description": "对3名攻击最高的敌人造成2,244点伤害，并使目标40.23%麻痹",
+        "name": "怨恨雷鸣",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 8400,
+        "max_hp": 6000,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1539": {
+      "abilities": [
+        {
+          "description": "处于濒死状态时，血量每5秒回复10%，同时处于濒死状态时，战斗伤害50%增加",
+          "name": "西洋血统",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "所受伤害40%减少",
+          "name": "朴实无华",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101539",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "id": "1539",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398337/otogi/android/101539.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101539_hd.png"
+      },
+      "name": "素瓷娃娃",
+      "playable": true,
+      "skill": {
+        "description": "对随机2名敌人造成4,067点伤害，并使目标96.42%麻痹",
+        "name": "陶瓷人偶",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 12300,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Melee"
       }
@@ -6653,6 +7407,68 @@
         "crit": 2250,
         "max_atk": 11400,
         "max_hp": 8000,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1540": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员血量上限15%增加",
+          "name": "歌圣",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体灵属性队员暴击率10%增加",
+          "name": "孤独的诗人",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101540",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1540",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398339/otogi/android/101540.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101540_hd.png"
+      },
+      "name": "柿本人麻吕",
+      "playable": true,
+      "skill": {
+        "description": "一定时间内，己方全体伤害提升72.29%",
+        "name": "诗学之秘",
+        "tags": [
+          "AoE",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9500,
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
@@ -6850,6 +7666,70 @@
         "type_name": "Ranged"
       }
     },
+    "1584": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体灵属性队员技能伤害15%增加",
+          "name": "樱花女神",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "经验结算奖励15%增加，同时奖励掉落概率15%增加",
+          "name": "短暂的生命",
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101584",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "id": "1584",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398346/otogi/android/101584.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398359/otogi/cards_hd/101584_hd.png"
+      },
+      "name": "木花开耶姬",
+      "playable": true,
+      "skill": {
+        "description": "恢复己方2名血量百分比最低的队员3,194点血量，并解除所有负面效果",
+        "name": "花吹雪",
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 4,
+        "crit": 750,
+        "max_atk": 12500,
+        "max_hp": 12200,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "159": {
       "abilities": [
         {
@@ -6903,6 +7783,68 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Melee"
+      }
+    },
+    "1590": {
+      "abilities": [
+        {
+          "description": "最终回合，攻击最高的敌人战斗伤害30%减少，同时暴击伤害30%减少",
+          "name": "日本象征",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "使己方攻击力最高的2名灵属性队员战斗伤害45%增加",
+          "name": "灵峰之主",
+          "tags": [
+            "Team",
+            "Divina",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101590",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "id": "1590",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398353/otogi/android/101590.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398355/otogi/cards_hd/101590_hd.png"
+      },
+      "name": "浅间大神",
+      "playable": true,
+      "skill": {
+        "description": "对1名攻击最高的敌人造成6,428点伤害，并使目标一定时间内伤害降低78.96%",
+        "name": "富士山之舞",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 10300,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "16": {
@@ -47377,8 +48319,8 @@
       }
     }
   },
-  "data_hash": "e756e3b7",
+  "data_hash": "a1c8649b",
   "locale": "zh-cn",
-  "total_cards": 900,
-  "version": "ae584cc"
+  "total_cards": 917,
+  "version": "6fbeec8"
 }
