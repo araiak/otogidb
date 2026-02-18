@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "last_updated": "2026-01-25",
+  "last_updated": "2026-02-18",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -142,8 +142,13 @@
       "details": {
         "description_says": "Increases 5% of the number of soulstones received from battle and 3% of battle reward drop rate.",
         "de_field": "COIN<5.00%,0%>",
-        "description_percentages": [5.0, 3.0],
-        "data_percentages": [5.0],
+        "description_percentages": [
+          5.0,
+          3.0
+        ],
+        "data_percentages": [
+          5.0
+        ],
         "missing_effect": "ITEM<3.00%,0%>"
       },
       "analysis": "Description mentions two effects (5% soulstones, 3% drop rate) but data only contains the soulstone bonus. The drop rate effect (ITEM) appears to be missing entirely.",
@@ -1245,10 +1250,22 @@
       "comparison": {
         "this_ability": "CHIT_ATK<60.00%,0%> - NO duration",
         "similar_abilities": [
-          {"card": "#270 Apollo's Harp", "effect": "CHIT_ATK<25.00%,0%,8>"},
-          {"card": "#359 Holy Grail", "effect": "CHIT_ATK<100.00%,0%,8>"},
-          {"card": "#741 Senji Ryakketsu", "effect": "CHIT_ATK<100.00%,0%,8>"},
-          {"card": "#752 Hakama Ceremony", "effect": "CHIT_ATK<90.00%,0%,8>"}
+          {
+            "card": "#270 Apollo's Harp",
+            "effect": "CHIT_ATK<25.00%,0%,8>"
+          },
+          {
+            "card": "#359 Holy Grail",
+            "effect": "CHIT_ATK<100.00%,0%,8>"
+          },
+          {
+            "card": "#741 Senji Ryakketsu",
+            "effect": "CHIT_ATK<100.00%,0%,8>"
+          },
+          {
+            "card": "#752 Hakama Ceremony",
+            "effect": "CHIT_ATK<90.00%,0%,8>"
+          }
         ]
       },
       "code_path": {
@@ -1325,6 +1342,38 @@
         "field": "de",
         "condition": "contains",
         "value": "ATK<50"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "DMG taken"
+      }
+    },
+    {
+      "id": "BUG-043",
+      "card_id": 1540,
+      "card_name": "Kakinomoto no Hitomaro",
+      "affected_field": "skill",
+      "affected_id": "1540",
+      "category": "effect_type",
+      "severity": "gameplay",
+      "summary": "Skill description says increases DMG dealt by all allies but data applies negative SHIELD to allies",
+      "details": {
+        "description_says": "Increases DMG dealt by all allies by {delay1} for a limited time.",
+        "de_field": "SHIELD<-18.00%,-0.61%,8>",
+        "ts_field": "self;count<5>",
+        "description_effect": "Increases outgoing damage of all allies",
+        "actual_effect": "Applies negative SHIELD to allies - likely increases incoming damage taken rather than outgoing damage dealt"
+      },
+      "analysis": "Skill description says it increases DMG dealt by all allies, implying an ATK buff. However, the de field is SHIELD<-18%,-0.61%,8> targeting allies (self;count<5>). SHIELD consistently means damage reduction across all other cards - a negative value would increase damage taken, not damage dealt. This likely should be ATK<X%,...> to match the description.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-02-18",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "ATK<"
       },
       "description_check": {
         "condition": "contains",
