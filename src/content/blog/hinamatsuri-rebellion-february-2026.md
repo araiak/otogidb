@@ -28,6 +28,8 @@ After all the auction madness, we've got the new event card drops. We will updat
 
 :card[1540] is a 10% progressive crit rate alternative to :card[1494]. He's probably better in Endless or reserve, while :card[1494] still edges out in XP modes thanks to the XP boost. If you don't have :card[1494] at level 75, this is one to target. **Good Divina reserve option, especially for Endless.**
 
+> **Data Note:** The skill description says it increases DMG dealt by all allies, but the current game data has an incorrect effect type behind the scenes. This will likely be fixed before the event goes live, so the skill should work as described.
+
 :card[1590] is a decent defensive support that boosts damage for the top two Divina allies, while also providing major damage reduction on the final wave. She's comparable to :card[672] in reserve, but more defensive - :card[672] is the higher damage option for Divina reserve slots. **Solid Divina reserve for survivability-focused builds; :card[672] if you want more damage.**
 
 ---
