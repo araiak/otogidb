@@ -1,15 +1,69 @@
 {
-  "generated_at": "2026-02-18T09:27:41Z",
-  "events": [],
+  "generated_at": "2026-02-25T07:03:08Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "176",
+      "start": "2026-02-28T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "name": "Elegance! Girls' Festival Rebellion!",
+      "half": "2026-03-05T07:00:00Z",
+      "kill": "2026-03-14T07:00:00Z"
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "268",
-      "start": "2026-02-17T07:00:00Z",
-      "end": "2026-02-25T07:00:00Z",
+      "banner_id": "269",
+      "start": "2026-02-19T07:00:00Z",
+      "end": "2026-03-05T07:00:00Z",
       "cards": [
         {
-          "id": "1584"
+          "id": "1536"
+        },
+        {
+          "id": "1530"
+        },
+        {
+          "id": "1538"
+        }
+      ],
+      "pity_step": 35
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "270",
+      "start": "2026-03-05T07:00:00Z",
+      "end": "2026-03-09T07:00:00Z",
+      "cards": [
+        {
+          "id": "1526"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "270"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "271",
+      "start": "2026-03-09T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "cards": [
+        {
+          "id": "1540"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "270"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "272",
+      "start": "2026-03-12T07:00:00Z",
+      "end": "2026-03-19T07:00:00Z",
+      "cards": [
+        {
+          "id": "1590"
         }
       ],
       "pity_step": 100
@@ -27,6 +81,79 @@
       "price_add": 15,
       "card": {
         "id": "1413"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1531",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-02-28T16:00:00Z",
+      "end": "2026-04-30T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1531"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1538",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-03-09T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "card": {
+        "id": "1538"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1530",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-03-09T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "card": {
+        "id": "1530"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1536",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 5,
+      "start": "2026-03-09T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "card": {
+        "id": "1536"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1526",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-03-05T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "card": {
+        "id": "1526"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1540",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-03-05T07:00:00Z",
+      "end": "2026-03-12T07:00:00Z",
+      "card": {
+        "id": "1540"
       }
     },
     {
@@ -573,6 +700,12 @@
       "event_name": "Evil Gods Attack",
       "event_date": "2026-01-25",
       "estimated_date": "2026-08-15"
+    },
+    {
+      "event_id": "176",
+      "event_name": "Elegance! Girls' Festival Rebellion!",
+      "event_date": "2026-02-28",
+      "estimated_date": "2026-09-15"
     }
   ]
 }
