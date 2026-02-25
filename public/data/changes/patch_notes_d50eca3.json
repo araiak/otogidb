@@ -1,0 +1,666 @@
+{
+  "version": "d50eca3",
+  "version_date": "2026-02-25",
+  "previous_version": "ad1b1af",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 12
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1526",
+      "name": "Odairi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398365/otogi/cards_hd/101526_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1528",
+      "name": "Ono no Komachi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101528_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1529",
+      "name": "Ohina",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398364/otogi/cards_hd/101529_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1539",
+      "name": "Bisque Doll",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398354/otogi/cards_hd/101539_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1540",
+      "name": "Kakinomoto no Hitomaro",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101540_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1523",
+      "name": "Sadaijin",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101523_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1525",
+      "name": "Sannin Kanjo",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398357/otogi/cards_hd/101525_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1530",
+      "name": "Catherine",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101530_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1536",
+      "name": "Omatsu",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398356/otogi/cards_hd/101536_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1537",
+      "name": "Udaijin",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398367/otogi/cards_hd/101537_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1538",
+      "name": "Sugawa no Michizane",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101538_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    },
+    {
+      "id": "1535",
+      "name": "Suberinko",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398358/otogi/cards_hd/101535_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-09-15",
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "event_date": "2026-02-28",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-09-15', 'event_id': '176', 'event_name': \"Elegance! Girls' Festival Rebellion!\", 'event_date': '2026-02-28', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "towerBattles": {
+      "old_count": 275,
+      "new_count": 275,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    }
+  }
+}
