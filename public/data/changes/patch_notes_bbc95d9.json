@@ -1,0 +1,120 @@
+{
+  "version": "bbc95d9",
+  "version_date": "2026-03-01",
+  "previous_version": "0cf1cff",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 3
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1526",
+      "name": "Odairi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398365/otogi/cards_hd/101526_hd.png",
+      "changes": [
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.type",
+          "field_label": "Type",
+          "old": "SHIELD",
+          "new": "SPD",
+          "display": "Type: SHIELD → SPD"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.scale",
+          "field_label": "Scale",
+          "old": -0.58,
+          "new": -0.68,
+          "display": "Scale: -0.58 → -0.68 (-0.10000000000000009)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.2",
+          "field_label": "Skill Tags",
+          "old": "DMG Up",
+          "new": "Slow",
+          "display": "Skill Tags: DMG Up → Slow"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.description",
+          "field_label": "Skill Effect",
+          "old": "Deals {value} DMG to current target. Target receives {delay1} more DMG for a limited time.",
+          "new": "Deals {value} DMG to current target. Decreases target's speed by {delay1} for a limited time.",
+          "display": "Skill Effect: Updated"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.unlock_level",
+          "field_label": "Unlock Level",
+          "old": 75,
+          "new": 80,
+          "display": "Unlock Level: 75 → 80 (+5)"
+        }
+      ]
+    },
+    {
+      "id": "1584",
+      "name": "Princess Konohanasakuya",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398359/otogi/cards_hd/101584_hd.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.1.stackable",
+          "field_label": "Stackable",
+          "old": false,
+          "new": true,
+          "display": "Stackable: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "1532",
+      "name": "Paper Lantern Hana",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398362/otogi/cards_hd/101532_hd.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.stackable",
+          "field_label": "Stackable",
+          "old": true,
+          "new": false,
+          "display": "Stackable: True → False (-1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Increases 24% of skill DMG dealt by Divina team members at the start of the final wave.",
+          "new": "Increases 24% of skill DMG of all anima allies at the start of the final wave.(only take effect once to the team)",
+          "display": "Description: Updated"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monsterAbility": {
+      "old_count": 1008,
+      "new_count": 1008,
+      "diff": 0
+    },
+    "monsterSkill": {
+      "old_count": 895,
+      "new_count": 895,
+      "diff": 0
+    }
+  }
+}

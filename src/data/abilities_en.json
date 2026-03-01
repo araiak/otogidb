@@ -15617,7 +15617,7 @@
     "er": "entry",
     "ts": "self_ime",
     "de": "EXP<15.00%,0%>;ITEM<15.00%,0%>",
-    "o": false,
+    "o": true,
     "tags": [
       "Self",
       "EXP Boost",
@@ -15627,13 +15627,13 @@
   "153201": {
     "id": "153201",
     "name": "Taisho Romance",
-    "description": "Increases 24% of skill DMG dealt by Divina team members at the start of the final wave.",
+    "description": "Increases 24% of skill DMG of all anima allies at the start of the final wave.(only take effect once to the team)",
     "card_id": "1532",
     "card_name": "Paper Lantern Hana",
     "er": "last_wave",
     "ts": "self;type<1>;count<5>",
     "de": "SKILL_ATK<24.00%,0%>",
-    "o": true,
+    "o": false,
     "tags": [
       "Final Wave",
       "Team",

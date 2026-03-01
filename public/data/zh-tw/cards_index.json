@@ -6660,7 +6660,7 @@
             "Crit Rate",
             "Crit DMG"
           ],
-          "unlock_level": 75
+          "unlock_level": 80
         },
         {
           "description": "最終回合，自身戰鬥傷害60%增加",
@@ -6695,12 +6695,12 @@
       "name": "天皇",
       "playable": true,
       "skill": {
-        "description": "對當前目標造成6,061點傷害，並使目標一定時間內所受傷害提升71.62%",
+        "description": "對當前目標造成6,061點傷害，並使目標一定時間內速度降低80.52%",
         "name": "祝願",
         "tags": [
           "DMG",
           "Single",
-          "DMG Up"
+          "Slow"
         ]
       },
       "stats": {
@@ -7057,7 +7057,7 @@
     "1532": {
       "abilities": [
         {
-          "description": "最終回合，己方全體靈屬性隊員技能傷害24%增加",
+          "description": "最終回合，己方全體付屬性隊員技能傷害24%增加（除助戰外，己方全體僅生效1次）",
           "name": "大正浪漫",
           "tags": [
             "Final Wave",
@@ -48359,8 +48359,8 @@
       }
     }
   },
-  "data_hash": "1caf903e",
+  "data_hash": "12b75135",
   "locale": "zh-tw",
   "total_cards": 917,
-  "version": "0cf1cff"
+  "version": "bbc95d9"
 }

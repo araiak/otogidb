@@ -6660,7 +6660,7 @@
             "Crit Rate",
             "Crit DMG"
           ],
-          "unlock_level": 75
+          "unlock_level": 80
         },
         {
           "description": "Increases 60% of DMG dealt at the start of the final wave.",
@@ -6695,12 +6695,12 @@
       "name": "Odairi",
       "playable": true,
       "skill": {
-        "description": "Deals 6,061 DMG to current target. Target receives 71.62% more DMG for a limited time.",
+        "description": "Deals 6,061 DMG to current target. Decreases target's speed by 80.52% for a limited time.",
         "name": "Well Wishes",
         "tags": [
           "DMG",
           "Single",
-          "DMG Up"
+          "Slow"
         ]
       },
       "stats": {
@@ -7057,7 +7057,7 @@
     "1532": {
       "abilities": [
         {
-          "description": "Increases 24% of skill DMG dealt by Divina team members at the start of the final wave.",
+          "description": "Increases 24% of skill DMG of all anima allies at the start of the final wave.(only take effect once to the team)",
           "name": "Taisho Romance",
           "tags": [
             "Final Wave",
@@ -48359,8 +48359,8 @@
       }
     }
   },
-  "data_hash": "06c551e1",
+  "data_hash": "ebbcc866",
   "locale": "es",
   "total_cards": 917,
-  "version": "0cf1cff"
+  "version": "bbc95d9"
 }

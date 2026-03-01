@@ -6660,7 +6660,7 @@
             "Crit Rate",
             "Crit DMG"
           ],
-          "unlock_level": 75
+          "unlock_level": 80
         },
         {
           "description": "最終のＷＡＶＥに、自身の与ダメージ値が60%向上",
@@ -6695,12 +6695,12 @@
       "name": "お内裏さま",
       "playable": true,
       "skill": {
-        "description": "目の前の対象に6,061のダメージを与え、対象の被ダメージ値を一時的に71.62%増加させる",
+        "description": "目の前の対象に6,061のダメージを与え、攻撃スピードを一時的に80.52%低下させる",
         "name": "幾重の想い",
         "tags": [
           "DMG",
           "Single",
-          "DMG Up"
+          "Slow"
         ]
       },
       "stats": {
@@ -7057,7 +7057,7 @@
     "1532": {
       "abilities": [
         {
-          "description": "最終のＷＡＶＥに、霊験属性の味方式神の特技の威力が24%増加",
+          "description": "最終のＷＡＶＥに、付喪属性の味方式神の特技の威力向上24%（助っ人以外、味方陣容一回有効）",
           "name": "大正浪漫",
           "tags": [
             "Final Wave",
@@ -48359,8 +48359,8 @@
       }
     }
   },
-  "data_hash": "8ad8dee2",
+  "data_hash": "f56ad150",
   "locale": "ja",
   "total_cards": 917,
-  "version": "0cf1cff"
+  "version": "bbc95d9"
 }
