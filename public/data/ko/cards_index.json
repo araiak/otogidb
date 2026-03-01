@@ -6660,7 +6660,7 @@
             "Crit Rate",
             "Crit DMG"
           ],
-          "unlock_level": 75
+          "unlock_level": 80
         },
         {
           "description": "최종 WAVE 시 자신의 전투 데미지가 60% 증가한다",
@@ -6695,12 +6695,12 @@
       "name": "오다이리",
       "playable": true,
       "skill": {
-        "description": "현재 대상에게 6,061의 데미지를 입히고 일정 시간 동안 대상이 받는 데미지를 71.62% 증가시킨다.",
+        "description": "현재 대상에게 6,061의 데미지를 입히고 일정 시간 동안 속도를 80.52% 감소시킨다.",
         "name": "호의",
         "tags": [
           "DMG",
           "Single",
-          "DMG Up"
+          "Slow"
         ]
       },
       "stats": {
@@ -7057,7 +7057,7 @@
     "1532": {
       "abilities": [
         {
-          "description": "최종 WAVE 시 모든 신령 속성 파티원의 스킬 데미지가 24% 증가한다",
+          "description": "최종 WAVE 시 모든 영물 속성 파티원의 스킬 데미지가 24% 증가한다(조력자이외 아군파티 1회유효)",
           "name": "다이쇼 로망",
           "tags": [
             "Final Wave",
@@ -48359,8 +48359,8 @@
       }
     }
   },
-  "data_hash": "93191641",
+  "data_hash": "23c7b633",
   "locale": "ko",
   "total_cards": 917,
-  "version": "0cf1cff"
+  "version": "bbc95d9"
 }

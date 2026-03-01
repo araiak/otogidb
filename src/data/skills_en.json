@@ -13475,17 +13475,17 @@
   "1526": {
     "id": "1526",
     "name": "Well Wishes",
-    "description": "Deals {value} DMG to current target. Target receives {delay1} more DMG for a limited time.",
+    "description": "Deals {value} DMG to current target. Decreases target's speed by {delay1} for a limited time.",
     "card_id": "1526",
     "card_name": "Odairi",
     "ie": "ATK<1700,49>",
     "ts": "current_target",
-    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "de": "SPD<-20.00%,-0.68%,8>",
     "tn": 1,
     "tags": [
       "DMG",
       "Single",
-      "DMG Up"
+      "Slow"
     ]
   },
   "1540": {
