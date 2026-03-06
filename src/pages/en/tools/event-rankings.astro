@@ -1,0 +1,15 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { EventRankingsChart } from '../../../components/tools/EventRankingsChart';
+
+const currentLocale = 'en';
+
+const pageTitle = "Event Ranking Cutoffs - Score History";
+const pageDescription = "Track competitive score cutoffs across Otogi: Spirit Agents events. See how top-tier scores have changed over time for each rank bracket.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+  <div class="container mx-auto px-4 py-6">
+    <EventRankingsChart client:load />
+  </div>
+</BaseLayout>
