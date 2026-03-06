@@ -270,7 +270,9 @@ export function mergeAvailability(
         // Check if other sources still make card available
         const gacha = acquisition.gacha;
         const gachaAvail =
-          gacha?.in_standard_pool || gacha?.featured_banners?.some((b) => b.is_current);
+          gacha?.in_standard_pool ||
+          cardAvailability.gacha?.in_standard_pool || // fallback: index may not have gacha object
+          gacha?.featured_banners?.some((b) => b.is_current);
         const eventAvail =
           acquisition.event?.reward_tiers?.some((e) => e.is_current) ||
           acquisition.event?.tower_drops?.some((t) => t.is_current);
