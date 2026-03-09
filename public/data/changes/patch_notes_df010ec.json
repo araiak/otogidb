@@ -1,0 +1,36 @@
+{
+  "version": "df010ec",
+  "version_date": "2026-03-09",
+  "previous_version": "b94014d",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1536",
+      "name": "Omatsu",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398356/otogi/cards_hd/101536_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0.price",
+          "field_label": "Price",
+          "old": 200,
+          "new": 50,
+          "display": "Price: 200 → 50 (-150)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "gachaTrade": {
+      "old_count": 312,
+      "new_count": 312,
+      "diff": 0
+    }
+  }
+}
