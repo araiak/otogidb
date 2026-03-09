@@ -1,0 +1,63 @@
+{
+  "version": "b94014d",
+  "version_date": "2026-03-09",
+  "previous_version": "4d21879",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1540",
+      "name": "Kakinomoto no Hitomaro",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1771398360/otogi/cards_hd/101540_hd.png",
+      "changes": [
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.type",
+          "field_label": "Type",
+          "old": "SHIELD",
+          "new": "ATK",
+          "display": "Type: SHIELD → ATK"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.scale",
+          "field_label": "Scale",
+          "old": -0.61,
+          "new": 0.61,
+          "display": "Scale: -0.61 → 0.61 (+1.22)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": -18.0,
+          "new": 18.0,
+          "display": "Value: -18.0 → 18.0 (+36.0)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.1",
+          "field_label": "Skill Tags",
+          "old": "DMG Up",
+          "new": "DMG Boost",
+          "display": "Skill Tags: DMG Up → DMG Boost"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monsterSkill": {
+      "old_count": 895,
+      "new_count": 895,
+      "diff": 0
+    }
+  }
+}
