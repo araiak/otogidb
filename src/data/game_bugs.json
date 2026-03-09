@@ -1,6 +1,6 @@
 {
   "version": "1.5.0",
-  "last_updated": "2026-03-06",
+  "last_updated": "2026-03-09",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -37,7 +37,15 @@
       "description_check": {
         "condition": "not_contains",
         "value": "2 Phantasma"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-002",
@@ -65,7 +73,15 @@
         "field": "d",
         "condition": "contains",
         "value": "Can be used as bond"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-003",
@@ -97,7 +113,15 @@
       "description_check": {
         "condition": "contains",
         "value": "15%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-004",
@@ -128,7 +152,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(damage reduction|DMG reduction|reduces?.+damage)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-005",
@@ -165,7 +197,15 @@
       "description_check": {
         "condition": "not_contains",
         "value": "drop rate"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-006",
@@ -197,7 +237,15 @@
       "description_check": {
         "condition": "contains",
         "value": "10%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-007",
@@ -229,7 +277,15 @@
       "description_check": {
         "condition": "contains",
         "value": "23%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-008",
@@ -261,7 +317,15 @@
       "description_check": {
         "condition": "contains",
         "value": "25%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-009",
@@ -293,7 +357,15 @@
       "description_check": {
         "condition": "contains",
         "value": "3.5%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-010",
@@ -325,7 +397,15 @@
       "description_check": {
         "condition": "contains",
         "value": "10%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-011",
@@ -357,7 +437,15 @@
       "description_check": {
         "condition": "contains",
         "value": "10%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-012",
@@ -389,7 +477,15 @@
       "description_check": {
         "condition": "contains",
         "value": "8%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-013",
@@ -421,7 +517,15 @@
       "description_check": {
         "condition": "contains",
         "value": "35%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-014",
@@ -453,7 +557,15 @@
       "description_check": {
         "condition": "contains",
         "value": "15%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-015",
@@ -485,7 +597,15 @@
       "description_check": {
         "condition": "contains",
         "value": "60%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-016",
@@ -517,7 +637,15 @@
       "description_check": {
         "condition": "contains",
         "value": "35%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-017",
@@ -549,7 +677,15 @@
       "description_check": {
         "condition": "contains",
         "value": "40%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-018",
@@ -581,7 +717,15 @@
       "description_check": {
         "condition": "contains",
         "value": "37%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-019",
@@ -613,7 +757,15 @@
       "description_check": {
         "condition": "contains",
         "value": "20%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-020",
@@ -645,7 +797,15 @@
       "description_check": {
         "condition": "contains",
         "value": "35%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-021",
@@ -677,7 +837,15 @@
       "description_check": {
         "condition": "contains",
         "value": "45%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-022",
@@ -709,7 +877,15 @@
       "description_check": {
         "condition": "contains",
         "value": "27%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-023",
@@ -740,7 +916,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-024",
@@ -771,7 +955,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-025",
@@ -802,7 +994,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-026",
@@ -833,7 +1033,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-027",
@@ -864,7 +1072,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-028",
@@ -895,7 +1111,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-029",
@@ -926,7 +1150,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-030",
@@ -957,7 +1189,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-031",
@@ -988,7 +1228,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-032",
@@ -1019,7 +1267,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-033",
@@ -1050,7 +1306,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-034",
@@ -1081,7 +1345,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-035",
@@ -1112,7 +1384,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-036",
@@ -1143,7 +1423,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-037",
@@ -1174,7 +1462,15 @@
       "description_check": {
         "condition": "matches_regex",
         "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-038",
@@ -1201,7 +1497,15 @@
         "field": "stats.crit",
         "condition": "equals",
         "value": 2250
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "error",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-039",
@@ -1228,7 +1532,15 @@
         "field": "stats.crit",
         "condition": "equals",
         "value": 2250
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "error",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-040",
@@ -1283,7 +1595,15 @@
         "field": "de",
         "condition": "matches_regex",
         "value": "CHIT_ATK<[^>]+,[^>]+,[^>]+>"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-041",
@@ -1315,7 +1635,15 @@
       "description_check": {
         "condition": "contains",
         "value": "25%"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-042",
@@ -1346,7 +1674,15 @@
       "description_check": {
         "condition": "contains",
         "value": "DMG taken"
-      }
+      },
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "persists",
+          "game_version": "b94014d"
+        }
+      ]
     },
     {
       "id": "BUG-043",
@@ -1368,7 +1704,7 @@
       "affects_gameplay": true,
       "visual_only": false,
       "source": "manual",
-      "status": "open",
+      "status": "fixed",
       "first_detected": "2026-02-18",
       "resolution_check": {
         "field": "de",
@@ -1378,308 +1714,16 @@
       "description_check": {
         "condition": "contains",
         "value": "DMG taken"
-      }
-    },
-    {
-      "id": "BUG-044",
-      "card_id": 744,
-      "card_name": "Sabionari",
-      "affected_field": "prefab",
-      "affected_id": "744",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card heals allies instead of attacking due to wrong Unity prefab",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "actual_behavior": "Healer — heals lowest-HP ally instead of attacking",
-        "prefab_monoscript": "CommonHPAttackAction",
-        "expected_monoscript": "CommonAttackAction",
-        "config_eng": "40_80_40",
-        "config_is_correct": true
       },
-      "analysis": "Unity bundle scan found CommonHPAttackAction serialized in the prefab instead of CommonAttackAction. The server-side config (p=2, eng=40_80_40) is internally consistent and correct. The bug is a developer error in the Unity project — the healer prefab template was used when building this card's asset. At runtime, MonsterComponent.Initialize receives the pre-serialized CommonHPAttackAction, so CastCommonAction dispatches via vtable to healer behavior regardless of the config p field.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "bundle_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/scan_bundles.py",
-        "bundle_file": "m100744_*",
-        "confirmed_by": "UnityPy MonoScript inspection of 690 playable card bundles"
-      },
-      "resolution_check": {
-        "field": "p",
-        "condition": "equals",
-        "value": "3",
-        "note": "Resolves if config p is changed to 3 (Healer) to match prefab behavior. Actual fix (correcting the prefab) cannot be detected from config — requires re-running scripts/lib/scan_bundles.py."
-      }
-    },
-    {
-      "id": "BUG-045",
-      "card_id": 1388,
-      "card_name": "Castela",
-      "affected_field": "prefab",
-      "affected_id": "1388",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card heals allies instead of attacking due to wrong Unity prefab",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "actual_behavior": "Healer — heals lowest-HP ally instead of attacking",
-        "prefab_monoscript": "CommonHPAttackAction",
-        "expected_monoscript": "CommonAttackAction",
-        "config_eng": "40_80_40",
-        "config_is_correct": true
-      },
-      "analysis": "Unity bundle scan found CommonHPAttackAction serialized in the prefab instead of CommonAttackAction. The server-side config (p=2, eng=40_80_40) is internally consistent and correct. Same root cause as BUG-044 (Sabionari) — developer error using healer prefab template during asset creation.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "bundle_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/scan_bundles.py",
-        "bundle_file": "m101388_*",
-        "confirmed_by": "UnityPy MonoScript inspection of 690 playable card bundles"
-      },
-      "resolution_check": {
-        "field": "p",
-        "condition": "equals",
-        "value": "3",
-        "note": "Resolves if config p is changed to 3 (Healer) to match prefab behavior. Actual fix (correcting the prefab) cannot be detected from config — requires re-running scripts/lib/scan_bundles.py."
-      }
-    },
-    {
-      "id": "BUG-046",
-      "card_id": 595,
-      "card_name": "Stella: Ferris",
-      "affected_field": "config",
-      "affected_id": "595",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-047",
-      "card_id": 672,
-      "card_name": "Raphael",
-      "affected_field": "config",
-      "affected_id": "672",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-048",
-      "card_id": 750,
-      "card_name": "Snow Sprite",
-      "affected_field": "config",
-      "affected_id": "750",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-049",
-      "card_id": 1311,
-      "card_name": "Grim Reaper [HW]",
-      "affected_field": "config",
-      "affected_id": "1311",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-050",
-      "card_id": 1399,
-      "card_name": "Nyarlathotep (Calm)",
-      "affected_field": "config",
-      "affected_id": "1399",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-051",
-      "card_id": 1494,
-      "card_name": "Goddess of Good Fortune",
-      "affected_field": "config",
-      "affected_id": "1494",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
-    },
-    {
-      "id": "BUG-052",
-      "card_id": 1590,
-      "card_name": "Sengen Taisha",
-      "affected_field": "config",
-      "affected_id": "1590",
-      "category": "combat_behavior",
-      "severity": "gameplay",
-      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
-      "details": {
-        "declared_role": "Ranged (p=2)",
-        "eng_field": "60_120_60",
-        "expected_eng": "40_80_40",
-        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
-        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
-        "possibly_intentional": true
-      },
-      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
-      "affects_gameplay": true,
-      "visual_only": false,
-      "source": "config_scan",
-      "status": "open",
-      "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/behavior_scanner.py",
-        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
-      },
-      "resolution_check": {
-        "field": "eng",
-        "condition": "equals",
-        "value": "40_80_40"
-      }
+      "last_checked": "2026-03-09",
+      "check_history": [
+        {
+          "date": "2026-03-09",
+          "status": "fixed",
+          "game_version": "b94014d"
+        }
+      ],
+      "fixed_in_version": "b94014d"
     }
   ],
   "categories": {
