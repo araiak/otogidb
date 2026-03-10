@@ -60,9 +60,9 @@ interface GameBug {
   id: string;
   card_id: number;
   card_name: string;
-  affected_field: 'ability' | 'skill' | 'stats';
+  affected_field: 'ability' | 'skill' | 'stats' | 'config' | 'prefab';
   affected_id: string;
-  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats' | 'missing_duration';
+  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats' | 'missing_duration' | 'combat_behavior' | 'prefab_type';
   severity: 'gameplay' | 'visual';
   summary: string;
   details: {
@@ -90,6 +90,15 @@ interface GameBug {
     expected_crit?: number;
     unit_type?: string;
     explanation?: string;
+    // Combat behavior / config bugs
+    declared_role?: string;
+    eng_field?: string;
+    expected_eng?: string;
+    eng_effect?: string;
+    possibly_intentional?: boolean;
+    // Prefab bugs
+    actual_prefab?: string;
+    expected_prefab?: string;
   };
   analysis: string;
   affects_gameplay: boolean;
@@ -135,6 +144,7 @@ const cardBugs = gameBugsData.bugs.filter(
 const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
 const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
 const statsBugs = cardBugs.filter(bug => bug.affected_field === 'stats');
+const cardLevelBugs = cardBugs.filter(bug => bug.affected_field === 'config' || bug.affected_field === 'prefab');
 
 // Helper to get all bugs for a specific ability
 function getAbilityBugs(abilityId: string): GameBug[] {
@@ -449,6 +459,44 @@ const jsonLd = {
                         <div class="text-xs mt-1.5 space-y-0.5">
                           <div><span class="text-secondary">Current:</span> <span class="line-through opacity-60">{bug.details.current_crit}</span></div>
                           <div><span class="text-secondary">Expected:</span> <span class="font-medium">{bug.details.expected_crit}</span></div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </>
+          )}
+          {/* Card-level behavior bugs notice */}
+          {cardLevelBugs.length > 0 && (
+            <>
+              {cardLevelBugs.map(bug => (
+                <div data-dev-only class={`mt-3 p-2 sm:p-3 rounded-lg border ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                  <div class="flex items-start gap-2">
+                    <span class={`text-sm ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-2 flex-wrap">
+                        <span class={`text-xs font-medium ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                          {bug.affected_field === 'prefab' ? 'Battle Behavior Bug' : bug.details.possibly_intentional ? 'Behavior Note' : 'Behavior Bug'}
+                        </span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                          {bug.id}
+                        </span>
+                      </div>
+                      <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                      {bug.details.actual_prefab && bug.details.expected_prefab && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Prefab:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.actual_prefab}</code></div>
+                          <div><span class="text-secondary">Expected:</span> <code class="text-[10px] bg-green-500/20 px-1 rounded">{bug.details.expected_prefab}</code></div>
+                        </div>
+                      )}
+                      {bug.details.eng_field && bug.details.expected_eng && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Engagement range:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.eng_field}</code></div>
+                          <div><span class="text-secondary">Expected:</span> <code class="text-[10px] bg-green-500/20 px-1 rounded">{bug.details.expected_eng}</code></div>
+                          {bug.details.possibly_intentional && (
+                            <div class="text-secondary italic">May be intentional</div>
+                          )}
                         </div>
                       )}
                     </div>
