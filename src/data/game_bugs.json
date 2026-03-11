@@ -1,5 +1,5 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "last_updated": "2026-03-09",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
@@ -1724,6 +1724,291 @@
         }
       ],
       "fixed_in_version": "b94014d"
+    },
+    {
+      "id": "BUG-046",
+      "card_id": 595,
+      "card_name": "Stella: Ferris",
+      "affected_field": "config",
+      "affected_id": "595",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-047",
+      "card_id": 672,
+      "card_name": "Raphael",
+      "affected_field": "config",
+      "affected_id": "672",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-048",
+      "card_id": 750,
+      "card_name": "Snow Sprite",
+      "affected_field": "config",
+      "affected_id": "750",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-049",
+      "card_id": 1311,
+      "card_name": "Grim Reaper [HW]",
+      "affected_field": "config",
+      "affected_id": "1311",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-050",
+      "card_id": 1399,
+      "card_name": "Nyarlathotep (Calm)",
+      "affected_field": "config",
+      "affected_id": "1399",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-051",
+      "card_id": 1494,
+      "card_name": "Goddess of Good Fortune",
+      "affected_field": "config",
+      "affected_id": "1494",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-052",
+      "card_id": 1590,
+      "card_name": "Sengen Taisha",
+      "affected_field": "config",
+      "affected_id": "1590",
+      "category": "combat_behavior",
+      "severity": "gameplay",
+      "summary": "Ranged card uses Melee engagement range — may close to melee distance in battle",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "eng_field": "60_120_60",
+        "expected_eng": "40_80_40",
+        "eng_effect": "Controls engagement distance (min_max_fallback). Ranged standard is 40_80_40; Melee is 60_120_60.",
+        "attack_behavior": "Normal (CommonAttackAction confirmed — not a healer)",
+        "possibly_intentional": true
+      },
+      "analysis": "Config field eng controls how far the card stands from its target (engagement range string: min_max_fallback). All Ranged cards use 40_80_40; this card uses 60_120_60 (the Melee pattern). The card will press into melee range instead of maintaining distance. Attack class (p=2) and prefab (CommonAttackAction) are both correct — only positioning is affected. May be intentional for close-range fighter archetype.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "config_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/behavior_scanner.py",
+        "confirmed_by": "Statistical analysis of eng patterns across 857 playable cards"
+      },
+      "resolution_check": {
+        "field": "eng",
+        "condition": "equals",
+        "value": "40_80_40"
+      }
+    },
+    {
+      "id": "BUG-053",
+      "card_id": 744,
+      "card_name": "Sabionari",
+      "affected_field": "prefab",
+      "affected_id": "744",
+      "category": "prefab_type",
+      "severity": "gameplay",
+      "summary": "Heals instead of attacks — wrong Unity prefab assigns healer behavior",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "actual_prefab": "CommonHPAttackAction",
+        "expected_prefab": "CommonAttackAction",
+        "battle_effect": "Card heals most-injured ally (ATK × 1.1) instead of attacking"
+      },
+      "analysis": "Unity asset bundle inspection confirmed CommonHPAttackAction serialized into card 744's prefab. During battle, CastCommonAction dispatches via vtable to the healer action class, causing the card to heal instead of attack. Config (p=2) is correct — bug is client-side in the Unity project.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "bundle_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/scan_bundles.py",
+        "confirmed_by": "UnityPy asset bundle inspection of 694 monster prefabs",
+        "investigation": "docs/re-findings/investigations/CARD_BEHAVIOR_BUG.md"
+      }
+    },
+    {
+      "id": "BUG-054",
+      "card_id": 1388,
+      "card_name": "Castela",
+      "affected_field": "prefab",
+      "affected_id": "1388",
+      "category": "prefab_type",
+      "severity": "gameplay",
+      "summary": "Heals instead of attacks — wrong Unity prefab assigns healer behavior",
+      "details": {
+        "declared_role": "Ranged (p=2)",
+        "actual_prefab": "CommonHPAttackAction",
+        "expected_prefab": "CommonAttackAction",
+        "battle_effect": "Card heals most-injured ally (ATK × 1.1) instead of attacking"
+      },
+      "analysis": "Unity asset bundle inspection confirmed CommonHPAttackAction serialized into card 1388's prefab. Same root cause as BUG-053 (Sabionari) — wrong prefab template used when the card was set up in the Unity project.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "bundle_scan",
+      "status": "open",
+      "first_detected": "2026-03-06",
+      "evidence": {
+        "scan_tool": "scripts/lib/scan_bundles.py",
+        "confirmed_by": "UnityPy asset bundle inspection of 694 monster prefabs",
+        "investigation": "docs/re-findings/investigations/CARD_BEHAVIOR_BUG.md"
+      }
     }
   ],
   "categories": {
@@ -1733,7 +2018,9 @@
     "description": "Text/description percentage mismatches",
     "stats": "Incorrect stat values",
     "stackable": "Non-stackable abilities (o=false) missing 'once per team' text - affects all targeting including self_ime",
-    "missing_duration": "Effect missing duration parameter - becomes permanent when it should be temporary"
+    "missing_duration": "Effect missing duration parameter - becomes permanent when it should be temporary",
+    "combat_behavior": "Card uses wrong engagement range — closes to melee distance despite being Ranged type",
+    "prefab_type": "Wrong Unity prefab baked into asset bundle — card performs a different action class than its config role implies"
   },
   "severity_levels": {
     "gameplay": "Bug affects actual game mechanics",
