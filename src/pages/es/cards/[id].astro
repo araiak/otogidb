@@ -188,6 +188,7 @@ const cardBugs = gameBugsData.bugs.filter(
 const skillBug = cardBugs.find(bug => bug.affected_field === 'skill');
 const abilityBugs = cardBugs.filter(bug => bug.affected_field === 'ability');
 const statsBugs = cardBugs.filter(bug => bug.affected_field === 'stats');
+const cardLevelBugs = cardBugs.filter(bug => bug.affected_field === 'config' || bug.affected_field === 'prefab');
 
 // Helper to get all bugs for a specific ability
 function getAbilityBugs(abilityId: string): GameBug[] {
