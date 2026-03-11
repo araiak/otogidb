@@ -52,27 +52,43 @@ interface GameBug {
   card_name: string;
   affected_field: 'ability' | 'skill' | 'stats' | 'config' | 'prefab';
   affected_id: string;
-  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats' | 'missing_duration';
+  category: 'targeting' | 'description' | 'effect_type' | 'unit_type' | 'stats' | 'missing_duration' | 'combat_behavior' | 'prefab_type';
   severity: 'gameplay' | 'visual';
   summary: string;
   details: {
+    // Common fields
     description_says?: string;
     de_field?: string;
+    // Targeting bugs
     target_string?: string;
     missing?: string;
+    // Percentage mismatch bugs
     description_percentage?: number;
     actual_percentage?: number;
+    // Effect type bugs
     expected_effect?: string;
     actual_effect?: string;
+    // Missing effect bugs
     description_percentages?: number[];
     data_percentages?: number[];
     missing_effect?: string;
+    // Missing duration bugs
     chit_atk_effect?: string;
     expected_format?: string;
+    // Stats bugs
     current_crit?: number;
     expected_crit?: number;
     unit_type?: string;
     explanation?: string;
+    // Combat behavior / config bugs
+    declared_role?: string;
+    eng_field?: string;
+    expected_eng?: string;
+    eng_effect?: string;
+    possibly_intentional?: boolean;
+    // Prefab bugs
+    actual_prefab?: string;
+    expected_prefab?: string;
   };
   analysis: string;
   affects_gameplay: boolean;
