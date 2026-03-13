@@ -230,6 +230,8 @@ export interface Card {
   history: CardHistory;
   acquisition: CardAcquisition;
   has_bugs?: boolean;
+  gives_special_bond?: boolean;
+  receives_special_bond?: boolean;
 }
 
 export interface CardsData {

@@ -8,6 +8,7 @@ interface MobileCardGridProps {
   rows: Row<Card>[];
   getCardUrl: (id: string) => string;
   onPreviewCard: (card: Card) => void;
+  showBugs?: boolean;
 }
 
 /**
@@ -20,6 +21,7 @@ export default function MobileCardGrid({
   rows,
   getCardUrl,
   onPreviewCard,
+  showBugs,
 }: MobileCardGridProps) {
   if (rows.length === 0) {
     return (
@@ -54,6 +56,14 @@ export default function MobileCardGrid({
                   <span className="font-medium truncate text-sm">{card.name || `Card #${card.id}`}</span>
                   {!card.playable && (
                     <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
+                  )}
+                  {showBugs && card.has_bugs && (
+                    <span
+                      className="px-1 py-0.5 text-[10px] rounded bg-red-500/20 text-red-400 font-medium flex-shrink-0"
+                      title="Known bug(s) — see card page for details"
+                    >
+                      ⚠
+                    </span>
                   )}
                 </div>
                 <div className="flex items-center gap-1.5">
@@ -98,6 +108,14 @@ export default function MobileCardGrid({
                   <span className="font-medium truncate">{card.name || `Card #${card.id}`}</span>
                   {!card.playable && (
                     <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0">NPC</span>
+                  )}
+                  {showBugs && card.has_bugs && (
+                    <span
+                      className="px-1 py-0.5 text-[10px] rounded bg-red-500/20 text-red-400 font-medium flex-shrink-0"
+                      title="Known bug(s) — see card page for details"
+                    >
+                      ⚠
+                    </span>
                   )}
                 </div>
                 <div className="flex items-center gap-2 text-sm">

@@ -137,6 +137,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (typeof window === 'undefined') return false;
     return localStorage.getItem('otogidb-show-bugs') === 'true';
   });
+  const [bugsOnly, setBugsOnly] = useState(false);
 
   // Track if we're initializing from URL to prevent double-updates
   const isInitializing = useRef(true);
@@ -221,6 +222,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
       setHideNonPlayable(false);
     }
 
+    // Bugs only filter - validate boolean
+    if (validateBooleanParam(params.get('bugsonly'))) {
+      setBugsOnly(true);
+    }
+
     // Mark initialization complete after a tick
     setTimeout(() => {
       isInitializing.current = false;
@@ -248,6 +254,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         params.set('dir', sorting[0].desc ? 'desc' : 'asc');
       }
       if (!hideNonPlayable) params.set('npc', '1');
+      if (bugsOnly) params.set('bugsonly', '1');
 
       const newUrl = params.toString()
         ? `${window.location.pathname}?${params.toString()}`
@@ -257,7 +264,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }, 300);
 
     return () => clearTimeout(timeoutId);
-  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable]);
+  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable, bugsOnly]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -470,18 +477,33 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Filter data based on global search - lazily creates search index on first search
   const filteredData = useMemo(() => {
-    if (!globalFilter.trim()) return cards;
+    let filtered = cards;
+
+    // Apply bugs-only filter (only when showBugs is active)
+    if (showBugs && bugsOnly) {
+      filtered = filtered.filter(card => card.has_bugs === true);
+    }
+
+    if (!globalFilter.trim()) return filtered;
 
     // Lazily create search index on first search
     if (!searchIndexRef.current && cards.length > 0) {
       searchIndexRef.current = new Fuse(cards, FUSE_OPTIONS);
     }
 
-    if (!searchIndexRef.current) return cards;
+    if (!searchIndexRef.current) return filtered;
 
     const results = searchIndexRef.current.search(globalFilter);
-    return results.map(result => result.item);
-  }, [cards, globalFilter]);
+    const searchResults = results.map(result => result.item);
+
+    // Intersect with pre-filtered results
+    if (showBugs && bugsOnly) {
+      const filteredIds = new Set(filtered.map(c => c.id));
+      return searchResults.filter(c => filteredIds.has(c.id));
+    }
+
+    return searchResults;
+  }, [cards, globalFilter, showBugs, bugsOnly]);
 
   // Column definitions (extracted to cardTableColumns.tsx)
   const columns = useMemo(
@@ -663,12 +685,16 @@ export default function CardTable({ initialCards }: CardTableProps) {
             value={bondFilter}
             onChange={(v) => setBondFilter(v as string[])}
             placeholder="Bond"
-            dropdownClassName="min-w-[120px]"
+            dropdownClassName="min-w-[180px]"
             renderOption={(opt) => {
+              const label = opt === 'gives_special' ? '⚡ Gives Special Bond' :
+                           opt === 'receives_special' ? '⚡ Receives Special Bond' : String(opt);
               const colorClass = opt === 'Attack' ? 'text-red-600 dark:text-red-400' :
                                 opt === 'Skill' ? 'text-blue-600 dark:text-blue-400' :
-                                opt === 'HP' ? 'text-green-600 dark:text-green-400' : '';
-              return <span className={`text-sm font-medium ${colorClass}`}>{opt}</span>;
+                                opt === 'HP' ? 'text-green-600 dark:text-green-400' :
+                                opt === 'gives_special' ? 'text-purple-600 dark:text-purple-400' :
+                                opt === 'receives_special' ? 'text-blue-500 dark:text-blue-300' : '';
+              return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />
           <GroupedTagDropdown
@@ -733,6 +759,19 @@ export default function CardTable({ initialCards }: CardTableProps) {
             </label>
             <FilterInfoTooltip text="Marks cards with known bugs (⚠) in this table. Full details on individual card pages." />
           </div>
+          {showBugs && (
+            <label
+              className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+              style={{ borderColor: bugsOnly ? 'var(--color-accent)' : 'var(--color-border)' }}>
+              <input
+                type="checkbox"
+                checked={bugsOnly}
+                onChange={(e) => setBugsOnly(e.target.checked)}
+                className="rounded"
+              />
+              <span>Bugs Only</span>
+            </label>
+          )}
         </div>
       </div>
 
@@ -740,7 +779,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
         <div aria-live="polite" aria-atomic="true">
           Showing {table.getRowModel().rows.length} of {cards.length} cards
-          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || !hideNonPlayable) && (
+          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || !hideNonPlayable || bugsOnly) && (
             <button
               onClick={() => {
                 setAttributeFilter([]);
@@ -752,6 +791,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
                 setSourceFilter([]);
                 setAvailableOnly(false);
                 setHideNonPlayable(true);
+                setBugsOnly(false);
               }}
               className="ml-2 text-accent hover:underline"
             >
@@ -761,7 +801,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         </div>
 
         {/* Share button */}
-        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || sorting.length > 0 || !hideNonPlayable) && (
+        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || sorting.length > 0 || !hideNonPlayable || bugsOnly) && (
           <div className="relative">
             <button
               onClick={handleShare}
@@ -849,6 +889,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
         rows={table.getRowModel().rows}
         getCardUrl={getCardUrl}
         onPreviewCard={setMobilePreviewCard}
+        showBugs={showBugs}
       />
 
       {/* Pagination */}

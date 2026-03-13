@@ -156,22 +156,45 @@ export function getCardTableColumns({
       id: 'bonds',
       accessorFn: (row) => row.bonds?.[0]?.type || '',
       header: 'Bond',
-      size: 70,
+      size: 90,
       cell: ({ row }) => {
         const bonds = row.original.bonds || [];
-        if (bonds.length === 0) return <span className="text-secondary text-sm">-</span>;
-        const bondType = bonds[0]?.type || '-';
+        const bondType = bonds[0]?.type || null;
         const colorClass = bondType === 'Attack' ? 'text-red-600 dark:text-red-400' :
                           bondType === 'Skill' ? 'text-blue-600 dark:text-blue-400' :
                           bondType === 'HP' ? 'text-green-600 dark:text-green-400' : '';
-        return <span className={`text-sm font-medium ${colorClass}`}>{bondType}</span>;
+        return (
+          <div className="flex items-center gap-1">
+            {bondType
+              ? <span className={`text-sm font-medium ${colorClass}`}>{bondType}</span>
+              : <span className="text-secondary text-sm">-</span>
+            }
+            {row.original.gives_special_bond && (
+              <span
+                className="px-1 py-0.5 text-[10px] rounded bg-purple-500/20 text-purple-400 font-medium cursor-help"
+                title="Gives a special bond to a specific card"
+              >
+                ⚡G
+              </span>
+            )}
+            {row.original.receives_special_bond && (
+              <span
+                className="px-1 py-0.5 text-[10px] rounded bg-blue-500/20 text-blue-400 font-medium cursor-help"
+                title="Receives a special bond from a specific card"
+              >
+                ⚡R
+              </span>
+            )}
+          </div>
+        );
       },
       filterFn: (row, _columnId, filterValue: string[]) => {
         if (!filterValue || filterValue.length === 0) return true;
-        const bonds = row.original.bonds || [];
-        if (bonds.length === 0) return false;
-        // Check if any of the card's bond types match the filter
-        return bonds.some(bond => filterValue.includes(bond.type));
+        return filterValue.some(f => {
+          if (f === 'gives_special') return row.original.gives_special_bond === true;
+          if (f === 'receives_special') return row.original.receives_special_bond === true;
+          return (row.original.bonds || []).some(bond => bond.type === f);
+        });
       },
     },
     {

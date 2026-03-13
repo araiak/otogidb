@@ -68,7 +68,7 @@ export function useCardFilterOptions(cards: Card[]): UseCardFilterOptionsResult 
       return a.localeCompare(b);
     });
 
-    // Sort bond types: Attack, Skill, HP first, then others
+    // Sort bond types: Attack, Skill, HP first, then others; always append special bond options
     const knownBondTypes = ['Attack', 'Skill', 'HP'];
     const sortedBondTypes = Array.from(bondTypes).sort((a, b) => {
       const aKnown = knownBondTypes.indexOf(a);
@@ -78,6 +78,7 @@ export function useCardFilterOptions(cards: Card[]): UseCardFilterOptionsResult 
       if (bKnown !== -1) return 1;
       return a.localeCompare(b);
     });
+    sortedBondTypes.push('gives_special', 'receives_special');
 
     // Sort skill tags: effect types first, then status effects, then secondary effects
     const tagOrder = ['DMG', 'Heal', 'Buff', 'Debuff', 'Single', 'Multi', 'AoE', 'Stun', 'Poison', 'Burn', 'Freeze', 'Sleep', 'Silence', 'Paralysis', 'Petrify', 'Slow', 'DEF Down', 'DMG Up', 'DMG Down', 'Cleanse'];
