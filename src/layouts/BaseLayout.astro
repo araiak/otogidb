@@ -149,10 +149,18 @@ const navLinks = {
           host.endsWith('.pages.dev') ||
           search.includes('dev=true')
         );
+        var style = document.createElement('style');
+        var rules = [];
         if (!isDev) {
-          // Hide dev-only elements on production by injecting a style rule
-          var style = document.createElement('style');
-          style.textContent = '[data-dev-only]{display:none!important}';
+          rules.push('[data-dev-only]{display:none!important}');
+        }
+        // Bug notices: hidden unless user opted in via "Show Bugs" checkbox
+        var showBugs = localStorage.getItem('otogidb-show-bugs') === 'true';
+        if (!showBugs) {
+          rules.push('[data-bug-notice]{display:none!important}');
+        }
+        if (rules.length > 0) {
+          style.textContent = rules.join('');
           document.head.appendChild(style);
         }
       })();

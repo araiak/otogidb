@@ -8,6 +8,7 @@ import { ImageCell } from './cells';
 export interface ColumnOptions {
   getCardUrl: (id: string) => string;
   locale: SupportedLocale;
+  showBugs?: boolean;
 }
 
 /**
@@ -17,6 +18,7 @@ export interface ColumnOptions {
 export function getCardTableColumns({
   getCardUrl,
   locale,
+  showBugs,
 }: ColumnOptions): ColumnDef<Card>[] {
   return [
     {
@@ -49,6 +51,14 @@ export function getCardTableColumns({
           {!row.original.playable && (
             <span className="px-1 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium" title="NPC/Enemy card - not obtainable">
               NPC
+            </span>
+          )}
+          {showBugs && row.original.has_bugs && (
+            <span
+              className="px-1 py-0.5 text-[10px] rounded bg-red-500/20 text-red-400 font-medium cursor-help"
+              title="Known bug(s) — see card page for details"
+            >
+              ⚠
             </span>
           )}
         </div>

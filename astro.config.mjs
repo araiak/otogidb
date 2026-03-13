@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 import { remarkCardReference } from './src/lib/remark-card-reference';
 import { remarkFilterReference, remarkListReference } from './src/lib/remark-filter-reference';
 import { remarkTeamReference } from './src/lib/remark-team-reference';
+import { remarkSpoiler } from './src/lib/remark-spoiler';
 
 // Load cards data for sitemap lastmod dates (from src/data - build-only file)
 import cardsData from './src/data/cards.json' with { type: 'json' };
@@ -45,7 +46,7 @@ export default defineConfig({
     }
   },
   markdown: {
-    remarkPlugins: [remarkCardReference, remarkFilterReference, remarkListReference, remarkTeamReference]
+    remarkPlugins: [remarkCardReference, remarkFilterReference, remarkListReference, remarkTeamReference, remarkSpoiler]
   },
   build: {
     inlineStylesheets: 'auto'
