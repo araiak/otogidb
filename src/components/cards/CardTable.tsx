@@ -133,6 +133,10 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [sourceFilter, setSourceFilter] = useState<string[]>([]); // Acquisition sources: gacha, auction, exchange, event
   const [availableOnly, setAvailableOnly] = useState(false); // Only show currently available cards
   const [hideNonPlayable, setHideNonPlayable] = useState(true); // Hide NPC/enemy cards by default
+  const [showBugs, setShowBugs] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    return localStorage.getItem('otogidb-show-bugs') === 'true';
+  });
 
   // Track if we're initializing from URL to prevent double-updates
   const isInitializing = useRef(true);
@@ -383,6 +387,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }
   }, [sortDropdownOpen, focusedSortIndex, sortableColumns, handleSortSelect]);
 
+  const handleShowBugsChange = (checked: boolean) => {
+    setShowBugs(checked);
+    localStorage.setItem('otogidb-show-bugs', String(checked));
+  };
+
   // Copy share link to clipboard
   const handleShare = useCallback(async () => {
     try {
@@ -476,8 +485,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Column definitions (extracted to cardTableColumns.tsx)
   const columns = useMemo(
-    () => getCardTableColumns({ getCardUrl, locale }),
-    [getCardUrl, locale]
+    () => getCardTableColumns({ getCardUrl, locale, showBugs }),
+    [getCardUrl, locale, showBugs]
   );
 
   // Create table instance
@@ -709,6 +718,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <span>Available Now</span>
             </label>
             <FilterInfoTooltip text="Available Now: Some cards are day-limited or may be out of stock." />
+          </div>
+          <div className="flex items-center">
+            <label
+              className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+              style={{ borderColor: showBugs ? 'var(--color-accent)' : 'var(--color-border)' }}>
+              <input
+                type="checkbox"
+                checked={showBugs}
+                onChange={(e) => handleShowBugsChange(e.target.checked)}
+                className="rounded"
+              />
+              <span>Show Bugs</span>
+            </label>
+            <FilterInfoTooltip text="Marks cards with known bugs (⚠) in this table. Full details on individual card pages." />
           </div>
         </div>
       </div>

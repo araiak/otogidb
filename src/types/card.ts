@@ -229,6 +229,7 @@ export interface Card {
   meta: CardMeta;
   history: CardHistory;
   acquisition: CardAcquisition;
+  has_bugs?: boolean;
 }
 
 export interface CardsData {

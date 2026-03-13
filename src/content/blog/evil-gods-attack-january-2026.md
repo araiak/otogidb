@@ -46,7 +46,7 @@ These next few look to join the standard gacha:
 
 :card[1442] is interesting as well, but maybe less so. She trades a good skill for higher innate crit rate and an interesting leader skill. 50% crit damage is strong, especially in Phantasma where you can hit high crit rate pretty easily, although you lose access to :card[734]. The trade-offs make her a harder sell. There's no exchange option listed and you're surely out of invokers from the last two cards, so I can't really recommend it even though I want to try and make her work in my Phantasma lineup since I don't have the benefit of a leader skill myself. More likely I'll have to go in on the :card[734] auction in March which might be relatively expensive, but melee is an easier slot for leader skills in my opinion. **Hard to recommend given resource constraints.**
 
-:card[1445] is an interesting replacement for :card[583] in Anima endless lineups, replacing two cards with one. Note: the card data says Divina, but that is probably an error and will likely be fixed. It might be worth grabbing a copy during the guarantee if you're set on trying to finish an Anima endless team, but otherwise joining the standard gacha this one probably won't be a great priority. **Niche pickup for Anima endless builds.**
+:card[1445] is an interesting replacement for :card[583] in Anima endless lineups, replacing two cards with one. It might be worth grabbing a copy during the guarantee if you're set on trying to finish an Anima endless team, but otherwise joining the standard gacha this one probably won't be a great priority. **Niche pickup for Anima endless builds.**
 
 ---
 
