@@ -375,6 +375,68 @@ const jsonLd = {
               <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(card.stats.crit)}</div>
             </div>
           </div>
+          <!-- Stats + behavior bugs - mobile/tablet only (desktop sees these in the lg:block stats section) -->
+          {(statsBugs.length > 0 || cardLevelBugs.length > 0) && (
+            <div class="lg:hidden mt-3 space-y-2">
+              {statsBugs.map(bug => (
+                <div data-bug-notice class={`p-2 rounded-lg border ${bug.affects_gameplay ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                  <div class="flex items-start gap-2">
+                    <span class={`text-sm ${bug.affects_gameplay ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-2 flex-wrap">
+                        <span class={`text-xs font-medium ${bug.affects_gameplay ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                          {bug.affects_gameplay ? 'Stats Bug' : 'Stats Issue'}
+                        </span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                          {bug.id}
+                        </span>
+                      </div>
+                      <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                      {bug.details.current_crit !== undefined && bug.details.expected_crit !== undefined && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Current:</span> <span class="line-through opacity-60">{bug.details.current_crit}</span></div>
+                          <div><span class="text-secondary">Expected:</span> <span class="font-medium">{bug.details.expected_crit}</span></div>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+              {cardLevelBugs.map(bug => (
+                <div data-bug-notice class={`p-2 rounded-lg border ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'bg-red-500/10 border-red-500/30' : 'bg-yellow-500/10 border-yellow-500/30'}`}>
+                  <div class="flex items-start gap-2">
+                    <span class={`text-sm ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'text-red-500' : 'text-yellow-500'}`}>⚠</span>
+                    <div class="flex-1 min-w-0">
+                      <div class="flex items-center gap-2 flex-wrap">
+                        <span class={`text-xs font-medium ${bug.affects_gameplay && !bug.details.possibly_intentional ? 'text-red-700 dark:text-red-400' : 'text-yellow-700 dark:text-yellow-400'}`}>
+                          {bug.affected_field === 'prefab' ? 'Battle Behavior Bug' : bug.details.possibly_intentional ? 'Behavior Note' : 'Behavior Bug'}
+                        </span>
+                        <span class="text-[10px] px-1.5 py-0.5 rounded bg-gray-500/20 text-gray-600 dark:text-gray-400 font-mono">
+                          {bug.id}
+                        </span>
+                      </div>
+                      <p class="text-xs text-secondary mt-1">{bug.summary}</p>
+                      {bug.details.actual_prefab && bug.details.expected_prefab && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Prefab:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.actual_prefab}</code></div>
+                          <div><span class="text-secondary">Expected:</span> <code class="text-[10px] bg-green-500/20 px-1 rounded">{bug.details.expected_prefab}</code></div>
+                        </div>
+                      )}
+                      {bug.details.eng_field && bug.details.expected_eng && (
+                        <div class="text-xs mt-1.5 space-y-0.5">
+                          <div><span class="text-secondary">Engagement range:</span> <code class="text-[10px] bg-red-500/20 px-1 rounded">{bug.details.eng_field}</code></div>
+                          <div><span class="text-secondary">Expected:</span> <code class="text-[10px] bg-green-500/20 px-1 rounded">{bug.details.expected_eng}</code></div>
+                          {bug.details.possibly_intentional && (
+                            <div class="text-secondary italic">May be intentional</div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 

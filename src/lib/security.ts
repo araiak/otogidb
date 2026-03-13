@@ -17,7 +17,7 @@ export const ALLOWED_FILTER_VALUES = {
   types: ['Melee', 'Ranged', 'Healer', 'Assist', 'Utility'],
   rarities: [1, 2, 3, 4, 5],
   sources: ['gacha', 'exchange', 'auction', 'event', 'daily'],
-  bonds: ['Divina', 'Phantasma', 'Anima', 'Neutral', 'Melee', 'Ranged', 'Healer', 'Assist'],
+  bonds: ['Divina', 'Phantasma', 'Anima', 'Neutral', 'Melee', 'Ranged', 'Healer', 'Assist', 'Attack', 'Skill', 'HP', 'Speed', 'Crit', 'gives_special', 'receives_special'],
   sortColumns: ['id', 'name', 'rarity', 'attribute', 'type', 'max_atk', 'max_hp', 'speed', 'crit', 'cost'],
   sortDirections: ['asc', 'desc'],
   booleans: ['0', '1'],
