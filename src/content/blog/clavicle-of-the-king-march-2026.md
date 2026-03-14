@@ -36,7 +36,7 @@ This event had 5★ helpers, so we are looking at more cash auctions this month.
 
 ## Second Week Gacha
 
-:card[740] is a top tier support carry and debuffer. With the addition of :card[1401] she is not the strongest carry for Phantasma, but her 10% progressive damage is hard to beat in multi-round battles. She also enables Phantasma challenge mode without :card[744]. Probably a must buy for Phantasma players if you didn't go in for :card[1401], and probably still usable in tower, story, and challenge even if you did pick up :card[1401]. If you check your friends list you'll probably find a ton of her because she is good and popular - the people aren't wrong. **Must buy for Phantasma players without :card[1401]; still usable if you have her.**
+:card[740] is a top tier support carry and debuffer. With the addition of :card[1401] she is not the strongest carry for Phantasma, but her 10% progressive damage is hard to beat in multi-round battles. She also enables Phantasma challenge mode without :card[744]. Probably a must buy for Phantasma players if you didn't go in for :card[1401], and probably still usable in tower, story, and challenge even if you did pick up :card[1401]. If you check your friends list you'll probably find a ton of her because she is good and popular - the people aren't wrong. With many players sealing their copies now that :card[1401] is widely available, prices are likely to be lower than usual — a great opportunity for newer Phantasma players looking for a strong support carry at a discount. **Must buy for Phantasma players without :card[1401]; still usable if you have her.**
 
 :card[741] is the strongest single-target buffing healer in the game, and she is genuinely excellent. She provides 107% damage, 37% crit, and 100% critical damage — while her skill is active she completely transforms your strongest attacker, often pushing them to the damage cap for the duration. For most players this is a massive burst window and a very good thing. **For most rosters, she is a strong buy.**
 
@@ -55,6 +55,14 @@ The rerun this month is **The Great Feudal Music Festival**, a temporary window 
 :card[529] is an assist card with a modest attack speed buff and a high chance of inflicting stun. The stun is what makes her interesting — in PvP it can completely disrupt an opponent's rhythm, and that's where she sees the most value. In PvE though, most bosses are immune to stun, so her utility is more limited there. **Good PvP pickup; lower priority for PvE-focused players.**
 
 :card[528] is a greedy attacker with an AoE skill. She was strong when she came out, but she's been powercrept by stronger attackers since then and isn't particularly relevant today. **Pass.**
+
+---
+
+## Guild Conquest (Starting Mar 17)
+
+:card[731] is this month's Guild Conquest card. On the surface she has some F2P appeal — crit rate is very valuable to an auto attacker, and her ATK stat is high. Her skill isn't anything special, and she has a small drop rate bonus on top. The problem is that getting meaningful value out of her requires 4 copies, which makes her a fairly expensive ask for F2P players upfront.
+
+She also doesn't have much to offer stronger players who already have solid Phantasma carries — a small drop rate boost is a niche perk, and it isn't commonly stacked outside of secondary slots on XP boosting teams. When she eventually comes around on auction she could be a cheap entry point for new players looking to get started with a Phantasma carry, but for now it's hard to recommend spending significant resources on her unless you specifically want a drop rate carry for niche story team compositions. **Hold off for now; worth revisiting at auction as a budget Phantasma carry for newer players.**
 
 ---
 
@@ -83,6 +91,9 @@ Second Week Gacha:
 Festival Auction:
 - :card[529] (Rerun) - **PvP niche** - stun assist is interesting in PvP but mostly ignored by bosses in PvE
 - :card[528] (Rerun) - **Pass** - powercrept attacker
+
+**Guild Conquest:**
+- :card[731] - **Hold off for now** - niche drop rate carry with F2P Phantasma potential, but 4 copies is a steep ask; worth revisiting at auction as a budget option for newer players
 
 ---
 
