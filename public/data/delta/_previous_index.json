@@ -2325,7 +2325,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101307",
@@ -2579,7 +2580,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101310",
@@ -2829,7 +2831,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101314",
@@ -44820,7 +44823,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "auction"
+        ]
       },
       "asset_id": "100680",
       "bonds": [
@@ -48168,7 +48173,7 @@
     "731": {
       "abilities": [
         {
-          "description": "Increases 30% of Crit Rate and increases 10% of battle reward drop rate.",
+          "description": "Increases 40% of Crit Rate and increases 15% of battle reward drop rate.",
           "name": "The Dragon of Avarice",
           "tags": [
             "Self",
@@ -48212,8 +48217,8 @@
         "attribute_name": "Phantasma",
         "cost": 1,
         "crit": 2250,
-        "max_atk": 11900,
-        "max_hp": 8400,
+        "max_atk": 13800,
+        "max_hp": 9300,
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
@@ -48251,6 +48256,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48321,6 +48327,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48391,6 +48398,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48444,6 +48452,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48499,6 +48508,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48553,6 +48563,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48621,6 +48632,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48689,6 +48701,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48812,6 +48825,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48881,6 +48895,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48936,7 +48951,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "100742",
@@ -49623,7 +49639,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "100753",
@@ -51110,7 +51127,7 @@
       }
     }
   },
-  "data_hash": "b1b158f0",
+  "data_hash": "f4119ec4",
   "total_cards": 917,
-  "version": "df010ec"
+  "version": "c58924b"
 }

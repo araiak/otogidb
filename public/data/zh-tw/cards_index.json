@@ -2325,7 +2325,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101307",
@@ -2579,7 +2580,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101310",
@@ -2829,7 +2831,8 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ]
       },
       "asset_id": "101314",
@@ -7067,7 +7070,7 @@
       "playable": true,
       "receives_special_bond": false,
       "skill": {
-        "description": "對當前目標造成6,061點傷害，並使目標一定時間內所受傷害提升80.52%",
+        "description": "對當前目標造成6,061點傷害，並使目標一定時間內速度降低80.52%",
         "name": "祝願",
         "tags": [
           "DMG",
@@ -7447,7 +7450,7 @@
     "1532": {
       "abilities": [
         {
-          "description": "最終回合，己方全體靈屬性隊員技能傷害24%增加",
+          "description": "最終回合，己方全體付屬性隊員技能傷害24%增加（除助戰外，己方全體僅生效1次）",
           "name": "大正浪漫",
           "tags": [
             "Final Wave",
@@ -44820,7 +44823,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "auction"
+        ]
       },
       "asset_id": "100680",
       "bonds": [
@@ -48168,7 +48173,7 @@
     "731": {
       "abilities": [
         {
-          "description": "暴擊率30%增加，同時獎勵掉落概率10%增加",
+          "description": "暴擊率40%增加，同時獎勵掉落概率15%增加",
           "name": "貪欲之龍",
           "tags": [
             "Self",
@@ -48212,8 +48217,8 @@
         "attribute_name": "Phantasma",
         "cost": 1,
         "crit": 2250,
-        "max_atk": 11900,
-        "max_hp": 8400,
+        "max_atk": 13800,
+        "max_hp": 9300,
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
@@ -48251,6 +48256,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48321,6 +48327,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48391,6 +48398,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48444,6 +48452,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48499,6 +48508,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48553,6 +48563,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48621,6 +48632,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48689,6 +48701,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -48812,6 +48825,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48881,6 +48895,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -48936,7 +48951,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "100742",
@@ -49623,7 +49639,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "100753",
@@ -51110,8 +51127,8 @@
       }
     }
   },
-  "data_hash": "1139df55",
+  "data_hash": "e1b29c38",
   "locale": "zh-tw",
   "total_cards": 917,
-  "version": "df010ec"
+  "version": "c58924b"
 }
