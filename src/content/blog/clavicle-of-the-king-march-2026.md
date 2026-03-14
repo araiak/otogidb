@@ -1,7 +1,7 @@
 ---
 title: "Clavicle of the King: 3rd Anniversary Auction"
 description: "Analysis of the 3rd Anniversary auction cards from Clavicle of the King, including a top-tier Divina lead, cash auction picks, and the second week gacha"
-date: "2026-03-11"
+date: "2026-03-14"
 author: "Araiak"
 tags: ["analysis", "auction", "gacha"]
 ---
@@ -30,6 +30,8 @@ This event had 5★ helpers, so we are looking at more cash auctions this month.
 
 :card[734] is also a melee lead but for Phantasma, and is probably the strongest of the bunch. He offers all Phantasma 25% crit rate, which is very strong in shorter fights, or potentially allows you to drop :card[1307] in reserve when running carries like :card[1401]. Crit rate is a fairly expensive stat, and 25% for the whole team is quite good - especially when it enables you to hit critical caps. **Good pickup for Phantasma players for shorter fights.**
 
+:card[742] is a notable 4★ also in the cash shop this event. She offers 10% XP and 10% drop rate — not flashy, but a solid utility pickup if you're looking to boost your drop rate and don't already have :card[580] or :card[751]. **Worth picking up if you lack better drop rate options.**
+
 ---
 
 ## Second Week Gacha
@@ -46,28 +48,41 @@ The caveat is about where the meta is heading. With the arrival of :card[1401] a
 
 :card[753] is the predicted exchange card this month. He's an ok Divina damage buffer, but weaker than :card[664] or :card[1531] for that role. Pick those up first if you don't have them. If you already have both and still want more % damage, or are a newer Divina player lacking assists, he's a reasonable pickup. **Buy :card[664] and :card[1531] first; Jack of Hearts if you still want more Divina damage.**
 
-The rerun window is harder to call this month - we predicted Sports Meet last month and got Milky Way instead, so take this with a grain of salt. Based on the sequence, we expect either the Sports Meet event (cards :card[360] :card[361] :card[362] :card[363] :card[364] :card[365] :card[366]) or The Great Feudal Music Festival (cards :card[520] :card[521] :card[522] :card[523] :card[524] :card[525] :card[526] :card[527]). No analysis yet - will update once the window opens.
+:card[680] is a permanent addition from the Stella series, providing a 40% attack speed boost to your entire team on the final wave — a very strong effect for teams that lean heavily on auto attacks. It only takes 2 copies to unlock his skill, and you can sell one back after leveling up the other. **Recommended for all players.** Keep a copy with his skill unlocked as a utility reserve card for any content where auto-attack speed matters.
+
+The rerun this month is **The Great Feudal Music Festival**, a temporary window with the event's 5★ cards. Note that unlike the exchange and Stella cards above, these are only available for a limited time.
+
+:card[529] is an assist card with a modest attack speed buff and a high chance of inflicting stun. The stun is what makes her interesting — in PvP it can completely disrupt an opponent's rhythm, and that's where she sees the most value. In PvE though, most bosses are immune to stun, so her utility is more limited there. **Good PvP pickup; lower priority for PvE-focused players.**
+
+:card[528] is a greedy attacker with an AoE skill. She was strong when she came out, but she's been powercrept by stronger attackers since then and isn't particularly relevant today. **Pass.**
 
 ---
 
 ## TL;DR
 
-**Event Cards:**
-- :card[739] - **High priority for all players** - pool your mochi; cap may be 1000, save at least 500; 2 copies for reserve ability, more for Divina players
-- :card[738] - **Great F2P Phantasma pickup** - tanky melee support with crit damage buffs and final wave damage
+**Permanent Auctions:**
 
-**Cash Auction:**
+Event Cards:
+- :card[739] - **High priority for all players** - pool your mochi; save at least 500; 2 copies for reserve ability, more for Divina players
+- :card[738] - **Great F2P Phantasma pickup** - tanky melee support with crit damage buffs and final wave damage
+- :card[753] (Exchange) - **Buy :card[664] or :card[1531] first** - decent Divina assist if you still want more % damage
+- :card[680] (Stella) - **Recommended for all players** - 40% team attack speed on final wave, only 2 copies needed; sell one back after leveling
+
+**Temporary:**
+
+Cash Auction:
 - :card[733] - **Good Divina melee lead** - if you missed :card[724] last month, this is your chance
 - :card[734] - **Good Phantasma melee lead** - 25% crit rate for all Phantasma, strong for shorter fights
+- :card[742] *(4★)* - **Situational** - 10% XP and 10% drop rate; grab if you lack :card[580] or :card[751]
 - :card[732] - **Pass** - weaker Anima ranged lead, save your cash
 
-**Second Week Gacha:**
+Second Week Gacha:
 - :card[740] - **Must buy for Phantasma** without :card[1401]; still usable if you have her
 - :card[741] - **Strong buy for most players** - best single-target buffing healer in the game; meta power creep may reduce ceiling value in top-end teams with :card[1401] or :card[1526]
 
-**Exchange & Rerun:**
-- :card[753] (Exchange) - **Buy :card[664] or :card[1531] first** - decent Divina assist if you still want more % damage
-- Rerun TBD - Sports Meet or Music Festival cards expected
+Festival Auction:
+- :card[529] (Rerun) - **PvP niche** - stun assist is interesting in PvP but mostly ignored by bosses in PvE
+- :card[528] (Rerun) - **Pass** - powercrept attacker
 
 ---
 
