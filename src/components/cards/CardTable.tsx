@@ -1,4 +1,9 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+
+interface ColumnMeta {
+  hidden?: boolean;
+  hideOnSmall?: boolean;
+}
 import {
   useReactTable,
   getCoreRowModel,
@@ -830,7 +835,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             {table.getHeaderGroups().map(headerGroup => (
               <tr key={headerGroup.id}>
                 {headerGroup.headers.map(header => {
-                  const meta = header.column.columnDef.meta as any;
+                  const meta = header.column.columnDef.meta as ColumnMeta | undefined;
                   // Skip completely hidden columns (used for filtering only)
                   if (meta?.hidden) return null;
                   const hideOnSmall = meta?.hideOnSmall;
@@ -856,7 +861,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
           <tbody>
             {table.getRowModel().rows.length === 0 ? (
               <tr>
-                <td colSpan={columns.filter(c => !(c.meta as any)?.hidden).length} className="text-center py-8">
+                <td colSpan={columns.filter(c => !(c.meta as ColumnMeta | undefined)?.hidden).length} className="text-center py-8">
                   <div className="text-secondary">
                     <p className="text-lg font-medium">No cards found</p>
                     <p className="text-sm mt-1">Try adjusting your search or filters</p>
@@ -867,7 +872,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               table.getRowModel().rows.map(row => (
                 <tr key={row.id} className="hover:bg-surface transition-colors">
                   {row.getVisibleCells().map(cell => {
-                    const meta = cell.column.columnDef.meta as any;
+                    const meta = cell.column.columnDef.meta as ColumnMeta | undefined;
                     // Skip completely hidden columns
                     if (meta?.hidden) return null;
                     const hideOnSmall = meta?.hideOnSmall;
