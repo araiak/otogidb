@@ -1,0 +1,110 @@
+{
+  "version": "fa11c2b",
+  "version_date": "2026-03-15",
+  "previous_version": "c58924b",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 2
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "2373",
+      "name": "Harvest Moon",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588578/otogi/cards_hd/102373_hd.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.parsed.target.count",
+          "field_label": "Count",
+          "old": 1,
+          "new": 2,
+          "display": "Count: 1 → 2 (+1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.tags.2",
+          "field_label": "Tag #3",
+          "old": "Single",
+          "new": "Multi",
+          "display": "Tag #3: Single → Multi"
+        }
+      ]
+    },
+    {
+      "id": "731",
+      "name": "Wild Star Thorn",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765588475/otogi/cards_hd/100731_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.estimate",
+          "field_label": "Estimate",
+          "old": null,
+          "new": {
+            "estimated_date": "2026-10-15",
+            "event_id": "179",
+            "event_name": "Guild Conquest ーWild Star Thornー",
+            "event_date": "2026-03-17",
+            "confidence": "high",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "display": "Estimate: Added ({'estimated_date': '2026-10-15', 'event_id': '179', 'event_name': 'Guild Conquest ーWild Star Thornー', 'event_date': '2026-03-17', 'confidence': 'high', 'note': 'Auctions typically start on the 15th, ~7 months after event'})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "179",
+            "event_name": "Guild Conquest ーWild Star Thornー",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '179', 'event_name': 'Guild Conquest ーWild Star Thornー', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monsterAbility": {
+      "old_count": 1008,
+      "new_count": 1008,
+      "diff": 0
+    }
+  },
+  "cards": []
+}

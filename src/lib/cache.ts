@@ -151,37 +151,37 @@ export async function fetchWithCache<T>(
       // CRITICAL: If build version exists and doesn't match cached version, invalidate
       // This ensures new deployments always fetch fresh data
       if (buildVersion && cached.version && cached.version !== buildVersion) {
-        console.log(`[Cache] Version mismatch: ${url} (cached: ${cached.version}, build: ${buildVersion})`);
+        if (import.meta.env.DEV) console.log(`[Cache] Version mismatch: ${url} (cached: ${cached.version}, build: ${buildVersion})`);
         // Continue to fetch fresh data
       }
       // If we have expected version/hash, validate against it
       else if (expectedVersion && cached.version === expectedVersion) {
-        console.log(`[Cache] Hit: ${url} (version match: ${expectedVersion})`);
+        if (import.meta.env.DEV) console.log(`[Cache] Hit: ${url} (version match: ${expectedVersion})`);
         return cached.data as T;
       }
       else if (expectedHash && cached.hash === expectedHash) {
-        console.log(`[Cache] Hit: ${url} (hash match: ${expectedHash})`);
+        if (import.meta.env.DEV) console.log(`[Cache] Hit: ${url} (hash match: ${expectedHash})`);
         return cached.data as T;
       }
       // Build version matches cached version - use cache if not expired
       else if (buildVersion && cached.version === buildVersion) {
-        console.log(`[Cache] Hit: ${url} (build version match: ${buildVersion})`);
+        if (import.meta.env.DEV) console.log(`[Cache] Hit: ${url} (build version match: ${buildVersion})`);
         return cached.data as T;
       }
       // No build version set and not expired, use cache
       else if (!buildVersion && !expectedVersion && !expectedHash && !isExpired) {
-        console.log(`[Cache] Hit: ${url} (not expired, age: ${Math.round(age / 1000)}s)`);
+        if (import.meta.env.DEV) console.log(`[Cache] Hit: ${url} (not expired, age: ${Math.round(age / 1000)}s)`);
         return cached.data as T;
       }
       else {
-        console.log(`[Cache] Stale: ${url} (age: ${Math.round(age / 1000)}s, expired: ${isExpired})`);
+        if (import.meta.env.DEV) console.log(`[Cache] Stale: ${url} (age: ${Math.round(age / 1000)}s, expired: ${isExpired})`);
       }
     }
   }
 
   // Fetch fresh data with cache-busting version
   const fetchUrl = buildVersion ? `${url}?v=${buildVersion}` : url;
-  console.log(`[Cache] Fetching: ${fetchUrl}`);
+  if (import.meta.env.DEV) console.log(`[Cache] Fetching: ${fetchUrl}`);
   const response = await fetch(fetchUrl);
 
   if (!response.ok) {
@@ -205,7 +205,7 @@ export async function fetchWithCache<T>(
       hash,
       cachedAt: Date.now()
     });
-    console.log(`[Cache] Stored: ${url} (version: ${dataVersion}, hash: ${hash})`);
+    if (import.meta.env.DEV) console.log(`[Cache] Stored: ${url} (version: ${dataVersion}, hash: ${hash})`);
   }
 
   return data;

@@ -92,7 +92,7 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
       cardsData = deltaResult.data;
       // If delta was applied OR we already fetched fresh data, no need to fetch again
       if (deltaResult.source === 'delta' || deltaResult.source === 'fresh') {
-        console.log(`[Cards] Using ${deltaResult.source} data, skipping redundant fetch`);
+        if (import.meta.env.DEV) console.log(`[Cards] Using ${deltaResult.source} data, skipping redundant fetch`);
       }
     }
   }
@@ -109,7 +109,7 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
       // Try to get ANY cached data as last resort (even if stale)
       const staleCached = await tryGetStaleCachedData(dataPath);
       if (staleCached) {
-        console.warn('[Cards] Using stale cached data due to fetch failure');
+        if (import.meta.env.DEV) console.warn('[Cards] Using stale cached data due to fetch failure');
         cardsData = staleCached;
       } else {
         throw new Error('Failed to load card data and no cached data available');
@@ -150,7 +150,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
     const targetVersion = await getCurrentVersion();
 
     if (!targetVersion) {
-      console.log('[Delta] No target version available from any manifest');
+      if (import.meta.env.DEV) console.log('[Delta] No target version available from any manifest');
       return { data: null, source: 'none' };
     }
 
@@ -164,7 +164,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
 
     // Check if fetchWithCache just got fresh data (versions match)
     if ((cachedData.data_hash ?? cachedData.version) === targetVersion) {
-      console.log(`[Delta] Data already at target version ${targetVersion}`);
+      if (import.meta.env.DEV) console.log(`[Delta] Data already at target version ${targetVersion}`);
       return { data: cachedData, source: 'fresh' };
     }
 
@@ -173,13 +173,13 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
 
     if (updatedData && updatedData !== cachedData) {
       // Delta was successfully applied
-      console.log('[Delta] Delta applied successfully');
+      if (import.meta.env.DEV) console.log('[Delta] Delta applied successfully');
       return { data: updatedData, source: 'delta' };
     }
 
     // Delta not available or failed, but we have cached data
     if (cachedData) {
-      console.log('[Delta] Using cached data (delta not available)');
+      if (import.meta.env.DEV) console.log('[Delta] Using cached data (delta not available)');
       return { data: cachedData, source: 'cached' };
     }
 
