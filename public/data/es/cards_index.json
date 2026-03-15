@@ -15904,7 +15904,7 @@
           "tags": [
             "Team",
             "Phantasma",
-            "Single",
+            "Multi",
             "DMG Boost"
           ],
           "unlock_level": 75
@@ -15935,7 +15935,7 @@
         }
       ],
       "gives_special_bond": false,
-      "has_bugs": true,
+      "has_bugs": false,
       "id": "2373",
       "image_urls": {
         "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765585645/otogi/android/102373.png",
@@ -48185,7 +48185,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "100731",
       "bonds": [
@@ -51127,8 +51129,8 @@
       }
     }
   },
-  "data_hash": "7cb98e74",
+  "data_hash": "0f8876a8",
   "locale": "es",
   "total_cards": 917,
-  "version": "c58924b"
+  "version": "fa11c2b"
 }

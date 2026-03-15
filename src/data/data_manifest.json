@@ -1,14 +1,7 @@
 {
-  "data_hash": "f4119ec4",
+  "data_hash": "37804797",
   "delta": {
     "available_deltas": [
-      {
-        "file": "/data/delta/cf5f1235_to_55764139.json",
-        "from_version": "cf5f1235",
-        "operations": 27,
-        "size_bytes": 1963,
-        "to_version": "55764139"
-      },
       {
         "file": "/data/delta/55764139_to_302f9ef9.json",
         "from_version": "55764139",
@@ -71,37 +64,44 @@
         "operations": 26,
         "size_bytes": 2037,
         "to_version": "f4119ec4"
+      },
+      {
+        "file": "/data/delta/f4119ec4_to_37804797.json",
+        "from_version": "f4119ec4",
+        "operations": 5,
+        "size_bytes": 315,
+        "to_version": "37804797"
       }
     ],
-    "current_version": "f4119ec4",
-    "oldest_supported_version": "cf5f1235"
+    "current_version": "37804797",
+    "oldest_supported_version": "55764139"
   },
   "files": {
     "en": {
-      "cards_index": "/data/cards_index.096dea83.json",
+      "cards_index": "/data/cards_index.7406dd5b.json",
       "cards_index_base": "/data/cards_index.json"
     },
     "es": {
-      "cards_index": "/data/es/cards_index.7b32e414.json",
+      "cards_index": "/data/es/cards_index.bdd6f99d.json",
       "cards_index_base": "/data/es/cards_index.json"
     },
     "ja": {
-      "cards_index": "/data/ja/cards_index.144adef6.json",
+      "cards_index": "/data/ja/cards_index.a58a8f6c.json",
       "cards_index_base": "/data/ja/cards_index.json"
     },
     "ko": {
-      "cards_index": "/data/ko/cards_index.3f99892a.json",
+      "cards_index": "/data/ko/cards_index.00d31a24.json",
       "cards_index_base": "/data/ko/cards_index.json"
     },
     "zh-cn": {
-      "cards_index": "/data/zh-cn/cards_index.00b411c0.json",
+      "cards_index": "/data/zh-cn/cards_index.f15022f1.json",
       "cards_index_base": "/data/zh-cn/cards_index.json"
     },
     "zh-tw": {
-      "cards_index": "/data/zh-tw/cards_index.99a86990.json",
+      "cards_index": "/data/zh-tw/cards_index.cbf388cf.json",
       "cards_index_base": "/data/zh-tw/cards_index.json"
     }
   },
-  "generated_at": "2026-03-14T14:42:00.104709",
-  "version": "c58924b"
+  "generated_at": "2026-03-15T14:47:21.633958",
+  "version": "fa11c2b"
 }
