@@ -402,6 +402,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const handleShowBugsChange = (checked: boolean) => {
     setShowBugs(checked);
     localStorage.setItem('otogidb-show-bugs', String(checked));
+    if (!checked) setBugsOnly(false);
   };
 
   // Copy share link to clipboard
