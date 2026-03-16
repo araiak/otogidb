@@ -41,6 +41,6 @@ if (calendarData.auction_predictions?.length) {
       <p class="text-secondary">Eventos actuales y próximos, banners destacados, intercambios y mazmorras diarias.</p>
     </div>
 
-    <CalendarPage client:load data={calendarData} />
+    <CalendarPage client:only="react" data={calendarData} />
   </div>
 </BaseLayout>
