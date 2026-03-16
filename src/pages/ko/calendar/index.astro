@@ -41,6 +41,6 @@ if (calendarData.auction_predictions?.length) {
       <p class="text-secondary">현재 및 예정된 이벤트, 픽업 가챠, 교환, 일일 던전.</p>
     </div>
 
-    <CalendarPage client:load data={calendarData} />
+    <CalendarPage client:only="react" data={calendarData} />
   </div>
 </BaseLayout>
