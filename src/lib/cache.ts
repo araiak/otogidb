@@ -67,7 +67,7 @@ async function getCached(key: string): Promise<CacheEntry | null> {
       request.onsuccess = () => resolve(request.result || null);
     });
   } catch (error) {
-    console.warn('Cache read error:', error);
+    console.warn('[Cache] IndexedDB operation failed', { key, error: String(error) });
     return null;
   }
 }
@@ -87,7 +87,7 @@ async function setCache(entry: CacheEntry): Promise<void> {
       request.onsuccess = () => resolve();
     });
   } catch (error) {
-    console.warn('Cache write error:', error);
+    console.warn('[Cache] IndexedDB operation failed', { key: entry.key, error: String(error) });
   }
 }
 

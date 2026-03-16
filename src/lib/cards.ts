@@ -109,9 +109,10 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
       // Try to get ANY cached data as last resort (even if stale)
       const staleCached = await tryGetStaleCachedData(dataPath);
       if (staleCached) {
-        if (import.meta.env.DEV) console.warn('[Cards] Using stale cached data due to fetch failure');
+        console.warn('[Cards] Serving stale cached data — fetch failed', { locale, error: String(error) });
         cardsData = staleCached;
       } else {
+        console.error('[Cards] Fatal: no card data and no stale cache', { locale });
         throw new Error('Failed to load card data and no cached data available');
       }
     }
@@ -185,7 +186,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
 
     return { data: null, source: 'none' };
   } catch (error) {
-    console.warn('[Delta] Delta update flow failed:', error);
+    console.warn('[Delta] Delta update failed, falling back to full fetch', { locale, error: String(error) });
     return { data: null, source: 'none' };
   }
 }

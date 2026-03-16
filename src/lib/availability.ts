@@ -82,13 +82,14 @@ export async function fetchAvailabilityManifest(): Promise<AvailabilityManifest 
       return null;
     }
 
-    return await response.json();
-  } catch (error) {
-    if (error instanceof Error && error.name === 'AbortError') {
-      console.warn('[Availability] Manifest fetch timed out');
-    } else {
-      console.error('[Availability] Failed to fetch manifest:', error);
+    try {
+      return await response.json();
+    } catch (parseError) {
+      console.warn('[Availability] Failed to parse availability data', { error: String(parseError) });
+      return null;
     }
+  } catch (error) {
+    console.warn('[Availability] Manifest fetch failed — auction status will be missing', { error: String(error) });
     return null;
   }
 }
@@ -119,13 +120,14 @@ export async function fetchAvailabilityData(version: string): Promise<Availabili
       return null;
     }
 
-    return await response.json();
-  } catch (error) {
-    if (error instanceof Error && error.name === 'AbortError') {
-      console.warn('[Availability] Data fetch timed out for version:', version);
-    } else {
-      console.error('[Availability] Failed to fetch data:', error);
+    try {
+      return await response.json();
+    } catch (parseError) {
+      console.warn('[Availability] Failed to parse availability data', { error: String(parseError) });
+      return null;
     }
+  } catch (error) {
+    console.warn('[Availability] Data fetch failed — auction status will be missing', { error: String(error) });
     return null;
   }
 }
@@ -309,7 +311,7 @@ export function mergeAvailability(
     mergedCount.updated++;
   }
 
-  console.log(
+  if (import.meta.env.DEV) console.log(
     `[Availability] Merged ${mergedCount.updated}/${mergedCount.total} cards, skipped ${mergedCount.skipped} without acquisition (version: ${availabilityData.version})`
   );
 
@@ -336,7 +338,7 @@ export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<C
 
     // Check if we need to fetch (could add version caching here later)
     const version = manifest.current_version;
-    console.log('[Availability] Current version:', version);
+    if (import.meta.env.DEV) console.log('[Availability] Current version:', version);
 
     // Fetch availability data
     const availabilityData = await fetchAvailabilityData(version);
