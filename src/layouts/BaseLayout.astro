@@ -1,9 +1,10 @@
 ---
 import '../styles/global.css';
 import { themeInitScript } from '../lib/theme';
-import { localeInitScript, extractLocaleFromPath, LOCALE_NAMES, SUPPORTED_LOCALES, getPathInLocale } from '../lib/i18n';
+import { localeInitScript, extractLocaleFromPath } from '../lib/i18n';
 import DebugPanel from '../components/DebugPanel';
 import SEO from '../components/SEO.astro';
+import LocaleSwitcher from '../components/LocaleSwitcher';
 
 // Favicon using Cloudinary transformation of card image (Sola - card 100014)
 const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
@@ -242,6 +243,36 @@ const navLinks = {
     )}
   </head>
   <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">
+    <!-- Maintenance banner -->
+    <div style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
+      <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
+        <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
+        <span id="maintenance-msg">We're experiencing some issues and are working on a fix. Languages are coming back soon!</span>
+      </div>
+    </div>
+    <script is:inline>
+      (function() {
+        var msgs = {
+          en: "We're experiencing some issues and are working on a fix. Languages are coming back soon!",
+          ja: "現在問題が発生しており修正中です。多言語対応は近日中に復旧予定です。",
+          ko: "현재 문제가 발생하여 수정 중입니다. 언어 지원이 곧 복구됩니다.",
+          'zh-cn': "我们正在修复问题，多语言功能即将恢复。感谢您的耐心等待！",
+          'zh-tw': "我們正在修復問題，多語言功能即將恢復。感謝您的耐心等待！",
+          es: "Estamos solucionando algunos problemas. ¡Los idiomas volverán pronto!"
+        };
+        var stored = null;
+        try { stored = localStorage.getItem('otogidb-locale'); } catch(e) {}
+        var full = (navigator.language || '').toLowerCase();
+        var lang = stored;
+        if (!lang) {
+          if (full.startsWith('zh-tw') || full === 'zh-hk' || full === 'zh-mo') lang = 'zh-tw';
+          else if (full.startsWith('zh')) lang = 'zh-cn';
+          else lang = full.split('-')[0];
+        }
+        var el = document.getElementById('maintenance-msg');
+        if (el && msgs[lang]) el.textContent = msgs[lang];
+      })();
+    </script>
     <header class="sticky top-0 z-40 border-b" style="background-color: var(--color-header); border-color: var(--color-border);">
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between h-14 md:h-16">
@@ -262,27 +293,7 @@ const navLinks = {
           <!-- Language Switcher, Theme Toggle & Mobile Menu -->
           <div class="flex items-center gap-2">
             <!-- Language Switcher -->
-            <div class="relative" id="lang-switcher">
-              <button
-                id="lang-toggle"
-                class="btn-secondary px-2 py-1 rounded-md text-xs font-medium uppercase touch-target"
-                aria-label="Change language"
-              >
-                {currentLocale.toUpperCase()}
-              </button>
-              <div id="lang-dropdown" class="hidden absolute right-0 mt-1 py-1 rounded-md shadow-lg z-50" style="background-color: var(--color-header); border: 1px solid var(--color-border); min-width: 100px;">
-                {SUPPORTED_LOCALES.map((locale) => (
-                  <a
-                    href={getPathInLocale(currentPath, locale)}
-                    class={`block px-3 py-1.5 text-sm hover:bg-white/10 ${locale === currentLocale ? 'font-medium' : ''}`}
-                    style={locale === currentLocale ? 'color: var(--color-accent);' : ''}
-                    data-locale={locale}
-                  >
-                    {LOCALE_NAMES[locale]}
-                  </a>
-                ))}
-              </div>
-            </div>
+            <LocaleSwitcher client:load />
 
             <button
               id="theme-toggle"
@@ -419,84 +430,6 @@ const navLinks = {
           }
         }
       });
-
-      // Language switcher
-      const langToggle = document.getElementById('lang-toggle');
-      const langDropdown = document.getElementById('lang-dropdown');
-      const langSwitcher = document.getElementById('lang-switcher');
-
-      const SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
-      const LOCALE_STORAGE_KEY = 'otogidb-locale';
-
-      // Get effective locale (what's actually being used for data)
-      function getEffectiveLocale(): string {
-        // 1. Check URL path first
-        const pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
-        if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1])) {
-          return pathMatch[1];
-        }
-
-        // 2. Check stored preference
-        const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
-        if (stored && SUPPORTED_LOCALES.includes(stored)) {
-          return stored;
-        }
-
-        // 3. Default to English
-        return 'en';
-      }
-
-      // Update dropdown button and active state to reflect actual locale
-      function syncDropdownWithLocale(locale: string) {
-        if (langToggle) {
-          // Show short code for Chinese variants
-          const displayCode = locale.startsWith('zh-') ? 'ZH' : locale.toUpperCase();
-          langToggle.textContent = displayCode;
-        }
-
-        // Update active state in dropdown
-        if (langDropdown) {
-          langDropdown.querySelectorAll('a[data-locale]').forEach((link) => {
-            const linkLocale = (link as HTMLElement).dataset.locale;
-            if (linkLocale === locale) {
-              link.classList.add('font-medium');
-              (link as HTMLElement).style.color = 'var(--color-accent)';
-            } else {
-              link.classList.remove('font-medium');
-              (link as HTMLElement).style.color = '';
-            }
-          });
-        }
-      }
-
-      if (langToggle && langDropdown && langSwitcher) {
-        // Sync dropdown on page load
-        syncDropdownWithLocale(getEffectiveLocale());
-
-        langToggle.addEventListener('click', (e) => {
-          e.stopPropagation();
-          langDropdown.classList.toggle('hidden');
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', (e) => {
-          if (!langSwitcher.contains(e.target as Node)) {
-            langDropdown.classList.add('hidden');
-          }
-        });
-
-        // Handle language selection - save preference then allow navigation
-        langDropdown.querySelectorAll('a[data-locale]').forEach((link) => {
-          link.addEventListener('click', () => {
-            const locale = (link as HTMLElement).dataset.locale;
-            if (locale) {
-              // Save explicit locale choice before navigation
-              localStorage.setItem('otogidb-locale', locale);
-              // Navigation happens via the <a> href - no need to prevent default
-            }
-          });
-        });
-      }
 
       // Register Service Worker for image caching (reduces Cloudinary bandwidth)
       if ('serviceWorker' in navigator) {
