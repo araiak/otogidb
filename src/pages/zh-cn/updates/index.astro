@@ -1,6 +1,6 @@
 ---
 /**
- * Simplified Chinese (zh-cn) Updates/Patch Notes Page
+ * Japanese Updates/Patch Notes Page
  */
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CardPopups from '../../../components/cards/CardPopups';
@@ -12,8 +12,10 @@ const t = getTranslations(currentLocale);
 
 // Import localized cards, skills, and tier data for hover popups
 import cardsDataRaw from '../../../data/zh-cn/cards.json';
+import skillsDataRaw from '../../../data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
 
 interface CardIndexEntry {
   id: string;
@@ -145,7 +147,7 @@ function groupByMonth(updates: PatchNotes[]): MonthGroup[] {
 const groupedUpdates = groupByMonth(visiblePatchNotes);
 ---
 
-<BaseLayout title={t.updates} description={t.patchNotesDescription} hasLocalizedUrls={true} lang={currentLocale}>
+<BaseLayout title={t.updates} description="あやかし百鬼夜行 カードパッチノート - 新カードとバランス調整" hasLocalizedUrls={true} lang={currentLocale}>
   <script is:inline define:vars={{ currentLocale }}>
     (function() {
       var STORAGE_KEY = 'otogidb-locale';
@@ -282,6 +284,6 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
       </div>
     )}
 
-    <CardPopups client:load cards={cardsData.cards} />
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
   </div>
 </BaseLayout>

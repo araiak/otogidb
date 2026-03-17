@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getCardsData } from '../../lib/cards';
+import { getCardsData, getSkillsData } from '../../lib/cards';
 import type { CardLocale } from '../../lib/cards';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 import type { Card } from '../../types/card';
@@ -31,21 +31,33 @@ function detectLocale(): SupportedLocale {
  */
 export default function CalendarPage({ data }: CalendarPageProps) {
   const [cards, setCards] = useState<Record<string, Card>>({});
+  const [skills, setSkills] = useState<Record<string, any>>({});
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const locale = detectLocale();
-    getCardsData({ locale: locale as CardLocale })
-      .then((result) => setCards(result.cards))
-      .catch(err => console.error('[CalendarPage] Failed to load card data:', err))
-      .finally(() => setLoading(false));
+    async function loadData() {
+      try {
+        const [cardsResult, skillsResult] = await Promise.all([
+          getCardsData({ locale: locale as CardLocale }),
+          getSkillsData(),
+        ]);
+        setCards(cardsResult.cards);
+        setSkills(skillsResult.skills || {});
+      } catch (err) {
+        console.error('[CalendarPage] Failed to load card data:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
   }, []);
 
   return (
     <>
       <EventCalendar data={data} cards={loading ? undefined : cards} />
       {!loading && Object.keys(cards).length > 0 && (
-        <CardPopups cards={cards} />
+        <CardPopups cards={cards} skills={skills} />
       )}
     </>
   );

@@ -552,15 +552,12 @@ function validateLink(href: string, pageLocale: string): { valid: boolean; issue
 
   // Internal links should have locale prefix
   if (href.startsWith('/') && !hasLocalePrefix) {
-    // Exception: static assets like /data/, /_astro/, /favicon, /icons/
+    // Exception: static assets like /data/, /_astro/, /favicon
     if (
       href.startsWith('/data/') ||
       href.startsWith('/_astro/') ||
       href.startsWith('/favicon') ||
-      href.startsWith('/apple-touch-icon') ||
-      href === '/_redirects' ||
-      href.startsWith('/icons/') ||
-      href.startsWith('/images/')
+      href.startsWith('/_redirects')
     ) {
       return { valid: true };
     }

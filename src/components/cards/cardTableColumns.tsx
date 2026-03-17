@@ -26,7 +26,7 @@ export function getCardTableColumns({
       header: '',
       size: 50,
       enableSorting: false,
-      cell: ({ row }) => <ImageCell card={row.original} locale={locale} />,
+      cell: ({ row }) => <ImageCell card={row.original} skills={{}} locale={locale} />,
     },
     {
       accessorKey: 'id',
