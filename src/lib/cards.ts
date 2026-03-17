@@ -241,16 +241,20 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
  * This ignores cache expiry and version checks.
  */
 async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
+  if (typeof indexedDB === 'undefined') return null;
   try {
     // Access IndexedDB directly to get any cached data
     return new Promise((resolve) => {
       const request = indexedDB.open(DB_NAME, 1);
 
       request.onerror = () => resolve(null);
+      request.onblocked = () => resolve(null);
       request.onsuccess = () => {
         const db = request.result;
         try {
           const transaction = db.transaction(STORE_NAME, 'readonly');
+          transaction.onerror = () => resolve(null);
+          transaction.onabort = () => resolve(null);
           const store = transaction.objectStore(STORE_NAME);
           const getRequest = store.get(url);
 
