@@ -12,8 +12,10 @@ const t = getTranslations(currentLocale);
 
 // Import localized cards, skills, and tier data for hover popups
 import cardsDataRaw from '../../../data/ko/cards.json';
+import skillsDataRaw from '../../../data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
+const skillsData = (skillsDataRaw as any).skills || {};
 
 interface CardIndexEntry {
   id: string;
@@ -282,6 +284,6 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
       </div>
     )}
 
-    <CardPopups client:load cards={cardsData.cards} />
+    <CardPopups client:load cards={cardsData.cards} skills={skillsData} />
   </div>
 </BaseLayout>

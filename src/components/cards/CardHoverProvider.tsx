@@ -9,6 +9,8 @@ import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 interface CardHoverProviderProps {
   /** Card data lookup by ID */
   cards: Record<string, Card>;
+  /** Skill data for formatting descriptions */
+  skills?: Record<string, any>;
   /** CSS selector for elements with data-card-id attribute */
   selector?: string;
   /** Floating popup placement */
@@ -45,6 +47,7 @@ interface CardHoverProviderProps {
  */
 export default function CardHoverProvider({
   cards,
+  skills = {},
   selector = '[data-card-id]',
   placement = 'top',
   offsetDistance = 8,
@@ -100,7 +103,7 @@ export default function CardHoverProvider({
           >
             <CardPreviewContent
               card={activeCard}
-
+              skills={skills}
               compact={compact}
               locale={locale}
             />
@@ -144,7 +147,7 @@ export default function CardHoverProvider({
             <div className="p-4 max-h-[70vh] overflow-y-auto">
               <CardPreviewContent
                 card={mobilePreviewCard}
-  
+                skills={skills}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}
@@ -165,6 +168,7 @@ export function CardFloatingPopup({
   card,
   isOpen,
   referenceElement,
+  skills = {},
   placement = 'right-start',
   compact = true,
   locale = 'en',
@@ -172,6 +176,7 @@ export function CardFloatingPopup({
   card: Card | null;
   isOpen: boolean;
   referenceElement: HTMLElement | null;
+  skills?: Record<string, any>;
   placement?: Placement;
   compact?: boolean;
   locale?: SupportedLocale;
@@ -198,6 +203,7 @@ export function CardFloatingPopup({
       >
         <CardPreviewContent
           card={card}
+          skills={skills}
           compact={compact}
           locale={locale}
         />
