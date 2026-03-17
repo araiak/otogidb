@@ -52,7 +52,7 @@ export interface UITranslations {
   machineTranslatedNote: string;
 }
 
-const translations: Record<string, UITranslations> = {
+const translations: Record<SupportedLocale, UITranslations> = {
   en: {
     blog: 'Blog',
     updates: 'Updates',

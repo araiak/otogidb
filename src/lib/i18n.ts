@@ -11,16 +11,26 @@
  * 3. Default to English
  */
 
-export const SUPPORTED_LOCALES = ['en'] as const;
+export const SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'] as const;
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
 export const LOCALE_NAMES: Record<SupportedLocale, string> = {
   en: 'English',
+  ja: '日本語',
+  ko: '한국어',
+  'zh-cn': '中文（简体）',
+  'zh-tw': '中文（繁體）',
+  es: 'Español',
 };
 
 // Map URL locale codes to data file directory names
 export const LOCALE_DATA_PATHS: Record<SupportedLocale, string> = {
   en: '', // English is at root: /data/cards.json
+  ja: 'ja',
+  ko: 'ko',
+  'zh-cn': 'zh-cn',
+  'zh-tw': 'zh-tw',
+  es: 'es',
 };
 
 export const DEFAULT_LOCALE: SupportedLocale = 'en';
@@ -115,10 +125,20 @@ export function detectBrowserLocale(): SupportedLocale {
   const browserLangs = navigator.languages || [navigator.language];
 
   for (const lang of browserLangs) {
-    // Check for exact match first (e.g., 'ja', 'en')
-    const shortLang = lang.split('-')[0].toLowerCase();
-    if (SUPPORTED_LOCALES.includes(shortLang as SupportedLocale)) {
-      return shortLang as SupportedLocale;
+    const normalized = lang.toLowerCase();
+
+    // Check for exact match first (e.g., 'zh-cn', 'zh-tw', 'en', 'ja')
+    if (SUPPORTED_LOCALES.includes(normalized as SupportedLocale)) {
+      return normalized as SupportedLocale;
+    }
+
+    // Then check primary language code (e.g., 'zh' from 'zh-CN' or 'zh-Hans')
+    const primaryLang = normalized.split('-')[0];
+    const matchingLocale = SUPPORTED_LOCALES.find(
+      (locale) => locale.split('-')[0] === primaryLang
+    );
+    if (matchingLocale) {
+      return matchingLocale;
     }
   }
 
@@ -166,9 +186,9 @@ export function getEffectiveLocale(): SupportedLocale {
  */
 export const localeInitScript = `
 (function() {
-  const SUPPORTED = ['en'];
-  const STORAGE_KEY = 'otogidb-locale';
-  const DEFAULT = 'en';
+  const SUPPORTED = ${JSON.stringify(SUPPORTED_LOCALES)};
+  const STORAGE_KEY = '${LOCALE_STORAGE_KEY}';
+  const DEFAULT = '${DEFAULT_LOCALE}';
 
   function getStoredLocale() {
     try {
@@ -191,6 +211,22 @@ export const localeInitScript = `
       if (lower.startsWith('zh-hant') || lower === 'zh-hk' || lower === 'zh-mo') return 'zh-tw';
     }
     return DEFAULT;
+  }
+
+  // Detect intended locale from redirect: ?lang=ja appended by _redirects rules
+  const params = new URLSearchParams(location.search);
+  const langParam = params.get('lang');
+  if (langParam && SUPPORTED.includes(langParam)) {
+    try { localStorage.setItem(STORAGE_KEY, langParam); } catch {}
+    // Strip ?lang from URL without reloading, preserving any other params
+    params.delete('lang');
+    const newSearch = params.toString();
+    const newUrl = location.pathname + (newSearch ? '?' + newSearch : '') + location.hash;
+    history.replaceState(null, '', newUrl);
+    // Dispatch event after React hydrates so components can react
+    window.addEventListener('DOMContentLoaded', function() {
+      window.dispatchEvent(new CustomEvent('otogidb-locale-change', { detail: { locale: langParam } }));
+    }, { once: true });
   }
 
   // Redirect from root to preferred locale

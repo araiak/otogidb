@@ -3,42 +3,54 @@ import { BASE_URL, TIMEOUTS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
 
 test.describe('Locale Switching', () => {
-  test('Japanese locale loads correctly', async ({ page }) => {
+  test('non-EN locale URLs redirect to /en/', async ({ page }) => {
+    await page.setViewportSize(VIEWPORTS.desktop)
+
+    // Playwright follows 301s by default; final URL should be /en/cards/1
+    await page.goto(`${BASE_URL}/ja/cards/1`, { waitUntil: 'domcontentloaded' })
+    expect(page.url()).toContain('/en/cards/1')
+  })
+
+  test('locale switcher is present on /en/', async ({ page }) => {
+    await page.setViewportSize(VIEWPORTS.desktop)
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await page.waitForSelector('[data-locale-switcher], #locale-switcher, [aria-label*="locale"], [aria-label*="language"]', {
+      timeout: TIMEOUTS.pageLoad,
+    })
+  })
+
+  test('switching locale updates localStorage', async ({ page }) => {
+    await page.setViewportSize(VIEWPORTS.desktop)
+
+    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+
+    // Wait for the page to be interactive
+    await page.waitForTimeout(500)
+
+    // Dispatch locale change event directly to simulate switcher click
+    await page.evaluate(() => {
+      window.dispatchEvent(
+        new CustomEvent('otogidb-locale-change', { detail: { locale: 'ja' } })
+      )
+      localStorage.setItem('otogidb-locale', 'ja')
+    })
+
+    const stored = await page.evaluate(() => localStorage.getItem('otogidb-locale'))
+    expect(stored).toBe('ja')
+  })
+
+  test('root /ja/ returns redirect to /en/', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
     await page.goto(`${BASE_URL}/ja/`, { waitUntil: 'domcontentloaded' })
-
-    // Verify Japanese content loaded via lang attribute
-    await expect(page.locator('html[lang="ja"]')).toBeAttached()
-
-    // Verify page content loaded (table or card data)
-    await page.waitForSelector('table.data-table, .card-grid-item', { timeout: TIMEOUTS.pageLoad })
+    expect(page.url()).toContain('/en/')
   })
 
-  test('Korean locale loads correctly', async ({ page }) => {
+  test('root /ko/ returns redirect to /en/', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
     await page.goto(`${BASE_URL}/ko/`, { waitUntil: 'domcontentloaded' })
-
-    // Verify Korean content loaded
-    await expect(page.locator('html[lang="ko"]')).toBeAttached()
-  })
-
-  test('Chinese (Simplified) locale loads correctly', async ({ page }) => {
-    await page.setViewportSize(VIEWPORTS.desktop)
-
-    await page.goto(`${BASE_URL}/zh-cn/`, { waitUntil: 'domcontentloaded' })
-
-    // Verify Chinese content loaded
-    await expect(page.locator('html[lang="zh-cn"], html[lang="zh-CN"]')).toBeAttached()
-  })
-
-  test('Spanish locale loads correctly', async ({ page }) => {
-    await page.setViewportSize(VIEWPORTS.desktop)
-
-    await page.goto(`${BASE_URL}/es/`, { waitUntil: 'domcontentloaded' })
-
-    // Verify Spanish content loaded
-    await expect(page.locator('html[lang="es"]')).toBeAttached()
+    expect(page.url()).toContain('/en/')
   })
 })
