@@ -22,15 +22,12 @@ test.describe('Card Hover Popups', () => {
     // Hover over the card image
     await cardLink.hover()
 
-    // Wait for popup animation
-    await page.waitForTimeout(TIMEOUTS.animation + 200)
-
-    // Check for popup with .popup class (hidden md:block means visible on desktop)
-    const popup = page.locator('.popup')
+    // Wait for popup to appear (CardFloatingPopup renders via FloatingPortal)
+    const popup = page.locator('.popup').first()
     await expect(popup).toBeVisible({ timeout: 5000 })
 
-    // Verify popup has content (ATK/HP stats in the preview)
-    const popupContent = await popup.textContent()
-    expect(popupContent).toMatch(/ATK|HP/i)
+    // Verify popup has stat labels from CardPreviewContent
+    await expect(popup.locator('text=ATK')).toBeVisible()
+    await expect(popup.locator('text=HP')).toBeVisible()
   })
 })
