@@ -136,8 +136,8 @@ describe('tryDeltaUpdate', () => {
 
   it('applies chained two-hop delta and returns updated data', async () => {
     const v1Data = makeCardsData('v1', 'hash1');
-    const v2Data = makeCardsData('v2', 'hash2');
-    const v3Data = makeCardsData('v3', 'hash3');
+    const _v2Data = makeCardsData('v2', 'hash2');
+    const _v3Data = makeCardsData('v3', 'hash3');
 
     // Manifest shows V1→V2 and V2→V3
     const manifest = {

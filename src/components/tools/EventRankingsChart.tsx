@@ -20,7 +20,7 @@ import {
   buildChartData,
   buildTrendData,
 } from '../../lib/eventRankings';
-import type { EventCutoff, EventCutoffsData, Tier } from '../../lib/eventRankings';
+import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
 // --- Constants ---
 
@@ -161,7 +161,7 @@ function RankingSubChart({
   // Reset to all tiers when tiers change (period switch)
   useEffect(() => {
     if (tiers.length) setActiveTiers(new Set(tiers.map(t => t.key)));
-  }, [tiers.map(t => t.key).join(',')]);
+  }, [tiers]);
 
   const chartData = useMemo(
     () => buildChartData(events, period, tiers),
@@ -295,8 +295,6 @@ function RankingSubChart({
           <tbody>
             {events.map(event => {
               const cutoffs = event.periods[period]?.cutoffs ?? [];
-              // Sort each event's cutoffs by rank_min to align with T1, T2, ...
-              const sorted = [...cutoffs].sort((a, b) => a.rank_min - b.rank_min);
               return (
                 <tr key={event.event_id} className="border-b border-surface/50 hover:bg-surface/30 transition-colors">
                   <td className="py-2 pr-4 whitespace-nowrap">{event.event_name}</td>
