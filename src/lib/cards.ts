@@ -233,6 +233,13 @@ async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
       const request = indexedDB.open(DB_NAME, DB_VERSION);
 
       request.onerror = () => resolve(null);
+      request.onblocked = () => resolve(null);
+      request.onupgradeneeded = (event) => {
+        const db = (event.target as IDBOpenDBRequest).result;
+        if (!db.objectStoreNames.contains(STORE_NAME)) {
+          db.createObjectStore(STORE_NAME, { keyPath: 'key' });
+        }
+      };
       request.onsuccess = () => {
         const db = request.result;
         try {

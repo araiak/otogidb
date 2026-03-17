@@ -39,10 +39,10 @@ export default defineConfig({
   ],
   output: 'static',
   i18n: {
-    locales: ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'],
+    locales: ['en'],
     defaultLocale: 'en',
     routing: {
-      prefixDefaultLocale: false  // English: /cards/1, others: /ja/cards/1, /ko/cards/1, etc.
+      prefixDefaultLocale: false
     }
   },
   markdown: {

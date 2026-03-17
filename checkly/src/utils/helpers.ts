@@ -8,10 +8,10 @@ import { TIMEOUTS } from './constants'
  */
 export async function gotoAndWaitForCards(page: Page, url: string): Promise<void> {
   const responsePromise = page.waitForResponse(
-    r => r.url().includes('cards_index') && r.status() === 200,
+    r => r.url().includes('cards_index') && (r.status() === 200 || r.status() === 304),
     { timeout: TIMEOUTS.pageLoad }
   )
   await page.goto(url, { waitUntil: 'domcontentloaded' })
   await responsePromise
-  await page.waitForSelector('text=/Showing \\d+ of \\d+ cards/', { timeout: 10000 })
+  await page.waitForSelector('text=/Showing \\d+ of \\d+ cards/', { timeout: TIMEOUTS.pageLoad })
 }

@@ -11,26 +11,16 @@
  * 3. Default to English
  */
 
-export const SUPPORTED_LOCALES = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'] as const;
+export const SUPPORTED_LOCALES = ['en'] as const;
 export type SupportedLocale = (typeof SUPPORTED_LOCALES)[number];
 
 export const LOCALE_NAMES: Record<SupportedLocale, string> = {
   en: 'English',
-  ja: '日本語',
-  ko: '한국어',
-  'zh-cn': '简体中文',
-  'zh-tw': '繁體中文',
-  es: 'Español',
 };
 
 // Map URL locale codes to data file directory names
 export const LOCALE_DATA_PATHS: Record<SupportedLocale, string> = {
   en: '', // English is at root: /data/cards.json
-  ja: 'ja', // Japanese: /data/ja/cards.json
-  ko: 'ko',
-  'zh-cn': 'zh-cn',
-  'zh-tw': 'zh-tw',
-  es: 'es',
 };
 
 export const DEFAULT_LOCALE: SupportedLocale = 'en';
@@ -176,7 +166,7 @@ export function getEffectiveLocale(): SupportedLocale {
  */
 export const localeInitScript = `
 (function() {
-  const SUPPORTED = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+  const SUPPORTED = ['en'];
   const STORAGE_KEY = 'otogidb-locale';
   const DEFAULT = 'en';
 
