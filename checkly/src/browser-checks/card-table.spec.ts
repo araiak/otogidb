@@ -13,7 +13,7 @@ test.describe('Card Table', () => {
     await page.waitForSelector(SELECTORS.cardTable, { timeout: 5000 })
 
     // Verify results count
-    const resultsCount = page.locator('text=/Showing \\d+ of \\d+ cards/')
+    const resultsCount = page.locator(SELECTORS.resultsCount)
     await expect(resultsCount).toBeVisible({ timeout: 5000 })
 
     const resultsText = await resultsCount.textContent()
@@ -36,7 +36,7 @@ test.describe('Card Table', () => {
     await expect(cardItems.first()).toBeVisible({ timeout: 5000 })
 
     // Verify results count visible
-    const resultsCount = page.locator('text=/Showing \\d+ of \\d+ cards/')
+    const resultsCount = page.locator(SELECTORS.resultsCount)
     await expect(resultsCount).toBeVisible()
   })
 
