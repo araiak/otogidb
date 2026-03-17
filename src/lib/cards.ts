@@ -1,5 +1,5 @@
 import type { CardsData, Card, SkeletonCardsData } from '../types/card';
-import { fetchWithCache } from './cache';
+import { fetchWithCache, DB_NAME, DB_VERSION, STORE_NAME } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
 
@@ -229,19 +229,15 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
  */
 async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
   try {
-    // Access IndexedDB directly to get any cached data
-    const dbName = 'otogidb-cache';
-    const storeName = 'json-cache';
-
     return new Promise((resolve) => {
-      const request = indexedDB.open(dbName, 1);
+      const request = indexedDB.open(DB_NAME, DB_VERSION);
 
       request.onerror = () => resolve(null);
       request.onsuccess = () => {
         const db = request.result;
         try {
-          const transaction = db.transaction(storeName, 'readonly');
-          const store = transaction.objectStore(storeName);
+          const transaction = db.transaction(STORE_NAME, 'readonly');
+          const store = transaction.objectStore(STORE_NAME);
           const getRequest = store.get(url);
 
           getRequest.onerror = () => resolve(null);

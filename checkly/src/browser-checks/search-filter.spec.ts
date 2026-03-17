@@ -1,34 +1,32 @@
 import { test, expect } from '@playwright/test'
 import { BASE_URL, SELECTORS, TIMEOUTS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
+import { gotoAndWaitForCards } from '../utils/helpers'
 
 test.describe('Search and Filter', () => {
   test('fuzzy search returns relevant results', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // Wait for table
-    await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
+    const searchInput = page.locator('input[placeholder="Search cards..."]')
 
     // Get initial count
-    const initialText = await page.locator(SELECTORS.resultsCount).textContent()
+    const resultsCount = page.locator('text=/Showing \\d+ of \\d+ cards/')
+    await expect(resultsCount).toBeVisible()
+    const initialText = await resultsCount.textContent()
     const initialMatch = initialText?.match(/of (\d+) cards/)
     const initialCount = initialMatch ? parseInt(initialMatch[1], 10) : 0
 
-    // Type in search box
-    const searchInput = page.locator(SELECTORS.searchInput)
+    // Search
     await searchInput.fill('Nue')
-
-    // Wait for debounce
     await page.waitForTimeout(TIMEOUTS.debounce + 200)
 
-    // Verify results are filtered
-    const filteredText = await page.locator(SELECTORS.resultsCount).textContent()
+    // Verify filtered results
+    const filteredText = await resultsCount.textContent()
     const filteredMatch = filteredText?.match(/Showing (\d+)/)
     const showingCount = filteredMatch ? parseInt(filteredMatch[1], 10) : 0
 
-    // Should show fewer results than total
     expect(showingCount).toBeGreaterThan(0)
     expect(showingCount).toBeLessThan(initialCount)
   })
@@ -36,56 +34,47 @@ test.describe('Search and Filter', () => {
   test('attribute filter works', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // Wait for table
-    await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
-
-    // Click attribute filter dropdown
-    const attrFilter = page.locator(SELECTORS.filterAttr)
+    // FilterDropdown button shows placeholder "Attr" when nothing selected
+    const attrFilter = page.locator('button:has-text("Attr")')
+    await expect(attrFilter).toBeVisible({ timeout: 5000 })
     await attrFilter.click()
 
-    // Select "Divina" from dropdown
+    // Select "Divina" from the open dropdown
     const divinaOption = page.locator('text=Divina').first()
     await divinaOption.click()
 
-    // Wait for filtered results
     await page.waitForTimeout(TIMEOUTS.debounce)
 
-    // Verify URL updated with filter
+    // URL should update with attr= param
     expect(page.url()).toContain('attr=')
 
-    // Verify clear filters button appears
-    const clearButton = page.locator(SELECTORS.clearFilters)
+    // "Clear filters" button appears when a filter is active
+    const clearButton = page.locator('button:has-text("Clear filters")')
     await expect(clearButton).toBeVisible()
   })
 
   test('combined search and filter', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // Wait for table
-    await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
-
-    // Apply rarity filter
-    const rarityFilter = page.locator(SELECTORS.filterRarity)
+    // Click rarity filter (placeholder "Rarity" when nothing selected)
+    const rarityFilter = page.locator('button:has-text("Rarity")')
+    await expect(rarityFilter).toBeVisible({ timeout: 5000 })
     await rarityFilter.click()
 
-    // Select 5-star
     const fiveStarOption = page.locator('text=/5|★★★★★/').first()
     await fiveStarOption.click()
-
     await page.waitForTimeout(TIMEOUTS.debounce)
 
-    // Now search
-    const searchInput = page.locator(SELECTORS.searchInput)
+    // Search
+    const searchInput = page.locator('input[placeholder="Search cards..."]')
     await searchInput.fill('healer')
-
     await page.waitForTimeout(TIMEOUTS.debounce + 200)
 
-    // Verify some results shown
-    const resultsText = await page.locator(SELECTORS.resultsCount).textContent()
+    const resultsText = await page.locator('text=/Showing \\d+ of \\d+ cards/').textContent()
     expect(resultsText).toMatch(/Showing \d+ of \d+ cards/)
   })
 })
