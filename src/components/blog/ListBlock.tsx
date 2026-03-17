@@ -3,36 +3,27 @@ import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
-import { getCardsData, type CardLocale } from '../../lib/cards';
+
+interface ListBlockProps {
+  cards: Record<string, Card>;
+  skills?: Record<string, any>;
+}
 
 /**
  * ListBlock - Hydrates all .card-list-block containers
  * Renders a list of specific cards by ID with hover popups (desktop) and tap preview (mobile)
- * Self-fetches card data via the shared IndexedDB cache — no prop needed.
  *
  * Usage in markdown:
  *   :list[111,123,456]
  *
  * The cards will be displayed in the order specified.
  */
-export default function ListBlock() {
+export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
-  const [cards, setCards] = useState<Record<string, Card>>({});
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
 
   useEffect(() => {
-    if (!document.querySelector('.card-list-block')) return;
-    const loc = getLocaleFromUrl() as CardLocale;
-    getCardsData({ locale: loc })
-      .then((result) => setCards(result.cards))
-      .catch(err => console.error('[ListBlock] Failed to load card data:', err));
-  }, []);
-
-  useEffect(() => {
-    // Wait until card data is loaded before processing containers
-    if (Object.keys(cards).length === 0) return;
-
     // Find all list block containers
     const containers = document.querySelectorAll<HTMLElement>('.card-list-block');
     if (containers.length === 0) return;
@@ -131,6 +122,7 @@ export default function ListBlock() {
     <CardHoverProvider
       key={hydrationKey}
       cards={cards}
+      skills={skills}
       selector=".list-card[data-card-id]"
       placement="top"
       compact={true}

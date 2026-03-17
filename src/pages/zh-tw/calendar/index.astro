@@ -41,6 +41,6 @@ if (calendarData.auction_predictions?.length) {
       <p class="text-secondary">當前及即將到來的活動、精選卡池、交換商店和每日副本。</p>
     </div>
 
-    <CalendarPage client:load data={calendarData} />
+    <CalendarPage client:only="react" data={calendarData} />
   </div>
 </BaseLayout>

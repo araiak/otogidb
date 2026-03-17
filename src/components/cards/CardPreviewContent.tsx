@@ -6,6 +6,7 @@ import type { SupportedLocale } from '../../lib/i18n';
 
 interface CardPreviewContentProps {
   card: Card;
+  skills?: Record<string, any>;
   /** Compact mode uses smaller text and 4-column stats */
   compact?: boolean;
   /** Show "View Full Details" link at bottom */
@@ -22,11 +23,13 @@ interface CardPreviewContentProps {
  */
 export default function CardPreviewContent({
   card,
+  skills = {},
   compact = true,
   showDetailsLink = false,
   locale = 'en',
 }: CardPreviewContentProps) {
   const imageUrl = getPopupImageUrl(card);
+  const skillData = card.skill ? skills[card.skill.id] : null;
 
   // Responsive sizes that scale up on larger screens
   // compact: smaller base, scales up on lg/xl
@@ -102,7 +105,7 @@ export default function CardPreviewContent({
             <div
               className={`${contentSize} text-secondary`}
               dangerouslySetInnerHTML={{
-                __html: formatSkillDescription(card.skill.description, null, card.stats.rarity) || 'No description'
+                __html: formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description'
               }}
             />
           </div>
