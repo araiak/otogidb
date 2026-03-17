@@ -26,7 +26,7 @@ function getDataVersion(): string {
 }
 
 export const DB_NAME = 'otogidb-cache';
-const DB_VERSION = 1;
+export const DB_VERSION = 2; // Bumped from 1 → forces onupgradeneeded to recreate missing object store
 export const STORE_NAME = 'json-cache';
 
 interface CacheEntry {

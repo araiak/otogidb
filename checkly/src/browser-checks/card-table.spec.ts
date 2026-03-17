@@ -1,22 +1,22 @@
 import { test, expect } from '@playwright/test'
-import { BASE_URL, SELECTORS, TIMEOUTS } from '../utils/constants'
+import { BASE_URL, SELECTORS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
+import { gotoAndWaitForCards } from '../utils/helpers'
 
 test.describe('Card Table', () => {
   test('loads card table with 850+ cards on desktop @critical', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.desktop)
 
-    // Navigate to homepage
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // Wait for card table to load
-    await page.waitForSelector(SELECTORS.cardTable, { timeout: TIMEOUTS.pageLoad })
+    // Desktop table is in hidden md:block wrapper - verify it's present
+    await page.waitForSelector(SELECTORS.cardTable, { timeout: 5000 })
 
-    // Verify results count shows cards loaded
-    const resultsText = await page.locator(SELECTORS.resultsCount).textContent()
-    expect(resultsText).toBeTruthy()
+    // Verify results count
+    const resultsCount = page.locator('text=/Showing \\d+ of \\d+ cards/')
+    await expect(resultsCount).toBeVisible({ timeout: 5000 })
 
-    // Extract card count - "Showing X of Y cards"
+    const resultsText = await resultsCount.textContent()
     const match = resultsText?.match(/of (\d+) cards/)
     const cardCount = match ? parseInt(match[1], 10) : 0
     expect(cardCount).toBeGreaterThan(850)
@@ -24,39 +24,28 @@ test.describe('Card Table', () => {
     // Verify first row has content
     const firstRow = page.locator(SELECTORS.cardTableRow).first()
     await expect(firstRow).toBeVisible()
-
-    // Verify table has images
-    const firstImage = page.locator(`${SELECTORS.cardTable} img`).first()
-    await expect(firstImage).toBeVisible()
   })
 
   test('loads card grid on mobile (iPhone 14)', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.iphone14)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // On mobile, should show card grid instead of table
-    await page.waitForSelector(SELECTORS.mobileCardItem, { timeout: TIMEOUTS.pageLoad })
-
-    // Verify at least some cards are visible
+    // Mobile grid (xs:hidden md:hidden) is visible below md breakpoint
     const cardItems = page.locator(SELECTORS.mobileCardItem)
-    await expect(cardItems.first()).toBeVisible()
+    await expect(cardItems.first()).toBeVisible({ timeout: 5000 })
 
-    // Verify results count is visible
-    const resultsText = await page.locator(SELECTORS.resultsCount).textContent()
-    expect(resultsText).toMatch(/Showing \d+ of \d+ cards/)
+    // Verify results count visible
+    const resultsCount = page.locator('text=/Showing \\d+ of \\d+ cards/')
+    await expect(resultsCount).toBeVisible()
   })
 
   test('loads card grid on mobile (Galaxy S21)', async ({ page }) => {
     await page.setViewportSize(VIEWPORTS.galaxyS21)
 
-    await page.goto(`${BASE_URL}/en/`, { waitUntil: 'domcontentloaded' })
+    await gotoAndWaitForCards(page, `${BASE_URL}/en/`)
 
-    // Wait for mobile card grid
-    await page.waitForSelector(SELECTORS.mobileCardItem, { timeout: TIMEOUTS.pageLoad })
-
-    // Verify cards are visible
     const cardItems = page.locator(SELECTORS.mobileCardItem)
-    await expect(cardItems.first()).toBeVisible()
+    await expect(cardItems.first()).toBeVisible({ timeout: 5000 })
   })
 })

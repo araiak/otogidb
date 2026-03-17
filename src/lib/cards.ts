@@ -1,5 +1,5 @@
 import type { CardsData, Card, SkeletonCardsData } from '../types/card';
-import { fetchWithCache, DB_NAME, STORE_NAME } from './cache';
+import { fetchWithCache, DB_NAME, DB_VERSION, STORE_NAME } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
 
@@ -245,7 +245,7 @@ async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
   try {
     // Access IndexedDB directly to get any cached data
     return new Promise((resolve) => {
-      const request = indexedDB.open(DB_NAME, 1);
+      const request = indexedDB.open(DB_NAME, DB_VERSION);
 
       request.onerror = () => resolve(null);
       request.onblocked = () => resolve(null);
