@@ -1,5 +1,5 @@
 import type { CardsData, Card, SkeletonCardsData } from '../types/card';
-import { fetchWithCache } from './cache';
+import { fetchWithCache, DB_NAME, STORE_NAME } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
 
@@ -80,6 +80,18 @@ function getDataPath(filename: string, locale: CardLocale = 'en'): string {
 export async function getCardsSkeleton(
   options: { locale?: CardLocale } = {}
 ): Promise<SkeletonCardsData | null> {
+  // Use the inline-script promise if available (already in-flight since HTML parse)
+  // Guard: only consume if the stored locale matches the requested locale.
+  const requestedLocale = options.locale || 'en';
+  if (typeof window !== 'undefined' && window.__otogiSkeletonPromise &&
+      window.__otogiSkeletonPromise.locale === requestedLocale) {
+    try {
+      const data = await window.__otogiSkeletonPromise.promise as SkeletonCardsData | null;
+      if (data) return data;
+    } catch {
+      // fall through to fetchWithCache
+    }
+  }
   const locale = options.locale || 'en';
   const skeletonPath = getDataPath('cards_skeleton.json', locale);
   try {
@@ -179,43 +191,44 @@ interface DeltaUpdateResult {
  */
 async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult> {
   try {
-    // Get current version from unified manifest (with legacy fallback)
-    const targetVersion = await getCurrentVersion();
+    const dataPath = getDataPath('cards_index.json', locale);
+
+    // Run manifest check and IndexedDB read in parallel.
+    // Use tryGetStaleCachedData (direct IndexedDB read, no version checks) so the
+    // delta base is always the local snapshot — fetchWithCache would re-fetch when
+    // the cached version doesn't match the build version, defeating delta patching.
+    const [targetVersion, cachedData] = await Promise.all([
+      getCurrentVersion(), // reuses __otogiManifestPromise if available
+      tryGetStaleCachedData(dataPath),
+    ]);
 
     if (!targetVersion) {
       if (import.meta.env.DEV) console.log('[Delta] No target version available from any manifest');
+      return { data: cachedData, source: cachedData ? 'cached' : 'none' };
+    }
+
+    if (!cachedData) {
       return { data: null, source: 'none' };
     }
 
-    // Load cached data from IndexedDB (via fetchWithCache)
-    // This will return cached data if available, or fetch fresh if not
-    const dataPath = getDataPath('cards_index.json', locale);
-    const cachedData = await fetchWithCache<CardsData>(dataPath, {
-      forceRefresh: false,
-      maxAge: CACHE_MAX_AGE
-    });
-
-    // Check if fetchWithCache just got fresh data (versions match)
+    // Fast path: IndexedDB data is already the current version (no index download needed)
     if ((cachedData.data_hash ?? cachedData.version) === targetVersion) {
       if (import.meta.env.DEV) console.log(`[Delta] Data already at target version ${targetVersion}`);
       return { data: cachedData, source: 'fresh' };
     }
 
     // Try to apply delta from cached version to target version
+    // (manifest already in-memory via getManifest() — no second fetch)
     const updatedData = await tryDeltaUpdate(cachedData, targetVersion);
 
     if (updatedData && updatedData !== cachedData) {
-      // Delta was successfully applied
       if (import.meta.env.DEV) console.log('[Delta] Delta applied successfully');
       return { data: updatedData, source: 'delta' };
     }
 
-    // Delta not available or failed, but we have cached data
-    if (cachedData) {
-      if (import.meta.env.DEV) console.log('[Delta] Using cached data (delta not available)');
-      return { data: cachedData, source: 'cached' };
-    }
-
+    // Delta not available or failed — cached data is stale and no patch chain exists.
+    // Return null so the caller falls through to a full index fetch.
+    if (import.meta.env.DEV) console.log('[Delta] Delta unavailable, falling back to full index fetch');
     return { data: null, source: 'none' };
   } catch (error) {
     console.warn('[Delta] Delta update failed, falling back to full fetch', { locale, error: String(error) });
@@ -228,20 +241,21 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
  * This ignores cache expiry and version checks.
  */
 async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
+  if (typeof indexedDB === 'undefined') return null;
   try {
     // Access IndexedDB directly to get any cached data
-    const dbName = 'otogidb-cache';
-    const storeName = 'json-cache';
-
     return new Promise((resolve) => {
-      const request = indexedDB.open(dbName, 1);
+      const request = indexedDB.open(DB_NAME, 1);
 
       request.onerror = () => resolve(null);
+      request.onblocked = () => resolve(null);
       request.onsuccess = () => {
         const db = request.result;
         try {
-          const transaction = db.transaction(storeName, 'readonly');
-          const store = transaction.objectStore(storeName);
+          const transaction = db.transaction(STORE_NAME, 'readonly');
+          transaction.onerror = () => resolve(null);
+          transaction.onabort = () => resolve(null);
+          const store = transaction.objectStore(STORE_NAME);
           const getRequest = store.get(url);
 
           getRequest.onerror = () => resolve(null);

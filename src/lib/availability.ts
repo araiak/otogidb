@@ -16,6 +16,35 @@ const R2_BASE_URL =
     ? (window as any).OTOGIDB_R2_URL
     : 'https://r2.otogidb.com';
 
+const SESSION_KEY = 'otogidb-availability-version';
+const SESSION_TTL_MS = 10 * 60 * 1000; // 10 minutes
+
+interface CachedVersion {
+  version: string;
+  timestamp: number;
+}
+
+function getCachedVersion(): string | null {
+  try {
+    const raw = sessionStorage.getItem(SESSION_KEY);
+    if (!raw) return null;
+    const { version, timestamp }: CachedVersion = JSON.parse(raw);
+    if (Date.now() - timestamp > SESSION_TTL_MS) return null;
+    return version;
+  } catch {
+    return null;
+  }
+}
+
+function setCachedVersion(version: string): void {
+  try {
+    const entry: CachedVersion = { version, timestamp: Date.now() };
+    sessionStorage.setItem(SESSION_KEY, JSON.stringify(entry));
+  } catch {
+    // sessionStorage unavailable (private browsing quota, etc.) — silently skip
+  }
+}
+
 interface AvailabilityManifest {
   current_version: string;
   last_updated: string;
@@ -329,25 +358,38 @@ export function mergeAvailability(
  */
 export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<CardsData> {
   try {
-    // Fetch manifest
+    // Use sessionStorage to skip the manifest round-trip on repeated page loads.
+    // The cached version is valid for 10 minutes — well within the 4-hour update interval.
+    const cachedVersion = getCachedVersion();
+
+    if (cachedVersion) {
+      // Try using the cached version directly (force-cache = instant from browser cache)
+      if (import.meta.env.DEV) console.log('[Availability] Using cached version:', cachedVersion);
+      const availabilityData = await fetchAvailabilityData(cachedVersion);
+      if (availabilityData) {
+        return mergeAvailability(cardsData, availabilityData);
+      }
+      // Cached version not in browser cache (e.g. cleared) — fall through to manifest fetch
+      if (import.meta.env.DEV) console.log('[Availability] Cached version missing from browser cache, refetching manifest');
+    }
+
+    // Fetch manifest to get current version
     const manifest = await fetchAvailabilityManifest();
     if (!manifest) {
       console.warn('[Availability] No manifest available, using cards without availability data');
       return cardsData;
     }
 
-    // Check if we need to fetch (could add version caching here later)
     const version = manifest.current_version;
-    if (import.meta.env.DEV) console.log('[Availability] Current version:', version);
+    setCachedVersion(version);
+    if (import.meta.env.DEV) console.log('[Availability] Fetched version from manifest:', version);
 
-    // Fetch availability data
     const availabilityData = await fetchAvailabilityData(version);
     if (!availabilityData) {
       console.warn('[Availability] Failed to fetch data, using cards without availability');
       return cardsData;
     }
 
-    // Merge and return
     return mergeAvailability(cardsData, availabilityData);
   } catch (error) {
     console.error('[Availability] Unexpected error:', error);

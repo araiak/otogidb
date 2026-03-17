@@ -79,16 +79,29 @@ function convertUnifiedToDeltaManifest(unified: UnifiedManifest): DeltaManifest 
 }
 
 /**
+ * Get the unified manifest, reusing the globally pre-fetched promise when available.
+ * The inline script in BaseLayout starts fetching manifest.json immediately at HTML parse time;
+ * this function awaits that in-flight promise rather than issuing a second request.
+ */
+async function getManifest(): Promise<UnifiedManifest | null> {
+  if (typeof window !== 'undefined' && window.__otogiManifestPromise) {
+    return window.__otogiManifestPromise as Promise<UnifiedManifest | null>;
+  }
+  // Fallback: fetch ourselves (dev environment, SSR, or inline script disabled)
+  try {
+    const r = await fetch('/data/manifest.json', { cache: 'no-cache' });
+    return r.ok ? await r.json() : null;
+  } catch { return null; }
+}
+
+/**
  * Fetch delta manifest to check available deltas.
  */
 async function fetchDeltaManifest(): Promise<DeltaManifest | null> {
   try {
-    const response = await fetch('/data/manifest.json', {
-      cache: 'no-cache' // Always check for new manifest
-    });
+    const unified = await getManifest();
 
-    if (response.ok) {
-      const unified: UnifiedManifest = await response.json();
+    if (unified) {
       const deltaManifest = convertUnifiedToDeltaManifest(unified);
       if (deltaManifest) {
         console.log('[Delta] Using unified manifest');
@@ -284,12 +297,9 @@ export function calculateSavings(fullSize: number, deltaSize: number): number {
  */
 export async function getCurrentVersion(): Promise<string | null> {
   try {
-    const response = await fetch('/data/manifest.json', {
-      cache: 'no-cache'
-    });
+    const manifest = await getManifest();
 
-    if (response.ok) {
-      const manifest: UnifiedManifest = await response.json();
+    if (manifest) {
       // Prefer data_hash (content identity) for delta versioning
       if (manifest.data_hash) {
         return manifest.data_hash;

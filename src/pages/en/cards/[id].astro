@@ -836,7 +836,7 @@ const jsonLd = {
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <h2 class="font-semibold text-sm sm:text-base">Availability</h2>
               <AvailabilityBadge
-                client:load
+                client:idle
                 cardId={card.id}
                 initialAvailable={card.acquisition.currently_available}
               />
@@ -895,7 +895,7 @@ const jsonLd = {
                         )}
                       </div>
                       <AuctionStockBadge
-                        client:load
+                        client:idle
                         cardId={card.id}
                         initialStockLevel={stockLevel}
                       />
@@ -903,7 +903,7 @@ const jsonLd = {
                     {/* Auction Estimate - client component checks R2 for live auction data */}
                     {auctionEstimate && (
                       <AuctionEstimate
-                        client:load
+                        client:idle
                         cardId={card.id}
                         estimatedDate={formatDate(auctionEstimate.estimated_date)}
                         eventName={auctionEstimate.event_name}
@@ -1171,9 +1171,8 @@ const jsonLd = {
   <!-- Card hover popups for synergy cards -->
   {card.synergies && card.synergies.length > 0 && (
     <CardPopups
-      client:load
+      client:idle
       cards={cardsData.cards}
-      skills={skillsData}
       selector=".synergy-card"
     />
   )}

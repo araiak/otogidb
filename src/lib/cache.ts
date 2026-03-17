@@ -12,6 +12,9 @@ declare global {
       cards_index_base: string;
       cards_skeleton?: string;
     }>;
+    __otogiSkeletonPromise?: { locale: string; promise: Promise<unknown | null> };
+    __otogiManifestPromise?: Promise<unknown | null>;
+    __otogiIndexResponse?: { url: string; promise: Promise<Response> };
   }
 }
 
@@ -22,9 +25,9 @@ function getDataVersion(): string {
   return '';
 }
 
-const DB_NAME = 'otogidb-cache';
+export const DB_NAME = 'otogidb-cache';
 const DB_VERSION = 1;
-const STORE_NAME = 'json-cache';
+export const STORE_NAME = 'json-cache';
 
 interface CacheEntry {
   key: string;
@@ -180,10 +183,35 @@ export async function fetchWithCache<T>(
     }
   }
 
-  // Fetch fresh data with cache-busting version
-  const fetchUrl = buildVersion ? `${url}?v=${buildVersion}` : url;
+  // Hashed URLs already encode freshness in the filename — don't append ?v=
+  // (doing so breaks the <link rel="preload"> cache and prevents immutable HTTP caching)
+  const isHashedUrl = /\.[a-z0-9]{6,12}\.json(\?|$)/.test(url);
+  const fetchUrl = (!isHashedUrl && buildVersion) ? `${url}?v=${buildVersion}` : url;
   if (import.meta.env.DEV) console.log(`[Cache] Fetching: ${fetchUrl}`);
-  const response = await fetch(fetchUrl);
+  let response: Response;
+  if (
+    typeof window !== 'undefined' &&
+    window.__otogiIndexResponse &&
+    window.__otogiIndexResponse.url === url &&
+    isHashedUrl &&
+    url.includes('cards_index')
+  ) {
+    const prefetchPromise = window.__otogiIndexResponse.promise;
+    delete window.__otogiIndexResponse; // consume once, synchronously before await
+    try {
+      const prefetchedResponse = await prefetchPromise;
+      if (prefetchedResponse.ok) {
+        response = prefetchedResponse;
+        if (import.meta.env.DEV) console.log(`[Cache] Using pre-fetched Response for: ${url}`);
+      } else {
+        response = await fetch(fetchUrl);
+      }
+    } catch {
+      response = await fetch(fetchUrl);
+    }
+  } else {
+    response = await fetch(fetchUrl);
+  }
 
   if (!response.ok) {
     throw new Error(`Failed to fetch ${url}: ${response.status}`);
@@ -207,6 +235,16 @@ export async function fetchWithCache<T>(
       cachedAt: Date.now()
     });
     if (import.meta.env.DEV) console.log(`[Cache] Stored: ${url} (version: ${dataVersion}, hash: ${hash})`);
+    // Record hash so future page loads skip the pre-fetch (IndexedDB is warm).
+    // Key by locale so switching locales doesn't incorrectly suppress the pre-fetch.
+    if (url.includes('cards_index') && isHashedUrl) {
+      const m = url.match(/\.([a-z0-9]{6,12})\.json/);
+      if (m) {
+        const localeMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+        const locale = localeMatch ? localeMatch[1] : 'en';
+        try { sessionStorage.setItem(`otogidb-index-hash-${locale}`, m[1]); } catch { /* private browsing */ }
+      }
+    }
   }
 
   return data;
@@ -218,7 +256,7 @@ export async function fetchWithCache<T>(
 export async function clearCache(): Promise<void> {
   try {
     const db = await openDB();
-    return new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const transaction = db.transaction(STORE_NAME, 'readwrite');
       const store = transaction.objectStore(STORE_NAME);
       const request = store.clear();
@@ -229,6 +267,15 @@ export async function clearCache(): Promise<void> {
   } catch (error) {
     console.warn('Cache clear error:', error);
   }
+  // Also clear warm-hash markers so the pre-fetch isn't suppressed after a cache reset.
+  try {
+    const keysToRemove: string[] = [];
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const key = sessionStorage.key(i);
+      if (key && key.startsWith('otogidb-index-hash-')) keysToRemove.push(key);
+    }
+    for (const key of keysToRemove) sessionStorage.removeItem(key);
+  } catch { /* private browsing */ }
 }
 
 /**

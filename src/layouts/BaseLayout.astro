@@ -5,13 +5,10 @@ import { localeInitScript, extractLocaleFromPath, LOCALE_NAMES, SUPPORTED_LOCALE
 import DebugPanel from '../components/DebugPanel';
 import SEO from '../components/SEO.astro';
 
-// Favicon using Cloudinary transformation of card image (Sola - card 100014)
-const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
-const FAVICON_CARD = 'otogi/cards_hd/100014_hd';
-// Transformations: c_thumb with g_face detects and crops to face
-const favicon32 = `${CLOUDINARY_BASE}/c_thumb,g_face,w_32,h_32,z_1.0/f_png/${FAVICON_CARD}.png`;
-const favicon16 = `${CLOUDINARY_BASE}/c_thumb,g_face,w_16,h_16,z_1.0/f_png/${FAVICON_CARD}.png`;
-const appleIcon = `${CLOUDINARY_BASE}/c_thumb,g_face,w_180,h_180,z_1.0/f_png/${FAVICON_CARD}.png`;
+// Favicons served as local static files (public/favicon-*.png)
+const favicon32 = '/favicon-32.png';
+const favicon16 = '/favicon-16.png';
+const appleIcon = '/apple-touch-icon.png';
 
 // Read data version and hashed paths at build time for cache busting
 import cardsData from '../data/cards.json';
@@ -85,6 +82,8 @@ interface Props {
   hasLocalizedUrls?: boolean;
   /** Set to true on card table pages to preload icon files in <head> */
   preloadIcons?: boolean;
+  /** Set to true on card table pages to early-fetch card data before React hydrates */
+  preloadCardData?: boolean;
   article?: {
     publishedTime?: string;
     modifiedTime?: string;
@@ -101,6 +100,7 @@ const {
   lang = currentLocale,
   hasLocalizedUrls = false,
   preloadIcons = false,
+  preloadCardData = false,
   article,
 } = Astro.props;
 
@@ -173,6 +173,51 @@ const navLinks = {
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";window.OTOGIDB_DATA_PATHS=${JSON.stringify(dataPaths)};`} />
 
+    <!-- Early data fetch: start skeleton + manifest before React hydrates.
+         Skeleton: always needed, starts immediately (HTTP cache on repeat visits).
+         Manifest: small (no-cache), drives delta-vs-full-index decision.
+         Both promises are consumed by cards.ts when CardTable mounts.
+         Only emitted on pages that set preloadCardData=true. -->
+    {preloadCardData && (
+    <script is:inline>
+      (function() {
+        var paths = window.OTOGIDB_DATA_PATHS;
+        var localeMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+        var locale = (localeMatch && paths && paths[localeMatch[1]]) ? localeMatch[1] : 'en';
+        var localePaths = paths && paths[locale];
+        if (!localePaths) return;
+
+        // Skeleton: always needed, start immediately (HTTP cache serves repeat visits)
+        if (localePaths.cards_skeleton) {
+          window.__otogiSkeletonPromise = {
+            locale: locale,
+            promise: fetch(localePaths.cards_skeleton, { cache: 'default' })
+              .then(function(r) { return r.ok ? r.json() : null; })
+              .catch(function() { return null; })
+          };
+        }
+
+        // Manifest: small (no-cache), needed to decide delta vs full-index
+        window.__otogiManifestPromise = fetch('/data/manifest.json', { cache: 'no-cache' })
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .catch(function() { return null; });
+
+        // Full index: start speculatively on first visit (no IndexedDB cache yet).
+        // Skip if sessionStorage shows we already cached this hash in IndexedDB.
+        if (localePaths.cards_index) {
+          var indexHashMatch = localePaths.cards_index.match(/\.([a-z0-9]{6,12})\.json/);
+          var indexHash = indexHashMatch ? indexHashMatch[1] : null;
+          var cachedHash = null;
+          try { cachedHash = sessionStorage.getItem('otogidb-index-hash-' + locale); } catch(e) {}
+          if (!indexHash || cachedHash !== indexHash) {
+            // Store Response promise with URL — fetchWithCache verifies URL before consuming.
+            window.__otogiIndexResponse = { url: localePaths.cards_index, promise: fetch(localePaths.cards_index, { cache: 'default' }) };
+          }
+        }
+      })();
+    </script>
+    )}
+
     <!-- PostHog Analytics (direct first, proxy fallback to reduce costs) -->
     <script is:inline>
       (function() {
@@ -228,17 +273,30 @@ const navLinks = {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=optional"
     />
 
-    <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
+    <!-- Prefetch icon files on card table pages (low-priority, no urgency constraint) -->
     {preloadIcons && (
       <>
-        <link rel="preload" as="image" href="/icons/attributes/anima.png" />
-        <link rel="preload" as="image" href="/icons/attributes/divina.png" />
-        <link rel="preload" as="image" href="/icons/attributes/phantasma.png" />
-        <link rel="preload" as="image" href="/icons/types/melee.png" />
-        <link rel="preload" as="image" href="/icons/types/ranged.png" />
-        <link rel="preload" as="image" href="/icons/types/healer.png" />
-        <link rel="preload" as="image" href="/icons/rarity/star.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/anima.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/divina.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/phantasma.png" />
+        <link rel="prefetch" as="image" href="/icons/types/melee.png" />
+        <link rel="prefetch" as="image" href="/icons/types/ranged.png" />
+        <link rel="prefetch" as="image" href="/icons/types/healer.png" />
+        <link rel="prefetch" as="image" href="/icons/types/assist.png" />
+        <link rel="prefetch" as="image" href="/icons/rarity/star.png" />
       </>
+    )}
+
+    <!-- Early card data fetch: start downloading before React hydrates.
+         rel="preload" as="fetch" triggers an immediate high-priority fetch;
+         when cards.ts later calls fetch() for the same URL, the browser
+         serves it from the preload cache — no duplicate request.
+         rel="prefetch" on the full index is lower priority (larger file). -->
+    {preloadCardData && dataPaths[currentLocale]?.cards_skeleton && (
+      <link rel="preload" as="fetch" href={dataPaths[currentLocale].cards_skeleton} crossorigin="anonymous" />
+    )}
+    {preloadCardData && dataPaths[currentLocale]?.cards_index && (
+      <link rel="prefetch" href={dataPaths[currentLocale].cards_index} />
     )}
   </head>
   <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">

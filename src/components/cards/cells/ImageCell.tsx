@@ -1,13 +1,11 @@
 import { useState, useCallback } from 'react';
 import type { Card } from '../../../types/card';
-import type { SkillData } from '../../../lib/formatters';
 import type { SupportedLocale } from '../../../lib/i18n';
 import { getThumbnailUrl, PLACEHOLDER_IMAGE } from '../../../lib/images';
 import { CardFloatingPopup } from '../CardHoverProvider';
 
 interface ImageCellProps {
   card: Card;
-  skills: Record<string, SkillData>;
   locale: SupportedLocale;
 }
 
@@ -20,7 +18,7 @@ const MAX_RETRIES = 2;
  * Displays a thumbnail that links to the card page and shows a preview popup on hover.
  * Includes automatic retry for failed image loads before falling back to placeholder.
  */
-export default function ImageCell({ card, skills, locale }: ImageCellProps) {
+export default function ImageCell({ card, locale }: ImageCellProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [referenceElement, setReferenceElement] = useState<HTMLElement | null>(null);
   const url = getThumbnailUrl(card);
@@ -71,7 +69,6 @@ export default function ImageCell({ card, skills, locale }: ImageCellProps) {
         card={card}
         isOpen={isHovered}
         referenceElement={referenceElement}
-        skills={skills}
         placement="right-start"
         compact={true}
         locale={locale}
