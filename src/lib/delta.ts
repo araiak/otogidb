@@ -90,7 +90,7 @@ async function getManifest(): Promise<UnifiedManifest | null> {
   // Fallback: fetch ourselves (dev environment, SSR, or inline script disabled)
   try {
     const r = await fetch('/data/manifest.json', { cache: 'no-cache' });
-    return r.ok ? r.json() : null;
+    return r.ok ? await r.json() : null;
   } catch { return null; }
 }
 

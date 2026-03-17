@@ -81,9 +81,12 @@ export async function getCardsSkeleton(
   options: { locale?: CardLocale } = {}
 ): Promise<SkeletonCardsData | null> {
   // Use the inline-script promise if available (already in-flight since HTML parse)
-  if (typeof window !== 'undefined' && window.__otogiSkeletonPromise) {
+  // Guard: only consume if the stored locale matches the requested locale.
+  const requestedLocale = options.locale || 'en';
+  if (typeof window !== 'undefined' && window.__otogiSkeletonPromise &&
+      window.__otogiSkeletonPromise.locale === requestedLocale) {
     try {
-      const data = await window.__otogiSkeletonPromise as SkeletonCardsData | null;
+      const data = await window.__otogiSkeletonPromise.promise as SkeletonCardsData | null;
       if (data) return data;
     } catch {
       // fall through to fetchWithCache
@@ -222,9 +225,10 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
       return { data: updatedData, source: 'delta' };
     }
 
-    // Delta not available or failed, but we have cached data
-    if (import.meta.env.DEV) console.log('[Delta] Using cached data (delta not available)');
-    return { data: cachedData, source: 'cached' };
+    // Delta not available or failed — cached data is stale and no patch chain exists.
+    // Return null so the caller falls through to a full index fetch.
+    if (import.meta.env.DEV) console.log('[Delta] Delta unavailable, falling back to full index fetch');
+    return { data: null, source: 'none' };
   } catch (error) {
     console.warn('[Delta] Delta update failed, falling back to full fetch', { locale, error: String(error) });
     return { data: null, source: 'none' };

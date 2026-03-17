@@ -62,6 +62,7 @@ export default function TeamBlock() {
   const [hydrationKey, setHydrationKey] = useState(0);
 
   useEffect(() => {
+    if (!document.querySelector('.team-block')) return;
     const loc = getLocaleFromUrl() as CardLocale;
     getCardsData({ locale: loc })
       .then((result) => setCards(result.cards))

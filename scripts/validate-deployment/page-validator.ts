@@ -558,7 +558,7 @@ function validateLink(href: string, pageLocale: string): { valid: boolean; issue
       href.startsWith('/_astro/') ||
       href.startsWith('/favicon') ||
       href.startsWith('/apple-touch-icon') ||
-      href.startsWith('/_redirects') ||
+      href === '/_redirects' ||
       href.startsWith('/icons/') ||
       href.startsWith('/images/')
     ) {

@@ -362,8 +362,6 @@ export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<C
     // The cached version is valid for 10 minutes — well within the 4-hour update interval.
     const cachedVersion = getCachedVersion();
 
-    let version: string;
-
     if (cachedVersion) {
       // Try using the cached version directly (force-cache = instant from browser cache)
       if (import.meta.env.DEV) console.log('[Availability] Using cached version:', cachedVersion);
@@ -382,7 +380,7 @@ export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<C
       return cardsData;
     }
 
-    version = manifest.current_version;
+    const version = manifest.current_version;
     setCachedVersion(version);
     if (import.meta.env.DEV) console.log('[Availability] Fetched version from manifest:', version);
 

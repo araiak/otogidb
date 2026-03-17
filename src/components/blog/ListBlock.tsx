@@ -22,6 +22,7 @@ export default function ListBlock() {
   const [hydrationKey, setHydrationKey] = useState(0);
 
   useEffect(() => {
+    if (!document.querySelector('.card-list-block')) return;
     const loc = getLocaleFromUrl() as CardLocale;
     getCardsData({ locale: loc })
       .then((result) => setCards(result.cards))

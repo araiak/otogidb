@@ -176,7 +176,9 @@ const navLinks = {
     <!-- Early data fetch: start skeleton + manifest before React hydrates.
          Skeleton: always needed, starts immediately (HTTP cache on repeat visits).
          Manifest: small (no-cache), drives delta-vs-full-index decision.
-         Both promises are consumed by cards.ts when CardTable mounts. -->
+         Both promises are consumed by cards.ts when CardTable mounts.
+         Only emitted on pages that set preloadCardData=true. -->
+    {preloadCardData && (
     <script is:inline>
       (function() {
         var paths = window.OTOGIDB_DATA_PATHS;
@@ -187,9 +189,12 @@ const navLinks = {
 
         // Skeleton: always needed, start immediately (HTTP cache serves repeat visits)
         if (localePaths.cards_skeleton) {
-          window.__otogiSkeletonPromise = fetch(localePaths.cards_skeleton, { cache: 'default' })
-            .then(function(r) { return r.ok ? r.json() : null; })
-            .catch(function() { return null; });
+          window.__otogiSkeletonPromise = {
+            locale: locale,
+            promise: fetch(localePaths.cards_skeleton, { cache: 'default' })
+              .then(function(r) { return r.ok ? r.json() : null; })
+              .catch(function() { return null; })
+          };
         }
 
         // Manifest: small (no-cache), needed to decide delta vs full-index
@@ -205,12 +210,13 @@ const navLinks = {
           var cachedHash = null;
           try { cachedHash = sessionStorage.getItem('otogidb-index-hash-' + locale); } catch(e) {}
           if (!indexHash || cachedHash !== indexHash) {
-            // Store Response promise (NOT .json()) — fetchWithCache will consume it.
-            window.__otogiIndexResponse = fetch(localePaths.cards_index, { cache: 'default' });
+            // Store Response promise with URL — fetchWithCache verifies URL before consuming.
+            window.__otogiIndexResponse = { url: localePaths.cards_index, promise: fetch(localePaths.cards_index, { cache: 'default' }) };
           }
         }
       })();
     </script>
+    )}
 
     <!-- PostHog Analytics (direct first, proxy fallback to reduce costs) -->
     <script is:inline>

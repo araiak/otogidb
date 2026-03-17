@@ -12,9 +12,9 @@ declare global {
       cards_index_base: string;
       cards_skeleton?: string;
     }>;
-    __otogiSkeletonPromise?: Promise<unknown | null>;
+    __otogiSkeletonPromise?: { locale: string; promise: Promise<unknown | null> };
     __otogiManifestPromise?: Promise<unknown | null>;
-    __otogiIndexResponse?: Promise<Response>;
+    __otogiIndexResponse?: { url: string; promise: Promise<Response> };
   }
 }
 
@@ -192,10 +192,11 @@ export async function fetchWithCache<T>(
   if (
     typeof window !== 'undefined' &&
     window.__otogiIndexResponse &&
+    window.__otogiIndexResponse.url === url &&
     isHashedUrl &&
     url.includes('cards_index')
   ) {
-    const prefetchPromise = window.__otogiIndexResponse;
+    const prefetchPromise = window.__otogiIndexResponse.promise;
     delete window.__otogiIndexResponse; // consume once, synchronously before await
     try {
       const prefetchedResponse = await prefetchPromise;

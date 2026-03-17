@@ -56,35 +56,39 @@ self.addEventListener('fetch', (event) => {
 
   // Cache-first for Cloudinary images
   if (url.hostname === CLOUDINARY_HOST) {
-    event.respondWith(cacheFirst(event.request, CACHE_NAME));
+    event.respondWith(cacheFirst(event.request, CACHE_NAME, event));
     return;
   }
 
   // Cache-first for local icons (pre-cached on install)
   if (url.pathname.startsWith('/icons/')) {
-    event.respondWith(cacheFirst(event.request, STATIC_CACHE_NAME));
+    event.respondWith(cacheFirst(event.request, STATIC_CACHE_NAME, event));
     return;
   }
 });
 
-async function cacheFirst(request, cacheName) {
+async function cacheFirst(request, cacheName, event) {
   const cache = await caches.open(cacheName);
   const cached = await cache.match(request);
   if (cached) return cached;
 
   const response = await fetch(request);
-  if (response.ok) cache.put(request, response.clone());
+  if (response.ok || response.type === 'opaque') {
+    event.waitUntil(cache.put(request, response.clone()));
+  }
   return response;
 }
 
 // Listen for messages to clear cache
 self.addEventListener('message', (event) => {
   if (event.data === 'clearCache') {
-    Promise.all([
-      caches.delete(CACHE_NAME),
-      caches.delete(STATIC_CACHE_NAME),
-    ]).then(() => {
-      console.log('All caches cleared');
-    });
+    event.waitUntil(
+      Promise.all([
+        caches.delete(CACHE_NAME),
+        caches.delete(STATIC_CACHE_NAME),
+      ]).then(() => {
+        console.log('All caches cleared');
+      })
+    );
   }
 });

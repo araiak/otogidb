@@ -5,15 +5,10 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CardPopups from '../../../components/cards/CardPopups';
 import { getTranslations } from '../../../lib/translations';
-import type { CardsData } from '../../../types/card';
 
 const currentLocale = 'zh-tw';
 const t = getTranslations(currentLocale);
 
-// Import localized cards, skills, and tier data for hover popups
-import cardsDataRaw from '../../../data/zh-tw/cards.json';
-
-const cardsData = cardsDataRaw as unknown as CardsData;
 
 interface CardIndexEntry {
   id: string;
@@ -282,6 +277,6 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
       </div>
     )}
 
-    <CardPopups client:load cards={cardsData.cards} />
+    <CardPopups client:idle />
   </div>
 </BaseLayout>

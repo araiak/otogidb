@@ -26,7 +26,10 @@ export default function CardPopups({
   const [cards, setCards] = useState<Record<string, Card>>(cardsProp || {});
 
   useEffect(() => {
-    if (cardsProp) return; // Caller provided data — no need to fetch
+    if (cardsProp) {
+      setCards(cardsProp);
+      return;
+    }
     const locale = getLocaleFromUrl() as CardLocale;
     getCardsData({ locale })
       .then((result) => setCards(result.cards))
