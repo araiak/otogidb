@@ -15,11 +15,12 @@ test.describe('Card Hover Popups', () => {
 
     // Hover over the parent anchor (ImageCell wraps img in <a> with onMouseEnter)
     const cardLink = firstCardImage.locator('..')
+    await cardLink.scrollIntoViewIfNeeded()
     await cardLink.hover()
 
     // Wait for CardFloatingPopup to appear via FloatingPortal
     const popup = page.locator('.popup').first()
-    await expect(popup).toBeVisible({ timeout: 5000 })
+    await expect(popup).toBeVisible({ timeout: TIMEOUTS.networkIdle })
 
     // Verify stats are rendered in CardPreviewContent
     await expect(popup.locator('text=ATK')).toBeVisible()

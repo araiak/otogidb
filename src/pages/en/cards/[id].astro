@@ -17,6 +17,14 @@ import cardMentionsRaw from '../../../data/card_mentions.json';
 import similarCardsRaw from '../../../data/similar_cards.json';
 import auctionsDataRaw from '../../../data/auctions.json';
 import gameBugsRaw from '../../../data/game_bugs.json';
+import manifestData from '../../../data/data_manifest.json';
+
+// Build hashed locale index paths at build time (avoids runtime manifest fetch)
+const localeIndexPaths: Record<string, string> = {};
+for (const locale of ['ja', 'ko', 'zh-cn', 'zh-tw', 'es']) {
+  const entry = (manifestData as any).files?.[locale];
+  localeIndexPaths[locale] = entry?.cards_index ?? `/data/${locale}/cards_index.json`;
+}
 
 // Type for card mentions
 interface CardMention {
@@ -317,7 +325,7 @@ const jsonLd = {
     <div class="md:hidden mb-3" aria-hidden="true">
       <div class="flex items-center justify-between gap-2 mb-2">
         <div class="flex items-center gap-2 min-w-0">
-          <div class="text-xl font-bold truncate">{card.name || `Card #${card.id}`}</div>
+          <div class="text-xl font-bold truncate" data-i18n="name">{card.name || `Card #${card.id}`}</div>
           {!card.playable && (
             <span class="px-1.5 py-0.5 text-[10px] rounded bg-orange-500/20 text-orange-400 font-medium flex-shrink-0 cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
           )}
@@ -445,7 +453,7 @@ const jsonLd = {
         <!-- Header (Tablet/Desktop only) -->
         <div class="hidden md:block">
           <div class="flex items-center gap-3 mb-2">
-            <h1 class="text-2xl lg:text-3xl font-bold">{card.name || `Card #${card.id}`}</h1>
+            <h1 class="text-2xl lg:text-3xl font-bold" data-i18n="name">{card.name || `Card #${card.id}`}</h1>
             {!card.playable && (
               <span class="px-2 py-1 text-xs rounded bg-orange-500/20 text-orange-400 font-medium cursor-help" title="NPC/Enemy card - not obtainable by players">NPC</span>
             )}
@@ -573,10 +581,10 @@ const jsonLd = {
         {card.skill && (
           <div class="card p-3 sm:p-4">
             <h2 class="font-semibold mb-1.5 sm:mb-2 text-sm sm:text-base">Skill</h2>
-            <div class="text-base sm:text-lg font-medium mb-1" style="color: var(--color-accent);">
+            <div class="text-base sm:text-lg font-medium mb-1" style="color: var(--color-accent);" data-i18n="skill-name">
               {card.skill.name || 'Unknown Skill'}
             </div>
-            <div class="text-xs sm:text-sm mb-2" set:html={formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description available'} />
+            <div class="text-xs sm:text-sm mb-2" set:html={formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description available'} data-i18n="skill-description" />
             {card.skill.tags && card.skill.tags.length > 0 && (
               <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-2">
                 {card.skill.tags.map(tag => (
@@ -630,10 +638,10 @@ const jsonLd = {
           <div class="card p-3 sm:p-4">
             <h2 class="font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Abilities</h2>
             <div class="space-y-3 sm:space-y-4">
-              {card.abilities.map(ability => (
+              {card.abilities.map((ability, abilityIndex) => (
                 <div>
                   <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                    <span class="font-medium text-sm sm:text-base" style="color: var(--color-highlight);">
+                    <span class="font-medium text-sm sm:text-base" style="color: var(--color-highlight);" data-i18n="ability-name" data-ability-index={abilityIndex}>
                       {ability.name}
                     </span>
                     {ability.unlock_level && (
@@ -647,7 +655,7 @@ const jsonLd = {
                       </span>
                     )}
                   </div>
-                  <div class="text-xs sm:text-sm text-secondary mt-0.5">
+                  <div class="text-xs sm:text-sm text-secondary mt-0.5" data-i18n="ability-description" data-ability-index={abilityIndex}>
                     {ability.description}
                   </div>
                   {ability.tags && ability.tags.length > 0 && (
@@ -1177,4 +1185,69 @@ const jsonLd = {
       selector=".synergy-card"
     />
   )}
+
+  <!-- Client-side i18n: patch translatable fields without rebuilding pages -->
+  <script is:inline define:vars={{ cardId: card.id, localeIndexPaths }}>
+  (function() {
+    const SUPPORTED = ['ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+
+    function getLocale() {
+      try {
+        const s = localStorage.getItem('otogidb-locale');
+        if (s && SUPPORTED.includes(s)) return s;
+      } catch {}
+      for (const lang of (navigator.languages || [navigator.language])) {
+        const l = lang.toLowerCase();
+        if (SUPPORTED.includes(l)) return l;
+        if (l.startsWith('zh-hans') || l === 'zh-sg') return 'zh-cn';
+        if (l.startsWith('zh-hant') || l === 'zh-hk') return 'zh-tw';
+        const short = l.split('-')[0];
+        if (SUPPORTED.includes(short)) return short;
+      }
+      return null;
+    }
+
+    function patchDOM(cardData) {
+      if (cardData.name) {
+        document.querySelectorAll('[data-i18n="name"]')
+          .forEach(function(el) { el.textContent = cardData.name; });
+        document.title = document.title.replace(/^[^|]+\|/, cardData.name + ' |');
+      }
+      const skill = cardData.skill;
+      if (skill) {
+        const sn = document.querySelector('[data-i18n="skill-name"]');
+        if (sn && skill.name) sn.textContent = skill.name;
+        const sd = document.querySelector('[data-i18n="skill-description"]');
+        if (sd && skill.description) sd.innerHTML = skill.description;
+      }
+      (cardData.abilities || []).forEach(function(ab, i) {
+        const an = document.querySelector('[data-ability-index="' + i + '"][data-i18n="ability-name"]');
+        if (an && ab.name) an.textContent = ab.name;
+        const ad = document.querySelector('[data-ability-index="' + i + '"][data-i18n="ability-description"]');
+        if (ad && ab.description) ad.textContent = ab.description;
+      });
+    }
+
+    function apply(locale) {
+      const path = localeIndexPaths[locale];
+      if (!path) return;
+      fetch(path)
+        .then(function(r) { return r.ok ? r.json() : null; })
+        .then(function(data) {
+          if (!data) return;
+          const cardData = data.cards && data.cards[cardId];
+          if (cardData) patchDOM(cardData);
+        })
+        .catch(function() {});
+    }
+
+    apply(getLocale());
+
+    window.addEventListener('otogidb-locale-change', function(e) {
+      const locale = e.detail && e.detail.locale;
+      if (!locale || locale === 'en') { location.reload(); return; }
+      apply(locale);
+    });
+  })();
+  </script>
 </BaseLayout>
