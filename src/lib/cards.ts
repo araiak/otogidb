@@ -1,4 +1,4 @@
-import type { CardsData, Card } from '../types/card';
+import type { CardsData, Card, SkeletonCardsData } from '../types/card';
 import { fetchWithCache } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
@@ -48,9 +48,14 @@ function getDataPath(filename: string, locale: CardLocale = 'en'): string {
   // Check for hashed path from build-time manifest
   if (typeof window !== 'undefined' && window.OTOGIDB_DATA_PATHS) {
     const localePaths = window.OTOGIDB_DATA_PATHS[locale];
-    if (localePaths && filename === 'cards_index.json') {
-      // Use hashed path for optimal caching (1 month immutable)
-      return localePaths.cards_index;
+    if (localePaths) {
+      if (filename === 'cards_index.json') {
+        // Use hashed path for optimal caching (1 month immutable)
+        return localePaths.cards_index;
+      }
+      if (filename === 'cards_skeleton.json' && localePaths.cards_skeleton) {
+        return localePaths.cards_skeleton;
+      }
     }
   }
 
@@ -59,6 +64,33 @@ function getDataPath(filename: string, locale: CardLocale = 'en'): string {
     return `/data/${filename}`;
   }
   return `/data/${locale}/${filename}`;
+}
+
+/**
+ * Load skeleton cards data for fast first render.
+ *
+ * The skeleton contains full card entries for IDs 1–50 (page 1) and
+ * display-only entries for the rest. Use this to show the table immediately,
+ * then upgrade with getCardsData() when the full index arrives.
+ *
+ * Uses the same IndexedDB / hashed-URL caching strategy as getCardsData().
+ * If the skeleton hash hasn't changed since the last deploy, the cached
+ * version is served from IndexedDB with no network request.
+ */
+export async function getCardsSkeleton(
+  options: { locale?: CardLocale } = {}
+): Promise<SkeletonCardsData | null> {
+  const locale = options.locale || 'en';
+  const skeletonPath = getDataPath('cards_skeleton.json', locale);
+  try {
+    return await fetchWithCache<SkeletonCardsData>(skeletonPath, {
+      maxAge: CACHE_MAX_AGE,
+    });
+  } catch (error) {
+    // Skeleton is optional — caller falls back to full index
+    if (import.meta.env.DEV) console.warn('[Cards] Skeleton fetch failed, will use full index', error);
+    return null;
+  }
 }
 
 /**

@@ -138,12 +138,15 @@ function applyDeltaPatch(cachedData: CardsData, delta: Delta): CardsData | null 
     // Clone the cached data to avoid mutation
     const dataCopy = JSON.parse(JSON.stringify(cachedData)) as CardsData;
 
-    // Apply the jsonpatch operations (rfc6902 mutates in place, returns errors)
+    // Apply the jsonpatch operations (rfc6902 mutates in place).
+    // rfc6902 v5 returns Array<Error | null> — one entry per operation,
+    // where null = success and an Error object = failure.
+    // We must check for any non-null entry, NOT errors.length > 0.
     const errors = applyPatch(dataCopy, delta.patch);
+    const failures = errors.filter(e => e !== null);
 
-    // Check for errors in patch application
-    if (errors.length > 0) {
-      console.error('[Delta] Patch application had errors:', errors);
+    if (failures.length > 0) {
+      console.error('[Delta] Patch application had errors:', failures);
       return null;
     }
 
@@ -153,6 +156,38 @@ function applyDeltaPatch(cachedData: CardsData, delta: Delta): CardsData | null 
     console.error('[Delta] Failed to apply patch:', error);
     return null;
   }
+}
+
+/**
+ * Find a chain of delta hops from `from` to `to`.
+ *
+ * The manifest stores sequential single-step deltas (V1→V2, V2→V3, …).
+ * This function walks the chain so that a client on V1 with a manifest
+ * showing V2→V3, V3→V4 can still reach V4 via two hops.
+ *
+ * @param deltas - Available deltas from the manifest
+ * @param from - Starting version (user's current cached version)
+ * @param to - Target version
+ * @returns Ordered array of delta hops to apply, or null if no path exists
+ */
+export function findDeltaChain(
+  deltas: DeltaManifest['deltas'],
+  from: string,
+  to: string
+): DeltaManifest['deltas'] | null {
+  if (from === to) return [];
+  const path: DeltaManifest['deltas'] = [];
+  let current = from;
+  const visited = new Set<string>();
+  while (current !== to) {
+    if (visited.has(current)) return null; // cycle guard
+    visited.add(current);
+    const next = deltas.find(d => d.from_version === current);
+    if (!next) return null; // no outgoing edge
+    path.push(next);
+    current = next.to_version;
+  }
+  return path;
 }
 
 /**
@@ -194,35 +229,38 @@ export async function tryDeltaUpdate(
     return null;
   }
 
-  // Find delta from current to target version
-  const deltaEntry = manifest.deltas.find(
-    d => d.from_version === currentVersion && d.to_version === targetVersion
-  );
+  // Find a chain of deltas from currentVersion to targetVersion.
+  // The manifest stores sequential single-step deltas (V1→V2, V2→V3, …).
+  // A user on V1 with a manifest showing V2→V3, V3→V4 needs chain-walking,
+  // not a single-hop lookup.
+  const chain = findDeltaChain(manifest.deltas, currentVersion, targetVersion);
 
-  if (!deltaEntry) {
-    console.log(`[Delta] No delta found from ${currentVersion} to ${targetVersion}`);
+  if (!chain) {
+    console.log(`[Delta] No delta path from ${currentVersion} to ${targetVersion}`);
     return null;
   }
 
-  // Fetch and apply delta
-  console.log(`[Delta] Fetching delta (${(deltaEntry.patch_size / 1024).toFixed(1)} KB, ${deltaEntry.total_operations} ops)`);
-  const delta = await fetchDelta(currentVersion, targetVersion);
+  console.log(`[Delta] Walking chain: ${[currentVersion, ...chain.map(d => d.to_version)].join(' → ')}`);
 
-  if (!delta) {
-    console.log('[Delta] Failed to fetch delta, falling back to full fetch');
-    return null;
+  // Fetch and apply each hop sequentially
+  let workingData: CardsData = cachedData;
+  for (const hop of chain) {
+    console.log(`[Delta] Fetching hop ${hop.from_version} → ${hop.to_version} (${(hop.patch_size / 1024).toFixed(1)} KB, ${hop.total_operations} ops)`);
+    const delta = await fetchDelta(hop.from_version, hop.to_version);
+    if (!delta) {
+      console.log(`[Delta] Failed to fetch hop ${hop.from_version} → ${hop.to_version}, falling back`);
+      return null;
+    }
+    const patched = applyDeltaPatch(workingData, delta);
+    if (!patched) {
+      console.error(`[Delta] Failed to apply hop ${hop.from_version} → ${hop.to_version}, falling back`);
+      return null;
+    }
+    workingData = patched;
   }
 
-  // Apply delta patch
-  const updatedData = applyDeltaPatch(cachedData, delta);
-
-  if (!updatedData) {
-    console.error('[Delta] Failed to apply delta, falling back to full fetch');
-    return null;
-  }
-
-  console.log(`[Delta] ✓ Updated to version ${targetVersion} via delta`);
-  return updatedData;
+  console.log(`[Delta] ✓ Updated to version ${targetVersion} via ${chain.length}-hop chain`);
+  return workingData;
 }
 
 /**
