@@ -213,6 +213,22 @@ export const localeInitScript = `
     return DEFAULT;
   }
 
+  // Detect intended locale from redirect: ?lang=ja appended by _redirects rules
+  const params = new URLSearchParams(location.search);
+  const langParam = params.get('lang');
+  if (langParam && SUPPORTED.includes(langParam)) {
+    try { localStorage.setItem(STORAGE_KEY, langParam); } catch {}
+    // Strip ?lang from URL without reloading, preserving any other params
+    params.delete('lang');
+    const newSearch = params.toString();
+    const newUrl = location.pathname + (newSearch ? '?' + newSearch : '') + location.hash;
+    history.replaceState(null, '', newUrl);
+    // Dispatch event after React hydrates so components can react
+    window.addEventListener('DOMContentLoaded', function() {
+      window.dispatchEvent(new CustomEvent('otogidb-locale-change', { detail: { locale: langParam } }));
+    }, { once: true });
+  }
+
   // Redirect from root to preferred locale
   if (location.pathname === '/' || location.pathname === '') {
     const stored = getStoredLocale();

@@ -260,27 +260,27 @@ const navLinks = {
           'zh-tw': "我們正在修復問題，多語言功能即將恢復。感謝您的耐心等待！",
           es: "Estamos solucionando algunos problemas. ¡Los idiomas volverán pronto!"
         };
-        var supported = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
-
-        // Detect locale from URL pathname first
-        var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-        var lang = pathMatch && supported.includes(pathMatch[1]) ? pathMatch[1] : null;
-
-        // Fall back to stored preference
-        if (!lang) {
-          try { lang = localStorage.getItem('otogidb-locale'); } catch(e) {}
+        function setMsg(lang) {
+          var el = document.getElementById('maintenance-msg');
+          if (el && msgs[lang]) el.textContent = msgs[lang];
         }
 
-        // Fall back to browser detection
+        // Set initial message from localStorage or browser locale
+        var stored = null;
+        try { stored = localStorage.getItem('otogidb-locale'); } catch(e) {}
+        var full = (navigator.language || '').toLowerCase();
+        var lang = stored;
         if (!lang) {
-          var full = (navigator.language || '').toLowerCase();
           if (full.startsWith('zh-tw') || full === 'zh-hk' || full === 'zh-mo') lang = 'zh-tw';
           else if (full.startsWith('zh')) lang = 'zh-cn';
           else lang = full.split('-')[0];
         }
+        setMsg(lang);
 
-        var el = document.getElementById('maintenance-msg');
-        if (el && msgs[lang]) el.textContent = msgs[lang];
+        // Update on locale change
+        window.addEventListener('otogidb-locale-change', function(e) {
+          setMsg(e.detail.locale);
+        });
       })();
     </script>
     <header class="sticky top-0 z-40 border-b" style="background-color: var(--color-header); border-color: var(--color-border);">

@@ -4,7 +4,7 @@ import { useFloating, offset, flip, shift, autoUpdate, FloatingPortal } from '@f
 import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
 import CardPreviewContent from './CardPreviewContent';
-import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
+import { SUPPORTED_LOCALES, LOCALE_STORAGE_KEY, DEFAULT_LOCALE, type SupportedLocale } from '../../lib/i18n';
 import { getCardsData } from '../../lib/cards';
 
 interface CardHoverProviderProps {
@@ -62,17 +62,17 @@ export default function CardHoverProvider({
   const [internalCards, setInternalCards] = useState<Record<string, Card> | null>(null);
 
   useEffect(() => {
-    // Check URL path first
-    const pathMatch = window.location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
-    if (pathMatch && SUPPORTED_LOCALES.includes(pathMatch[1] as SupportedLocale)) {
-      setLocale(pathMatch[1] as SupportedLocale);
-      return;
-    }
-    // Fallback to stored preference
+    // Locale is stored in localStorage — URL is always /en/ and is not the source of truth
     try {
-      const stored = localStorage.getItem('otogidb-locale');
+      const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
       if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
         setLocale(stored as SupportedLocale);
+        // Fetch localized card data if non-default locale (e.g. after a redirect from /ja/)
+        if (stored !== DEFAULT_LOCALE) {
+          getCardsData({ locale: stored as SupportedLocale }).then((data) => {
+            setInternalCards(data.cards as Record<string, Card>);
+          });
+        }
       }
     } catch { /* localStorage unavailable */ }
   }, []);

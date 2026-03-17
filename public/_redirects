@@ -9,12 +9,12 @@
 /updates/ /en/updates/ 301
 
 # Splat/wildcard rules (must be LAST for performance)
-# Redirect all non-English locales to English equivalent
-/ja/* /en/:splat 301
-/ko/* /en/:splat 301
-/es/* /en/:splat 301
-/zh-cn/* /en/:splat 301
-/zh-tw/* /en/:splat 301
+# Redirect all non-English locales to English equivalent, preserving intended locale as ?lang=
+/ja/* /en/:splat?lang=ja 301
+/ko/* /en/:splat?lang=ko 301
+/es/* /en/:splat?lang=es 301
+/zh-cn/* /en/:splat?lang=zh-cn 301
+/zh-tw/* /en/:splat?lang=zh-tw 301
 
 # Backward compatibility: redirect old English URLs to /en/ prefix
 /cards/* /en/cards/:splat 301
