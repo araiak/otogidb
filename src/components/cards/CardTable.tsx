@@ -1006,7 +1006,6 @@ export default function CardTable({ initialCards }: CardTableProps) {
             <div className="p-4 max-h-[70vh] overflow-y-auto">
               <CardPreviewContent
                 card={mobilePreviewCard}
-                skills={{}}
                 compact={false}
                 showDetailsLink={true}
                 locale={locale}

@@ -5,13 +5,10 @@ import { localeInitScript, extractLocaleFromPath, LOCALE_NAMES, SUPPORTED_LOCALE
 import DebugPanel from '../components/DebugPanel';
 import SEO from '../components/SEO.astro';
 
-// Favicon using Cloudinary transformation of card image (Sola - card 100014)
-const CLOUDINARY_BASE = 'https://res.cloudinary.com/dn3j8sqcc/image/upload';
-const FAVICON_CARD = 'otogi/cards_hd/100014_hd';
-// Transformations: c_thumb with g_face detects and crops to face
-const favicon32 = `${CLOUDINARY_BASE}/c_thumb,g_face,w_32,h_32,z_1.0/f_png/${FAVICON_CARD}.png`;
-const favicon16 = `${CLOUDINARY_BASE}/c_thumb,g_face,w_16,h_16,z_1.0/f_png/${FAVICON_CARD}.png`;
-const appleIcon = `${CLOUDINARY_BASE}/c_thumb,g_face,w_180,h_180,z_1.0/f_png/${FAVICON_CARD}.png`;
+// Favicons served as local static files (public/favicon-*.png)
+const favicon32 = '/favicon-32.png';
+const favicon16 = '/favicon-16.png';
+const appleIcon = '/apple-touch-icon.png';
 
 // Read data version and hashed paths at build time for cache busting
 import cardsData from '../data/cards.json';
@@ -85,6 +82,8 @@ interface Props {
   hasLocalizedUrls?: boolean;
   /** Set to true on card table pages to preload icon files in <head> */
   preloadIcons?: boolean;
+  /** Set to true on card table pages to early-fetch card data before React hydrates */
+  preloadCardData?: boolean;
   article?: {
     publishedTime?: string;
     modifiedTime?: string;
@@ -101,6 +100,7 @@ const {
   lang = currentLocale,
   hasLocalizedUrls = false,
   preloadIcons = false,
+  preloadCardData = false,
   article,
 } = Astro.props;
 
@@ -228,18 +228,30 @@ const navLinks = {
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=optional"
     />
 
-    <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
+    <!-- Prefetch icon files on card table pages (low-priority, no urgency constraint) -->
     {preloadIcons && (
       <>
-        <link rel="preload" as="image" href="/icons/attributes/anima.png" />
-        <link rel="preload" as="image" href="/icons/attributes/divina.png" />
-        <link rel="preload" as="image" href="/icons/attributes/phantasma.png" />
-        <link rel="preload" as="image" href="/icons/types/melee.png" />
-        <link rel="preload" as="image" href="/icons/types/ranged.png" />
-        <link rel="preload" as="image" href="/icons/types/healer.png" />
-        <link rel="preload" as="image" href="/icons/types/assist.png" />
-        <link rel="preload" as="image" href="/icons/rarity/star.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/anima.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/divina.png" />
+        <link rel="prefetch" as="image" href="/icons/attributes/phantasma.png" />
+        <link rel="prefetch" as="image" href="/icons/types/melee.png" />
+        <link rel="prefetch" as="image" href="/icons/types/ranged.png" />
+        <link rel="prefetch" as="image" href="/icons/types/healer.png" />
+        <link rel="prefetch" as="image" href="/icons/types/assist.png" />
+        <link rel="prefetch" as="image" href="/icons/rarity/star.png" />
       </>
+    )}
+
+    <!-- Early card data fetch: start downloading before React hydrates.
+         rel="preload" as="fetch" triggers an immediate high-priority fetch;
+         when cards.ts later calls fetch() for the same URL, the browser
+         serves it from the preload cache — no duplicate request.
+         rel="prefetch" on the full index is lower priority (larger file). -->
+    {preloadCardData && dataPaths[currentLocale]?.cards_skeleton && (
+      <link rel="preload" as="fetch" href={dataPaths[currentLocale].cards_skeleton} crossorigin="anonymous" />
+    )}
+    {preloadCardData && dataPaths[currentLocale]?.cards_index && (
+      <link rel="prefetch" href={dataPaths[currentLocale].cards_index} />
     )}
   </head>
   <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">

@@ -41,6 +41,6 @@ if (calendarData.auction_predictions?.length) {
       <p class="text-secondary">現在と今後のイベント、ピックアップガチャ、交換、デイリーダンジョン。</p>
     </div>
 
-    <CalendarPage client:only="react" data={calendarData} />
+    <CalendarPage client:load data={calendarData} />
   </div>
 </BaseLayout>

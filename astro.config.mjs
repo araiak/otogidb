@@ -58,7 +58,8 @@ export default defineConfig({
         output: {
           manualChunks: {
             'tanstack-table': ['@tanstack/react-table'],
-            'floating-ui': ['@floating-ui/react']
+            'floating-ui': ['@floating-ui/react'],
+            'recharts': ['recharts'],
           }
         }
       }

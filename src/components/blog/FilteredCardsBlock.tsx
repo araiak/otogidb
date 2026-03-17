@@ -4,11 +4,7 @@ import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/ima
 import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
-
-interface FilteredCardsBlockProps {
-  cards: Record<string, Card>;
-  skills?: Record<string, any>;
-}
+import { getCardsData, type CardLocale } from '../../lib/cards';
 
 interface ParsedFilters {
   q?: string;
@@ -198,13 +194,25 @@ function matchesFilters(card: Card, filters: ParsedFilters): boolean {
 /**
  * FilteredCardsBlock - Hydrates all .filtered-cards-block containers
  * Renders matching cards as a grid with hover popups (desktop) and tap preview (mobile)
+ * Self-fetches card data via the shared IndexedDB cache — no prop needed.
  */
-export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCardsBlockProps) {
+export default function FilteredCardsBlock() {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
+  const [cards, setCards] = useState<Record<string, Card>>({});
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
 
   useEffect(() => {
+    const loc = getLocaleFromUrl() as CardLocale;
+    getCardsData({ locale: loc })
+      .then((result) => setCards(result.cards))
+      .catch(err => console.error('[FilteredCardsBlock] Failed to load card data:', err));
+  }, []);
+
+  useEffect(() => {
+    // Wait until card data is loaded before processing containers
+    if (Object.keys(cards).length === 0) return;
+
     // Find all filter block containers
     const containers = document.querySelectorAll<HTMLElement>('.filtered-cards-block');
     if (containers.length === 0) return;
@@ -307,7 +315,6 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
     <CardHoverProvider
       key={hydrationKey}
       cards={cards}
-      skills={skills}
       selector=".filter-result-card[data-card-id]"
       placement="top"
       compact={true}

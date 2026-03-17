@@ -9,12 +9,10 @@ import TeamBlock from '../../../components/blog/TeamBlock';
 import type { CardsData, Card } from '../../../types/card';
 import { getImageUrl } from '../../../lib/images';
 
-// Import cards, skills, and tier data for popups
+// Import cards data at build time for social image detection
 import cardsDataRaw from '../../../data/cards.json';
-import skillsDataRaw from '../../../data/skills.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
-const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
   // Only get English posts (locale is 'en' or unspecified)
@@ -175,16 +173,16 @@ const jsonLd = {
     </article>
 
     <!-- Card reference hover popups -->
-    <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
+    <CardReferencePopups client:visible />
 
     <!-- Filter block card grids with hover popups -->
-    <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <FilteredCardsBlock client:visible />
 
     <!-- List block card grids with hover popups -->
-    <ListBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <ListBlock client:visible />
 
     <!-- Team composition blocks with hover popups -->
-    <TeamBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <TeamBlock client:visible />
 
     <!-- Back to blog -->
     <div class="mt-6">

@@ -4,11 +4,7 @@ import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/ima
 import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
-
-interface TeamBlockProps {
-  cards: Record<string, Card>;
-  skills?: Record<string, any>;
-}
+import { getCardsData, type CardLocale } from '../../lib/cards';
 
 interface TeamMember {
   cardId: string;
@@ -57,13 +53,25 @@ function parseTeamQuery(query: string): TeamMember[] {
 /**
  * TeamBlock - Hydrates all .team-block containers
  * Renders team compositions with required/optional markers and hover popups
+ * Self-fetches card data via the shared IndexedDB cache — no prop needed.
  */
-export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
+export default function TeamBlock() {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
+  const [cards, setCards] = useState<Record<string, Card>>({});
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
 
   useEffect(() => {
+    const loc = getLocaleFromUrl() as CardLocale;
+    getCardsData({ locale: loc })
+      .then((result) => setCards(result.cards))
+      .catch(err => console.error('[TeamBlock] Failed to load card data:', err));
+  }, []);
+
+  useEffect(() => {
+    // Wait until card data is loaded before processing containers
+    if (Object.keys(cards).length === 0) return;
+
     // Find all team block containers
     const containers = document.querySelectorAll<HTMLElement>('.team-block');
     if (containers.length === 0) return;
@@ -221,7 +229,6 @@ export default function TeamBlock({ cards, skills = {} }: TeamBlockProps) {
     <CardHoverProvider
       key={hydrationKey}
       cards={cards}
-      skills={skills}
       selector=".team-member-card[data-card-id]"
       placement="top"
       compact={true}
