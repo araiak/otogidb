@@ -173,6 +173,45 @@ const navLinks = {
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";window.OTOGIDB_DATA_PATHS=${JSON.stringify(dataPaths)};`} />
 
+    <!-- Early data fetch: start skeleton + manifest before React hydrates.
+         Skeleton: always needed, starts immediately (HTTP cache on repeat visits).
+         Manifest: small (no-cache), drives delta-vs-full-index decision.
+         Both promises are consumed by cards.ts when CardTable mounts. -->
+    <script is:inline>
+      (function() {
+        var paths = window.OTOGIDB_DATA_PATHS;
+        var localeMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+        var locale = (localeMatch && paths && paths[localeMatch[1]]) ? localeMatch[1] : 'en';
+        var localePaths = paths && paths[locale];
+        if (!localePaths) return;
+
+        // Skeleton: always needed, start immediately (HTTP cache serves repeat visits)
+        if (localePaths.cards_skeleton) {
+          window.__otogiSkeletonPromise = fetch(localePaths.cards_skeleton, { cache: 'default' })
+            .then(function(r) { return r.ok ? r.json() : null; })
+            .catch(function() { return null; });
+        }
+
+        // Manifest: small (no-cache), needed to decide delta vs full-index
+        window.__otogiManifestPromise = fetch('/data/manifest.json', { cache: 'no-cache' })
+          .then(function(r) { return r.ok ? r.json() : null; })
+          .catch(function() { return null; });
+
+        // Full index: start speculatively on first visit (no IndexedDB cache yet).
+        // Skip if sessionStorage shows we already cached this hash in IndexedDB.
+        if (localePaths.cards_index) {
+          var indexHashMatch = localePaths.cards_index.match(/\.([a-z0-9]{6,12})\.json/);
+          var indexHash = indexHashMatch ? indexHashMatch[1] : null;
+          var cachedHash = null;
+          try { cachedHash = sessionStorage.getItem('otogidb-index-hash'); } catch(e) {}
+          if (!indexHash || cachedHash !== indexHash) {
+            // Store Response promise (NOT .json()) — fetchWithCache will consume it.
+            window.__otogiIndexResponse = fetch(localePaths.cards_index, { cache: 'default' });
+          }
+        }
+      })();
+    </script>
+
     <!-- PostHog Analytics (direct first, proxy fallback to reduce costs) -->
     <script is:inline>
       (function() {

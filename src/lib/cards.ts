@@ -80,6 +80,15 @@ function getDataPath(filename: string, locale: CardLocale = 'en'): string {
 export async function getCardsSkeleton(
   options: { locale?: CardLocale } = {}
 ): Promise<SkeletonCardsData | null> {
+  // Use the inline-script promise if available (already in-flight since HTML parse)
+  if (typeof window !== 'undefined' && window.__otogiSkeletonPromise) {
+    try {
+      const data = await window.__otogiSkeletonPromise as SkeletonCardsData | null;
+      if (data) return data;
+    } catch {
+      // fall through to fetchWithCache
+    }
+  }
   const locale = options.locale || 'en';
   const skeletonPath = getDataPath('cards_skeleton.json', locale);
   try {
@@ -179,44 +188,43 @@ interface DeltaUpdateResult {
  */
 async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult> {
   try {
-    // Get current version from unified manifest (with legacy fallback)
-    const targetVersion = await getCurrentVersion();
+    const dataPath = getDataPath('cards_index.json', locale);
+
+    // Run manifest check and IndexedDB read in parallel — both may be in-flight
+    // already (manifest via __otogiManifestPromise, IndexedDB via fetchWithCache).
+    const [targetVersion, cachedData] = await Promise.all([
+      getCurrentVersion(), // reuses __otogiManifestPromise if available
+      fetchWithCache<CardsData>(dataPath, { forceRefresh: false, maxAge: CACHE_MAX_AGE })
+        .catch(() => null as CardsData | null),
+    ]);
 
     if (!targetVersion) {
       if (import.meta.env.DEV) console.log('[Delta] No target version available from any manifest');
+      return { data: cachedData, source: cachedData ? 'cached' : 'none' };
+    }
+
+    if (!cachedData) {
       return { data: null, source: 'none' };
     }
 
-    // Load cached data from IndexedDB (via fetchWithCache)
-    // This will return cached data if available, or fetch fresh if not
-    const dataPath = getDataPath('cards_index.json', locale);
-    const cachedData = await fetchWithCache<CardsData>(dataPath, {
-      forceRefresh: false,
-      maxAge: CACHE_MAX_AGE
-    });
-
-    // Check if fetchWithCache just got fresh data (versions match)
+    // Fast path: IndexedDB data is already the current version (no index download needed)
     if ((cachedData.data_hash ?? cachedData.version) === targetVersion) {
       if (import.meta.env.DEV) console.log(`[Delta] Data already at target version ${targetVersion}`);
       return { data: cachedData, source: 'fresh' };
     }
 
     // Try to apply delta from cached version to target version
+    // (manifest already in-memory via getManifest() — no second fetch)
     const updatedData = await tryDeltaUpdate(cachedData, targetVersion);
 
     if (updatedData && updatedData !== cachedData) {
-      // Delta was successfully applied
       if (import.meta.env.DEV) console.log('[Delta] Delta applied successfully');
       return { data: updatedData, source: 'delta' };
     }
 
     // Delta not available or failed, but we have cached data
-    if (cachedData) {
-      if (import.meta.env.DEV) console.log('[Delta] Using cached data (delta not available)');
-      return { data: cachedData, source: 'cached' };
-    }
-
-    return { data: null, source: 'none' };
+    if (import.meta.env.DEV) console.log('[Delta] Using cached data (delta not available)');
+    return { data: cachedData, source: 'cached' };
   } catch (error) {
     console.warn('[Delta] Delta update failed, falling back to full fetch', { locale, error: String(error) });
     return { data: null, source: 'none' };
