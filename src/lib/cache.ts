@@ -10,6 +10,7 @@ declare global {
     OTOGIDB_DATA_PATHS?: Record<string, {
       cards_index: string;
       cards_index_base: string;
+      cards_skeleton?: string;
     }>;
   }
 }

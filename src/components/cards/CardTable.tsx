@@ -15,7 +15,7 @@ import {
   flexRender,
 } from '@tanstack/react-table';
 import type { Card } from '../../types/card';
-import { getCardsData, type CardLocale } from '../../lib/cards';
+import { getCardsData, getCardsSkeleton, type CardLocale } from '../../lib/cards';
 import Fuse from 'fuse.js';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import CardPreviewContent from './CardPreviewContent';
@@ -90,6 +90,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [cards, setCards] = useState<Card[]>(initialCards || []);
   const [loading, setLoading] = useState(!initialCards);
   const [error, setError] = useState<string | null>(null);
+  // filtersReady is false while only skeleton data is loaded.
+  // Skill/ability/source filter dropdowns are disabled until full index arrives.
+  const [filtersReady, setFiltersReady] = useState(!!initialCards);
 
   // Detect locale on mount
   useEffect(() => {
@@ -417,32 +420,57 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }
   }, []);
 
-  // Load cards - reload when locale changes
+  // Load cards - reload when locale changes.
+  // Two-stage loading: skeleton first (~100ms) → full index in background (~300ms).
   // Note: skills.json is NOT loaded at runtime - skill descriptions in cards_index.json
   // are pre-calculated at build time with {value}, {probability}, {delay1} substituted
   useEffect(() => {
+    if (initialCards) return; // SSR-provided cards need no fetch
+
+    let cancelled = false;
+
     async function loadData() {
       setLoading(true);
       setError(null);
-      try {
-        const cardsData = initialCards
-          ? { cards: Object.fromEntries(initialCards.map(c => [c.id, c])) }
-          : await getCardsData({ locale: locale as CardLocale });
+      setFiltersReady(false);
 
-        if (!initialCards) {
+      // Stage 1: load skeleton for instant page-1 render
+      const skeletonPromise = getCardsSkeleton({ locale: locale as CardLocale });
+
+      // Stage 2: start full index fetch in parallel (don't await yet)
+      const fullPromise = getCardsData({ locale: locale as CardLocale });
+
+      try {
+        const skeletonData = await skeletonPromise;
+        if (!cancelled && skeletonData) {
+          const skeletonList = Object.values(skeletonData.cards) as Card[];
+          setCards(skeletonList);
+          setLoading(false);
+          searchIndexRef.current = null;
+        }
+      } catch {
+        // Skeleton is optional — keep loading state until full index
+      }
+
+      try {
+        const cardsData = await fullPromise;
+        if (!cancelled) {
           const cardList = Object.values(cardsData.cards);
           setCards(cardList);
-          // Clear search index when cards change - will be rebuilt lazily on first search
+          setFiltersReady(true);
+          setLoading(false);
           searchIndexRef.current = null;
         }
       } catch (err) {
-        setError(err instanceof Error ? err.message : 'Failed to load cards');
-      } finally {
-        setLoading(false);
+        if (!cancelled) {
+          setError(err instanceof Error ? err.message : 'Failed to load cards');
+          setLoading(false);
+        }
       }
     }
 
     loadData();
+    return () => { cancelled = true; };
   }, [initialCards, locale]);
 
   // Update column filters when filter values change
@@ -570,7 +598,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             type="text"
             value={globalFilter}
             onChange={(e) => setGlobalFilter(e.target.value)}
-            placeholder="Search cards..."
+            placeholder={filtersReady ? "Search cards..." : "Loading data..."}
             className="w-full px-4 py-2 rounded-md border bg-primary"
             style={{ borderColor: 'var(--color-border)' }}
           />
@@ -647,6 +675,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             />
             <span>Hide NPCs</span>
           </label>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.attributes}
             value={attributeFilter}
@@ -662,6 +691,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </span>
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.types}
             value={typeFilter}
@@ -677,6 +708,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </span>
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.rarities}
             value={rarityFilter}
@@ -686,6 +719,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <RarityStars value={opt as number} size="sm" />
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.bondTypes}
             value={bondFilter}
@@ -703,26 +738,38 @@ export default function CardTable({ initialCards }: CardTableProps) {
               return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />
-          <GroupedTagDropdown
-            categories={skillTagCategories}
-            value={skillTagFilter}
-            onChange={setSkillTagFilter}
-            placeholder="Skill Tags"
-          />
-          <div className="flex items-center">
+          </div>
+          <div
+            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
+            title={!filtersReady ? 'Loading full data…' : undefined}
+          >
+            <GroupedTagDropdown
+              categories={skillTagCategories}
+              value={skillTagFilter}
+              onChange={setSkillTagFilter}
+              placeholder={!filtersReady ? 'Skill Tags (loading…)' : 'Skill Tags'}
+            />
+          </div>
+          <div className={`flex items-center${!filtersReady ? ' opacity-50 pointer-events-none' : ''}`}
+            title={!filtersReady ? 'Loading full data…' : undefined}
+          >
             <GroupedTagDropdown
               categories={abilityTagCategories}
               value={abilityTagFilter}
               onChange={setAbilityTagFilter}
-              placeholder="Ability Tags"
+              placeholder={!filtersReady ? 'Ability Tags (loading…)' : 'Ability Tags'}
             />
             <FilterInfoTooltip text="Ability Tags: Finds cards where one ability has all selected tags." />
           </div>
+          <div
+            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
+            title={!filtersReady ? 'Loading full data…' : undefined}
+          >
           <FilterDropdown
             options={filterOptions.sources}
             value={sourceFilter}
             onChange={(v) => setSourceFilter(v as string[])}
-            placeholder="Source"
+            placeholder={!filtersReady ? 'Source (loading…)' : 'Source'}
             dropdownClassName="min-w-[130px]"
             renderOption={(opt) => {
               const label = opt === 'gacha' ? 'Gacha' :
@@ -738,6 +785,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />
+          </div>
           <div className="flex items-center">
             <label className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
                    style={{ borderColor: availableOnly ? 'var(--color-accent)' : 'var(--color-border)' }}>
@@ -913,7 +961,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
           </button>
           <button
             onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
+            disabled={!table.getCanNextPage() || !filtersReady}
+            title={!filtersReady ? "Loading full data…" : undefined}
             className="btn-secondary px-3 py-1 touch-target disabled:opacity-50"
           >
             Next

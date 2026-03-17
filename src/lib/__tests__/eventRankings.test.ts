@@ -38,7 +38,7 @@ const TOWER_CUTOFFS = [
   { rank_min: 401, rank_max: 800, cutoff_score:     50_000_000 },
 ];
 
-const STORY_CUTOFFS = [
+const _STORY_CUTOFFS = [
   { rank_min: 1,   rank_max: 70,  cutoff_score: 1_500_000 },
   { rank_min: 71,  rank_max: 140, cutoff_score:   800_000 },
   { rank_min: 141, rank_max: 210, cutoff_score:   400_000 },

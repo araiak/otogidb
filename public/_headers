@@ -12,24 +12,145 @@
 # =============================================================================
 # DATA FILES - Cache with revalidation
 # =============================================================================
+# Cloudflare Pages merges ALL matching header rules — avoid overlapping patterns
+# for Cache-Control or browsers receive duplicate max-age directives and use the
+# smallest one. Each URL should match exactly ONE Cache-Control rule.
 
-# Hashed data files (e.g., cards_index.abc12345.json) - cache 1.5 days
-# Content-hashed URLs ensure fresh data on new deployments
-# 36 hours gives buffer for timing differences while clearing stale files
+# --- Hashed/immutable files (content-hash in filename, cache forever) ----------
+
+# NOTE: Cloudflare Pages _headers only supports a SINGLE * wildcard per rule.
+# Double-wildcard patterns like /data/*/cards_index.*.json silently fail.
+# Each locale must have its own explicit rule.
+
+# Card index files (hashed, e.g. cards_index.abc12345.json) - cache 1.5 days
 /data/cards_index.*.json
   Cache-Control: public, max-age=129600, immutable
 
-/data/*/cards_index.*.json
+/data/en/cards_index.*.json
   Cache-Control: public, max-age=129600, immutable
+
+/data/ja/cards_index.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/ko/cards_index.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/es/cards_index.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/zh-cn/cards_index.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/zh-tw/cards_index.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+# Card skeleton files (hashed) - cache 1.5 days
+/data/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/en/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/ja/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/ko/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/es/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/zh-cn/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/zh-tw/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+# Patch notes (hashed, never change once published) - cache 1 year
+/data/changes/patch_notes_*.json
+  Cache-Control: public, max-age=31536000, immutable
+
+# Delta patch files - all files in /data/delta/ are hashed (e.g. abc_to_def.json).
+# The delta chain is embedded in /data/manifest.json, so this folder is purely
+# immutable hashed content with no separate manifest file.
+/data/delta/*
+  Cache-Control: public, max-age=31536000, immutable
 
 # Tier data only changes when new cards are added (monthly)
 /data/tiers.*.json
   Cache-Control: public, max-age=604800, immutable
 
-# Base JSON data (fallback) - cache 15 min, serve stale while revalidating for 1 hour
-# Short cache since auction availability updates daily at 4pm JST
-/data/*
+# --- Non-hashed files (updated on deploys, cache 15 min + stale-while-revalidate) ---
+
+/data/manifest.json
   Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+
+/data/changes/manifest.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/en/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/ja/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/ko/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/es/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/zh-cn/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/zh-tw/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/en/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/ja/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/ko/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/es/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/zh-cn/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/zh-tw/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/calendar.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/event_cutoffs.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/skills.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/wbLv.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
+
+/data/wbSettings.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
+
+/data/wbSkill.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
 
 # =============================================================================
 # IMAGES & ICONS - Long cache
@@ -50,7 +171,14 @@
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
 # Icons - cache 1 year (rarely change)
-/icons/*
+# Note: * in _headers does NOT match / so each subdirectory needs its own rule
+/icons/attributes/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/types/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/rarity/*
   Cache-Control: public, max-age=31536000, immutable
 
 # Favicon

@@ -37,7 +37,7 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
+<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale} preloadIcons={true}>
   <!-- JSON-LD Structured Data -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 

@@ -241,6 +241,36 @@ export interface CardsData {
   cards: Record<string, Card>;
 }
 
+/**
+ * Minimal index entry used in cards_skeleton.json for non-first-page cards.
+ * Contains only fields needed to render a table row (name, stats, image).
+ * First-page cards (IDs 1–50) use the full Card shape instead.
+ */
+export interface CardSkeleton {
+  id: string;
+  asset_id: string;
+  name: string | null;
+  playable: boolean;
+  has_bugs?: boolean;
+  stats: Pick<CardStats, 'attribute_name' | 'type_name' | 'rarity' | 'max_atk' | 'max_hp' | 'speed' | 'crit' | 'cost'>;
+  image_urls: ImageUrls;
+  // Full filter fields — present for IDs 1–50, absent for the rest
+  skill?: { name: string; description: string; tags: string[] } | null;
+  abilities?: Array<{ name: string; description: string; tags: string[]; unlock_level?: number }>;
+  bonds?: Array<{ type: string }>;
+  acquisition?: { sources: AcquisitionSource[]; has_tower_drops: boolean };
+  gives_special_bond?: boolean;
+  receives_special_bond?: boolean;
+}
+
+/** Data shape returned by the cards_skeleton.json fast-first-load file. */
+export interface SkeletonCardsData {
+  version: string;
+  data_hash?: string;
+  total_cards: number;
+  cards: Record<string, CardSkeleton | Card>;
+}
+
 // Change notes types
 export interface ChangeSummary {
   new_cards: number;
