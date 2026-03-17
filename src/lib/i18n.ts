@@ -125,10 +125,20 @@ export function detectBrowserLocale(): SupportedLocale {
   const browserLangs = navigator.languages || [navigator.language];
 
   for (const lang of browserLangs) {
-    // Check for exact match first (e.g., 'ja', 'en')
-    const shortLang = lang.split('-')[0].toLowerCase();
-    if (SUPPORTED_LOCALES.includes(shortLang as SupportedLocale)) {
-      return shortLang as SupportedLocale;
+    const normalized = lang.toLowerCase();
+
+    // Check for exact match first (e.g., 'zh-cn', 'zh-tw', 'en', 'ja')
+    if (SUPPORTED_LOCALES.includes(normalized as SupportedLocale)) {
+      return normalized as SupportedLocale;
+    }
+
+    // Then check primary language code (e.g., 'zh' from 'zh-CN' or 'zh-Hans')
+    const primaryLang = normalized.split('-')[0];
+    const matchingLocale = SUPPORTED_LOCALES.find(
+      (locale) => locale.split('-')[0] === primaryLang
+    );
+    if (matchingLocale) {
+      return matchingLocale;
     }
   }
 
@@ -176,9 +186,9 @@ export function getEffectiveLocale(): SupportedLocale {
  */
 export const localeInitScript = `
 (function() {
-  const SUPPORTED = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
-  const STORAGE_KEY = 'otogidb-locale';
-  const DEFAULT = 'en';
+  const SUPPORTED = ${JSON.stringify(SUPPORTED_LOCALES)};
+  const STORAGE_KEY = '${LOCALE_STORAGE_KEY}';
+  const DEFAULT = '${DEFAULT_LOCALE}';
 
   function getStoredLocale() {
     try {

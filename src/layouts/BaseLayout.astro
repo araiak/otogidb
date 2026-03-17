@@ -260,15 +260,25 @@ const navLinks = {
           'zh-tw': "我們正在修復問題，多語言功能即將恢復。感謝您的耐心等待！",
           es: "Estamos solucionando algunos problemas. ¡Los idiomas volverán pronto!"
         };
-        var stored = null;
-        try { stored = localStorage.getItem('otogidb-locale'); } catch(e) {}
-        var full = (navigator.language || '').toLowerCase();
-        var lang = stored;
+        var supported = ['en', 'ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+
+        // Detect locale from URL pathname first
+        var pathMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)\//);
+        var lang = pathMatch && supported.includes(pathMatch[1]) ? pathMatch[1] : null;
+
+        // Fall back to stored preference
         if (!lang) {
+          try { lang = localStorage.getItem('otogidb-locale'); } catch(e) {}
+        }
+
+        // Fall back to browser detection
+        if (!lang) {
+          var full = (navigator.language || '').toLowerCase();
           if (full.startsWith('zh-tw') || full === 'zh-hk' || full === 'zh-mo') lang = 'zh-tw';
           else if (full.startsWith('zh')) lang = 'zh-cn';
           else lang = full.split('-')[0];
         }
+
         var el = document.getElementById('maintenance-msg');
         if (el && msgs[lang]) el.textContent = msgs[lang];
       })();

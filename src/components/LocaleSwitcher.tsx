@@ -1,21 +1,44 @@
 import { useState, useEffect, useRef } from 'react';
-import { SUPPORTED_LOCALES, LOCALE_NAMES, LOCALE_STORAGE_KEY, type SupportedLocale } from '../lib/i18n';
+import {
+  SUPPORTED_LOCALES,
+  LOCALE_NAMES,
+  LOCALE_STORAGE_KEY,
+  extractLocaleFromPath,
+  getPathInLocale,
+  type SupportedLocale,
+} from '../lib/i18n';
+
+function getInitialLocale(): SupportedLocale {
+  // Check localStorage first
+  try {
+    const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
+    if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
+      return stored as SupportedLocale;
+    }
+  } catch {
+    // localStorage unavailable
+  }
+
+  // Fall back to URL-derived locale
+  if (typeof window !== 'undefined') {
+    return extractLocaleFromPath(window.location.pathname);
+  }
+
+  return 'en';
+}
 
 export default function LocaleSwitcher() {
-  const [currentLocale, setCurrentLocale] = useState<SupportedLocale>('en');
+  const [currentLocale, setCurrentLocale] = useState<SupportedLocale>(getInitialLocale);
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Read stored locale on mount
-    try {
-      const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
-      if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
-        setCurrentLocale(stored as SupportedLocale);
-      }
-    } catch {
-      // localStorage unavailable
-    }
+    // Sync state if locale changes externally (e.g., via popstate)
+    const handlePopstate = () => {
+      setCurrentLocale(extractLocaleFromPath(window.location.pathname));
+    };
+    window.addEventListener('popstate', handlePopstate);
+    return () => window.removeEventListener('popstate', handlePopstate);
   }, []);
 
   useEffect(() => {
@@ -39,6 +62,10 @@ export default function LocaleSwitcher() {
     window.dispatchEvent(
       new CustomEvent('otogidb-locale-change', { detail: { locale } })
     );
+
+    // Navigate to the localized URL (preserves path, query, hash)
+    const newUrl = getPathInLocale(window.location.pathname, locale);
+    window.history.pushState(null, '', newUrl);
   }
 
   const displayCode = currentLocale.startsWith('zh-') ? 'ZH' : currentLocale.toUpperCase();

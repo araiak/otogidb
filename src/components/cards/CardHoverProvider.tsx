@@ -5,6 +5,7 @@ import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
 import CardPreviewContent from './CardPreviewContent';
 import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
+import { getCardsData } from '../../lib/cards';
 
 interface CardHoverProviderProps {
   /** Card data lookup by ID */
@@ -58,6 +59,7 @@ export default function CardHoverProvider({
 }: CardHoverProviderProps) {
   // Detect locale for URLs
   const [locale, setLocale] = useState<SupportedLocale>('en');
+  const [internalCards, setInternalCards] = useState<Record<string, Card> | null>(null);
 
   useEffect(() => {
     // Check URL path first
@@ -75,6 +77,20 @@ export default function CardHoverProvider({
     } catch { /* localStorage unavailable */ }
   }, []);
 
+  useEffect(() => {
+    const handleLocaleChange = (e: Event) => {
+      const newLocale = (e as CustomEvent<{ locale: SupportedLocale }>).detail.locale;
+      setLocale(newLocale);
+      getCardsData({ locale: newLocale }).then((data) => {
+        setInternalCards(data.cards as Record<string, Card>);
+      });
+    };
+    window.addEventListener('otogidb-locale-change', handleLocaleChange);
+    return () => window.removeEventListener('otogidb-locale-change', handleLocaleChange);
+  }, []);
+
+  const effectiveCards = internalCards ?? cards;
+
   const {
     activeCard,
     mobilePreviewCard,
@@ -82,7 +98,7 @@ export default function CardHoverProvider({
     floating,
     mobilePreviewRef,
   } = useCardHover({
-    cards,
+    cards: effectiveCards,
     selector,
     placement,
     offsetDistance,
