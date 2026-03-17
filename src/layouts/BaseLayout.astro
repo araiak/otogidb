@@ -83,6 +83,8 @@ interface Props {
   lang?: string;
   /** Set to true for pages with localized URL versions (e.g., card detail pages) */
   hasLocalizedUrls?: boolean;
+  /** Set to true on card table pages to preload icon files in <head> */
+  preloadIcons?: boolean;
   article?: {
     publishedTime?: string;
     modifiedTime?: string;
@@ -98,6 +100,7 @@ const {
   type = 'website',
   lang = currentLocale,
   hasLocalizedUrls = false,
+  preloadIcons = false,
   article,
 } = Astro.props;
 
@@ -224,6 +227,20 @@ const navLinks = {
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=optional"
     />
+
+    <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
+    {preloadIcons && (
+      <>
+        <link rel="preload" as="image" href="/icons/attributes/anima.png" />
+        <link rel="preload" as="image" href="/icons/attributes/divina.png" />
+        <link rel="preload" as="image" href="/icons/attributes/phantasma.png" />
+        <link rel="preload" as="image" href="/icons/types/melee.png" />
+        <link rel="preload" as="image" href="/icons/types/ranged.png" />
+        <link rel="preload" as="image" href="/icons/types/healer.png" />
+        <link rel="preload" as="image" href="/icons/types/assist.png" />
+        <link rel="preload" as="image" href="/icons/rarity/star.png" />
+      </>
+    )}
   </head>
   <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">
     <header class="sticky top-0 z-40 border-b" style="background-color: var(--color-header); border-color: var(--color-border);">

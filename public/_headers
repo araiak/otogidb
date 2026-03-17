@@ -12,24 +12,84 @@
 # =============================================================================
 # DATA FILES - Cache with revalidation
 # =============================================================================
+# Cloudflare Pages merges ALL matching header rules — avoid overlapping patterns
+# for Cache-Control or browsers receive duplicate max-age directives and use the
+# smallest one. Each URL should match exactly ONE Cache-Control rule.
 
-# Hashed data files (e.g., cards_index.abc12345.json) - cache 1.5 days
-# Content-hashed URLs ensure fresh data on new deployments
-# 36 hours gives buffer for timing differences while clearing stale files
+# --- Hashed/immutable files (content-hash in filename, cache forever) ----------
+
+# Card index files (hashed, e.g. cards_index.abc12345.json) - cache 1.5 days
 /data/cards_index.*.json
   Cache-Control: public, max-age=129600, immutable
 
 /data/*/cards_index.*.json
   Cache-Control: public, max-age=129600, immutable
 
+# Card skeleton files (hashed) - cache 1.5 days
+/data/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+/data/*/cards_skeleton.*.json
+  Cache-Control: public, max-age=129600, immutable
+
+# Patch notes (hashed, never change once published) - cache 1 year
+/data/changes/patch_notes_*.json
+  Cache-Control: public, max-age=31536000, immutable
+
+# Delta files (hashed pair names, e.g. abc123_to_def456.json) - cache 1 year
+/data/delta/*_to_*.json
+  Cache-Control: public, max-age=31536000, immutable
+
 # Tier data only changes when new cards are added (monthly)
 /data/tiers.*.json
   Cache-Control: public, max-age=604800, immutable
 
-# Base JSON data (fallback) - cache 15 min, serve stale while revalidating for 1 hour
-# Short cache since auction availability updates daily at 4pm JST
-/data/*
+# --- Non-hashed files (updated on deploys, cache 15 min + stale-while-revalidate) ---
+
+/data/manifest.json
   Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/delta/manifest.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/delta/_previous_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/changes/manifest.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/*/cards_index.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/*/cards_skeleton.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/cards.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/calendar.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/event_cutoffs.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/skills.json
+  Cache-Control: public, max-age=900, stale-while-revalidate=3600
+
+/data/wbLv.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
+
+/data/wbSettings.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
+
+/data/wbSkill.json
+  Cache-Control: public, max-age=86400, stale-while-revalidate=3600
 
 # =============================================================================
 # IMAGES & ICONS - Long cache
@@ -50,7 +110,7 @@
   Cache-Control: public, max-age=604800, stale-while-revalidate=86400
 
 # Icons - cache 1 year (rarely change)
-/icons/*
+/icons/:splat
   Cache-Control: public, max-age=31536000, immutable
 
 # Favicon

@@ -598,7 +598,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             type="text"
             value={globalFilter}
             onChange={(e) => setGlobalFilter(e.target.value)}
-            placeholder="Search cards..."
+            placeholder={filtersReady ? "Search cards..." : "Loading data..."}
             className="w-full px-4 py-2 rounded-md border bg-primary"
             style={{ borderColor: 'var(--color-border)' }}
           />
@@ -675,6 +675,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             />
             <span>Hide NPCs</span>
           </label>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.attributes}
             value={attributeFilter}
@@ -690,6 +691,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </span>
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.types}
             value={typeFilter}
@@ -705,6 +708,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </span>
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.rarities}
             value={rarityFilter}
@@ -714,6 +719,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <RarityStars value={opt as number} size="sm" />
             )}
           />
+          </div>
+          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.bondTypes}
             value={bondFilter}
@@ -731,6 +738,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               return <span className={`text-sm font-medium ${colorClass}`}>{label}</span>;
             }}
           />
+          </div>
           <div
             className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
             title={!filtersReady ? 'Loading full data…' : undefined}
@@ -953,7 +961,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
           </button>
           <button
             onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
+            disabled={!table.getCanNextPage() || !filtersReady}
+            title={!filtersReady ? "Loading full data…" : undefined}
             className="btn-secondary px-3 py-1 touch-target disabled:opacity-50"
           >
             Next
