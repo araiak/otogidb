@@ -115,6 +115,41 @@ const jsonLd = {
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
   <script is:inline>
+    // Blog post i18n: show/hide [data-lang] blocks based on locale
+    (function () {
+      var STORAGE_KEY = 'otogidb-locale';
+      var SUPPORTED = ['ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
+
+      function getLocale() {
+        try {
+          var s = localStorage.getItem(STORAGE_KEY);
+          if (s && SUPPORTED.includes(s)) return s;
+        } catch (e) {}
+        return null;
+      }
+
+      function applyLocale(locale) {
+        var all = document.querySelectorAll('[data-lang]');
+        if (!all.length) return; // post has no translated blocks — nothing to do
+
+        // Use requested locale only if blocks exist for it; otherwise fall back to 'en'
+        var target = locale && document.querySelector('[data-lang="' + locale + '"]')
+          ? locale : 'en';
+
+        all.forEach(function (el) {
+          el.style.display = el.getAttribute('data-lang') === target ? '' : 'none';
+        });
+      }
+
+      applyLocale(getLocale()); // runs before first paint — no flash
+
+      window.addEventListener('otogidb-locale-change', function (e) {
+        applyLocale(e.detail && e.detail.locale);
+      });
+    })();
+  </script>
+
+  <script is:inline>
     // Update card links to use /en/ prefix for English blog pages
     (function() {
       var STORAGE_KEY = 'otogidb-locale';
