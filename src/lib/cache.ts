@@ -25,9 +25,9 @@ function getDataVersion(): string {
   return '';
 }
 
-const DB_NAME = 'otogidb-cache';
+export const DB_NAME = 'otogidb-cache';
 const DB_VERSION = 1;
-const STORE_NAME = 'json-cache';
+export const STORE_NAME = 'json-cache';
 
 interface CacheEntry {
   key: string;
@@ -274,7 +274,7 @@ export async function clearCache(): Promise<void> {
       const key = sessionStorage.key(i);
       if (key && key.startsWith('otogidb-index-hash-')) keysToRemove.push(key);
     }
-    keysToRemove.forEach((key) => sessionStorage.removeItem(key));
+    for (const key of keysToRemove) sessionStorage.removeItem(key);
   } catch { /* private browsing */ }
 }
 
