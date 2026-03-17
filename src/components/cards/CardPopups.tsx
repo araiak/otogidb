@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import type { Card } from '../../types/card';
 import CardHoverProvider from './CardHoverProvider';
 import { getCardsData, type CardLocale } from '../../lib/cards';
@@ -24,16 +24,23 @@ export default function CardPopups({
   injectMobileIcons = false,
 }: CardPopupsProps) {
   const [cards, setCards] = useState<Record<string, Card>>(cardsProp || {});
+  const fetchIdRef = useRef(0);
 
   useEffect(() => {
     if (cardsProp) {
       setCards(cardsProp);
       return;
     }
+    const id = ++fetchIdRef.current;
     const locale = getLocaleFromUrl() as CardLocale;
     getCardsData({ locale })
-      .then((result) => setCards(result.cards))
-      .catch(err => console.error('[CardPopups] Failed to load card data:', err));
+      .then((result) => {
+        if (id === fetchIdRef.current && !cardsProp) setCards(result.cards);
+      })
+      .catch(err => {
+        if (id === fetchIdRef.current) console.error('[CardPopups] Failed to load card data:', err);
+      });
+    return () => { fetchIdRef.current++; };
   }, [cardsProp]);
 
   return (

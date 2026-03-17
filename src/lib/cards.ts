@@ -193,12 +193,13 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
   try {
     const dataPath = getDataPath('cards_index.json', locale);
 
-    // Run manifest check and IndexedDB read in parallel — both may be in-flight
-    // already (manifest via __otogiManifestPromise, IndexedDB via fetchWithCache).
+    // Run manifest check and IndexedDB read in parallel.
+    // Use tryGetStaleCachedData (direct IndexedDB read, no version checks) so the
+    // delta base is always the local snapshot — fetchWithCache would re-fetch when
+    // the cached version doesn't match the build version, defeating delta patching.
     const [targetVersion, cachedData] = await Promise.all([
       getCurrentVersion(), // reuses __otogiManifestPromise if available
-      fetchWithCache<CardsData>(dataPath, { forceRefresh: false, maxAge: CACHE_MAX_AGE })
-        .catch(() => null as CardsData | null),
+      tryGetStaleCachedData(dataPath),
     ]);
 
     if (!targetVersion) {

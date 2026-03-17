@@ -256,7 +256,7 @@ export async function fetchWithCache<T>(
 export async function clearCache(): Promise<void> {
   try {
     const db = await openDB();
-    return new Promise((resolve, reject) => {
+    await new Promise<void>((resolve, reject) => {
       const transaction = db.transaction(STORE_NAME, 'readwrite');
       const store = transaction.objectStore(STORE_NAME);
       const request = store.clear();
@@ -267,6 +267,15 @@ export async function clearCache(): Promise<void> {
   } catch (error) {
     console.warn('Cache clear error:', error);
   }
+  // Also clear warm-hash markers so the pre-fetch isn't suppressed after a cache reset.
+  try {
+    const keysToRemove: string[] = [];
+    for (let i = 0; i < sessionStorage.length; i++) {
+      const key = sessionStorage.key(i);
+      if (key && key.startsWith('otogidb-index-hash-')) keysToRemove.push(key);
+    }
+    keysToRemove.forEach((key) => sessionStorage.removeItem(key));
+  } catch { /* private browsing */ }
 }
 
 /**
