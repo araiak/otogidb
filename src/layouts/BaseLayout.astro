@@ -203,7 +203,7 @@ const navLinks = {
           var indexHashMatch = localePaths.cards_index.match(/\.([a-z0-9]{6,12})\.json/);
           var indexHash = indexHashMatch ? indexHashMatch[1] : null;
           var cachedHash = null;
-          try { cachedHash = sessionStorage.getItem('otogidb-index-hash'); } catch(e) {}
+          try { cachedHash = sessionStorage.getItem('otogidb-index-hash-' + locale); } catch(e) {}
           if (!indexHash || cachedHash !== indexHash) {
             // Store Response promise (NOT .json()) — fetchWithCache will consume it.
             window.__otogiIndexResponse = fetch(localePaths.cards_index, { cache: 'default' });

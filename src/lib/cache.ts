@@ -235,10 +235,13 @@ export async function fetchWithCache<T>(
     });
     if (import.meta.env.DEV) console.log(`[Cache] Stored: ${url} (version: ${dataVersion}, hash: ${hash})`);
     // Record hash so future page loads skip the pre-fetch (IndexedDB is warm).
+    // Key by locale so switching locales doesn't incorrectly suppress the pre-fetch.
     if (url.includes('cards_index') && isHashedUrl) {
       const m = url.match(/\.([a-z0-9]{6,12})\.json/);
       if (m) {
-        try { sessionStorage.setItem('otogidb-index-hash', m[1]); } catch { /* private browsing */ }
+        const localeMatch = location.pathname.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/|$)/);
+        const locale = localeMatch ? localeMatch[1] : 'en';
+        try { sessionStorage.setItem(`otogidb-index-hash-${locale}`, m[1]); } catch { /* private browsing */ }
       }
     }
   }
