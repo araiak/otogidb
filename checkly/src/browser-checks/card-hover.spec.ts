@@ -36,6 +36,7 @@ test.describe('Card Hover Popups', () => {
         await page.waitForTimeout(100)
       }
     }
+    if (!popupVisible) throw new Error('Hover popup never appeared after 3 attempts')
 
     // Wait for CardFloatingPopup to appear via FloatingPortal
     const popup = page.locator('.popup').first()
