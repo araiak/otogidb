@@ -216,7 +216,7 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 5. **タンクが必要なら**オークションを確認
 
 ### イベント中
-1. **編成:** 借りたキャリー + 自分の耐久カード1枚（3-5 SE）
+1. **編成:** 借りたキャリー + 自分の耐久カード1枚（4-5 SE）
 2. **タイマーまで生存** → ギルドにシェアして助けを求める
 3. **全滅？** リバイブしない（カードドロップフロア以外）
 4. **壁にぶつかった？** 自分のカードを追加するかタンクを強化してタイマーまで生存できるようにしてシェア
@@ -384,7 +384,7 @@ SEコストをどこまで最適化するかは自分で決められますが、
 
 | 状況 | 戦略 |
 |------|------|
-| 開始時 | 強いキャリーを借り、自分の耐久カード1枚を用意（3-5 SE） |
+| 開始時 | 強いキャリーを借り、自分の耐久カード1枚を用意（4-5 SE） |
 | より多くの生存が必要 | より耐久力のあるカードを使うかDRアシストを追加 |
 | 壁にぶつかった | ボスをギルドにシェアして助けを求めるか、自分のカードを追加 |
 | カードドロップフロア（2倍HP） | HPスパイク用に一時的にカードを追加検討 |
@@ -410,7 +410,7 @@ SEコストをどこまで最適化するかは自分で決められますが、
 5. **탱커가 필요하면** 경매 확인
 
 ### 이벤트 중
-1. **편성:** 빌린 캐리 + 본인의 탱키한 카드 1장 (3-5 SE)
+1. **편성:** 빌린 캐리 + 본인의 탱키한 카드 1장 (4-5 SE)
 2. **타이머까지 생존** → 길드에 공유하여 도움 요청
 3. **전멸?** 부활하지 말 것 (카드 드롭 층 제외)
 4. **막혔다면?** 본인 카드를 추가하거나 탱커를 강화하여 타이머까지 생존해서 공유
@@ -578,7 +578,7 @@ SE 비용을 얼마나 최적화할지는 본인이 결정할 수 있지만, 대
 
 | 상황 | 전략 |
 |------|------|
-| 시작할 때 | 강한 캐리를 빌리고 본인의 탱키한 카드 1장 제공 (3-5 SE) |
+| 시작할 때 | 강한 캐리를 빌리고 본인의 탱키한 카드 1장 제공 (4-5 SE) |
 | 더 많은 생존이 필요 | 더 탱키한 카드를 사용하거나 DR 어시스트 추가 |
 | 막혔을 때 | 보스를 길드에 공유해 도움 요청, 또는 본인 카드 추가 |
 | 카드 드롭 층 (2배 HP) | HP 스파이크용으로 일시적으로 카드 추가 고려 |
@@ -604,7 +604,7 @@ SE 비용을 얼마나 최적화할지는 본인이 결정할 수 있지만, 대
 5. **如果你需要坦克**，去拍卖行查找
 
 ### 活动中
-1. **配置：**借用的主C + 1张你的耐久卡（3-5 SE）
+1. **配置：**借用的主C + 1张你的耐久卡（4-5 SE）
 2. **坚持到计时器结束** → 分享给公会寻求帮助
 3. **团灭了？** 不要复活（除非是掉落卡牌的楼层）
 4. **遇到瓶颈？** 添加更多自己的卡牌或升级你的坦克以便能坚持到计时器结束后分享
@@ -652,6 +652,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 
 ---
 
+<!-- markdownlint-disable MD024 -->
 ## 低SE爬塔策略
 
 由于借用的助战是免费的，最佳策略是借用一个强力伤害主C，自己只出1张卡。你可以只用1张自己的卡尽可能往上爬——3星只需3 SE，或者5星需要5 SE。
@@ -772,7 +773,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 
 | 情况 | 策略 |
 |------|------|
-| 刚开始 | 借用强力主C，提供1张你的耐久卡（3-5 SE）|
+| 刚开始 | 借用强力主C，提供1张你的耐久卡（4-5 SE）|
 | 需要更多生存 | 使用更耐久的卡或添加减伤辅助 |
 | 遇到瓶颈 | 将BOSS分享给公会寻求帮助，或添加更多你自己的卡 |
 | 掉落卡牌楼层（2倍血量）| 考虑临时添加卡牌应对血量峰值 |
@@ -798,7 +799,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 5. **如果你需要坦克**，去拍賣行查找
 
 ### 活動中
-1. **配置：**借用的主C + 1張你的耐久卡（3-5 SE）
+1. **配置：**借用的主C + 1張你的耐久卡（4-5 SE）
 2. **堅持到計時器結束** → 分享給公會尋求幫助
 3. **團滅了？** 不要復活（除非是掉落卡牌的樓層）
 4. **遇到瓶頸？** 添加更多自己的卡牌或升級你的坦克以便能堅持到計時器結束後分享
@@ -966,11 +967,13 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小3，最大18）
 
 | 情況 | 策略 |
 |------|------|
-| 剛開始 | 借用強力主C，提供1張你的耐久卡（3-5 SE）|
+| 剛開始 | 借用強力主C，提供1張你的耐久卡（4-5 SE）|
 | 需要更多生存 | 使用更耐久的卡或添加減傷輔助 |
 | 遇到瓶頸 | 將BOSS分享給公會尋求幫助，或添加更多你自己的卡 |
 | 掉落卡牌樓層（2倍血量）| 考慮臨時添加卡牌應對血量峰值 |
 | 後期塔樓 | 使用你最強的完整隊伍（最多4張卡 + 好友）|
+
+<!-- markdownlint-enable MD024 -->
 
 </div>
 
@@ -992,7 +995,7 @@ En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal 
 5. **Si necesitas un tanque**, busca uno en la subasta
 
 ### Durante el Evento
-1. **Usa:** carry prestado + 1 de tus cartas resistentes (3-5 SE)
+1. **Usa:** carry prestado + 1 de tus cartas resistentes (4-5 SE)
 2. **Sobrevive hasta el temporizador** → comparte con el gremio para pedir ayuda
 3. **¿Mueres?** No revivas (excepto en pisos de drop de cartas)
 4. **¿Llegas a un muro?** Añade más de tus propias cartas o mejora tu tanque para sobrevivir hasta el temporizador y compartir
@@ -1160,7 +1163,7 @@ Puedes decidir cuánto quieres optimizar los costos de SE, pero para la mayoría
 
 | Situación | Estrategia |
 |-----------|------------|
-| Empezando | Pide prestado un carry fuerte, proporciona 1 carta resistente tuya (3-5 SE) |
+| Empezando | Pide prestado un carry fuerte, proporciona 1 carta resistente tuya (4-5 SE) |
 | Necesitas más supervivencia | Usa una carta más resistente o añade un asistente de RD |
 | Llegas a un muro | Comparte el jefe con el gremio para pedir ayuda, o añade más de tus propias cartas |
 | Piso de drop de cartas (2x HP) | Considera añadir cartas temporalmente para el pico de HP |

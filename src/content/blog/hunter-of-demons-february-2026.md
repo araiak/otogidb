@@ -487,7 +487,7 @@ Las cartas de rerun no fueron las cartas de los Juegos Deportivos que esperaba. 
 
 ---
 
-## TL;DR
+## Resumen
 
 **Especial San Valentín** (hasta el 17 de feb):
 - :card[632] - **Decente si es barata** - Soporte de crítico Anima, pero :card[741] que viene el mes que viene es mejor

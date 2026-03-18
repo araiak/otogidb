@@ -111,7 +111,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
   - *最終ウェーブアビリティ*は戦闘の最後のウェーブで発動（例：5ウェーブ中の5ウェーブ目）
   - *累積ボーナス*は「ウェーブ開始時にXを獲得」と書かれています - 10%ブーストはウェーブ1で10%、ウェーブ2で20%、ウェーブ5で最大50%
   - *固定ボーナス*は常に有効
-- **属性タイプ**（ディビナ、アニマ、ファンタズマ）があり、バトルタイプによって-20%から20%のダメージボーナスがあります。ほとんどの場合、最強チームが最良の選択であることに変わりはないので、これは重要ではありません。
+- **属性タイプ**（ディビナ、アニマ、ファンタズマ）があり、タイプ相性があるときにチームボーナスが付与されます。リーダーが一致していると+10%、同じタイプのメンバー1人につき+5%（全員同タイプなら最大45%）。チームの強さが近い場合は、リーダーに合わせたタイプ編成を検討してください。一方のチームが明らかに強ければ、素のステータスがタイプボーナスを上回る可能性が高いです。
 - **SE（スピリットエナジー）消費が固定** - SEは5分に1回復するので、常にフルチームを使って最大限の価値を得ましょう。
 - **経験値ファーミングに最適** - ドロップ率ボーナスとXPボーナスの両方を、チームがクリアできる範囲で最大限活用すべきです。
 
@@ -152,7 +152,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 特に :card[570] と新しい :card[1494] のヘルパーを探しましょう！
 
-**注意：** これらのカードは互いにスタックしますが、同じカード同士はスタックしません！
+**注意：** これらのカードは互いにも、同じカード同士もスタックします！
 
 ---
 
@@ -232,7 +232,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 특히 :card[570]와 새로운 :card[1494]를 헬퍼로 찾아보세요!
 
-**참고:** 이 카드들은 서로 스택되지만 같은 카드끼리는 스택되지 않습니다!
+**참고:** 이 카드들은 서로도, 같은 카드끼리도 스택됩니다!
 
 ---
 
@@ -277,6 +277,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 ---
 
+<!-- markdownlint-disable MD024 -->
 ## 新手提示
 
 ### 队伍配置
@@ -312,7 +313,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 寻找这些助战，特别是 :card[570] 和新的 :card[1494]！
 
-**注意：** 这些卡片之间可以叠加，但相同的卡片不能叠加！
+**注意：** 这些卡片之间可以叠加，相同的卡片也可以叠加！
 
 ---
 
@@ -392,7 +393,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 尋找這些助戰，特別是 :card[570] 和新的 :card[1494]！
 
-**注意：** 這些卡片之間可以疊加，但相同的卡片不能疊加！
+**注意：** 這些卡片之間可以疊加，相同的卡片也可以疊加！
 
 ---
 
@@ -403,6 +404,8 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 尋找 :card[580] - 有時玩家會在名字裡加上「Holmes」或「SH」來表示助戰帶有這張卡。「Obi」和 :card[751] 也是一樣。這兩張卡也都有掉落率加成！
 
 **注意：** 這些卡片之間可以疊加，但相同的卡片不能疊加！
+
+<!-- markdownlint-enable MD024 -->
 
 </div>
 
@@ -472,7 +475,7 @@ Prioriza maximizar las estadísticas de tus tanques y healers para que puedan pr
 
 ¡Busca estos helpers, específicamente :card[570] y el nuevo :card[1494] si puedes!
 
-**Nota:** ¡Estas cartas se acumulan entre sí pero no consigo mismas!
+**Nota:** ¡Estas cartas se acumulan entre sí y también consigo mismas!
 
 ---
 

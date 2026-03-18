@@ -32,6 +32,7 @@ We just got ranking data but not tower data for Evil Gods Attack. Note: any of t
 
 ---
 
+<!-- markdownlint-disable MD024 -->
 ## Gacha
 
 Second half gacha is going to bleed everyone of their invokers and mochi.
@@ -156,7 +157,7 @@ These next few look to join the standard gacha:
 
 ## 전반 랭킹
 
-:card[1399]는 좀 의아합니다 - HP 증가와 스킬 피해 증가를 가진 디비나 원거리지만 AoE 스킬 피해가 낮습니다. 보너스도 누적되지 않습니다. **낮은 우선순위 - 싸게 얻을 수 있으면 얻기.**
+:card[1399]는 다소 의아한 카드입니다. Divina 원거리 유닛으로 HP 증가와 스킬 피해 증가를 갖추고 있지만, AoE 스킬의 피해량이 낮고 보너스도 누적되지 않습니다. **낮은 우선순위 — 저렴하게 얻을 수 있다면 고려.**
 
 ---
 
@@ -405,3 +406,4 @@ El gacha de la segunda mitad va a drenar los invokers y mochi de todos.
 *Sobre las recomendaciones: ¡Juega como quieras!*
 
 </div>
+<!-- markdownlint-enable MD024 -->
