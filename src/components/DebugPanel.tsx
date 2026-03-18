@@ -22,6 +22,7 @@ export default function DebugPanel() {
   const [status, setStatus] = useState<string>('');
   const [availabilityInfo, setAvailabilityInfo] = useState<AvailabilityInfo | null>(null);
   const [availabilityError, setAvailabilityError] = useState<string | null>(null);
+  const [currentLocale, setCurrentLocale] = useState<string | null>(null);
 
   // Toggle with Ctrl+Shift+D
   useEffect(() => {
@@ -35,11 +36,12 @@ export default function DebugPanel() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Load cache info and availability when opened
+  // Load cache info, availability, and locale when opened
   useEffect(() => {
     if (isOpen) {
       loadCacheInfo();
       loadAvailabilityInfo();
+      setCurrentLocale(localStorage.getItem('otogidb-locale'));
     }
   }, [isOpen]);
 
@@ -132,6 +134,12 @@ export default function DebugPanel() {
     }, 500);
   };
 
+  const handleClearLanguage = () => {
+    localStorage.removeItem('otogidb-locale');
+    setCurrentLocale(null);
+    setStatus('Language preference cleared. Reload the page to apply.');
+  };
+
   const handleHardReload = () => {
     // Force reload bypassing cache
     window.location.href = window.location.href + (window.location.href.includes('?') ? '&' : '?') + '_cache=' + Date.now();
@@ -209,6 +217,22 @@ export default function DebugPanel() {
               className="btn-secondary text-xs py-2 px-3 rounded col-span-2"
             >
               Hard Reload (Bypass Cache)
+            </button>
+          </div>
+        </div>
+
+        {/* Language */}
+        <div className="space-y-2">
+          <p className="text-xs font-medium" style={{ color: 'var(--color-text-secondary)' }}>Language</p>
+          <div className="flex items-center justify-between gap-2 p-2 rounded text-xs" style={{ backgroundColor: 'var(--color-bg)' }}>
+            <span style={{ color: 'var(--color-text)' }}>
+              {currentLocale ? <><code className="font-mono">{currentLocale}</code></> : 'Not set (browser default)'}
+            </span>
+            <button
+              onClick={handleClearLanguage}
+              className="btn-secondary text-xs py-1 px-2 rounded"
+            >
+              Clear Language
             </button>
           </div>
         </div>

@@ -6,6 +6,7 @@
  */
 
 import type { CardsData } from '../types/card';
+import { logger } from './logger';
 
 /**
  * R2 base URL for availability data.
@@ -78,18 +79,18 @@ export async function fetchAvailabilityManifest(): Promise<AvailabilityManifest 
     clearTimeout(timeoutId);
 
     if (!response.ok) {
-      console.warn('[Availability] Manifest not found:', response.status);
+      logger.warn('Availability', 'Manifest not found', { status: response.status });
       return null;
     }
 
     try {
       return await response.json();
     } catch (parseError) {
-      console.warn('[Availability] Failed to parse availability data', { error: String(parseError) });
+      logger.warn('Availability', 'Failed to parse manifest data', { error: String(parseError) });
       return null;
     }
   } catch (error) {
-    console.warn('[Availability] Manifest fetch failed — auction status will be missing', { error: String(error) });
+    logger.warn('Availability', 'Manifest fetch failed — auction status will be missing', { error: String(error) });
     return null;
   }
 }
@@ -116,18 +117,18 @@ export async function fetchAvailabilityData(version: string): Promise<Availabili
     clearTimeout(timeoutId);
 
     if (!response.ok) {
-      console.warn('[Availability] Data not found for version:', version, response.status);
+      logger.warn('Availability', 'Data not found for version', { version, status: response.status });
       return null;
     }
 
     try {
       return await response.json();
     } catch (parseError) {
-      console.warn('[Availability] Failed to parse availability data', { error: String(parseError) });
+      logger.warn('Availability', 'Failed to parse availability data', { error: String(parseError) });
       return null;
     }
   } catch (error) {
-    console.warn('[Availability] Data fetch failed — auction status will be missing', { error: String(error) });
+    logger.warn('Availability', 'Data fetch failed — auction status will be missing', { error: String(error) });
     return null;
   }
 }
@@ -240,7 +241,7 @@ export function mergeAvailability(
 
     const card = cardsData.cards[cardId];
     if (!card) {
-      console.warn('[Availability] Card not found in index:', cardId);
+      logger.warn('Availability', 'Card not found in index', { cardId });
       continue;
     }
 
@@ -332,7 +333,7 @@ export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<C
     // Fetch manifest
     const manifest = await fetchAvailabilityManifest();
     if (!manifest) {
-      console.warn('[Availability] No manifest available, using cards without availability data');
+      logger.warn('Availability', 'No manifest available, using cards without availability data');
       return cardsData;
     }
 
@@ -343,14 +344,14 @@ export async function fetchAndMergeAvailability(cardsData: CardsData): Promise<C
     // Fetch availability data
     const availabilityData = await fetchAvailabilityData(version);
     if (!availabilityData) {
-      console.warn('[Availability] Failed to fetch data, using cards without availability');
+      logger.warn('Availability', 'Failed to fetch data, using cards without availability');
       return cardsData;
     }
 
     // Merge and return
     return mergeAvailability(cardsData, availabilityData);
   } catch (error) {
-    console.error('[Availability] Unexpected error:', error);
+    logger.error('Availability', 'Unexpected error in fetchAndMergeAvailability', { error: String(error) });
     return cardsData; // Return original data on error
   }
 }

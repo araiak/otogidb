@@ -8,6 +8,7 @@
 
 import type { CardsData } from '../types/card';
 import { applyPatch, type Operation } from 'rfc6902';
+import { logger } from './logger';
 
 /**
  * Unified manifest format at /data/manifest.json
@@ -99,7 +100,7 @@ async function fetchDeltaManifest(): Promise<DeltaManifest | null> {
     console.log('[Delta] No delta info in manifest');
     return null;
   } catch (error) {
-    console.warn('[Delta] Failed to fetch manifest:', error);
+    logger.warn('Delta', 'Failed to fetch manifest', { error: String(error) });
     return null;
   }
 }
@@ -115,13 +116,13 @@ async function fetchDelta(fromVersion: string, toVersion: string): Promise<Delta
     });
 
     if (!response.ok) {
-      console.warn(`[Delta] Failed to fetch delta ${deltaFilename}: ${response.status}`);
+      logger.warn('Delta', 'Failed to fetch delta file', { file: deltaFilename, status: response.status });
       return null;
     }
 
     return await response.json();
   } catch (error) {
-    console.warn('[Delta] Failed to fetch delta:', error);
+    logger.warn('Delta', 'Failed to fetch delta', { error: String(error) });
     return null;
   }
 }
@@ -146,14 +147,14 @@ function applyDeltaPatch(cachedData: CardsData, delta: Delta): CardsData | null 
     const failures = errors.filter(e => e !== null);
 
     if (failures.length > 0) {
-      console.error('[Delta] Patch application had errors:', failures);
+      logger.error('Delta', 'Patch application had errors', { failures: failures.map(String) });
       return null;
     }
 
     console.log(`[Delta] Successfully applied ${delta.stats.total_operations} operations`);
     return dataCopy;
   } catch (error) {
-    console.error('[Delta] Failed to apply patch:', error);
+    logger.error('Delta', 'Failed to apply patch', { error: String(error) });
     return null;
   }
 }
@@ -253,7 +254,7 @@ export async function tryDeltaUpdate(
     }
     const patched = applyDeltaPatch(workingData, delta);
     if (!patched) {
-      console.error(`[Delta] Failed to apply hop ${hop.from_version} → ${hop.to_version}, falling back`);
+      logger.error('Delta', 'Failed to apply hop, falling back', { from: hop.from_version, to: hop.to_version });
       return null;
     }
     workingData = patched;
@@ -303,7 +304,7 @@ export async function getCurrentVersion(): Promise<string | null> {
       }
     }
   } catch (error) {
-    console.warn('[Delta] Could not get version from manifest:', error);
+    logger.warn('Delta', 'Could not get version from manifest', { error: String(error) });
   }
 
   return null;

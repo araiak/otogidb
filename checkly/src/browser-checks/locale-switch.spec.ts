@@ -53,4 +53,27 @@ test.describe('Locale Switching', () => {
     await page.goto(`${BASE_URL}/ko/`, { waitUntil: 'domcontentloaded' })
     expect(page.url()).toContain('/en/')
   })
+
+  test('switching locale sets html[lang] on card detail page', async ({ page }) => {
+    await page.setViewportSize(VIEWPORTS.desktop)
+
+    // Load an English card page, then simulate locale switching to each supported locale
+    const locales = ['ja', 'ko', 'zh-cn', 'es'] as const
+    for (const locale of locales) {
+      await page.goto(`${BASE_URL}/en/cards/270`, { waitUntil: 'domcontentloaded' })
+      await page.waitForTimeout(300)
+
+      // Simulate what the locale switcher does
+      await page.evaluate((loc) => {
+        localStorage.setItem('otogidb-locale', loc)
+        window.dispatchEvent(new CustomEvent('otogidb-locale-change', { detail: { locale: loc } }))
+      }, locale)
+
+      // html[lang] should be updated synchronously by apply()
+      await expect(page.locator(`html[lang="${locale}"]`)).toBeAttached({ timeout: TIMEOUTS.pageLoad })
+
+      // Clean up for next iteration
+      await page.evaluate(() => localStorage.removeItem('otogidb-locale'))
+    }
+  })
 })
