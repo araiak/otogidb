@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect, errors } from '@playwright/test'
 import { BASE_URL, TIMEOUTS } from '../utils/constants'
 import { VIEWPORTS } from '../utils/viewports'
 import { gotoAndWaitForCards } from '../utils/helpers'
@@ -29,8 +29,9 @@ test.describe('Card Hover Popups', () => {
           { timeout: 3000 }
         )
         popupVisible = true
-      } catch {
-        // popup didn't appear - move mouse away and try again
+      } catch (e) {
+        if (!(e instanceof errors.TimeoutError)) throw e
+        // popup didn't appear within timeout - move mouse away and retry
         await page.mouse.move(0, 0)
         await page.waitForTimeout(100)
       }
