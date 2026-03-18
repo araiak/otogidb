@@ -21,9 +21,9 @@ test.describe('Card Hover Popups', () => {
     // FloatingPortal + React onMouseEnter state chain can miss on first hover under load.
     let popupVisible = false
     for (let attempt = 0; attempt < 3 && !popupVisible; attempt++) {
-      await cardLink.hover()
       // Give React time to process onMouseEnter → setState → FloatingPortal render
       try {
+        await cardLink.hover()
         await page.waitForFunction(
           () => document.querySelector('.popup') !== null,
           { timeout: 3000 }
