@@ -2,6 +2,7 @@ import type { CardsData, Card, SkeletonCardsData } from '../types/card';
 import { fetchWithCache, DB_NAME, DB_VERSION, STORE_NAME } from './cache';
 import { tryDeltaUpdate, getCurrentVersion } from './delta';
 import { fetchAndMergeAvailability } from './availability';
+import { logger } from './logger';
 
 // Skill data types
 export interface SkillData {
@@ -137,14 +138,14 @@ export async function getCardsData(options: { forceRefresh?: boolean; locale?: C
         maxAge: CACHE_MAX_AGE
       });
     } catch (error) {
-      console.error('[Cards] Failed to fetch cards index:', error);
+      logger.error('Cards', 'Failed to fetch cards index', { locale, dataPath, error: String(error) });
       // Try to get ANY cached data as last resort (even if stale)
       const staleCached = await tryGetStaleCachedData(dataPath);
       if (staleCached) {
-        console.warn('[Cards] Serving stale cached data — fetch failed', { locale, error: String(error) });
+        logger.warn('Cards', 'Serving stale cached data — fetch failed', { locale, error: String(error) });
         cardsData = staleCached;
       } else {
-        console.error('[Cards] Fatal: no card data and no stale cache', { locale });
+        logger.error('Cards', 'Fatal: no card data and no stale cache', { locale });
         throw new Error('Failed to load card data and no cached data available');
       }
     }
