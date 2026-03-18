@@ -1232,6 +1232,7 @@ const jsonLd = {
     function apply(locale) {
       const path = localeIndexPaths[locale];
       if (!path) return;
+      document.documentElement.lang = locale;
       fetch(path)
         .then(function(r) { return r.ok ? r.json() : null; })
         .then(function(data) {
