@@ -141,7 +141,18 @@ const jsonLd = {
         });
       }
 
-      applyLocale(getLocale()); // runs before first paint — no flash
+      applyLocale(getLocale()); // runs immediately — no flash if nodes already exist
+
+      // If [data-lang] nodes aren't in the DOM yet (script is in <head>), wait for them
+      if (!document.querySelector('[data-lang]')) {
+        var _obs = new MutationObserver(function () {
+          if (document.querySelector('[data-lang]')) {
+            _obs.disconnect();
+            applyLocale(getLocale());
+          }
+        });
+        _obs.observe(document, { childList: true, subtree: true });
+      }
 
       window.addEventListener('otogidb-locale-change', function (e) {
         applyLocale(e.detail && e.detail.locale);

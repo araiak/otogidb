@@ -1200,7 +1200,7 @@ const jsonLd = {
         const l = lang.toLowerCase();
         if (SUPPORTED.includes(l)) return l;
         if (l.startsWith('zh-hans') || l === 'zh-sg') return 'zh-cn';
-        if (l.startsWith('zh-hant') || l === 'zh-hk') return 'zh-tw';
+        if (l.startsWith('zh-hant') || l === 'zh-hk' || l === 'zh-mo') return 'zh-tw';
         const short = l.split('-')[0];
         if (SUPPORTED.includes(short)) return short;
       }
@@ -1218,7 +1218,7 @@ const jsonLd = {
         const sn = document.querySelector('[data-i18n="skill-name"]');
         if (sn && skill.name) sn.textContent = skill.name;
         const sd = document.querySelector('[data-i18n="skill-description"]');
-        if (sd && skill.description) sd.innerHTML = skill.description;
+        if (sd && skill.description) sd.textContent = skill.description;
       }
       (cardData.abilities || []).forEach(function(ab, i) {
         const an = document.querySelector('[data-ability-index="' + i + '"][data-i18n="ability-name"]');

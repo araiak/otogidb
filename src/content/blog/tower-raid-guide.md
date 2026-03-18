@@ -240,9 +240,9 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 
 **重要:** SEコストにカウントされるのは自分のカードだけ。借りたフレンドとリザーブは無料！
 
-SEコスト = 自分の1-4枚のカードの星の合計（最小3、最大18）
+SEコスト = 自分の1-4枚のカードの星の合計（最小4、最大18）
 
-- 自分の1× 3つ星 = 3 SE
+- 自分の1× 4つ星 = 4 SE
 - 自分の1× 5つ星 = 5 SE
 - 自分の2× 5つ星 = 10 SE
 - 借りたフレンドのカード = 無料
@@ -266,7 +266,7 @@ SEコスト = 自分の1-4枚のカードの星の合計（最小3、最大18）
 
 ## 低SE登頂戦略
 
-借りたヘルパーは無料なので、最適な戦略は強力なダメージキャリーを借りて、自分のカードは1枚だけ用意することです。自分のカード1枚だけで可能な限り進めます - 3つ星は3 SE、5つ星は5 SEです。
+借りたヘルパーは無料なので、最適な戦略は強力なダメージキャリーを借りて、自分のカードは1枚だけ用意することです。自分のカード1枚だけで可能な限り進めます - 4つ星は4 SE、5つ星は5 SEです。
 
 **常にリザーブを埋めましょう！** リザーブはSEコストにカウントされないので、強力なアシストとサポートアビリティを詰め込みましょう。
 
@@ -361,7 +361,7 @@ SEコスト = 自分の1-4枚のカードの星の合計（最小3、最大18）
 
 ## チームのスケールアップ
 
-壁にぶつかったら、自分のカードを段階的にチームに追加します。常に借りたフレンド1人がいて、SEコストは自分の1-4枚のカードの星の合計です（最小3、最大18）。
+壁にぶつかったら、自分のカードを段階的にチームに追加します。常に借りたフレンド1人がいて、SEコストは自分の1-4枚のカードの星の合計です（最小4、最大18）。
 
 **2枚目のカードはおそらくヒーラーにすべき** - これでタイマーまで生存し、ギルドにシェアして助けを求められます。
 
@@ -434,9 +434,9 @@ SEコストをどこまで最適化するかは自分で決められますが、
 
 **중요:** SE 비용에 포함되는 건 본인 카드만. 빌린 친구와 리저브는 무료!
 
-SE 비용 = 본인의 1-4장 카드 성급 합계 (최소 3, 최대 18)
+SE 비용 = 본인의 1-4장 카드 성급 합계 (최소 4, 최대 18)
 
-- 본인의 1× 3성 = 3 SE
+- 본인의 1× 4성 = 4 SE
 - 본인의 1× 5성 = 5 SE
 - 본인의 2× 5성 = 10 SE
 - 빌린 친구 카드 = 무료
@@ -460,7 +460,7 @@ SE 비용 = 본인의 1-4장 카드 성급 합계 (최소 3, 최대 18)
 
 ## 저SE 등반 전략
 
-빌린 헬퍼는 무료이므로, 최적의 전략은 강력한 데미지 캐리를 빌리고 본인 카드는 1장만 제공하는 것입니다. 본인 카드 1장만으로 최대한 진행할 수 있습니다 - 3성은 3 SE, 5성은 5 SE입니다.
+빌린 헬퍼는 무료이므로, 최적의 전략은 강력한 데미지 캐리를 빌리고 본인 카드는 1장만 제공하는 것입니다. 본인 카드 1장만으로 최대한 진행할 수 있습니다 - 4성은 4 SE, 5성은 5 SE입니다.
 
 **항상 리저브를 채우세요!** 리저브는 SE 비용에 포함되지 않으므로 강력한 어시스트와 서포트 어빌리티로 채우세요.
 
@@ -555,7 +555,7 @@ SE 비용 = 본인의 1-4장 카드 성급 합계 (최소 3, 최대 18)
 
 ## 팀 스케일업
 
-막히면 본인 카드를 점진적으로 팀에 추가합니다. 항상 빌린 친구 1명이 있고, SE 비용은 본인의 1-4장 카드 성급 합계입니다 (최소 3, 최대 18).
+막히면 본인 카드를 점진적으로 팀에 추가합니다. 항상 빌린 친구 1명이 있고, SE 비용은 본인의 1-4장 카드 성급 합계입니다 (최소 4, 최대 18).
 
 **두 번째 카드는 아마 힐러여야 합니다** - 타이머까지 생존하여 길드에 공유해 도움을 요청할 수 있게 해줍니다.
 
@@ -628,9 +628,9 @@ SE 비용을 얼마나 최적화할지는 본인이 결정할 수 있지만, 대
 
 **重要：**只有你自己的卡牌计入SE消耗。借用的好友和后备位是免费的！
 
-SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
+SE消耗 = 你的1-4张卡牌的星级总和（最小4，最大18）
 
-- 你的1张3星 = 3 SE
+- 你的1张4星 = 4 SE
 - 你的1张5星 = 5 SE
 - 你的2张5星 = 10 SE
 - 借用好友的卡牌 = 免费
@@ -655,7 +655,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 <!-- markdownlint-disable MD024 -->
 ## 低SE爬塔策略
 
-由于借用的助战是免费的，最佳策略是借用一个强力伤害主C，自己只出1张卡。你可以只用1张自己的卡尽可能往上爬——3星只需3 SE，或者5星需要5 SE。
+由于借用的助战是免费的，最佳策略是借用一个强力伤害主C，自己只出1张卡。你可以只用1张自己的卡尽可能往上爬——4星只需4 SE，或者5星需要5 SE。
 
 **一定要填满你的后备位！**后备位不计入SE消耗，所以塞满强力辅助和支援能力。
 
@@ -750,7 +750,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 
 ## 扩展你的队伍
 
-一旦遇到瓶颈，逐步添加你自己的卡牌到队伍中。你始终有1个借用的好友，然后你的SE消耗是你的1-4张卡牌的星级总和（最小3，最大18）。
+一旦遇到瓶颈，逐步添加你自己的卡牌到队伍中。你始终有1个借用的好友，然后你的SE消耗是你的1-4张卡牌的星级总和（最小4，最大18）。
 
 **你的第二张卡应该是奶妈** - 这能帮助你坚持到计时器结束，这样你就可以分享给公会寻求帮助。
 
@@ -823,9 +823,9 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小3，最大18）
 
 **重要：**只有你自己的卡牌計入SE消耗。借用的好友和後備位是免費的！
 
-SE消耗 = 你的1-4張卡牌的星級總和（最小3，最大18）
+SE消耗 = 你的1-4張卡牌的星級總和（最小4，最大18）
 
-- 你的1張3星 = 3 SE
+- 你的1張4星 = 4 SE
 - 你的1張5星 = 5 SE
 - 你的2張5星 = 10 SE
 - 借用好友的卡牌 = 免費
@@ -849,7 +849,7 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小3，最大18）
 
 ## 低SE爬塔策略
 
-由於借用的助戰是免費的，最佳策略是借用一個強力傷害主C，自己只出1張卡。你可以只用1張自己的卡盡可能往上爬——3星只需3 SE，或者5星需要5 SE。
+由於借用的助戰是免費的，最佳策略是借用一個強力傷害主C，自己只出1張卡。你可以只用1張自己的卡盡可能往上爬——4星只需4 SE，或者5星需要5 SE。
 
 **一定要填滿你的後備位！**後備位不計入SE消耗，所以塞滿強力輔助和支援能力。
 
@@ -944,7 +944,7 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小3，最大18）
 
 ## 擴展你的隊伍
 
-一旦遇到瓶頸，逐步添加你自己的卡牌到隊伍中。你始終有1個借用的好友，然後你的SE消耗是你的1-4張卡牌的星級總和（最小3，最大18）。
+一旦遇到瓶頸，逐步添加你自己的卡牌到隊伍中。你始終有1個借用的好友，然後你的SE消耗是你的1-4張卡牌的星級總和（最小4，最大18）。
 
 **你的第二張卡應該是奶媽** - 這能幫助你堅持到計時器結束，這樣你就可以分享給公會尋求幫助。
 
@@ -1019,9 +1019,9 @@ Los eventos de torre son:
 
 **Importante:** ¡Solo TUS cartas cuentan para el costo de SE. Amigos prestados y reservas son gratis!
 
-Costo de SE = suma de estrellas de tus 1-4 cartas (mín 3, máx 18)
+Costo de SE = suma de estrellas de tus 1-4 cartas (mín 4, máx 18)
 
-- Tu 1× 3 estrellas = 3 SE
+- Tu 1× 4 estrellas = 4 SE
 - Tu 1× 5 estrellas = 5 SE
 - Tus 2× 5 estrellas = 10 SE
 - Carta de amigo prestado = gratis
@@ -1045,7 +1045,7 @@ Si sobrevives hasta el temporizador, puedes compartir el jefe para pedir ayuda o
 
 ## Estrategia de Escalada con Bajo SE
 
-Dado que los ayudantes prestados son gratis, la estrategia óptima es pedir prestado un carry de daño fuerte y proporcionar solo 1 carta tuya. Puedes avanzar lo más posible con solo 1 de tus propias cartas - una de 3 estrellas cuesta solo 3 SE, o una de 5 estrellas por 5 SE.
+Dado que los ayudantes prestados son gratis, la estrategia óptima es pedir prestado un carry de daño fuerte y proporcionar solo 1 carta tuya. Puedes avanzar lo más posible con solo 1 de tus propias cartas - una de 4 estrellas cuesta solo 4 SE, o una de 5 estrellas por 5 SE.
 
 **¡Siempre llena tus reservas!** Las reservas no cuentan para el costo de SE, así que cárgalas con asistentes fuertes y habilidades de soporte.
 
@@ -1140,7 +1140,7 @@ Puedes encontrar una lista completa de monstruos con habilidades de equipo usand
 
 ## Escalando tu Equipo
 
-Una vez que llegas a un muro, añade progresivamente tus propias cartas al equipo. Siempre tienes 1 amigo prestado, luego tu costo de SE es la suma de estrellas de tus 1-4 cartas (mín 3, máx 18).
+Una vez que llegas a un muro, añade progresivamente tus propias cartas al equipo. Siempre tienes 1 amigo prestado, luego tu costo de SE es la suma de estrellas de tus 1-4 cartas (mín 4, máx 18).
 
 **Tu segunda carta probablemente debería ser un curador** - esto te ayuda a sobrevivir hasta el temporizador para que puedas compartir con tu gremio para pedir ayuda.
 

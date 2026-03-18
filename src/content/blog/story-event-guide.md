@@ -191,7 +191,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
   - *최종 웨이브 어빌리티*는 전투의 마지막 웨이브에서 발동 (예: 5웨이브 중 5번째)
   - *누적 보너스*는 "웨이브 시작 시 X 획득"이라고 표시됩니다 - 10% 부스트는 웨이브 1에서 10%, 웨이브 2에서 20%, 웨이브 5에서 최대 50%
   - *고정 보너스*는 항상 활성화
-- **속성 타입** (디비나, 아니마, 판타즈마)이 있어 전투 타입에 따라 -20%에서 20% 데미지 보너스가 있습니다. 대부분의 경우 가장 강한 팀이 여전히 최선의 선택이므로 크게 중요하지 않습니다.
+- **속성 타입** (디비나, 아니마, 판타즈마)이 있어 타입 상성이 맞으면 팀 보너스가 부여됩니다. 리더가 일치하면 +10%, 같은 타입 멤버 1인당 +5% (전원 같은 타입이면 최대 45%). 팀 강도가 비슷하다면 리더에 맞는 타입 편성을 고려하세요. 한 팀이 확실히 더 강하다면 순수 스탯이 타입 보너스를 상회할 가능성이 높습니다.
 - **SE (스피릿 에너지) 소모가 고정** - SE는 5분마다 1 회복되므로, 항상 풀 팀을 사용하여 최대한의 가치를 얻으세요.
 - **경험치 파밍에 최적** - 팀이 클리어할 수 있는 범위 내에서 드롭률 보너스와 경험치 보너스를 최대한 활용해야 합니다.
 
@@ -271,7 +271,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
   - *最终波次能力*在战斗的最后一波激活（例如5波中的第5波）
   - *累进加成*标注"在波次开始时获得X" - 10%加成在第1波是10%，第2波是20%，第5波最高50%
   - *固定加成*始终有效
-- **有属性类型**（迪维娜、阿尼玛或幻影），根据战斗类型有-20%到20%的伤害加成。大多数情况下这不重要，因为你最强的队伍可能仍然是最好的选择。
+- **有属性类型**（迪维娜、阿尼玛或幻影），相性有利时可获得队伍加成。领袖属性匹配+10%，同属性队员每人+5%（全员同属性最高45%）。队伍实力相近时，考虑组建属性一致的队伍并匹配领袖。若某队实力明显更强，纯属性加成可能无法弥补战力差距。
 - **SE（灵魂能量）消耗固定** - SE每5分钟恢复1点，所以一定要使用满编队伍来获得最大价值。
 - **非常适合刷经验** - 在队伍能通关的范围内尽量使用掉落率加成和经验加成。
 
@@ -352,7 +352,7 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
   - *最終波次能力*在戰鬥的最後一波激活（例如5波中的第5波）
   - *累進加成*標註「在波次開始時獲得X」- 10%加成在第1波是10%，第2波是20%，第5波最高50%
   - *固定加成*始終有效
-- **有屬性類型**（迪維娜、阿尼瑪或幻影），根據戰鬥類型有-20%到20%的傷害加成。大多數情況下這不重要，因為你最強的隊伍可能仍然是最好的選擇。
+- **有屬性類型**（迪維娜、阿尼瑪或幻影），相性有利時可獲得隊伍加成。領袖屬性匹配+10%，同屬性隊員每人+5%（全員同屬性最高45%）。隊伍實力相近時，考慮組建屬性一致的隊伍並匹配領袖。若某隊實力明顯更強，純屬性加成可能無法彌補戰力差距。
 - **SE（靈魂能量）消耗固定** - SE每5分鐘恢復1點，所以一定要使用滿編隊伍來獲得最大價值。
 - **非常適合刷經驗** - 在隊伍能通關的範圍內盡量使用掉落率加成和經驗加成。
 
@@ -434,7 +434,7 @@ Los eventos de Historia son:
   - *Habilidades de última ola* se activan en la última ola de combate (ej. ola 5 de 5)
   - *Bonos progresivos* dicen "gana X al inicio de una ola" - un 10% de impulso se convierte en 10% en ola 1, 20% en ola 2, hasta 50% en ola 5
   - *Bonos fijos* están siempre activos
-- **Con tipo** (Divina, Anima o Phantasma), hay un bono de daño de -20% a 20% dependiendo del tipo de batalla. En la mayoría de los casos esto no es importante ya que tu equipo más fuerte probablemente sigue siendo la mejor opción.
+- **Con tipo** (Divina, Anima o Phantasma), que otorga un bono de equipo cuando tienes ventaja de tipo. Un líder coincidente da +10%, más +5% por cada miembro del mismo tipo (hasta 45% total con un equipo completo del mismo tipo). Si tus equipos tienen una fuerza similar, considera construir equipos tipados con líderes coincidentes. Si un equipo es significativamente más fuerte, las estadísticas brutas probablemente superarán el bono de tipo.
 - **Costos de SE (Spirit Energy) fijos** - SE se recarga 1 cada 5 minutos, así que siempre usa un equipo completo para obtener el máximo valor.
 - **Geniales para farmear XP** - tanto los bonos de tasa de caída como los bonos de XP deberían usarse tanto como tu equipo pueda permitir y aún así limpiar.
 
