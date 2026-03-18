@@ -254,7 +254,7 @@ export async function tryDeltaUpdate(
     }
     const patched = applyDeltaPatch(workingData, delta);
     if (!patched) {
-      console.error(`[Delta] Failed to apply hop ${hop.from_version} → ${hop.to_version}, falling back`);
+      logger.error('Delta', 'Failed to apply hop, falling back', { from: hop.from_version, to: hop.to_version });
       return null;
     }
     workingData = patched;
@@ -304,7 +304,7 @@ export async function getCurrentVersion(): Promise<string | null> {
       }
     }
   } catch (error) {
-    console.warn('[Delta] Could not get version from manifest:', error);
+    logger.warn('Delta', 'Could not get version from manifest', { error: String(error) });
   }
 
   return null;

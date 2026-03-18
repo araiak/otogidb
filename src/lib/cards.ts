@@ -219,7 +219,7 @@ async function tryDeltaUpdateFlow(locale: CardLocale): Promise<DeltaUpdateResult
 
     return { data: null, source: 'none' };
   } catch (error) {
-    console.warn('[Delta] Delta update failed, falling back to full fetch', { locale, error: String(error) });
+    logger.warn('Delta', 'Delta update failed, falling back to full fetch', { locale, error: String(error) });
     return { data: null, source: 'none' };
   }
 }
