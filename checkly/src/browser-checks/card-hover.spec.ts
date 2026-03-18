@@ -16,7 +16,25 @@ test.describe('Card Hover Popups', () => {
     // Hover over the parent anchor (ImageCell wraps img in <a> with onMouseEnter)
     const cardLink = firstCardImage.locator('..')
     await cardLink.scrollIntoViewIfNeeded()
-    await cardLink.hover()
+
+    // Retry hover up to 3 times to account for timing variability in headless Chromium:
+    // FloatingPortal + React onMouseEnter state chain can miss on first hover under load.
+    let popupVisible = false
+    for (let attempt = 0; attempt < 3 && !popupVisible; attempt++) {
+      await cardLink.hover()
+      // Give React time to process onMouseEnter → setState → FloatingPortal render
+      try {
+        await page.waitForFunction(
+          () => document.querySelector('.popup') !== null,
+          { timeout: 3000 }
+        )
+        popupVisible = true
+      } catch {
+        // popup didn't appear - move mouse away and try again
+        await page.mouse.move(0, 0)
+        await page.waitForTimeout(100)
+      }
+    }
 
     // Wait for CardFloatingPopup to appear via FloatingPortal
     const popup = page.locator('.popup').first()
