@@ -114,6 +114,13 @@ const navLinks = {
   blog: `${localePrefix}/blog`,
   tools: `${localePrefix}/tools`,
 };
+
+// ─── Maintenance banner ─────────────────────────────────────────────────────
+// Set MAINTENANCE_ENABLED = false to hide without deleting the config/messages.
+// Bump MAINTENANCE_VERSION (e.g. change the date/slug) to force the banner to
+// re-appear for users who previously dismissed it.
+const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_VERSION = "2026-03-17-langs";
 ---
 
 <!DOCTYPE html>
@@ -244,14 +251,30 @@ const navLinks = {
   </head>
   <body class="min-h-screen flex flex-col" style="background-color: var(--color-bg); color: var(--color-text);">
     <!-- Maintenance banner -->
-    <div style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
-      <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
-        <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
-        <span id="maintenance-msg">We're experiencing some issues and are working on a fix. Languages are coming back soon!</span>
+    <!-- To disable: set MAINTENANCE_ENABLED = false in BaseLayout.astro frontmatter -->
+    <!-- To force re-show after a dismiss: bump MAINTENANCE_VERSION -->
+    {MAINTENANCE_ENABLED && (
+      <div id="maintenance-banner" style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
+        <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
+          <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
+          <span id="maintenance-msg">We're experiencing some issues and are working on a fix. Languages are coming back soon!</span>
+          <button id="maintenance-close" aria-label="Dismiss" title="Dismiss" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:2px 6px;font-size:1.2rem;line-height:1;color:#92400e;flex-shrink:0;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
+        </div>
       </div>
-    </div>
-    <script is:inline>
+    )}
+    <script is:inline define:vars={{ maintenanceVersion: MAINTENANCE_VERSION }}>
       (function() {
+        var STORAGE_KEY = 'otogidb-maintenance-dismissed';
+
+        // Hide immediately if user already dismissed this version (no flash)
+        try {
+          if (localStorage.getItem(STORAGE_KEY) === maintenanceVersion) {
+            var b = document.getElementById('maintenance-banner');
+            if (b) b.style.display = 'none';
+            return;
+          }
+        } catch(e) {}
+
         var msgs = {
           en: "We're experiencing some issues and are working on a fix. Languages are coming back soon!",
           ja: "現在問題が発生しており修正中です。多言語対応は近日中に復旧予定です。",
@@ -277,7 +300,17 @@ const navLinks = {
         }
         setMsg(lang);
 
-        // Update on locale change
+        // Close button — saves current version so banner stays hidden until version changes
+        var closeBtn = document.getElementById('maintenance-close');
+        if (closeBtn) {
+          closeBtn.addEventListener('click', function() {
+            try { localStorage.setItem(STORAGE_KEY, maintenanceVersion); } catch(e) {}
+            var banner = document.getElementById('maintenance-banner');
+            if (banner) banner.style.display = 'none';
+          });
+        }
+
+        // Update message on locale change
         window.addEventListener('otogidb-locale-change', function(e) {
           setMsg(e.detail.locale);
         });

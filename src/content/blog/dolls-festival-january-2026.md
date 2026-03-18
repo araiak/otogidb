@@ -6,6 +6,8 @@ author: "Araiak"
 tags: ["analysis", "auction", "gacha"]
 ---
 
+<div data-lang="en">
+
 A bit late but here's some notes on this month's cards!
 
 ---
@@ -59,3 +61,285 @@ A few more cards showed up in the auction worth mentioning:
 ---
 
 *A note on recommendations: Play how you like! If you want a card, go for it. My recommendations highlight cards I see as standouts - ones unlikely to be replaced for some time - while being mindful of cost. The game is fairly generous, so you can pick up cards that aren't super strong and still have resources for the next event. Don't hesitate to buy a card you like!*
+
+</div>
+
+<div data-lang="ja">
+
+少し遅れましたが、今月のカードについてのメモです！
+
+---
+
+## ストーリーイベント
+
+:card[715]はアクティブイベント中です。13%から28%にバフされ、無料カードとしては十分な性能になりました。**新規プレイヤーは取る価値あり。ベテランは安くアンキャップできるが無理しない。**
+
+---
+
+## オークションカード
+
+今月のオークションはひな祭りで、1月15日開始予定です。
+
+:card[228] - **新規/中級アニマプレイヤーには良いスターターリーダー、それ以外にはまずまずのリザーブ。**
+
+:card[227] - **曹操を持っていないか待ちたくないなら堅実なファンタズマタンク。**
+
+:card[751] - **ミニマックスするなら取る、そうでなければパス。**
+
+:card[752] - **おすすめしませんが、欲しいなら取りましょう。**
+
+---
+
+## 更新：追加オークションカード
+
+**:card[645]** - 価格が適正で:card[707]を解放していないなら**検討をおすすめ**。
+
+**:card[644]** - **おそらくコレクター向け**。
+
+**:card[696]** - 価格が適正なら**ほとんどのプレイヤーに1枚アンキャップをおすすめ**。
+
+**:card[267]** - 価格が適正で**それをポケットに入れたいなら**取りましょう！
+
+---
+
+## まとめ
+
+- :card[715] - 新規プレイヤーはギルドレイドから**取る価値あり**
+- :card[228] - 新規アニマプレイヤーには**良いスターターリーダー**
+- :card[227] - **堅実なファンタズマタンク**
+- :card[751] - **ミニマックス勢には必須**
+- :card[752] - **パス**
+- :card[645] - **検討の価値あり**
+- :card[696] - **おすすめ**
+- :card[267] - **ニッチなピック**
+- :card[644] - **コレクター向け**
+
+---
+
+*おすすめについて：好きなように遊んでください！*
+
+</div>
+
+<div data-lang="ko">
+
+조금 늦었지만 이번 달 카드에 대한 메모입니다!
+
+---
+
+## 스토리 이벤트
+
+:card[715]는 활성 이벤트 중입니다. 13%에서 28%로 버프되어 무료 카드치고는 괜찮은 성능이 되었습니다. **신규 플레이어는 가져갈 가치 있음. 베테랑은 저렴하게 언캡 가능하지만 무리하지 마세요.**
+
+---
+
+## 경매 카드
+
+이번 달 경매는 히나마츠리로 1월 15일 시작 예정입니다.
+
+:card[228] - **신규/중급 아니마 플레이어에게 좋은 스타터 리더, 그 외에는 무난한 리저브.**
+
+:card[227] - **조조가 없거나 기다리기 싫다면 견고한 판타스마 탱커.**
+
+:card[751] - **민맥스하면 가져가고, 아니면 패스.**
+
+:card[752] - **추천하지 않지만 원하면 가져가세요.**
+
+---
+
+## 업데이트: 추가 경매 카드
+
+**:card[645]** - 가격이 적절하고 :card[707]을 해금하지 않았다면 **검토 추천**.
+
+**:card[644]** - **아마도 컬렉터용**.
+
+**:card[696]** - 가격이 적절하다면 **대부분의 플레이어에게 1장 언캡 추천**.
+
+**:card[267]** - 가격이 적절하고 **포켓에 넣고 싶다면** 가져가세요!
+
+---
+
+## 요약
+
+- :card[715] - 신규 플레이어는 길드 레이드에서 **가져갈 가치 있음**
+- :card[228] - 신규 아니마 플레이어에게 **좋은 스타터 리더**
+- :card[227] - **견고한 판타스마 탱커**
+- :card[751] - **민맥스 유저 필수**
+- :card[752] - **패스**
+- :card[645] - **검토 가치 있음**
+- :card[696] - **추천**
+- :card[267] - **니치 픽**
+- :card[644] - **컬렉터용**
+
+---
+
+*추천에 대해: 원하는 대로 플레이하세요!*
+
+</div>
+
+<div data-lang="zh-cn">
+
+有点晚了，但这是本月卡牌的一些笔记！
+
+---
+
+## 故事活动
+
+:card[715]有活动进行中。该卡从13%提升到28%，作为免费卡还算不错。**新玩家值得获取；老玩家可以便宜解锁但不要太拼。**
+
+---
+
+## 拍卖卡牌
+
+本月拍卖应该是女儿节，预计1月15日开始。
+
+:card[228] - **新手/中级阿尼玛玩家的好起步队长，其他人还算可以的预备。**
+
+:card[227] - **如果没有或不想等:card[738]，是个坚实的幻影坦克。**
+
+:card[751] - **如果你是极限玩家就拿，否则跳过。**
+
+:card[752] - **不推荐，但如果你想要就拿吧。**
+
+---
+
+## 更新：额外拍卖卡牌
+
+**:card[645]** - 如果价格合适且没有解锁:card[707]，**建议考虑**。
+
+**:card[644]** - **可能是收藏家用**。
+
+**:card[696]** - 如果价格合适，**建议大多数玩家解锁一张**。
+
+**:card[267]** - 如果价格合适且**你想备着**就拿吧！
+
+---
+
+## 总结
+
+- :card[715] - 新玩家从公会战**值得获取**
+- :card[228] - 新阿尼玛玩家**好的起步队长**
+- :card[227] - **坚实的幻影坦克**
+- :card[751] - **极限玩家必备**
+- :card[752] - **跳过**
+- :card[645] - **值得考虑**
+- :card[696] - **推荐**
+- :card[267] - **小众选择**
+- :card[644] - **仅收藏家**
+
+---
+
+*关于建议：随心所欲地玩！*
+
+</div>
+
+<div data-lang="zh-tw">
+
+有點晚了，但這是本月卡牌的一些筆記！
+
+---
+
+## 故事活動
+
+:card[715]有活動進行中。該卡從13%提升到28%，作為免費卡還算不錯。**新玩家值得獲取；老玩家可以便宜解鎖但不要太拼。**
+
+---
+
+## 拍賣卡牌
+
+本月拍賣應該是女兒節，預計1月15日開始。
+
+:card[228] - **新手/中級阿尼瑪玩家的好起步隊長，其他人還算可以的預備。**
+
+:card[227] - **如果沒有或不想等:card[738]，是個堅實的幻影坦克。**
+
+:card[751] - **如果你是極限玩家就拿，否則跳過。**
+
+:card[752] - **不推薦，但如果你想要就拿吧。**
+
+---
+
+## 更新：額外拍賣卡牌
+
+**:card[645]** - 如果價格合適且沒有解鎖:card[707]，**建議考慮**。
+
+**:card[644]** - **可能是收藏家用**。
+
+**:card[696]** - 如果價格合適，**建議大多數玩家解鎖一張**。
+
+**:card[267]** - 如果價格合適且**你想備著**就拿吧！
+
+---
+
+## 總結
+
+- :card[715] - 新玩家從公會戰**值得獲取**
+- :card[228] - 新阿尼瑪玩家**好的起步隊長**
+- :card[227] - **堅實的幻影坦克**
+- :card[751] - **極限玩家必備**
+- :card[752] - **跳過**
+- :card[645] - **值得考慮**
+- :card[696] - **推薦**
+- :card[267] - **小眾選擇**
+- :card[644] - **僅收藏家**
+
+---
+
+*關於建議：隨心所欲地玩！*
+
+</div>
+
+<div data-lang="es">
+
+¡Un poco tarde pero aquí están las notas sobre las cartas de este mes!
+
+---
+
+## Evento de Historia
+
+:card[715] tiene un evento activo. La carta fue mejorada del 13% al 28%, haciéndola decente para una carta gratuita. **Vale la pena para jugadores nuevos; veteranos pueden desbloquear barato pero no se esfuercen demasiado.**
+
+---
+
+## Cartas de Subasta
+
+La subasta de este mes debería ser Festival de Muñecas, anticipada para el 15 de enero.
+
+:card[228] - **Buen líder inicial para jugadores nuevos/intermedios de Anima, reserva decente para los demás.**
+
+:card[227] - **Tanque sólido de Phantasma si no tienes o no quieres esperar a :card[738].**
+
+:card[751] - **Si eres min-maxer, consíguelo; si no, pásalo.**
+
+:card[752] - **No lo recomiendo, pero si lo quieres, adelante.**
+
+---
+
+## Actualización: Cartas Adicionales de Subasta
+
+**:card[645]** - **Recomiendo considerarlo** si el precio es correcto y no tienes :card[707] desbloqueado.
+
+**:card[644]** - **Probablemente para coleccionistas**.
+
+**:card[696]** - **Recomiendo tener una copia desbloqueada para la mayoría** si el precio es correcto.
+
+**:card[267]** - **Si quieres eso en tu bolsillo** y el precio es correcto, ¡adelante!
+
+---
+
+## Resumen
+
+- :card[715] - **Vale la pena** para jugadores nuevos desde raids de gremio
+- :card[228] - **Buen líder inicial** para nuevos jugadores de Anima
+- :card[227] - **Tanque sólido de Phantasma**
+- :card[751] - **Imprescindible para min-maxers**
+- :card[752] - **Pásalo**
+- :card[645] - **Vale considerar**
+- :card[696] - **Recomendado**
+- :card[267] - **Elección nicho**
+- :card[644] - **Solo coleccionistas**
+
+---
+
+*Sobre las recomendaciones: ¡Juega como quieras!*
+
+</div>
