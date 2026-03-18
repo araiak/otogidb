@@ -1194,6 +1194,7 @@ const jsonLd = {
     function getLocale() {
       try {
         const s = localStorage.getItem('otogidb-locale');
+        if (s === 'en') return null;  // Explicitly chose English, skip patching
         if (s && SUPPORTED.includes(s)) return s;
       } catch {}
       for (const lang of (navigator.languages || [navigator.language])) {
