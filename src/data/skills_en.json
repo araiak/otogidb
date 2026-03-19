@@ -13584,6 +13584,260 @@
       "Debuff"
     ]
   },
+  "1570": {
+    "id": "1570",
+    "name": "Perplexing Jig",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1570",
+    "card_name": "Gryphon",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1580": {
+    "id": "1580",
+    "name": "Cynical Smile",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1580",
+    "card_name": "Cheshire Cat",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1572": {
+    "id": "1572",
+    "name": "Falling Blossom",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1572",
+    "card_name": "Yoshino Cherry",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1573": {
+    "id": "1573",
+    "name": "Everlasting Time",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1573",
+    "card_name": "Quartz",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1575": {
+    "id": "1575",
+    "name": "Mad Hatter",
+    "description": "Deals {value} DMG to 2 enemies (melee priority).",
+    "card_id": "1575",
+    "card_name": "Hattie",
+    "ie": "ATK<650,21>",
+    "ts": "enemy;count<2>;prof<1,2,3>",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1577": {
+    "id": "1577",
+    "name": "Digestive Tract",
+    "description": "Deals {value} DMG to current target; decreases target's speed by {delay1} for a limited time.",
+    "card_id": "1577",
+    "card_name": "Alice's Dress",
+    "ie": "ATK<1550,53>",
+    "ts": "current_target",
+    "de": "SPD<-10.00%,-0.29%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Slow"
+    ]
+  },
+  "1576": {
+    "id": "1576",
+    "name": "Wonderland",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK.",
+    "card_id": "1576",
+    "card_name": "Alice",
+    "ie": "ATK<800,23>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "none",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1581": {
+    "id": "1581",
+    "name": "Latecomer",
+    "description": "Restores {value} HP to all allies and cures them of all negative status effects.",
+    "card_id": "1581",
+    "card_name": "March Hare",
+    "ie": "HEAL<570,17>;ERASE_DEBUFF<0>",
+    "ts": "self;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "Cleanse",
+      "AoE"
+    ]
+  },
+  "1579": {
+    "id": "1579",
+    "name": "Guillotine",
+    "description": "Increases the Crit Rate of 2 allies with the highest ATK by {delay1} for a limited time.",
+    "card_id": "1579",
+    "card_name": "Red Queen",
+    "ie": "none",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT<20.00%,0.58%,8>",
+    "tn": 2,
+    "tags": [
+      "Multi",
+      "Crit Rate"
+    ]
+  },
+  "1578": {
+    "id": "1578",
+    "name": "Fantastic Idolatry",
+    "description": "Restores {value} HP to ally with the highest ATK. Targets deal {delay1} more DMG for a limited time.",
+    "card_id": "1578",
+    "card_name": "Classic Alice",
+    "ie": "HEAL<800,23>",
+    "ts": "self;count<1>;max_atk",
+    "de": "ATK<35.00%,1.01%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Single",
+      "DMG Boost"
+    ]
+  },
+  "1638": {
+    "id": "1638",
+    "name": "Southern Cross",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1638",
+    "card_name": "Ypsilon",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1636": {
+    "id": "1636",
+    "name": "Black Hole",
+    "description": "Reduces all enemies' DEF by {delay1} for a limited time.",
+    "card_id": "1636",
+    "card_name": "Planetarium",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-638,-18,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1635": {
+    "id": "1635",
+    "name": "Mysterious Encounter",
+    "description": "Deals {value} DMG to an enemy (healers priority), with a {probability} of inflicting Silence.",
+    "card_id": "1635",
+    "card_name": "Tellie",
+    "ie": "ATK<1580,52>",
+    "ts": "enemy;count<1>;prof<3,2,1>",
+    "de": "SILENCE<5>;HIT<20.00%,0.68%>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Silence",
+      "Debuff"
+    ]
+  },
+  "1458": {
+    "id": "1458",
+    "name": "Magellanic Stream",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK, decreases targets' speed by {delay1} for a limited time.",
+    "card_id": "1458",
+    "card_name": "Magellan (Galaxy)",
+    "ie": "ATK<880,26>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "SPD<-14.00%,-0.41%,8>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Slow",
+      "Debuff"
+    ]
+  },
+  "1460": {
+    "id": "1460",
+    "name": "Snipe Shot",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1460",
+    "card_name": "Flick",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1582": {
+    "id": "1582",
+    "name": "Nepotism",
+    "description": "Deals {value} DMG to the 2 enemies with the least HP. ",
+    "card_id": "1582",
+    "card_name": "Lady Wedge",
+    "ie": "ATK<960,29>",
+    "ts": "enemy;count<2>;min_hp",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

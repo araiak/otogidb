@@ -12801,7 +12801,7 @@
   "73101": {
     "id": "73101",
     "name": "The Dragon of Avarice",
-    "description": "Increases 30% of Crit Rate and increases 10% of battle reward drop rate.",
+    "description": "Increases 40% of Crit Rate and increases 15% of battle reward drop rate.",
     "card_id": "731",
     "card_name": "Wild Star Thorn",
     "er": "entry",
@@ -15706,6 +15706,373 @@
       "Ranged",
       "AoE",
       "DMG Boost"
+    ]
+  },
+  "157001": {
+    "id": "157001",
+    "name": "Cheerful Rhythm",
+    "description": "Increases 8% of ATK speed of all allies.(only take effect once to the team)",
+    "card_id": "1570",
+    "card_name": "Gryphon",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SPD<8.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "ATK Speed"
+    ]
+  },
+  "158001": {
+    "id": "158001",
+    "name": "Invisibility",
+    "description": "At the start of the final wave, enemy with the most HP takes 13% more damage.(only take effect once to the team)",
+    "card_id": "1580",
+    "card_name": "Cheshire Cat",
+    "er": "last_wave",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SHIELD<-13.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Single",
+      "DMG Amp"
+    ]
+  },
+  "157201": {
+    "id": "157201",
+    "name": "Spring Protection",
+    "description": "15% chance of inflicting Silence to Normal attacks targets.",
+    "card_id": "1572",
+    "card_name": "Yoshino Cherry",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<15.00%,0%>;SILENCE<2>",
+    "o": false,
+    "tags": [
+      "On Attack",
+      "Silence"
+    ]
+  },
+  "157301": {
+    "id": "157301",
+    "name": "Time Paradox",
+    "description": "Increases 5% of DMG.(only take effect once to the team)",
+    "card_id": "1573",
+    "card_name": "Quartz",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<5.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost"
+    ]
+  },
+  "157501": {
+    "id": "157501",
+    "name": "Mad Thinking",
+    "description": "Skill attacks inflict Paralysis.",
+    "card_id": "1575",
+    "card_name": "Hattie",
+    "er": "attack_skill",
+    "ts": "none",
+    "de": "NUMB<5>",
+    "o": true,
+    "tags": [
+      "On Skill",
+      "Paralysis"
+    ]
+  },
+  "157701": {
+    "id": "157701",
+    "name": "Gluttonous Slug",
+    "description": "Reduces 40% of DMG taken, increases 40% of ATK speed and slowly restores HP over time when HP is 1/2 or below.",
+    "card_id": "1577",
+    "card_name": "Alice's Dress",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HPP_IN<0.00%,50.00%>;HEAL_DOT<10.00%,0%,5>;SHIELD<40.00%,0%>;SPD<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Conditional",
+      "Heal",
+      "DMG Reduction",
+      "ATK Speed"
+    ]
+  },
+  "157601": {
+    "id": "157601",
+    "name": "Fearless Explorer",
+    "description": "Reduces 20% of DMG taken.",
+    "card_id": "1576",
+    "card_name": "Alice",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SHIELD<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Reduction"
+    ]
+  },
+  "157602": {
+    "id": "157602",
+    "name": "Mystical Wonderland",
+    "description": "Increases 15% of skill DMG dealt at the start of each wave.",
+    "card_id": "1576",
+    "card_name": "Alice",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ]
+  },
+  "158101": {
+    "id": "158101",
+    "name": "Hasty Steps",
+    "description": "Increases 30% of damage dealt by skill targets",
+    "card_id": "1581",
+    "card_name": "March Hare",
+    "er": "attack_skill",
+    "ts": "none",
+    "de": "ATK<30.00%,0%,8>",
+    "o": true,
+    "tags": [
+      "On Skill",
+      "DMG Boost"
+    ]
+  },
+  "158102": {
+    "id": "158102",
+    "name": "Mad Tea Party",
+    "description": "Increases 30% crit damage for all allies.",
+    "card_id": "1581",
+    "card_name": "March Hare",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "CHIT_ATK<5.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "AoE",
+      "Crit DMG"
+    ]
+  },
+  "157901": {
+    "id": "157901",
+    "name": "Reign of Terror",
+    "description": "Increases 25% of ATK speed of all allies.",
+    "card_id": "1579",
+    "card_name": "Red Queen",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SPD<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "AoE",
+      "ATK Speed"
+    ]
+  },
+  "157902": {
+    "id": "157902",
+    "name": "Queen's Majesty",
+    "description": "Increases 10% of Crit DMG dealt of Divina allies at the start of each wave.",
+    "card_id": "1579",
+    "card_name": "Red Queen",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT_ATK<9.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit DMG"
+    ]
+  },
+  "157801": {
+    "id": "157801",
+    "name": "Classic Idol",
+    "description": "Increases 45% of DMG dealt by the 2 allies with the highest ATK.",
+    "card_id": "1578",
+    "card_name": "Classic Alice",
+    "er": "entry",
+    "ts": "self;type<1>;count<2>;max_atk",
+    "de": "ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "Multi",
+      "DMG Boost"
+    ]
+  },
+  "157802": {
+    "id": "157802",
+    "name": "Wise Growth",
+    "description": "Increases 10% of battle time limit.",
+    "card_id": "1578",
+    "card_name": "Classic Alice",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "TIME<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Time Limit"
+    ]
+  },
+  "163801": {
+    "id": "163801",
+    "name": "Erudite",
+    "description": "All allies take 10% less DMG.(only take effect once to the team)",
+    "card_id": "1638",
+    "card_name": "Ypsilon",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SHIELD<10.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "DMG Reduction"
+    ]
+  },
+  "163802": {
+    "id": "163802",
+    "name": "Stellar Guidance",
+    "description": "At the start of the final wave, all foes take 25% more damage.(only take effect once to the team)",
+    "card_id": "1638",
+    "card_name": "Ypsilon",
+    "er": "last_wave",
+    "ts": "enemy;count<5>",
+    "de": "SHIELD<-25.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "AoE",
+      "DMG Amp"
+    ]
+  },
+  "163601": {
+    "id": "163601",
+    "name": "Orbital Motion",
+    "description": "Restores 50% HP to the 2 allies with the lowest percentage of HP at the start of each wave.",
+    "card_id": "1636",
+    "card_name": "Planetarium",
+    "er": "entry_wave",
+    "ts": "self;min_hpp;count<2>",
+    "de": "HEAL<50.00%,0%,1>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Multi",
+      "Heal"
+    ]
+  },
+  "163602": {
+    "id": "163602",
+    "name": "Void Black Hole",
+    "description": "Increases 18% of Crit Rate of Anima allies.",
+    "card_id": "1636",
+    "card_name": "Planetarium",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<18.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ]
+  },
+  "163501": {
+    "id": "163501",
+    "name": "Clairvoyance",
+    "description": "Normal attacks have 60% chances of Poison.",
+    "card_id": "1635",
+    "card_name": "Tellie",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<60.00%,0%>;POISON<10.00%,0%,5>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Poison"
+    ]
+  },
+  "145801": {
+    "id": "145801",
+    "name": "Interstellar Navigation",
+    "description": "Increases 15% of Crit DMG dealt at the start of each wave.",
+    "card_id": "1458",
+    "card_name": "Magellan (Galaxy)",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "CHIT_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Crit DMG"
+    ]
+  },
+  "145802": {
+    "id": "145802",
+    "name": "Navigator's Intuition",
+    "description": "Increases 15% of Crit Rate at the start of each wave.",
+    "card_id": "1458",
+    "card_name": "Magellan (Galaxy)",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "CHIT<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Crit Rate"
+    ]
+  },
+  "146001": {
+    "id": "146001",
+    "name": "Deadshot",
+    "description": "Increases 13% of skill DMG.",
+    "card_id": "1460",
+    "card_name": "Flick",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Skill DMG"
+    ]
+  },
+  "158201": {
+    "id": "158201",
+    "name": "Royal Etiquette",
+    "description": "Increases 18% of skill DMG dealt at the start of each wave.",
+    "card_id": "1582",
+    "card_name": "Lady Wedge",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<18.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
     ]
   }
 }
