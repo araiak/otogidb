@@ -76,4 +76,22 @@ test.describe('Locale Switching', () => {
       await page.evaluate(() => localStorage.removeItem('otogidb-locale'))
     }
   })
+
+  test('explicit "en" preference skips patching and keeps html[lang="en"]', async ({ page }) => {
+    await page.setViewportSize(VIEWPORTS.desktop)
+
+    await page.goto(`${BASE_URL}/en/cards/270`, { waitUntil: 'domcontentloaded' })
+    await page.waitForTimeout(300)
+
+    // Simulate user explicitly choosing English
+    await page.evaluate(() => {
+      localStorage.setItem('otogidb-locale', 'en')
+      window.dispatchEvent(new CustomEvent('otogidb-locale-change', { detail: { locale: 'en' } }))
+    })
+
+    // apply() should be skipped for 'en' — html[lang] stays "en"
+    await expect(page.locator('html[lang="en"]')).toBeAttached({ timeout: TIMEOUTS.pageLoad })
+
+    await page.evaluate(() => localStorage.removeItem('otogidb-locale'))
+  })
 })
