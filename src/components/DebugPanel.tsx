@@ -36,13 +36,30 @@ export default function DebugPanel() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Load cache info, availability, and locale when opened
+  // Load cache info, availability, and locale when opened; keep locale in sync while open
   useEffect(() => {
-    if (isOpen) {
-      loadCacheInfo();
-      loadAvailabilityInfo();
-      setCurrentLocale(localStorage.getItem('otogidb-locale'));
-    }
+    if (!isOpen) return;
+
+    loadCacheInfo();
+    loadAvailabilityInfo();
+    setCurrentLocale(localStorage.getItem('otogidb-locale'));
+
+    // Cross-tab locale changes
+    const onStorage = (e: StorageEvent) => {
+      if (e.key === 'otogidb-locale') setCurrentLocale(e.newValue);
+    };
+    // Same-tab locale changes
+    const onLocaleChange = (e: Event) => {
+      const locale = (e as CustomEvent<{ locale: string }>).detail?.locale ?? null;
+      setCurrentLocale(locale === 'en' ? null : locale);
+    };
+
+    window.addEventListener('storage', onStorage);
+    window.addEventListener('otogidb-locale-change', onLocaleChange);
+    return () => {
+      window.removeEventListener('storage', onStorage);
+      window.removeEventListener('otogidb-locale-change', onLocaleChange);
+    };
   }, [isOpen]);
 
   const loadCacheInfo = async () => {
