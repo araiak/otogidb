@@ -19,6 +19,7 @@ test.describe('Card Detail Page', () => {
     // Verify stats section exists (desktop shows "ATK (MLB)" / "HP (MLB)")
     await expect(page.locator('text=ATK (MLB)')).toBeVisible()
     await expect(page.locator('text=HP (MLB)')).toBeVisible()
+    await expect(page.locator('text=/LB0:/')).toBeVisible()
 
     // Verify skill section header
     await expect(page.locator('h2:has-text("Skill")')).toBeVisible()
@@ -37,7 +38,7 @@ test.describe('Card Detail Page', () => {
     const cardImage = page.locator('.card img').first()
     await expect(cardImage).toBeVisible({ timeout: TIMEOUTS.pageLoad })
 
-    // On mobile, quick stats show ATK/HP (not "Max ATK")
+    // On mobile, quick stats show ATK (MLB) / HP (MLB)
     await expect(page.locator('text=ATK').first()).toBeVisible()
     await expect(page.locator('text=HP').first()).toBeVisible()
   })
