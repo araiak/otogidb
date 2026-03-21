@@ -380,12 +380,16 @@ const jsonLd = {
           <!-- Quick Stats (Mobile/Tablet only) -->
           <div class="lg:hidden mt-3 sm:mt-4 grid grid-cols-4 gap-1.5 sm:gap-2 text-xs sm:text-sm">
             <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
-              <div class="text-secondary text-[10px] sm:text-xs">ATK</div>
+              <div class="text-secondary text-[10px] sm:text-xs">ATK (MLB)</div>
               <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(mlbAtk)}</div>
+              <div class="text-[10px] text-secondary">LB0: {formatNumber(card.stats.max_atk)}</div>
+              <div class="text-[10px] text-secondary">Base: {formatNumber(card.stats.base_atk)}</div>
             </div>
             <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
-              <div class="text-secondary text-[10px] sm:text-xs">HP</div>
+              <div class="text-secondary text-[10px] sm:text-xs">HP (MLB)</div>
               <div class="font-bold font-mono text-sm sm:text-base">{formatNumber(mlbHp)}</div>
+              <div class="text-[10px] text-secondary">LB0: {formatNumber(card.stats.max_hp)}</div>
+              <div class="text-[10px] text-secondary">Base: {formatNumber(card.stats.base_hp)}</div>
             </div>
             <div class="text-center p-1.5 sm:p-2 rounded" style="background-color: var(--color-surface);">
               <div class="text-secondary text-[10px] sm:text-xs">SPD</div>
