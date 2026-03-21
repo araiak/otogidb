@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { formatDescription, formatNumber, formatDate, formatSkillDescription, parseValue } from '../../../lib/formatters';
-import { MLB_MAX_LEVELS } from '../../../lib/lb';
+import { MLB_MAX_LEVELS, computeMlbStats } from '../../../lib/lb';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
@@ -164,13 +164,13 @@ function getAbilityBugs(abilityId: string): GameBug[] {
 const skillData = card.skill ? skillsData[card.skill.id] : null;
 
 // Compute MLB stats at build time
-const lb0Level = card.stats.max_level;
-const mlbLevel = MLB_MAX_LEVELS[card.stats.rarity] ?? lb0Level;
-const mlbScale = lb0Level > 1 ? (mlbLevel - 1) / (lb0Level - 1) : 1;
-const mlbAtk = Math.round(card.stats.base_atk + (card.stats.max_atk - card.stats.base_atk) * mlbScale);
-const mlbHp = Math.round(card.stats.base_hp + (card.stats.max_hp - card.stats.base_hp) * mlbScale);
+const mlbStatsResult = computeMlbStats(card.stats);
+const mlbAtk = mlbStatsResult?.mlb_atk ?? card.stats.max_atk;
+const mlbHp = mlbStatsResult?.mlb_hp ?? card.stats.max_hp;
 
 // Compute skill value range (LB0 → MLB)
+const lb0Level = card.stats.max_level;
+const mlbLevel = MLB_MAX_LEVELS[card.stats.rarity] ?? lb0Level;
 const lb0SkillValue = skillData?.ie ? parseValue(skillData.ie, lb0Level) : null;
 const mlbSkillValue = skillData?.ie ? parseValue(skillData.ie, mlbLevel) : null;
 const showSkillRange = lb0SkillValue && mlbSkillValue && lb0SkillValue !== mlbSkillValue;

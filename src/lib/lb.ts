@@ -12,8 +12,6 @@
  * The displayed MLB stat in the profile screen is the level-extrapolated value only.
  */
 
-import type { CardStats } from '../types/card';
-
 /** MLB max card level by rarity (mirrors Python's MLB_MAX_LEVELS in constants.py). */
 export const MLB_MAX_LEVELS: Record<number, number> = {
   5: 90,
@@ -24,29 +22,48 @@ export const MLB_MAX_LEVELS: Record<number, number> = {
 };
 
 /**
+ * Minimal shape accepted by computeMlbStats — covers both the full CardStats
+ * (where base_atk/base_hp/max_level are required) and the lighter index/skeleton
+ * stats shape (where those three fields are optional).
+ */
+interface MlbComputeInput {
+  base_atk?: number | null;
+  base_hp?: number | null;
+  max_level?: number | null;
+  max_atk: number;
+  max_hp: number;
+  rarity: number;
+}
+
+/** Narrows MlbComputeInput to the shape where all three base fields are present. */
+function isExtendedCardStats(
+  stats: MlbComputeInput
+): stats is MlbComputeInput & { base_atk: number; base_hp: number; max_level: number } {
+  return (
+    typeof stats.base_atk === 'number' &&
+    typeof stats.base_hp === 'number' &&
+    typeof stats.max_level === 'number'
+  );
+}
+
+/**
  * Compute MLB ATK and HP for a card's stats.
  *
  * Returns null if any required field is missing (e.g., skeleton entries for
  * non-first-page cards that don't have base_atk/base_hp/max_level).
  */
-export function computeMlbStats(
-  stats: CardStats | (CardStats & { base_atk?: number | null; base_hp?: number | null; max_level?: number | null })
-): { mlb_atk: number; mlb_hp: number } | null {
-  const baseAtk = (stats as any).base_atk;
-  const baseHp = (stats as any).base_hp;
-  const maxLevel = (stats as any).max_level;
+export function computeMlbStats(stats: MlbComputeInput): { mlb_atk: number; mlb_hp: number } | null {
+  if (!isExtendedCardStats(stats) || !stats.rarity) return null;
 
-  if (!baseAtk || !baseHp || !maxLevel || !stats.rarity) return null;
-
-  const lb0Max = maxLevel as number;
+  const lb0Max = stats.max_level;
   const mlbMax = MLB_MAX_LEVELS[stats.rarity] ?? lb0Max;
 
   if (lb0Max <= 1) return null;
 
   const scale = (mlbMax - 1) / (lb0Max - 1);
   return {
-    mlb_atk: Math.round(baseAtk + (stats.max_atk - baseAtk) * scale),
-    mlb_hp: Math.round(baseHp + (stats.max_hp - baseHp) * scale),
+    mlb_atk: Math.round(stats.base_atk + (stats.max_atk - stats.base_atk) * scale),
+    mlb_hp: Math.round(stats.base_hp + (stats.max_hp - stats.base_hp) * scale),
   };
 }
 
