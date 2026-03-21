@@ -54,6 +54,13 @@ export interface Skill {
   slvup?: number;   // Skill value increase per level
   ml?: number;      // Max skill level
   de?: string;      // Description template with {value} placeholder
+  // Pre-computed index values for LB0 and MLB levels (present in cards_index.json)
+  slv_lb0?: string | null;
+  slv_mlb?: string | null;
+  prob_lb0?: string | null;
+  prob_mlb?: string | null;
+  delay_lb0?: string | null;
+  delay_mlb?: string | null;
 }
 
 export interface ParsedAbilityTarget {
@@ -241,6 +248,19 @@ export interface CardsData {
   cards: Record<string, Card>;
 }
 
+/** Skill shape used in cards_index.json: raw template + pre-computed LB0/MLB values. */
+export interface CardSkillIndex {
+  name: string;
+  description: string;    // raw template with {value}/{probability}/{delay1}
+  slv_lb0: string | null;
+  slv_mlb: string | null;
+  prob_lb0: string | null;
+  prob_mlb: string | null;
+  delay_lb0: string | null;
+  delay_mlb: string | null;
+  tags: string[];
+}
+
 /**
  * Minimal index entry used in cards_skeleton.json for non-first-page cards.
  * Contains only fields needed to render a table row (name, stats, image).
@@ -252,10 +272,14 @@ export interface CardSkeleton {
   name: string | null;
   playable: boolean;
   has_bugs?: boolean;
-  stats: Pick<CardStats, 'attribute_name' | 'type_name' | 'rarity' | 'max_atk' | 'max_hp' | 'speed' | 'crit' | 'cost'>;
+  stats: Pick<CardStats, 'attribute_name' | 'type_name' | 'rarity' | 'max_atk' | 'max_hp' | 'speed' | 'crit' | 'cost'> & {
+    base_atk?: number | null;
+    base_hp?: number | null;
+    max_level?: number | null;
+  };
   image_urls: ImageUrls;
   // Full filter fields — present for IDs 1–50, absent for the rest
-  skill?: { name: string; description: string; tags: string[] } | null;
+  skill?: CardSkillIndex | null;
   abilities?: Array<{ name: string; description: string; tags: string[]; unlock_level?: number }>;
   bonds?: Array<{ type: string }>;
   acquisition?: { sources: AcquisitionSource[]; has_tower_drops: boolean };

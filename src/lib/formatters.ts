@@ -199,7 +199,7 @@ function getMaxLevelForRarity(rarity: number): number {
  * Parse skill effect string to extract values at a given level
  * Format: "ATK<base,perLevel>" or "HEAL<base,perLevel>"
  */
-function parseValue(ie: string, level: number = 1): string | null {
+export function parseValue(ie: string, level: number = 1): string | null {
   if (!ie || ie === 'none') return null;
 
   // Match patterns like ATK<1300,38> or HEAL<290,10>
@@ -217,7 +217,7 @@ function parseValue(ie: string, level: number = 1): string | null {
  * Parse skill effect string to extract probability at a given level
  * Format: "STUN<5>;HIT<15.00%,0.43%>"
  */
-function parseProbability(de: string, level: number = 1): string | null {
+export function parseProbability(de: string, level: number = 1): string | null {
   if (!de || de === 'none') return null;
 
   // Match patterns like HIT<15.00%,0.43%>
@@ -237,7 +237,7 @@ function parseProbability(de: string, level: number = 1): string | null {
  * Parse skill effect string to extract delay/debuff value at a given level
  * Format: "DEFENSE<-350,-12,8>" or "ATK<-23.00%,-0.94%,8>"
  */
-function parseDelay(de: string, level: number = 1): string | null {
+export function parseDelay(de: string, level: number = 1): string | null {
   if (!de || de === 'none') return null;
 
   // Match patterns like DEFENSE<-350,-12,8> or ATK<-23.00%,-0.94%,8> or POISON<5.0%,0.14%,5>

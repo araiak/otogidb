@@ -1,7 +1,8 @@
 import type { ColumnDef } from '@tanstack/react-table';
 import type { Card, AcquisitionSource } from '../../types/card';
 import type { SupportedLocale } from '../../lib/i18n';
-import { formatNumber, formatSkillDescription } from '../../lib/formatters';
+import { formatNumber, formatDescription } from '../../lib/formatters';
+import { computeMlbStats, substituteSkillTemplate } from '../../lib/lb';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import { ImageCell } from './cells';
 
@@ -9,6 +10,7 @@ export interface ColumnOptions {
   getCardUrl: (id: string) => string;
   locale: SupportedLocale;
   showBugs?: boolean;
+  isMLB?: boolean;
 }
 
 /**
@@ -19,6 +21,7 @@ export function getCardTableColumns({
   getCardUrl,
   locale,
   showBugs,
+  isMLB = true,
 }: ColumnOptions): ColumnDef<Card>[] {
   return [
     {
@@ -275,8 +278,12 @@ export function getCardTableColumns({
       cell: ({ row }) => {
         const skill = row.original.skill;
         if (!skill) return <span className="text-secondary text-sm">-</span>;
-        // Note: skill.description is pre-calculated in cards_index.json, so skillData is not needed
-        const formattedDesc = formatSkillDescription(skill.description, null, row.original.stats.rarity);
+        // Substitute pre-computed LB0 or MLB values into the raw template
+        const vals = isMLB
+          ? { value: skill.slv_mlb, probability: skill.prob_mlb, delay1: skill.delay_mlb }
+          : { value: skill.slv_lb0, probability: skill.prob_lb0, delay1: skill.delay_lb0 };
+        const substituted = substituteSkillTemplate(skill.description, vals);
+        const formattedDesc = formatDescription(substituted);
         return (
           <span
             className="text-sm block max-w-[300px] leading-snug"
@@ -318,23 +325,35 @@ export function getCardTableColumns({
     },
     {
       id: 'max_atk',
-      accessorFn: (row) => row.stats.max_atk,
+      accessorFn: (row) => {
+        if (isMLB) return computeMlbStats(row.stats)?.mlb_atk ?? row.stats.max_atk;
+        return row.stats.max_atk;
+      },
       header: 'ATK',
       size: 70,
       meta: { hideOnSmall: true },
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
-      ),
+      cell: ({ row }) => {
+        const val = isMLB
+          ? (computeMlbStats(row.original.stats)?.mlb_atk ?? row.original.stats.max_atk)
+          : row.original.stats.max_atk;
+        return <span className="text-sm font-mono">{formatNumber(val)}</span>;
+      },
     },
     {
       id: 'max_hp',
-      accessorFn: (row) => row.stats.max_hp,
+      accessorFn: (row) => {
+        if (isMLB) return computeMlbStats(row.stats)?.mlb_hp ?? row.stats.max_hp;
+        return row.stats.max_hp;
+      },
       header: 'HP',
       size: 70,
       meta: { hideOnSmall: true },
-      cell: ({ getValue }) => (
-        <span className="text-sm font-mono">{formatNumber(getValue() as number)}</span>
-      ),
+      cell: ({ row }) => {
+        const val = isMLB
+          ? (computeMlbStats(row.original.stats)?.mlb_hp ?? row.original.stats.max_hp)
+          : row.original.stats.max_hp;
+        return <span className="text-sm font-mono">{formatNumber(val)}</span>;
+      },
     },
     {
       id: 'speed',
