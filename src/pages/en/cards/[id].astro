@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { formatDescription, formatNumber, formatDate, formatSkillDescription } from '../../../lib/formatters';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription, parseValue } from '../../../lib/formatters';
+import { MLB_MAX_LEVELS } from '../../../lib/lb';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
 import { getSimilarityReason } from '../../../lib/similarity';
@@ -161,6 +162,18 @@ function getAbilityBugs(abilityId: string): GameBug[] {
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
+
+// Compute MLB stats at build time
+const lb0Level = card.stats.max_level;
+const mlbLevel = MLB_MAX_LEVELS[card.stats.rarity] ?? lb0Level;
+const mlbScale = lb0Level > 1 ? (mlbLevel - 1) / (lb0Level - 1) : 1;
+const mlbAtk = Math.round(card.stats.base_atk + (card.stats.max_atk - card.stats.base_atk) * mlbScale);
+const mlbHp = Math.round(card.stats.base_hp + (card.stats.max_hp - card.stats.base_hp) * mlbScale);
+
+// Compute skill value range (LB0 → MLB)
+const lb0SkillValue = skillData?.ie ? parseValue(skillData.ie, lb0Level) : null;
+const mlbSkillValue = skillData?.ie ? parseValue(skillData.ie, mlbLevel) : null;
+const showSkillRange = lb0SkillValue && mlbSkillValue && lb0SkillValue !== mlbSkillValue;
 
 // Get blog posts that mention this card
 const relatedGuides = cardMentions[card.id] || [];
@@ -490,13 +503,15 @@ const jsonLd = {
           <h2 class="font-semibold mb-4">Stats</h2>
           <div class="grid grid-cols-4 gap-4">
             <div>
-              <div class="text-secondary text-sm">Max ATK</div>
-              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_atk)}</div>
+              <div class="text-secondary text-sm">ATK</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(mlbAtk)}</div>
+              <div class="text-xs text-secondary">LB0: {formatNumber(card.stats.max_atk)}</div>
               <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_atk)}</div>
             </div>
             <div>
-              <div class="text-secondary text-sm">Max HP</div>
-              <div class="text-xl font-bold font-mono">{formatNumber(card.stats.max_hp)}</div>
+              <div class="text-secondary text-sm">HP</div>
+              <div class="text-xl font-bold font-mono">{formatNumber(mlbHp)}</div>
+              <div class="text-xs text-secondary">LB0: {formatNumber(card.stats.max_hp)}</div>
               <div class="text-xs text-secondary">Base: {formatNumber(card.stats.base_hp)}</div>
             </div>
             <div>
@@ -585,6 +600,11 @@ const jsonLd = {
               {card.skill.name || 'Unknown Skill'}
             </div>
             <div class="text-xs sm:text-sm mb-2" set:html={formatSkillDescription(card.skill.description, skillData, card.stats.rarity) || 'No description available'} data-i18n="skill-description" />
+            {showSkillRange && (
+              <div class="text-xs text-secondary mb-2">
+                Skill value: {lb0SkillValue} <span class="text-secondary">(LB0)</span> → {mlbSkillValue} <span class="text-secondary">(MLB)</span>
+              </div>
+            )}
             {card.skill.tags && card.skill.tags.length > 0 && (
               <div class="flex flex-wrap gap-1 sm:gap-1.5 mt-2">
                 {card.skill.tags.map(tag => (

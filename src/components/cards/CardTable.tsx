@@ -141,11 +141,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [sourceFilter, setSourceFilter] = useState<string[]>([]); // Acquisition sources: gacha, auction, exchange, event
   const [availableOnly, setAvailableOnly] = useState(false); // Only show currently available cards
   const [hideNonPlayable, setHideNonPlayable] = useState(true); // Hide NPC/enemy cards by default
-  const [showBugs, setShowBugs] = useState<boolean>(() => {
-    if (typeof window === 'undefined') return false;
-    return localStorage.getItem('otogidb-show-bugs') === 'true';
-  });
+  const [showBugs, setShowBugs] = useState<boolean>(false);
   const [bugsOnly, setBugsOnly] = useState(false);
+  const [isMLB, setIsMLB] = useState<boolean>(true); // default: show MLB stats
 
   // Track if we're initializing from URL to prevent double-updates
   const isInitializing = useRef(true);
@@ -164,6 +162,13 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [focusedSortIndex, setFocusedSortIndex] = useState(-1);
   const sortDropdownRef = useRef<HTMLDivElement>(null);
   const sortOptionRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // Sync showBugs and LB mode from localStorage after hydration (avoids SSR/client mismatch)
+  useEffect(() => {
+    setShowBugs(localStorage.getItem('otogidb-show-bugs') === 'true');
+    const savedLb = localStorage.getItem('otogidb-lb-mode');
+    if (savedLb !== null) setIsMLB(savedLb !== 'lb0');
+  }, []);
 
   // Read URL params on mount with input validation
   useEffect(() => {
@@ -408,6 +413,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (!checked) setBugsOnly(false);
   };
 
+  const handleLbToggle = (mlb: boolean) => {
+    setIsMLB(mlb);
+    localStorage.setItem('otogidb-lb-mode', mlb ? 'mlb' : 'lb0');
+  };
+
   // Copy share link to clipboard
   const handleShare = useCallback(async () => {
     try {
@@ -541,8 +551,8 @@ export default function CardTable({ initialCards }: CardTableProps) {
 
   // Column definitions (extracted to cardTableColumns.tsx)
   const columns = useMemo(
-    () => getCardTableColumns({ getCardUrl, locale, showBugs }),
-    [getCardUrl, locale, showBugs]
+    () => getCardTableColumns({ getCardUrl, locale, showBugs, isMLB }),
+    [getCardUrl, locale, showBugs, isMLB]
   );
 
   // Create table instance
@@ -798,6 +808,25 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <span>Available Now</span>
             </label>
             <FilterInfoTooltip text="Available Now: Some cards are day-limited or may be out of stock." />
+          </div>
+          <div className="flex items-center gap-0.5 px-0.5 py-0.5 rounded border text-xs"
+               style={{ borderColor: 'var(--color-border)' }}>
+            <button
+              onClick={() => handleLbToggle(false)}
+              className={`px-2 py-0.5 rounded transition-colors ${!isMLB ? 'font-medium' : 'text-secondary hover:text-primary'}`}
+              style={!isMLB ? { backgroundColor: 'var(--color-accent)', color: 'white' } : {}}
+              title="Show LB0 stats (no limit breaks)"
+            >
+              LB0
+            </button>
+            <button
+              onClick={() => handleLbToggle(true)}
+              className={`px-2 py-0.5 rounded transition-colors ${isMLB ? 'font-medium' : 'text-secondary hover:text-primary'}`}
+              style={isMLB ? { backgroundColor: 'var(--color-accent)', color: 'white' } : {}}
+              title="Show MLB stats (max limit break)"
+            >
+              MLB
+            </button>
           </div>
           <div className="flex items-center">
             <label
