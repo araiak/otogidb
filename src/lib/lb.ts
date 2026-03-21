@@ -35,14 +35,14 @@ interface MlbComputeInput {
   rarity: number;
 }
 
-/** Narrows MlbComputeInput to the shape where all three base fields are present. */
+/** Narrows MlbComputeInput to the shape where all three base fields are present and non-zero. */
 function isExtendedCardStats(
   stats: MlbComputeInput
 ): stats is MlbComputeInput & { base_atk: number; base_hp: number; max_level: number } {
   return (
-    typeof stats.base_atk === 'number' &&
-    typeof stats.base_hp === 'number' &&
-    typeof stats.max_level === 'number'
+    typeof stats.base_atk === 'number' && stats.base_atk > 0 &&
+    typeof stats.base_hp === 'number' && stats.base_hp > 0 &&
+    typeof stats.max_level === 'number' && stats.max_level > 0
   );
 }
 
