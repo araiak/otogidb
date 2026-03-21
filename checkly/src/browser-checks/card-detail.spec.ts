@@ -16,9 +16,9 @@ test.describe('Card Detail Page', () => {
     const naturalWidth = await cardImage.evaluate((img: HTMLImageElement) => img.naturalWidth)
     expect(naturalWidth).toBeGreaterThan(0)
 
-    // Verify stats section exists (desktop shows "Max ATK")
-    await expect(page.locator('text=Max ATK')).toBeVisible()
-    await expect(page.locator('text=Max HP')).toBeVisible()
+    // Verify stats section exists (desktop shows "ATK (MLB)" / "HP (MLB)")
+    await expect(page.locator('text=ATK (MLB)')).toBeVisible()
+    await expect(page.locator('text=HP (MLB)')).toBeVisible()
 
     // Verify skill section header
     await expect(page.locator('h2:has-text("Skill")')).toBeVisible()
