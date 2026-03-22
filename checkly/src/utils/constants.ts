@@ -48,7 +48,7 @@ export const SELECTORS = {
 
   // Card detail page
   cardImage: 'img[src*="cloudinary"]',
-  cardStats: 'text=/Max ATK|Max HP/',
+  cardStats: 'text=/ATK \\(MLB\\)|HP \\(MLB\\)/',
   skillSection: 'text=Skill',
 
   // Navigation
