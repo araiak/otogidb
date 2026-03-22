@@ -16,10 +16,11 @@ test.describe('Card Detail Page', () => {
     const naturalWidth = await cardImage.evaluate((img: HTMLImageElement) => img.naturalWidth)
     expect(naturalWidth).toBeGreaterThan(0)
 
-    // Verify stats section exists (desktop shows "ATK (MLB)" / "HP (MLB)")
-    await expect(page.locator('text=ATK (MLB)')).toBeVisible()
-    await expect(page.locator('text=HP (MLB)')).toBeVisible()
-    await expect(page.locator('text=/LB0:/')).toBeVisible()
+    // Verify stats section exists — scope to desktop panel (lg:block) to avoid mobile duplicate
+    const desktopStats = page.locator('div[class*="lg:block"].card')
+    await expect(desktopStats.locator('text=ATK (MLB)')).toBeVisible()
+    await expect(desktopStats.locator('text=HP (MLB)')).toBeVisible()
+    await expect(desktopStats.locator('text=/LB0:/').first()).toBeVisible()
 
     // Verify skill section header
     await expect(page.locator('h2:has-text("Skill")')).toBeVisible()

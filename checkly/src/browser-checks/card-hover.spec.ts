@@ -17,33 +17,23 @@ test.describe('Card Hover Popups', () => {
     const cardLink = firstCardImage.locator('..')
     await cardLink.scrollIntoViewIfNeeded()
 
-    // Retry hover up to 3 times to account for timing variability in headless Chromium:
-    // FloatingPortal + React onMouseEnter state chain can miss on first hover under load.
-    let popupVisible = false
-    for (let attempt = 0; attempt < 3 && !popupVisible; attempt++) {
-      // Give React time to process onMouseEnter → setState → FloatingPortal render
+    // Retry hover up to 3 times to account for timing variability in headless Chromium.
+    // Verify stats inside the same attempt while mouse is still on the card.
+    let verified = false
+    for (let attempt = 0; attempt < 3 && !verified; attempt++) {
+      const popup = page.locator('.popup').first()
       try {
         await cardLink.hover()
-        await page.waitForFunction(
-          () => document.querySelector('.popup') !== null,
-          { timeout: 3000 }
-        )
-        popupVisible = true
+        await expect(popup).toBeVisible({ timeout: 4000 })
+        await expect(popup.locator('text=ATK')).toBeVisible({ timeout: 2000 })
+        await expect(popup.locator('text=HP')).toBeVisible({ timeout: 2000 })
+        verified = true
       } catch (e) {
         if (!(e instanceof errors.TimeoutError)) throw e
-        // popup didn't appear within timeout - move mouse away and retry
         await page.mouse.move(0, 0)
-        await page.waitForTimeout(100)
+        await page.waitForTimeout(200)
       }
     }
-    if (!popupVisible) throw new Error('Hover popup never appeared after 3 attempts')
-
-    // Wait for CardFloatingPopup to appear via FloatingPortal
-    const popup = page.locator('.popup').first()
-    await expect(popup).toBeVisible({ timeout: TIMEOUTS.networkIdle })
-
-    // Verify stats are rendered in CardPreviewContent
-    await expect(popup.locator('text=ATK')).toBeVisible()
-    await expect(popup.locator('text=HP')).toBeVisible()
+    if (!verified) throw new Error('Hover popup stats never verified after 3 attempts')
   })
 })
