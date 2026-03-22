@@ -105,7 +105,7 @@ const A11Y_CHECKS: A11yCheck[] = [
 
       let emptyButtons = 0;
       for (const button of buttons) {
-        const content = button[1].replace(/<[^>]+>/g, '').trim(); // Strip inner HTML
+        const content = button[1].replace(/<|>/g, '').trim(); // Strip inner HTML
         const hasAriaLabel = button[0].includes('aria-label');
         const hasAriaLabelledBy = button[0].includes('aria-labelledby');
         const hasTitle = button[0].includes('title=');
