@@ -560,6 +560,7 @@ function validateLink(href: string, pageLocale: string): { valid: boolean; issue
     href.startsWith('#') ||
     href.startsWith('mailto:') ||
     href.startsWith('javascript:') ||
+    href.startsWith('vbscript:') ||
     href.startsWith('data:')
   ) {
     return { valid: true };

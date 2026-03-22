@@ -75,7 +75,13 @@ export function formatDescription(text: string | null | undefined): string {
  */
 export function stripTags(text: string | null | undefined): string {
   if (!text) return '';
-  return text.replace(/<[^>]*>/g, '');
+  let result = text;
+  let previous: string;
+  do {
+    previous = result;
+    result = result.replace(/<[^>]*>/g, '');
+  } while (result !== previous);
+  return result;
 }
 
 /**
