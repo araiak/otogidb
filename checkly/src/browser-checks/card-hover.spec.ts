@@ -21,9 +21,9 @@ test.describe('Card Hover Popups', () => {
     // Verify stats inside the same attempt while mouse is still on the card.
     let verified = false
     for (let attempt = 0; attempt < 3 && !verified; attempt++) {
-      await cardLink.hover()
       const popup = page.locator('.popup').first()
       try {
+        await cardLink.hover()
         await expect(popup).toBeVisible({ timeout: 4000 })
         await expect(popup.locator('text=ATK')).toBeVisible({ timeout: 2000 })
         await expect(popup.locator('text=HP')).toBeVisible({ timeout: 2000 })
