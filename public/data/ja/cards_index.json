@@ -6693,7 +6693,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101458",
       "bonds": [
@@ -6820,7 +6822,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101460",
       "bonds": [
@@ -9497,7 +9501,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101570",
       "bonds": [
@@ -9509,8 +9516,8 @@
       "has_bugs": false,
       "id": "1570",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1774595873/otogi/android/101570_291d6a5a71fae9085772685b61cddaf3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1774595874/otogi/cards_hd/101570_hd_6750282b99437b48d52070dd3681be46.png"
       },
       "name": "グリフォン",
       "playable": true,
@@ -9558,7 +9565,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101572",
       "bonds": [
@@ -9618,8 +9628,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101573",
       "bonds": [
@@ -9679,8 +9691,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101575",
       "bonds": [
@@ -9749,8 +9763,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101576",
       "bonds": [
@@ -9799,7 +9815,7 @@
     "1577": {
       "abilities": [
         {
-          "description": "残ったHPが50％以下の時、被ダメージ値を40%に軽減し、ＨＰ自動回復（ゆっくり）、スピード40%上昇",
+          "description": "残ったHPが50％以下の時、被ダメージ値を40%に軽減し、ＨＰ自動回復（ゆっくり）、スピード20%上昇",
           "name": "強欲なナメクジ",
           "tags": [
             "Self",
@@ -9812,8 +9828,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101577",
       "bonds": [
@@ -9885,7 +9903,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101578",
       "bonds": [
@@ -9959,7 +9980,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101579",
       "bonds": [
@@ -10083,7 +10106,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101580",
       "bonds": [
@@ -10154,7 +10180,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101581",
       "bonds": [
@@ -10216,7 +10244,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101582",
       "bonds": [
@@ -10877,7 +10907,7 @@
       "id": "1636",
       "image_urls": {
         "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963824/otogi/android/101636_680eb28022ad4ae8ec8429ea71385521.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963848/otogi/cards_hd/101636_hd_2fd57c903944e4f9b6c3e950506b7a09.png"
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1774595875/otogi/cards_hd/101636_hd_096cf88f212626de1f67f1c88da04e6a.png"
       },
       "name": "プラネタリウム",
       "playable": true,
@@ -10936,7 +10966,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101638",
       "bonds": [
@@ -60313,8 +60346,8 @@
       }
     }
   },
-  "data_hash": "5cc63529",
+  "data_hash": "cb5f2bb0",
   "locale": "ja",
   "total_cards": 933,
-  "version": "eaf7a7e"
+  "version": "d26cea5"
 }
