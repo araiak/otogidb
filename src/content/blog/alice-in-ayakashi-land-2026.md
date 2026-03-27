@@ -18,6 +18,10 @@ Here's a first look at the new cards for Alice in Ayakashi Land. This is a quiet
 
 *Update:* LJS as expected, with the featured banner running April 5–9.
 
+:card[1638] looks like a standard gacha option to revisit after the event. It has a little defense and a 25% shield debuff on all foes in the final round. This could stack with :card[642] or :card[661] for considerable shield debuff on teams that want more consistent damage or lack debuffers like :card[1311]. Values on these skills are a bit low and they require fairly high investment — the cost may be too high to justify for most players. **If you find yourself with copies it could be worth using if you need a mix of defense and shield debuff-based damage boost; not worth targeting.**
+
+*Update:* Confirmed LJS — featured banner April 9–12, with exchange. Not the priority pick of this event, but if you're looking for shield debuff coverage, this is your window.
+
 ---
 
 ## Tower Cards
@@ -56,8 +60,6 @@ The tricky part is how she fits into an established Divina lineup. For newer pla
 
 :card[1636] — cut-off art notwithstanding — is probably too situational to justify investment. It's in the standard gacha, so if you happen to end up with 4 copies it could be useful for adjusting critical rate from reserve. But 18% crit for Anima is probably not enough to bump other strong reserve options. If you're running :card[1526] and :card[1529], you'd get more crit by splitting off a copy of :card[1529] for the same reserve slot. If :card[1526] falls out of the meta then maybe :card[1636] could serve a similar role — crit rate is often very strong compared to other stats percent-for-percent, even when crit rate values are already fairly high. **Situational; only worth slotting if you happen to hit 4 copies and need Anima crit rate coverage.**
 
-:card[1638] looks like a standard gacha option to revisit after the event. It has a little defense and a 25% shield debuff on all foes in the final round. This could stack with :card[642] or :card[661] for considerable shield debuff on teams that want more consistent damage or lack debuffers like :card[1311]. Values on these skills are a bit low and they require fairly high investment — the cost may be too high to justify for most players. **If you find yourself with copies it could be worth using if you need a mix of defense and shield debuff-based damage boost; not worth targeting.**
-
 ---
 
 ## Monthly Exchange
@@ -72,6 +74,7 @@ The tricky part is how she fits into an established Divina lineup. For newer pla
 
 Limited Jewel Summons:
 - :card[1578] — **Top target for this event**. 45% 2-target damage boost and 10% time extension; best in reserve, excellent world boss value especially with :card[514]
+- :card[1638] — **Niche**. Shield debuff stacking with :card[642] or :card[661]; limited so now's the window if you want it
 
 Tower Cards:
 - :card[1577] — **Grab the MLB**. [Wild] Anima melee with damage reduction, attack speed, and HP restore; decent tank for newer Anima players
@@ -84,7 +87,6 @@ Ranking Cards:
 Standard Gacha:
 - :card[1458] — **Situational**. Not urgent since he's in the permanent pool, but worth a copy if you need the ranged ATK bond
 - :card[1636] — **Situational**. Only worth slotting if you happen to hit 4 copies and need Anima crit rate coverage
-- :card[1638] — **Niche**. Could work stacking shield debuff with :card[642] or :card[661]; not worth targeting
 
 Monthly Exchange:
 - :card[1582] — **Collectors only**
@@ -106,6 +108,10 @@ Monthly Exchange:
 :card[1578]はPhantasmaのアリスです——アリスはDivinaのはずなので、意図的なのかエラーなのか気になるところです。多くのプレイヤーはワールドボスでのアビリティに注目しているでしょう。1つ目のアビリティは:card[672]に似た2体への45%ダメージブーストで、非常に優秀です。2つ目のアビリティは10%の時間延長。時間延長は面白い効果で——実質的に攻撃時間が10%増えることになり、チームが1ラウンド生き残れる前提であれば約10%のダメージ増加に相当します。境界付近でのスキル追加発動など、エッジケースもあるかもしれません。特に効果的なのは:card[514]との組み合わせで、彼女のバグによりダメージが時間経過とともに増加するため、時間延長で得られる恩恵が10%以上になります。累積スキルを使うマルチラウンドの戦闘でも同様の効果が期待でき、最近のイベントではタイマーが短い傾向にある中、追加の数秒がタワー攻略の安定につながる場合もあります。他の時間延長オプション（:card[209]や:card[267]）と比べてもかなり強力です。スキルは:card[739]のシングルターゲット版なので、ラインナップ入りも可能ですが、おそらくリザーブがベストです。**非常に価値があり、今イベントの最優先ターゲット。**
 
 *Update:* 予想通りLJS——フィーチャーバナーは4月5日〜9日。
+
+:card[1638]はイベント後に改めて見直したいスタンダードガチャの選択肢のように見えました。少量の防御と、最終ラウンドの全敵への25%シールドデバフを持ちます。:card[642]や:card[661]との重ねがけで、安定したダメージが欲しいチームや:card[1311]のようなデバッファーを持たないチームには有効なシールドデバフが作れます。スキルの数値はやや低く、必要投資量も多め——コストに見合わない場合もあります。**コピーが手元にあり防御とシールドデバフを組み合わせた構成が必要なら使えるかもしれない；積極的には狙わなくていい。**
+
+*Update:* LJS確定——フィーチャーバナーは4月9日〜12日、交換所あり。今イベントの最優先ではないですが、シールドデバフが必要なら今がチャンスです。
 
 ---
 
@@ -145,8 +151,6 @@ Monthly Exchange:
 
 :card[1636]は——カットオフしたアートはともかく——投資を正当化するには状況が限定的すぎるでしょう。スタンダードガチャなので4枚揃えばリザーブからクリ率を調整するのに使えるかもしれません。ただし18%のAnimaクリ率では他の強いリザーブオプションを押しのけるには不十分です。:card[1526]と:card[1529]を使っているなら、同じリザーブ枠で:card[1529]を1枚分けた方がクリが高くなります。:card[1526]がメタから外れた場合は:card[1636]が似た役割を担えるかもしれません——クリ率がすでに高い状態でも他のステータス比で非常に優秀なことが多いので。**状況次第；4枚揃ってAnimaクリ率の補充が必要な場合のみ採用を検討。**
 
-:card[1638]はイベント後に改めて見直したいスタンダードガチャの選択肢です。少量の防御と、最終ラウンドの全敵への25%シールドデバフを持ちます。:card[642]や:card[661]との重ねがけで、安定したダメージが欲しいチームや:card[1311]のようなデバッファーを持たないチームには有効なシールドデバフが作れます。スキルの数値はやや低く、必要投資量も多め——コストに見合わない場合もあります。**コピーが手元にあり防御とシールドデバフを組み合わせた構成が必要なら使えるかもしれない；積極的に狙う価値はなし。**
-
 ---
 
 ## 月替わり交換所
@@ -161,6 +165,7 @@ Monthly Exchange:
 
 限定ジュエルサモン:
 - :card[1578] — **今イベントの最優先ターゲット**。45%の2体ダメージブーストと10%時間延長；リザーブでの運用がベスト、:card[514]との相性が特に良くワールドボスで高い価値を発揮
+- :card[1638] — **ニッチ**。:card[642]や:card[661]とのシールドデバフ重ねに使えるかも；限定なので欲しければ今がチャンス
 
 タワーカード:
 - :card[1577] — **MLBを取りに行こう**。ダメージ軽減・攻撃速度・HP回復を持つ[ワイルド]Anima近接；Anima初心者にとって悪くないタンク
@@ -195,6 +200,10 @@ Monthly Exchange:
 :card[1578]은 Phantasma의 Alice입니다——Alice는 Divina인데 의도적인지 오류인지 궁금합니다. 대부분의 플레이어는 월드 보스에서의 어빌리티에 주목할 것입니다. 첫 번째 어빌리티는 :card[672]와 유사한 2체 45% 데미지 부스트로 매우 우수합니다. 두 번째 어빌리티는 10% 시간 연장입니다. 시간 연장은 흥미로운 효과로——실질적으로 공격 시간이 10% 늘어나며, 팀이 1라운드 동안 살아있다고 가정하면 약 10%의 데미지 증가에 해당합니다. 경계 부근에서의 스킬 추가 발동 같은 엣지 케이스도 있을 수 있습니다. 특히 효과적인 것은 :card[514]와의 조합으로, 그녀의 버그로 인해 데미지가 시간이 지날수록 증가하기 때문에 시간 연장으로 10% 이상의 효과를 얻을 수 있습니다. 누적 스킬을 사용하는 멀티라운드 전투에서도 비슷한 효과가 기대되며, 최근 이벤트의 타이머가 짧아진 추세에서 추가 시간이 타워 공략 안정성을 높일 수 있습니다. 다른 시간 연장 옵션(:card[209]나 :card[267])과 비교해도 훨씬 강력합니다. 스킬은 :card[739]의 싱글 타겟 버전이므로 라인업에도 사용 가능하지만, 리저브가 베스트입니다. **매우 가치 있으며, 이번 이벤트 최우선 목표.**
 
 *Update:* 예상대로 LJS——피처드 배너는 4월 5일〜9일.
+
+:card[1638]은 이벤트 후에 다시 살펴볼 일반 가챠 선택지처럼 보였습니다. 소량의 방어력과 최종 라운드 전 적에게 25% 실드 디버프를 지닙니다. :card[642]나 :card[661]과 중첩하여 안정적인 데미지를 원하는 팀이나 :card[1311] 같은 디버퍼가 없는 팀에 상당한 실드 디버프를 만들 수 있습니다. 스킬 수치가 다소 낮고 필요 투자량도 많아——코스트에 맞지 않는 경우가 있습니다. **코피가 있고 방어와 실드 디버프 조합이 필요하다면 쓸 수 있을지도；적극적으로 노릴 가치는 없음.**
+
+*Update:* LJS 확정——피처드 배너 4월 9〜12일, 교환소 포함. 이번 이벤트 최우선 픽은 아니지만, 실드 디버프가 필요하다면 지금이 기회입니다.
 
 ---
 
@@ -234,8 +243,6 @@ Monthly Exchange:
 
 :card[1636]은——아트의 잘린 부분은 제쳐두고——투자를 정당화하기에는 상황이 너무 제한적입니다. 일반 가챠이므로 4장이 모이면 리저브에서 크리 확률을 조절하는 데 쓸 수 있습니다. 하지만 18%의 Anima 크리 확률은 다른 강력한 리저브 옵션을 밀어낼 만큼 충분하지 않습니다. :card[1526]과 :card[1529]를 운용 중이라면, 같은 리저브 슬롯에서 :card[1529]를 1장 분리하는 것이 더 많은 크리를 얻는 방법입니다. :card[1526]이 메타에서 벗어난다면 :card[1636]이 비슷한 역할을 맡을 수 있습니다——크리 확률은 이미 높은 상태에서도 다른 스탯 대비 비율로 매우 강한 경우가 많으므로. **상황에 따라；4장이 모여 Anima 크리 확률 보충이 필요한 경우에만 채용 검토.**
 
-:card[1638]은 이벤트 후에 다시 살펴볼 일반 가챠 선택지입니다. 소량의 방어력과 최종 라운드 전 적에게 25% 실드 디버프를 지닙니다. :card[642]나 :card[661]과 중첩하여 안정적인 데미지를 원하는 팀이나 :card[1311] 같은 디버퍼가 없는 팀에 상당한 실드 디버프를 만들 수 있습니다. 스킬 수치가 다소 낮고 필요 투자량도 많아——코스트에 맞지 않는 경우가 있습니다. **코피가 있고 방어와 실드 디버프 조합이 필요하다면 쓸 수 있을지도；적극적으로 노릴 가치는 없음.**
-
 ---
 
 ## 월간 교환소
@@ -250,6 +257,7 @@ Monthly Exchange:
 
 한정 가챠:
 - :card[1578] — **이번 이벤트 최우선 목표**. 45% 2체 데미지 부스트와 10% 시간 연장；리저브가 베스트, :card[514]와의 시너지로 월드 보스에서 높은 가치 발휘
+- :card[1638] — **틈새**. :card[642]나 :card[661]과 실드 디버프 중첩에 쓸 수 있음；한정이니 원한다면 지금이 기회
 
 타워 카드:
 - :card[1577] — **MLB를 챙기자**. 데미지 감소·공격 속도·HP 회복을 가진 [와일드] Anima 근접；Anima 초보자에게 나쁘지 않은 탱크
@@ -262,7 +270,6 @@ Monthly Exchange:
 일반 가챠:
 - :card[1458] — **상황에 따라**. 영구 풀에 있어 서두를 필요 없지만, 원거리 ATK 본드가 필요하다면 1장 가치 있음
 - :card[1636] — **상황에 따라**. 4장이 모여 Anima 크리 확률 보충이 필요한 경우만 채용 검토
-- :card[1638] — **틈새**. :card[642]나 :card[661]과 실드 디버프 중첩에 쓸 수 있을지도；적극적으로는 노리지 말자
 
 월간 교환소:
 - :card[1582] — **콜렉터 아니라면 패스**
@@ -284,6 +291,10 @@ Monthly Exchange:
 :card[1578]是Phantasma属性的Alice——考虑到Alice本是Divina，不知是有意为之还是出错了。大多数玩家会关注她在世界BOSS中的能力。第一个被动是类似:card[672]的2体45%伤害提升，非常出色。第二个被动是10%时间延长。时间延长是个有趣的效果——实际上给你多了约10%的攻击时间，假设队伍在单轮中存活，大约相当于10%的伤害提升。在边界处可能存在额外技能触发的边缘情况。特别有效的是与:card[514]的搭配，由于她的bug使伤害随时间增长，时间延长带来的收益超过10%。在使用渐进技能的多轮战斗中也可能有类似效果，考虑到近期活动计时器较短，额外几秒可能有助于更稳定地通关塔。与其他时间延长选项（:card[209]或:card[267]）相比强得多。技能是:card[739]技能的单体版，可以上阵，但最好放在备用位置。**非常值得获取，很可能是本次活动的首要目标。**
 
 *Update:* 如预期的LJS——精选卡池运行时间为4月5日至9日。
+
+:card[1638]看起来像活动后值得重新审视的常规卡池选择。有少量防御，并对最终轮所有敌人施加25%实盾减益。可以与:card[642]或:card[661]叠加，对想要更稳定伤害或缺乏:card[1311]这类减益卡的队伍形成可观的实盾减益。技能数值偏低且需要较高投入——成本可能难以为多数玩家所接受。**手上有副本且需要防御和实盾减益组合的话可以用；不值得主动去追。**
+
+*Update:* 确认为LJS——精选卡池4月9日至12日，附带交换所。不是本次活动的首要目标，但如果需要实盾减益覆盖，现在是机会。
 
 ---
 
@@ -323,8 +334,6 @@ Monthly Exchange:
 
 :card[1636]——撇开裁剪的插图不谈——可能太小众了，难以支撑投入。它在常规卡池中，所以凑巧有4张的话可以用于从备用调整暴击率。不过18%的Anima暴击率可能不足以取代其他强力备用选项。如果你在用:card[1526]和:card[1529]，拆分一张:card[1529]到同一备用位可以获得更多暴击率。如果:card[1526]退出元游，:card[1636]或许能承担类似角色——即使在暴击率已较高时，与其他属性相比按比例来看暴击率通常非常强。**视情况而定；只有凑满4张且需要Anima暴击率覆盖时才考虑上阵。**
 
-:card[1638]是活动后值得重新审视的常规卡池选择。有少量防御，并对最终轮所有敌人施加25%实盾减益。可以与:card[642]或:card[661]叠加，对想要更稳定伤害或缺乏:card[1311]这类减益卡的队伍形成可观的实盾减益。技能数值偏低且需要较高投入——成本可能难以为多数玩家所接受。**手上有副本且需要防御和实盾减益组合的话可以用；不值得主动去追。**
-
 ---
 
 ## 月度交换所
@@ -339,6 +348,7 @@ Monthly Exchange:
 
 限定卡池:
 - :card[1578] — **本次活动首要目标**。45%双体伤害提升和10%时间延长；备用位最佳，与:card[514]配合在世界BOSS中价值极高
+- :card[1638] — **小众**。可与:card[642]或:card[661]叠加实盾减益；限定卡，想要的话现在是机会
 
 塔卡:
 - :card[1577] — **冲MLB**。拥有减伤、攻击速度和HP回复的[万能]Anima近战；对Anima新手还不错的坦克
@@ -351,7 +361,6 @@ Monthly Exchange:
 常规卡池:
 - :card[1458] — **视情况而定**。进了永久池不用着急，但需要远程ATK羁绊的话值得入手一张
 - :card[1636] — **视情况而定**。只有凑满4张且需要Anima暴击率覆盖时才考虑
-- :card[1638] — **小众**。可能适合与:card[642]或:card[661]叠加实盾减益；不值得主动追
 
 月度交换所:
 - :card[1582] — **收藏以外请路过**
@@ -373,6 +382,10 @@ Monthly Exchange:
 :card[1578]是Phantasma屬性的Alice——考慮到Alice本是Divina，不知是有意為之還是出錯了。大多數玩家會關注她在世界BOSS中的能力。第一個被動是類似:card[672]的2體45%傷害提升，非常出色。第二個被動是10%時間延長。時間延長是個有趣的效果——實際上給你多了約10%的攻擊時間，假設隊伍在單輪中存活，大約相當於10%的傷害提升。在邊界處可能存在額外技能觸發的邊緣情況。特別有效的是與:card[514]的搭配，由於她的bug使傷害隨時間增長，時間延長帶來的收益超過10%。在使用漸進技能的多輪戰鬥中也可能有類似效果，考慮到近期活動計時器較短，額外幾秒可能有助於更穩定地通關塔。與其他時間延長選項（:card[209]或:card[267]）相比強得多。技能是:card[739]技能的單體版，可以上陣，但最好放在備用位置。**非常值得獲取，很可能是本次活動的首要目標。**
 
 *Update:* 如預期的LJS——精選卡池運行時間為4月5日至9日。
+
+:card[1638]看起來像活動後值得重新審視的常規卡池選擇。有少量防禦，並對最終輪所有敵人施加25%實盾減益。可以與:card[642]或:card[661]疊加，對想要更穩定傷害或缺乏:card[1311]這類減益卡的隊伍形成可觀的實盾減益。技能數值偏低且需要較高投入——成本可能難以為多數玩家所接受。**手上有副本且需要防禦和實盾減益組合的話可以用；不值得主動去追。**
+
+*Update:* 確認為LJS——精選卡池4月9日至12日，附帶交換所。不是本次活動的首要目標，但如果需要實盾減益覆蓋，現在是機會。
 
 ---
 
@@ -412,8 +425,6 @@ Monthly Exchange:
 
 :card[1636]——撇開裁剪的插圖不談——可能太小眾了，難以支撐投入。它在常規卡池中，所以湊巧有4張的話可以用於從備用調整暴擊率。不過18%的Anima暴擊率可能不足以取代其他強力備用選項。如果你在用:card[1526]和:card[1529]，拆分一張:card[1529]到同一備用位可以獲得更多暴擊率。如果:card[1526]退出元遊，:card[1636]或許能承擔類似角色——即使在暴擊率已較高時，與其他屬性相比按比例來看暴擊率通常非常強。**視情況而定；只有湊滿4張且需要Anima暴擊率覆蓋時才考慮上陣。**
 
-:card[1638]是活動後值得重新審視的常規卡池選擇。有少量防禦，並對最終輪所有敵人施加25%實盾減益。可以與:card[642]或:card[661]疊加，對想要更穩定傷害或缺乏:card[1311]這類減益卡的隊伍形成可觀的實盾減益。技能數值偏低且需要較高投入——成本可能難以為多數玩家所接受。**手上有副本且需要防禦和實盾減益組合的話可以用；不值得主動去追。**
-
 ---
 
 ## 月度交換所
@@ -428,6 +439,7 @@ Monthly Exchange:
 
 限定卡池:
 - :card[1578] — **本次活動首要目標**。45%雙體傷害提升和10%時間延長；備用位最佳，與:card[514]配合在世界BOSS中價值極高
+- :card[1638] — **小眾**。可與:card[642]或:card[661]疊加實盾減益；限定卡，想要的話現在是機會
 
 塔卡:
 - :card[1577] — **衝MLB**。擁有減傷、攻擊速度和HP回復的[萬能]Anima近戰；對Anima新手還不錯的坦克
@@ -440,7 +452,6 @@ Monthly Exchange:
 常規卡池:
 - :card[1458] — **視情況而定**。進了永久池不用著急，但需要遠程ATK羈絆的話值得入手一張
 - :card[1636] — **視情況而定**。只有湊滿4張且需要Anima暴擊率覆蓋時才考慮
-- :card[1638] — **小眾**。可能適合與:card[642]或:card[661]疊加實盾減益；不值得主動追
 
 月度交換所:
 - :card[1582] — **收藏以外請路過**
@@ -462,6 +473,10 @@ Después del caos de las subastas, aquí está el análisis de las nuevas cartas
 :card[1578] es una Alice de Phantasma——inusual dado que Alice es Divina, ya sea por diseño o por error. La mayoría de los jugadores la mirarán por sus habilidades en el Jefe Mundial. Su primera habilidad es un aumento de daño del 45% a 2 objetivos similar a :card[672], que es genial. Su segunda habilidad es una extensión de tiempo del 10%. La extensión de tiempo es interesante——en efecto te da aproximadamente un 10% más de tiempo para atacar, lo que se traduce en un aumento de daño de aproximadamente el 10% asumiendo que tu equipo esté vivo en una sola ronda. Puede haber algunos casos extremos alrededor de lanzamientos de habilidades adicionales en el límite. Donde esto realmente brilla es con :card[514] debido a su bug, que hace que el daño aumente con el tiempo——en ese caso obtienes más del 10% debido al daño en aumento. También podría tener un efecto similar en batallas de múltiples rondas con habilidades progresivas, y dado que eventos recientes han tenido temporizadores más cortos, los segundos extra pueden resultar en clears de torre más confiables. Comparada con otras opciones de extensión de tiempo es considerablemente más fuerte que :card[209] o :card[267]. Su habilidad es una versión de un solo objetivo de la habilidad de :card[739], así que es usable en el equipo pero probablemente mejor en reserva. **Muy vale la pena obtener y probablemente el objetivo principal de este evento.**
 
 *Update:* LJS como se esperaba——el banner destacado corre del 5 al 9 de abril.
+
+:card[1638] parece una opción de gacha estándar para revisar después del evento. Tiene un poco de defensa y un 25% de debuff de escudo en todos los enemigos en la ronda final. Esto podría apilarse con :card[642] o :card[661] para un debuff de escudo considerable en equipos que quieran daño más consistente o carezcan de desbufadores como :card[1311]. Los valores en estas habilidades son un poco bajos y requieren una inversión bastante alta——el costo puede ser demasiado alto para la mayoría de los jugadores. **Si te encuentras con copias podría valer la pena usarla si necesitas una mezcla de defensa y debuff de escudo; no vale la pena apuntar a ella.**
+
+*Update:* Confirmada como LJS——banner destacado del 9 al 12 de abril, con intercambio. No es el objetivo prioritario del evento, pero si buscas cobertura de debuff de escudo, esta es tu ventana.
 
 ---
 
@@ -501,8 +516,6 @@ La parte complicada es cómo encaja en una formación de Divina establecida. Par
 
 :card[1636]——el arte cortado aparte——probablemente es demasiado situacional para justificar inversión. Está en la gacha estándar, así que si acabas con 4 copias podría ser útil para ajustar la tasa crítica desde reserva. Pero 18% de crítico para Anima probablemente no es suficiente para superar otras opciones de reserva fuertes. Si estás usando :card[1526] y :card[1529], obtendrías más crítico dividiendo una copia de :card[1529] para el mismo slot de reserva. Si :card[1526] cae del meta entonces quizás :card[1636] podría servir un rol similar——la tasa crítica es a menudo muy fuerte comparada con otras estadísticas porcentualmente, incluso cuando los valores de tasa crítica ya son bastante altos. **Situacional; solo vale incluirla si acabas con 4 copias y necesitas cobertura de tasa crítica de Anima.**
 
-:card[1638] parece una opción de gacha estándar para revisar después del evento. Tiene un poco de defensa y un 25% de debuff de escudo en todos los enemigos en la ronda final. Esto podría apilarse con :card[642] o :card[661] para un debuff de escudo considerable en equipos que quieran daño más consistente o carezcan de desbufadores como :card[1311]. Los valores en estas habilidades son un poco bajos y requieren una inversión bastante alta——el costo puede ser demasiado alto para la mayoría de los jugadores. **Si te encuentras con copias podría valer la pena usarla si necesitas una mezcla de defensa y aumento de daño basado en debuff de escudo; no vale la pena apuntar a ella.**
-
 ---
 
 ## Intercambio Mensual
@@ -517,6 +530,7 @@ La parte complicada es cómo encaja en una formación de Divina establecida. Par
 
 Gacha Limitada:
 - :card[1578] — **Objetivo principal de este evento**. Aumento de daño del 45% a 2 objetivos y extensión de tiempo del 10%; mejor en reserva, excelente valor en Jefe Mundial especialmente con :card[514]
+- :card[1638] — **De nicho**. Apilado de debuff de escudo con :card[642] o :card[661]; limitada, así que ahora es tu oportunidad si la quieres
 
 Cartas de Torre:
 - :card[1577] — **Consigue el MLB**. Cuerpo a cuerpo [libre] de Anima con reducción de daño, velocidad de ataque y restauración de HP; tanque decente para jugadores más nuevos de Anima
@@ -529,7 +543,6 @@ Cartas de Ranking:
 Gacha Estándar:
 - :card[1458] — **Situacional**. No hay prisa ya que está en el pool permanente, pero vale una copia si necesitas el vínculo ATK a distancia
 - :card[1636] — **Situacional**. Solo considera incluirla si acabas con 4 copias y necesitas cobertura de tasa crítica de Anima
-- :card[1638] — **De nicho**. Podría funcionar apilando debuff de escudo con :card[642] o :card[661]; no vale la pena apuntar a ella
 
 Intercambio Mensual:
 - :card[1582] — **Solo para coleccionistas**
