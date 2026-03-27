@@ -1,0 +1,1861 @@
+{
+  "version": "d26cea5",
+  "version_date": "2026-03-27",
+  "previous_version": "eaf7a7e",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 20
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "731",
+      "name": "Wild Star Thorn",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634645/otogi/cards_hd/100731_hd_f6eccafd9e836b4389c1c20f851588e3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0.event_name",
+          "field_label": "Event Name",
+          "old": "Guild Conquest",
+          "new": "Guild Conquest ーWild Star Thornー",
+          "display": "Event Name: Guild Conquest → Guild Conquest ーWild Star T..."
+        }
+      ]
+    },
+    {
+      "id": "1458",
+      "name": "Magellan (Galaxy)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963842/otogi/cards_hd/101458_hd_758f57cccb61cd5176b2c11ea123ffad.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-04-12 15:00:00",
+            "end": "2026-04-19 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-04-12 15:00:00', 'end': '2026-04-19 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        }
+      ]
+    },
+    {
+      "id": "1528",
+      "name": "Ono no Komachi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634741/otogi/cards_hd/101528_hd_0c4ff683eff8e7d0ef1f29b739cd7fac.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "7 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 7 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1529",
+      "name": "Ohina",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634742/otogi/cards_hd/101529_hd_edadde8e67795834a0d3e2962d67542c.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "5 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 5 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1576",
+      "name": "Alice",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963837/otogi/cards_hd/101576_hd_051475df52f15b13cda3d965d626b3eb.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "177",
+            "event_name": "",
+            "floors": [
+              80,
+              100,
+              150,
+              175,
+              200
+            ],
+            "first_seen": "2026-03-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '177', 'event_name': '', 'floors': [80, 100, 150, 175, 200], 'first_seen': '2026-03-27', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1577",
+      "name": "Alice's Dress",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963844/otogi/cards_hd/101577_hd_d559f0a0f43815baac6d3a74458ceb72.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Reduces 40% of DMG taken, increases 40% of ATK speed and slowly restores HP over time when HP is 1/2 or below.",
+          "new": "Reduces 40% of DMG taken, increases 20% of ATK speed and slowly restores HP over time when HP is 1/2 or below.",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.parsed.effects.2.value",
+          "field_label": "Value",
+          "old": 40.0,
+          "new": 20.0,
+          "display": "Value: 40.0 → 20.0 (-20.0)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "177",
+            "event_name": "",
+            "floors": [
+              60,
+              70,
+              140,
+              180
+            ],
+            "first_seen": "2026-03-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '177', 'event_name': '', 'floors': [60, 70, 140, 180], 'first_seen': '2026-03-27', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1578",
+      "name": "Classic Alice",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963846/otogi/cards_hd/101578_hd_a80e2d48fc8da5404dbe28132673b182.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-04-05 15:00:00",
+            "end": "2026-04-09 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-04-05 15:00:00', 'end': '2026-04-09 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-05 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-05 15:00:00', 'end': '2026-04-12 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1579",
+      "name": "Red Queen",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963833/otogi/cards_hd/101579_hd_8d3840a9d4e2f2e50c1aa8e1077606d6.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "5 items",
+          "display": "Reward Tiers: 0 items → 5 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 5, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 4, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 3, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 2, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1581",
+      "name": "March Hare",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963842/otogi/cards_hd/101581_hd_64c49f5f293a4fe05099507c30aa205b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "7 items",
+          "display": "Reward Tiers: 0 items → 7 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1582",
+      "name": "Lady Wedge",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963838/otogi/cards_hd/101582_hd_a29c76daa5db85516c48fd7565c49aee.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-01 00:00:00",
+            "end": "2026-05-31 23:59:59",
+            "price": 65,
+            "currency": "gApple",
+            "limit": 0,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-01 00:00:00', 'end': '2026-05-31 23:59:59', 'price': 65, 'currency': 'gApple', 'limit': 0, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1638",
+      "name": "Ypsilon",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963836/otogi/cards_hd/101638_hd_42a1b1ec22f5d9cb7f3d3a046b66abc3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-04-09 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-04-09 15:00:00', 'end': '2026-04-12 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-05 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-05 15:00:00', 'end': '2026-04-12 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1460",
+      "name": "Flick",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963845/otogi/cards_hd/101460_hd_7d82c6a1e1a49f636ba76de459b96db4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        }
+      ]
+    },
+    {
+      "id": "1523",
+      "name": "Sadaijin",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634737/otogi/cards_hd/101523_hd_d01a6db4568af9c236436da79fc830e3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1537",
+      "name": "Udaijin",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634749/otogi/cards_hd/101537_hd_36002dedd81dc48f7da0520beeb0993a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1570",
+      "name": "Gryphon",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1774595874/otogi/cards_hd/101570_hd_6750282b99437b48d52070dd3681be46.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-03-26 15:00:00",
+            "end": "2026-04-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-03-26 15:00:00', 'end': '2026-04-05 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-09 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-09 15:00:00', 'end': '2026-04-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1572",
+      "name": "Yoshino Cherry",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963832/otogi/cards_hd/101572_hd_475b039608e3e6bfb35ec4e45b7837a3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-03-26 15:00:00",
+            "end": "2026-04-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-03-26 15:00:00', 'end': '2026-04-05 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-09 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-09 15:00:00', 'end': '2026-04-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1575",
+      "name": "Hattie",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963835/otogi/cards_hd/101575_hd_17c8f7df54719261e808dde956ad5c68.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "11 items",
+          "display": "Reward Tiers: 0 items → 11 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.7",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.8",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.9",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.10",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 2,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 2, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "177",
+            "event_name": "",
+            "floors": [
+              40,
+              50,
+              120,
+              160
+            ],
+            "first_seen": "2026-03-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '177', 'event_name': '', 'floors': [40, 50, 120, 160], 'first_seen': '2026-03-27', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1580",
+      "name": "Cheshire Cat",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963847/otogi/cards_hd/101580_hd_20c8392d55ee0b499351cae17e490210.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-03-26 15:00:00",
+            "end": "2026-04-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-03-26 15:00:00', 'end': '2026-04-05 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-04-09 15:00:00",
+            "end": "2026-04-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-04-09 15:00:00', 'end': '2026-04-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1535",
+      "name": "Suberinko",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634747/otogi/cards_hd/101535_hd_7a9274fbcc43f4358b346db620f000f1.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "3 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 3 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "176",
+            "event_name": "Elegance! Girls' Festival Rebellion!",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1573",
+      "name": "Quartz",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963834/otogi/cards_hd/101573_hd_33e87157ff06c1cb616f6a87cffc8a8a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Reward Tiers: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "177",
+            "event_name": "Alice in Ayakashi Land",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '177', 'event_name': 'Alice in Ayakashi Land', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "177",
+            "event_name": "",
+            "floors": [
+              10,
+              20,
+              30
+            ],
+            "first_seen": "2026-03-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '177', 'event_name': '', 'floors': [10, 20, 30], 'first_seen': '2026-03-27', 'is_current': False})"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "gachaTrade": {
+      "old_count": 312,
+      "new_count": 318,
+      "diff": 6
+    },
+    "eventRankings": {
+      "old_count": 19,
+      "new_count": 19,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "raidBoss": {
+      "old_count": 200,
+      "new_count": 200,
+      "diff": 0
+    },
+    "gachaGuarentee": {
+      "old_count": 164,
+      "new_count": 168,
+      "diff": 4
+    },
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "cardInit": {
+      "old_count": 406,
+      "new_count": 416,
+      "diff": 10
+    },
+    "eventHelpers": {
+      "old_count": 12,
+      "new_count": 11,
+      "diff": -1
+    },
+    "gachaContents": {
+      "old_count": 745,
+      "new_count": 747,
+      "diff": 2
+    },
+    "monsterAbility": {
+      "old_count": 1031,
+      "new_count": 1031,
+      "diff": 0
+    },
+    "raidBattles": {
+      "old_count": 38,
+      "new_count": 38,
+      "diff": 0
+    },
+    "npc": {
+      "old_count": 295,
+      "new_count": 296,
+      "diff": 1
+    },
+    "banner": {
+      "old_count": 510,
+      "new_count": 519,
+      "diff": 9
+    }
+  }
+}
