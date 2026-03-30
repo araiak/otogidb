@@ -1,0 +1,67 @@
+{
+  "version": "4b57cd8",
+  "version_date": "2026-03-30",
+  "previous_version": "b11011c",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 2
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1579",
+      "name": "Red Queen",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963833/otogi/cards_hd/101579_hd_8d3840a9d4e2f2e50c1aa8e1077606d6.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.1.description",
+          "field_label": "Description",
+          "old": "Increases 10% of Crit DMG dealt of Divina allies at the start of each wave.",
+          "new": "Increases 15% of Crit DMG dealt of Divina allies at the start of each wave.",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.1.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": 9.0,
+          "new": 15.0,
+          "display": "Value: 9.0 → 15.0 (+6.0)"
+        }
+      ]
+    },
+    {
+      "id": "1581",
+      "name": "March Hare",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963842/otogi/cards_hd/101581_hd_64c49f5f293a4fe05099507c30aa205b.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.1.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": 5.0,
+          "new": 30.0,
+          "display": "Value: 5.0 → 30.0 (+25.0)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "banner": {
+      "old_count": 519,
+      "new_count": 519,
+      "diff": 0
+    },
+    "monsterAbility": {
+      "old_count": 1031,
+      "new_count": 1031,
+      "diff": 0
+    }
+  }
+}
