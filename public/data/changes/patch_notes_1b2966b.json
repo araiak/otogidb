@@ -1,0 +1,50 @@
+{
+  "version": "1b2966b",
+  "version_date": "2026-04-05",
+  "previous_version": "4b57cd8",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1578",
+      "name": "Classic Alice",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773963846/otogi/cards_hd/101578_hd_a80e2d48fc8da5404dbe28132673b182.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Increases 45% of DMG dealt by the 2 allies with the highest ATK.",
+          "new": "Increases 45% of DMG dealt by the 2 divina allies with the highest ATK.",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 2,
+          "new": 1,
+          "display": "Attribute: 2 → 1 (-1)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "banner": {
+      "old_count": 519,
+      "new_count": 519,
+      "diff": 0
+    },
+    "monster": {
+      "old_count": 933,
+      "new_count": 933,
+      "diff": 0
+    }
+  }
+}
