@@ -2237,19 +2237,19 @@
       "affected_id": "157801",
       "category": "targeting",
       "severity": "gameplay",
-      "summary": "Classic Idol restricts to Melee allies only, not all allies",
+      "summary": "Classic Idol restricts to Divina allies only, not all allies",
       "details": {
         "description_says": "Increases 45% of DMG dealt by the 2 allies with the highest ATK.",
         "target_string": "self;type<1>;count<2>;max_atk",
         "expected": "self;count<2>;max_atk",
         "extra": "type<1>",
-        "reference_card": "Raphael #672 (ability 67202: self;count<2>;max_atk, ATK<40.00%,0%>) has identical description with no type restriction"
+        "reference_card": "Raphael #672 (ability 67202: self;count<2>;max_atk, ATK<40.00%,0%>) has identical description with no attribute restriction"
       },
-      "analysis": "Target selector contains type<1> (Melee filter), restricting the buff to the 2 highest-ATK Melee allies only. Description says \"2 allies with the highest ATK\" with no type restriction. Raphael #672 has an equivalent ability without type<1> and works correctly. Any non-Melee card (Ranged/Healer/Assist) is skipped even if they have higher ATK.",
+      "analysis": "Target selector contains type<1> (Divina attribute filter), restricting the buff to the 2 highest-ATK Divina allies only. Description says \"2 allies with the highest ATK\" with no attribute restriction. Raphael #672 has an equivalent ability without type<1> and works correctly. Classic Alice is Phantasma herself, so on a mixed-attribute team any non-Divina card is skipped even if they have higher ATK. On a team with no Divina allies, the buff does nothing at all.",
       "affects_gameplay": true,
       "visual_only": false,
       "source": "manual",
-      "status": "open",
+      "status": "fixed",
       "first_detected": "2026-04-05",
       "resolution_check": {
         "field": "ts",
@@ -2258,16 +2258,22 @@
       },
       "description_check": {
         "condition": "contains",
-        "value": "Melee"
+        "value": "Divina"
       },
       "check_history": [
         {
           "date": "2026-04-05",
           "status": "persists",
           "game_version": "1b2966b"
+        },
+        {
+          "date": "2026-04-05",
+          "status": "fixed",
+          "game_version": "1b2966b"
         }
       ],
-      "last_checked": "2026-04-05"
+      "last_checked": "2026-04-05",
+      "fixed_in_version": "1b2966b"
     }
   ],
   "categories": {
