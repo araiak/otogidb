@@ -2274,6 +2274,109 @@
       ],
       "last_checked": "2026-04-05",
       "fixed_in_version": "1b2966b"
+    },
+    {
+      "id": "BUG-058",
+      "card_id": 1321,
+      "card_name": "Ameno Uzume [HW]",
+      "affected_field": "ability",
+      "affected_id": "132102",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Ability restricts to Divina allies only, description says all allies",
+      "details": {
+        "description_says": "Increases 40% of DMG dealt by the 2 allies with the highest ATK.",
+        "target_string": "self;type<1>;count<2>;max_atk",
+        "expected": "self;count<2>;max_atk",
+        "extra": "type<1>",
+        "note": "Same pattern as Classic Alice #1578 (BUG-057, now fixed). Card is Divina itself so on Divina teams the bug may not be noticed."
+      },
+      "analysis": "Target selector has type<1> (Divina filter), restricting the 40% ATK buff to the 2 highest-ATK Divina allies only. Description says \"2 allies with the highest ATK\" with no attribute restriction. Any non-Divina card is skipped even if they have higher ATK.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-05",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "not_contains",
+        "value": "type<1>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "Divina"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-05"
+    },
+    {
+      "id": "BUG-059",
+      "card_id": 1529,
+      "card_name": "Ohina",
+      "affected_field": "ability",
+      "affected_id": "152902",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Ability restricts to Anima allies only, description says all allies",
+      "details": {
+        "description_says": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+        "target_string": "self;type<3>;count<5>",
+        "expected": "self;count<5>",
+        "extra": "type<3>",
+        "note": "Card is Anima itself. On a mono-Anima team the bug is invisible; mixed teams lose the buff for non-Anima members."
+      },
+      "analysis": "Target selector has type<3> (Anima filter) with count<5>, but description claims \"all allies\" with no attribute restriction. On a mixed team, only Anima cards receive the Crit DMG buff each wave.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-05",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "not_contains",
+        "value": "type<3>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "Anima"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-05"
+    },
+    {
+      "id": "BUG-060",
+      "card_id": 1532,
+      "card_name": "Paper Lantern Hana",
+      "affected_field": "ability",
+      "affected_id": "153201",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Description says Anima allies but ts targets Divina allies (type<1> vs type<3>)",
+      "details": {
+        "description_says": "Increases 24% of skill DMG of all anima allies at the start of the final wave.(only take effect once to the team)",
+        "target_string": "self;type<1>;count<5>",
+        "expected": "self;type<3>;count<5>",
+        "wrong_value": "type<1>",
+        "correct_value": "type<3>",
+        "note": "Card is Anima (attr=3). Either the ts has the wrong attribute ID (should be type<3>) or the description is wrong (should say Divina)."
+      },
+      "analysis": "Description explicitly says \"all anima allies\" but ts field has type<1> (Divina filter). Paper Lantern Hana is Anima herself. On an Anima team the buff does nothing at all; it only works if Divina cards are present.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-05",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "contains",
+        "value": "type<3>"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "anima"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-05"
     }
   ],
   "categories": {
