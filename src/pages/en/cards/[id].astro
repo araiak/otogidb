@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { formatDescription, formatNumber, formatDate, formatSkillDescription, parseValue } from '../../../lib/formatters';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription, parseValue, parseDelay } from '../../../lib/formatters';
 import { MLB_MAX_LEVELS, computeMlbStats } from '../../../lib/lb';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
@@ -174,6 +174,9 @@ const mlbLevel = MLB_MAX_LEVELS[card.stats.rarity] ?? lb0Level;
 const lb0SkillValue = skillData?.ie ? parseValue(skillData.ie, lb0Level) : null;
 const mlbSkillValue = skillData?.ie ? parseValue(skillData.ie, mlbLevel) : null;
 const showSkillRange = lb0SkillValue && mlbSkillValue && lb0SkillValue !== mlbSkillValue;
+const lb0DelayValue = skillData?.de ? parseDelay(skillData.de, lb0Level) : null;
+const mlbDelayValue = skillData?.de ? parseDelay(skillData.de, mlbLevel) : null;
+const showDelayRange = lb0DelayValue && mlbDelayValue && lb0DelayValue !== mlbDelayValue;
 
 // Get blog posts that mention this card
 const relatedGuides = cardMentions[card.id] || [];
@@ -609,6 +612,11 @@ const jsonLd = {
             {showSkillRange && (
               <div class="text-xs text-secondary mb-2">
                 Skill value: {lb0SkillValue} <span class="text-secondary">(LB0)</span> → {mlbSkillValue} <span class="text-secondary">(MLB)</span>
+              </div>
+            )}
+            {showDelayRange && (
+              <div class="text-xs text-secondary mb-2">
+                Effect value: {lb0DelayValue} <span class="text-secondary">(LB0)</span> → {mlbDelayValue} <span class="text-secondary">(MLB)</span>
               </div>
             )}
             {card.skill.tags && card.skill.tags.length > 0 && (
