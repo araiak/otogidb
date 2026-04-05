@@ -459,6 +459,7 @@ export function WorldBossViewer() {
 
   // Load data on mount
   useEffect(() => {
+    let cancelled = false;
     async function loadData() {
       try {
         const [settingsRes, skillsRes, levelsRes] = await Promise.all([
@@ -477,6 +478,7 @@ export function WorldBossViewer() {
           levelsRes.json(),
         ]);
 
+        if (cancelled) return;
         setSettings(settingsData);
         setRawSkills(skillsData);
         setRawLevels(levelsData);
@@ -489,12 +491,14 @@ export function WorldBossViewer() {
 
         setLoading(false);
       } catch (err) {
+        if (cancelled) return;
         setError(err instanceof Error ? err.message : 'Unknown error');
         setLoading(false);
       }
     }
 
     loadData();
+    return () => { cancelled = true; };
   }, []);
 
   // Parse bosses

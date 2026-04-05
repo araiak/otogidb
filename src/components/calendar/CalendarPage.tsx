@@ -35,6 +35,7 @@ export default function CalendarPage({ data }: CalendarPageProps) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let cancelled = false;
     const locale = detectLocale();
     async function loadData() {
       try {
@@ -42,15 +43,17 @@ export default function CalendarPage({ data }: CalendarPageProps) {
           getCardsData({ locale: locale as CardLocale }),
           getSkillsData(),
         ]);
+        if (cancelled) return;
         setCards(cardsResult.cards);
         setSkills(skillsResult.skills || {});
       } catch (err) {
         console.error('[CalendarPage] Failed to load card data:', err);
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     }
     loadData();
+    return () => { cancelled = true; };
   }, []);
 
   return (
