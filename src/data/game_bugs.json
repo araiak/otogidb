@@ -1,6 +1,6 @@
 {
   "version": "1.6.0",
-  "last_updated": "2026-03-30",
+  "last_updated": "2026-04-05",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -2228,6 +2228,40 @@
         }
       ],
       "last_checked": "2026-03-30"
+    },
+    {
+      "id": "BUG-057",
+      "card_id": 1578,
+      "card_name": "Classic Alice",
+      "affected_field": "ability",
+      "affected_id": "157801",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Classic Idol restricts to Melee allies only, not all allies",
+      "details": {
+        "description_says": "Increases 45% of DMG dealt by the 2 allies with the highest ATK.",
+        "target_string": "self;type<1>;count<2>;max_atk",
+        "expected": "self;count<2>;max_atk",
+        "extra": "type<1>",
+        "reference_card": "Raphael #672 (ability 67202: self;count<2>;max_atk, ATK<40.00%,0%>) has identical description with no type restriction"
+      },
+      "analysis": "Target selector contains type<1> (Melee filter), restricting the buff to the 2 highest-ATK Melee allies only. Description says \"2 allies with the highest ATK\" with no type restriction. Raphael #672 has an equivalent ability without type<1> and works correctly. Any non-Melee card (Ranged/Healer/Assist) is skipped even if they have higher ATK.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-04-05",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "not_contains",
+        "value": "type<1>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "Melee"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-05"
     }
   ],
   "categories": {

@@ -38,6 +38,11 @@ const cardsCacheByLocale: Record<string, CardsData | null> = {};
 const fullCardsCacheByLocale: Record<string, FullCardsData | null> = {};
 let skillsCache: SkillsData | null = null;
 
+// In-flight promise deduplication: concurrent callers share one request instead of each triggering their own
+const cardsInflight: Partial<Record<string, Promise<CardsData>>> = {};
+const fullCardsInflight: Partial<Record<string, Promise<FullCardsData>>> = {};
+let skillsInflight: Promise<SkillsData> | null = null;
+
 // Max age for cached data (6 hours - auction data updates daily at 4pm JST)
 const CACHE_MAX_AGE = 6 * 60 * 60 * 1000;
 
@@ -106,14 +111,28 @@ export async function getCardsSkeleton(
  * 4. If fetch fails, try to return stale cached data
  * 5. If no cache available, throw error
  */
-export async function getCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<CardsData> {
+export function getCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<CardsData> {
   const locale = options.locale || 'en';
-  const cacheKey = locale;
 
   // Check in-memory cache first (fastest)
-  if (cardsCacheByLocale[cacheKey] && !options.forceRefresh) {
-    return cardsCacheByLocale[cacheKey]!;
+  if (cardsCacheByLocale[locale] && !options.forceRefresh) {
+    return Promise.resolve(cardsCacheByLocale[locale]!);
   }
+
+  // Deduplicate concurrent requests: return existing in-flight promise if one is already running
+  if (!options.forceRefresh && cardsInflight[locale]) {
+    return cardsInflight[locale];
+  }
+
+  cardsInflight[locale] = fetchCardsData(options).finally(() => {
+    delete cardsInflight[locale];
+  });
+  return cardsInflight[locale];
+}
+
+async function fetchCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<CardsData> {
+  const locale = options.locale || 'en';
+  const cacheKey = locale;
 
   let cardsData: CardsData | null = null;
   const dataPath = getDataPath('cards_index.json', locale);
@@ -270,32 +289,55 @@ async function tryGetStaleCachedData(url: string): Promise<CardsData | null> {
 /**
  * Load full cards data (for calculator - includes all card details)
  */
-export async function getFullCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<FullCardsData> {
+export function getFullCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<FullCardsData> {
   const locale = options.locale || 'en';
-  const cacheKey = locale;
 
-  if (fullCardsCacheByLocale[cacheKey] && !options.forceRefresh) {
-    return fullCardsCacheByLocale[cacheKey]!;
+  if (fullCardsCacheByLocale[locale] && !options.forceRefresh) {
+    return Promise.resolve(fullCardsCacheByLocale[locale]!);
   }
+
+  if (!options.forceRefresh && fullCardsInflight[locale]) {
+    return fullCardsInflight[locale];
+  }
+
+  fullCardsInflight[locale] = fetchFullCardsData(options).finally(() => {
+    delete fullCardsInflight[locale];
+  });
+  return fullCardsInflight[locale];
+}
+
+async function fetchFullCardsData(options: { forceRefresh?: boolean; locale?: CardLocale } = {}): Promise<FullCardsData> {
+  const locale = options.locale || 'en';
 
   // Load full cards.json
   const dataPath = locale === 'en' ? '/data/cards.json' : `/data/${locale}/cards.json`;
-  fullCardsCacheByLocale[cacheKey] = await fetchWithCache<FullCardsData>(dataPath, {
+  fullCardsCacheByLocale[locale] = await fetchWithCache<FullCardsData>(dataPath, {
     forceRefresh: options.forceRefresh,
     maxAge: CACHE_MAX_AGE
   });
 
-  return fullCardsCacheByLocale[cacheKey]!;
+  return fullCardsCacheByLocale[locale]!;
 }
 
 /**
  * Load skills data
  */
-export async function getSkillsData(options: { forceRefresh?: boolean } = {}): Promise<SkillsData> {
+export function getSkillsData(options: { forceRefresh?: boolean } = {}): Promise<SkillsData> {
   if (skillsCache && !options.forceRefresh) {
-    return skillsCache;
+    return Promise.resolve(skillsCache);
   }
 
+  if (!options.forceRefresh && skillsInflight) {
+    return skillsInflight;
+  }
+
+  skillsInflight = fetchSkillsData(options).finally(() => {
+    skillsInflight = null;
+  });
+  return skillsInflight;
+}
+
+async function fetchSkillsData(options: { forceRefresh?: boolean } = {}): Promise<SkillsData> {
   skillsCache = await fetchWithCache<SkillsData>('/data/skills.json', {
     forceRefresh: options.forceRefresh,
     maxAge: CACHE_MAX_AGE

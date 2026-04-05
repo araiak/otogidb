@@ -403,6 +403,7 @@ export function DamageCalculator() {
   const [cards, setCards] = useState<Card[]>([]);
   const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
   const [isDev, setIsDev] = useState(false);
 
   // Build state
@@ -442,14 +443,23 @@ export function DamageCalculator() {
 
   // Load cards (skill data is embedded in cards via card.skill.parsed)
   useEffect(() => {
+    let cancelled = false;
     setIsDev(isDevEnvironment());
-    getFullCardsData().then((cardsData) => {
-      const playableCards = Object.values(cardsData.cards)
-        .filter(c => c.playable && c.stats.rarity >= 3)
-        .sort((a, b) => parseInt(b.id) - parseInt(a.id)); // Newest first
-      setCards(playableCards);
-      setLoading(false);
-    });
+    getFullCardsData()
+      .then((cardsData) => {
+        if (cancelled) return;
+        const playableCards = Object.values(cardsData.cards)
+          .filter(c => c.playable && c.stats.rarity >= 3)
+          .sort((a, b) => parseInt(b.id) - parseInt(a.id)); // Newest first
+        setCards(playableCards);
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (cancelled) return;
+        setLoadError(err instanceof Error ? err.message : 'Failed to load cards');
+        setLoading(false);
+      });
+    return () => { cancelled = true; };
   }, []);
 
   // Get selected card
@@ -563,6 +573,14 @@ export function DamageCalculator() {
         <p className="text-secondary">
           This feature is currently in development and only available on localhost.
         </p>
+      </div>
+    );
+  }
+
+  if (loadError) {
+    return (
+      <div className="bg-surface border border-border rounded-lg p-8 text-center">
+        <div className="text-red-400">Failed to load cards: {loadError}</div>
       </div>
     );
   }
