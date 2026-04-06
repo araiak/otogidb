@@ -2377,6 +2377,72 @@
       },
       "check_history": [],
       "last_checked": "2026-04-05"
+    },
+    {
+      "id": "BUG-061",
+      "card_id": 511,
+      "card_name": "Sun Wukong",
+      "affected_field": "ability",
+      "affected_id": "51101",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Description says stun activates when HP is 1/2 or below, but no HPP_IN condition in data — stun fires unconditionally",
+      "details": {
+        "description_says": "Normal attacks have 60% chances of inflicting stun when HP is 1/2 or below.",
+        "de_field": "HIT<60.00%,0%>;STUN<1>",
+        "expected_prefix": "HPP_IN<0.00%,50.00%>",
+        "note": "The HP ≤ 50% condition described does not exist in data. STUN fires on every normal attack with 60% chance regardless of HP."
+      },
+      "analysis": "Description explicitly conditions the stun on HP being at 1/2 or below, but the de field has no HPP_IN<> prefix. The effect is always active, giving Sun Wukong an unconditional 60% stun on normal attacks — stronger than described.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-06",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "HPP_IN"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "when HP is 1/2 or below"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-06"
+    },
+    {
+      "id": "BUG-062",
+      "card_id": 115,
+      "card_name": "Kraken",
+      "affected_field": "ability",
+      "affected_id": "11501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Description claims both soulstone boost (+5%) and drop rate boost (+3%), but data only implements COIN (soulstones) — ITEM effect is missing",
+      "details": {
+        "description_says": "Increases 5% of the number of soulstones received from battle and 3% of battle reward drop rate.",
+        "de_field": "COIN<5.00%,0%>",
+        "missing_effect": "ITEM<3.00%,0%>",
+        "note": "de only contains COIN (soulstone boost). No ITEM effect present. The 3% drop rate boost is described but not implemented."
+      },
+      "analysis": "The description advertises two separate bonuses but the de field only applies the soulstone (COIN) effect. The drop rate (ITEM) effect is absent from data entirely. This may be an incomplete implementation or a copy-paste error in the description.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-06",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "ITEM"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "drop rate"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-06"
     }
   ],
   "categories": {
