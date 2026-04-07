@@ -187,9 +187,10 @@
         "data_percentages": [
           5.0
         ],
-        "missing_effect": "ITEM<3.00%,0%>"
+        "missing_effect": "ITEM<3.00%,0%>",
+        "note": "de only contains COIN (soulstone boost). No ITEM effect present. The 3% drop rate boost is described but not implemented."
       },
-      "analysis": "Description mentions two effects (5% soulstones, 3% drop rate) but data only contains the soulstone bonus. The drop rate effect (ITEM) appears to be missing entirely.",
+      "analysis": "Description mentions two effects (5% soulstones, 3% drop rate) but data only contains the soulstone bonus. The drop rate effect (ITEM) appears to be missing entirely — may be an incomplete implementation or a copy-paste error in the description.",
       "affects_gameplay": true,
       "visual_only": false,
       "source": "automated",
@@ -204,12 +205,16 @@
         "condition": "not_contains",
         "value": "drop rate"
       },
-      "last_checked": "2026-04-05",
+      "last_checked": "2026-04-06",
       "check_history": [
         {
           "date": "2026-03-09",
           "status": "persists",
           "game_version": "b94014d"
+        },
+        {
+          "date": "2026-04-06",
+          "status": "persists"
         }
       ]
     },
@@ -2377,7 +2382,40 @@
       },
       "check_history": [],
       "last_checked": "2026-04-05"
-    }
+    },
+    {
+      "id": "BUG-061",
+      "card_id": 511,
+      "card_name": "Sun Wukong",
+      "affected_field": "ability",
+      "affected_id": "51101",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Description says stun activates when HP is 1/2 or below, but no HPP_IN condition in data — stun fires unconditionally",
+      "details": {
+        "description_says": "Normal attacks have 60% chances of inflicting stun when HP is 1/2 or below.",
+        "de_field": "HIT<60.00%,0%>;STUN<1>",
+        "expected_prefix": "HPP_IN<0.00%,50.00%>",
+        "note": "The HP ≤ 50% condition described does not exist in data. STUN fires on every normal attack with 60% chance regardless of HP."
+      },
+      "analysis": "Description explicitly conditions the stun on HP being at 1/2 or below, but the de field has no HPP_IN<> prefix. The effect is always active, giving Sun Wukong an unconditional 60% stun on normal attacks — stronger than described.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-06",
+      "resolution_check": {
+        "field": "de",
+        "condition": "contains",
+        "value": "HPP_IN"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "when HP is 1/2 or below"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-06"
+    },
   ],
   "categories": {
     "targeting": "Issues with ability/skill target selection",
