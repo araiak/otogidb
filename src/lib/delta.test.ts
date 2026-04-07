@@ -239,6 +239,54 @@ describe('tryDeltaUpdate', () => {
     expect(result).toBeNull();
   });
 
+  it('returns null when applied delta produces wrong data_hash (integrity check)', async () => {
+    const v1Data = makeCardsData('v1', 'hash1');
+    const manifest = {
+      data_hash: 'hash2', version: 'v2', generated_at: '2026-01-01T00:00:00', files: {},
+      delta: {
+        current_version: 'hash2', oldest_supported_version: null,
+        available_deltas: [
+          { from_version: 'hash1', to_version: 'hash2', file: '/data/delta/h1_to_h2.json', size_bytes: 50, operations: 1 },
+        ],
+      },
+    };
+    const corruptDelta = {
+      from_version: 'hash1', to_version: 'hash2', generated_at: '2026-01-01T00:00:00',
+      patch: [{ op: 'replace', path: '/data_hash', value: 'wrong_hash' }],
+      stats: { total_operations: 1, add_operations: 0, remove_operations: 0, replace_operations: 1 },
+    };
+    global.fetch = vi.fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => manifest } as any)
+      .mockResolvedValueOnce({ ok: true, json: async () => corruptDelta } as any);
+
+    const result = await tryDeltaUpdate(v1Data, 'hash2');
+    expect(result).toBeNull(); // 'wrong_hash' !== 'hash2'
+  });
+
+  it('returns null when delta does not update data_hash (missing op)', async () => {
+    const v1Data = makeCardsData('v1', 'hash1');
+    const manifest = {
+      data_hash: 'hash2', version: 'v2', generated_at: '2026-01-01T00:00:00', files: {},
+      delta: {
+        current_version: 'hash2', oldest_supported_version: null,
+        available_deltas: [
+          { from_version: 'hash1', to_version: 'hash2', file: '/data/delta/h1_to_h2.json', size_bytes: 50, operations: 1 },
+        ],
+      },
+    };
+    const incompleteDelta = {
+      from_version: 'hash1', to_version: 'hash2', generated_at: '2026-01-01T00:00:00',
+      patch: [{ op: 'replace', path: '/version', value: 'v2' }], // /data_hash not updated
+      stats: { total_operations: 1, add_operations: 0, remove_operations: 0, replace_operations: 1 },
+    };
+    global.fetch = vi.fn()
+      .mockResolvedValueOnce({ ok: true, json: async () => manifest } as any)
+      .mockResolvedValueOnce({ ok: true, json: async () => incompleteDelta } as any);
+
+    const result = await tryDeltaUpdate(v1Data, 'hash2');
+    expect(result).toBeNull(); // data_hash still 'hash1', expected 'hash2'
+  });
+
   it('returns null when cachedData has no version info', async () => {
     const noVersionData = {
       version: undefined,
