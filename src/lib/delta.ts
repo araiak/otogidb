@@ -261,6 +261,20 @@ export async function tryDeltaUpdate(
   }
 
   console.log(`[Delta] ✓ Updated to version ${targetVersion} via ${chain.length}-hop chain`);
+
+  // Integrity check: the applied chain must produce the expected data_hash.
+  // Every delta includes an op that sets /data_hash to to_version — if the
+  // result doesn't match, something went wrong (partial apply, corrupt cache, etc).
+  const finalHash = workingData.data_hash ?? workingData.version;
+  if (finalHash !== targetVersion) {
+    logger.error('Delta', 'Integrity check failed: hash mismatch after chain', {
+      expected: targetVersion,
+      actual: finalHash,
+      hops: chain.length,
+    });
+    return null; // Force full fetch
+  }
+
   return workingData;
 }
 
