@@ -2263,7 +2263,7 @@
       },
       "description_check": {
         "condition": "contains",
-        "value": "Divina"
+        "value": "divina"
       },
       "check_history": [
         {
@@ -2305,7 +2305,7 @@
       "affects_gameplay": true,
       "visual_only": false,
       "source": "automated",
-      "status": "open",
+      "status": "fixed",
       "first_detected": "2026-04-05",
       "resolution_check": {
         "field": "ts",
@@ -2314,16 +2314,23 @@
       },
       "description_check": {
         "condition": "contains",
-        "value": "Divina"
+        "value": "divina"
       },
       "check_history": [
         {
           "date": "2026-04-09",
           "status": "persists",
           "game_version": "fdaa466"
+        },
+        {
+          "date": "2026-04-09",
+          "status": "fixed",
+          "game_version": "fdaa466",
+          "note": "Description updated to say \"divina allies\" — description_check missed due to case sensitivity (\"Divina\" vs \"divina\")"
         }
       ],
-      "last_checked": "2026-04-09"
+      "last_checked": "2026-04-09",
+      "fixed_in_version": "fdaa466"
     },
     {
       "id": "BUG-059",
