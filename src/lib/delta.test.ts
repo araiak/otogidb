@@ -285,6 +285,9 @@ describe('tryDeltaUpdate', () => {
 
     const result = await tryDeltaUpdate(v1Data, 'hash2');
     expect(result).toBeNull(); // data_hash still 'hash1', expected 'hash2'
+    expect(vi.mocked(global.fetch)).toHaveBeenCalledTimes(2);
+    expect(vi.mocked(global.fetch)).toHaveBeenNthCalledWith(1, '/data/manifest.json', expect.any(Object));
+    expect(vi.mocked(global.fetch)).toHaveBeenNthCalledWith(2, '/data/delta/hash1_to_hash2.json', expect.any(Object));
   });
 
   it('returns null when cachedData has no version info', async () => {
