@@ -8,7 +8,7 @@ tags: ["analysis", "auction", "gacha"]
 
 <div data-lang="en">
 
-April auction is Greatest Show On Earth. We're also expecting a special treat — a 2nd anniversary rerun alongside it.
+April auction is Greatest Show On Earth. Our re-run predictions have missed so far this year — though we weren't alone, a few other community members had the same picks. With that in mind, we're still calling our shot: we're expecting a special treat this month — a 2nd anniversary rerun alongside it.
 
 ---
 
@@ -87,7 +87,7 @@ Second Anniversary Rerun:
 
 <div data-lang="ja">
 
-4月のオークションはグレーテスト・ショー・オン・アースです。さらに特別なおまけとして、2周年記念の復刻も予想されています。
+4月のオークションはグレーテスト・ショー・オン・アースです。今年の復刻予想はここまで外れ続けていますが、同じ予想をしていたコミュニティメンバーも少なくありませんでした。それでも今月も予想に挑みます——特別なおまけとして、2周年記念の復刻も期待しています。
 
 ---
 
