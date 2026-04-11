@@ -44,9 +44,9 @@ April auction is Greatest Show On Earth. Our re-run predictions have missed so f
 
 :card[553] is the best Divina carry and worth having on his own merits. The numbers — 25% damage to 2 targets and 25% crit damage to 2 targets — look modest individually, but combined they're competitive with the best carry-support abilities in the game: not far behind :card[1321]'s 40% damage to 2 or :card[1578]'s 45% damage to 2. Unlike either of those, he isn't attribute-locked — he can buff :card[1401] effectively, where they cannot. A strong skill and high ATK on top of that means he'll remain a worthy teammate even alongside a stronger carry in the future.
 
-The longer view for Divina: what the attribute genuinely needs to compete again is a passive crit rate carry, which 553 isn't. He and :card[1311] fill the same role — both are Divina damage-amp carries. When a passive crit carry does eventually arrive, both could fit into a lineup alongside it, and 553 would be the better pairing of the two — he can buff that card directly, whereas :card[1311]'s skill damage is self-only.
+The longer view for Divina: what the attribute genuinely needs to compete again is a passive crit rate carry, which :card[553] isn't. He and :card[1311] fill the same role — both are Divina damage-amp carries. When a passive crit carry does eventually arrive, both could fit into a lineup alongside it, and :card[553] would be the better pairing of the two — he can buff that card directly, whereas :card[1311]'s skill damage is self-only.
 
-For now, most Divina players will want this card — it's the best available option. The longer-term decision: if you don't want to commit to 553 this month, target :card[1311] next month and hold invokers for a future crit carry. If you pick up 553, 1311 becomes more optional — your carry slot is covered. **Strong buy for Divina players. If skipping, target :card[1311] next month and save invokers for a passive crit carry.**
+For now, most Divina players will want this card — it's the best available option. The longer-term decision: if you don't want to commit to :card[553] this month, target :card[1311] next month and hold invokers for a future crit carry. If you pick up :card[553], :card[1311] becomes more optional — your carry slot is covered. **Strong buy for Divina players. If skipping, target :card[1311] next month and save invokers for a passive crit carry.**
 
 ---
 
@@ -123,9 +123,9 @@ Second Anniversary Rerun:
 
 :card[553]は最良のDivinaキャリーであり、単体でも十分価値のあるカードです。2ターゲットへの25%ダメージと25%クリティカルダメージは個別に見ると地味に映りますが、合わせて考えると:card[1321]の2ターゲット40%ダメージや:card[1578]の2ターゲット45%ダメージと大きく離れていない、ゲームトップクラスのキャリーサポート能力です。さらに、この2枚と異なり属性を問わず使えるため、:card[1401]のバフにも有効で、他の2枚にはできないことです。強力なスキルと高いATKも合わさって、将来より強いキャリーが登場しても、そのチームメイトとして十分な働きが期待できます。
 
-Divinaの長期的な展望として、属性が本当に必要なのはパッシブクリ率持ちのキャリーで、それがあれば再び競争力を取り戻せます。553はその役割を担えるカードではありませんし、:card[1311]も同様です。この2枚は同じポジション——Divinaダメージ増幅キャリー——を争うライバル関係にあります。将来パッシブクリ率キャリーが登場した際には、両方がそのラインナップに入り得ますが、553の方がより良い組み合わせです——553はそのカードを直接バフできるのに対し、:card[1311]のスキルダメージは自己強化のみだからです。
+Divinaの長期的な展望として、属性が本当に必要なのはパッシブクリ率持ちのキャリーで、それがあれば再び競争力を取り戻せます。:card[553]はその役割を担えるカードではありませんし、:card[1311]も同様です。この2枚は同じポジション——Divinaダメージ増幅キャリー——を争うライバル関係にあります。将来パッシブクリ率キャリーが登場した際には、両方がそのラインナップに入り得ますが、:card[553]の方がより良い組み合わせです——:card[553]はそのカードを直接バフできるのに対し、:card[1311]のスキルダメージは自己強化のみだからです。
 
-現状では、ほとんどのDivinaプレイヤーにとって最良の選択肢であり、手に入れる価値があります。長期的な観点での判断材料として：553にお金をかけたくなければ、来月:card[1311]を狙い、将来のクリ率キャリーのためにインヴォーカーを温存するのが賢い動きです。553を買えば:card[1311]の優先度は下がります——キャリー枠はすでに埋まっているため、より余裕を持って次を待てます。**Divinaプレイヤーに強くおすすめ。スキップするなら来月:card[1311]を狙い、パッシブクリ率キャリーのためにインヴォーカーを確保。**
+現状では、ほとんどのDivinaプレイヤーにとって最良の選択肢であり、手に入れる価値があります。長期的な観点での判断材料として：:card[553]にお金をかけたくなければ、来月:card[1311]を狙い、将来のクリ率キャリーのためにインヴォーカーを温存するのが賢い動きです。:card[553]を買えば:card[1311]の優先度は下がります——キャリー枠はすでに埋まっているため、より余裕を持って次を待てます。**Divinaプレイヤーに強くおすすめ。スキップするなら来月:card[1311]を狙い、パッシブクリ率キャリーのためにインヴォーカーを確保。**
 
 ---
 
