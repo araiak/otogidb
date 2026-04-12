@@ -19,6 +19,7 @@ import {
   buildTiers,
   buildChartData,
   buildTrendData,
+  buildNextEventPredictions,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -178,6 +179,11 @@ function RankingSubChart({
     [chartData, trendData],
   );
 
+  const nextEventPredictions = useMemo(
+    () => buildNextEventPredictions(chartData, tiers),
+    [chartData, tiers],
+  );
+
   const activeTierList = tiers.filter(t => activeTiers.has(t.key));
 
   const toggleTier = (key: string) => {
@@ -314,9 +320,26 @@ function RankingSubChart({
                 </tr>
               );
             })}
+            <tr className="border-t-2 border-surface bg-surface/20">
+              <td className="py-2 pr-4 whitespace-nowrap font-medium">
+                Next Event*
+              </td>
+              {tiers.map(tier => {
+                const predicted = nextEventPredictions[tier.key];
+                return (
+                  <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums text-secondary italic">
+                    {predicted != null ? formatScore(predicted) : <span className="opacity-50">—</span>}
+                  </td>
+                );
+              })}
+              <td className="text-right py-2 pl-3 text-secondary">—</td>
+            </tr>
           </tbody>
         </table>
       </div>
+      <p className="text-xs text-secondary mt-2 leading-relaxed">
+        * Trend-line estimate only — for rough planning reference. Actual cutoffs depend heavily on the strength of the cards being offered that event, which can shift scores significantly above or below this projection.
+      </p>
     </div>
   );
 }
