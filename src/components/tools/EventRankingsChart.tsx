@@ -19,6 +19,7 @@ import {
   buildTiers,
   buildChartData,
   buildTrendData,
+  buildNextEventPredictions,
   buildNextEventPredictionRanges,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
@@ -184,6 +185,17 @@ function RankingSubChart({
     [chartData, tiers],
   );
 
+  const nextEventLinear = useMemo(
+    () => buildNextEventPredictions(chartData, tiers),
+    [chartData, tiers],
+  );
+
+  // Footnote mode: does any tier use range (≥3 pts) or linear fallback (2 pts)?
+  const hasRangePrediction = tiers.some(t => nextEventPredictions[t.key] != null);
+  const hasLinearPrediction = tiers.some(
+    t => nextEventPredictions[t.key] == null && nextEventLinear[t.key] != null,
+  );
+
   const activeTierList = tiers.filter(t => activeTiers.has(t.key));
 
   const toggleTier = (key: string) => {
@@ -326,11 +338,16 @@ function RankingSubChart({
               </td>
               {tiers.map(tier => {
                 const range = nextEventPredictions[tier.key];
+                const linear = nextEventLinear[tier.key];
                 return (
                   <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums text-secondary italic">
                     {range != null ? (
                       <span title={`±1 std dev over ${range.n} events (σ = ${formatScore(range.stdDev)})`}>
                         {formatScore(range.low)}–{formatScore(range.high)}
+                      </span>
+                    ) : linear != null ? (
+                      <span title="Linear trend projection from 2 data points">
+                        ~{formatScore(linear)}
                       </span>
                     ) : (
                       <span className="opacity-50">—</span>
@@ -343,9 +360,15 @@ function RankingSubChart({
           </tbody>
         </table>
       </div>
-      <p className="text-xs text-secondary mt-2 leading-relaxed">
-        * Predicted range is trend-line ± one standard deviation of historical residuals — for rough planning reference. With a small pool of events, the range may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.
-      </p>
+      {(hasLinearPrediction || hasRangePrediction) && (
+        <p className="text-xs text-secondary mt-2 leading-relaxed">
+          {hasLinearPrediction && !hasRangePrediction
+            ? '* Linear trend projection from 2 data points — treat as a rough extrapolation only. Range estimate will appear once a 3rd event is recorded.'
+            : hasRangePrediction && !hasLinearPrediction
+              ? '* Predicted range is trend-line ± one standard deviation of historical residuals — for rough planning reference. With a small pool of events, the range may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.'
+              : '* Values prefixed ~ are linear trend projections (2 data points). Range estimates (low–high) use trend-line ± one standard deviation of historical residuals. Both are for rough planning reference only.'}
+        </p>
+      )}
     </div>
   );
 }
