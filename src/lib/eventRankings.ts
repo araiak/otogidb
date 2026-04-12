@@ -135,3 +135,95 @@ export function buildTrendData(
     return trendRow;
   });
 }
+
+// --- Next-event predictions ---
+
+/**
+ * Extrapolate the trend line one step beyond the last data point to predict
+ * the cutoff score for the next event. Returns null for a tier if there are
+ * fewer than 2 data points or if the predicted value is non-positive.
+ */
+export function buildNextEventPredictions(
+  chartData: Record<string, string | number>[],
+  tiers: Tier[],
+): Record<string, number | null> {
+  const nextIdx = chartData.length;
+  const predictions: Record<string, number | null> = {};
+  for (const tier of tiers) {
+    const points = chartData
+      .map((r, i) => ({ x: i, y: r[tier.key] as number }))
+      .filter(p => p.y != null && !isNaN(p.y));
+    const reg = linearRegression(points);
+    if (reg) {
+      const value = Math.round(reg.slope * nextIdx + reg.intercept);
+      predictions[tier.key] = value > 0 ? value : null;
+    } else {
+      predictions[tier.key] = null;
+    }
+  }
+  return predictions;
+}
+
+// --- Next-event prediction ranges ---
+
+export interface PredictionRange {
+  predicted: number;
+  low: number;
+  high: number;
+  /** Standard deviation of residuals from the trend line. */
+  stdDev: number;
+  /** Number of historical data points used. */
+  n: number;
+}
+
+/**
+ * Extrapolate the trend line one step ahead and express uncertainty as ±1
+ * standard deviation of the residuals from that trend line (using n−2 degrees
+ * of freedom, which is the standard error for a simple linear regression).
+ *
+ * Returns null for a tier when there are fewer than 3 data points (need at
+ * least n−2 = 1 degree of freedom) or if the predicted value is non-positive.
+ */
+export function buildNextEventPredictionRanges(
+  chartData: Record<string, string | number>[],
+  tiers: Tier[],
+): Record<string, PredictionRange | null> {
+  const nextIdx = chartData.length;
+  const ranges: Record<string, PredictionRange | null> = {};
+
+  for (const tier of tiers) {
+    const points = chartData
+      .map((r, i) => ({ x: i, y: r[tier.key] as number }))
+      .filter(p => p.y != null && !isNaN(p.y));
+
+    const reg = linearRegression(points);
+    if (!reg || points.length < 3) {
+      ranges[tier.key] = null;
+      continue;
+    }
+
+    const predicted = Math.round(reg.slope * nextIdx + reg.intercept);
+    if (predicted <= 0) {
+      ranges[tier.key] = null;
+      continue;
+    }
+
+    // Residual standard deviation (n−2 degrees of freedom for linear regression)
+    const n = points.length;
+    const sumSqResiduals = points.reduce((sum, p) => {
+      const fitted = reg.slope * p.x + reg.intercept;
+      return sum + (p.y - fitted) ** 2;
+    }, 0);
+    const stdDev = Math.sqrt(sumSqResiduals / (n - 2));
+
+    ranges[tier.key] = {
+      predicted,
+      low: Math.max(1, Math.round(predicted - stdDev)),
+      high: Math.round(predicted + stdDev),
+      stdDev: Math.round(stdDev),
+      n,
+    };
+  }
+
+  return ranges;
+}

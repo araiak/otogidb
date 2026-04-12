@@ -19,6 +19,7 @@ import {
   buildTiers,
   buildChartData,
   buildTrendData,
+  buildNextEventPredictionRanges,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -178,6 +179,11 @@ function RankingSubChart({
     [chartData, trendData],
   );
 
+  const nextEventPredictions = useMemo(
+    () => buildNextEventPredictionRanges(chartData, tiers),
+    [chartData, tiers],
+  );
+
   const activeTierList = tiers.filter(t => activeTiers.has(t.key));
 
   const toggleTier = (key: string) => {
@@ -314,9 +320,32 @@ function RankingSubChart({
                 </tr>
               );
             })}
+            <tr className="border-t-2 border-surface bg-surface/20">
+              <td className="py-2 pr-4 whitespace-nowrap font-medium">
+                Next Event*
+              </td>
+              {tiers.map(tier => {
+                const range = nextEventPredictions[tier.key];
+                return (
+                  <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums text-secondary italic">
+                    {range != null ? (
+                      <span title={`±1 std dev over ${range.n} events (σ = ${formatScore(range.stdDev)})`}>
+                        {formatScore(range.low)}–{formatScore(range.high)}
+                      </span>
+                    ) : (
+                      <span className="opacity-50">—</span>
+                    )}
+                  </td>
+                );
+              })}
+              <td className="text-right py-2 pl-3 text-secondary">—</td>
+            </tr>
           </tbody>
         </table>
       </div>
+      <p className="text-xs text-secondary mt-2 leading-relaxed">
+        * Predicted range is trend-line ± one standard deviation of historical residuals — for rough planning reference. With a small pool of events, the range may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.
+      </p>
     </div>
   );
 }
