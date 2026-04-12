@@ -135,3 +135,31 @@ export function buildTrendData(
     return trendRow;
   });
 }
+
+// --- Next-event predictions ---
+
+/**
+ * Extrapolate the trend line one step beyond the last data point to predict
+ * the cutoff score for the next event. Returns null for a tier if there are
+ * fewer than 2 data points or if the predicted value is non-positive.
+ */
+export function buildNextEventPredictions(
+  chartData: Record<string, string | number>[],
+  tiers: Tier[],
+): Record<string, number | null> {
+  const nextIdx = chartData.length;
+  const predictions: Record<string, number | null> = {};
+  for (const tier of tiers) {
+    const points = chartData
+      .map((r, i) => ({ x: i, y: r[tier.key] as number }))
+      .filter(p => p.y != null && !isNaN(p.y));
+    const reg = linearRegression(points);
+    if (reg) {
+      const value = Math.round(reg.slope * nextIdx + reg.intercept);
+      predictions[tier.key] = value > 0 ? value : null;
+    } else {
+      predictions[tier.key] = null;
+    }
+  }
+  return predictions;
+}
