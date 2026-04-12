@@ -19,7 +19,7 @@ import {
   buildTiers,
   buildChartData,
   buildTrendData,
-  buildNextEventPredictions,
+  buildNextEventPredictionRanges,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -180,7 +180,7 @@ function RankingSubChart({
   );
 
   const nextEventPredictions = useMemo(
-    () => buildNextEventPredictions(chartData, tiers),
+    () => buildNextEventPredictionRanges(chartData, tiers),
     [chartData, tiers],
   );
 
@@ -325,10 +325,16 @@ function RankingSubChart({
                 Next Event*
               </td>
               {tiers.map(tier => {
-                const predicted = nextEventPredictions[tier.key];
+                const range = nextEventPredictions[tier.key];
                 return (
                   <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums text-secondary italic">
-                    {predicted != null ? formatScore(predicted) : <span className="opacity-50">—</span>}
+                    {range != null ? (
+                      <span title={`±1 std dev over ${range.n} events (σ = ${formatScore(range.stdDev)})`}>
+                        {formatScore(range.low)}–{formatScore(range.high)}
+                      </span>
+                    ) : (
+                      <span className="opacity-50">—</span>
+                    )}
                   </td>
                 );
               })}
@@ -338,7 +344,7 @@ function RankingSubChart({
         </table>
       </div>
       <p className="text-xs text-secondary mt-2 leading-relaxed">
-        * Trend-line estimate only — for rough planning reference. Actual cutoffs depend heavily on the strength of the cards being offered that event, which can shift scores significantly above or below this projection.
+        * Predicted range is trend-line ± one standard deviation of historical residuals — for rough planning reference. With a small pool of events, the range may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.
       </p>
     </div>
   );
