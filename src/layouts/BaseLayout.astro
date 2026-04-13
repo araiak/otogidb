@@ -276,8 +276,8 @@ const MAINTENANCE_VERSION = "2026-04-14-maintenance";
           }
         } catch(e) {}
 
-        // Auto-hide after maintenance end: Apr 15, 2026 15:00 GMT+8 = 1744707600000 UTC
-        var MAINTENANCE_END = 1744707600000;
+        // Auto-hide after maintenance end: Apr 15, 2026 15:00 GMT+8 = 1776236400000 UTC
+        var MAINTENANCE_END = 1776236400000;
         if (Date.now() >= MAINTENANCE_END) {
           var b = document.getElementById('maintenance-banner');
           if (b) b.style.display = 'none';
