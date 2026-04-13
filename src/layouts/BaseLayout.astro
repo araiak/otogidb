@@ -119,8 +119,8 @@ const navLinks = {
 // Set MAINTENANCE_ENABLED = false to hide without deleting the config/messages.
 // Bump MAINTENANCE_VERSION (e.g. change the date/slug) to force the banner to
 // re-appear for users who previously dismissed it.
-const MAINTENANCE_ENABLED = false;
-const MAINTENANCE_VERSION = "2026-03-17-langs";
+const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_VERSION = "2026-04-14-maintenance";
 ---
 
 <!DOCTYPE html>
@@ -258,7 +258,7 @@ const MAINTENANCE_VERSION = "2026-03-17-langs";
       <div id="maintenance-banner" style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
         <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
           <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
-          <span id="maintenance-msg">We're experiencing some issues and are working on a fix. Languages are coming back soon!</span>
+          <span id="maintenance-msg">Game servers are down for maintenance (Apr 14, 15:00 – Apr 15, 15:00 GMT+8)</span>
           <button id="maintenance-close" aria-label="Dismiss" title="Dismiss" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:2px 6px;font-size:1.2rem;line-height:1;color:#92400e;flex-shrink:0;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
         </div>
       </div>
@@ -276,13 +276,29 @@ const MAINTENANCE_VERSION = "2026-03-17-langs";
           }
         } catch(e) {}
 
+        // Auto-hide after maintenance end: Apr 15, 2026 15:00 GMT+8 = 1744707600000 UTC
+        var MAINTENANCE_END = 1744707600000;
+        if (Date.now() >= MAINTENANCE_END) {
+          var b = document.getElementById('maintenance-banner');
+          if (b) b.style.display = 'none';
+          return;
+        }
+        // Schedule auto-hide at end time
+        var remaining = MAINTENANCE_END - Date.now();
+        if (remaining > 0) {
+          setTimeout(function() {
+            var b = document.getElementById('maintenance-banner');
+            if (b) b.style.display = 'none';
+          }, remaining);
+        }
+
         var msgs = {
-          en: "We're experiencing some issues and are working on a fix. Languages are coming back soon!",
-          ja: "現在問題が発生しており修正中です。多言語対応は近日中に復旧予定です。",
-          ko: "현재 문제가 발생하여 수정 중입니다. 언어 지원이 곧 복구됩니다.",
-          'zh-cn': "我们正在修复问题，多语言功能即将恢复。感谢您的耐心等待！",
-          'zh-tw': "我們正在修復問題，多語言功能即將恢復。感謝您的耐心等待！",
-          es: "Estamos solucionando algunos problemas. ¡Los idiomas volverán pronto!"
+          en: "Game servers are down for maintenance (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)",
+          ja: "ゲームサーバーはメンテナンス中です（4月14日 15:00 〜 4月15日 15:00 GMT+8）",
+          ko: "게임 서버가 점검 중입니다 (4월 14일 15:00 ~ 4월 15일 15:00 GMT+8)",
+          'zh-cn': "游戏服务器正在维护中（4月14日 15:00 至 4月15日 15:00 GMT+8）",
+          'zh-tw': "遊戲伺服器正在維護中（4月14日 15:00 至 4月15日 15:00 GMT+8）",
+          es: "Los servidores del juego están en mantenimiento (14 abr 15:00 – 15 abr 15:00 GMT+8)"
         };
         function setMsg(lang) {
           var el = document.getElementById('maintenance-msg');
