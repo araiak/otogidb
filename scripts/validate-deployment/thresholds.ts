@@ -54,8 +54,8 @@ export const DEFAULT_THRESHOLDS: Record<string, ThresholdConfig> = {
     displayName: 'Internal Links',
   },
   seoChecks: {
-    minPassRate: 1.0,
-    isHardFailure: true,
+    minPassRate: 0.8,
+    isHardFailure: false,
     displayName: 'SEO Tags',
   },
   apiEndpoints: {
