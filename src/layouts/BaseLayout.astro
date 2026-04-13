@@ -119,8 +119,8 @@ const navLinks = {
 // Set MAINTENANCE_ENABLED = false to hide without deleting the config/messages.
 // Bump MAINTENANCE_VERSION (e.g. change the date/slug) to force the banner to
 // re-appear for users who previously dismissed it.
-const MAINTENANCE_ENABLED = false;
-const MAINTENANCE_VERSION = "2026-03-17-langs";
+const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_VERSION = "2026-04-14-maintenance";
 ---
 
 <!DOCTYPE html>
@@ -258,7 +258,7 @@ const MAINTENANCE_VERSION = "2026-03-17-langs";
       <div id="maintenance-banner" style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
         <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
           <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
-          <span id="maintenance-msg">We're experiencing some issues and are working on a fix. Languages are coming back soon!</span>
+          <span id="maintenance-msg">Game servers are down for maintenance (Apr 14, 15:00 – Apr 15, 15:00 GMT+8)</span>
           <button id="maintenance-close" aria-label="Dismiss" title="Dismiss" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:2px 6px;font-size:1.2rem;line-height:1;color:#92400e;flex-shrink:0;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
         </div>
       </div>
@@ -276,17 +276,46 @@ const MAINTENANCE_VERSION = "2026-03-17-langs";
           }
         } catch(e) {}
 
-        var msgs = {
-          en: "We're experiencing some issues and are working on a fix. Languages are coming back soon!",
-          ja: "現在問題が発生しており修正中です。多言語対応は近日中に復旧予定です。",
-          ko: "현재 문제가 발생하여 수정 중입니다. 언어 지원이 곧 복구됩니다.",
-          'zh-cn': "我们正在修复问题，多语言功能即将恢复。感谢您的耐心等待！",
-          'zh-tw': "我們正在修復問題，多語言功能即將恢復。感謝您的耐心等待！",
-          es: "Estamos solucionando algunos problemas. ¡Los idiomas volverán pronto!"
+        // Auto-hide after maintenance end: Apr 15, 2026 15:00 GMT+8 = 1776236400000 UTC
+        var MAINTENANCE_END = 1776236400000;
+        if (Date.now() >= MAINTENANCE_END) {
+          var b = document.getElementById('maintenance-banner');
+          if (b) b.style.display = 'none';
+          return;
+        }
+        // Schedule auto-hide at end time
+        var remaining = MAINTENANCE_END - Date.now();
+        if (remaining > 0) {
+          setTimeout(function() {
+            var b = document.getElementById('maintenance-banner');
+            if (b) b.style.display = 'none';
+          }, remaining);
+        }
+
+        // Format start/end in the user's local timezone
+        var MAINTENANCE_START = 1776150000000; // Apr 14, 2026 15:00 GMT+8 = 07:00 UTC
+        var fmtOpts = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
+        function fmtTime(epoch, locale) {
+          try {
+            return new Date(epoch).toLocaleString(locale || undefined, fmtOpts);
+          } catch(e) {
+            return new Date(epoch).toLocaleString(undefined, fmtOpts);
+          }
+        }
+        var templates = {
+          en:     function(s, e) { return "Game servers are down for maintenance (" + s + " \u2013 " + e + ")"; },
+          ja:     function(s, e) { return "\u30b2\u30fc\u30e0\u30b5\u30fc\u30d0\u30fc\u306f\u30e1\u30f3\u30c6\u30ca\u30f3\u30b9\u4e2d\u3067\u3059\uff08" + s + " \u301c " + e + "\uff09"; },
+          ko:     function(s, e) { return "\uac8c\uc784 \uc11c\ubc84\uac00 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4 (" + s + " ~ " + e + ")"; },
+          'zh-cn':function(s, e) { return "\u6e38\u620f\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
+          'zh-tw':function(s, e) { return "\u9042\u6232\u4f3a\u670d\u5668\u6b63\u5728\u7dad\u8b77\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
+          es:     function(s, e) { return "Los servidores del juego est\u00e1n en mantenimiento (" + s + " \u2013 " + e + ")"; }
         };
         function setMsg(lang) {
           var el = document.getElementById('maintenance-msg');
-          if (el && msgs[lang]) el.textContent = msgs[lang];
+          if (!el) return;
+          var tmpl = templates[lang] || templates['en'];
+          var bcp = lang === 'zh-cn' ? 'zh-Hans' : lang === 'zh-tw' ? 'zh-Hant' : lang;
+          el.textContent = tmpl(fmtTime(MAINTENANCE_START, bcp), fmtTime(MAINTENANCE_END, bcp));
         }
 
         // Set initial message from localStorage or browser locale
