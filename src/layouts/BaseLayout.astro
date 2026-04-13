@@ -292,17 +292,30 @@ const MAINTENANCE_VERSION = "2026-04-14-maintenance";
           }, remaining);
         }
 
-        var msgs = {
-          en: "Game servers are down for maintenance (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)",
-          ja: "ゲームサーバーはメンテナンス中です（4月14日 15:00 〜 4月15日 15:00 GMT+8）",
-          ko: "게임 서버가 점검 중입니다 (4월 14일 15:00 ~ 4월 15일 15:00 GMT+8)",
-          'zh-cn': "游戏服务器正在维护中（4月14日 15:00 至 4月15日 15:00 GMT+8）",
-          'zh-tw': "遊戲伺服器正在維護中（4月14日 15:00 至 4月15日 15:00 GMT+8）",
-          es: "Los servidores del juego están en mantenimiento (14 abr 15:00 – 15 abr 15:00 GMT+8)"
+        // Format start/end in the user's local timezone
+        var MAINTENANCE_START = 1776150000000; // Apr 14, 2026 15:00 GMT+8 = 07:00 UTC
+        var fmtOpts = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
+        function fmtTime(epoch, locale) {
+          try {
+            return new Date(epoch).toLocaleString(locale || undefined, fmtOpts);
+          } catch(e) {
+            return new Date(epoch).toLocaleString(undefined, fmtOpts);
+          }
+        }
+        var templates = {
+          en:     function(s, e) { return "Game servers are down for maintenance (" + s + " \u2013 " + e + ")"; },
+          ja:     function(s, e) { return "\u30b2\u30fc\u30e0\u30b5\u30fc\u30d0\u30fc\u306f\u30e1\u30f3\u30c6\u30ca\u30f3\u30b9\u4e2d\u3067\u3059\uff08" + s + " \u301c " + e + "\uff09"; },
+          ko:     function(s, e) { return "\uac8c\uc784 \uc11c\ubc84\uac00 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4 (" + s + " ~ " + e + ")"; },
+          'zh-cn':function(s, e) { return "\u6e38\u620f\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
+          'zh-tw':function(s, e) { return "\u9042\u6232\u4f3a\u670d\u5668\u6b63\u5728\u7dad\u8b77\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
+          es:     function(s, e) { return "Los servidores del juego est\u00e1n en mantenimiento (" + s + " \u2013 " + e + ")"; }
         };
         function setMsg(lang) {
           var el = document.getElementById('maintenance-msg');
-          if (el && msgs[lang]) el.textContent = msgs[lang];
+          if (!el) return;
+          var tmpl = templates[lang] || templates['en'];
+          var bcp = lang === 'zh-cn' ? 'zh-Hans' : lang === 'zh-tw' ? 'zh-Hant' : lang;
+          el.textContent = tmpl(fmtTime(MAINTENANCE_START, bcp), fmtTime(MAINTENANCE_END, bcp));
         }
 
         // Set initial message from localStorage or browser locale
