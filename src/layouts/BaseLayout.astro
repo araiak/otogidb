@@ -119,8 +119,18 @@ const navLinks = {
 // Set MAINTENANCE_ENABLED = false to hide without deleting the config/messages.
 // Bump MAINTENANCE_VERSION (e.g. change the date/slug) to force the banner to
 // re-appear for users who previously dismissed it.
-const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_ENABLED = false;
 const MAINTENANCE_VERSION = "2026-04-14-maintenance";
+// Server-side messages using fixed GMT+8 times; client script refines to local tz
+const maintenanceMessages: Record<string, string> = {
+  en:      'Game servers are down for maintenance (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)',
+  ja:      '\u30b2\u30fc\u30e0\u30b5\u30fc\u30d0\u30fc\u306f\u30e1\u30f3\u30c6\u30ca\u30f3\u30b9\u4e2d\u3067\u3059\uff08Apr 14, 15:00 \u301c Apr 15, 15:00 GMT+8\uff09',
+  ko:      '\uac8c\uc784 \uc11c\ubc84\uac00 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4 (Apr 14, 15:00 ~ Apr 15, 15:00 GMT+8)',
+  'zh-cn': '\u6e38\u620f\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d\uff08Apr 14, 15:00 \u81f3 Apr 15, 15:00 GMT+8\uff09',
+  'zh-tw': '\u9042\u6232\u4f3a\u670d\u5668\u6b63\u5728\u7dad\u8b77\u4e2d\uff08Apr 14, 15:00 \u81f3 Apr 15, 15:00 GMT+8\uff09',
+  es:      'Los servidores del juego est\u00e1n en mantenimiento (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)',
+};
+const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages['en'];
 ---
 
 <!DOCTYPE html>
@@ -258,12 +268,12 @@ const MAINTENANCE_VERSION = "2026-04-14-maintenance";
       <div id="maintenance-banner" style="background-color: #fef3c7; border-bottom: 1px solid #fcd34d; color: #92400e;">
         <div class="container mx-auto px-4 py-2 flex items-center gap-2 text-sm">
           <img src="https://res.cloudinary.com/dn3j8sqcc/image/upload/w_24,h_24,c_fill/v1765670264/mascot_p2e3gi.png" alt="" width="24" height="24" style="flex-shrink:0;" />
-          <span id="maintenance-msg">Game servers are down for maintenance (Apr 14, 15:00 – Apr 15, 15:00 GMT+8)</span>
+          <span id="maintenance-msg">{maintenanceMsg}</span>
           <button id="maintenance-close" aria-label="Dismiss" title="Dismiss" style="margin-left:auto;background:none;border:none;cursor:pointer;padding:2px 6px;font-size:1.2rem;line-height:1;color:#92400e;flex-shrink:0;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">×</button>
         </div>
       </div>
     )}
-    <script is:inline define:vars={{ maintenanceVersion: MAINTENANCE_VERSION }}>
+    <script is:inline define:vars={{ maintenanceVersion: MAINTENANCE_VERSION, currentLocale: currentLocale }}>
       (function() {
         var STORAGE_KEY = 'otogidb-maintenance-dismissed';
 
@@ -318,17 +328,8 @@ const MAINTENANCE_VERSION = "2026-04-14-maintenance";
           el.textContent = tmpl(fmtTime(MAINTENANCE_START, bcp), fmtTime(MAINTENANCE_END, bcp));
         }
 
-        // Set initial message from localStorage or browser locale
-        var stored = null;
-        try { stored = localStorage.getItem('otogidb-locale'); } catch(e) {}
-        var full = (navigator.language || '').toLowerCase();
-        var lang = stored;
-        if (!lang) {
-          if (full.startsWith('zh-tw') || full === 'zh-hk' || full === 'zh-mo') lang = 'zh-tw';
-          else if (full.startsWith('zh')) lang = 'zh-cn';
-          else lang = full.split('-')[0];
-        }
-        setMsg(lang);
+        // Refine initial message with local timezone formatting (server already rendered correct locale)
+        setMsg(currentLocale);
 
         // Close button — saves current version so banner stays hidden until version changes
         var closeBtn = document.getElementById('maintenance-close');
