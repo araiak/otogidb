@@ -1,6 +1,6 @@
 {
   "version": "1.6.0",
-  "last_updated": "2026-04-14",
+  "last_updated": "2026-04-21",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -2456,6 +2456,73 @@
         }
       ],
       "last_checked": "2026-04-14"
+    },
+    {
+      "id": "BUG-062",
+      "card_id": 1608,
+      "card_name": "Chiyome Mochizuki",
+      "affected_field": "skill",
+      "affected_id": "1608",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Skill targets 3 enemies but description says 2",
+      "details": {
+        "description_says": "Deals {value} DMG to 2 enemies (ranged priority). Targets take {delay1} more DMG for a limited time.",
+        "ts_field": "enemy;count<3>;prof<2,3,1>",
+        "tn_field": 3,
+        "expected": "count<2>",
+        "actual": "count<3>"
+      },
+      "analysis": "The skill ts field has count<3> and tn=3, meaning it hits 3 enemies. The description says 2. Either the description is wrong or the data is wrong — the skill hits one more target than advertised.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-21",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "contains",
+        "value": "count<2>"
+      },
+      "description_check": {
+        "condition": "not_contains",
+        "value": "2 enemies"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-21"
+    },
+    {
+      "id": "BUG-063",
+      "card_id": 1617,
+      "card_name": "Fire Mistress",
+      "affected_field": "ability",
+      "affected_id": "161701",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable ability missing once per team text",
+      "details": {
+        "description_says": "At the start of the final wave, enemy with the most HP takes 13% more damage.",
+        "o_field": false,
+        "ts_field": "enemy;count<1>;max_hp",
+        "expected_text": "Description should mention that effects do not stack"
+      },
+      "analysis": "Ability has o=false (OverlayFlag) which triggers CanApplyTeamOverlayAbility check. Only the first copy applies team-wide; subsequent copies are skipped. Players may build teams with duplicates expecting stacked debuffs.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-04-21",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      },
+      "check_history": [],
+      "last_checked": "2026-04-21"
     }
   ],
   "categories": {
