@@ -13838,6 +13838,278 @@
       "Multi"
     ]
   },
+  "1601": {
+    "id": "1601",
+    "name": "Dagger of Darkness",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1601",
+    "card_name": "Owl",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1602": {
+    "id": "1602",
+    "name": "Consigned to the Shadows",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1602",
+    "card_name": "Basho",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1606": {
+    "id": "1606",
+    "name": "Devouring",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1606",
+    "card_name": "Orochi",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1608": {
+    "id": "1608",
+    "name": "State Of Serenity",
+    "description": "Deals {value} DMG to 2 enemies (ranged priority). Targets take {delay1} more DMG for a limited time.",
+    "card_id": "1608",
+    "card_name": "Chiyome Mochizuki",
+    "ie": "ATK<1000,29>",
+    "ts": "enemy;count<3>;prof<2,3,1>",
+    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "DMG Up"
+    ]
+  },
+  "1612": {
+    "id": "1612",
+    "name": "Ultimate Seal",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1612",
+    "card_name": "Kuji Charm",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1614": {
+    "id": "1614",
+    "name": "Water Curse",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1614",
+    "card_name": "Mizugumo",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1618": {
+    "id": "1618",
+    "name": "Water Spray",
+    "description": "Increases the Crit Rate of 2 allies with the highest ATK by {delay1} for a limited time.",
+    "card_id": "1618",
+    "card_name": "Water Mistress",
+    "ie": "none",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT<20.00%,0.58%,8>",
+    "tn": 2,
+    "tags": [
+      "Multi",
+      "Crit Rate"
+    ]
+  },
+  "1617": {
+    "id": "1617",
+    "name": "Cloak of Flame",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1617",
+    "card_name": "Fire Mistress",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1607": {
+    "id": "1607",
+    "name": "Secret of the Yagyu",
+    "description": "Deals {value} DMG to further enemies.",
+    "card_id": "1607",
+    "card_name": "Munenori Yagyu",
+    "ie": "ATK<700,20>",
+    "ts": "enemy;range_front<3>",
+    "de": "none",
+    "tn": 4,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
+  "1616": {
+    "id": "1616",
+    "name": "Fascinating Limbs",
+    "description": "Deals {value} DMG to the enemy with the highest ATK, with a {probability} of inflicting Silence.",
+    "card_id": "1616",
+    "card_name": "Izumo no Okun",
+    "ie": "ATK<1380,40>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "SILENCE<5>;HIT<50.00%,1.45%>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Silence",
+      "Debuff"
+    ]
+  },
+  "1609": {
+    "id": "1609",
+    "name": "Heaven's Ninja",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "1609",
+    "card_name": "Sasuke Sarutobi",
+    "ie": "ATK<760,22>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
+  "1611": {
+    "id": "1611",
+    "name": "Forbidden Wind",
+    "description": "Restores {value} HP to ally with the highest ATK and increases target's speed by {delay1} for a limited time.",
+    "card_id": "1611",
+    "card_name": "Shotaro Fuma",
+    "ie": "HEAL<1400,41>",
+    "ts": "self;count<1>;max_atk",
+    "de": "SPD<25.50%,0.74%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Single",
+      "Speed Up"
+    ]
+  },
+  "1615": {
+    "id": "1615",
+    "name": "Transformative Magic",
+    "description": "Deals {value} DMG to 2 enemies (melee priority), and removes all buffs from the targets.",
+    "card_id": "1615",
+    "card_name": "Kashinkoji",
+    "ie": "ATK<300,7>;ERASE_BUFF<0>",
+    "ts": "enemy;count<2>;prof<1,2,3>",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Dispel",
+      "Multi"
+    ]
+  },
+  "1619": {
+    "id": "1619",
+    "name": "Swift Execution",
+    "description": "Deals {value} DMG to the row of enemies directly in front, with a {probability} of inflicting Paralysis.",
+    "card_id": "1619",
+    "card_name": "Goemon Ishikawa",
+    "ie": "ATK<600,17>",
+    "ts": "enemy;row",
+    "de": "NUMB<8>;HIT<50.00%,1.45%>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Paralysis",
+      "Debuff"
+    ]
+  },
+  "1600": {
+    "id": "1600",
+    "name": "Fateful Words",
+    "description": "Deals {value} DMG to the enemy with the lowest HP. Target take {delay1} more DMG for a limited time.",
+    "card_id": "1600",
+    "card_name": "Bell Inscription",
+    "ie": "ATK<880,30>",
+    "ts": "enemy;count<1>;min_hp",
+    "de": "SHIELD<-10.00%,-0.34%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1610": {
+    "id": "1610",
+    "name": "Demon's Blow",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1610",
+    "card_name": "Saizo Kirigakure",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1521": {
+    "id": "1521",
+    "name": "Crimson Wave",
+    "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Silence.",
+    "card_id": "1521",
+    "card_name": "Crimson Staff",
+    "ie": "ATK<540,16>",
+    "ts": "enemy;count<5>",
+    "de": "SILENCE<5>;HIT<25.00%,0.85%>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Silence",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

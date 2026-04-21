@@ -17303,5 +17303,417 @@
       "Skill DMG"
     ],
     "synergy_partners": []
+  },
+  "160101": {
+    "id": "160101",
+    "name": "Nocturnal",
+    "description": "Increases 8% of skill DMG dealt at the start of each wave.(only take effect once to the team)",
+    "card_id": "1601",
+    "card_name": "Owl",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<8.00%,0%>",
+    "o": false,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "160201": {
+    "id": "160201",
+    "name": "Haiku Master",
+    "description": "Absorbs 12% of DMG dealt as HP.(only take effect once to the team)",
+    "card_id": "1602",
+    "card_name": "Basho",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "VAMP<12.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Lifesteal"
+    ],
+    "synergy_partners": []
+  },
+  "160601": {
+    "id": "160601",
+    "name": "Venomous Fangs",
+    "description": "Increases 3% of max HP of Phantasma team members.(only take effect once to the team)",
+    "card_id": "1606",
+    "card_name": "Orochi",
+    "er": "entry",
+    "ts": "self;type<2>;count<5>",
+    "de": "HP<3.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "160801": {
+    "id": "160801",
+    "name": "Head of Walking Miko",
+    "description": "Increases 25% of skill DMG of Phantasma team members.",
+    "card_id": "1608",
+    "card_name": "Chiyome Mochizuki",
+    "er": "entry",
+    "ts": "self;type<2>;count<5>",
+    "de": "SKILL_ATK<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "160802": {
+    "id": "160802",
+    "name": "Information Network",
+    "description": "Increases 10% of Crit DMG dealt of Phantasma allies at the start of each wave.",
+    "card_id": "1608",
+    "card_name": "Chiyome Mochizuki",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "CHIT_ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "161201": {
+    "id": "161201",
+    "name": "Kuji-in Protection",
+    "description": "15% chance of inflicting Silence to Normal attacks targets.(only take effect once to the team)",
+    "card_id": "1612",
+    "card_name": "Kuji Charm",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<15.00%,0%>;SILENCE<2>",
+    "o": false,
+    "tags": [
+      "On Attack",
+      "Silence"
+    ],
+    "synergy_partners": []
+  },
+  "161401": {
+    "id": "161401",
+    "name": "Water Walking",
+    "description": "Increases 27% of ATK speed.(only take effect once to the team)",
+    "card_id": "1614",
+    "card_name": "Mizugumo",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SPD<27.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "161801": {
+    "id": "161801",
+    "name": "Murmuring Stream",
+    "description": "Increases 12% the number of soulstones received from battle.",
+    "card_id": "1618",
+    "card_name": "Water Mistress",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "COIN<12.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Soulstone Boost"
+    ],
+    "synergy_partners": []
+  },
+  "161701": {
+    "id": "161701",
+    "name": "Blazing Inspiration",
+    "description": "At the start of the final wave, enemy with the most HP takes 13% more damage.",
+    "card_id": "1617",
+    "card_name": "Fire Mistress",
+    "er": "last_wave",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SHIELD<-13.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Single",
+      "DMG Amp"
+    ],
+    "synergy_partners": []
+  },
+  "160701": {
+    "id": "160701",
+    "name": "Shogun's Sword Tutor",
+    "description": "Reduces 25% of DMG taken and Increases DMG dealt by 10% at the same time.",
+    "card_id": "1607",
+    "card_name": "Munenori Yagyu",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SHIELD<25.00%,0%>;ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Reduction",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "161601": {
+    "id": "161601",
+    "name": "Kabuki Dancer",
+    "description": "50% chances to inflict Petrifaction on the enemy with the highest ATK at the start of each wave.",
+    "card_id": "1616",
+    "card_name": "Izumo no Okun",
+    "er": "entry_wave",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "HIT<50.00%,0%>;STONE<5>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Single",
+      "Petrify"
+    ],
+    "synergy_partners": []
+  },
+  "161602": {
+    "id": "161602",
+    "name": "Captivating Gaze",
+    "description": "Normal attacks have 30% chances of inflicting Silence.",
+    "card_id": "1616",
+    "card_name": "Izumo no Okun",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<30.00%,0%>;SILENCE<5>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Silence"
+    ],
+    "synergy_partners": []
+  },
+  "160901": {
+    "id": "160901",
+    "name": "Sarutobi Style",
+    "description": "Increases 10% of skill DMG dealt at the start of each wave.",
+    "card_id": "1609",
+    "card_name": "Sasuke Sarutobi",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "160902": {
+    "id": "160902",
+    "name": "Radiant Brilliance",
+    "description": "Increases the ATK speed of all divina allies by 25%.",
+    "card_id": "1609",
+    "card_name": "Sasuke Sarutobi",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "SPD<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "161101": {
+    "id": "161101",
+    "name": "Head of Fuma",
+    "description": "Increases 5% of ATK speed to Phantasma team members at the start of each wave.",
+    "card_id": "1611",
+    "card_name": "Shotaro Fuma",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "SPD<5.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "161102": {
+    "id": "161102",
+    "name": "Giant's Pressure",
+    "description": "Increases 70% crit rate of skill target.",
+    "card_id": "1611",
+    "card_name": "Shotaro Fuma",
+    "er": "attack_skill",
+    "ts": "none",
+    "de": "CHIT<70.00%,0%,8>",
+    "o": true,
+    "tags": [
+      "On Skill",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "161501": {
+    "id": "161501",
+    "name": "Peerless Illusion",
+    "description": "All Divina team members deal 20% more DMG.",
+    "card_id": "1615",
+    "card_name": "Kashinkoji",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "161502": {
+    "id": "161502",
+    "name": "Unpredictable Change",
+    "description": "Increase 25% of Crit Rate of the 2 Divina allies with highest ATK at the start of the final wave.",
+    "card_id": "1615",
+    "card_name": "Kashinkoji",
+    "er": "last_wave",
+    "ts": "self;type<1>;max_atk;count<2>",
+    "de": "CHIT<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Divina",
+      "Multi",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "161901": {
+    "id": "161901",
+    "name": "The World's Thief",
+    "description": "Increases 40% of skill DMG.",
+    "card_id": "1619",
+    "card_name": "Goemon Ishikawa",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "161902": {
+    "id": "161902",
+    "name": "Chivalrous Thief's Pride",
+    "description": "Increases 25% of the number of soulstones received from battle and 25% of battle reward drop rate.",
+    "card_id": "1619",
+    "card_name": "Goemon Ishikawa",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "COIN<25.00%,0%>;ITEM<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Soulstone Boost",
+      "Drop Rate"
+    ],
+    "synergy_partners": []
+  },
+  "160001": {
+    "id": "160001",
+    "name": "Witness of History",
+    "description": "Increases 43% of Crit DMG by the 2 allies with the highest ATK.",
+    "card_id": "1600",
+    "card_name": "Bell Inscription",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT_ATK<43.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "161001": {
+    "id": "161001",
+    "name": "Iga Leader",
+    "description": "Increases 7% all Divina team members' Crit Rate.(only take effect once to the team)",
+    "card_id": "1610",
+    "card_name": "Saizo Kirigakure",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT<7.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "152101": {
+    "id": "152101",
+    "name": "Solar Core",
+    "description": "Increases 15% of skill DMG dealt at the start of each wave.",
+    "card_id": "1521",
+    "card_name": "Crimson Staff",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "152102": {
+    "id": "152102",
+    "name": "Dance of Flames",
+    "description": "Increases 15% of DMG dealt at the start of each wave.",
+    "card_id": "1521",
+    "card_name": "Crimson Staff",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
   }
 }

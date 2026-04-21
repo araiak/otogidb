@@ -8139,6 +8139,79 @@
         "type_name": "Melee"
       }
     },
+    "1521": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の特技の威力が向上15%",
+          "name": "太陽の核",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の与ダメージ値が向上15%",
+          "name": "烈火の舞",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101521",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1521",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765936/otogi/android/101521_db397c442a11506599eb50bff056022e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765954/otogi/cards_hd/101521_hd_bc50c1009e423bdff1dc2e071de9f060.png"
+      },
+      "name": "緋紅の杖",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵全体に{value}のダメージを与え、対象を{probability}で沈黙状態にする",
+        "name": "赤色波動",
+        "prob_lb0": "83.65%",
+        "prob_mlb": "100.65%",
+        "slv_lb0": "1,644",
+        "slv_mlb": "1,964",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4800,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "1523": {
       "abilities": [
         {
@@ -10633,6 +10706,464 @@
         "type_name": "Ranged"
       }
     },
+    "1600": {
+      "abilities": [
+        {
+          "description": "最も攻撃力が高い味方２体のクリティカルダメージ値が43%に増加",
+          "name": "歴史の目撃者",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101600",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1600",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765940/otogi/android/101600_c9a5be6400d2716885423fc04f6b4955.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765958/otogi/cards_hd/101600_hd_cf52b8055a37cceb74a01697018c3aa9.png"
+      },
+      "name": "梵鐘の銘文",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "30.06%",
+        "delay_mlb": "36.86%",
+        "description": "残ＨＰが最も低い敵１体に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "name": "運命の言葉",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,650",
+        "slv_mlb": "3,250",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2665,
+        "base_hp": 2130,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8000,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1601": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の特技の威力が向上8%（助っ人以外、味方陣容一回有効）",
+          "name": "夜行性",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101601",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1601",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765939/otogi/android/101601_7349ce0e14098a189e3dd08e6179fc56.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765947/otogi/cards_hd/101601_hd_1ca5f57acefba4dce48581de22cfbcd5.png"
+      },
+      "name": "フクロウ",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "暗闇の凶刃",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1602": {
+      "abilities": [
+        {
+          "description": "相手にダメージを与えた時、ダメージ値12%ほどのＨＰを回復（助っ人以外、味方陣容一回有効）",
+          "name": "俳諧の達人",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101602",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1602",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765932/otogi/android/101602_672fb5e9b27915c087ee57c1605c8d5b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765956/otogi/cards_hd/101602_hd_ef1ac152fc0990841ef4bc375c377575.png"
+      },
+      "name": "松尾芭蕉",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "闇に葬る",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1606": {
+      "abilities": [
+        {
+          "description": "怪異属性の味方式神の最大ＨＰが3%上昇（助っ人以外、味方陣容一回有効）",
+          "name": "猛毒の牙",
+          "tags": [
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101606",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1606",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765938/otogi/android/101606_664265b76a6ac4d4538e5a2bca1e4724.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765949/otogi/cards_hd/101606_hd_b9716149d5803013b9a7e4ab97696095.png"
+      },
+      "name": "口寄せ・大蛇",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "丸呑み",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1607": {
+      "abilities": [
+        {
+          "description": "被ダメージを25%軽減、与ダメージ値を10%増加",
+          "name": "将軍家兵法指南役",
+          "tags": [
+            "Self",
+            "DMG Reduction",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101607",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1607",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765928/otogi/android/101607_9c792feae291692cd9bb8c235fcc2a39.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765952/otogi/cards_hd/101607_hd_407e0541baa7189d84c16cd15accf06d.png"
+      },
+      "name": "柳生宗矩",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "前方広範囲の敵に{value}のダメージを与える",
+        "name": "柳生新陰流奥義",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,080",
+        "slv_mlb": "2,480",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3100,
+        "base_hp": 3700,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 9300,
+        "max_hp": 11100,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1608": {
+      "abilities": [
+        {
+          "description": "怪異属性の味方式神の特技ダメージ値が25%増加",
+          "name": "歩き巫女の頭領",
+          "tags": [
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE開始ごとに、怪異属性の味方式神のクリティカルダメージ値が10%増加",
+          "name": "網羅された情報網",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101608",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1608",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765934/otogi/android/101608_d8b908d5f6206e734e7b29183d6f86bc.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765954/otogi/cards_hd/101608_hd_9954c07807cc79463404669f4f82db81.png"
+      },
+      "name": "望月千代女",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "敵2体（遠距離型優先）に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "name": "無念無想",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,001",
+        "slv_mlb": "3,581",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4630,
+        "base_hp": 3565,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13900,
+        "max_hp": 10700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1609": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の特技の威力が向上10%",
+          "name": "猿飛の術",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "霊験属性の味方式神の攻撃速度が25%増加",
+          "name": "光芒万丈",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101609",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1609",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765934/otogi/android/101609_62ec3e70c71b9110b57e859aa25f3929.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765944/otogi/cards_hd/101609_hd_5f425573808bc48d3347c50cfec75ea8.png"
+      },
+      "name": "猿飛佐助",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵全体に{value}のダメージを与える",
+        "name": "すべて超えし天与の忍び",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,278",
+        "slv_mlb": "2,718",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13500,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "161": {
       "abilities": [
         {
@@ -10695,6 +11226,607 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1610": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神のクリティカル率7%上昇（助っ人以外、味方陣容一回有効）",
+          "name": "伊賀の頭領",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101610",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1610",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765935/otogi/android/101610_83c7b5c6eaa9c0f300c42194feb78ecc.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765942/otogi/cards_hd/101610_hd_4d2474be16d9829ec80ae111b442479d.png"
+      },
+      "name": "霧隠才蔵",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "悪魔の一突き",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1611": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、怪異属性の味方式神のスピードが5%上昇",
+          "name": "風魔の頭領",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "特技の対象クリティカル率が70%上昇",
+          "name": "巨人の威圧",
+          "tags": [
+            "On Skill",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101611",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1611",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765931/otogi/android/101611_0581cba113c92f2e07ca211a9843413c.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765943/otogi/cards_hd/101611_hd_b18674eb28ab696aada660c3076fc192.png"
+      },
+      "name": "風魔小太郎",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "76.56%",
+        "delay_mlb": "91.36%",
+        "description": "最も攻撃力が高い味方１体のＨＰを{value}回復し、攻撃スピードを一時的に{delay1}上昇させる",
+        "name": "風魔の禁術",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,229",
+        "slv_mlb": "5,049",
+        "tags": [
+          "Heal",
+          "Single",
+          "Speed Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4700,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14100,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1612": {
+      "abilities": [
+        {
+          "description": "15%で攻撃対象を沈黙状態にする（助っ人以外、味方陣容一回有効）",
+          "name": "九字護身法",
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101612",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1612",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765937/otogi/android/101612_77d6decfbd9e24b9edcdc99a50583d82.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765957/otogi/cards_hd/101612_hd_649585352ab06fb152a53e24e45c6a2c.png"
+      },
+      "name": "九字の呪符",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "絶対封印",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1614": {
+      "abilities": [
+        {
+          "description": "スピード27%上昇（助っ人以外、味方陣容一回有効）",
+          "name": "水面歩行",
+          "tags": [
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 44
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101614",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1614",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765930/otogi/android/101614_da3e3acd5b631d3c3da47849d17fc83a.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765951/otogi/cards_hd/101614_hd_214d79c8f7089bfc4241aa17ee6ccf79.png"
+      },
+      "name": "水蜘蛛",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "水の呪い",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1615": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神の与ダメージ値が20%増加",
+          "name": "絶代の幻術",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "最終のＷＡＶＥに、最も攻撃力が高い味方２体の霊験式神のクリティカル率25%上昇",
+          "name": "変幻自在",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Divina",
+            "Multi",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101615",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1615",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765939/otogi/android/101615_18732ed00f0f1c1fe0d3c2077e997527.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765953/otogi/cards_hd/101615_hd_27e2474bf95a167f02700262e09eefd4.png"
+      },
+      "name": "果心居士",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵２体（近接型優先）に{value}のダメージを与え、すべてのバフ効果を解除する",
+        "name": "变化の術",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "783",
+        "slv_mlb": "923",
+        "tags": [
+          "DMG",
+          "Dispel",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4630,
+        "base_hp": 3600,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13900,
+        "max_hp": 10800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1616": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、50%で最も攻撃力が高い敵を石化状態にする",
+          "name": "傾奇者",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Petrify"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "30%で攻撃対象を沈黙状態にする",
+          "name": "魅惑の視線",
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101616",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1616",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765929/otogi/android/101616_7ce9651c9bdecdf3399ae0da58319bdd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765958/otogi/cards_hd/101616_hd_f3edb10981c7da90504a8322376a0194.png"
+      },
+      "name": "出雲阿国",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "最も攻撃力が高い敵１体に{value}のダメージを与え、対象を{probability}で沈黙状態にする",
+        "name": "妖艶なる四肢",
+        "prob_lb0": "150.05%",
+        "prob_mlb": "179.05%",
+        "slv_lb0": "4,140",
+        "slv_mlb": "4,940",
+        "tags": [
+          "DMG",
+          "Single",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4165,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12500,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1617": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、最もＨＰが高い敵の被ダメージ値を13%増加",
+          "name": "烈火の鼓舞",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "DMG Amp"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101617",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1617",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765941/otogi/android/101617_329aba7b6ece6878e41ee4c58a490acd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765946/otogi/cards_hd/101617_hd_91d8b5ecd30639d2aee1a604f054c211.png"
+      },
+      "name": "火遁の術",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "灼熱の外套",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1618": {
+      "abilities": [
+        {
+          "description": "妖石清算ボーナス12%増加",
+          "name": "せせらぎ",
+          "tags": [
+            "Self",
+            "Soulstone Boost"
+          ],
+          "unlock_level": 28
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101618",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1618",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765941/otogi/android/101618_f1feb6aa1a0416cad6a1a8c43c4a2d03.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765950/otogi/cards_hd/101618_hd_9bd1032a085f08c65aa4b0d1644c890a.png"
+      },
+      "name": "水遁の術",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "54.22%",
+        "delay_mlb": "65.82%",
+        "description": "最も攻撃力が高い味方２体のクリティカル率を、一時的に{delay1}上昇させる",
+        "name": "激流",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2100,
+        "base_hp": 2100,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 6300,
+        "max_hp": 6300,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1619": {
+      "abilities": [
+        {
+          "description": "特技の威力が40%向上",
+          "name": "天下の大泥棒",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "妖石清算ボーナスが25%増加し、ボーナスのドロップ率が25%上昇",
+          "name": "義賊の誇り",
+          "tags": [
+            "Self",
+            "Soulstone Boost",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101619",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1619",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765937/otogi/android/101619_0e2378298284d3b01e4eeb9554970961.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765948/otogi/cards_hd/101619_hd_9bb1061c5f9ae667da94a64f7c5d8ecb.png"
+      },
+      "name": "石川五右衛門",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "目の前の敵一列に{value}のダメージを与え、対象を{probability}で麻痺状態にする",
+        "name": "神速の処刑",
+        "prob_lb0": "150.05%",
+        "prob_mlb": "179.05%",
+        "slv_lb0": "1,773",
+        "slv_mlb": "2,113",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4000,
+        "base_hp": 4265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 12800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "162": {
@@ -60364,8 +61496,8 @@
       }
     }
   },
-  "data_hash": "f4e0b28d",
+  "data_hash": "1761fd4a",
   "locale": "ja",
-  "total_cards": 933,
-  "version": "8db9670"
+  "total_cards": 950,
+  "version": "6ff5af5"
 }
