@@ -50,7 +50,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617] provides a small damage amplification on the final wave that requires MLB to trigger. If she's an event card, she could be a decent placeholder for newer players who don't yet have stronger damage amp options. **New players only; skip if you have better options.**
 
-:card[1618] has three distinct use cases. The most important is as a low-cost Tower healer: her skill buffs crit rate on two targets, meaning she contributes real offensive support from the healer slot at 4★ cost — a combination that's hard to replicate cheaply and worth investing in. She also looks like a strong PvP defender; her stat profile mirrors :card[474], which has been a dependable low-budget PvP anchor. Finally, her soulstone drop boost is a practical bonus for very new players grinding dailies. This card has more going for it than it first appears. **MLB a copy — strong Tower healer with crit rate skill, solid PvP defender similar to :card[474], and a soulstone bonus for very new players.**
+:card[1618] has three distinct use cases. The most important is as a low-cost Tower healer: her skill gives the highest crit rate buff of any 4★ healer to two targets, directly replacing :card[474] in that role while keeping the same low cost. She's also a likely choice as a PvP farming defender — her stat profile mirrors :card[474], a proven choice for maximizing PvP farming rewards through an easy-to-beat defense. Finally, her soulstone drop boost is a practical bonus for very new players grinding dailies. This card has more going for it than it first appears. **MLB a copy — strong Tower healer with crit rate skill, solid PvP defender similar to :card[474], and a soulstone bonus for very new players.**
 
 ---
 
@@ -72,7 +72,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 - :card[1601] — **Pass; check auction for :card[688] if you want this effect** — progressive 8% skill damage, outclassed by better options
 - :card[1602] — **Skip** — lifesteal at 12% is niche and modest; weaker than :card[604] or :card[1430]
 - :card[1617] — **New players only** — final wave damage amp requires MLB; decent placeholder until better options arrive
-- :card[1618] — **MLB a copy** — low-cost Tower healer with 2-target crit rate skill; strong PvP defender similar to :card[474]; soulstone drop boost bonus for very new players
+- :card[1618] — **MLB a copy** — highest crit rate buff among 4★ healers, directly replaces :card[474] in Tower; likely PvP farming defender similar to :card[474]; soulstone drop boost for very new players
 
 ---
 
@@ -126,7 +126,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]はMLBが必要な最終ウェーブでの小さなダメージアンプを提供します。イベントカードであれば、より強いダメージアンプを持っていない新規プレイヤーの繋ぎとして使えます。**新規プレイヤーのみ；より良い選択肢があるならスキップ。**
 
-:card[1618]には3つの異なる用途があります。最も重要なのはタワーでの低コストヒーラーとしての役割です。スキルが2体の味方にクリティカル率バフを付与するため、4★コストを抑えながらヒーラー枠から実質的な攻撃サポートを提供できます。この組み合わせは安価には再現しにくく、投資する価値があります。また、PvP防衛でも強力に見えます——スタット構成が:card[474]に似ており、こちらは低コストPvP防衛のアンカーとして実績があります。さらに、ソウルストーンドロップ増加は毎日のグラインドを続けている初心者プレイヤーへのボーナスにもなります。全体的に、最初に見えるより活躍の幅が広いカードです。**1枚MLBにする価値あり——タワーでの2体クリ率スキルが強力；:card[474]に似たPvP防衛にも優秀；初心者向けソウルストーンボーナスも。**
+:card[1618]には3つの異なる用途があります。最も重要なのはタワーでの低コストヒーラーとしての役割です。スキルが2体の味方に4★ヒーラー中最高のクリティカル率バフを付与し、同じ低コストのまま:card[474]を直接置き換えられます。また、PvP農業防衛の有力候補でもあります——スタット構成が:card[474]に似ており、こちらは相手に倒されやすい防衛でPvP報酬を最大化する実績のある選択肢です。さらに、ソウルストーンドロップ増加は毎日のグラインドを続けている初心者プレイヤーへのボーナスにもなります。全体的に、最初に見えるより活躍の幅が広いカードです。**1枚MLBにする価値あり——タワーでの2体クリ率スキルが強力；:card[474]に似たPvP防衛にも優秀；初心者向けソウルストーンボーナスも。**
 
 ---
 
@@ -148,7 +148,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 - :card[1601] — **パス；この効果が欲しければオークションで:card[688]を探そう** — 累積8%スキルダメージ；より良い選択肢に劣る
 - :card[1602] — **スキップ** — 12%ライフスティールはニッチで少なめ；:card[604]や:card[1430]より弱い
 - :card[1617] — **新規プレイヤーのみ** — 最終ウェーブのダメージアンプにはMLBが必要；より良い選択肢が来るまでの繋ぎ
-- :card[1618] — **MLB推奨** — 2体クリ率スキル付き低コストタワーヒーラー；:card[474]に似てPvP防衛に強い；初心者向けソウルストーンドロップボーナス
+- :card[1618] — **MLB推奨** — 4★ヒーラー最高のクリ率スキルでタワーの:card[474]を代替；PvP農業防衛の有力候補；初心者向けソウルストーンボーナス
 
 ---
 
@@ -202,7 +202,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]은 MLB가 필요한 최후의 웨이브에서 소규모 데미지 증폭을 제공합니다. 이벤트 카드라면, 더 강한 데미지 증폭 옵션을 아직 갖추지 못한 신규 플레이어의 임시 선택으로 쓸 수 있습니다. **신규 플레이어 전용; 더 나은 옵션이 있다면 스킵.**
 
-:card[1618]에는 세 가지 뚜렷한 용도가 있습니다. 가장 중요한 것은 저비용 타워 힐러로서의 역할입니다. 스킬이 두 아군에게 크리티컬 확률 버프를 주므로, 4★ 비용으로 힐러 슬롯에서 실질적인 공격 지원을 제공할 수 있습니다. 이 조합은 저렴하게 복제하기 어렵고 투자할 가치가 있습니다. 또한 PvP 방어에서도 강력해 보입니다 — 스탯 구성이 저비용 PvP 방어 앵커로 검증된 :card[474]와 유사합니다. 마지막으로, 소울 스톤 드롭 부스트는 데일리 파밍을 시작한 매우 초보 플레이어에게 유용한 보너스입니다. 처음 보이는 것보다 활용 폭이 넓은 카드입니다. **MLB 1장 추천 — 2타겟 크리 확률 스킬이 있는 타워 저비용 힐러; :card[474]와 유사한 PvP 방어; 초보 플레이어에게 소울 스톤 보너스.**
+:card[1618]에는 세 가지 뚜렷한 용도가 있습니다. 가장 중요한 것은 저비용 타워 힐러로서의 역할입니다. 스킬이 두 아군에게 4★ 힐러 중 최고 크리티컬 확률 버프를 주므로, 같은 저비용으로 타워에서 :card[474]를 직접 대체할 수 있습니다. 또한 PvP 파밍 방어의 유력한 선택지이기도 합니다 — 스탯 구성이 상대가 이기기 쉬운 방어로 PvP 보상을 극대화하는 검증된 선택지인 :card[474]와 유사합니다. 마지막으로, 소울 스톤 드롭 부스트는 데일리 파밍을 시작한 매우 초보 플레이어에게 유용한 보너스입니다. 처음 보이는 것보다 활용 폭이 넓은 카드입니다. **MLB 1장 추천 — 2타겟 크리 확률 스킬이 있는 타워 저비용 힐러; :card[474]와 유사한 PvP 방어; 초보 플레이어에게 소울 스톤 보너스.**
 
 ---
 
@@ -224,7 +224,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 - :card[1601] — **패스; 이 효과 원하면 옥션에서 :card[688] 확인** — 누적 8% 스킬 데미지; 더 나은 옵션에 비해 약함
 - :card[1602] — **스킵** — 12% 흡혈은 틈새이며 적음; :card[604]나 :card[1430]보다 약함
 - :card[1617] — **신규 플레이어 전용** — 최후 웨이브 데미지 증폭은 MLB 필요; 더 나은 옵션 도착 전까지 임시
-- :card[1618] — **MLB 1장 추천** — 2타겟 크리 확률 스킬이 있는 저비용 타워 힐러; :card[474]와 유사해 PvP 방어에 강력; 초보 플레이어에게 소울 스톤 드롭 보너스
+- :card[1618] — **MLB 1장 추천** — 4★ 힐러 최고 크리 확률로 타워에서 :card[474] 대체; PvP 파밍 방어 유력 선택지; 초보 플레이어에게 소울 스톤 드롭 보너스
 
 ---
 
@@ -278,7 +278,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]在最终波次提供小幅伤害增幅，需要MLB才能触发。如果是活动卡，对还没有更强伤害增幅选项的新玩家来说可以作为过渡。**仅适合新玩家；有更好选择就跳过。**
 
-:card[1618]有三种值得了解的不同用途。最重要的是作为低成本塔楼治疗者：技能为两名目标提供暴击率加成，意味着以4★的低成本就能从治疗者位置提供实际的进攻支持。这种组合很难低价复制，值得投资。她在PvP防御方面也表现出色——属性构成与久经验证的低成本PvP防御锚点:card[474]相似。最后，灵魂石掉落加成对刚开始每日刷材料的初学者来说是实际的好处。总体而言，这张卡的潜力比初看更多。**值得MLB一张——2目标暴击率技能的低成本塔楼治疗者；与:card[474]类似的PvP防御；初学者附带灵魂石掉落加成。**
+:card[1618]有三种值得了解的不同用途。最重要的是作为低成本塔楼治疗者：技能为两名目标提供4★治疗者中最高的暴击率加成，以相同低成本直接取代塔楼中的:card[474]。她也是PvP刷分防御的有力选择——属性构成与:card[474]相似，后者是通过容易被击败的防御来最大化PvP奖励的成熟选择。最后，灵魂石掉落加成对刚开始每日刷材料的初学者来说是实际的好处。总体而言，这张卡的潜力比初看更多。**值得MLB一张——2目标暴击率技能的低成本塔楼治疗者；与:card[474]类似的PvP防御；初学者附带灵魂石掉落加成。**
 
 ---
 
@@ -300,7 +300,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 - :card[1601] — **跳过；想要该效果可拍卖找:card[688]** — 累积8%技能伤害；被更好选择超越
 - :card[1602] — **跳过** — 12%吸血小众且不高；弱于:card[604]或:card[1430]
 - :card[1617] — **仅适合新玩家** — 最终波次伤害增幅需MLB；更好选项来临前的过渡
-- :card[1618] — **推荐MLB一张** — 2目标暴击率技能的低成本塔楼治疗者；与:card[474]类似，PvP防御强力；初学者附带灵魂石掉落加成
+- :card[1618] — **推荐MLB一张** — 4★治疗者最高暴击率技能，塔楼中取代:card[474]；PvP刷分防御有力选择；初学者附带灵魂石掉落加成
 
 ---
 
@@ -354,7 +354,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]在最終波次提供小幅傷害增幅，需要MLB才能觸發。如果是活動卡，對還沒有更強傷害增幅選項的新玩家來說可以作為過渡。**僅適合新玩家；有更好選擇就跳過。**
 
-:card[1618]有三種值得了解的不同用途。最重要的是作為低成本塔樓治療者：技能為兩名目標提供暴擊率加成，意味著以4★的低成本就能從治療者位置提供實際的進攻支持。這種組合很難低價複製，值得投資。她在PvP防禦方面也表現出色——屬性構成與久經驗證的低成本PvP防禦錨點:card[474]相似。最後，靈魂石掉落加成對剛開始每日刷材料的初學者來說是實際的好處。總體而言，這張卡的潛力比初看更多。**值得MLB一張——2目標暴擊率技能的低成本塔樓治療者；與:card[474]類似的PvP防禦；初學者附帶靈魂石掉落加成。**
+:card[1618]有三種值得了解的不同用途。最重要的是作為低成本塔樓治療者：技能為兩名目標提供4★治療者中最高的暴擊率加成，以相同低成本直接取代塔樓中的:card[474]。她也是PvP刷分防禦的有力選擇——屬性構成與:card[474]相似，後者是通過容易被擊敗的防禦來最大化PvP獎勵的成熟選擇。最後，靈魂石掉落加成對剛開始每日刷材料的初學者來說是實際的好處。總體而言，這張卡的潛力比初看更多。**值得MLB一張——2目標暴擊率技能的低成本塔樓治療者；與:card[474]類似的PvP防禦；初學者附帶靈魂石掉落加成。**
 
 ---
 
@@ -376,7 +376,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 - :card[1601] — **跳過；想要該效果可拍賣找:card[688]** — 累積8%技能傷害；被更好選擇超越
 - :card[1602] — **跳過** — 12%吸血小眾且不高；弱於:card[604]或:card[1430]
 - :card[1617] — **僅適合新玩家** — 最終波次傷害增幅需MLB；更好選項來臨前的過渡
-- :card[1618] — **推薦MLB一張** — 2目標暴擊率技能的低成本塔樓治療者；與:card[474]類似，PvP防禦強力；初學者附帶靈魂石掉落加成
+- :card[1618] — **推薦MLB一張** — 4★治療者最高暴擊率技能，塔樓中取代:card[474]；PvP刷分防禦有力選擇；初學者附帶靈魂石掉落加成
 
 ---
 
@@ -430,7 +430,7 @@ Aquí está un primer vistazo a las nuevas cartas de La Elegía de los Ninjas. E
 
 :card[1617] proporciona una pequeña amplificación de daño en la oleada final que requiere MLB para activarse. Si es una carta de evento, podría ser un marcador de posición decente para jugadores más nuevos que aún no tienen opciones de amplificación de daño más fuertes. **Solo para jugadores nuevos; salta si tienes mejores opciones.**
 
-:card[1618] tiene tres usos distintos que vale la pena conocer. El más importante es como curador de Torre de bajo costo: su habilidad proporciona un buff de tasa crítica a dos objetivos, lo que significa que aporta soporte ofensivo real desde el slot de curador a costo de 4★ — una combinación difícil de replicar barato y que vale la pena invertir. También parece una defensora de PvP sólida — su perfil de stats es similar al de :card[474], que ha sido un ancla confiable de defensa PvP de bajo presupuesto. Por último, su aumento de caída de piedras del alma es un bono práctico para jugadores muy nuevos que grindean diarios. Esta carta tiene más potencial del que aparenta. **MLB una copia — curador de Torre de bajo costo con habilidad de crit a 2 objetivos; defensora de PvP similar a :card[474]; bonus de piedras del alma para jugadores muy nuevos.**
+:card[1618] tiene tres usos distintos que vale la pena conocer. El más importante es como curador de Torre de bajo costo: su habilidad proporciona el mayor buff de tasa crítica entre los curadores de 4★ a dos objetivos, reemplazando directamente a :card[474] en ese rol al mismo bajo costo. También es una opción probable como defensora de farmeo de PvP — su perfil de stats refleja el de :card[474], una elección probada para maximizar las recompensas de PvP con una defensa fácil de vencer. Por último, su aumento de caída de piedras del alma es un bono práctico para jugadores muy nuevos que grindean diarios. Esta carta tiene más potencial del que aparenta. **MLB una copia — curador de Torre de bajo costo con habilidad de crit a 2 objetivos; defensora de PvP similar a :card[474]; bonus de piedras del alma para jugadores muy nuevos.**
 
 ---
 
@@ -452,7 +452,7 @@ Aquí está un primer vistazo a las nuevas cartas de La Elegía de los Ninjas. E
 - :card[1601] — **Pasa; revisa la subasta para :card[688] si quieres este efecto** — 8% progresivo de daño de habilidad; superado por mejores opciones
 - :card[1602] — **Salta** — 12% de absorción de vida es de nicho y modesta; más débil que :card[604] o :card[1430]
 - :card[1617] — **Solo para jugadores nuevos** — amplificación de daño de oleada final requiere MLB; buen marcador de posición hasta que lleguen mejores opciones
-- :card[1618] — **MLB una copia** — curador de Torre de bajo costo con habilidad de crit a 2 objetivos; defensora de PvP similar a :card[474]; bonus de piedras del alma para jugadores muy nuevos
+- :card[1618] — **MLB una copia** — mayor buff de crit entre curadores de 4★, reemplaza a :card[474] en Torre; opción probable para farmeo de PvP; bonus de piedras del alma para jugadores muy nuevos
 
 ---
 
