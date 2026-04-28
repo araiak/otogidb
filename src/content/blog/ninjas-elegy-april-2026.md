@@ -24,17 +24,31 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1615] is a niche crit rate booster for Divina. There's potential here in reserve for making Divina carries more viable in world boss — crit rate is generally a strong stat — but Divina's reserve slots are already competitive, and Divina carries aren't in a strong place in the current meta. This looks like a LJS. If you play Divina, it's probably worth picking up the mochi exchange copy just in case, but hold off on heavy investment until the role makes more sense in your lineup. **Grab the exchange copy if you play Divina; hold off on heavy investment until Divina carry options improve.**
 
-:card[1611] is a progressive attack speed card with major attack speed and crit rate skill to one target, making her a fairly interesting single-target buffer for Phantasma. Attack speed is relatively uncommon for Phantasma cards, which may give her a unique slot in some team compositions. There's also some potential in endless mode for scaling auto attack damage — one of the less common ways to build Phantasma damage once you've hit damage caps.  Her progressive attack speed is probably too low a value for other formats, although it doesn't hurt.  She's probably not top tier, but as a single-target speed buffer she has a clear niche and isn't well-replicated. **Worth picking up a copy; hold off on heavy investment.**
+*Update:* Confirmed LJS, May 6 to May 10. No change.
+
+:card[1611] is a progressive attack speed card with major attack speed and crit rate skill to one target, making her a fairly interesting single-target buffer for Phantasma. Attack speed is relatively uncommon for Phantasma cards, which may give her a unique slot in some team compositions. There's also some potential in endless mode for scaling auto attack damage — one of the less common ways to build Phantasma damage once you've hit damage caps. Her progressive attack speed is probably too low a value for other formats, although it doesn't hurt. She's probably not top tier, but as a single-target speed buffer she has a clear niche and isn't well-replicated. **Worth picking up a copy; hold off on heavy investment.**
+
+*Update:* Ranking reward. Being a ranking card makes her a bit more accessible than expected — and it's a slight bump over the initial read. She lands close to the power of LJS single-target buffers like :card[741], but falls short, which is about what you'd expect from all but the top ranking rewards.
 
 :card[1616] brings a lot of silences, a chance at petrification, and more silences. There might be some real PvP application, but the effect profile is very niche and not likely to see use in most content formats. **Skip unless you have a specific PvP build in mind.**
 
+*Update:* Story card. Still an odd one — nothing has changed from the initial read. Grab an MLB for fun.
+
 :card[1521] is a progressive AoE skill damage card that would make a strong wave clearer — but that's a crowded niche. Worth noting: this card is currently marked as Divina, but based on the name it looks like it may have been intended for Anima, and this may be corrected before or shortly after launch. **Probably a skip; the wave clear niche is well-covered.**
+
+*Update:* Crimson Staff is still the May Exchange card, but she was reworked — her original abilities were replaced with a 12% HP heal to all allies at the start of each wave, which is not great. The original kit was moved to :card[1550], which comes to standard gacha after the event. Neither card is something to target.
 
 :card[1609] is another Divina progressive AoE skill card, with a small team attack speed buff. Attack speed is plentiful in Divina, and progressive AoE skill damage is a common archetype. Nothing here really differentiates him from similar options already in the pool. **Pass.**
 
+*Update:* Ranking reward. Slightly better than upcoming auction options like :card[1435] at MLB, but that's a steep price for a minor gain in an already well-covered niche.
+
 :card[1607] is a melee tank without the conditional triggers we've seen on the [wild] cards. He has an AoE skill for far enemies and 25% damage reduction with 10% damage — about average for a tank in every respect. This one looks like a story reward. **Grab your MLB copy if it's a story reward; don't expect much on auction.**
 
+*Update:* Story card — no change.
+
 :card[1619] may be a ranking card. His large drop rate boost could be very useful for farming story mode or grinding mochi outside of events. The drop rate kicks in at MLB, so if this is a ranking reward it won't be easily accessible to most players — don't overinvest. **Grab a few copies if you can — worth having for farming, and a decent hold for auction either way.**
+
+*Update:* Confirmed LJS, May 10 to May 13. Kind of a niche play for mega whales — drop rate only activates at MLB, which is too steep for most. Might be worth a mochi copy to hold for later.
 
 ---
 
@@ -50,7 +64,11 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617] provides a small damage amplification on the final wave that requires MLB to trigger. If she's an event card, she could be a decent placeholder for newer players who don't yet have stronger damage amp options. **New players only; skip if you have better options.**
 
+*Update:* Story card — no change.
+
 :card[1618] has three distinct use cases. The most important is as a low-cost Tower healer: her skill gives the highest crit rate buff of any 4★ healer to two targets, directly replacing :card[474] in that role while keeping the same low cost. She's also a likely choice as a PvP farming defender — her stat profile mirrors :card[474], a proven choice for maximizing PvP farming rewards through an easy-to-beat defense. Finally, her soulstone drop boost is a practical bonus for very new players grinding dailies. This card has more going for it than it first appears. **MLB a copy — strong Tower healer with crit rate skill, solid PvP defender similar to :card[474], and a soulstone bonus for very new players.**
+
+*Update:* Story card — definitely MLB for all players. She's very accessible, and  new players can probably get quite far with her.
 
 ---
 
@@ -58,21 +76,21 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 **5★ Cards:**
 - :card[1608] — **Niche; don't prioritize PvP orbs, but invest if you approach MLB naturally** — strong in endless with :card[740]/:card[1307] ramp; also useful in multi-round content
-- :card[1615] — **Grab the exchange copy if you play Divina; hold off on heavy investment** — niche crit rate buffer for Divina reserve; waits for Divina carry options to improve
-- :card[1611] — **Worth a copy; hold off on heavy investment** — progressive speed + crit rate buffer, uncommon in Phantasma; real niche in endless and single-target setups
-- :card[1616] — **Skip unless you have a specific PvP build** — silence/petrification kit is very niche
-- :card[1521] — **Skip** — progressive AoE skill damage in a crowded niche; *see attribute note*
-- :card[1609] — **Pass** — nothing differentiates him from similar Divina AoE options already in the pool
-- :card[1607] — **Grab the MLB if it's a story reward** — average tank, don't expect much on auction
-- :card[1619] — **Grab a few copies for farming and auction value** — large drop rate boost, expensive to activate but worth holding
+- :card[1615] — **Mochi copy if you play Divina** — LJS May 6–10; lineups didn't come together, pretty niche otherwise
+- :card[1611] — **Worth picking up at ranking** — ranking reward; close to :card[741] power but falls short; real Phantasma niche in endless
+- :card[1616] — **Story card; grab an MLB** — odd kit, nothing changed from initial read
+- :card[1521] — **Skip** — still May Exchange but reworked to a weak wave-start heal; original kit moved to :card[1550] (standard gacha post-event)
+- :card[1609] — **Pass** — ranking reward; slightly better than :card[1435] at MLB, steep price for minor gain
+- :card[1607] — **Story card; grab the MLB** — average tank, no change
+- :card[1619] — **Mochi copy to hold; don't push for MLB** — LJS May 10–13; niche for mega whales, drop rate at MLB
 
 **4★ Cards:**
 - :card[1600] — **Mochi copy for newer players; skip if your reserve is solid** — 43% crit damage to top 2 allies at level 77; use 4★ PvP orbs for the skill
 - :card[1610] — **Decent filler if it's a story reward** — small Divina crit rate at MLB
 - :card[1601] — **Pass; check auction for :card[688] if you want this effect** — progressive 8% skill damage, outclassed by better options
 - :card[1602] — **Skip** — lifesteal at 12% is niche and modest; weaker than :card[604] or :card[1430]
-- :card[1617] — **New players only** — final wave damage amp requires MLB; decent placeholder until better options arrive
-- :card[1618] — **MLB a copy** — highest crit rate buff among 4★ healers, directly replaces :card[474] in Tower; likely PvP farming defender similar to :card[474]; soulstone drop boost for very new players
+- :card[1617] — **Story card; new players only** — final wave damage amp requires MLB, no change
+- :card[1618] — **Story card; definitely MLB for all players** — very accessible, Tower healer with crit skill, PvP defender, soulstone bonus
 
 ---
 
@@ -98,19 +116,33 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1615]はDivina向けのニッチなクリティカル率バッファーです。ワールドボスでDivinaキャリーを強化するリザーブとして使える可能性がありますが、Divinaのリザーブ枠は競争が激しく、現在のメタではDivinaキャリーも強くありません。LJSになると予想されます。Divinaを使うなら餅での交換コピーを念のため入手しておくのが良いでしょう。現状では重い投資は控えることをお勧めします。**Divinaプレイヤーは交換コピーを確保；Divinaキャリー環境が改善されるまで重い投資は控えよう。**
 
+*Update:* LJS確定、5月6日〜10日。変わりなし。
+
 :card[1611]は累積攻撃速度にクリティカル率も備えた、Phantasma向けのシングルターゲットバッファーとして面白い性能です。攻撃速度はPhantasmaカードでは比較的珍しく、特定のチーム編成でユニークなポジションを持てます。エンドレスモードでのオートアタックダメージのスケーリングにも使えます。トップティアとは言えませんが、シングルターゲットの速度バッファーとして明確なニッチがあります。**1枚確保する価値あり；重い投資は控えつつ、ニッチは本物。**
 
+*Update:* ランキング報酬。:card[741]のようなLJSシングルターゲットバッファーに近い性能ですが、一歩及ばない——トップランキング報酬以外はおおむねそうなります。
+
 :card[1616]はサイレンスが多く、石化チャンスもあり、さらにサイレンスという構成です。PvPでの使い道があるかもしれませんが、非常にニッチで、ほとんどのコンテンツでは活用しにくいでしょう。**特定のPvP構成がなければスキップ。**
+
+*Update:* ストーリーカード。依然として独特なキットですが、初期評価から変わりなし。MLBを楽しみで確保しましょう。
 
 :card[1521]は累積AoEスキルダメージカードで優れたウェーブクリアラーになれますが、この役割は既に多くの選択肢があります。現在Divinaとして登録されていますが、キット内容からするとAnima向けに意図されたもののように見え、リリース前後に修正される可能性があります。**おそらくスキップ；ウェーブクリアのニッチはすでに十分な選択肢がある。**
 
 :spoiler["現在Divinaとして登録されていますが、キット設計からAnima向けに意図されている可能性があります。投資前にこの点を確認することをお勧めします。"]
 
+*Update:* クリムゾンスタッフは引き続き5月交換カードですが、リワーク済み——元のアビリティが削除され、各ウェーブ開始時に全味方のHPを12%回復するという内容に変更されました。あまり強くありません。元のキットは:card[1550]に移行し、イベント後に通常ガチャへ追加されます。どちらも目標とする必要はありません。
+
 :card[1609]はDivinaの累積AoEスキルカードで、小さなチーム攻撃速度バフも持ちます。Divinaには攻撃速度が豊富であり、累積AoEスキルダメージも既に多くのカードが同様のアーキタイプを持っています。プールにある同様の選択肢との差別化要素がありません。**パス。**
+
+*Update:* ランキング報酬。MLB時に:card[1435]などの今後のオークション選択肢よりわずかに優れていますが、すでに充実したニッチへのわずかな向上のために高い投資が必要です。
 
 :card[1607]は[ワイルド]カードに見られるような条件なしの近接タンクです。遠距離の敵へのAoEスキルと25% DR、10%ダメージを持ちますが、タンクとしては全ての面で平均的です。ストーリー報酬のように見えます。**ストーリー報酬ならMLBコピーを確保；オークションへの期待は低く。**
 
+*Update:* ストーリーカード——変わりなし。
+
 :card[1619]はランキングカードかもしれません。大きなドロップ率ブーストはストーリーモードでの農場や餅農業に非常に役立てます。レベル70でドロップ率が発動するため、多くのプレイヤーが使いこなすのは難しいでしょう。過投資は禁物です。**農場用と資産価値のために数枚確保しておく価値あり。**
+
+*Update:* LJS確定、5月10日〜13日。ドロップ率はMLBでのみ発動するため、ほとんどのプレイヤーには手が届きにくいメガホワイル向けのニッチなプレイです。後々のために餅コピーを1枚確保しておく価値はあるかもしれません。
 
 ---
 
@@ -126,7 +158,11 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]はMLBが必要な最終ウェーブでの小さなダメージアンプを提供します。イベントカードであれば、より強いダメージアンプを持っていない新規プレイヤーの繋ぎとして使えます。**新規プレイヤーのみ；より良い選択肢があるならスキップ。**
 
+*Update:* ストーリーカード——変わりなし。
+
 :card[1618]には3つの異なる用途があります。最も重要なのはタワーでの低コストヒーラーとしての役割です。スキルが2体の味方に4★ヒーラー中最高のクリティカル率バフを付与し、同じ低コストのまま:card[474]を直接置き換えられます。また、PvP農業防衛の有力候補でもあります——スタット構成が:card[474]に似ており、こちらは相手に倒されやすい防衛でPvP報酬を最大化する実績のある選択肢です。さらに、ソウルストーンドロップ増加は毎日のグラインドを続けている初心者プレイヤーへのボーナスにもなります。全体的に、最初に見えるより活躍の幅が広いカードです。**1枚MLBにする価値あり——タワーでの2体クリ率スキルが強力；:card[474]に似たPvP防衛にも優秀；初心者向けソウルストーンボーナスも。**
+
+*Update:* ストーリーカード——全プレイヤーに絶対MLBを推奨。非常に入手しやすく、下位ステータスがいずれ上限になる可能性はありますが、おそらくかなり先まで活躍できます。
 
 ---
 
@@ -174,19 +210,33 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1615]는 Divina를 위한 틈새 크리티컬 확률 버퍼입니다. 월드 보스에서 Divina 캐리의 효과를 높이는 리저브로 잠재력이 있지만, Divina 리저브 경쟁이 치열하고 현재 메타에서 Divina 캐리는 강하지 않습니다. LJS로 예상됩니다. Divina를 사용한다면 모치 교환 코피를 확보해두는 것이 좋습니다. 현재는 과도한 투자를 자제하는 것이 좋습니다. **Divina 플레이어라면 교환 코피 확보; Divina 캐리 환경이 개선될 때까지 과도한 투자는 보류.**
 
+*Update:* LJS 확정, 5월 6일〜10일. 변경 없음.
+
 :card[1611]은 크리티컬 확률이 포함된 누적 공격 속도 카드로, Phantasma의 흥미로운 싱글 타겟 버퍼입니다. 공격 속도는 Phantasma 카드에서 비교적 드문 편으로, 특정 팀 구성에서 독특한 자리를 차지할 수 있습니다. 엔들리스 모드에서 오토 어택 데미지 스케일링에도 활용할 수 있습니다. 탑 티어라고는 할 수 없지만 싱글 타겟 속도 버퍼로서 명확한 틈새가 있습니다. **코피 1장 확보할 가치 있음; 과도한 투자는 보류, 틈새는 진짜임.**
 
+*Update:* 랭킹 보상. :card[741]과 같은 LJS 싱글 타겟 버퍼에 가까운 성능이지만, 최상위 랭킹 보상이 아닌 이상 예상대로 약간 못 미칩니다.
+
 :card[1616]은 다수의 침묵, 석화 기회, 그리고 더 많은 침묵을 가지고 있습니다. PvP에서의 활용 가능성이 있을 수 있지만 매우 틈새적이며 대부분의 컨텐츠 형식에서는 활용하기 어렵습니다. **특정 PvP 빌드가 없다면 스킵.**
+
+*Update:* 스토리 카드. 여전히 독특한 킷으로 초기 평가에서 달라진 것은 없습니다. 재미로 MLB를 확보해보세요.
 
 :card[1521]은 강력한 웨이브 클리어 실력을 보여줄 수 있는 누적 AoE 스킬 데미지 카드이지만, 이미 이 역할을 채울 선택지가 많습니다. 현재 Divina로 등록되어 있지만 킷 내용으로 보아 Anima를 위한 것일 수 있으며, 출시 전후로 수정될 가능성이 있습니다. **아마도 스킵; 웨이브 클리어 틈새는 이미 충분한 선택지가 있음.**
 
 :spoiler["현재 Divina로 등록되어 있지만, 킷 설계상 Anima를 위한 것으로 보입니다. 투자 전 이 점을 확인하는 것이 좋습니다."]
 
+*Update:* 크림슨 스태프는 여전히 5월 교환 카드이지만 리워크되었습니다 — 원래 어빌리티가 제거되고 매 웨이브 시작 시 전체 아군 HP를 12% 회복하는 효과로 교체되었습니다. 그다지 강하지 않습니다. 원래 킷은 :card[1550]으로 이동되며, 이벤트 이후 일반 가챠에 추가됩니다. 어느 쪽도 목표로 삼을 필요는 없습니다.
+
 :card[1609]는 소규모 팀 공격 속도 버프도 가진 또 다른 Divina 누적 AoE 스킬 카드입니다. Divina에는 공격 속도가 풍부하며 누적 AoE 스킬 데미지는 흔한 아키타입입니다. 이미 풀에 있는 비슷한 옵션들과 차별화되는 점이 없습니다. **패스.**
+
+*Update:* 랭킹 보상. :card[1435] MLB 같은 향후 경매 옵션보다는 약간 낫지만, 이미 선택지가 풍부한 틈새에서의 작은 향상을 위해 높은 투자가 필요합니다.
 
 :card[1607]은 [와일드] 카드에서 볼 수 있는 조건부 트리거 없는 근접 탱크입니다. 원거리 적에 대한 AoE 스킬과 25% DR, 10% 데미지를 가지고 있지만 탱크로서 모든 면에서 평균적입니다. 스토리 보상으로 보입니다. **스토리 보상이라면 MLB 코피 확보; 옥션에서는 기대하지 말 것.**
 
+*Update:* 스토리 카드 — 변경 없음.
+
 :card[1619]는 랭킹 카드일 수 있습니다. 큰 드롭 확률 부스트는 스토리 모드 파밍이나 이벤트 외 모치 파밍에 매우 유용할 수 있습니다. 레벨 70에서 드롭 확률이 발동되므로 과도하게 투자하지 않는 것이 좋습니다. **파밍 및 옥션 가치를 위해 몇 장 확보할 것.**
+
+*Update:* LJS 확정, 5월 10일〜13일. 드롭 확률이 MLB에서만 발동되어 대부분의 플레이어에게는 접근하기 어려운 메가 고래용 틈새 플레이입니다. 나중을 위해 모치 코피 하나를 확보해두는 것은 가치가 있을 수 있습니다.
 
 ---
 
@@ -202,7 +252,11 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]은 MLB가 필요한 최후의 웨이브에서 소규모 데미지 증폭을 제공합니다. 이벤트 카드라면, 더 강한 데미지 증폭 옵션을 아직 갖추지 못한 신규 플레이어의 임시 선택으로 쓸 수 있습니다. **신규 플레이어 전용; 더 나은 옵션이 있다면 스킵.**
 
+*Update:* 스토리 카드 — 변경 없음.
+
 :card[1618]에는 세 가지 뚜렷한 용도가 있습니다. 가장 중요한 것은 저비용 타워 힐러로서의 역할입니다. 스킬이 두 아군에게 4★ 힐러 중 최고 크리티컬 확률 버프를 주므로, 같은 저비용으로 타워에서 :card[474]를 직접 대체할 수 있습니다. 또한 PvP 파밍 방어의 유력한 선택지이기도 합니다 — 스탯 구성이 상대가 이기기 쉬운 방어로 PvP 보상을 극대화하는 검증된 선택지인 :card[474]와 유사합니다. 마지막으로, 소울 스톤 드롭 부스트는 데일리 파밍을 시작한 매우 초보 플레이어에게 유용한 보너스입니다. 처음 보이는 것보다 활용 폭이 넓은 카드입니다. **MLB 1장 추천 — 2타겟 크리 확률 스킬이 있는 타워 저비용 힐러; :card[474]와 유사한 PvP 방어; 초보 플레이어에게 소울 스톤 보너스.**
+
+*Update:* 스토리 카드 — 모든 플레이어에게 MLB를 강력 추천합니다. 매우 접근하기 쉬우며, 낮은 스탯이 언젠가 한계를 드러낼 수 있지만 상당히 멀리까지 활약할 수 있습니다.
 
 ---
 
@@ -250,19 +304,33 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1615]是Divina的小众暴击率加成卡。作为备用位在世界BOSS中提升Divina输出有一定潜力，但Divina的备用位竞争已经非常激烈，且当前元游中Divina输出也不够强。预计是LJS。如果你使用Divina，建议顺手拿一张糯米糕交换副本以备不时之需，但暂时不要过度投资。**Divina玩家抓交换副本；等Divina输出环境改善再重投资。**
 
+*Update:* 确定LJS，5月6日至10日。无变化。
+
 :card[1611]是带有暴击率加成的累积攻击速度卡，是一张有趣的Phantasma单体缓冲。攻击速度在Phantasma卡中相对少见，可能在某些队伍中占据独特位置。在无尽模式中通过普通攻击伤害叠加也有发挥空间。可能称不上顶级，但作为单体速度缓冲有明确的小众用途。**值得拿一张副本；暂缓重投资，但小众确实存在。**
 
+*Update:* 排名奖励。性能接近:card[741]等LJS单体目标缓冲，但略有不及——这也是非顶尖排名奖励的正常表现。
+
 :card[1616]携带大量沉默、一定概率的石化以及更多沉默。可能在PvP中有些用途，但效果类型非常小众，在大多数内容中难以发挥作用。**没有特定PvP构建就跳过。**
+
+*Update:* 剧情卡——与初始评估相同，技能组合依然独特。随手练一张满破玩玩就好。
 
 :card[1521]是累积AoE技能伤害卡，能成为不错的清怪卡，但这个定位竞争者众多。值得注意的是：这张卡目前标注为Divina，但从技能设计来看似乎本意是Anima属性，可能在发布前后会更正。**大概率跳过；清怪定位已有大量选择。**
 
 :spoiler["目前标注为Divina，但从技能设计来看可能是Anima属性。投资前建议关注是否会更正。"]
 
+*Update:* 朱红法杖仍然是5月交换卡，但进行了重做——原有能力被替换为每波次开始时为全体队友回复12% HP，效果一般。原版技能组移至:card[1550]，活动结束后加入常规抽卡池。两张都不值得特别追求。
+
 :card[1609]是另一张带有小幅队伍攻击速度加成的Divina累积AoE技能卡。Divina不缺攻击速度，累积AoE技能伤害也是常见的设计。他和卡池中已有的类似卡牌没有明显区别。**跳过。**
+
+*Update:* 排名奖励。MLB状态下略优于:card[1435]等即将到来的拍卖选项，但为了在已经拥挤的定位上获得微小提升而付出高额代价并不值得。
 
 :card[1607]是没有[万能]卡常见触发条件的近战坦克。拥有针对远处敌人的AoE技能，25%减伤和10%伤害——作为坦克各方面都十分普通。看起来是剧情奖励。**如果是剧情奖励，拿下MLB副本；不要对拍卖有太高期望。**
 
+*Update:* 剧情卡——无变化。
+
 :card[1619]可能是排名卡。大幅掉落率提升对剧情模式刷材料或刷糯米糕非常有用。掉落率在70级时才生效，不要过度投资。**为刷材料和拍卖价值多拿几张。**
+
+*Update:* 确定LJS，5月10日至13日。掉落率需要MLB才能激活，对大多数玩家来说门槛太高，属于大佬级别的小众玩法。或许值得拿一张糯米糕副本留着备用。
 
 ---
 
@@ -278,7 +346,11 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]在最终波次提供小幅伤害增幅，需要MLB才能触发。如果是活动卡，对还没有更强伤害增幅选项的新玩家来说可以作为过渡。**仅适合新玩家；有更好选择就跳过。**
 
+*Update:* 剧情卡——无变化。
+
 :card[1618]有三种值得了解的不同用途。最重要的是作为低成本塔楼治疗者：技能为两名目标提供4★治疗者中最高的暴击率加成，以相同低成本直接取代塔楼中的:card[474]。她也是PvP刷分防御的有力选择——属性构成与:card[474]相似，后者是通过容易被击败的防御来最大化PvP奖励的成熟选择。最后，灵魂石掉落加成对刚开始每日刷材料的初学者来说是实际的好处。总体而言，这张卡的潜力比初看更多。**值得MLB一张——2目标暴击率技能的低成本塔楼治疗者；与:card[474]类似的PvP防御；初学者附带灵魂石掉落加成。**
+
+*Update:* 剧情卡——所有玩家都强烈建议MLB。获取难度很低，虽然她的基础属性可能在某些阶段会有所限制，但大多数情况下都能发挥很长时间的价值。
 
 ---
 
@@ -326,19 +398,33 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1615]是Divina的小眾暴擊率加成卡。作為備用位在世界BOSS中提升Divina輸出有一定潛力，但Divina的備用位競爭已經非常激烈，且當前元遊中Divina輸出也不夠強。預計是LJS。如果你使用Divina，建議順手拿一張糯米糕交換副本以備不時之需，但暫時不要過度投資。**Divina玩家抓交換副本；等Divina輸出環境改善再重投資。**
 
+*Update:* 確定LJS，5月6日至10日。無變化。
+
 :card[1611]是帶有暴擊率加成的累積攻擊速度卡，是一張有趣的Phantasma單體緩衝。攻擊速度在Phantasma卡中相對少見，可能在某些隊伍中佔據獨特位置。在無盡模式中通過普通攻擊傷害疊加也有發揮空間。可能稱不上頂級，但作為單體速度緩衝有明確的小眾用途。**值得拿一張副本；暫緩重投資，但小眾確實存在。**
 
+*Update:* 排名獎勵。性能接近:card[741]等LJS單體目標緩衝，但略有不及——這也是非頂尖排名獎勵的正常表現。
+
 :card[1616]攜帶大量沉默、一定概率的石化以及更多沉默。可能在PvP中有些用途，但效果類型非常小眾，在大多數內容中難以發揮作用。**沒有特定PvP構建就跳過。**
+
+*Update:* 劇情卡——與初始評估相同，技能組合依然獨特。隨手練一張滿破玩玩就好。
 
 :card[1521]是累積AoE技能傷害卡，能成為不錯的清怪卡，但這個定位競爭者眾多。值得注意的是：這張卡目前標注為Divina，但從技能設計來看似乎本意是Anima屬性，可能在發布前後會更正。**大概率跳過；清怪定位已有大量選擇。**
 
 :spoiler["目前標注為Divina，但從技能設計來看可能是Anima屬性。投資前建議關注是否會更正。"]
 
+*Update:* 朱紅法杖仍然是5月交換卡，但進行了重做——原有能力被替換為每波次開始時為全體隊友回復12% HP，效果一般。原版技能組移至:card[1550]，活動結束後加入常規抽卡池。兩張都不值得特別追求。
+
 :card[1609]是另一張帶有小幅隊伍攻擊速度加成的Divina累積AoE技能卡。Divina不缺攻擊速度，累積AoE技能傷害也是常見的設計。他和卡池中已有的類似卡牌沒有明顯區別。**跳過。**
+
+*Update:* 排名獎勵。MLB狀態下略優於:card[1435]等即將到來的拍賣選項，但為了在已經擁擠的定位上獲得微小提升而付出高額代價並不值得。
 
 :card[1607]是沒有[萬能]卡常見觸發條件的近戰坦克。擁有針對遠處敵人的AoE技能，25%減傷和10%傷害——作為坦克各方面都十分普通。看起來是劇情獎勵。**如果是劇情獎勵，拿下MLB副本；不要對拍賣有太高期望。**
 
+*Update:* 劇情卡——無變化。
+
 :card[1619]可能是排名卡。大幅掉落率提升對劇情模式刷材料或刷糯米糕非常有用。掉落率在70級時才生效，不要過度投資。**為刷材料和拍賣價值多拿幾張。**
+
+*Update:* 確定LJS，5月10日至13日。掉落率需要MLB才能激活，對大多數玩家來說門檻太高，屬於大佬級別的小眾玩法。或許值得拿一張糯米糕副本留著備用。
 
 ---
 
@@ -354,7 +440,11 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1617]在最終波次提供小幅傷害增幅，需要MLB才能觸發。如果是活動卡，對還沒有更強傷害增幅選項的新玩家來說可以作為過渡。**僅適合新玩家；有更好選擇就跳過。**
 
+*Update:* 劇情卡——無變化。
+
 :card[1618]有三種值得了解的不同用途。最重要的是作為低成本塔樓治療者：技能為兩名目標提供4★治療者中最高的暴擊率加成，以相同低成本直接取代塔樓中的:card[474]。她也是PvP刷分防禦的有力選擇——屬性構成與:card[474]相似，後者是通過容易被擊敗的防禦來最大化PvP獎勵的成熟選擇。最後，靈魂石掉落加成對剛開始每日刷材料的初學者來說是實際的好處。總體而言，這張卡的潛力比初看更多。**值得MLB一張——2目標暴擊率技能的低成本塔樓治療者；與:card[474]類似的PvP防禦；初學者附帶靈魂石掉落加成。**
+
+*Update:* 劇情卡——所有玩家都強烈建議MLB。獲取難度很低，雖然她的基礎屬性可能在某些階段會有所限制，但大多數情況下都能發揮很長時間的價值。
 
 ---
 
@@ -402,19 +492,33 @@ Aquí está un primer vistazo a las nuevas cartas de La Elegía de los Ninjas. E
 
 :card[1615] es un buffer de tasa crítica de nicho para Divina. Hay potencial aquí en reserva para hacer a los carries de Divina más viables en el jefe mundial, pero los slots de reserva de Divina ya son competitivos y los carries de Divina no están en una posición sólida en el meta actual. Esto parece un LJS. Si juegas Divina, probablemente vale la pena conseguir la copia del intercambio de mochi por si acaso, pero espera antes de invertir fuertemente. **Consigue la copia del intercambio si juegas Divina; espera para invertir fuertemente hasta que las opciones de carry de Divina mejoren.**
 
+*Update:* LJS confirmado, del 6 al 10 de mayo. Sin cambios.
+
 :card[1611] es una carta progresiva de velocidad de ataque con tasa crítica añadida, siendo un buffer de objetivo único bastante interesante para Phantasma. La velocidad de ataque es relativamente poco común en las cartas de Phantasma, lo que puede darle un slot único en algunas composiciones de equipo. También tiene potencial en el modo sin fin para escalar el daño de ataque automático. Probablemente no sea de primer nivel, pero como buffer de velocidad de objetivo único tiene un nicho claro. **Vale la pena conseguir una copia; espera antes de invertir fuertemente, pero el nicho es real.**
 
+*Update:* Recompensa de ranking. Su rendimiento se acerca al de buffers de objetivo único LJS como :card[741], pero se queda corta — que es lo esperado de todas las recompensas de ranking salvo las del top.
+
 :card[1616] trae una gran cantidad de silencios, una oportunidad de petrificación y más silencios. Puede haber alguna aplicación en PvP, pero el perfil de efectos es muy de nicho y no es probable que se use en la mayoría de los formatos de contenido. **Salta a menos que tengas una construcción de PvP específica en mente.**
+
+*Update:* Carta de historia. Sigue siendo un kit peculiar, nada ha cambiado desde la valoración inicial. Consigue un MLB por diversión.
 
 :card[1521] es una carta de daño de habilidad AoE progresivo que haría un buen limpiador de oleadas — pero ese es un nicho concurrido. Vale la pena notar: esta carta está marcada como Divina, aunque basándose en el kit parece que puede haber sido destinada para Anima, y esto puede corregirse antes o poco después del lanzamiento. **Probablemente un salto; el nicho de limpiar oleadas está bien cubierto.**
 
 :spoiler["La carta está actualmente marcada como Divina, pero basándose en el diseño del kit puede estar destinada para Anima. Vale la pena vigilar esto antes de comprometerse a invertir."]
 
+*Update:* El Bastón Carmesí sigue siendo la carta del Intercambio de mayo, pero fue rediseñada — sus habilidades originales fueron reemplazadas por una restauración del 12% de HP a todos los aliados al inicio de cada oleada, lo cual no es especialmente útil. El kit original se movió a :card[1550], que llega a la gacha estándar tras el evento. Ninguna de las dos cartas merece ser objetivo.
+
 :card[1609] es otra carta de habilidad AoE progresiva de Divina, con un pequeño buff de velocidad de ataque de equipo. La velocidad de ataque es abundante en Divina, y el daño de habilidad AoE progresivo es un arquetipo común. Nada aquí realmente lo diferencia de opciones similares ya en el pool. **Pasa.**
+
+*Update:* Recompensa de ranking. Es ligeramente mejor que opciones de subasta próximas como :card[1435] a MLB, pero es un precio alto por una mejora menor en un nicho ya bien cubierto.
 
 :card[1607] es un tanque cuerpo a cuerpo sin los desencadenantes condicionales que hemos visto en las cartas [libre]. Tiene una habilidad AoE para enemigos lejanos y 25% de reducción de daño con 10% de daño — bastante promedio para un tanque en todos los aspectos. Este parece una recompensa de historia. **Consigue tu copia MLB si es una recompensa de historia; no esperes mucho en la subasta.**
 
+*Update:* Carta de historia — sin cambios.
+
 :card[1619] puede ser una carta de ranking. Su gran aumento de tasa de caída podría ser muy útil para farmear en el modo historia o para farmear mochi fuera de eventos. La tasa de caída entra en juego a nivel 70, así que no sobreinviertas. **Consigue algunas copias si puedes — vale la pena tenerla para farmear y como activo de subasta de cualquier manera.**
+
+*Update:* LJS confirmado, del 10 al 13 de mayo. Es una jugada de nicho para megaballenas — el gran aumento de tasa de caída solo se activa a MLB, lo cual es demasiado caro para la mayoría. Puede valer la pena conseguir una copia de mochi para guardar para más adelante.
 
 ---
 
@@ -430,7 +534,11 @@ Aquí está un primer vistazo a las nuevas cartas de La Elegía de los Ninjas. E
 
 :card[1617] proporciona una pequeña amplificación de daño en la oleada final que requiere MLB para activarse. Si es una carta de evento, podría ser un marcador de posición decente para jugadores más nuevos que aún no tienen opciones de amplificación de daño más fuertes. **Solo para jugadores nuevos; salta si tienes mejores opciones.**
 
+*Update:* Carta de historia — sin cambios.
+
 :card[1618] tiene tres usos distintos que vale la pena conocer. El más importante es como curador de Torre de bajo costo: su habilidad proporciona el mayor buff de tasa crítica entre los curadores de 4★ a dos objetivos, reemplazando directamente a :card[474] en ese rol al mismo bajo costo. También es una opción probable como defensora de farmeo de PvP — su perfil de stats refleja el de :card[474], una elección probada para maximizar las recompensas de PvP con una defensa fácil de vencer. Por último, su aumento de caída de piedras del alma es un bono práctico para jugadores muy nuevos que grindean diarios. Esta carta tiene más potencial del que aparenta. **MLB una copia — curador de Torre de bajo costo con habilidad de crit a 2 objetivos; defensora de PvP similar a :card[474]; bonus de piedras del alma para jugadores muy nuevos.**
+
+*Update:* Carta de historia — definitivamente MLB para todos los jugadores. Es muy accesible, y aunque sus stats más bajos pueden limitar su techo en algún momento, probablemente puedas llegar bastante lejos con ella.
 
 ---
 
