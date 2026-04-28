@@ -1,15 +1,69 @@
 {
-  "generated_at": "2026-04-21T10:06:01Z",
-  "events": [],
+  "generated_at": "2026-04-28T07:14:19Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "178",
+      "start": "2026-05-04T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "name": "The Ninjas' Elegy",
+      "half": "2026-05-06T07:00:00Z",
+      "kill": "2026-05-15T07:00:00Z"
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "278",
-      "start": "2026-04-21T07:00:00Z",
-      "end": "2026-04-28T07:00:00Z",
+      "banner_id": "279",
+      "start": "2026-04-25T07:00:00Z",
+      "end": "2026-05-06T07:00:00Z",
       "cards": [
         {
-          "id": "1608"
+          "id": "1602"
+        },
+        {
+          "id": "1601"
+        },
+        {
+          "id": "1610"
+        }
+      ],
+      "pity_step": 35
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "280",
+      "start": "2026-05-06T07:00:00Z",
+      "end": "2026-05-10T07:00:00Z",
+      "cards": [
+        {
+          "id": "1615"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "280"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "281",
+      "start": "2026-05-10T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "cards": [
+        {
+          "id": "1619"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "280"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "282",
+      "start": "2026-05-13T07:00:00Z",
+      "end": "2026-05-20T07:00:00Z",
+      "cards": [
+        {
+          "id": "1550"
         }
       ],
       "pity_step": 100
@@ -40,6 +94,91 @@
       "price_add": 15,
       "card": {
         "id": "1582"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1521",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-04-30T16:00:00Z",
+      "end": "2026-06-30T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1521"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1601",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-05-10T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1601"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1602",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-05-10T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1602"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1610",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-05-10T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1610"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1615",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-05-06T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1615"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1619",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-05-06T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1619"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1600",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-05-06T07:00:00Z",
+      "end": "2026-05-13T07:00:00Z",
+      "card": {
+        "id": "1600"
       }
     },
     {
@@ -573,6 +712,12 @@
       "event_name": "Alice in Ayakashi Land",
       "event_date": "2026-03-29",
       "estimated_date": "2026-10-15"
+    },
+    {
+      "event_id": "178",
+      "event_name": "The Ninjas' Elegy",
+      "event_date": "2026-05-04",
+      "estimated_date": "2026-12-15"
     }
   ]
 }

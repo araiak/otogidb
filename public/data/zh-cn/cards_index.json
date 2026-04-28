@@ -8142,29 +8142,22 @@
     "1521": {
       "abilities": [
         {
-          "description": "每回合开始时，自身技能伤害15%增加",
+          "description": "每回合开始时，己方全体队员血量12%回复",
           "name": "太阳之核",
           "tags": [
             "Wave Start",
-            "Self",
-            "Skill DMG"
+            "Team",
+            "AoE",
+            "Heal"
           ],
           "unlock_level": 75
-        },
-        {
-          "description": "每回合开始时，自身战斗伤害15%增加",
-          "name": "烈焰共舞",
-          "tags": [
-            "Wave Start",
-            "Self",
-            "DMG Boost"
-          ],
-          "unlock_level": 90
         }
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101521",
       "bonds": [
@@ -8183,29 +8176,28 @@
       "playable": true,
       "receives_special_bond": false,
       "skill": {
-        "delay_lb0": null,
-        "delay_mlb": null,
-        "description": "对敌方全体造成{value}点伤害，并使目标{probability}沉默",
+        "delay_lb0": "33.08%",
+        "delay_mlb": "39.48%",
+        "description": "对2名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
         "name": "赤色波动",
-        "prob_lb0": "83.65%",
-        "prob_mlb": "100.65%",
-        "slv_lb0": "1,644",
-        "slv_mlb": "1,964",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,674",
+        "slv_mlb": "3,194",
         "tags": [
           "DMG",
-          "AoE",
-          "Silence",
-          "Debuff"
+          "Multi",
+          "DMG Up"
         ]
       },
       "stats": {
         "attribute_name": "Divina",
-        "base_atk": 4800,
-        "base_hp": 3200,
+        "base_atk": 4465,
+        "base_hp": 3100,
         "cost": 1,
         "crit": 2250,
-        "max_atk": 14400,
-        "max_hp": 9600,
+        "max_atk": 13400,
+        "max_hp": 9300,
         "max_level": 70,
         "rarity": 5,
         "speed": 1300,
@@ -9442,6 +9434,144 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1550": {
+      "abilities": [
+        {
+          "description": "每回合开始时，自身技能伤害15%增加",
+          "name": "高速行驶",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，自身战斗伤害15%增加",
+          "name": "穿越田野",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101550",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1550",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1777360456/otogi/android/101550_9abf9498e364eaa70410b794322f664b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1777360457/otogi/cards_hd/101550_hd_82a5bc51e113516a629cc30aad6dbad4.png"
+      },
+      "name": "小火车",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "对敌方全体造成{value}点伤害，并使目标{probability}沉默",
+        "name": "煤炭大胃王",
+        "prob_lb0": "83.65%",
+        "prob_mlb": "100.65%",
+        "slv_lb0": "1,644",
+        "slv_mlb": "1,964",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4800,
+        "base_hp": 3200,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 9600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1551": {
+      "abilities": [
+        {
+          "description": "暴击伤害42%增加。(除助战外，己方全体仅生效1次)",
+          "name": "电光石火",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101551",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1551",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1777360455/otogi/android/101551_22dc58910f887aeec59b9fc6f8d14956.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1777360456/otogi/cards_hd/101551_hd_3e417fcbbd717daf7727c362838b0bcf.png"
+      },
+      "name": "朔夜",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "全速前进",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
       }
     },
     "156": {
@@ -10721,7 +10851,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101600",
       "bonds": [
@@ -10783,7 +10915,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101601",
       "bonds": [
@@ -10844,7 +10979,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101602",
       "bonds": [
@@ -10968,8 +11106,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101607",
       "bonds": [
@@ -11118,7 +11258,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101609",
       "bonds": [
@@ -11244,7 +11386,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101610",
       "bonds": [
@@ -11317,7 +11462,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101611",
       "bonds": [
@@ -11440,8 +11587,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101614",
       "bonds": [
@@ -11516,7 +11665,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101615",
       "bonds": [
@@ -11586,8 +11738,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101616",
       "bonds": [
@@ -11649,8 +11803,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101617",
       "bonds": [
@@ -11710,8 +11866,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101618",
       "bonds": [
@@ -11781,7 +11939,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101619",
       "bonds": [
@@ -61496,8 +61657,8 @@
       }
     }
   },
-  "data_hash": "e0d1d3c0",
+  "data_hash": "30c5d887",
   "locale": "zh-cn",
-  "total_cards": 950,
-  "version": "6ff5af5"
+  "total_cards": 952,
+  "version": "9b3b2c7"
 }
