@@ -14093,12 +14093,12 @@
       "Debuff"
     ]
   },
-  "1521": {
-    "id": "1521",
-    "name": "Crimson Wave",
+  "1550": {
+    "id": "1550",
+    "name": "Coal Guzzler",
     "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Silence.",
-    "card_id": "1521",
-    "card_name": "Crimson Staff",
+    "card_id": "1550",
+    "card_name": "Loco",
     "ie": "ATK<540,16>",
     "ts": "enemy;count<5>",
     "de": "SILENCE<5>;HIT<25.00%,0.85%>",
@@ -14108,6 +14108,38 @@
       "AoE",
       "Silence",
       "Debuff"
+    ]
+  },
+  "1551": {
+    "id": "1551",
+    "name": "Full Throttle",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1551",
+    "card_name": "Sakuya",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1521": {
+    "id": "1521",
+    "name": "Crimson Wave",
+    "description": "Deals {value} DMG to the 2 enemies with the highest ATK, target receives {delay1} more DMG for a limited time.",
+    "card_id": "1521",
+    "card_name": "Crimson Staff",
+    "ie": "ATK<880,26>",
+    "ts": "enemy;count<2>;max_atk",
+    "de": "SHIELD<-11.00%,-0.32%,8>",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi",
+      "DMG Up"
     ]
   },
   "20001": {

@@ -17682,12 +17682,12 @@
     ],
     "synergy_partners": []
   },
-  "152101": {
-    "id": "152101",
-    "name": "Solar Core",
+  "155001": {
+    "id": "155001",
+    "name": "High Speed Travel",
     "description": "Increases 15% of skill DMG dealt at the start of each wave.",
-    "card_id": "1521",
-    "card_name": "Crimson Staff",
+    "card_id": "1550",
+    "card_name": "Loco",
     "er": "entry_wave",
     "ts": "self_ime",
     "de": "SKILL_ATK<15.00%,0%>",
@@ -17699,12 +17699,12 @@
     ],
     "synergy_partners": []
   },
-  "152102": {
-    "id": "152102",
-    "name": "Dance of Flames",
+  "155002": {
+    "id": "155002",
+    "name": "Cross the Fields",
     "description": "Increases 15% of DMG dealt at the start of each wave.",
-    "card_id": "1521",
-    "card_name": "Crimson Staff",
+    "card_id": "1550",
+    "card_name": "Loco",
     "er": "entry_wave",
     "ts": "self_ime",
     "de": "ATK<15.00%,0%>",
@@ -17713,6 +17713,40 @@
       "Wave Start",
       "Self",
       "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "155101": {
+    "id": "155101",
+    "name": "Lightning Speed",
+    "description": "Increases 42% of Crit DMG.(only take effect once to the team)",
+    "card_id": "1551",
+    "card_name": "Sakuya",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT_ATK<42.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "152101": {
+    "id": "152101",
+    "name": "Solar Core",
+    "description": "Restores 12% HP to all allies at the start of each wave.",
+    "card_id": "1521",
+    "card_name": "Crimson Staff",
+    "er": "entry_wave",
+    "ts": "self;count<5>",
+    "de": "HEAL<12.00%,0%,1>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "AoE",
+      "Heal"
     ],
     "synergy_partners": []
   }
