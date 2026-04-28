@@ -68,7 +68,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1618] has three distinct use cases. The most important is as a low-cost Tower healer: her skill gives the highest crit rate buff of any 4★ healer to two targets, directly replacing :card[474] in that role while keeping the same low cost. She's also a likely choice as a PvP farming defender — her stat profile mirrors :card[474], a proven choice for maximizing PvP farming rewards through an easy-to-beat defense. Finally, her soulstone drop boost is a practical bonus for very new players grinding dailies. This card has more going for it than it first appears. **MLB a copy — strong Tower healer with crit rate skill, solid PvP defender similar to :card[474], and a soulstone bonus for very new players.**
 
-*Update:* Story card — definitely MLB for all players. She's very accessible, and while her lower stats may limit her ceiling at some point, you can probably get quite far with her.
+*Update:* Story card — definitely MLB for all players. She's very accessible, and  new players can probably get quite far with her.
 
 ---
 
