@@ -91,7 +91,8 @@ export interface DamageCalcInput {
   normalDmgPercent: number; // Normal attack specific modifier (DoNormalDamageModify)
   critRateBonus: number;
   critDmgBonus: number;
-  skillDmgPercent: number;
+  skillDmgPercent: number; // Additive ability/buff bonus (not bond)
+  skillBondPercent?: number; // Bond multiplier applied to skill base (multiplicative, like ATK bond)
   speedBonus: number;
   levelBonus: number; // Flat level bonus
 
@@ -114,7 +115,7 @@ export interface DamageCalcResult {
   effectiveAtk: number; // Internal ATK (display / 10)
   displayAtk: number;
   effectiveCritRate: number; // Capped at 100%
-  effectiveCritMult: number; // 2.0 + crit dmg bonus
+  effectiveCritMult: number; // 2.0 × (1 + crit dmg bonus)
   expectedCritMult: number; // 1 + critRate * (critMult - 1)
   effectiveSpeed: number;
   attackInterval: number; // Seconds between attacks
@@ -254,9 +255,12 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const effectiveSkillLevel = effectiveLevel;
   const skillBaseDamage = input.skillSlv1 + (effectiveSkillLevel - 1) * input.skillSlvup;
 
-  // Damage = SkillBase * exceedMult * (1 + DMG%) * (1 + SkillDMG%) * (1 - enemyShield)
+  // Bond is multiplicative on skill base (same pattern as ATK bond on ATK stat)
+  const bondedSkillBase = skillBaseDamage * (1 + (input.skillBondPercent ?? 0));
+
+  // Damage = BondedSkillBase * exceedMult * (1 + DMG%) * (1 + SkillDMG%) * (1 - enemyShield)
   // Uses skill-specific crit stats (includes skill-triggered ability bonuses)
-  const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
+  const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
   const skillDamage = Math.round(skillBase);
   const skillDamageCrit = Math.round(skillBase * skillCritMult);
   const skillDamageExpected = Math.round(skillBase * skillExpectedCritMult);
@@ -508,6 +512,7 @@ export function createInputFromCard(card: Card, limitBreak: number = 0): DamageC
     critRateBonus: 0,
     critDmgBonus: 0,
     skillDmgPercent: 0,
+    skillBondPercent: 0,
     speedBonus: 0,
     levelBonus: 0,
 

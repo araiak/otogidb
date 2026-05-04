@@ -184,7 +184,7 @@ export interface ComputedMemberStats {
   displayAtk: number;
   effectiveSpeed: number;
   effectiveCritRate: number;      // Capped at 100%
-  effectiveCritDmg: number;       // Base 2.0 + bonuses
+  effectiveCritDmg: number;       // 2.0 × (1 + bonuses) — full crit multiplier
   dmgBonus: number;               // Total DMG%
   skillDmgBonus: number;          // Total Skill DMG%
   attackInterval: number;         // Seconds between attacks
@@ -214,7 +214,7 @@ export interface DamageBreakdown {
 
   // Crit values
   effectiveCritRate: number;   // capped
-  effectiveCritDmg: number;    // base + bonus
+  effectiveCritDmg: number;    // 2.0 × (1 + bonus) — full crit multiplier
   expectedCritMult: number;    // 1 + critRate * (critDmg - 1)
 
   // Pre-cap results

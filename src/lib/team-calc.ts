@@ -971,8 +971,9 @@ export function calculatePhase4FinalDamage(
       STAT_CAPS.critRate
     );
 
-    // Crit damage multiplier
-    const effectiveCritDmg = BASE_CRIT_MULT + phase3.critDmgBonus;
+    // Crit damage multiplier: 2.0 × (1 + bonus) — multiplicative, not additive
+    // RE Validated: damage *= criticle_1 (2.0), then DoChitDamageModify applies (1 + pct/100)
+    const effectiveCritDmg = BASE_CRIT_MULT * (1 + phase3.critDmgBonus);
 
     // Expected crit multiplier
     const expectedCritMult = 1 + effectiveCritRate * (effectiveCritDmg - 1);
@@ -993,7 +994,8 @@ export function calculatePhase4FinalDamage(
     // Total DMG and Skill DMG bonuses
     const totalDmgBonus = phase3.dmgBonus;
     const totalNormalDmgBonus = phase3.normalDmgBonus;  // Normal attack specific modifier
-    const totalSkillDmgBonus = phase1.skillBondBonus + phase3.skillDmgBonus;
+    // Bond is multiplicative on skill base (like ATK bond), ability Skill DMG% is additive in formula
+    const totalSkillDmgBonus = phase3.skillDmgBonus;
 
     // Build stat breakdown
     const breakdown: StatBreakdown = {
@@ -1164,10 +1166,11 @@ export function calculatePhase4FinalDamage(
         }
       }
 
+      const bondedSkillBase = skillBaseDamage * (1 + phase1.skillBondBonus);
       const skillDmgMult = 1 + totalSkillDmgBonus;
-      const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const skillBaseMin = skillBaseDamage * exceedMultMin * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const skillBaseMax = skillBaseDamage * exceedMultMax * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBaseMin = bondedSkillBase * exceedMultMin * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBaseMax = bondedSkillBase * exceedMultMax * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
       const skillDamage = Math.min(Math.round(skillBase), DAMAGE_CAPS.skill);
       const skillDamageMin = Math.min(Math.round(skillBaseMin), DAMAGE_CAPS.skill);
       const skillDamageMax = Math.min(Math.round(skillBaseMax), DAMAGE_CAPS.skill);
