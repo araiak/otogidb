@@ -197,14 +197,15 @@ describe('Damage Formula Structure', () => {
     expect(result.skillBaseDamage).toBe(11900);
   });
 
-  it('crit damage calculation: 2.0 + critDmgBonus', () => {
-    // RE: CritMultiplier = GameConst.criticle_1 (2.0) + critDmgBonus
+  it('crit damage calculation: 2.0 × (1 + critDmgBonus)', () => {
+    // RE: damage *= criticle_1 (2.0), then DoChitDamageModify applies (1 + pct/100)
+    // Multiplicative: 2.0 × (1 + bonus), NOT additive 2.0 + bonus
     const result = calculateDamage({
       ...baseInput,
       critDmgBonus: 0.5, // +50% crit dmg
     });
 
-    expect(result.effectiveCritMult).toBe(2.5); // 2.0 + 0.5
+    expect(result.effectiveCritMult).toBe(3.0); // 2.0 × 1.5
   });
 
   it('LB exceed multiplier values match expected averages', () => {
@@ -377,11 +378,11 @@ describe('Regression Prevention', () => {
     // Skill crit rate: 15% base + 10% passive + 70% skill = 95%
     expect(result.skillCritRate).toBeCloseTo(0.95, 2);
 
-    // Normal crit mult: 2.0 + 0.20 = 2.2
-    expect(result.effectiveCritMult).toBeCloseTo(2.2, 2);
+    // Normal crit mult: 2.0 × (1 + 0.20) = 2.4
+    expect(result.effectiveCritMult).toBeCloseTo(2.4, 2);
 
-    // Skill crit mult: 2.0 + 0.20 + 0.60 = 2.8
-    expect(result.skillCritMult).toBeCloseTo(2.8, 2);
+    // Skill crit mult: 2.0 × (1 + 0.20 + 0.60) = 2.0 × 1.80 = 3.6
+    expect(result.skillCritMult).toBeCloseTo(3.6, 2);
   });
 
   it('display ATK is 10x combat ATK', () => {
@@ -723,9 +724,9 @@ describe('Crit Rate Edge Cases', () => {
     });
 
     expect(result.effectiveCritRate).toBe(1.0);
-    expect(result.effectiveCritMult).toBe(2.5);
-    // expectedCritMult = 1 + 1.0 * (2.5 - 1) = 2.5
-    expect(result.expectedCritMult).toBe(2.5);
+    expect(result.effectiveCritMult).toBe(3.0); // 2.0 × (1 + 0.5) = 3.0
+    // expectedCritMult = 1 + 1.0 * (3.0 - 1) = 3.0
+    expect(result.expectedCritMult).toBe(3.0);
   });
 
   it('skill crit rate is capped independently from normal crit rate', () => {
@@ -751,8 +752,8 @@ describe('Crit Rate Edge Cases', () => {
       critDmgBonus: -0.5, // -50% crit damage
     });
 
-    // 2.0 - 0.5 = 1.5x crit multiplier
-    expect(result.effectiveCritMult).toBe(1.5);
+    // 2.0 × (1 - 0.5) = 1.0x crit multiplier (crits do no bonus damage)
+    expect(result.effectiveCritMult).toBe(1.0);
     // With 100% crit rate, expected = crit damage
     expect(result.normalDamageExpected).toBe(result.normalDamageCrit);
   });
