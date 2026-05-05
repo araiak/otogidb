@@ -331,7 +331,7 @@ const jsonLd = {
   <!-- JSON-LD Structured Data -->
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6">
+  <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-6" data-attribute={card.stats.attribute_name}>
     <!-- Breadcrumb -->
     <nav class="mb-3 sm:mb-4 text-xs sm:text-sm">
       <a href="/en/" class="link">Cards</a>
@@ -874,7 +874,7 @@ const jsonLd = {
 
         <!-- Availability -->
         {card.acquisition && card.acquisition.sources.length > 0 && (
-          <div class="card p-3 sm:p-4">
+          <div class="card p-3 sm:p-4" data-section="availability">
             <div class="flex items-center justify-between mb-3 sm:mb-4">
               <h2 class="font-semibold text-sm sm:text-base">Availability</h2>
               <AvailabilityBadge

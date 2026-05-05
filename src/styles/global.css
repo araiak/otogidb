@@ -156,9 +156,9 @@
   /* Spirit Scroll theme — ink on washi (light mode) */
   html[data-theme="new"]:not(.dark) {
     --color-bg: #F0EDE4;
-    --color-surface: #F7F4EE;
+    --color-surface: #F9F6F0;
     --color-header: #E8E3D8;
-    --color-text: #1A1614;
+    --color-text: #2b2013;
     --color-text-secondary: #5C5249;
     --color-accent: #3D5C5A;
     --color-accent-hover: #2D4A48;
@@ -425,7 +425,7 @@
    Opacity is controlled by the dark gradient on top: alpha = 1 - desired_image_opacity */
 .dark[data-theme="new"] body {
   background-image:
-    linear-gradient(rgba(13,12,18,0.96), rgba(13,12,18,0.96)),
+    linear-gradient(rgba(13,12,18,0.80), rgba(13,12,18,0.80)),
     url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_800/v1777966115/000040_zydduo.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -434,7 +434,7 @@
 @media (min-width: 1024px) {
   .dark[data-theme="new"] body {
     background-image:
-      linear-gradient(rgba(13,12,18,0.96), rgba(13,12,18,0.96)),
+      linear-gradient(rgba(13,12,18,0.80), rgba(13,12,18,0.80)),
       url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_1280/v1777966115/000040_zydduo.png');
   }
 }
@@ -442,7 +442,7 @@
 @media (min-width: 1680px) {
   .dark[data-theme="new"] body {
     background-image:
-      linear-gradient(rgba(13,12,18,0.96), rgba(13,12,18,0.96)),
+      linear-gradient(rgba(13,12,18,0.80), rgba(13,12,18,0.80)),
       url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_1920/v1777966115/000040_zydduo.png');
   }
 }
@@ -456,7 +456,7 @@ html[data-theme="new"]:not(.dark) main {
 /* Ghostly mist overlay — light spirit mode, parchment tint over the same image */
 html[data-theme="new"]:not(.dark) body {
   background-image:
-    linear-gradient(rgba(240,237,228,0.93), rgba(240,237,228,0.93)),
+    linear-gradient(rgba(240,237,228,0.70), rgba(240,237,228,0.70)),
     url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_800/v1777966115/000040_zydduo.png');
   background-size: cover;
   background-repeat: no-repeat;
@@ -465,7 +465,7 @@ html[data-theme="new"]:not(.dark) body {
 @media (min-width: 1024px) {
   html[data-theme="new"]:not(.dark) body {
     background-image:
-      linear-gradient(rgba(240,237,228,0.93), rgba(240,237,228,0.93)),
+      linear-gradient(rgba(240,237,228,0.70), rgba(240,237,228,0.70)),
       url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_1280/v1777966115/000040_zydduo.png');
   }
 }
@@ -473,7 +473,7 @@ html[data-theme="new"]:not(.dark) body {
 @media (min-width: 1680px) {
   html[data-theme="new"]:not(.dark) body {
     background-image:
-      linear-gradient(rgba(240,237,228,0.93), rgba(240,237,228,0.93)),
+      linear-gradient(rgba(240,237,228,0.70), rgba(240,237,228,0.70)),
       url('https://res.cloudinary.com/dn3j8sqcc/image/upload/f_auto,q_auto:low,w_1920/v1777966115/000040_zydduo.png');
   }
 }
@@ -800,16 +800,57 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:hover td[data-column="nam
   animation: respiration 5s ease-in-out infinite;
 }
 
+/* Popup skill/ability descriptions: use full theme text color in spirit mode */
+[data-theme="new"] .popup .text-secondary {
+  color: var(--color-text);
+}
+
+
+
+/* ─── Card Detail Page — Spirit Theme ─────────────────────────────────────── */
+
+/* 1. Ability & skill descriptions: full text color, not dimmed secondary */
+[data-theme="new"] [data-i18n="skill-description"],
+[data-theme="new"] [data-i18n="ability-description"] {
+  color: var(--color-text);
+}
+
+/* 2. Rarity stars: match table treatment */
+.dark[data-theme="new"] [data-attribute] img[alt="★"] {
+  filter: drop-shadow(0 0 4px rgba(255, 200, 80, 0.65)) drop-shadow(1px 1px 2px rgba(0,0,0,0.5));
+}
+html[data-theme="new"]:not(.dark) [data-attribute] img[alt="★"] {
+  filter: hue-rotate(-20deg) saturate(0.9) brightness(0.62) drop-shadow(0 0 1px rgba(0,0,0,0.4));
+}
+
+/* 3. Availability pills — ghost outline in light spirit mode */
+html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-purple-500"],
+html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-yellow-500"],
+html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-blue-500"],
+html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-green-500"],
+html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-cyan-500"] {
+  background-color: transparent !important;
+  border: 1px solid currentColor;
+}
+
+/* 4. Skill & ability tags — ghost outline on parchment */
+html[data-theme="new"]:not(.dark) [data-attribute] span[class*="bg-sky-100"],
+html[data-theme="new"]:not(.dark) [data-attribute] span[class*="bg-amber-100"] {
+  background-color: transparent !important;
+  border: 1px solid currentColor;
+}
+
+
 /* ─── Keyword Highlight Colours — disabled, spans present but unstyled ──────── */
 
 /* ─── Light Spirit Mode Contrast Fixes ────────────────────────────────────── */
 
-/* 1. Rarity stars: deepen gold + anchoring shadow so they read on parchment */
+/* 1. Rarity stars: tarnished gold — shift hue toward amber, deepen brightness */
 html[data-theme="new"]:not(.dark) .data-table tbody td[data-column="rarity"] img {
-  filter: saturate(1.2) brightness(0.78) drop-shadow(0 0 1px rgba(0, 0, 0, 0.45));
+  filter: hue-rotate(-20deg) saturate(0.9) brightness(0.62) drop-shadow(0 0 1px rgba(0, 0, 0, 0.4));
 }
 
-/* 2. Badge emboss: lighter shadows suit the pale parchment surface */
+/* 2. Badge emboss: lighter inset shadows suit parchment surface */
 html[data-theme="new"]:not(.dark) .badge {
   box-shadow:
     0 1px 3px rgba(0, 0, 0, 0.18),
@@ -817,7 +858,7 @@ html[data-theme="new"]:not(.dark) .badge {
     inset -1px -1px 2px rgba(255, 255, 255, 0.55);
 }
 
-/* 3. Table headers: deep sepia ink instead of light secondary */
+/* 3. Table headers: deep sepia ink */
 html[data-theme="new"]:not(.dark) .data-table thead th {
   color: #3A2E24;
 }
@@ -832,7 +873,24 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:hover td {
   background-color: rgba(0, 0, 0, 0.025);
 }
 
-/* 6. Source/acquisition tag pills: add a faint border to separate from parchment */
+/* 6. Source pills — ghost outline: transparent bg, colored border + text (stamped seal) */
 html[data-theme="new"]:not(.dark) .data-table td[data-column="sources"] span {
-  border: 1px solid rgba(0, 0, 0, 0.18);
+  background-color: transparent !important;
+  border: 1px solid currentColor;
+}
+
+/* 7. Bond type colors — ukiyo-e palette: shrine red / deep indigo / forest green */
+html[data-theme="new"]:not(.dark) .data-table td[data-column="bonds"] .text-red-600 {
+  color: #c2410c;
+}
+html[data-theme="new"]:not(.dark) .data-table td[data-column="bonds"] .text-blue-600 {
+  color: #1e3a8a;
+}
+html[data-theme="new"]:not(.dark) .data-table td[data-column="bonds"] .text-green-600 {
+  color: #15803d;
+}
+
+/* 8. Card container: explicitly solid so texture doesn't bleed through */
+html[data-theme="new"]:not(.dark) .card {
+  background-color: #F9F6F0;
 }
