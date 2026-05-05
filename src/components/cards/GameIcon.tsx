@@ -38,7 +38,7 @@ export function AttributeIcon({
   const iconUrl = getAttributeIconUrl(value, { width: sizeConfig.width * 2 }); // 2x for retina
 
   return (
-    <span className={`inline-flex items-center gap-1 ${className}`} title={value}>
+    <span className={`game-icon inline-flex items-center gap-1 ${className}`} title={value}>
       <img
         src={iconUrl}
         alt={value}
@@ -61,7 +61,7 @@ export function TypeIcon({
   const iconUrl = getTypeIconUrl(value, { width: sizeConfig.width * 2 }); // 2x for retina
 
   return (
-    <span className={`inline-flex items-center gap-1 ${className}`} title={value}>
+    <span className={`game-icon inline-flex items-center gap-1 ${className}`} title={value}>
       <img
         src={iconUrl}
         alt={value}
