@@ -114,6 +114,45 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.5);
   }
 
+  /* Spirit Scroll theme — ink & mist variant (dark mode only) */
+  .dark[data-theme="new"] {
+    --color-bg: #0D0C12;
+    --color-surface: #17151F;
+    --color-header: #0A0910;
+    --color-text: #EDE8D8;
+    --color-text-secondary: #9E9A8E;
+    --color-accent: #9E8FA8;
+    --color-accent-hover: #B3A5BE;
+    --color-border: #231F2E;
+    --color-highlight: #C4A882;
+    --color-divina: #C4A832;
+    --color-anima: #C45A5A;
+    --color-phantasma: #7A5A8E;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root[data-theme="new"]:not(.light-override) {
+      --color-bg: #0D0C12;
+      --color-surface: #17151F;
+      --color-header: #0A0910;
+      --color-text: #EDE8D8;
+      --color-text-secondary: #9E9A8E;
+      --color-accent: #9E8FA8;
+      --color-accent-hover: #B3A5BE;
+      --color-border: #231F2E;
+      --color-highlight: #C4A882;
+      --color-divina: #C4A832;
+      --color-anima: #C45A5A;
+      --color-phantasma: #7A5A8E;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.6);
+    }
+  }
+
   html {
     scroll-behavior: smooth;
     /* Always show scrollbar to prevent layout shift when content changes */
@@ -357,4 +396,43 @@
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* ── Spirit Scroll micro-details ──────────────────────────────────────────── */
+
+/* Scroll marker: left accent border on hovered table rows */
+.dark[data-theme="new"] .data-table tbody tr:hover td:first-child {
+  border-left: 2px solid var(--color-accent);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="new"]:not(.light-override) .data-table tbody tr:hover td:first-child {
+    border-left: 2px solid var(--color-accent);
+  }
+}
+
+/* Badge dimensional treatment: subtle inner glow */
+.dark[data-theme="new"] .badge {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="new"]:not(.light-override) .badge {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Filter chips as ink seals: nearly square corners */
+.dark[data-theme="new"] .filter-chip {
+  border-radius: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="new"]:not(.light-override) .filter-chip {
+    border-radius: 3px;
+  }
+}
+
+/* Site logo: calligraphic serif font in Spirit Scroll mode */
+[data-theme="new"] .site-logo {
+  font-family: 'Noto Serif JP', 'Noto Sans JP', serif;
+  font-weight: 600;
+  letter-spacing: 0.01em;
 }

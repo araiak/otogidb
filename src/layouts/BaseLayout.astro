@@ -157,6 +157,17 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />
 
+    <!-- Prevent flash of wrong style variant -->
+    <script is:inline>
+      (function() {
+        try {
+          if (localStorage.getItem('otogidb-style-variant') === 'new') {
+            document.documentElement.setAttribute('data-theme', 'new');
+          }
+        } catch(e) {}
+      })();
+    </script>
+
     <!-- Locale detection (soft default from browser) -->
     <script is:inline set:html={localeInitScript} />
 
@@ -244,7 +255,7 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&display=optional"
     />
 
     <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
@@ -351,7 +362,7 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between h-14 md:h-16">
           <!-- Logo -->
-          <a href={navLinks.home} class="flex items-center gap-2 font-bold text-lg" style="color: var(--color-text);">
+          <a href={navLinks.home} class="site-logo flex items-center gap-2 font-bold text-lg" style="color: var(--color-text);">
             <span>OtogiDB</span>
           </a>
 
@@ -382,6 +393,16 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
               <svg class="w-5 h-5 block dark:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
               </svg>
+            </button>
+
+            <!-- Style variant toggle -->
+            <button
+              id="style-variant-toggle"
+              class="btn-secondary px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"
+              aria-label="Toggle style variant"
+              title="Toggle style variant"
+            >
+              <span id="style-variant-label">✦ Classic</span>
             </button>
 
             <!-- Mobile menu button -->
@@ -459,6 +480,28 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <DebugPanel client:load />
 
     <script>
+      // Style variant toggle
+      const styleToggle = document.getElementById('style-variant-toggle');
+      const styleLabel = document.getElementById('style-variant-label');
+      function updateStyleLabel() {
+        const isNew = document.documentElement.getAttribute('data-theme') === 'new';
+        if (styleLabel) styleLabel.textContent = isNew ? '✦ Spirit' : '✦ Classic';
+      }
+      updateStyleLabel();
+      if (styleToggle) {
+        styleToggle.addEventListener('click', () => {
+          const isNew = document.documentElement.getAttribute('data-theme') === 'new';
+          if (isNew) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('otogidb-style-variant', 'classic');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'new');
+            localStorage.setItem('otogidb-style-variant', 'new');
+          }
+          updateStyleLabel();
+        });
+      }
+
       // Theme toggle - explicitly saves user choice to override system preference
       const themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {
