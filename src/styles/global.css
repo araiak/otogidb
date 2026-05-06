@@ -845,8 +845,31 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:hover td[data-column="nam
   color: var(--color-text);
 }
 
+/* ─── Spirit Theme: Larger Card Images in Table ─────────────────────────── */
+/* Increase image height for better visual identification - maintain aspect ratio */
+[data-theme="new"] .data-table td[data-column="image"] img {
+  height: 52px;
+  width: auto;
+  min-width: 39px;
+}
+
+/* Adjust row padding to accommodate larger images */
+[data-theme="new"] .data-table tbody td[data-column="image"] {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Mobile: slightly smaller for space constraints */
+@media (max-width: 640px) {
+  [data-theme="new"] .data-table td[data-column="image"] img {
+    height: 46px;
+    width: auto;
+    min-width: 34px;
+  }
+}
 
 
+/* ─── Card Detail Page — Spirit Theme ─────────────────────────────────────── */
 /* ─── Card Detail Page — Spirit Theme ─────────────────────────────────────── */
 
 /* 1. Ability & skill descriptions: full text color, not dimmed secondary */
