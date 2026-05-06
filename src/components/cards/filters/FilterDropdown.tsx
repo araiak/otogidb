@@ -110,6 +110,7 @@ export default function FilterDropdown({
         style={{ borderColor: value.length > 0 ? 'var(--color-accent)' : 'var(--color-border)' }}
         aria-expanded={isOpen}
         aria-haspopup="listbox"
+        suppressHydrationWarning
       >
         {value.length > 0 ? `${value.length} selected` : placeholder}
       </button>

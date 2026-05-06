@@ -622,10 +622,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
           <div className="relative" ref={sortDropdownRef} onKeyDown={handleSortKeyDown}>
             <button
               onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
-              className="flex items-center gap-1 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+              className="px-2 py-1 text-xs rounded border bg-primary hover:bg-surface transition-colors flex items-center gap-1"
               style={{ borderColor: sorting.length > 0 ? 'var(--color-accent)' : 'var(--color-border)' }}
               aria-expanded={sortDropdownOpen}
               aria-haspopup="listbox"
+              suppressHydrationWarning
             >
               <span>Sort: {currentSort.label}</span>
               {sorting.length > 0 && (
