@@ -948,14 +948,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </tr>
             ) : (
               table.getRowModel().rows.map(row => (
-                <tr key={row.id} className="hover:bg-surface transition-colors">
+                <tr key={row.id} className="hover:bg-surface transition-colors" data-attribute={row.original.stats.attribute_name?.toLowerCase()}>
                   {row.getVisibleCells().map(cell => {
                     const meta = cell.column.columnDef.meta as ColumnMeta | undefined;
                     // Skip completely hidden columns
                     if (meta?.hidden) return null;
                     const hideOnSmall = meta?.hideOnSmall;
                     return (
-                      <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''}>
+                      <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''} data-column={cell.column.id}>
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
                     );
