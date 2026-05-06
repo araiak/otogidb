@@ -845,6 +845,29 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:hover td[data-column="nam
   color: var(--color-text);
 }
 
+/* ─── Spirit Theme: Larger Card Images in Table ─────────────────────────── */
+/* Increase image size for better visual identification */
+[data-theme="new"] .data-table td[data-column="image"] img {
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
+}
+
+/* Adjust row height to accommodate larger images */
+[data-theme="new"] .data-table tbody td[data-column="image"] {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+/* Mobile: ensure images don't overflow */
+@media (max-width: 640px) {
+  [data-theme="new"] .data-table td[data-column="image"] img {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+}
+
 
 
 /* ─── Card Detail Page — Spirit Theme ─────────────────────────────────────── */
