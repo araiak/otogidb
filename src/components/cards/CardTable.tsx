@@ -686,7 +686,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             />
             <span>Hide NPCs</span>
           </label>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.attributes}
             value={attributeFilter}
@@ -703,7 +703,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.types}
             value={typeFilter}
@@ -720,7 +720,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.rarities}
             value={rarityFilter}
@@ -731,7 +731,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.bondTypes}
             value={bondFilter}
@@ -751,36 +751,34 @@ export default function CardTable({ initialCards }: CardTableProps) {
           />
           </div>
           <div
-            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
-            title={!filtersReady ? 'Loading full data…' : undefined}
+            className={!filtersReady ? 'pointer-events-none' : ''}
           >
             <GroupedTagDropdown
               categories={skillTagCategories}
               value={skillTagFilter}
               onChange={setSkillTagFilter}
-              placeholder={!filtersReady ? 'Skill Tags (loading…)' : 'Skill Tags'}
+              placeholder='Skill Tags'
             />
           </div>
-          <div className={`flex items-center${!filtersReady ? ' opacity-50 pointer-events-none' : ''}`}
+          <div className={`flex items-center${!filtersReady ? ' pointer-events-none' : ''}`}
             title={!filtersReady ? 'Loading full data…' : undefined}
           >
             <GroupedTagDropdown
               categories={abilityTagCategories}
               value={abilityTagFilter}
               onChange={setAbilityTagFilter}
-              placeholder={!filtersReady ? 'Ability Tags (loading…)' : 'Ability Tags'}
+              placeholder='Ability Tags'
             />
             <FilterInfoTooltip text="Ability Tags: Finds cards where one ability has all selected tags." />
           </div>
           <div
-            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
-            title={!filtersReady ? 'Loading full data…' : undefined}
+            className={!filtersReady ? 'pointer-events-none' : ''}
           >
           <FilterDropdown
             options={filterOptions.sources}
             value={sourceFilter}
             onChange={(v) => setSourceFilter(v as string[])}
-            placeholder={!filtersReady ? 'Source (loading…)' : 'Source'}
+            placeholder='Source'
             dropdownClassName="min-w-[130px]"
             renderOption={(opt) => {
               const label = opt === 'gacha' ? 'Gacha' :
