@@ -121,8 +121,8 @@
     --color-header: #0A0910;
     --color-text: #EDE8D8;
     --color-text-secondary: #9E9A8E;
-    --color-accent: #9E8FA8;
-    --color-accent-hover: #B3A5BE;
+    --color-accent: #8B7355;
+    --color-accent-hover: #A0845C;
     --color-border: #231F2E;
     --color-highlight: #C4A882;
     --color-divina: #5082FF;
@@ -153,17 +153,19 @@
     }
   }
 
-  /* Spirit Scroll theme — ink on washi (light mode) */
+  /* Spirit Scroll light mode — ink on washi (light mode) */
   html[data-theme="new"]:not(.dark) {
     --color-bg: #F0EDE4;
     --color-surface: #F9F6F0;
     --color-header: #E8E3D8;
     --color-text: #2b2013;
-    --color-text-secondary: #5C5249;
-    --color-accent: #3D5C5A;
-    --color-accent-hover: #2D4A48;
-    --color-border: #D4CEC4;
-    --color-highlight: #B8913A;
+    --color-text-secondary: #666;
+    --color-border: #D6CFC0;
+    --color-accent: #654321;
+    --color-accent-light: #8B5A2B;
+    --color-highlight: #2b2013;
+    --color-error: #991B1B;
+    --color-success: #065F46;
     --color-divina: #2A4DBB;
     --color-anima: #2A7A48;
     --color-phantasma: #9E2828;
@@ -293,8 +295,14 @@
   }
 
   .data-table td {
-    @apply px-3 py-2;
+    @apply px-3 py-3;
     border-bottom: 1px solid var(--color-border);
+  }
+
+  .data-table {
+    @apply w-full;
+    min-width: 640px;
+    border-collapse: collapse;
   }
 
   .data-table tr:hover td {
@@ -479,6 +487,38 @@ html[data-theme="new"]:not(.dark) body {
 }
 
 /* ── Spirit Scroll micro-details ──────────────────────────────────────────── */
+
+  /* Thin white overlay behind text for readability on parchment */
+  .text-overlay {
+    position: relative;
+    display: inline;
+  }
+  .text-overlay::before {
+    content: '';
+    position: absolute;
+    inset: -2px -4px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 3px;
+    z-index: -1;
+  }
+
+  /* Prevent decorative elements from overlapping text */
+  [data-theme="new"] p,
+  [data-theme="new"] h1,
+  [data-theme="new"] h2,
+  [data-theme="new"] h3,
+  [data-theme="new"] h4,
+  [data-theme="new"] span,
+  [data-theme="new"] a {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Decorative pseudo-elements stay behind text */
+  [data-theme="new"] ::before,
+  [data-theme="new"] ::after {
+    pointer-events: none;
+  }
 
 /* Scroll marker: left accent border on hovered table rows */
 [data-theme="new"] .data-table tbody tr:hover td:first-child {
