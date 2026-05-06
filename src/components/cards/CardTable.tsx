@@ -947,7 +947,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </tr>
             ) : (
               table.getRowModel().rows.map(row => (
-                <tr key={row.id} className="hover:bg-surface transition-colors" data-attribute={row.original.stats.attribute_name?}>
+                <tr key={row.id} className="hover:bg-surface transition-colors" data-attribute={row.original.stats.attribute_name}>
                   {row.getVisibleCells().map(cell => {
                     const meta = cell.column.columnDef.meta as ColumnMeta | undefined;
                     // Skip completely hidden columns
