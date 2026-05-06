@@ -281,6 +281,8 @@
   /* Table styles */
   .data-table {
     @apply w-full text-sm;
+    min-width: 640px;
+    border-collapse: collapse;
   }
 
   .data-table th {
@@ -297,12 +299,6 @@
   .data-table td {
     @apply px-3 py-3;
     border-bottom: 1px solid var(--color-border);
-  }
-
-  .data-table {
-    @apply w-full;
-    min-width: 640px;
-    border-collapse: collapse;
   }
 
   .data-table tr:hover td {
@@ -718,7 +714,7 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:not([data-attribute]):hov
    To activate: add class="digital-yurei" to any element.
    Works best on headings or hovered row text at Spirit Scroll dark.
    ────────────────────────────────────────────────────────────────────────── */
-@keyframes phaseGlitch {
+@keyframes phase-glitch {
   0%, 80% {
     text-shadow:
       -1px 0px 0px rgba(255, 0, 0, 0.4),
@@ -735,7 +731,7 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:not([data-attribute]):hov
   text-shadow:
     -1px 0px 0px rgba(255, 0, 0, 0.4),
      1px 0px 0px rgba(0, 255, 255, 0.4);
-  animation: phaseGlitch 4s infinite alternate;
+  animation: phase-glitch 4s infinite alternate;
 }
 
 /* ─── Spirit Scroll — Typography & Targeted Glow Improvements ─────────────── */
@@ -766,11 +762,12 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:not([data-attribute]):hov
 }
 
 .dark[data-theme="new"] .data-table thead th {
-  color: var(--color-secondary);
+  color: var(--color-text-secondary);
   text-shadow: 0 0 10px rgba(158, 143, 168, 0.4);
 }
 
 /* Change 6: Static attribute-colored ambient glow on daemon name (always-on) */
+
 .dark[data-theme="new"] .data-table tbody tr[data-attribute="divina"] td[data-column="name"] a {
   text-shadow: 0 0 10px rgba(80, 130, 255, 0.25);
 }
@@ -893,14 +890,14 @@ html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-
 html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-green-500"],
 html[data-theme="new"]:not(.dark) [data-section="availability"] span[class*="bg-cyan-500"] {
   background-color: transparent !important;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
 }
 
 /* 4. Skill & ability tags — ghost outline on parchment */
 html[data-theme="new"]:not(.dark) [data-attribute] span[class*="bg-sky-100"],
 html[data-theme="new"]:not(.dark) [data-attribute] span[class*="bg-amber-100"] {
   background-color: transparent !important;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
 }
 
 
@@ -939,7 +936,7 @@ html[data-theme="new"]:not(.dark) .data-table tbody tr:hover td {
 /* 6. Source pills — ghost outline: transparent bg, colored border + text (stamped seal) */
 html[data-theme="new"]:not(.dark) .data-table td[data-column="sources"] span {
   background-color: transparent !important;
-  border: 1px solid currentColor;
+  border: 1px solid currentcolor;
 }
 
 /* 7. Bond type colors — ukiyo-e palette: shrine red / deep indigo / forest green */

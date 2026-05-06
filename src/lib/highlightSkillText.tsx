@@ -32,10 +32,9 @@ interface Span { start: number; end: number; cls: string }
 function collectSpans(text: string): Span[] {
   const spans: Span[] = [];
   for (const { re, cls } of RULES) {
-    const r = new RegExp(re.source, re.flags.includes('g') ? re.flags : re.flags + 'g');
-    r.lastIndex = 0;
+    re.lastIndex = 0;
     let m: RegExpExecArray | null;
-    while ((m = r.exec(text)) !== null) {
+    while ((m = re.exec(text)) !== null) {
       spans.push({ start: m.index, end: m.index + m[0].length, cls });
     }
   }
@@ -49,7 +48,19 @@ function collectSpans(text: string): Span[] {
   return deduped;
 }
 
-/** Wraps keywords in the text portion of an HTML string, leaving tags untouched. */
+/**
+ * Highlights skill-related keywords in pre-escaped/sanitized HTML strings.
+ * 
+ * @param html - Pre-escaped HTML string (e.g., output of `formatDescription` from
+ *               `cardTableColumns.tsx`). Only safe tags like `<br>` and
+ *               `<span class="...">` are preserved.
+ * @returns HTML string with keywords wrapped in styled `<span>` elements.
+ * 
+ * @remarks
+ * - Relies on `collectSpans` to only operate on text nodes (tags are left untouched).
+ * - Do NOT pass raw unsanitized HTML or unescaped user input to this function.
+ * - Called by `formatDescription` to post-process skill/ability descriptions.
+ */
 export function highlightHtml(html: string): string {
   return html.replace(/(<[^>]*>)|([^<]+)/g, (_, tag, text) => {
     if (tag !== undefined) return tag;

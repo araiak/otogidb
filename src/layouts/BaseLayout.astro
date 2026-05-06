@@ -123,12 +123,12 @@ const MAINTENANCE_ENABLED = true;
 const MAINTENANCE_VERSION = "2026-05-06-spirit-theme-v2";
 // Server-side messages using fixed GMT+8 times; client script refines to local tz
 const maintenanceMessages: Record<string, string> = {
-  en:      'New "Spirit" theme is now available! Click the ✦ theme button in the header to switch themes.',
-  ja:      '新テーマ「Spirit」が利用可能になりました！ヘッダーのテーマボタン（✦）をクリックして切り替えてください。',
-  ko:      '새로운 "Spirit" 테마를 사용할 수 있습니다! 헤더의 테마 버튼(✦)을 눌러서 전환하세요.',
-  'zh-cn': '全新"Spirit"主题已上线！点击页头✦主题按钮即可切换。',
-  'zh-tw': '全新「Spirit」主題已上線！點擊頁頭✦主題按鈕即可切換。',
-  es:      '¡Nuevo tema "Spirit" disponible! Haz clic en el botón de tema ✦ de la cabecera para cambiar.',
+  en:      'New "Spirit" style is now available! Click the ✦ Classic / ✦ Spirit button in the header to switch styles.',
+  ja:      '新スタイル「Spirit」が利用可能になりました！ヘッダーの✦ Classic / ✦ Spiritボタンをクリックしてスタイルを切り替えてください。',
+  ko:      '새로운 "Spirit" 스타일을 사용할 수 있습니다! 헤더의 ✦ Classic / ✦ Spirit 버튼을 눌러서 스타일을 전환하세요.',
+  'zh-cn': '全新"Spirit"样式已上线！点击页头✦ Classic / ✦ Spirit按钮即可切换样式。',
+  'zh-tw': '全新「Spirit」樣式已上線！點擊頁頭✦ Classic / ✦ Spirit按鈕即可切換樣式。',
+  es:      '¡Nuevo estilo "Spirit" disponible! Haz clic en el botón ✦ Classic / ✦ Spirit de la cabecera para cambiar de estilo.',
 };
 const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages['en'];
 ---
