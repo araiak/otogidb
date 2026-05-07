@@ -653,6 +653,8 @@ html[data-theme="new"]:not(.dark) header .link:hover {
   --halo: rgba(80, 130, 255, 0.55);
   --fog: rgba(30, 70, 220, 0.18);
   animation: respiration 5s ease-in-out infinite;
+  /* TEST: make glow obvious */
+  background-color: rgba(0, 100, 255, 0.2) !important;
 }
 
 /* Anima — green spirit */
