@@ -454,7 +454,6 @@ function createDefaultEnemy(): EnemyState {
     waveCount: 1,
     attribute: 'None',
     ignoreShieldCap: false,
-    worldBossBonus: 1.0,
     healersDontAttack: false,
   };
 }

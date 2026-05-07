@@ -367,7 +367,6 @@ function buildDpsTooltip(bd: DamageBreakdown): string {
     `x Race: ${f(bd.raceMult)}`,
     `x Defense: ${f(bd.defenseMult)}`,
     `x Shield: ${f(bd.shieldMult)}`,
-    `x World Boss: ${f(bd.worldBossMult)}`,
     `= Base: ${f(bd.normalBaseRaw)}`,
     `x Crit (expected): ${f(bd.expectedCritMult)}`,
     `= Expected: ${f(bd.normalBaseRaw * bd.expectedCritMult)}`,
@@ -387,7 +386,6 @@ function buildSkillTooltip(bd: DamageBreakdown): string {
     `x Race: ${f(bd.raceMult)}`,
     `x Defense: ${f(bd.defenseMult)}`,
     `x Shield: ${f(bd.shieldMult)}`,
-    `x World Boss: ${f(bd.worldBossMult)}`,
     `= Base: ${f(bd.skillBaseRaw)}`,
     `x Crit (expected): ${f(bd.expectedCritMult)}`,
     `= Expected: ${f(bd.skillBaseRaw * bd.expectedCritMult)}`,
@@ -427,7 +425,6 @@ function DamageBreakdownSection({ bd, type }: { bd: DamageBreakdown; type: 'norm
       <BreakdownRow label="x Race" value={f(bd.raceMult)} highlight={isNonDefault(bd.raceMult)} />
       <BreakdownRow label="x Defense" value={f(bd.defenseMult)} highlight={isNonDefault(bd.defenseMult)} />
       <BreakdownRow label="x Shield" value={f(bd.shieldMult)} highlight={isNonDefault(bd.shieldMult)} />
-      <BreakdownRow label="x World Boss" value={f(bd.worldBossMult)} highlight={isNonDefault(bd.worldBossMult)} />
       <div className="border-t border-border my-1" />
       <BreakdownRow label="= Pre-crit base" value={f(baseRaw)} />
       <BreakdownRow label="Crit Rate" value={fp(bd.effectiveCritRate)} />

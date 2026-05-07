@@ -327,7 +327,6 @@ function createInitialState(): TeamState {
       waveCount: 1,
       attribute: 'None',  // Default: race bonus disabled
       ignoreShieldCap: false, // Default: apply -75%/+85% shield cap
-      worldBossBonus: 1.0, // Default: no bonus (1.0x)
       healersDontAttack: true, // Default: healers don't deal damage (busy healing)
     },
     abilityTargetOverrides: {},
@@ -474,11 +473,6 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
       return { ...state, enemy: { ...state.enemy, ignoreShieldCap: action.value } };
     }
 
-    case 'SET_WORLD_BOSS_BONUS': {
-      const clampedValue = Math.max(1.0, Math.min(5.0, action.value)); // 1.0x to 5.0x
-      return { ...state, enemy: { ...state.enemy, worldBossBonus: clampedValue } };
-    }
-
     case 'SET_HEALERS_DONT_ATTACK': {
       return { ...state, enemy: { ...state.enemy, healersDontAttack: action.value } };
     }
@@ -564,7 +558,6 @@ function teamReducer(state: TeamState, action: TeamAction): TeamState {
         waveCount: stored.enemy.waveCount ?? 1,
         attribute: stored.enemy.attribute ?? 'None',  // Default disabled for old saves
         ignoreShieldCap: stored.enemy.ignoreShieldCap ?? false,  // Default capped for old saves
-        worldBossBonus: stored.enemy.worldBossBonus ?? 1.0,  // Default no bonus
         healersDontAttack: stored.enemy.healersDontAttack ?? false, // Default off
       } : state.enemy;
 
