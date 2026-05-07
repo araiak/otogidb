@@ -13,6 +13,24 @@ import {
 } from '../../lib/damage-calc';
 import { HeatmapSection } from './StatHeatmap';
 
+// Assist card definitions (bond bonuses - multiplicative to base stats)
+// attribute: 1=Divina, 2=Phantasma, 3=Anima, 4=Healer
+const ASSIST_CARDS: Record<string, {
+  name: string;
+  id: string;
+  atkBond?: number;      // Base ATK multiplier
+  skillBond?: number;    // Skill DMG bond (multiplicative)
+  bonusAttribute?: number; // Attribute that gets 7.5% instead of 5%
+}> = {
+  'none': { name: 'None', id: '' },
+  'cheshire': { name: 'Cheshire Cat', id: '15', atkBond: 0.05, bonusAttribute: 2 }, // +5% ATK, +7.5% for Phantasma
+  'ninetails': { name: 'Ninetails Fox', id: '733', skillBond: 0.05, bonusAttribute: 2 }, // +5% Skill, +7.5% for Phantasma
+  'okita': { name: 'Okita Souji [1st Unit]', id: '269', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
+  'theurgia': { name: 'Theurgia Goetia', id: '538', skillBond: 0.05, bonusAttribute: 3 }, // +5% Skill, +7.5% for Anima
+  'toyouke': { name: 'Toyouke-Omikami', id: '509', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
+  'mary': { name: 'Mary Magdalene', id: '658', atkBond: 0.05, bonusAttribute: 1 }, // +5% ATK, +7.5% for Divina
+};
+
 // Slider component for stat adjustment
 interface StatSliderProps {
   label: string;
@@ -97,23 +115,14 @@ interface DamageDisplayProps {
   result: DamageCalcResult;
   skillBaseDamage: number;
   isDamageSkill: boolean;
-  skillDmgPercent: number;
-  skillBondPercent: number; // Skill bond multiplier (multiplicative to base)
+  skillBondPercent: number; // Bond % shown as informational intermediate step
 }
 
-function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent, skillBondPercent }: DamageDisplayProps) {
+function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillBondPercent }: DamageDisplayProps) {
   const formatNum = (n: number) => n.toLocaleString();
 
-  // Calculate actual skill damage using skill base damage
-  // Skill bond is multiplicative to base skill damage
+  // Informational: show base with bond applied (bond + Skill DMG% are additive in the full calc)
   const bondedSkillDamage = Math.round(skillBaseDamage * (1 + skillBondPercent));
-  const skillDmgMult = 1 + skillDmgPercent;
-
-  // Use skill-specific crit stats from result (includes skill-triggered ability bonuses)
-  const actualSkillDamage = Math.round(bondedSkillDamage * skillDmgMult);
-  const actualSkillCrit = Math.round(bondedSkillDamage * skillDmgMult * result.skillCritMult);
-  const actualSkillExpected = Math.round(bondedSkillDamage * skillDmgMult * result.skillExpectedCritMult);
-  const skillCapped = actualSkillCrit >= DAMAGE_CAPS.skill;
 
   // Check if skill has different crit stats (from skill-triggered abilities)
   const hasSkillCritBonus = result.skillCritRate !== result.effectiveCritRate ||
@@ -177,21 +186,21 @@ function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent
               </div>
             )}
             <div className="flex justify-between">
-              <span className="text-secondary text-sm">w/ Skill%:</span>
-              <span className={`font-mono ${skillCapped ? 'text-yellow-400' : 'text-primary'}`}>
-                {formatNum(actualSkillDamage)}
+              <span className="text-secondary text-sm">w/ Buffs:</span>
+              <span className={`font-mono ${result.skillDamageCapped ? 'text-yellow-400' : 'text-primary'}`}>
+                {formatNum(result.skillDamage)}
               </span>
             </div>
             <div className="flex justify-between">
               <span className="text-secondary text-sm">Crit:</span>
-              <span className={`font-mono ${skillCapped ? 'text-yellow-400' : 'text-green-400'}`}>
-                {formatNum(Math.min(actualSkillCrit, DAMAGE_CAPS.skill))}
+              <span className={`font-mono ${result.skillDamageCapped ? 'text-yellow-400' : 'text-green-400'}`}>
+                {formatNum(result.skillDamageCrit)}
               </span>
             </div>
             <div className="flex justify-between border-t border-border pt-1 mt-1">
               <span className="text-secondary text-sm">Expected:</span>
               <span className="font-mono text-blue-400 font-bold">
-                {formatNum(Math.min(actualSkillExpected, DAMAGE_CAPS.skill))}
+                {formatNum(result.skillDamageExpected)}
               </span>
             </div>
             {hasSkillCritBonus && (
@@ -203,7 +212,7 @@ function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent
                 </div>
                 <div className="flex justify-between text-xs">
                   <span className="text-secondary">Skill Crit DMG:</span>
-                  <span className="font-mono text-cyan-400">{(result.skillCritMult * 100).toFixed(0)}%</span>
+                  <span className="font-mono text-cyan-400">{result.skillCritMult.toFixed(2)}×</span>
                 </div>
               </div>
             )}
@@ -213,7 +222,7 @@ function DamageDisplay({ result, skillBaseDamage, isDamageSkill, skillDmgPercent
             Not a damage skill
           </div>
         )}
-        {skillCapped && isDamageSkill && (
+        {result.skillDamageCapped && isDamageSkill && (
           <div className="mt-2 text-xs text-yellow-400 flex items-center gap-1">
             Hitting cap ({formatNum(DAMAGE_CAPS.skill)})
           </div>
@@ -298,11 +307,11 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
   const renderBreakdown = (
     label: string,
     total: string,
-    base: number | null,
+    base: number | string | null,
     sources: { slider: number; skills: number }
   ) => {
     const parts = [
-      base !== null ? `${formatPct(base)} base` : null,
+      base !== null ? (typeof base === 'string' ? base : `${formatPct(base)} base`) : null,
       formatSource(sources.slider, 'buffs'),
       formatSource(sources.skills, 'skills'),
     ].filter(Boolean);
@@ -372,8 +381,8 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
       )}
       {renderBreakdown(
         'Crit DMG',
-        `${(result.effectiveCritMult * 100).toFixed(0)}%`,
-        2.0,
+        `${result.effectiveCritMult.toFixed(2)}×`,
+        '2.00× base',
         breakdown.critDmg
       )}
       {renderBreakdown(
@@ -422,24 +431,6 @@ export function DamageCalculator() {
   // Bond settings
   const [bondType, setBondType] = useState<'none' | 'atk15' | 'skill15' | 'atk10' | 'skill10' | 'split5' | 'split7'>('none');
   const [assistCard, setAssistCard] = useState<string>('none');
-
-  // Assist card definitions (bond bonuses - multiplicative to base stats)
-  // attribute: 1=Divina, 2=Phantasma, 3=Anima, 4=Healer
-  const ASSIST_CARDS: Record<string, {
-    name: string;
-    id: string;
-    atkBond?: number;      // Base ATK multiplier
-    skillBond?: number;    // Skill DMG bond (multiplicative)
-    bonusAttribute?: number; // Attribute that gets 7.5% instead of 5%
-  }> = {
-    'none': { name: 'None', id: '' },
-    'cheshire': { name: 'Cheshire Cat', id: '15', atkBond: 0.05, bonusAttribute: 2 }, // +5% ATK, +7.5% for Phantasma
-    'ninetails': { name: 'Ninetails Fox', id: '733', skillBond: 0.05, bonusAttribute: 2 }, // +5% Skill, +7.5% for Phantasma
-    'okita': { name: 'Okita Souji [1st Unit]', id: '269', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
-    'theurgia': { name: 'Theurgia Goetia', id: '538', skillBond: 0.05, bonusAttribute: 3 }, // +5% Skill, +7.5% for Anima
-    'toyouke': { name: 'Toyouke-Omikami', id: '509', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
-    'mary': { name: 'Mary Magdalene', id: '658', atkBond: 0.05, bonusAttribute: 1 }, // +5% ATK, +7.5% for Divina
-  };
 
   // Load cards (skill data is embedded in cards via card.skill.parsed)
   useEffect(() => {
@@ -520,7 +511,6 @@ export function DamageCalculator() {
     }
 
     return sources;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dmgPercent, critRateBonus, critDmgBonus, skillDmgPercent, speedBonus, bondType, assistCard, selectedCard]);
 
   // Calculate totals from breakdown
@@ -551,6 +541,7 @@ export function DamageCalculator() {
       critRateBonus: totalBuffs.critRate,
       critDmgBonus: totalBuffs.critDmg,
       skillDmgPercent: totalBuffs.skillDmg,
+      skillBondPercent: totalBuffs.skillBonus, // Bond multiplied onto skill base (like ATK bond)
       speedBonus: totalBuffs.speed,
       levelBonus: 0, // Level bonuses now come from team abilities
       enemyShieldDebuff: -enemyDebuff, // Convert to negative for vulnerability
@@ -724,7 +715,6 @@ export function DamageCalculator() {
               result={result}
               skillBaseDamage={skillBaseDamage}
               isDamageSkill={isDamageSkill}
-              skillDmgPercent={totalBuffs.skillDmg}
               skillBondPercent={totalBuffs.skillBonus}
             />
           </div>
@@ -860,12 +850,27 @@ export function DamageCalculator() {
           {/* Formula Info */}
           <div className="bg-surface border border-border rounded-lg p-4">
             <h3 className="text-lg font-bold text-primary mb-2">Formula Reference</h3>
-            <div className="text-sm text-secondary font-mono space-y-1">
-              <div>Normal: ATK × (1+DMG%) × (1-EnemyShield) × CritMult</div>
-              <div>Skill: ATK × (1+DMG%) × (1+SkillDMG%) × (1-EnemyShield) × CritMult</div>
-              <div>Expected Crit: 1 + CritRate × (CritMult - 1)</div>
-              <div className="pt-2 border-t border-border mt-2">
-                Caps: Normal {DAMAGE_CAPS.normal.toLocaleString()}, Skill {DAMAGE_CAPS.skill.toLocaleString()}
+            <div className="text-sm text-secondary font-mono space-y-2">
+              <div>
+                <div className="text-primary text-xs mb-0.5">Normal Attack</div>
+                <div className="pl-2 space-y-0.5 text-xs leading-relaxed">
+                  <div>(ATK÷10) × LBExceed × (1+DMG%) × CritMult × (1-Defense) × (1-Shield)</div>
+                </div>
+              </div>
+              <div>
+                <div className="text-primary text-xs mb-0.5">Skill Attack</div>
+                <div className="pl-2 space-y-0.5 text-xs leading-relaxed">
+                  <div>SkillBase × LBExceed × (1+DMG%) × (1+SkillDMG%+skillBondPercent) × CritMult × (1-Defense) × (1-Shield)</div>
+                  <div className="text-tertiary">SkillBase = slv1 + (Level − 1) × slvup  (NOT ATK)</div>
+                </div>
+              </div>
+              <div className="pt-1 border-t border-border space-y-0.5 text-xs">
+                <div>CritMult = 2.0 × (1 + CritDMG%)  on crit,  1.0 otherwise</div>
+                <div>Expected = 1 + CritRate × (CritMult − 1)</div>
+                <div>LBExceed = Random(0, 5% × LB_level) avg</div>
+              </div>
+              <div className="pt-1 border-t border-border text-xs">
+                Caps: Normal {DAMAGE_CAPS.normal.toLocaleString()}  ·  Skill {DAMAGE_CAPS.skill.toLocaleString()}
               </div>
             </div>
           </div>

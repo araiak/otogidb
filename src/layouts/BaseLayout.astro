@@ -119,16 +119,16 @@ const navLinks = {
 // Set MAINTENANCE_ENABLED = false to hide without deleting the config/messages.
 // Bump MAINTENANCE_VERSION (e.g. change the date/slug) to force the banner to
 // re-appear for users who previously dismissed it.
-const MAINTENANCE_ENABLED = false;
-const MAINTENANCE_VERSION = "2026-04-14-maintenance";
+const MAINTENANCE_ENABLED = true;
+const MAINTENANCE_VERSION = "2026-05-06-spirit-theme-v2";
 // Server-side messages using fixed GMT+8 times; client script refines to local tz
 const maintenanceMessages: Record<string, string> = {
-  en:      'Game servers are down for maintenance (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)',
-  ja:      '\u30b2\u30fc\u30e0\u30b5\u30fc\u30d0\u30fc\u306f\u30e1\u30f3\u30c6\u30ca\u30f3\u30b9\u4e2d\u3067\u3059\uff08Apr 14, 15:00 \u301c Apr 15, 15:00 GMT+8\uff09',
-  ko:      '\uac8c\uc784 \uc11c\ubc84\uac00 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4 (Apr 14, 15:00 ~ Apr 15, 15:00 GMT+8)',
-  'zh-cn': '\u6e38\u620f\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d\uff08Apr 14, 15:00 \u81f3 Apr 15, 15:00 GMT+8\uff09',
-  'zh-tw': '\u9042\u6232\u4f3a\u670d\u5668\u6b63\u5728\u7dad\u8b77\u4e2d\uff08Apr 14, 15:00 \u81f3 Apr 15, 15:00 GMT+8\uff09',
-  es:      'Los servidores del juego est\u00e1n en mantenimiento (Apr 14, 15:00 \u2013 Apr 15, 15:00 GMT+8)',
+  en:      'New "Spirit" style is now available! Click the ✦ Classic / ✦ Spirit button in the header to switch styles.',
+  ja:      '新スタイル「Spirit」が利用可能になりました！ヘッダーの✦ Classic / ✦ Spiritボタンをクリックしてスタイルを切り替えてください。',
+  ko:      '새로운 "Spirit" 스타일을 사용할 수 있습니다! 헤더의 ✦ Classic / ✦ Spirit 버튼을 눌러서 스타일을 전환하세요.',
+  'zh-cn': '全新"Spirit"样式已上线！点击页头✦ Classic / ✦ Spirit按钮即可切换样式。',
+  'zh-tw': '全新「Spirit」樣式已上線！點擊頁頭✦ Classic / ✦ Spirit按鈕即可切換樣式。',
+  es:      '¡Nuevo estilo "Spirit" disponible! Haz clic en el botón ✦ Classic / ✦ Spirit de la cabecera para cambiar de estilo.',
 };
 const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages['en'];
 ---
@@ -156,6 +156,17 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
 
     <!-- Prevent flash of wrong theme -->
     <script is:inline set:html={themeInitScript} />
+
+    <!-- Prevent flash of wrong style variant -->
+    <script is:inline>
+      (function() {
+        try {
+          if (localStorage.getItem('otogidb-style-variant') === 'new') {
+            document.documentElement.setAttribute('data-theme', 'new');
+          }
+        } catch(e) {}
+      })();
+    </script>
 
     <!-- Locale detection (soft default from browser) -->
     <script is:inline set:html={localeInitScript} />
@@ -238,13 +249,19 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
 
     <!--
       Font loading strategy:
-      - Use preconnect (above) for early connection, not preload (causes crossorigin mismatch warnings)
-      - Use font-display=optional to prevent layout shift (fonts only used if loaded in ~100ms)
-      - On repeat visits, fonts will be cached and used immediately
+      - Use preconnect (above) for early connection
+      - Preload font CSS to load it before render (with crossorigin)
+      - Use font-display=swap to swap fonts in once loaded (prevents invisible text)
     -->
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
+      crossorigin
+    />
+    <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=optional"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
     />
 
     <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
@@ -286,8 +303,8 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           }
         } catch(e) {}
 
-        // Auto-hide after maintenance end: Apr 15, 2026 15:00 GMT+8 = 1776236400000 UTC
-        var MAINTENANCE_END = 1776236400000;
+        // Auto-hide after ~2 weeks: May 20, 2026 00:00 GMT+8 = 1747699200000 UTC
+        var MAINTENANCE_END = 1747699200000;
         if (Date.now() >= MAINTENANCE_END) {
           var b = document.getElementById('maintenance-banner');
           if (b) b.style.display = 'none';
@@ -302,35 +319,6 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           }, remaining);
         }
 
-        // Format start/end in the user's local timezone
-        var MAINTENANCE_START = 1776150000000; // Apr 14, 2026 15:00 GMT+8 = 07:00 UTC
-        var fmtOpts = { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit', timeZoneName: 'short' };
-        function fmtTime(epoch, locale) {
-          try {
-            return new Date(epoch).toLocaleString(locale || undefined, fmtOpts);
-          } catch(e) {
-            return new Date(epoch).toLocaleString(undefined, fmtOpts);
-          }
-        }
-        var templates = {
-          en:     function(s, e) { return "Game servers are down for maintenance (" + s + " \u2013 " + e + ")"; },
-          ja:     function(s, e) { return "\u30b2\u30fc\u30e0\u30b5\u30fc\u30d0\u30fc\u306f\u30e1\u30f3\u30c6\u30ca\u30f3\u30b9\u4e2d\u3067\u3059\uff08" + s + " \u301c " + e + "\uff09"; },
-          ko:     function(s, e) { return "\uac8c\uc784 \uc11c\ubc84\uac00 \uc810\uac80 \uc911\uc785\ub2c8\ub2e4 (" + s + " ~ " + e + ")"; },
-          'zh-cn':function(s, e) { return "\u6e38\u620f\u670d\u52a1\u5668\u6b63\u5728\u7ef4\u62a4\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
-          'zh-tw':function(s, e) { return "\u9042\u6232\u4f3a\u670d\u5668\u6b63\u5728\u7dad\u8b77\u4e2d\uff08" + s + " \u81f3 " + e + "\uff09"; },
-          es:     function(s, e) { return "Los servidores del juego est\u00e1n en mantenimiento (" + s + " \u2013 " + e + ")"; }
-        };
-        function setMsg(lang) {
-          var el = document.getElementById('maintenance-msg');
-          if (!el) return;
-          var tmpl = templates[lang] || templates['en'];
-          var bcp = lang === 'zh-cn' ? 'zh-Hans' : lang === 'zh-tw' ? 'zh-Hant' : lang;
-          el.textContent = tmpl(fmtTime(MAINTENANCE_START, bcp), fmtTime(MAINTENANCE_END, bcp));
-        }
-
-        // Refine initial message with local timezone formatting (server already rendered correct locale)
-        setMsg(currentLocale);
-
         // Close button — saves current version so banner stays hidden until version changes
         var closeBtn = document.getElementById('maintenance-close');
         if (closeBtn) {
@@ -340,18 +328,13 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
             if (banner) banner.style.display = 'none';
           });
         }
-
-        // Update message on locale change
-        window.addEventListener('otogidb-locale-change', function(e) {
-          setMsg(e.detail.locale);
-        });
       })();
     </script>
     <header class="sticky top-0 z-40 border-b" style="background-color: var(--color-header); border-color: var(--color-border);">
       <div class="container mx-auto px-4">
         <nav class="flex items-center justify-between h-14 md:h-16">
           <!-- Logo -->
-          <a href={navLinks.home} class="flex items-center gap-2 font-bold text-lg" style="color: var(--color-text);">
+          <a href={navLinks.home} class="site-logo flex items-center gap-2 font-bold text-lg" style="color: var(--color-text);">
             <span>OtogiDB</span>
           </a>
 
@@ -384,6 +367,16 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
               </svg>
             </button>
 
+            <!-- Style variant toggle -->
+            <button
+              id="style-variant-toggle"
+              class="btn-secondary px-2 py-1 rounded-md text-xs font-medium flex items-center gap-1"
+              aria-label="Toggle style variant"
+              title="Toggle style variant"
+            >
+              <span id="style-variant-label">✦ Classic</span>
+            </button>
+
             <!-- Mobile menu button -->
             <button
               id="mobile-menu-toggle"
@@ -400,11 +393,11 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
         <!-- Mobile Navigation -->
         <div id="mobile-menu" class="hidden md:hidden pb-4">
           <div class="flex flex-col gap-2">
-            <a href={navLinks.home} class="link py-2 touch-target">Cards</a>
-            <a href={navLinks.calendar} class="link py-2 touch-target">Calendar</a>
-            <a href={navLinks.updates} class="link py-2 touch-target">Updates</a>
-            <a href={navLinks.blog} class="link py-2 touch-target">Blog</a>
-            <a href={navLinks.tools} class="link py-2 touch-target">Tools</a>
+            <a href={navLinks.home} class="link px-4 py-2 touch-target">Cards</a>
+            <a href={navLinks.calendar} class="link px-4 py-2 touch-target">Calendar</a>
+            <a href={navLinks.updates} class="link px-4 py-2 touch-target">Updates</a>
+            <a href={navLinks.blog} class="link px-4 py-2 touch-target">Blog</a>
+            <a href={navLinks.tools} class="link px-4 py-2 touch-target">Tools</a>
           </div>
         </div>
       </div>
@@ -459,6 +452,28 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <DebugPanel client:load />
 
     <script>
+      // Style variant toggle
+      const styleToggle = document.getElementById('style-variant-toggle');
+      const styleLabel = document.getElementById('style-variant-label');
+      function updateStyleLabel() {
+        const isNew = document.documentElement.getAttribute('data-theme') === 'new';
+        if (styleLabel) styleLabel.textContent = isNew ? '✦ Spirit' : '✦ Classic';
+      }
+      updateStyleLabel();
+      if (styleToggle) {
+        styleToggle.addEventListener('click', () => {
+          const isNew = document.documentElement.getAttribute('data-theme') === 'new';
+          if (isNew) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('otogidb-style-variant', 'classic');
+          } else {
+            document.documentElement.setAttribute('data-theme', 'new');
+            localStorage.setItem('otogidb-style-variant', 'new');
+          }
+          updateStyleLabel();
+        });
+      }
+
       // Theme toggle - explicitly saves user choice to override system preference
       const themeToggle = document.getElementById('theme-toggle');
       if (themeToggle) {

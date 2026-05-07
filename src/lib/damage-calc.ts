@@ -91,7 +91,8 @@ export interface DamageCalcInput {
   normalDmgPercent: number; // Normal attack specific modifier (DoNormalDamageModify)
   critRateBonus: number;
   critDmgBonus: number;
-  skillDmgPercent: number;
+  skillDmgPercent: number; // Additive ability/buff bonus (not bond)
+  skillBondPercent?: number; // Bond multiplier applied to skill base (multiplicative, like ATK bond)
   speedBonus: number;
   levelBonus: number; // Flat level bonus
 
@@ -114,7 +115,7 @@ export interface DamageCalcResult {
   effectiveAtk: number; // Internal ATK (display / 10)
   displayAtk: number;
   effectiveCritRate: number; // Capped at 100%
-  effectiveCritMult: number; // 2.0 + crit dmg bonus
+  effectiveCritMult: number; // 2.0 × (1 + crit dmg bonus)
   expectedCritMult: number; // 1 + critRate * (critMult - 1)
   effectiveSpeed: number;
   attackInterval: number; // Seconds between attacks
@@ -188,8 +189,10 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const baseCritRate = input.baseCrit / 10000; // e.g., 750 -> 0.075 (7.5%)
   const effectiveCritRate = Math.min(baseCritRate + input.critRateBonus, STAT_CAPS.critRate);
 
-  // Crit damage multiplier: base 2.0 + bonus
-  const effectiveCritMult = BASE_CRIT_MULT + input.critDmgBonus;
+  // Crit damage multiplier: 2.0 × (1 + bonus) — multiplicative, not additive
+  // RE Validated: damage *= criticle_1 (2.0), then DoChitDamageModify applies (1 + pct/100)
+  // e.g. +50% crit dmg → 2.0 × 1.5 = 3.0×, NOT 2.0 + 0.5 = 2.5×
+  const effectiveCritMult = BASE_CRIT_MULT * (1 + input.critDmgBonus);
 
   // Expected crit multiplier: 1 + critRate * (critMult - 1)
   const expectedCritMult = 1 + effectiveCritRate * (effectiveCritMult - 1);
@@ -241,7 +244,7 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
     baseCritRate + input.critRateBonus + (input.skillCritRateBonus || 0),
     STAT_CAPS.critRate
   );
-  const skillCritMult = BASE_CRIT_MULT + input.critDmgBonus + (input.skillCritDmgBonus || 0);
+  const skillCritMult = BASE_CRIT_MULT * (1 + input.critDmgBonus + (input.skillCritDmgBonus || 0));
   const skillExpectedCritMult = 1 + skillCritRate * (skillCritMult - 1);
 
   // Skill damage calculation
@@ -252,9 +255,12 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const effectiveSkillLevel = effectiveLevel;
   const skillBaseDamage = input.skillSlv1 + (effectiveSkillLevel - 1) * input.skillSlvup;
 
-  // Damage = SkillBase * exceedMult * (1 + DMG%) * (1 + SkillDMG%) * (1 - enemyShield)
+  // Bond is multiplicative on skill base (same pattern as ATK bond on ATK stat)
+  const bondedSkillBase = skillBaseDamage * (1 + (input.skillBondPercent ?? 0));
+
+  // Damage = BondedSkillBase * exceedMult * (1 + DMG%) * (1 + SkillDMG%) * (1 - enemyShield)
   // Uses skill-specific crit stats (includes skill-triggered ability bonuses)
-  const skillBase = skillBaseDamage * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
+  const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
   const skillDamage = Math.round(skillBase);
   const skillDamageCrit = Math.round(skillBase * skillCritMult);
   const skillDamageExpected = Math.round(skillBase * skillExpectedCritMult);
@@ -506,6 +512,7 @@ export function createInputFromCard(card: Card, limitBreak: number = 0): DamageC
     critRateBonus: 0,
     critDmgBonus: 0,
     skillDmgPercent: 0,
+    skillBondPercent: 0,
     speedBonus: 0,
     levelBonus: 0,
 

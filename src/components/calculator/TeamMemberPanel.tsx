@@ -6,6 +6,7 @@
 import type { Card } from '../../types/card';
 import type { TeamMemberState, BondSlotType, DamageBreakdown } from '../../lib/team-calc-types';
 import { BOND_SLOT_VALUES, BOND_SLOT_LABELS } from '../../lib/team-calc-types';
+import { STAT_CAPS } from '../../lib/damage-calc';
 import { CardSelector, AssistSelector } from './CardSelector';
 import { AbilityToggles } from './AbilityToggles';
 
@@ -295,12 +296,12 @@ function StatsDisplay({ member }: StatsDisplayProps) {
   const critRateBaseInfo = critRateBase + critRateBond + critRateAssist;
   const critRateTooltip = getStatTooltip('critRate', critRateBaseInfo);
 
-  // Crit DMG tooltip with base
-  const critDmgBase = `Base: ${(breakdown.critDmg.base * 100).toFixed(0)}%`;
-  const critDmgBond = breakdown.critDmg.bond > 0 ? `\nBond: +${(breakdown.critDmg.bond * 100).toFixed(0)}%` : '';
-  const critDmgAssist = breakdown.critDmg.assist > 0 ? `\nAssist: +${(breakdown.critDmg.assist * 100).toFixed(0)}%` : '';
-  const critDmgBaseInfo = critDmgBase + critDmgBond + critDmgAssist;
-  const critDmgTooltip = getStatTooltip('critDmg', critDmgBaseInfo);
+  // Crit DMG tooltip: formula is 2.0 × (1 + bonus), not additive
+  const critDmgBonus = breakdown.critDmg.abilities + breakdown.critDmg.bond + breakdown.critDmg.assist;
+  const critDmgBase = critDmgBonus > 0
+    ? `2.0× base × (1 + ${(critDmgBonus * 100).toFixed(0)}% bonus) = ${stats.effectiveCritDmg.toFixed(2)}×`
+    : `Base: 2.0× crit multiplier`;
+  const critDmgTooltip = getStatTooltip('critDmg', critDmgBase);
 
   // DMG% tooltip with base (always 0)
   const dmgBaseInfo = 'Base: 0%';
@@ -325,7 +326,7 @@ function StatsDisplay({ member }: StatsDisplayProps) {
       <StatRow label="Level" value={stats.effectiveLevel.toString()} tooltip={levelTooltip} />
       <StatRow label="ATK" value={formatNum(Math.round(stats.displayAtk))} tooltip={atkTooltip} />
       <StatRow label="Crit Rate" value={formatPercent(stats.effectiveCritRate)} color={stats.effectiveCritRate >= 1 ? 'text-yellow-400' : undefined} tooltip={critRateTooltip} />
-      <StatRow label="Crit DMG" value={`${(stats.effectiveCritDmg * 100).toFixed(0)}%`} tooltip={critDmgTooltip} />
+      <StatRow label="Crit DMG" value={`${stats.effectiveCritDmg.toFixed(2)}×`} tooltip={critDmgTooltip} />
       <StatRow label="DMG%" value={`+${(stats.dmgBonus * 100).toFixed(0)}%`} color="text-green-400" tooltip={dmgTooltip} />
       <StatRow label="Skill DMG%" value={`+${(stats.skillDmgBonus * 100).toFixed(0)}%`} color="text-blue-400" tooltip={skillDmgTooltip} />
       <StatRow label="Speed" value={formatNum(Math.round(stats.effectiveSpeed))} tooltip={speedTooltip} />
@@ -430,7 +431,7 @@ function DamageBreakdownSection({ bd, type }: { bd: DamageBreakdown; type: 'norm
       <div className="border-t border-border my-1" />
       <BreakdownRow label="= Pre-crit base" value={f(baseRaw)} />
       <BreakdownRow label="Crit Rate" value={fp(bd.effectiveCritRate)} />
-      <BreakdownRow label="Crit DMG" value={`${(bd.effectiveCritDmg * 100).toFixed(0)}%`} />
+      <BreakdownRow label="Crit DMG" value={`${bd.effectiveCritDmg.toFixed(2)}×`} />
       <BreakdownRow label="x Expected Crit" value={f(bd.expectedCritMult)} />
       <BreakdownRow label="= Expected Damage" value={f(baseRaw * bd.expectedCritMult)} />
       {type === 'normal' && (
@@ -608,18 +609,30 @@ function DpsStatComparison({ member }: StatComparisonProps) {
   const dpsDmgPercent = (dpsDmgGain / currentDps) * 100;
 
   // Calculate DPS with +10% attack speed
-  // Speed buff is halved: effectiveInterval = baseInterval * (1 - speedBonus / 2)
-  // Adding 10% speed buff means interval decreases
-  // For simplicity, approximate as 5% faster attacks (since speed buff is halved)
-  const newAttackInterval = attackInterval * (1 - 0.05); // 10% speed = 5% faster
+  // Use engine's piecewise cap logic: apply +10% to speed bonus, then recompute
+  // Engine formula: baseInterval = (speed + 750) / 900
+  // If speedBonus >= 0: effectiveSpeed = baseInterval * (1 - speedBonus / 2)
+  const baseSpeed = member.card?.stats.speed ?? 100; // Raw speed stat from card
+  const baseInterval = (baseSpeed + 750) / 900;
+  // Derive current speed bonus from current effectiveSpeed
+  // effectiveSpeed = baseInterval * (1 - speedBonus/2)
+  // So: speedBonus = 2 * (1 - effectiveSpeed / baseInterval)
+  const currentSpeedBonus = 2 * (1 - stats.effectiveSpeed / baseInterval);
+  // Apply +10% to the speed bonus (multiplicative)
+  const newSpeedBonus = currentSpeedBonus + 0.10;
+  // Apply piecewise cap logic
+  const cappedNewBonus = Math.min(newSpeedBonus, STAT_CAPS.speedBuff);
+  const newEffectiveSpeed = baseInterval * (1 - cappedNewBonus / 2);
+  const newAttackInterval = Math.max(newEffectiveSpeed, 0.5);
   const newAttacksPerSecond = 1 / newAttackInterval;
   const currentAttacksPerSecond = 1 / attackInterval;
   const dpsSpeed = Math.round(currentDps * (newAttacksPerSecond / currentAttacksPerSecond));
   const dpsSpeedGain = dpsSpeed - currentDps;
   const dpsSpeedPercent = (dpsSpeedGain / currentDps) * 100;
 
-  // Calculate DPS with +10% crit damage
-  const newCritDmg = critDmg + 0.10;
+  // Calculate DPS with +10% crit damage bonus
+  // effectiveCritDmg = 2.0 × (1 + bonus), so +10% bonus adds 2.0 × 0.10 = 0.20 to the total mult
+  const newCritDmg = critDmg + 2.0 * 0.10;
   const newExpectedCritMultCD = calcExpectedCritMult(critRate, newCritDmg);
   const dpsCritDmg = Math.round(currentDps * (newExpectedCritMultCD / currentExpectedCritMult));
   const dpsCritDmgGain = dpsCritDmg - currentDps;
@@ -697,8 +710,9 @@ function SkillStatComparison({ member }: StatComparisonProps) {
   const skillDmgGain = skillDmg - currentSkillDmg;
   const skillDmgPercent = (skillDmgGain / currentSkillDmg) * 100;
 
-  // Calculate skill damage with +10% crit damage
-  const newCritDmg = critDmg + 0.10;
+  // Calculate skill damage with +10% crit damage bonus
+  // effectiveCritDmg = 2.0 × (1 + bonus), so +10% bonus adds 2.0 × 0.10 = 0.20 to the total mult
+  const newCritDmg = critDmg + 2.0 * 0.10;
   const newExpectedCritMultCD = calcExpectedCritMult(critRate, newCritDmg);
   const skillCritDmgValue = Math.round(currentSkillDmg * (newExpectedCritMultCD / currentExpectedCritMult));
   const skillCritDmgGain = skillCritDmgValue - currentSkillDmg;

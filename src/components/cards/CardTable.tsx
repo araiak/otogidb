@@ -622,10 +622,11 @@ export default function CardTable({ initialCards }: CardTableProps) {
           <div className="relative" ref={sortDropdownRef} onKeyDown={handleSortKeyDown}>
             <button
               onClick={() => setSortDropdownOpen(!sortDropdownOpen)}
-              className="flex items-center gap-1 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
+              className="px-2 py-1 text-xs rounded border bg-primary hover:bg-surface transition-colors flex items-center gap-1"
               style={{ borderColor: sorting.length > 0 ? 'var(--color-accent)' : 'var(--color-border)' }}
               aria-expanded={sortDropdownOpen}
               aria-haspopup="listbox"
+              suppressHydrationWarning
             >
               <span>Sort: {currentSort.label}</span>
               {sorting.length > 0 && (
@@ -685,7 +686,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             />
             <span>Hide NPCs</span>
           </label>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.attributes}
             value={attributeFilter}
@@ -702,7 +703,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.types}
             value={typeFilter}
@@ -719,7 +720,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.rarities}
             value={rarityFilter}
@@ -730,7 +731,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
             )}
           />
           </div>
-          <div className={!filtersReady ? "opacity-50 pointer-events-none" : ""}>
+          <div className={!filtersReady ? "pointer-events-none" : ""}>
           <FilterDropdown
             options={filterOptions.bondTypes}
             value={bondFilter}
@@ -750,36 +751,34 @@ export default function CardTable({ initialCards }: CardTableProps) {
           />
           </div>
           <div
-            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
-            title={!filtersReady ? 'Loading full data…' : undefined}
+            className={!filtersReady ? 'pointer-events-none' : ''}
           >
             <GroupedTagDropdown
               categories={skillTagCategories}
               value={skillTagFilter}
               onChange={setSkillTagFilter}
-              placeholder={!filtersReady ? 'Skill Tags (loading…)' : 'Skill Tags'}
+              placeholder='Skill Tags'
             />
           </div>
-          <div className={`flex items-center${!filtersReady ? ' opacity-50 pointer-events-none' : ''}`}
+          <div className={`flex items-center${!filtersReady ? ' pointer-events-none' : ''}`}
             title={!filtersReady ? 'Loading full data…' : undefined}
           >
             <GroupedTagDropdown
               categories={abilityTagCategories}
               value={abilityTagFilter}
               onChange={setAbilityTagFilter}
-              placeholder={!filtersReady ? 'Ability Tags (loading…)' : 'Ability Tags'}
+              placeholder='Ability Tags'
             />
             <FilterInfoTooltip text="Ability Tags: Finds cards where one ability has all selected tags." />
           </div>
           <div
-            className={!filtersReady ? 'opacity-50 pointer-events-none' : ''}
-            title={!filtersReady ? 'Loading full data…' : undefined}
+            className={!filtersReady ? 'pointer-events-none' : ''}
           >
           <FilterDropdown
             options={filterOptions.sources}
             value={sourceFilter}
             onChange={(v) => setSourceFilter(v as string[])}
-            placeholder={!filtersReady ? 'Source (loading…)' : 'Source'}
+            placeholder='Source'
             dropdownClassName="min-w-[130px]"
             renderOption={(opt) => {
               const label = opt === 'gacha' ? 'Gacha' :
@@ -948,14 +947,14 @@ export default function CardTable({ initialCards }: CardTableProps) {
               </tr>
             ) : (
               table.getRowModel().rows.map(row => (
-                <tr key={row.id} className="hover:bg-surface transition-colors">
+                <tr key={row.id} className="hover:bg-surface transition-colors" data-attribute={row.original.stats.attribute_name}>
                   {row.getVisibleCells().map(cell => {
                     const meta = cell.column.columnDef.meta as ColumnMeta | undefined;
                     // Skip completely hidden columns
                     if (meta?.hidden) return null;
                     const hideOnSmall = meta?.hideOnSmall;
                     return (
-                      <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''}>
+                      <td key={cell.id} className={hideOnSmall ? 'hidden xl:table-cell' : ''} data-column={cell.column.id}>
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
                     );

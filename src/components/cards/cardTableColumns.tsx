@@ -3,6 +3,7 @@ import type { Card, AcquisitionSource } from '../../types/card';
 import type { SupportedLocale } from '../../lib/i18n';
 import { formatNumber, formatDescription } from '../../lib/formatters';
 import { computeMlbStats, substituteSkillTemplate } from '../../lib/lb';
+import { highlightHtml, highlightText } from '../../lib/highlightSkillText';
 import { AttributeIcon, TypeIcon, RarityStars } from './GameIcon';
 import { ImageCell } from './cells';
 
@@ -27,7 +28,7 @@ export function getCardTableColumns({
     {
       id: 'image',
       header: '',
-      size: 50,
+      size: 65,
       enableSorting: false,
       cell: ({ row }) => <ImageCell card={row.original} skills={{}} locale={locale} />,
     },
@@ -283,7 +284,7 @@ export function getCardTableColumns({
           ? { value: skill.slv_mlb, probability: skill.prob_mlb, delay1: skill.delay_mlb }
           : { value: skill.slv_lb0, probability: skill.prob_lb0, delay1: skill.delay_lb0 };
         const substituted = substituteSkillTemplate(skill.description, vals);
-        const formattedDesc = formatDescription(substituted);
+        const formattedDesc = highlightHtml(formatDescription(substituted));
         return (
           <span
             className="text-sm block max-w-[300px] leading-snug"
@@ -303,7 +304,7 @@ export function getCardTableColumns({
         if (!ability) return <span className="text-secondary text-sm">-</span>;
         return (
           <span className="text-sm block max-w-[200px] leading-snug" title={ability.name}>
-            {ability.description}
+            {highlightText(ability.description)}
           </span>
         );
       },
@@ -318,7 +319,7 @@ export function getCardTableColumns({
         if (!ability) return <span className="text-secondary text-sm">-</span>;
         return (
           <span className="text-sm block max-w-[200px] leading-snug" title={ability.name}>
-            {ability.description}
+            {highlightText(ability.description)}
           </span>
         );
       },

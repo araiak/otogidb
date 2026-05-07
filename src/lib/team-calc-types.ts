@@ -184,7 +184,7 @@ export interface ComputedMemberStats {
   displayAtk: number;
   effectiveSpeed: number;
   effectiveCritRate: number;      // Capped at 100%
-  effectiveCritDmg: number;       // Base 2.0 + bonuses
+  effectiveCritDmg: number;       // 2.0 × (1 + bonuses) — full crit multiplier
   dmgBonus: number;               // Total DMG%
   skillDmgBonus: number;          // Total Skill DMG%
   attackInterval: number;         // Seconds between attacks
@@ -214,7 +214,7 @@ export interface DamageBreakdown {
 
   // Crit values
   effectiveCritRate: number;   // capped
-  effectiveCritDmg: number;    // base + bonus
+  effectiveCritDmg: number;    // 2.0 × (1 + bonus) — full crit multiplier
   expectedCritMult: number;    // 1 + critRate * (critDmg - 1)
 
   // Pre-cap results
@@ -533,6 +533,10 @@ export interface Phase3Result {
   levelBonus: number;
   hpBonus: number;           // HP% boost (for display, doesn't affect damage)
   normalDmgBonus: number;    // Normal attack damage boost (separate from skill)
+
+  // Skill-specific crit bonuses (separate from normal crit)
+  skillCritRate?: number;     // Additional crit rate for skill attacks
+  skillCritDmg?: number;      // Additional crit damage for skill attacks
 
   // Enemy debuffs applied by this member's abilities
   enemyShieldDebuff: number;
