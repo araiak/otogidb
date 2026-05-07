@@ -648,7 +648,7 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 }
 
 /* Divina — blue spirit */
-.dark[data-theme="new"] .data-table tbody tr[data-attribute="divina"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+.dark[data-theme="new"] .data-table tbody tr[data-attribute="divina"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(180, 210, 255, 0.95);
   --halo: rgba(80, 130, 255, 0.55);
   --fog: rgba(30, 70, 220, 0.18);
@@ -656,7 +656,7 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 }
 
 /* Anima — green spirit */
-.dark[data-theme="new"] .data-table tbody tr[data-attribute="anima"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+.dark[data-theme="new"] .data-table tbody tr[data-attribute="anima"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(140, 255, 160, 0.95);
   --halo: rgba(60, 200, 90, 0.55);
   --fog: rgba(15, 150, 50, 0.18);
@@ -664,7 +664,7 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 }
 
 /* Phantasma — red spirit */
-.dark[data-theme="new"] .data-table tbody tr[data-attribute="phantasma"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+.dark[data-theme="new"] .data-table tbody tr[data-attribute="phantasma"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(255, 110, 90, 0.99);
   --halo: rgba(255, 55, 40, 0.7);
   --fog: rgba(200, 20, 10, 0.22);
@@ -672,8 +672,8 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 }
 
 /* Neutral — lavender */
-.dark[data-theme="new"] .data-table tbody tr[data-attribute="neutral"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]),
-.dark[data-theme="new"] .data-table tbody tr:not([data-attribute]):hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+.dark[data-theme="new"] .data-table tbody tr[data-attribute="neutral"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]),
+.dark[data-theme="new"] .data-table tbody tr:not([data-attribute]):hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(200, 185, 210, 0.9);
   --halo: rgba(158, 143, 168, 0.5);
   --fog: rgba(110, 95, 130, 0.18);
@@ -681,29 +681,29 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 }
 
 /* Light mode spirit glows — darker anchors since background is parchment */
-html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="divina"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="divina"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(30, 60, 180, 0.9);
   --halo: rgba(40, 80, 220, 0.45);
   --fog: rgba(20, 50, 200, 0.14);
   animation: respiration 5s ease-in-out infinite;
 }
 
-html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="anima"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="anima"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(15, 120, 50, 0.9);
   --halo: rgba(25, 150, 65, 0.45);
   --fog: rgba(10, 110, 35, 0.14);
   animation: respiration 5s ease-in-out infinite;
 }
 
-html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="phantasma"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="phantasma"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(160, 30, 30, 0.9);
   --halo: rgba(190, 40, 40, 0.45);
   --fog: rgba(140, 15, 15, 0.14);
   animation: respiration 5s ease-in-out infinite;
 }
 
-html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="neutral"]:hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]),
-html[data-theme="new"]:not(.dark) .data-table tbody tr:not([data-attribute]):hover td:not([data-column="attribute"]):not([data-column="rarity"]):not([data-column="role"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]):not([data-column="bonds"]):not([data-column="sources"]) {
+html[data-theme="new"]:not(.dark) .data-table tbody tr[data-attribute="neutral"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]),
+html[data-theme="new"]:not(.dark) .data-table tbody tr:not([data-attribute]):hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(40, 72, 70, 0.9);
   --halo: rgba(55, 88, 86, 0.45);
   --fog: rgba(30, 55, 53, 0.14);
