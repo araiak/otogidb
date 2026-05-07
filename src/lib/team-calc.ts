@@ -1125,21 +1125,18 @@ export function calculatePhase4FinalDamage(
         : Math.max(STAT_CAPS.shieldMin, Math.min(rawShieldValue, STAT_CAPS.shieldMax));
       const shieldMult = 1 - effectiveShield;
 
-      // Apply World Boss bonus multiplier (manual adjustment for testing)
-      const worldBossMult = enemy.worldBossBonus ?? 1.0;
-
       // Race bonus multiplier (RE Validated 2025-12-24)
       const raceMult = 1 + raceBonus;
 
       // Normal damage calculation
-      // Formula: ATK × exceedMult × dmgMult × normalDmgMult × raceMult × defenseMult × shieldMult × worldBossMult
+      // Formula: ATK × exceedMult × dmgMult × normalDmgMult × raceMult × defenseMult × shieldMult
       // RE Validated: DoNormalDamageModify is a separate multiplier from DoDamageModify
       // RE Validated 2026-01-16: Combo bonus is cosmetic only (no damage effect)
       const dmgMult = 1 + totalDmgBonus;
       const normalDmgMult = 1 + totalNormalDmgBonus;  // Normal attack specific (DoNormalDamageModify)
-      const normalBase = effectiveAtk * exceedMult * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const normalBaseMin = effectiveAtk * exceedMultMin * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const normalBaseMax = effectiveAtk * exceedMultMax * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const normalBase = effectiveAtk * exceedMult * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult;
+      const normalBaseMin = effectiveAtk * exceedMultMin * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult;
+      const normalBaseMax = effectiveAtk * exceedMultMax * dmgMult * normalDmgMult * raceMult * defenseMult * shieldMult;
       const normalDamage = Math.min(Math.round(normalBase), DAMAGE_CAPS.normal);
       const normalDamageMin = Math.min(Math.round(normalBaseMin), DAMAGE_CAPS.normal);
       const normalDamageMax = Math.min(Math.round(normalBaseMax), DAMAGE_CAPS.normal);
@@ -1177,9 +1174,9 @@ export function calculatePhase4FinalDamage(
 
       const bondedSkillBase = skillBaseDamage * (1 + phase1.skillBondBonus);
       const skillDmgMult = 1 + totalSkillDmgBonus;
-      const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const skillBaseMin = bondedSkillBase * exceedMultMin * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
-      const skillBaseMax = bondedSkillBase * exceedMultMax * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult * worldBossMult;
+      const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult;
+      const skillBaseMin = bondedSkillBase * exceedMultMin * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult;
+      const skillBaseMax = bondedSkillBase * exceedMultMax * dmgMult * skillDmgMult * raceMult * defenseMult * shieldMult;
       const skillDamage = Math.min(Math.round(skillBase), DAMAGE_CAPS.skill);
       const skillDamageMin = Math.min(Math.round(skillBaseMin), DAMAGE_CAPS.skill);
       const skillDamageMax = Math.min(Math.round(skillBaseMax), DAMAGE_CAPS.skill);
@@ -1203,7 +1200,6 @@ export function calculatePhase4FinalDamage(
         defenseMult,
         shieldMult,
         raceMult,
-        worldBossMult,
         effectiveCritRate,
         effectiveCritDmg,
         expectedCritMult,

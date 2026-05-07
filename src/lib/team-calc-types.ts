@@ -210,7 +210,6 @@ export interface DamageBreakdown {
   defenseMult: number;         // 1 - effectiveDefense
   shieldMult: number;          // 1 - effectiveShield
   raceMult: number;            // 1 + raceBonus
-  worldBossMult: number;       // manual multiplier
 
   // Crit values
   effectiveCritRate: number;   // capped
@@ -399,7 +398,6 @@ export interface EnemyState {
   waveCount: number;              // Number of waves passed (for Wave Start stacking)
   attribute: EnemyAttribute;      // Enemy attribute for race bonus (default: 'None')
   ignoreShieldCap: boolean;       // If true, skip -75%/+85% shield cap (World Boss mode)
-  worldBossBonus: number;         // Additional multiplier for World Boss (e.g., 1.0 = none, 2.0 = 2x)
   healersDontAttack: boolean;     // If true, healers deal 0 damage (busy healing)
 }
 
@@ -458,7 +456,6 @@ export interface StoredTeamState {
     waveCount: number;
     attribute?: EnemyAttribute; // Optional for backwards compatibility
     ignoreShieldCap?: boolean; // Optional for backwards compatibility (World Boss mode)
-    worldBossBonus?: number;   // Optional for backwards compatibility
     healersDontAttack?: boolean; // Optional for backwards compatibility
   };
   activeTabIndex: number;
