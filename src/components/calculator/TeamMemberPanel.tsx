@@ -6,6 +6,7 @@
 import type { Card } from '../../types/card';
 import type { TeamMemberState, BondSlotType, DamageBreakdown } from '../../lib/team-calc-types';
 import { BOND_SLOT_VALUES, BOND_SLOT_LABELS } from '../../lib/team-calc-types';
+import { STAT_CAPS } from '../../lib/damage-calc';
 import { CardSelector, AssistSelector } from './CardSelector';
 import { AbilityToggles } from './AbilityToggles';
 
@@ -608,10 +609,21 @@ function DpsStatComparison({ member }: StatComparisonProps) {
   const dpsDmgPercent = (dpsDmgGain / currentDps) * 100;
 
   // Calculate DPS with +10% attack speed
-  // Exact formula: effectiveInterval = baseInterval * (1 - speedBonus / 2)
-  // Adding +10% speed means newInterval = currentInterval - baseInterval * 0.05
-  const baseInterval = (stats.effectiveSpeed + 750) / 900;
-  const newAttackInterval = attackInterval - baseInterval * 0.05;
+  // Use engine's piecewise cap logic: apply +10% to speed bonus, then recompute
+  // Engine formula: baseInterval = (speed + 750) / 900
+  // If speedBonus >= 0: effectiveSpeed = baseInterval * (1 - speedBonus / 2)
+  const baseSpeed = member.card?.stats.speed ?? 100; // Raw speed stat from card
+  const baseInterval = (baseSpeed + 750) / 900;
+  // Derive current speed bonus from current effectiveSpeed
+  // effectiveSpeed = baseInterval * (1 - speedBonus/2)
+  // So: speedBonus = 2 * (1 - effectiveSpeed / baseInterval)
+  const currentSpeedBonus = 2 * (1 - stats.effectiveSpeed / baseInterval);
+  // Apply +10% to the speed bonus (multiplicative)
+  const newSpeedBonus = currentSpeedBonus * 1.10;
+  // Apply piecewise cap logic
+  const cappedNewBonus = Math.min(newSpeedBonus, STAT_CAPS.speedBuff);
+  const newEffectiveSpeed = baseInterval * (1 - cappedNewBonus / 2);
+  const newAttackInterval = Math.max(newEffectiveSpeed, 0.5);
   const newAttacksPerSecond = 1 / newAttackInterval;
   const currentAttacksPerSecond = 1 / attackInterval;
   const dpsSpeed = Math.round(currentDps * (newAttacksPerSecond / currentAttacksPerSecond));

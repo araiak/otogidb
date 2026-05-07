@@ -13,6 +13,24 @@ import {
 } from '../../lib/damage-calc';
 import { HeatmapSection } from './StatHeatmap';
 
+// Assist card definitions (bond bonuses - multiplicative to base stats)
+// attribute: 1=Divina, 2=Phantasma, 3=Anima, 4=Healer
+const ASSIST_CARDS: Record<string, {
+  name: string;
+  id: string;
+  atkBond?: number;      // Base ATK multiplier
+  skillBond?: number;    // Skill DMG bond (multiplicative)
+  bonusAttribute?: number; // Attribute that gets 7.5% instead of 5%
+}> = {
+  'none': { name: 'None', id: '' },
+  'cheshire': { name: 'Cheshire Cat', id: '15', atkBond: 0.05, bonusAttribute: 2 }, // +5% ATK, +7.5% for Phantasma
+  'ninetails': { name: 'Ninetails Fox', id: '733', skillBond: 0.05, bonusAttribute: 2 }, // +5% Skill, +7.5% for Phantasma
+  'okita': { name: 'Okita Souji [1st Unit]', id: '269', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
+  'theurgia': { name: 'Theurgia Goetia', id: '538', skillBond: 0.05, bonusAttribute: 3 }, // +5% Skill, +7.5% for Anima
+  'toyouke': { name: 'Toyouke-Omikami', id: '509', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
+  'mary': { name: 'Mary Magdalene', id: '658', atkBond: 0.05, bonusAttribute: 1 }, // +5% ATK, +7.5% for Divina
+};
+
 // Slider component for stat adjustment
 interface StatSliderProps {
   label: string;
@@ -364,7 +382,7 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
       {renderBreakdown(
         'Crit DMG',
         `${result.effectiveCritMult.toFixed(2)}×`,
-        null,
+        2.0,
         breakdown.critDmg
       )}
       {renderBreakdown(
@@ -413,24 +431,6 @@ export function DamageCalculator() {
   // Bond settings
   const [bondType, setBondType] = useState<'none' | 'atk15' | 'skill15' | 'atk10' | 'skill10' | 'split5' | 'split7'>('none');
   const [assistCard, setAssistCard] = useState<string>('none');
-
-  // Assist card definitions (bond bonuses - multiplicative to base stats)
-  // attribute: 1=Divina, 2=Phantasma, 3=Anima, 4=Healer
-  const ASSIST_CARDS: Record<string, {
-    name: string;
-    id: string;
-    atkBond?: number;      // Base ATK multiplier
-    skillBond?: number;    // Skill DMG bond (multiplicative)
-    bonusAttribute?: number; // Attribute that gets 7.5% instead of 5%
-  }> = {
-    'none': { name: 'None', id: '' },
-    'cheshire': { name: 'Cheshire Cat', id: '15', atkBond: 0.05, bonusAttribute: 2 }, // +5% ATK, +7.5% for Phantasma
-    'ninetails': { name: 'Ninetails Fox', id: '733', skillBond: 0.05, bonusAttribute: 2 }, // +5% Skill, +7.5% for Phantasma
-    'okita': { name: 'Okita Souji [1st Unit]', id: '269', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
-    'theurgia': { name: 'Theurgia Goetia', id: '538', skillBond: 0.05, bonusAttribute: 3 }, // +5% Skill, +7.5% for Anima
-    'toyouke': { name: 'Toyouke-Omikami', id: '509', skillBond: 0.05, bonusAttribute: 1 }, // +5% Skill, +7.5% for Divina
-    'mary': { name: 'Mary Magdalene', id: '658', atkBond: 0.05, bonusAttribute: 1 }, // +5% ATK, +7.5% for Divina
-  };
 
   // Load cards (skill data is embedded in cards via card.skill.parsed)
   useEffect(() => {
@@ -511,7 +511,6 @@ export function DamageCalculator() {
     }
 
     return sources;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dmgPercent, critRateBonus, critDmgBonus, skillDmgPercent, speedBonus, bondType, assistCard, selectedCard]);
 
   // Calculate totals from breakdown
@@ -861,7 +860,7 @@ export function DamageCalculator() {
               <div>
                 <div className="text-primary text-xs mb-0.5">Skill Attack</div>
                 <div className="pl-2 space-y-0.5 text-xs leading-relaxed">
-                  <div>SkillBase × LBExceed × (1+DMG%) × (1+SkillDMG%) × CritMult × (1-Defense) × (1-Shield)</div>
+                  <div>SkillBase × LBExceed × (1+DMG%) × (1+SkillDMG%+skillBondPercent) × CritMult × (1-Defense) × (1-Shield)</div>
                   <div className="text-tertiary">SkillBase = slv1 + (Level − 1) × slvup  (NOT ATK)</div>
                 </div>
               </div>

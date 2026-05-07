@@ -534,6 +534,10 @@ export interface Phase3Result {
   hpBonus: number;           // HP% boost (for display, doesn't affect damage)
   normalDmgBonus: number;    // Normal attack damage boost (separate from skill)
 
+  // Skill-specific crit bonuses (separate from normal crit)
+  skillCritRate?: number;     // Additional crit rate for skill attacks
+  skillCritDmg?: number;      // Additional crit damage for skill attacks
+
   // Enemy debuffs applied by this member's abilities
   enemyShieldDebuff: number;
   enemyDefenseDebuff: number;  // Defense reduction (multiplicative with shield)

@@ -208,6 +208,34 @@ describe('Damage Formula Structure', () => {
     expect(result.effectiveCritMult).toBe(3.0); // 2.0 × 1.5
   });
 
+  it('skillBondPercent is applied to skill base correctly', () => {
+    // Regression test: ensure skillBondPercent is added to skill base multiplier
+    // skillBond is multiplicative on skill base (like ATK bond)
+    const skillDmgInput = 0.2; // 20% skill DMG
+    const bondInput = 0.05; // 5% skill bond
+
+    const result = calculateDamage({
+      ...baseInput,
+      skillDmgPercent: skillDmgInput,
+      skillBondPercent: bondInput,
+    });
+
+    const resultNoBond = calculateDamage({
+      ...baseInput,
+      skillDmgPercent: skillDmgInput,
+      skillBondPercent: 0,
+    });
+
+    // With bond, skill damage should be higher
+    expect(result.skillDamage).toBeGreaterThan(resultNoBond.skillDamage);
+
+    // The ratio should reflect the bond contribution
+    // skillBase is multiplied by (1 + skillBondPercent) for bonded damage
+    const expectedRatio = 1 + bondInput;
+    const actualRatio = result.skillDamage / resultNoBond.skillDamage;
+    expect(actualRatio).toBeCloseTo(expectedRatio, 2);
+  });
+
   it('LB exceed multiplier values match expected averages', () => {
     // RE: Damage = baseDamage × (1.0 + exceed_percent / 100.0)
     // RE: LB4 average exceed = 1.10 (10% bonus)
