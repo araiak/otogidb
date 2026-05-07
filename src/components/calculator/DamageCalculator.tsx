@@ -307,11 +307,11 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
   const renderBreakdown = (
     label: string,
     total: string,
-    base: number | null,
+    base: number | string | null,
     sources: { slider: number; skills: number }
   ) => {
     const parts = [
-      base !== null ? `${formatPct(base)} base` : null,
+      base !== null ? (typeof base === 'string' ? base : `${formatPct(base)} base`) : null,
       formatSource(sources.slider, 'buffs'),
       formatSource(sources.skills, 'skills'),
     ].filter(Boolean);
@@ -382,7 +382,7 @@ function StatSummary({ result, card, breakdown, baseCritRate, limitBreak }: Stat
       {renderBreakdown(
         'Crit DMG',
         `${result.effectiveCritMult.toFixed(2)}×`,
-        2.0,
+        '2.00× base',
         breakdown.critDmg
       )}
       {renderBreakdown(

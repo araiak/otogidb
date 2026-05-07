@@ -619,7 +619,7 @@ function DpsStatComparison({ member }: StatComparisonProps) {
   // So: speedBonus = 2 * (1 - effectiveSpeed / baseInterval)
   const currentSpeedBonus = 2 * (1 - stats.effectiveSpeed / baseInterval);
   // Apply +10% to the speed bonus (multiplicative)
-  const newSpeedBonus = currentSpeedBonus * 1.10;
+  const newSpeedBonus = currentSpeedBonus + 0.10;
   // Apply piecewise cap logic
   const cappedNewBonus = Math.min(newSpeedBonus, STAT_CAPS.speedBuff);
   const newEffectiveSpeed = baseInterval * (1 - cappedNewBonus / 2);
