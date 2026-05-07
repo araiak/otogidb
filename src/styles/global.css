@@ -650,10 +650,11 @@ html[data-theme="new"]:not(.dark) header .link:hover {
 /* Divina — blue spirit */
 .dark[data-theme="new"] .data-table tbody tr[data-attribute="divina"]:hover td:not([data-column="bonds"]):not([data-column="sources"]):not([data-column="skill"]):not([data-column="ability1"]):not([data-column="ability2"]) {
   --anchor: rgba(180, 210, 255, 0.95);
-  --halo: rgba(80, 130, 255, 0.55);
-  --fog: rgba(30, 70, 220, 0.18);
+  --halo: rgba(80, 130, 255, 0.8);
+  --fog: rgba(30, 70, 220, 0.5);
   animation: respiration 5s ease-in-out infinite;
-  /* TEST: make glow obvious */
+  /* TEST: apply text-shadow directly */
+  text-shadow: 0 0 10px red !important;
   background-color: rgba(0, 100, 255, 0.2) !important;
 }
 
