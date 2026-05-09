@@ -4,7 +4,7 @@
   "previous_version": "9b3b2c7",
   "summary": {
     "new_cards": 0,
-    "modified_cards": 12
+    "modified_cards": 13
   },
   "new_cards": [],
   "modified_cards": [
@@ -455,6 +455,54 @@
             "is_current": false
           },
           "display": "From Description: Added ({'event_id': '178', 'event_name': \"The Ninjas' Elegy\", 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1619",
+      "name": "Goemon Ishikawa",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765948/otogi/cards_hd/101619_hd_9bb1061c5f9ae667da94a64f7c5d8ecb.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '178', 'event_name': \"The Ninjas' Elegy\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
         }
       ]
     }
