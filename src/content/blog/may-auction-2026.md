@@ -22,11 +22,9 @@ I don't think any blog post can assess if a card is right for you and your team 
 
 While I'm trying to be picky here — if you can only invest MLB every 1-2 months, I want to recommend cards that aren't likely to be quickly replaced, which means I simply won't recommend a lot of them — players with higher investment who aren't constrained by MLB limits should feel free to consider niche picks depending on their own goals.
 
-I probably won't recommend drop rate or XP boosters as picks, but I'll call them out when they appear so players looking for those niches know about them. If your team can't comfortably clear events yet, investing in a card that doesn't make you stronger doesn't make sense — focus on the combat picks instead. If your team is already very strong and clears easily, min-maxing XP gains between events might be a high priority for how you play, but consider that every MLB spent on an XP booster is one you're not spending on a strong combat pick. You'll need to decide which trade-off fits your goals.
+I'll call out XP and drop rate boosters when they appear but won't recommend them as combat picks. If your team can't clear events yet, investing in a card that doesn't make you stronger doesn't make sense — focus on the combat picks instead. If you're already clearing comfortably, min-maxing resources might be a priority for how you play, but every MLB spent there is one not going toward a strong pick. You'll need to decide which trade-off fits your goals.
 
-And if you're not sure about a card, wait. It never hurts to pick up a single copy and sit on it until PvP orbs unlock on the 15th and new card leaks start coming in. Information is incredibly valuable — by then you'll have a much better picture of what's actually worth investing in. I'd highly recommend holding off if you're unsure until you have more info.
-
-A note for newer players: if you can't unlock the abilities of a card, wait until you can. Once you have some fully unlocked cards on your team, it's rare that a non-unlocked card will replace them — even if it looks good on paper.
+And if you're unsure about a card, wait. It never hurts to grab a single copy and sit on it until PvP orbs unlock on the 15th and leaks start coming in — information is incredibly valuable. A note for newer players: if you can't unlock a card's abilities, grab a copy and hold off on investing PvP orbs until you can. Once you have some fully unlocked cards, it's rare that a non-unlocked one will replace them.
 
 Anyway that's a bit longer intro than normal, let's get into it.
 
