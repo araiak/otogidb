@@ -22,7 +22,7 @@ I don't think any blog post can assess if a card is right for you and your team 
 
 While I'm trying to be picky here — if you can only invest MLB every 1-2 months, I want to recommend cards that aren't likely to be quickly replaced, which means I simply won't recommend a lot of them — players with higher investment who aren't constrained by MLB limits should feel free to consider niche picks depending on their own goals.
 
-I probably won't recommend drop rate or XP boosters as picks, but I'll call them out when they appear so players looking for those niches know about them — squeezing every bit of free mochi and XP between events is a valid strategy even if it's not what I'd personally prioritize. If you are trying to optimize your team for story and towers and are willing to pay, the cards I highlight here are strong picks; if you're just trying to clear a 10 wave story, they probably won't help much right now.
+I probably won't recommend drop rate or XP boosters as picks, but I'll call them out when they appear so players looking for those niches know about them. If your team can't comfortably clear events yet, investing in a card that doesn't make you stronger doesn't make sense — focus on the combat picks instead. If your team is already very strong and clears easily, min-maxing XP gains between events might be a high priority for how you play, but consider that every MLB spent on an XP booster is one you're not spending on a strong combat pick. You'll need to decide which trade-off fits your goals.
 
 Anyway that's a bit longer intro than normal, let's get into it.
 
