@@ -24,6 +24,10 @@ While I'm trying to be picky here — if you can only invest MLB every 1-2 month
 
 I probably won't recommend drop rate or XP boosters as picks, but I'll call them out when they appear so players looking for those niches know about them. If your team can't comfortably clear events yet, investing in a card that doesn't make you stronger doesn't make sense — focus on the combat picks instead. If your team is already very strong and clears easily, min-maxing XP gains between events might be a high priority for how you play, but consider that every MLB spent on an XP booster is one you're not spending on a strong combat pick. You'll need to decide which trade-off fits your goals.
 
+And if you're not sure about a card, wait. It never hurts to pick up a single copy and sit on it until PvP orbs unlock on the 15th and new card leaks start coming in. Information is incredibly valuable — by then you'll have a much better picture of what's actually worth investing in. I'd highly recommend holding off if you're unsure until you have more info.
+
+A note for newer players: if you can't unlock the abilities of a card, wait until you can. Once you have some fully unlocked cards on your team, it's rare that a non-unlocked card will replace them — even if it looks good on paper.
+
 Anyway that's a bit longer intro than normal, let's get into it.
 
 ---
