@@ -24,7 +24,7 @@ While I'm trying to be picky here — if you can only invest MLB every 1-2 month
 
 I'll call out XP and drop rate boosters when they appear but won't recommend them as combat picks. If your team can't clear events yet, investing in a card that doesn't make you stronger doesn't make sense — focus on the combat picks instead. If you're already clearing comfortably, min-maxing resources might be a priority for how you play, but every MLB spent there is one not going toward a strong pick. You'll need to decide which trade-off fits your goals.
 
-And if you're unsure about a card, wait. It never hurts to grab a single copy and sit on it until PvP orbs unlock on the 15th and leaks start coming in — information is incredibly valuable. A note for newer players: if you can't unlock a card's abilities, grab a copy and hold off on investing PvP orbs until you can. Once you have some fully unlocked cards, it's rare that a non-unlocked one will replace them.
+And if you're unsure about a card, wait. It never hurts to grab a single copy and sit on it until PvP orbs unlock on the 15th and leaks start coming in — information is incredibly valuable. A note for newer players: if you can't unlock a card's abilities, grab a copy and hold off on investing PvP orbs until you can unlock all of the important ones. Once you have some fully unlocked cards, it's rare that a non-unlocked one will replace them.
 
 Anyway that's a bit longer intro than normal, let's get into it.
 
