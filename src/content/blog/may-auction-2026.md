@@ -14,7 +14,7 @@ First a few updates. I added a new layout style -- the old one "classic" is stil
 
 ## Why Auction Prices Are Rising
 
-Last month I was wondering what changing from Otogi event auctions to Ayakashi event auctions might mean for supply. Otogi events used to have 1 ranking card for each half and overall rankings, and the Ayakashi events having different half and overall cards means that it's no longer possible to have more than 5 copies of any one card. I think what we saw with :card[2186] -- good cards are going to be much rarer and more expensive on auction in general. Cards won't hit auction unless players are fairly certain they won't want them in the future, which is going to mean you have to watch auctions like a hawk to get good cards on auction. Even weaker ones like :card[2185] are likely to be a bit more expensive overall.
+This isn't the only reason prices are rising, but it's a new factor worth paying attention to. Last month I was wondering what changing from Otogi event auctions to Ayakashi event auctions might mean for supply. Otogi events used to have 1 ranking card for each half and overall rankings, and the Ayakashi events having different half and overall cards means that it's no longer possible to have more than 5 copies of any one card. I think what we saw with :card[2186] -- good cards are going to be much rarer and more expensive on auction in general. Cards won't hit auction unless players are fairly certain they won't want them in the future, which is going to mean you have to watch auctions like a hawk to get good cards on auction. Even weaker ones like :card[2185] are likely to be a bit more expensive overall.
 
 ## How to Read These Recommendations
 
