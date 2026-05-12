@@ -52,7 +52,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 :card[1312] is your standard progressive skill damage card for Anima with a small attack speed reduction to enemies slapped on. This makes her a decent option for endless or if you don't have any better options. If you have to choose between :card[1308] or :card[1312] for a temporary cheap stat stick as a new player, :card[1312] is probably the better option assuming they are both dirt cheap. **Decent filler for Anima; better than :card[1308] if both are cheap.**
 
-:card[1317] is the half ranking card. She is interesting in that she has an AoE attack skill, which is not common in healers. She has a 10% DR for Anima, and gets progressive skill damage for Anima. Her skill is fairly awkward since most of the damage comes from the burn effect ticking off which is not a lot of damage, nor does it scale with her progressive skill damage. I think you can probably find stronger healers that have better team contribution -- the one exception might be a situation where you need just a little DR, but that's a small niche and :card[583] is better for that. **Skip; AoE healer niche exists but she's not great at it.**
+:card[1317] is the half ranking card. She is interesting in that she has an AoE attack skill, which is not common in healers. She has a 10% DR for Anima, and gets progressive skill damage for Anima. Her skill is fairly awkward since most of the damage comes from the burn effect ticking off which is not a lot of damage, nor does it scale with her progressive skill damage. I think you can probably find stronger healers that have better team contribution -- the one exception might be a situation where you need just a little DR, but that's a small niche and :card[583] is better for that. **Skip; AoE damage healer niche exists but she's not great at it.**
 
 :card[1310] gives 15% HP to Phantasma and 35% DMG to Phantasma in the final wave. He is a little weaker than :card[573] overall, but 35% DMG is not bad in 1 round setups and HP can be a nice little bonus, but it's not worth a lot. The real problem is MLB has a steep price for a card that is good but not excellent. I could see some niche use for World Boss because the HP on Andromeda is helpful and the damage buff is always active, but most teams being mixed means you are probably better off running assists that are not restricted to Phantasma. **Niche World Boss pick; steep MLB price for what it offers.**
 
@@ -83,7 +83,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 **Halloween Tower:**
 - :card[1308] -- **Only with :card[1309]** -- self crit DMG buffer, mainly exists to boost :card[1309]; skip otherwise
 - :card[1312] -- **Decent Anima filler** -- progressive skill damage + enemy attack speed reduction; better than :card[1308] if both cheap
-- :card[1317] -- **Skip** -- AoE healer with burn, awkward scaling; stronger healers exist
+- :card[1317] -- **Skip** -- AoE damage healer with burn, awkward scaling; stronger healers exist
 - :card[1310] -- **Niche World Boss pick** -- 15% HP + 35% final wave DMG to Phantasma; steep MLB price
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
 
