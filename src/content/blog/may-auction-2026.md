@@ -1,7 +1,7 @@
 ---
 title: "May Auction Analysis"
 description: "Auction card analysis for Welcome to Halloween Tower and A Visitor from the Outer Space reruns, plus exchange cards"
-date: "2026-05-09"
+date: "2026-05-12"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
