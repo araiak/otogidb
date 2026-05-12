@@ -62,7 +62,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ## Exchange Card
 
-:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. If Oberon is released and is strong this could be a strong offensive bond, but for now it's just 30% DMG which is good, but you may be able to find conditional damage buffs that are higher like :card[664], or the above :card[1310], etc. **Hold for Oberon release; currently just a decent 30% DMG bond.**
+:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. If Oberon is released and is strong this could be a strong offensive bond, but for now it's just 30% DMG which is good, but you may be able to find conditional damage buffs that are higher like :card[664], or the above :card[1310], etc. If you have :card[1444] unlocked you can probably skip — they're hard to compare directly, but :card[1444] is clearly stronger stat budget wise even if it leans more into skill damage vs auto attack damage for :card[755]. You could also compare :card[659] which gives 50% ATK speed and 25% DMG to the whole team — that's probably better value, so skip if you have that and are going for an auto attack niche. **Hold for Oberon release; currently just a decent 30% DMG bond.**
 
 ---
 
@@ -88,7 +88,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
 
 **Exchange:**
-- :card[755] -- **Hold for Oberon** -- 30% DMG now, potential 50% attack speed when Oberon releases
+- :card[755] -- **Hold for Oberon** -- 30% DMG now, potential 50% attack speed when Oberon releases; skip if you have :card[1444] (stronger stat budget) or :card[659] (better value for auto attack niche)
 
 **Reruns:**
 - :card[564] -- **Good if you lack assists** -- 40% full team crit DMG; compare to :card[723]/:card[643]
