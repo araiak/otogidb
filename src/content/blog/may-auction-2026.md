@@ -62,7 +62,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ## Exchange Card
 
-:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. If Oberon is released and is very strong this could be a very strong offensive bond, but for now it's just 30% DMG which is good, but you may be able to find conditional damage buffs that are higher like :card[664], or the above :card[1310], etc. **Hold for Oberon release; currently just a decent 30% DMG bond.**
+:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. If Oberon is released and is strong this could be a strong offensive bond, but for now it's just 30% DMG which is good, but you may be able to find conditional damage buffs that are higher like :card[664], or the above :card[1310], etc. **Hold for Oberon release; currently just a decent 30% DMG bond.**
 
 ---
 
