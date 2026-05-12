@@ -38,7 +38,7 @@ I think there are two strong picks from this auction we can start with:
 
 - :card[553] has very high ATK, 25% DMG to top 2 ATK, 25% Crit DMG to top 2 ATK.
 - :card[1311] has very high ATK and a greedy 60% self skill DMG.
-- :card[616] is a bit dated for stats, but has a self level boost to make up for it, and 28% DMG to top 2 in the final wave, but requires a partner to make up the stats from level boost.
+- :card[616] is a bit dated for stats, but has a self level boost to make up for it, and 28% DMG to top 2 in the final wave, but requires a partner to make up the stats from level boost. There aren't any elves that are strong in the current game, so that is a big downside.
 
 If you skipped :card[553] last month, :card[1311] is your best option to get started in Divina while we wait for a strong carry. For new players the skill damage is very strong, but for stronger players this might hit damage caps which reduces its overall value when compared to :card[553] who is a great support carry. **Best Divina carry option if you missed :card[553]; strong for newer players, may hit damage caps at higher levels.**
 
