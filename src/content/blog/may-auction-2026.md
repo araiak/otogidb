@@ -64,7 +64,7 @@ I think there are two strong picks from this auction we can start with:
 
 ## Exchange Card
 
-:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. Without the ATK speed, it's weaker than team damage boosters like :card[644], :card[715], or :card[1531] — all of those give nearly 30% DMG to multiple team members and provide more value right now. Even as a single carry assist, the cheap :card[696] (50% conditional damage) outclasses it vs Arko. That said, :card[715] and :card[1531] may take some time to come to auction, and :card[644] can be moderately expensive. The best play is probably to hold for Oberon's release: if he's strong, the ATK speed boost on an auto-attack focused carry makes this a much more compelling bond. For now you'll get more team value from a damage assist that buffs multiple members. **Hold for Oberon release; better F2P-friendly options exist (:card[644], :card[715], :card[1531]) but may not be available or affordable yet.**
+:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. Without the ATK speed, it's weaker than team damage boosters like :card[664], :card[715], or :card[1531] — all of those give nearly 30% DMG to multiple team members and provide more value right now. Even as a single carry assist, the cheap :card[696] (50% conditional damage) outclasses it vs Arko. That said, :card[715] and :card[1531] may take some time to come to auction, and :card[664] can be moderately expensive. The best play is probably to hold for Oberon's release: if he's strong, the ATK speed boost on an auto-attack focused carry makes this a much more compelling bond. For now you'll get more team value from a damage assist that buffs multiple members. **Hold for Oberon release; better F2P-friendly options exist (:card[664], :card[715], :card[1531]) but may not be available or affordable yet.**
 
 ---
 
@@ -92,7 +92,7 @@ I think there are two strong picks from this auction we can start with:
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
 
 **Exchange:**
-- :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[644], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
+- :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[664], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
 
 **Reruns (Jewels):**
 - :card[564] -- **Strong but safe to skip** -- 40% full team crit DMG, useful if you need more crit damage or plan 3-carry teams; :card[723]/:card[643] are safer bets for most players
