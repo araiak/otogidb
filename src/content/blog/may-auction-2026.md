@@ -68,7 +68,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ## Reruns
 
-:card[564] is a 40% full team crit damage buff, this is very strong on its own. But the reality of team damage is usually your damage comes from 1-2 cards, so the value can be compared to :card[723] or :card[643] and crit damage assists can get crowded pretty fast. If you don't already have solid assists and would rather spend money than mochi, this is a good choice, but if you have time or mochi you can consider :card[723] and/or :card[643] as good alternatives. **Good if you lack assists; skip if you have :card[723]/:card[643].**
+:card[564] is a 40% full team crit damage buff, this is very strong on its own. It could be a good pick if you need more crit damage or if 3-carry teams become a thing — the full team coverage matters in those setups. But since you want a spread of buff types across your assists, and :card[723] and :card[643] are solid action cards that cover different niches, they're probably the safer bet for most players. **Strong card but safe to skip; consider if you need crit damage or plan 3-carry teams.**
 
 :card[565] is a decent healer -- 50% ATK speed increases healing throughput which can sometimes mean the difference between needing something defensive and running more damage. It's also not uncommon to use ATK speed on healers to get throughput which could mean swapping to a better assist bond. 20% DMG to all team members is a bit low but at least it's not an attribute restricted. :card[565] is good but not great, and probably not worth the investment. **Skip; decent healer but outclassed.**
 
@@ -91,7 +91,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 - :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[644], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
 
 **Reruns:**
-- :card[564] -- **Good if you lack assists** -- 40% full team crit DMG; compare to :card[723]/:card[643]
+- :card[564] -- **Strong but safe to skip** -- 40% full team crit DMG, useful if you need more crit damage or plan 3-carry teams; :card[723]/:card[643] are safer bets for most players
 - :card[565] -- **Skip** -- decent healer with ATK speed throughput but outclassed
 
 ---
