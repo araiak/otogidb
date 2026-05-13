@@ -1,7 +1,7 @@
 ---
 title: "May Auction Analysis"
 description: "Auction card analysis for Welcome to Halloween Tower and A Visitor from the Outer Space reruns, plus exchange cards"
-date: "2026-05-12"
+date: "2026-05-13"
 author: "Araiak"
 tags: ["analysis", "auction"]
 ---
@@ -62,7 +62,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ## Exchange Card
 
-:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. If Oberon is released and is strong this could be a strong offensive bond, but for now it's just 30% DMG which is good. It makes for a decent carry assist for players who lack options — strong for an exchange card, but weak when compared to LJS options. That said, it could be a decent filler if it's cheap for newer players who lack assists because it only requires 2 copies. **Hold for Oberon release; currently just a decent 30% DMG bond.**
+:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. Without the ATK speed, it's weaker than team damage boosters like :card[644], :card[715], or :card[1531] — all of those give nearly 30% DMG to multiple team members and provide more value right now. Even as a single carry assist, the cheap :card[696] (50% conditional damage) outclasses it vs Arko. That said, :card[715] and :card[1531] may take some time to come to auction, and :card[644] can be moderately expensive. The best play is probably to hold for Oberon's release: if he's strong, the ATK speed boost on an auto-attack focused carry makes this a much more compelling bond. For now you'll get more team value from a damage assist that buffs multiple members. **Hold for Oberon release; better F2P-friendly options exist (:card[644], :card[715], :card[1531]) but may not be available or affordable yet.**
 
 ---
 
@@ -88,7 +88,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
 
 **Exchange:**
-- :card[755] -- **Hold for Oberon** -- 30% DMG now, potential 50% attack speed when Oberon releases; decent carry assist if you lack options, strong for an exchange card but weak vs LJS picks
+- :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[644], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
 
 **Reruns:**
 - :card[564] -- **Good if you lack assists** -- 40% full team crit DMG; compare to :card[723]/:card[643]
