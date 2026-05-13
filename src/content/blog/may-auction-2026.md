@@ -56,7 +56,7 @@ I think there are two strong picks from this auction we can start with:
 
 ### Halloween LJS (Jewels)
 
-:card[1310] gives 15% HP to Phantasma and 35% DMG to Phantasma in the final wave. She is a little weaker than :card[573] overall, but 35% DMG is not bad in 1 round setups and HP can be a nice little bonus, but it's not worth a lot. The real problem is MLB has a steep price for a card that is good but not excellent. I could see some niche use for World Boss because putting the assist on another card to buff the whole team (including Andromeda) gives her both the HP and the damage buff that's always active, but most teams being mixed means you are probably better off running assists that are not restricted to Phantasma. **Niche World Boss pick; steep MLB price for what it offers.**
+:card[1310] gives 15% HP to Phantasma and 35% DMG to Phantasma in the final wave. She is a little weaker than :card[673] overall, but 35% DMG is not bad in 1 round setups and HP can be a nice little bonus, but it's not worth a lot. The real problem is MLB has a steep price for a card that is good but not excellent. I could see some niche use for World Boss because putting the assist on another card to buff the whole team (including Andromeda) gives her both the HP and the damage buff that's always active, but most teams being mixed means you are probably better off running assists that are not restricted to Phantasma. **Niche World Boss pick; steep MLB price for what it offers.**
 
 :card[1314] is an AoE skill progressive skill damage and crit rate card. The crit rate is a nice change to the formula that makes her very strong in endless or any multi round content where you want a wave clearer. She is undermined a little bit by :card[1307] since she is very likely to cap crit rate quickly running both. She is a good card, but probably not worth the investment because her niche is not really required. **Good card but skip; crit rate caps with :card[1307].**
 
@@ -64,7 +64,7 @@ I think there are two strong picks from this auction we can start with:
 
 ## Exchange Card
 
-:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. Without the ATK speed, it's weaker than team damage boosters like :card[644], :card[715], or :card[1531] — all of those give nearly 30% DMG to multiple team members and provide more value right now. Even as a single carry assist, the cheap :card[696] (50% conditional damage) outclasses it vs Arko. That said, :card[715] and :card[1531] may take some time to come to auction, and :card[644] can be moderately expensive. The best play is probably to hold for Oberon's release: if he's strong, the ATK speed boost on an auto-attack focused carry makes this a much more compelling bond. For now you'll get more team value from a damage assist that buffs multiple members. **Hold for Oberon release; better F2P-friendly options exist (:card[644], :card[715], :card[1531]) but may not be available or affordable yet.**
+:card[755] is a 30% DMG increase and a 50% attack speed that we can't yet activate. Without the ATK speed, it's weaker than team damage boosters like :card[664], :card[715], or :card[1531] — all of those give nearly 30% DMG to multiple team members and provide more value right now. Even as a single carry assist, the cheap :card[696] (50% conditional damage) outclasses it vs Arko. That said, :card[715] and :card[1531] may take some time to come to auction, and :card[664] can be moderately expensive. The best play is probably to hold for Oberon's release: if he's strong, the ATK speed boost on an auto-attack focused carry makes this a much more compelling bond. For now you'll get more team value from a damage assist that buffs multiple members. **Hold for Oberon release; better F2P-friendly options exist (:card[664], :card[715], :card[1531]) but may not be available or affordable yet.**
 
 ---
 
@@ -92,7 +92,7 @@ I think there are two strong picks from this auction we can start with:
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
 
 **Exchange:**
-- :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[644], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
+- :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[664], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
 
 **Reruns (Jewels):**
 - :card[564] -- **Strong but safe to skip** -- 40% full team crit DMG, useful if you need more crit damage or plan 3-carry teams; :card[723]/:card[643] are safer bets for most players

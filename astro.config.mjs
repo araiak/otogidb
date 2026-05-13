@@ -56,9 +56,18 @@ export default defineConfig({
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            'tanstack-table': ['@tanstack/react-table'],
-            'floating-ui': ['@floating-ui/react']
+          // Astro 6 / newer Rollup rejects manualChunks for externalized modules.
+          // Use the function form so we silently skip any module Rollup has
+          // already marked external (server-side entries) and only chunk on
+          // the client build where the deps are bundled.
+          manualChunks(id) {
+            if (id.includes('node_modules/@tanstack/react-table')) {
+              return 'tanstack-table';
+            }
+            if (id.includes('node_modules/@floating-ui/react')) {
+              return 'floating-ui';
+            }
+            return undefined;
           }
         }
       }
