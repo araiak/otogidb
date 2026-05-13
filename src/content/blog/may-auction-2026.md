@@ -50,7 +50,7 @@ I think there are two strong picks from this auction we can start with:
 
 :card[1308] is a self crit damage buffer without crit rate boosts. She's not very good, but if you happen to have a lvl 72+ :card[1309] that you are using or want to use then you should pick her up. Her main value is to boost :card[1309]. This probably isn't a combo you should be reaching for, but if the stars happen to align it's not terrible for newer players and certainly the combo is capable of clearing towers and story events. But there are stronger options in Anima, and :card[1308] herself is mostly a sacrifice to make :card[1309] strong, but lack of crit rate on :card[1309] prevents the combo from being especially strong. **Only worth it if you already have :card[1309]; skip otherwise.**
 
-:card[1312] is your standard progressive skill damage card for Anima with a small attack speed reduction to enemies slapped on. This makes her a decent option for endless or if you don't have any better options. If you have to choose between :card[1308] or :card[1312] for a temporary cheap stat stick as a new player, :card[1312] is probably the better option assuming they are both dirt cheap. **Decent filler for Anima; better than :card[1308] if both are cheap.**
+:card[1312] is your standard progressive skill damage card for Anima with a small attack speed reduction to enemies slapped on. This makes her a decent option for endless or if you don't have any better options. If you have to choose between :card[1308] or :card[1312] for a temporary cheap stat stick as a new player, just pick whichever is cheaper — both are fine filler until you get something better. **Decent Anima filler; pick whichever of these two is cheaper.**
 
 :card[1317] is the half ranking card. She is interesting in that she has an AoE attack skill, which is not common in healers. She has a 10% DR for Anima, and gets progressive skill damage for Anima. Her skill is fairly awkward since most of the damage comes from the burn effect ticking off which is not a lot of damage, nor does it scale with her progressive skill damage. I think you can probably find stronger healers that have better team contribution -- the one exception might be a situation where you need just a little DR, but that's a small niche and :card[583] is better for that. **Skip; AoE damage healer niche exists but she's not great at it.**
 
@@ -84,7 +84,7 @@ I think there are two strong picks from this auction we can start with:
 
 **Halloween Tower:**
 - :card[1308] -- **Only with :card[1309]** -- self crit DMG buffer, mainly exists to boost :card[1309]; skip otherwise
-- :card[1312] -- **Decent Anima filler** -- progressive skill damage + enemy attack speed reduction; better than :card[1308] if both cheap
+- :card[1312] -- **Decent Anima filler** -- progressive skill damage + enemy attack speed reduction; pick whichever of these two is cheaper
 - :card[1317] -- **Skip** -- AoE damage healer with burn, awkward scaling; stronger healers exist
 
 **Halloween LJS (Jewels):**
