@@ -68,7 +68,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ## Reruns
 
-:card[564] is a 40% full team crit damage buff, this is very strong on its own. But the reality of team damage is usually your damage comes from 1-2 cards, so the value can be compared to :card[723] (60%/2) or :card[643] and crit damage assists can get crowded pretty fast. If you don't already have solid assists and would rather spend money than mochi, this is a good choice, but if you have time or mochi you can consider :card[723] and/or :card[643] as good alternatives. **Good if you lack assists; skip if you have :card[723]/:card[643].**
+:card[564] is a 40% full team crit damage buff, this is very strong on its own. But the reality of team damage is usually your damage comes from 1-2 cards, so the value can be compared to :card[723] or :card[643] and crit damage assists can get crowded pretty fast. If you don't already have solid assists and would rather spend money than mochi, this is a good choice, but if you have time or mochi you can consider :card[723] and/or :card[643] as good alternatives. **Good if you lack assists; skip if you have :card[723]/:card[643].**
 
 :card[565] is a decent healer -- 50% ATK speed increases healing throughput which can sometimes mean the difference between needing something defensive and running more damage. It's also not uncommon to use ATK speed on healers to get throughput which could mean swapping to a better assist bond. 20% DMG to all team members is a bit low but at least it's not an attribute restricted. :card[565] is good but not great, and probably not worth the investment. **Skip; decent healer but outclassed.**
 
