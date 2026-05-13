@@ -68,7 +68,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 
 ---
 
-## Reruns
+## Reruns (Jewels)
 
 :card[564] is a 40% full team crit damage buff, this is very strong on its own. It could be a good pick if you need more crit damage or if 3-carry teams become a thing — the full team coverage matters in those setups. But since you want a spread of buff types across your assists, and :card[723] and :card[643] are solid action cards that cover different niches, they're probably the safer bet for most players. **Strong card but safe to skip; consider if you need crit damage or plan 3-carry teams.**
 
@@ -94,7 +94,7 @@ If you skipped :card[553] last month, :card[1311] is your best option to get sta
 **Exchange:**
 - :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[644], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
 
-**Reruns:**
+**Reruns (Jewels):**
 - :card[564] -- **Strong but safe to skip** -- 40% full team crit DMG, useful if you need more crit damage or plan 3-carry teams; :card[723]/:card[643] are safer bets for most players
 - :card[565] -- **Good for newer players** -- accessible ATK speed means solid throughput, skill can save a low HP card in tough fights; contrasts with strong but low-throughput :card[1618]; probably not worth spending jewels
 
