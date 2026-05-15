@@ -60,6 +60,8 @@ I think there are two strong picks from this auction we can start with:
 
 :card[1314] is an AoE skill progressive skill damage and crit rate card. The crit rate is a nice change to the formula that makes her very strong in endless or any multi round content where you want a wave clearer. She is undermined a little bit by :card[1307] since she is very likely to cap crit rate quickly running both. She is a good card, but probably not worth the investment because her niche is not really required. **Good card but skip; crit rate caps with :card[1307].**
 
+:card[1319] is a self crit rate assist, giving 20% CR on entry. CR assists for self are not very common — :card[535] has the same effect, though she's a 5\* with the ability gated behind level 81, which requires MLB to access. :card[1319] unlocks at level 53 on a max level 60 card, meaning a single copy is all you need. The top self assists generally have a higher card budget overall, so it is a bit hard to compare directly, but there is real niche use for crit-dependent carries who don't otherwise have CR covered. Future cards with this effect may appear, so it's not an urgent pick — but the combination of single-copy accessibility and genuine 20% CR strength makes it worth a look if CR is a gap in your setup. **Niche pick; accessible with 1 copy — worth considering for crit-dependent carries missing CR coverage.**
+
 ---
 
 ## Exchange Card
@@ -90,6 +92,7 @@ I think there are two strong picks from this auction we can start with:
 **Halloween LJS (Jewels):**
 - :card[1310] -- **Niche World Boss pick** -- 15% HP + 35% final wave DMG to Phantasma; steep MLB price
 - :card[1314] -- **Skip** -- AoE progressive skill damage + crit rate; undermined by :card[1307] crit cap
+- :card[1319] -- **Niche; accessible at 1 copy** -- 20% self CR, unlocks at level 53; :card[535] shares the effect but needs MLB; worth considering if CR is a gap for your carry
 
 **Exchange:**
 - :card[755] -- **Hold for Oberon** -- 30% DMG + locked ATK speed; weaker than team boosters (:card[664], :card[715], :card[1531]) that buff multiple members; wait until ATK speed activates on an auto-attack carry
