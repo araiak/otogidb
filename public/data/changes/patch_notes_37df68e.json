@@ -1,0 +1,65 @@
+{
+  "version": "37df68e",
+  "version_date": "2026-05-15",
+  "previous_version": "b07cb7e",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "747",
+      "name": "Yagyu no Odachi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634663/otogi/cards_hd/100747_hd_f9434063924fda60b8e54e98068c7702.png",
+      "changes": [
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Skill attacks increase 40% DMG taken by targets.",
+          "new": "Skill attacks increase 60% DMG taken by targets.",
+          "display": "Description: Skill attacks increase 40% ... → Skill attacks increase 60% ..."
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": -40.0,
+          "new": -60.0,
+          "display": "Value: -40.0 → -60.0 (-20.0)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "banner": {
+      "old_count": 531,
+      "new_count": 532,
+      "diff": 1
+    },
+    "monsterAbility": {
+      "old_count": 1057,
+      "new_count": 1057,
+      "diff": 0
+    },
+    "guildRaidBoss": {
+      "old_count": 50,
+      "new_count": 50,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 2,
+      "diff": 1
+    },
+    "cardInit": {
+      "old_count": 427,
+      "new_count": 427,
+      "diff": 0
+    }
+  }
+}
