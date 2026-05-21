@@ -7205,6 +7205,77 @@
         "type_name": "Melee"
       }
     },
+    "1488": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 아군의 HP를 20% 회복한다",
+          "name": "칠복신",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "전투 경험치가 25% 증가한다",
+          "name": "지휘의 매력",
+          "tags": [
+            "Self",
+            "EXP Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101488",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1488",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "바이슈라바나",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.09%",
+        "delay_mlb": "72.29%",
+        "description": "일정 시간 동안 모든 아군이 입히는 데미지를 {delay1} 증가시킨다",
+        "name": "옥타브 비브라토",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "1489": {
       "abilities": [
         {
@@ -12117,6 +12188,78 @@
         "type_name": "Ranged"
       }
     },
+    "1634": {
+      "abilities": [
+        {
+          "description": "전투 데미지가 40% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "주인공 버프",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 78
+        },
+        {
+          "description": "자신의 레벨 +15(조력자이외 아군파티 1회유효)",
+          "name": "사춘기 영웅",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101634",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1634",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/android/101634_dbbe31110830aedc67c4573f0f7ef24d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332327/otogi/cards_hd/101634_hd_cb2511dc32fd65f93a71f30c0106b077.png"
+      },
+      "name": "카노푸스",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "아르고나우테스",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1635": {
       "abilities": [
         {
@@ -12537,6 +12680,586 @@
         "type_name": "Ranged"
       }
     },
+    "1660": {
+      "abilities": [
+        {
+          "description": "받는 데미지가 17% 감소한다(조력자이외 아군파티 1회유효)",
+          "name": "대검의 정령",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101660",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1660",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "드래곤 사냥꾼",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "드래곤 킬러",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1662": {
+      "abilities": [
+        {
+          "description": "HP가 자동으로 회복된다 (5초당 최대 HP의 6%)(조력자이외 아군파티 1회유효)",
+          "name": "벤치 멤버의 역습",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101662",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1662",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "사심없는 소환사",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "최고의 소환",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1663": {
+      "abilities": [
+        {
+          "description": "모든 아군이 받는 데미지가 4% 감소한다(조력자이외 아군파티 1회유효)",
+          "name": "용의 컬렉션",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 60
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101663",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1663",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "주얼리아",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "건방진 시선",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1664": {
+      "abilities": [
+        {
+          "description": "적에게 입힌 데미지의 12%를 자신의 HP로 흡수한다(조력자이외 아군파티 1회유효)",
+          "name": "해군 중장",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 55
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101664",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1664",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "프랜시스 드레이크",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "구도자",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1665": {
+      "abilities": [
+        {
+          "description": "스킬 데미지 43% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "등용문",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101665",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1665",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "잉어",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "펀치",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1666": {
+      "abilities": [
+        {
+          "description": "모든 근접형 아군이 받는 데미지가 20% 감소한다",
+          "name": "원탁의 기사",
+          "tags": [
+            "Team",
+            "Melee",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101666",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1666",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "트리스탄",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "32.77%",
+        "delay_mlb": "39.37%",
+        "description": "현재 대상에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 {delay1} 감소시킨다",
+        "name": "섬광의 베기",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,677",
+        "slv_mlb": "5,737",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 3365,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 10100,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1667": {
+      "abilities": [
+        {
+          "description": "남은 HP가 50% 이하일 때, HP를 5초마다 7.5%씩 회복하고 동시에 치명타율이 40% 증가하며, 받는 데미지가 30% 감소한다.",
+          "name": "충직한 경호원",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101667",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1667",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "다이아몬드 드래곤",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "HP가 가장 낮은 적 1명에게 {value}의 데미지를 입히고 {probability}로 화상상태로 만든다",
+        "name": "작열의 광선",
+        "prob_lb0": "60.85%",
+        "prob_mlb": "73.85%",
+        "slv_lb0": "4,130",
+        "slv_mlb": "4,930",
+        "tags": [
+          "DMG",
+          "Single",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3800,
+        "base_hp": 4300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11400,
+        "max_hp": 12900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1668": {
+      "abilities": [
+        {
+          "description": "스킬 대상이 받는 데미지가 60% 증가한다",
+          "name": "슈퍼스타",
+          "tags": [
+            "On Skill",
+            "DMG Amp"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 자신의 전투 데미지가 10% 증가한다",
+          "name": "반전 매력",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101668",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1668",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "트리스탄 EX",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "공격력이 가장 높은 적 1명에게 {value}의 데미지를 입히고 대상의 모든 버프를 해제한다。",
+        "name": "섬광의 베기 Mk. 2",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,823",
+        "slv_mlb": "4,563",
+        "tags": [
+          "DMG",
+          "Dispel",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3230,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1669": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 요괴 속성 파티원의 스킬 데미지가 15% 증가한다",
+          "name": "라이징 스타",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "최종 WAVE시 모든 요괴 속성 파티원의 치명타율이 25% 증가한다",
+          "name": "용의 혈통",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101669",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1669",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "드래곤 프린세스",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "모든 적에게 {value}의 데미지를 입힌다",
+        "name": "팝 센세이션",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,367",
+        "slv_mlb": "2,827",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4830,
+        "base_hp": 2830,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 8500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "167": {
       "abilities": [
         {
@@ -12613,6 +13336,274 @@
         "rarity": 5,
         "speed": 2300,
         "type_name": "Healer"
+      }
+    },
+    "1670": {
+      "abilities": [
+        {
+          "description": "치명타 데미지가 50% 증가한다",
+          "name": "독설 아이돌",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "치명타율이 50% 증가한다",
+          "name": "폭발하는 성질",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101670",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1670",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "인솔렌시아",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "적 2명(원거리형 우선)에게 {value}의 데미지를 입힌다",
+        "name": "신성한 회오리 발차기",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,734",
+        "slv_mlb": "4,454",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4530,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13600,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1671": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 가장 HP 비율이 낮은 아군의 HP를 17% 회복한다",
+          "name": "전설의 프로듀서",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 64
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101671",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1671",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332325/otogi/android/101671_f9a8df9b4912f770af1693eda7c95b3e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/cards_hd/101671_hd_925e0a722b9dc3b8a134f491fb15305f.png"
+      },
+      "name": "쿠즈류",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "65.30%",
+        "delay_mlb": "79.30%",
+        "description": "자신의 HP를 {value} 회복하고 일정 시간 동안 받는 데미지를 {delay1} 감소시킨다",
+        "name": "붕괴",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,176",
+        "slv_mlb": "3,856",
+        "tags": [
+          "Heal",
+          "Self",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2400,
+        "base_hp": 2030,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7200,
+        "max_hp": 6100,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1672": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 공격력이 가장 높은 아군 2명의 치명타 데미지가 15% 증가한다",
+          "name": "인기 절정",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 공격력이 가장 높은 아군 2명의 치명타율이 10% 증가한다",
+          "name": "완벽한 이미지",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101672",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1672",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "레비아단",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "67.35%",
+        "delay_mlb": "80.35%",
+        "description": "공격력이 가장 높은 아군 1명의 HP를 {value}회복시키고 일정 시간동안 치명타율을 {delay1}증가시킨다",
+        "name": "하트브레이커",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,259",
+        "slv_mlb": "5,079",
+        "tags": [
+          "Heal",
+          "Single",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1673": {
+      "abilities": [
+        {
+          "description": "공격력이 가장 높은 아군 2명의 치명타 데미지가 23% 증가한다",
+          "name": "기계의 마음",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101673",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1673",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "키클롭스 드래곤",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "50.45%",
+        "delay_mlb": "61.45%",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "도살장 인형",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2300,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 6900,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "168": {
@@ -59451,7 +60442,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "100747",
       "bonds": [
@@ -61677,8 +62670,8 @@
       }
     }
   },
-  "data_hash": "1dba0165",
+  "data_hash": "57977413",
   "locale": "ko",
-  "total_cards": 952,
-  "version": "37df68e"
+  "total_cards": 967,
+  "version": "082fbab"
 }

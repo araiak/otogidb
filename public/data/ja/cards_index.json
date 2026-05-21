@@ -7205,6 +7205,77 @@
         "type_name": "Melee"
       }
     },
+    "1488": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、味方式神全体のＨＰを20%回復",
+          "name": "七福神",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "獲得経験値25%増加",
+          "name": "指揮者のカリスマ",
+          "tags": [
+            "Self",
+            "EXP Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101488",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1488",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "毘沙門天",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.09%",
+        "delay_mlb": "72.29%",
+        "description": "味方全体の攻撃力を一時的に{delay1}上昇させる",
+        "name": "八度音程ビブラート",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "1489": {
       "abilities": [
         {
@@ -12117,6 +12188,78 @@
         "type_name": "Ranged"
       }
     },
+    "1634": {
+      "abilities": [
+        {
+          "description": "与ダメージ値が40%増加（助っ人以外、味方陣容一回有効）",
+          "name": "主人公補正",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 78
+        },
+        {
+          "description": "自身のレベル＋15（助っ人以外、味方陣容一回有効）",
+          "name": "思春期の英雄",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101634",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1634",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/android/101634_dbbe31110830aedc67c4573f0f7ef24d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332327/otogi/cards_hd/101634_hd_cb2511dc32fd65f93a71f30c0106b077.png"
+      },
+      "name": "カノープス（恒星）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "アルゴノーツ",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1635": {
       "abilities": [
         {
@@ -12537,6 +12680,586 @@
         "type_name": "Ranged"
       }
     },
+    "1660": {
+      "abilities": [
+        {
+          "description": "被ダメージ値を17%軽減（助っ人以外、味方陣容一回有効）",
+          "name": "大剣の精霊",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101660",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1660",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "ドラゴンスレイヤー",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "ドラゴン殺し",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1662": {
+      "abilities": [
+        {
+          "description": "ＨＰ自動回復（5秒毎に最大HPの6%）（助っ人以外、味方陣容一回有効）",
+          "name": "補欠の逆襲",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101662",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1662",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "召喚士 無我",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "偉大なる召喚",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1663": {
+      "abilities": [
+        {
+          "description": "味方式神の被ダメージを4%軽減（助っ人以外、味方陣容一回有効）",
+          "name": "竜の秘蔵品",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 60
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101663",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1663",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "宝石の精霊ジュエル",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "上から目線",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1664": {
+      "abilities": [
+        {
+          "description": "相手にダメージを与えた時、ダメージ値12%ほどのＨＰを回復（助っ人以外、味方陣容一回有効）",
+          "name": "海軍中将",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 55
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101664",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1664",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "フランシス・ドレイク",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "真理の探求者",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1665": {
+      "abilities": [
+        {
+          "description": "特技の威力が43%向上（助っ人以外、味方陣容一回有効）",
+          "name": "鯉の滝登り",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101665",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1665",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "鯉",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "パンチ",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1666": {
+      "abilities": [
+        {
+          "description": "近接型の味方式神の被ダメージを20%軽減",
+          "name": "円卓の騎士",
+          "tags": [
+            "Team",
+            "Melee",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101666",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1666",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "トリスタン",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "32.77%",
+        "delay_mlb": "39.37%",
+        "description": "目の前の対象に{value}のダメージを与え、対象の攻撃力を一時的に{delay1}低下させる",
+        "name": "閃光斬無輪",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,677",
+        "slv_mlb": "5,737",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 3365,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 10100,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1667": {
+      "abilities": [
+        {
+          "description": "残ったHPが50％以下の時、HPを5秒毎に7.5%回復し、同時にクリティカル率が40%増加、被ダメージを30%軽減する。",
+          "name": "忠実なボディガード",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101667",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1667",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "金剛の古龍",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "残ＨＰが最も低い敵１体に{value}のダメージを与え、対象を{probability}で火傷状態にする",
+        "name": "灼熱光線",
+        "prob_lb0": "60.85%",
+        "prob_mlb": "73.85%",
+        "slv_lb0": "4,130",
+        "slv_mlb": "4,930",
+        "tags": [
+          "DMG",
+          "Single",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3800,
+        "base_hp": 4300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11400,
+        "max_hp": 12900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1668": {
+      "abilities": [
+        {
+          "description": "特技の対象の被ダメージ値を60%増加",
+          "name": "スーパースター",
+          "tags": [
+            "On Skill",
+            "DMG Amp"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の与ダメージ値が向上10%",
+          "name": "ギャップ萌え",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101668",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1668",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "トリスタンEX",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "最も攻撃力が高い敵１体に{value}のダメージを与え、対象のすべてのバフ効果を解除する。",
+        "name": "閃光斬無輪・弐式",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,823",
+        "slv_mlb": "4,563",
+        "tags": [
+          "DMG",
+          "Dispel",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3230,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1669": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、怪異属性の味方式神の特技ダメージ値が15%増加",
+          "name": "明日のスター",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "最終のＷＡＶＥに、怪異属性の味方式神のクリティカル率が25%増加",
+          "name": "竜の血脈",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101669",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1669",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "竜の王女",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵全体に{value}のダメージを与える",
+        "name": "１００％アイドル",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,367",
+        "slv_mlb": "2,827",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4830,
+        "base_hp": 2830,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 8500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "167": {
       "abilities": [
         {
@@ -12613,6 +13336,274 @@
         "rarity": 5,
         "speed": 2300,
         "type_name": "Healer"
+      }
+    },
+    "1670": {
+      "abilities": [
+        {
+          "description": "クリティカルダメージ値が50%に増加",
+          "name": "毒舌アイドル",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "クリティカル率が50%に増加",
+          "name": "爆発する気性",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101670",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1670",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "逆鱗",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵２体（遠距離型優先）に{value}のダメージを与える",
+        "name": "神速二連回し蹴り",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,734",
+        "slv_mlb": "4,454",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4530,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13600,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1671": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、最大ＨＰと残ＨＰの割合が低い味方式神のＨＰを17%回復",
+          "name": "伝説のプロデューサー",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Heal"
+          ],
+          "unlock_level": 64
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101671",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1671",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332325/otogi/android/101671_f9a8df9b4912f770af1693eda7c95b3e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/cards_hd/101671_hd_925e0a722b9dc3b8a134f491fb15305f.png"
+      },
+      "name": "九頭竜",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "65.30%",
+        "delay_mlb": "79.30%",
+        "description": "自身のＨＰを{value}回復し、被ダメージ値を一時的に{delay1}軽減させる",
+        "name": "水底に沈める",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,176",
+        "slv_mlb": "3,856",
+        "tags": [
+          "Heal",
+          "Self",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2400,
+        "base_hp": 2030,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7200,
+        "max_hp": 6100,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1672": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、最も攻撃力が高い味方２体のクリティカルダメージ値15%上昇",
+          "name": "人気の頂点",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、最も攻撃力が高い味方２体のクリティカル率10%上昇",
+          "name": "完璧なイメージ",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101672",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1672",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "レヴィアたん",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "67.35%",
+        "delay_mlb": "80.35%",
+        "description": "最も攻撃力が高い味方１体のＨＰを{value}回復し、対象のクリティカル率を一時的に{delay1}上昇させる",
+        "name": "ハートを串刺し",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,259",
+        "slv_mlb": "5,079",
+        "tags": [
+          "Heal",
+          "Single",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1673": {
+      "abilities": [
+        {
+          "description": "最も攻撃力が高い味方２体のクリティカルダメージ値が23%に増加",
+          "name": "機械の心",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101673",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1673",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "ドクガンリュウ",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "50.45%",
+        "delay_mlb": "61.45%",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "殺戮機巧人形",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2300,
+        "base_hp": 2000,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 6900,
+        "max_hp": 6000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
       }
     },
     "168": {
@@ -59451,7 +60442,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "100747",
       "bonds": [
@@ -61677,8 +62670,8 @@
       }
     }
   },
-  "data_hash": "1dba0165",
+  "data_hash": "57977413",
   "locale": "ja",
-  "total_cards": 952,
-  "version": "37df68e"
+  "total_cards": 967,
+  "version": "082fbab"
 }
