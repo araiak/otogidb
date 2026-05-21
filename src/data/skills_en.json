@@ -14142,6 +14142,243 @@
       "DMG Up"
     ]
   },
+  "1660": {
+    "id": "1660",
+    "name": "Dragon Killer",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1660",
+    "card_name": "Dragonslayer",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1662": {
+    "id": "1662",
+    "name": "Supreme Summons",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1662",
+    "card_name": "The Selfless Summoner",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1665": {
+    "id": "1665",
+    "name": "Punch",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1665",
+    "card_name": "Koi Carp",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1663": {
+    "id": "1663",
+    "name": "Haughty Stare",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1663",
+    "card_name": "Jewelia",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1664": {
+    "id": "1664",
+    "name": "Truth Seeker",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1664",
+    "card_name": "Francis Drake",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1673": {
+    "id": "1673",
+    "name": "Slaughterhouse Doll",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1673",
+    "card_name": "Cyclops Dragon",
+    "ie": "none",
+    "ts": "enemy;count<2>",
+    "de": "SHIELD<-18.00%,-0.55%,8>",
+    "tn": 2,
+    "tags": [
+      "Multi",
+      "DMG Up"
+    ]
+  },
+  "1667": {
+    "id": "1667",
+    "name": "Scorching Ray",
+    "description": "Deals {value} DMG to the enemy with the lowest HP, with a {probability} of inflicting Burn.",
+    "card_id": "1667",
+    "card_name": "Diamond Dragon",
+    "ie": "ATK<1370,40>",
+    "ts": "enemy;count<1>;min_hp",
+    "de": "BURN<5.5%,0.22%,5>;HIT<16.00%,0.65%>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Burn",
+      "Debuff"
+    ]
+  },
+  "1670": {
+    "id": "1670",
+    "name": "Divine Whirlwind Kick",
+    "description": "Deals {value} DMG to 2 enemies (ranged priority).",
+    "card_id": "1670",
+    "card_name": "Insolentia",
+    "ie": "ATK<1250,36>",
+    "ts": "enemy;count<2>;prof<2,3,1>",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1672": {
+    "id": "1672",
+    "name": "Heart Breaker",
+    "description": "Restores {value} HP to ally with the highest ATK, increases {delay1} crit rate to target for a limited time.",
+    "card_id": "1672",
+    "card_name": "Leviathan",
+    "ie": "HEAL<1430,41>",
+    "ts": "self;count<1>;max_atk",
+    "de": "CHIT<22.50%,0.65%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Single",
+      "Crit Rate"
+    ]
+  },
+  "1668": {
+    "id": "1668",
+    "name": "Flashing Slash Mk. 2",
+    "description": "Deals {value} DMG to the enemy with the highest ATK, and removes all buffs from the target.",
+    "card_id": "1668",
+    "card_name": "Tristan EX",
+    "ie": "ATK<1270,37>;ERASE_BUFF<0>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Dispel",
+      "Single"
+    ]
+  },
+  "1669": {
+    "id": "1669",
+    "name": "Pop Sensation",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "1669",
+    "card_name": "Dragon Princess",
+    "ie": "ATK<780,23>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
+  "1488": {
+    "id": "1488",
+    "name": "Octave Vibrato",
+    "description": "Increases DMG dealt by all allies by {delay1} for a limited time.",
+    "card_id": "1488",
+    "card_name": "Vaiśravaṇa",
+    "ie": "none",
+    "ts": "self;count<5>",
+    "de": "ATK<18.00%,0.61%,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DMG Boost"
+    ]
+  },
+  "1671": {
+    "id": "1671",
+    "name": "Rock Bottom",
+    "description": "Restores {value} HP and receives {delay1} less DMG for a limited time.",
+    "card_id": "1671",
+    "card_name": "Kuzuryu",
+    "ie": "HEAL<1170,34>",
+    "ts": "self_ime",
+    "de": "SHIELD<24.00%,0.70%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Self",
+      "DMG Reduction"
+    ]
+  },
+  "1634": {
+    "id": "1634",
+    "name": "Argonaut",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1634",
+    "card_name": "Canopus",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1666": {
+    "id": "1666",
+    "name": "Flashing Slash",
+    "description": "Deals {value} DMG to current target. Target deals {delay1} less DMG for a limited time.",
+    "card_id": "1666",
+    "card_name": "Tristan",
+    "ie": "ATK<1020,53>",
+    "ts": "current_target",
+    "de": "ATK<-10.00%,-0.33%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Down"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

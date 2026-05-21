@@ -1,0 +1,432 @@
+{
+  "version": "082fbab",
+  "version_date": "2026-05-21",
+  "previous_version": "37df68e",
+  "summary": {
+    "new_cards": 15,
+    "modified_cards": 13
+  },
+  "new_cards": [
+    {
+      "id": "1488",
+      "name": "Vaiśravaṇa",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Healer",
+      "image_url": null
+    },
+    {
+      "id": "1634",
+      "name": "Canopus",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Assist",
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332327/otogi/cards_hd/101634_hd_cb2511dc32fd65f93a71f30c0106b077.png"
+    },
+    {
+      "id": "1666",
+      "name": "Tristan",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Melee",
+      "image_url": null
+    },
+    {
+      "id": "1667",
+      "name": "Diamond Dragon",
+      "rarity": 5,
+      "attribute": "Phantasma",
+      "type": "Melee",
+      "image_url": null
+    },
+    {
+      "id": "1668",
+      "name": "Tristan EX",
+      "rarity": 5,
+      "attribute": "Divina",
+      "type": "Melee",
+      "image_url": null
+    },
+    {
+      "id": "1669",
+      "name": "Dragon Princess",
+      "rarity": 5,
+      "attribute": "Phantasma",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1670",
+      "name": "Insolentia",
+      "rarity": 5,
+      "attribute": "Phantasma",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1672",
+      "name": "Leviathan",
+      "rarity": 5,
+      "attribute": "Phantasma",
+      "type": "Healer",
+      "image_url": null
+    },
+    {
+      "id": "1660",
+      "name": "Dragonslayer",
+      "rarity": 4,
+      "attribute": "Anima",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1662",
+      "name": "The Selfless Summoner",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1664",
+      "name": "Francis Drake",
+      "rarity": 4,
+      "attribute": "Divina",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1665",
+      "name": "Koi Carp",
+      "rarity": 4,
+      "attribute": "Phantasma",
+      "type": "Assist",
+      "image_url": null
+    },
+    {
+      "id": "1671",
+      "name": "Kuzuryu",
+      "rarity": 4,
+      "attribute": "Anima",
+      "type": "Ranged",
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/cards_hd/101671_hd_925e0a722b9dc3b8a134f491fb15305f.png"
+    },
+    {
+      "id": "1673",
+      "name": "Cyclops Dragon",
+      "rarity": 4,
+      "attribute": "Anima",
+      "type": "Ranged",
+      "image_url": null
+    },
+    {
+      "id": "1663",
+      "name": "Jewelia",
+      "rarity": 3,
+      "attribute": "Anima",
+      "type": "Assist",
+      "image_url": null
+    }
+  ],
+  "modified_cards": [
+    {
+      "id": "564",
+      "name": "Nautilus[TypeS]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634470/otogi/cards_hd/100564_hd_cba1c75a4b73a2c1000ce42e9427e121.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "565",
+      "name": "Athena",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634471/otogi/cards_hd/100565_hd_40d3697a6c3b5555c4a276270a7b42fc.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "747",
+      "name": "Yagyu no Odachi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634663/otogi/cards_hd/100747_hd_f9434063924fda60b8e54e98068c7702.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "181",
+            "event_name": "Guild Conquest",
+            "is_current": true
+          },
+          "display": "From Description: Added ({'event_id': '181', 'event_name': 'Guild Conquest', 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1310",
+      "name": "Cat Sith [HW]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634683/otogi/cards_hd/101310_hd_385d02b8926d06beae3d6d33daa1f357.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1314",
+      "name": "Titania [HW]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634687/otogi/cards_hd/101314_hd_fc8a77e3606ca0ecdb4309acaf8f6463.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "555",
+      "name": "Ptolemy",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634459/otogi/cards_hd/100555_hd_d20abe45bc171b4f62163a0cfdabfe96.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "556",
+      "name": "Stella: Lyra",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634460/otogi/cards_hd/100556_hd_3de2eab261ff56eebe0d0199170bab93.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "557",
+      "name": "Echidna",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634461/otogi/cards_hd/100557_hd_47296437078b562333e7056fd84f9235.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "566",
+      "name": "Chaos",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634472/otogi/cards_hd/100566_hd_18ec421ed1a2a8af092233b08f346f8d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1307",
+      "name": "Cu Sith [HW]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634680/otogi/cards_hd/101307_hd_6340258bbf7d10d59c3c372d9ebfe4d2.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1318",
+      "name": "Mino",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634689/otogi/cards_hd/101318_hd_8ff595d678d2db1bb0bc0b878eb145ae.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1319",
+      "name": "Little Witch",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634689/otogi/cards_hd/101319_hd_688972453b5c3f03ed2c3401f2d7bcfa.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1320",
+      "name": "Kotetsu [HW]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634690/otogi/cards_hd/101320_hd_9c84aa2778a18254cb5130e9fe4cb6ae.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "banner": {
+      "old_count": 532,
+      "new_count": 534,
+      "diff": 2
+    },
+    "monster": {
+      "old_count": 952,
+      "new_count": 967,
+      "diff": 15
+    },
+    "cardInit": {
+      "old_count": 427,
+      "new_count": 429,
+      "diff": 2
+    },
+    "monsterEntanglement": {
+      "old_count": 956,
+      "new_count": 970,
+      "diff": 14
+    },
+    "gachaContents": {
+      "old_count": 751,
+      "new_count": 753,
+      "diff": 2
+    },
+    "monsterSkill": {
+      "old_count": 930,
+      "new_count": 945,
+      "diff": 15
+    },
+    "monsterAbility": {
+      "old_count": 1057,
+      "new_count": 1078,
+      "diff": 21
+    },
+    "gachaGuarentee": {
+      "old_count": 173,
+      "new_count": 174,
+      "diff": 1
+    }
+  }
+}
