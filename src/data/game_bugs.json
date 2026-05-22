@@ -2547,6 +2547,176 @@
         }
       ],
       "last_checked": "2026-05-21"
+    },
+    {
+      "id": "BUG-064",
+      "card_id": 1660,
+      "card_name": "Dragonslayer",
+      "affected_field": "ability",
+      "affected_id": "166001",
+      "category": "description",
+      "severity": "visual",
+      "summary": "DMG reduction percentage mismatch (17% vs 15%)",
+      "details": {
+        "description_says": "Reduces 17% of DMG taken.(only take effect once to the team)",
+        "de_field": "SHIELD<15.00%,0%>",
+        "description_percentage": 17.0,
+        "actual_percentage": 15.0
+      },
+      "analysis": "Description says 17% DMG reduction but the SHIELD effect in the de field applies 15%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-05-21",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SHIELD",
+        "expected_value": 17.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "15%"
+      },
+      "last_checked": "2026-05-21",
+      "check_history": []
+    },
+    {
+      "id": "BUG-065",
+      "card_id": 1664,
+      "card_name": "Francis Drake",
+      "affected_field": "ability",
+      "affected_id": "166401",
+      "category": "description",
+      "severity": "visual",
+      "summary": "HP absorb percentage mismatch (12% vs 10%)",
+      "details": {
+        "description_says": "Absorbs 12% of DMG dealt as HP.(only take effect once to the team)",
+        "de_field": "VAMP<10.00%,0%>",
+        "description_percentage": 12.0,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 12% lifesteal but the VAMP effect in the de field applies 10%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-05-21",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "VAMP",
+        "expected_value": 12.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
+      },
+      "last_checked": "2026-05-21",
+      "check_history": []
+    },
+    {
+      "id": "BUG-066",
+      "card_id": 1665,
+      "card_name": "Koi Carp",
+      "affected_field": "ability",
+      "affected_id": "166501",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Skill DMG percentage mismatch (43% vs 38%)",
+      "details": {
+        "description_says": "Increases 43% of skill DMG.(only take effect once to the team)",
+        "de_field": "SKILL_ATK<38.00%,0%>",
+        "description_percentage": 43.0,
+        "actual_percentage": 38.0
+      },
+      "analysis": "Description says 43% skill DMG boost but the SKILL_ATK effect in the de field applies 38%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-05-21",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "SKILL_ATK",
+        "expected_value": 43.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "38%"
+      },
+      "last_checked": "2026-05-21",
+      "check_history": []
+    },
+    {
+      "id": "BUG-067",
+      "card_id": 1667,
+      "card_name": "Diamond Dragon",
+      "affected_field": "ability",
+      "affected_id": "166701",
+      "category": "description",
+      "severity": "visual",
+      "summary": "HP regen percentage mismatch (7.5% vs 10%)",
+      "details": {
+        "description_says": "When HP is below 1/2, restores 7.5% HP every 5 seconds, increases 40% of Crit Rate, and reduces 30% of DMG taken.",
+        "de_field": "HPP_IN<0.00%,50.00%>;HEAL_DOT<10.00%,0%,5>;SHIELD<30.00%,0%>;CHIT<40.00%,0%>",
+        "description_percentage": 7.5,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 7.5% HP regen every 5s but the HEAL_DOT effect in the de field applies 10%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-05-21",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HEAL_DOT",
+        "expected_value": 7.5
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
+      },
+      "last_checked": "2026-05-21",
+      "check_history": []
+    },
+    {
+      "id": "BUG-068",
+      "card_id": 1673,
+      "card_name": "Cyclops Dragon",
+      "affected_field": "ability",
+      "affected_id": "167301",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Crit DMG percentage mismatch (23% vs 20%)",
+      "details": {
+        "description_says": "Increases 23% of Crit DMG by the 2 allies with the highest ATK.",
+        "de_field": "CHIT_ATK<20.00%,0%>",
+        "description_percentage": 23.0,
+        "actual_percentage": 20.0
+      },
+      "analysis": "Description says 23% Crit DMG but the CHIT_ATK effect in the de field applies 20%.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-05-21",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "CHIT_ATK",
+        "expected_value": 23.0
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "20%"
+      },
+      "last_checked": "2026-05-21",
+      "check_history": []
     }
   ],
   "categories": {
