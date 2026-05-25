@@ -1,7 +1,7 @@
 ---
 title: "Dragon's Roar — Summer Breeze Superstar: New Event Cards"
 description: "Card analysis for the Dragon's Roar Summer Breeze Superstar event, covering the Guild Conquest reward, notable picks worth watching, and the rest of the new event cards"
-date: "2026-05-21"
+date: "2026-05-25"
 author: "Araiak"
 tags: ["analysis", "gacha"]
 ---
