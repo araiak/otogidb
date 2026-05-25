@@ -1,6 +1,6 @@
 ---
 title: "Festival de Muñecas y Cartas de Enero 2026"
-description: "Análisis del asistente del evento de historia, carta de ranking, carta de intercambio y cartas gacha para la subasta del Festival de Muñecas"
+description: "Análisis del asistente del evento de Historia Especial, carta de ranking, carta de intercambio y cartas gacha para la subasta del Festival de Muñecas"
 date: "2026-01-13"
 author: "Araiak"
 tags: ["análisis", "subasta", "gacha"]
@@ -11,7 +11,7 @@ locale: "es"
 
 ---
 
-## Evento de Historia
+## Conquista de Gremio
 
 :card[715] tiene un evento activo. La carta fue mejorada del 13% al 28%, haciéndola decente para una carta gratuita. **Vale la pena para jugadores nuevos; veteranos pueden desbloquear barato pero no se esfuercen demasiado.**
 

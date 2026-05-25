@@ -27,7 +27,7 @@ Después de toda la locura de las subastas, aquí está el análisis de las nuev
 
 :card[1527] *(Gacha Estándar)* es de 4★ pero rinde muy por encima de su rareza——44% de Daño Crítico a los 2 aliados con el ATK más alto es mucho para un 4★, comparable a :card[600]. Una fuerte opción de reserva para jugadores más nuevos que aún no tienen mejores soportes de daño crítico. **Fuerte reserva para jugadores nuevos——consíguela si es accesible.**
 
-:card[1539] *(Recompensa de Historia)* es un cuerpo a cuerpo de Anima extremadamente resistente. Una reducción de daño del 40% es más de lo que la mayoría del contenido requiere, pero si te encuentras con alguna situación donde necesitas un tanque completamente sólido, esta es una de las mejores opciones disponibles. Cuando su HP cae al 10% o menos, gana un aumento de daño permanente del 50% y cura un 10% de HP en 5 segundos——cuanto más al límite está, más fuerte golpea. **Fuerte elección de nicho para cualquier contenido donde la supervivencia sea el cuello de botella.**
+:card[1539] *(Recompensa de Historia Especial)* es un cuerpo a cuerpo de Anima extremadamente resistente. Una reducción de daño del 40% es más de lo que la mayoría del contenido requiere, pero si te encuentras con alguna situación donde necesitas un tanque completamente sólido, esta es una de las mejores opciones disponibles. Cuando su HP cae al 10% o menos, gana un aumento de daño permanente del 50% y cura un 10% de HP en 5 segundos——cuanto más al límite está, más fuerte golpea. **Fuerte elección de nicho para cualquier contenido donde la supervivencia sea el cuello de botella.**
 
 :card[1540] *(Gacha Limitada)* es una alternativa de 10% de tasa crítica progresiva a :card[1494]. Probablemente es mejor en Endless o como reserva, mientras que :card[1494] sigue siendo superior en los modos de XP gracias al aumento de XP. Si no tienes :card[1494] al nivel 75, este es uno a considerar. **Buena opción de reserva de Divina, especialmente para Endless.**
 
@@ -40,8 +40,8 @@ Después de toda la locura de las subastas, aquí está el análisis de las nuev
 - :card[1526] (Gacha Limitada) + :card[1529] (Ranking General) - **Par de alta prioridad** - mayor daño de Anima en una sola ronda con el combo activo, posible meta de JM
 - :card[1528] (Ranking - 1ª y 2ª Mitad) - **Buen soporte de Divina** - pasivo sólido, habilidad débil
 - :card[1540] (Gacha Limitada) - **Buena reserva de Divina** - mejor que :card[1494] en Endless
-- :card[1539] (Recompensa de Historia) - **Fuerte tanque de Anima** - 40% RD si necesitas supervivencia
-- :card[1590] (Gacha Estándar - post evento) - **Sólida reserva de Divina** - soporte defensivo para JM e historia/torre
+- :card[1539] (Recompensa de Historia Especial) - **Fuerte tanque de Anima** - 40% RD si necesitas supervivencia
+- :card[1590] (Gacha Estándar - post evento) - **Sólida reserva de Divina** - soporte defensivo para JM e Historia Especial/Conquista
 - :card[1527] (Gacha Estándar) - **Fuerte reserva para jugadores nuevos** - 44% Daño Crítico a los 2 aliados con mayor ATK, comparable a :card[600]
 - :card[1531] (Intercambio de Marzo) - **De nicho** - pequeña mejora a :card[715], consíguela si es accesible
 - :card[1584] (Gacha Estándar) - **Omitir** - sanadora de XP/drops, no desplaza a :card[1321]

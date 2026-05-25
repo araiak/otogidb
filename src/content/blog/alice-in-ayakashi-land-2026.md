@@ -1,6 +1,6 @@
 ---
 title: "Alice in Ayakashi Land — New Event Cards"
-description: "Card analysis for the Alice in Ayakashi Land event, covering the new event gacha, tower, and standard gacha cards"
+description: "Card analysis for the Alice in Ayakashi Land event, covering the new event gacha, Conquest, and standard gacha cards"
 date: "2026-03-27"
 author: "Araiak"
 tags: ["analysis", "gacha"]
@@ -14,7 +14,7 @@ Here's a first look at the new cards for Alice in Ayakashi Land. This is a quiet
 
 ## Limited Jewel Summons
 
-:card[1578] is a Phantasma Alice — unusual given Alice is Divina, whether by design or an error. Most players will be eyeing her for her abilities in world boss. Her first ability is a 2-target 45% damage boost similar to :card[672], which is great. Her second ability is a 10% time extension. Time extend is an interesting one — in effect it gives you roughly 10% more time to attack, which translates to a roughly 10% damage increase assuming your team is alive in a single round. There might be some edge cases around additional skill casts at the boundary. Where these really shine is with :card[514] due to her bug, which makes damage increase over time — in that case you get more than 10% because of the ramping damage. It could also have a similar effect in multi-round battles with progressive skills, and given that recent events have had shorter timers, the extra seconds may result in more reliable tower clears. Compared to other time extension options she is considerably stronger than :card[209] or :card[267]. Her skill is a single-target version of :card[739]'s skill, so she's usable in lineup but probably best in reserve. **Very worth getting and probably the top target for this event.**
+:card[1578] is a Phantasma Alice — unusual given Alice is Divina, whether by design or an error. Most players will be eyeing her for her abilities in world boss. Her first ability is a 2-target 45% damage boost similar to :card[672], which is great. Her second ability is a 10% time extension. Time extend is an interesting one — in effect it gives you roughly 10% more time to attack, which translates to a roughly 10% damage increase assuming your team is alive in a single round. There might be some edge cases around additional skill casts at the boundary. Where these really shine is with :card[514] due to her bug, which makes damage increase over time — in that case you get more than 10% because of the ramping damage. It could also have a similar effect in multi-round battles with progressive skills, and given that recent events have had shorter timers, the extra seconds may result in more reliable Conquest clears. Compared to other time extension options she is considerably stronger than :card[209] or :card[267]. Her skill is a single-target version of :card[739]'s skill, so she's usable in lineup but probably best in reserve. **Very worth getting and probably the top target for this event.**
 
 *Update:* LJS as expected, with the featured banner running April 5–9.
 
@@ -28,15 +28,15 @@ If you already pulled, don't panic. The immediate value takes a hit — she's a 
 
 ---
 
-## Tower Cards
+## Conquest Cards
 
-:card[1576] is a better version of :card[1435] — 3-target progressive skill damage with additional damage reduction. That might be ok in challenge mode but probably not your first choice. **Grab it if it's a tower card; not worth pushing for if it ends up as a ranking reward.**
+:card[1576] is a better version of :card[1435] — 3-target progressive skill damage with additional damage reduction. That might be ok in challenge mode but probably not your first choice. **Grab it if it's a Conquest card; not worth pushing for if it ends up as a ranking reward.**
 
-*Update:* Tower card, so go ahead and grab her.
+*Update:* Conquest card, so go ahead and grab her.
 
-:card[1577] is in the mold of :card[1489] but provides a [wild] melee slot for Anima. A lot of people are interested in seeing what they come up with for the card model here, but otherwise it isn't particularly special. :card[1539] is probably more reliably tanky with a worse skill in most modes. Of the [wild] cards, this is probably the strongest given it has damage reduction, attack speed, and HP restoration. It could also be a decent tank for newer Anima players if you can reliably trigger the ability — though ideally you'd want more support abilities from a tank. **If it's a tower card, grab an MLB; it's probably not worth pushing for otherwise.**
+:card[1577] is in the mold of :card[1489] but provides a [wild] melee slot for Anima. A lot of people are interested in seeing what they come up with for the card model here, but otherwise it isn't particularly special. :card[1539] is probably more reliably tanky with a worse skill in most modes. Of the [wild] cards, this is probably the strongest given it has damage reduction, attack speed, and HP restoration. It could also be a decent tank for newer Anima players if you can reliably trigger the ability — though ideally you'd want more support abilities from a tank. **If it's a Conquest card, grab an MLB; it's probably not worth pushing for otherwise.**
 
-*Update:* Tower card confirmed — grab the MLB. Attack speed came in at 20% rather than 40%, which puts him more in line with the other [wild] melee cards, but doesn't change the rating much.
+*Update:* Conquest card confirmed — grab the MLB. Attack speed came in at 20% rather than 40%, which puts him more in line with the other [wild] melee cards, but doesn't change the rating much.
 
 ---
 
@@ -58,7 +58,7 @@ The tricky part is how she fits into an established Divina lineup. For newer pla
 
 ## Standard Gacha
 
-:card[1458] may be LJS. He has a greedy 15% crit damage and crit rate per round buff and a 3-target damage skill — nearly a copy of :card[1314]. I still don't see a great place for greedy progressive cards in most formats. They're fine in tower, story, and challenge, but if you can find a team buff that's usually stronger than a greedy AoE attacker. Where you really benefit is from a greedy single-target attacker, and diluting skill damage reduces your clear speed outside challenge. The ATK bond for ranged might make it worth grabbing a copy if he ends up on exchange and you don't already have double Phantasma ATK ranged bonds. **Worth a copy if you need the ranged ATK bond; otherwise situational.**
+:card[1458] may be LJS. He has a greedy 15% crit damage and crit rate per round buff and a 3-target damage skill — nearly a copy of :card[1314]. I still don't see a great place for greedy progressive cards in most formats. They're fine in Conquest, Special Story, and challenge, but if you can find a team buff that's usually stronger than a greedy AoE attacker. Where you really benefit is from a greedy single-target attacker, and diluting skill damage reduces your clear speed outside challenge. The ATK bond for ranged might make it worth grabbing a copy if he ends up on exchange and you don't already have double Phantasma ATK ranged bonds. **Worth a copy if you need the ranged ATK bond; otherwise situational.**
 
 *Update:* He's standard gacha with a featured banner April 12–19, not a limited card as I had assumed. Since he'll be in the permanent pool you'll pick up copies over time — the ATK bond is still a decent reason to have a copy, but there's no rush.
 
@@ -80,7 +80,7 @@ Limited Jewel Summons:
 - :card[1578] — **Divina players: still a top target**. Classic Idol was updated to Divina-only at launch — grab the exchange copy regardless, but don't overinvest if you're not a Divina player. Long-term value holds if a Divina carry arrives soon, and one is arguably overdue
 - :card[1638] — **Niche**. Shield debuff stacking with :card[642] or :card[661]; limited so now's the window if you want it
 
-Tower Cards:
+Conquest Cards:
 - :card[1577] — **Grab the MLB**. [Wild] Anima melee with damage reduction, attack speed, and HP restore; decent tank for newer Anima players
 - :card[1576] — **Grab it**. Better version of :card[1435] with damage reduction added
 
@@ -109,7 +109,7 @@ Monthly Exchange:
 
 ## 限定ジュエルサモン
 
-:card[1578]はPhantasmaのアリスです——アリスはDivinaのはずなので、意図的なのかエラーなのか気になるところです。多くのプレイヤーはワールドボスでのアビリティに注目しているでしょう。1つ目のアビリティは:card[672]に似た2体への45%ダメージブーストで、非常に優秀です。2つ目のアビリティは10%の時間延長。時間延長は面白い効果で——実質的に攻撃時間が10%増えることになり、チームが1ラウンド生き残れる前提であれば約10%のダメージ増加に相当します。境界付近でのスキル追加発動など、エッジケースもあるかもしれません。特に効果的なのは:card[514]との組み合わせで、彼女のバグによりダメージが時間経過とともに増加するため、時間延長で得られる恩恵が10%以上になります。累積スキルを使うマルチラウンドの戦闘でも同様の効果が期待でき、最近のイベントではタイマーが短い傾向にある中、追加の数秒がタワー攻略の安定につながる場合もあります。他の時間延長オプション（:card[209]や:card[267]）と比べてもかなり強力です。スキルは:card[739]のシングルターゲット版なので、ラインナップ入りも可能ですが、おそらくリザーブがベストです。**非常に価値があり、今イベントの最優先ターゲット。**
+:card[1578]はPhantasmaのアリスです——アリスはDivinaのはずなので、意図的なのかエラーなのか気になるところです。多くのプレイヤーはワールドボスでのアビリティに注目しているでしょう。1つ目のアビリティは:card[672]に似た2体への45%ダメージブーストで、非常に優秀です。2つ目のアビリティは10%の時間延長。時間延長は面白い効果で——実質的に攻撃時間が10%増えることになり、チームが1ラウンド生き残れる前提であれば約10%のダメージ増加に相当します。境界付近でのスキル追加発動など、エッジケースもあるかもしれません。特に効果的なのは:card[514]との組み合わせで、彼女のバグによりダメージが時間経過とともに増加するため、時間延長で得られる恩恵が10%以上になります。累積スキルを使うマルチラウンドの戦闘でも同様の効果が期待でき、最近のイベントではタイマーが短い傾向にある中、追加の数秒がコンクエスト攻略の安定につながる場合もあります。他の時間延長オプション（:card[209]や:card[267]）と比べてもかなり強力です。スキルは:card[739]のシングルターゲット版なので、ラインナップ入りも可能ですが、おそらくリザーブがベストです。**非常に価値があり、今イベントの最優先ターゲット。**
 
 *Update:* 予想通りLJS——フィーチャーバナーは4月5日〜9日。
 
@@ -119,15 +119,15 @@ Monthly Exchange:
 
 ---
 
-## タワーカード
+## コンクエストカード
 
-:card[1576]は:card[1435]の上位版——3体への累積スキルダメージにダメージ軽減が追加されています。チャレンジモードでは活躍できるかもしれませんが、最初の選択肢にはならないでしょう。**タワーカードなら取っておく価値あり；ランキング報酬なら無理して狙う必要はなし。**
+:card[1576]は:card[1435]の上位版——3体への累積スキルダメージにダメージ軽減が追加されています。チャレンジモードでは活躍できるかもしれませんが、最初の選択肢にはならないでしょう。**コンクエストカードなら取っておく価値あり；ランキング報酬なら無理して狙う必要はなし。**
 
-*Update:* タワーカード確定——そのまま取りに行こう。
+*Update:* コンクエストカード確定——そのまま取りに行こう。
 
-:card[1577]は:card[1489]に近いカードですが、Animaに[ワイルド]近接スロットを提供します。カードモデルへの期待は高いようですが、性能面では特別際立った点はありません。:card[1539]の方がほとんどのモードで安定して耐久が高く、スキルは劣ります。[ワイルド]カードの中では、ダメージ軽減・攻撃速度・HP回復を備えたこのカードがおそらく最も優秀です。アビリティを確実に発動できるなら、Anima初心者にとって悪くないタンクになるでしょう——ただし理想的にはタンクにはもっとサポート系アビリティが欲しいところです。**タワーカードならMLBを目指そう；そうでなければ無理して取りに行く必要はなし。**
+:card[1577]は:card[1489]に近いカードですが、Animaに[ワイルド]近接スロットを提供します。カードモデルへの期待は高いようですが、性能面では特別際立った点はありません。:card[1539]の方がほとんどのモードで安定して耐久が高く、スキルは劣ります。[ワイルド]カードの中では、ダメージ軽減・攻撃速度・HP回復を備えたこのカードがおそらく最も優秀です。アビリティを確実に発動できるなら、Anima初心者にとって悪くないタンクになるでしょう——ただし理想的にはタンクにはもっとサポート系アビリティが欲しいところです。**コンクエストカードならMLBを目指そう；そうでなければ無理して取りに行く必要はなし。**
 
-*Update:* タワーカード確定——MLBを取りに行こう。攻撃速度は40%ではなく20%でした。他の[ワイルド]近接カードと同水準で、総合評価への影響は大きくありません。
+*Update:* コンクエストカード確定——MLBを取りに行こう。攻撃速度は40%ではなく20%でした。他の[ワイルド]近接カードと同水準で、総合評価への影響は大きくありません。
 
 ---
 
@@ -149,7 +149,7 @@ Monthly Exchange:
 
 ## スタンダードガチャ
 
-:card[1458]はLJSかもしれないと思っていました。1ラウンドごとに15%のクリダメとクリ率が溜まる累積バフと、3体対象のダメージスキルを持ち——:card[1314]にほぼ近い性能です。累積プログレッシブカードには多くのフォーマットで入れやすい場所がないと感じています。タワー・ストーリー・チャレンジでは使えますが、チームバフが使えるならそちらの方が大抵上です。真に恩恵を受けるのは累積シングルターゲットアタッカーからで、スキルダメージが分散するAoEはチャレンジ以外ではクリア速度を落とします。遠距離ATKボンドが、交換所に出た際に1枚確保する理由にはなりますが、Phantasma遠距離のATKボンドが2つ揃っていない場合に限ります。**ATKボンドが必要なら1枚の価値あり；そうでなければ状況次第。**
+:card[1458]はLJSかもしれないと思っていました。1ラウンドごとに15%のクリダメとクリ率が溜まる累積バフと、3体対象のダメージスキルを持ち——:card[1314]にほぼ近い性能です。累積プログレッシブカードには多くのフォーマットで入れやすい場所がないと感じています。コンクエスト・スペシャルストーリー・チャレンジでは使えますが、チームバフが使えるならそちらの方が大抵上です。真に恩恵を受けるのは累積シングルターゲットアタッカーからで、スキルダメージが分散するAoEはチャレンジ以外ではクリア速度を落とします。遠距離ATKボンドが、交換所に出た際に1枚確保する理由にはなりますが、Phantasma遠距離のATKボンドが2つ揃っていない場合に限ります。**ATKボンドが必要なら1枚の価値あり；そうでなければ状況次第。**
 
 *Update:* 最初はLJSだと思っていましたが、4月12日〜19日にフィーチャーバナーが来るスタンダードガチャカードでした。永続プールに入るので時間をかけてコピーが集まります——ATKボンドのために1枚持っておく理由はありますが、急ぐ必要はありません。
 
@@ -171,7 +171,7 @@ Monthly Exchange:
 - :card[1578] — **今イベントの最優先ターゲット**。45%の2体ダメージブーストと10%時間延長；リザーブでの運用がベスト、:card[514]との相性が特に良くワールドボスで高い価値を発揮
 - :card[1638] — **ニッチ**。:card[642]や:card[661]とのシールドデバフ重ねに使えるかも；限定なので欲しければ今がチャンス
 
-タワーカード:
+コンクエストカード:
 - :card[1577] — **MLBを取りに行こう**。ダメージ軽減・攻撃速度・HP回復を持つ[ワイルド]Anima近接；Anima初心者にとって悪くないタンク
 - :card[1576] — **取っておこう**。ダメージ軽減付きの:card[1435]上位版
 
@@ -201,7 +201,7 @@ Monthly Exchange:
 
 ## 한정 가챠
 
-:card[1578]은 Phantasma의 Alice입니다——Alice는 Divina인데 의도적인지 오류인지 궁금합니다. 대부분의 플레이어는 월드 보스에서의 어빌리티에 주목할 것입니다. 첫 번째 어빌리티는 :card[672]와 유사한 2체 45% 데미지 부스트로 매우 우수합니다. 두 번째 어빌리티는 10% 시간 연장입니다. 시간 연장은 흥미로운 효과로——실질적으로 공격 시간이 10% 늘어나며, 팀이 1라운드 동안 살아있다고 가정하면 약 10%의 데미지 증가에 해당합니다. 경계 부근에서의 스킬 추가 발동 같은 엣지 케이스도 있을 수 있습니다. 특히 효과적인 것은 :card[514]와의 조합으로, 그녀의 버그로 인해 데미지가 시간이 지날수록 증가하기 때문에 시간 연장으로 10% 이상의 효과를 얻을 수 있습니다. 누적 스킬을 사용하는 멀티라운드 전투에서도 비슷한 효과가 기대되며, 최근 이벤트의 타이머가 짧아진 추세에서 추가 시간이 타워 공략 안정성을 높일 수 있습니다. 다른 시간 연장 옵션(:card[209]나 :card[267])과 비교해도 훨씬 강력합니다. 스킬은 :card[739]의 싱글 타겟 버전이므로 라인업에도 사용 가능하지만, 리저브가 베스트입니다. **매우 가치 있으며, 이번 이벤트 최우선 목표.**
+:card[1578]은 Phantasma의 Alice입니다——Alice는 Divina인데 의도적인지 오류인지 궁금합니다. 대부분의 플레이어는 월드 보스에서의 어빌리티에 주목할 것입니다. 첫 번째 어빌리티는 :card[672]와 유사한 2체 45% 데미지 부스트로 매우 우수합니다. 두 번째 어빌리티는 10% 시간 연장입니다. 시간 연장은 흥미로운 효과로——실질적으로 공격 시간이 10% 늘어나며, 팀이 1라운드 동안 살아있다고 가정하면 약 10%의 데미지 증가에 해당합니다. 경계 부근에서의 스킬 추가 발동 같은 엣지 케이스도 있을 수 있습니다. 특히 효과적인 것은 :card[514]와의 조합으로, 그녀의 버그로 인해 데미지가 시간이 지날수록 증가하기 때문에 시간 연장으로 10% 이상의 효과를 얻을 수 있습니다. 누적 스킬을 사용하는 멀티라운드 전투에서도 비슷한 효과가 기대되며, 최근 이벤트의 타이머가 짧아진 추세에서 추가 시간이 컨퀘스트 공략 안정성을 높일 수 있습니다. 다른 시간 연장 옵션(:card[209]나 :card[267])과 비교해도 훨씬 강력합니다. 스킬은 :card[739]의 싱글 타겟 버전이므로 라인업에도 사용 가능하지만, 리저브가 베스트입니다. **매우 가치 있으며, 이번 이벤트 최우선 목표.**
 
 *Update:* 예상대로 LJS——피처드 배너는 4월 5일〜9일.
 
@@ -211,15 +211,15 @@ Monthly Exchange:
 
 ---
 
-## 타워 카드
+## 컨퀘스트 카드
 
-:card[1576]은 :card[1435]의 상위 버전——3체 누적 스킬 데미지에 데미지 감소가 추가되었습니다. 챌린지 모드에서는 괜찮을 수 있지만 첫 번째 선택지는 아닐 것입니다. **타워 카드라면 챙겨두자；랭킹 보상이라면 무리할 필요 없음.**
+:card[1576]은 :card[1435]의 상위 버전——3체 누적 스킬 데미지에 데미지 감소가 추가되었습니다. 챌린지 모드에서는 괜찮을 수 있지만 첫 번째 선택지는 아닐 것입니다. **컨퀘스트 카드라면 챙겨두자；랭킹 보상이라면 무리할 필요 없음.**
 
-*Update:* 타워 카드 확정——챙겨 가자.
+*Update:* 컨퀘스트 카드 확정——챙겨 가자.
 
-:card[1577]은 :card[1489]와 유사하지만 Anima에게 [와일드] 근접 슬롯을 제공합니다. 카드 모델에 대한 기대가 높은 것 같지만, 성능 면에서는 특별히 두드러진 점이 없습니다. :card[1539]가 대부분의 모드에서 더 안정적인 탱킹 성능을 보입니다. [와일드] 카드 중에서는 데미지 감소·공격 속도·HP 회복을 갖춘 이 카드가 가장 강력합니다. 어빌리티를 안정적으로 발동할 수 있다면 Anima 초보자에게 괜찮은 탱크가 될 수 있습니다——다만 이상적으로는 탱크에게 더 많은 서포트 어빌리티가 있으면 좋겠습니다. **타워 카드라면 MLB를 목표로；그렇지 않다면 무리할 필요 없음.**
+:card[1577]은 :card[1489]와 유사하지만 Anima에게 [와일드] 근접 슬롯을 제공합니다. 카드 모델에 대한 기대가 높은 것 같지만, 성능 면에서는 특별히 두드러진 점이 없습니다. :card[1539]가 대부분의 모드에서 더 안정적인 탱킹 성능을 보입니다. [와일드] 카드 중에서는 데미지 감소·공격 속도·HP 회복을 갖춘 이 카드가 가장 강력합니다. 어빌리티를 안정적으로 발동할 수 있다면 Anima 초보자에게 괜찮은 탱크가 될 수 있습니다——다만 이상적으로는 탱크에게 더 많은 서포트 어빌리티가 있으면 좋겠습니다. **컨퀘스트 카드라면 MLB를 목표로；그렇지 않다면 무리할 필요 없음.**
 
-*Update:* 타워 카드 확정——MLB를 챙기자. 공격 속도는 40%가 아닌 20%였습니다. 다른 [와일드] 근접 카드들과 비슷한 수준이며 전체 평가에 큰 영향은 없습니다.
+*Update:* 컨퀘스트 카드 확정——MLB를 챙기자. 공격 속도는 40%가 아닌 20%였습니다. 다른 [와일드] 근접 카드들과 비슷한 수준이며 전체 평가에 큰 영향은 없습니다.
 
 ---
 
@@ -241,7 +241,7 @@ Monthly Exchange:
 
 ## 일반 가챠
 
-:card[1458]은 LJS일 것으로 생각했습니다. 1라운드마다 15%의 크리 데미지와 크리 확률이 쌓이는 누적 버프와 3체 대상 데미지 스킬을 보유해——:card[1314]와 거의 동일한 성능입니다. 누적 프로그레시브 카드는 대부분의 포맷에서 넣기 좋은 자리를 찾기 어렵습니다. 타워·스토리·챌린지에서는 쓸 만하지만, 팀 버프가 있다면 대개 그쪽이 더 우수합니다. 진정한 효과를 내는 것은 누적 싱글 타겟 어태커이며, AoE로 스킬 데미지를 분산시키면 챌린지 이외에서는 클리어 속도가 떨어집니다. 원거리 ATK 본드가 교환소에 나왔을 때 1장 확보하는 이유가 될 수 있지만, Phantasma 원거리 ATK 본드가 이미 2개 갖춰지지 않은 경우에 한합니다. **ATK 본드가 필요하다면 1장의 가치 있음；그렇지 않다면 상황에 따라.**
+:card[1458]은 LJS일 것으로 생각했습니다. 1라운드마다 15%의 크리 데미지와 크리 확률이 쌓이는 누적 버프와 3체 대상 데미지 스킬을 보유해——:card[1314]와 거의 동일한 성능입니다. 누적 프로그레시브 카드는 대부분의 포맷에서 넣기 좋은 자리를 찾기 어렵습니다. 컨퀘스트·스페셜 스토리·챌린지에서는 쓸 만하지만, 팀 버프가 있다면 대개 그쪽이 더 우수합니다. 진정한 효과를 내는 것은 누적 싱글 타겟 어태커이며, AoE로 스킬 데미지를 분산시키면 챌린지 이외에서는 클리어 속도가 떨어집니다. 원거리 ATK 본드가 교환소에 나왔을 때 1장 확보하는 이유가 될 수 있지만, Phantasma 원거리 ATK 본드가 이미 2개 갖춰지지 않은 경우에 한합니다. **ATK 본드가 필요하다면 1장의 가치 있음；그렇지 않다면 상황에 따라.**
 
 *Update:* LJS로 생각했지만 4월 12〜19일에 피처드 배너가 있는 일반 가챠 카드였습니다. 영구 풀에 들어가므로 시간이 지나면 자연스럽게 코피가 모입니다——ATK 본드를 위해 1장 갖고 있을 이유는 있지만 서두를 필요는 없습니다.
 
@@ -263,7 +263,7 @@ Monthly Exchange:
 - :card[1578] — **이번 이벤트 최우선 목표**. 45% 2체 데미지 부스트와 10% 시간 연장；리저브가 베스트, :card[514]와의 시너지로 월드 보스에서 높은 가치 발휘
 - :card[1638] — **틈새**. :card[642]나 :card[661]과 실드 디버프 중첩에 쓸 수 있음；한정이니 원한다면 지금이 기회
 
-타워 카드:
+컨퀘스트 카드:
 - :card[1577] — **MLB를 챙기자**. 데미지 감소·공격 속도·HP 회복을 가진 [와일드] Anima 근접；Anima 초보자에게 나쁘지 않은 탱크
 - :card[1576] — **챙겨 가자**. 데미지 감소가 추가된 :card[1435] 상위 버전
 
@@ -302,15 +302,15 @@ Monthly Exchange:
 
 ---
 
-## 塔卡
+## 征服卡
 
-:card[1576]是:card[1435]的升级版——3体渐进技能伤害附带额外减伤。在挑战模式中可能不错，但可能不是首选。**是塔卡就值得拿；如果是排名奖励就没必要强求了。**
+:card[1576]是:card[1435]的升级版——3体渐进技能伤害附带额外减伤。在挑战模式中可能不错，但可能不是首选。**是征服卡就值得拿；如果是排名奖励就没必要强求了。**
 
-*Update:* 确认为塔卡——直接拿下吧。
+*Update:* 确认为征服卡——直接拿下吧。
 
-:card[1577]与:card[1489]相似，但为Anima提供了[万能]近战位。很多人对这张卡的模型很感兴趣，不过性能上并没有特别出彩的地方。:card[1539]在大多数模式中坦性更稳，但技能较弱。在[万能]卡中，这张拥有减伤、攻击速度和HP回复，可能是最强的。如果能稳定触发被动，对Anima新手来说是不错的坦克——不过理想情况下坦克应该有更多辅助被动。**是塔卡就冲MLB；否则没必要强求。**
+:card[1577]与:card[1489]相似，但为Anima提供了[万能]近战位。很多人对这张卡的模型很感兴趣，不过性能上并没有特别出彩的地方。:card[1539]在大多数模式中坦性更稳，但技能较弱。在[万能]卡中，这张拥有减伤、攻击速度和HP回复，可能是最强的。如果能稳定触发被动，对Anima新手来说是不错的坦克——不过理想情况下坦克应该有更多辅助被动。**是征服卡就冲MLB；否则没必要强求。**
 
-*Update:* 确认为塔卡——拿下MLB。攻击速度实为20%而非40%，与其他[万能]近战卡相近，对整体评价影响不大。
+*Update:* 确认为征服卡——拿下MLB。攻击速度实为20%而非40%，与其他[万能]近战卡相近，对整体评价影响不大。
 
 ---
 
@@ -332,7 +332,7 @@ Monthly Exchange:
 
 ## 常规卡池
 
-:card[1458]原本以为是LJS。他拥有每轮积累15%暴击伤害和暴击率的渐进buff和3体伤害技能——与:card[1314]几乎相同。渐进累积卡在大多数玩法中很难找到合适位置。在塔、剧情和挑战中可以使用，但如果能用队伍buff通常更强。真正受益的是渐进单体攻击者，而AoE分散技能伤害会降低挑战模式以外的通关速度。远程ATK羁绊可以成为在交换所出现时入手一张的理由，前提是Phantasma远程ATK羁绊还没有凑齐两个。**需要ATK羁绊就值得一张；否则看情况。**
+:card[1458]原本以为是LJS。他拥有每轮积累15%暴击伤害和暴击率的渐进buff和3体伤害技能——与:card[1314]几乎相同。渐进累积卡在大多数玩法中很难找到合适位置。在征服、特别剧情和挑战中可以使用，但如果能用队伍buff通常更强。真正受益的是渐进单体攻击者，而AoE分散技能伤害会降低挑战模式以外的通关速度。远程ATK羁绊可以成为在交换所出现时入手一张的理由，前提是Phantasma远程ATK羁绊还没有凑齐两个。**需要ATK羁绊就值得一张；否则看情况。**
 
 *Update:* 原以为是LJS，但实际上是4月12日至19日有精选卡池的常规卡池卡。因为会进入永久池，慢慢会积累副本——ATK羁绊仍是入手一张的理由，但不用着急。
 
@@ -354,7 +354,7 @@ Monthly Exchange:
 - :card[1578] — **本次活动首要目标**。45%双体伤害提升和10%时间延长；备用位最佳，与:card[514]配合在世界BOSS中价值极高
 - :card[1638] — **小众**。可与:card[642]或:card[661]叠加实盾减益；限定卡，想要的话现在是机会
 
-塔卡:
+征服卡:
 - :card[1577] — **冲MLB**。拥有减伤、攻击速度和HP回复的[万能]Anima近战；对Anima新手还不错的坦克
 - :card[1576] — **拿下**。添加减伤的:card[1435]升级版
 
@@ -393,15 +393,15 @@ Monthly Exchange:
 
 ---
 
-## 塔卡
+## 征服卡
 
-:card[1576]是:card[1435]的升級版——3體漸進技能傷害附帶額外減傷。在挑戰模式中可能不錯，但可能不是首選。**是塔卡就值得拿；如果是排名獎勵就沒必要強求了。**
+:card[1576]是:card[1435]的升級版——3體漸進技能傷害附帶額外減傷。在挑戰模式中可能不錯，但可能不是首選。**是征服卡就值得拿；如果是排名獎勵就沒必要強求了。**
 
-*Update:* 確認為塔卡——直接拿下吧。
+*Update:* 確認為征服卡——直接拿下吧。
 
-:card[1577]與:card[1489]相似，但為Anima提供了[萬能]近戰位。很多人對這張卡的模型很感興趣，不過性能上並沒有特別出彩的地方。:card[1539]在大多數模式中坦性更穩，但技能較弱。在[萬能]卡中，這張擁有減傷、攻擊速度和HP回復，可能是最強的。如果能穩定觸發被動，對Anima新手來說是不錯的坦克——不過理想情況下坦克應該有更多輔助被動。**是塔卡就衝MLB；否則沒必要強求。**
+:card[1577]與:card[1489]相似，但為Anima提供了[萬能]近戰位。很多人對這張卡的模型很感興趣，不過性能上並沒有特別出彩的地方。:card[1539]在大多數模式中坦性更穩，但技能較弱。在[萬能]卡中，這張擁有減傷、攻擊速度和HP回復，可能是最強的。如果能穩定觸發被動，對Anima新手來說是不錯的坦克——不過理想情況下坦克應該有更多輔助被動。**是征服卡就衝MLB；否則沒必要強求。**
 
-*Update:* 確認為塔卡——拿下MLB。攻擊速度實為20%而非40%，與其他[萬能]近戰卡相近，對整體評價影響不大。
+*Update:* 確認為征服卡——拿下MLB。攻擊速度實為20%而非40%，與其他[萬能]近戰卡相近，對整體評價影響不大。
 
 ---
 
@@ -423,7 +423,7 @@ Monthly Exchange:
 
 ## 常規卡池
 
-:card[1458]原本以為是LJS。他擁有每輪積累15%暴擊傷害和暴擊率的漸進buff和3體傷害技能——與:card[1314]幾乎相同。漸進累積卡在大多數玩法中很難找到合適位置。在塔、劇情和挑戰中可以使用，但如果能用隊伍buff通常更強。真正受益的是漸進單體攻擊者，而AoE分散技能傷害會降低挑戰模式以外的通關速度。遠程ATK羈絆可以成為在交換所出現時入手一張的理由，前提是Phantasma遠程ATK羈絆還沒有湊齊兩個。**需要ATK羈絆就值得一張；否則看情況。**
+:card[1458]原本以為是LJS。他擁有每輪積累15%暴擊傷害和暴擊率的漸進buff和3體傷害技能——與:card[1314]幾乎相同。漸進累積卡在大多數玩法中很難找到合適位置。在征服、特別劇情和挑戰中可以使用，但如果能用隊伍buff通常更強。真正受益的是漸進單體攻擊者，而AoE分散技能傷害會降低挑戰模式以外的通關速度。遠程ATK羈絆可以成為在交換所出現時入手一張的理由，前提是Phantasma遠程ATK羈絆還沒有湊齊兩個。**需要ATK羈絆就值得一張；否則看情況。**
 
 *Update:* 原以為是LJS，但實際上是4月12日至19日有精選卡池的常規卡池卡。因為會進入永久池，慢慢會積累副本——ATK羈絆仍是入手一張的理由，但不用著急。
 
@@ -445,7 +445,7 @@ Monthly Exchange:
 - :card[1578] — **本次活動首要目標**。45%雙體傷害提升和10%時間延長；備用位最佳，與:card[514]配合在世界BOSS中價值極高
 - :card[1638] — **小眾**。可與:card[642]或:card[661]疊加實盾減益；限定卡，想要的話現在是機會
 
-塔卡:
+征服卡:
 - :card[1577] — **衝MLB**。擁有減傷、攻擊速度和HP回復的[萬能]Anima近戰；對Anima新手還不錯的坦克
 - :card[1576] — **拿下**。添加減傷的:card[1435]升級版
 
@@ -474,7 +474,7 @@ Después del caos de las subastas, aquí está el análisis de las nuevas cartas
 
 ## Gacha Limitada
 
-:card[1578] es una Alice de Phantasma——inusual dado que Alice es Divina, ya sea por diseño o por error. La mayoría de los jugadores la mirarán por sus habilidades en el Jefe Mundial. Su primera habilidad es un aumento de daño del 45% a 2 objetivos similar a :card[672], que es genial. Su segunda habilidad es una extensión de tiempo del 10%. La extensión de tiempo es interesante——en efecto te da aproximadamente un 10% más de tiempo para atacar, lo que se traduce en un aumento de daño de aproximadamente el 10% asumiendo que tu equipo esté vivo en una sola ronda. Puede haber algunos casos extremos alrededor de lanzamientos de habilidades adicionales en el límite. Donde esto realmente brilla es con :card[514] debido a su bug, que hace que el daño aumente con el tiempo——en ese caso obtienes más del 10% debido al daño en aumento. También podría tener un efecto similar en batallas de múltiples rondas con habilidades progresivas, y dado que eventos recientes han tenido temporizadores más cortos, los segundos extra pueden resultar en clears de torre más confiables. Comparada con otras opciones de extensión de tiempo es considerablemente más fuerte que :card[209] o :card[267]. Su habilidad es una versión de un solo objetivo de la habilidad de :card[739], así que es usable en el equipo pero probablemente mejor en reserva. **Muy vale la pena obtener y probablemente el objetivo principal de este evento.**
+:card[1578] es una Alice de Phantasma——inusual dado que Alice es Divina, ya sea por diseño o por error. La mayoría de los jugadores la mirarán por sus habilidades en el Jefe Mundial. Su primera habilidad es un aumento de daño del 45% a 2 objetivos similar a :card[672], que es genial. Su segunda habilidad es una extensión de tiempo del 10%. La extensión de tiempo es interesante——en efecto te da aproximadamente un 10% más de tiempo para atacar, lo que se traduce en un aumento de daño de aproximadamente el 10% asumiendo que tu equipo esté vivo en una sola ronda. Puede haber algunos casos extremos alrededor de lanzamientos de habilidades adicionales en el límite. Donde esto realmente brilla es con :card[514] debido a su bug, que hace que el daño aumente con el tiempo——en ese caso obtienes más del 10% debido al daño en aumento. También podría tener un efecto similar en batallas de múltiples rondas con habilidades progresivas, y dado que eventos recientes han tenido temporizadores más cortos, los segundos extra pueden resultar en clears de Conquista más confiables. Comparada con otras opciones de extensión de tiempo es considerablemente más fuerte que :card[209] o :card[267]. Su habilidad es una versión de un solo objetivo de la habilidad de :card[739], así que es usable en el equipo pero probablemente mejor en reserva. **Muy vale la pena obtener y probablemente el objetivo principal de este evento.**
 
 *Update:* LJS como se esperaba——el banner destacado corre del 5 al 9 de abril.
 
@@ -484,15 +484,15 @@ Después del caos de las subastas, aquí está el análisis de las nuevas cartas
 
 ---
 
-## Cartas de Torre
+## Cartas de Conquista
 
-:card[1576] es una versión mejorada de :card[1435]——daño de habilidad progresivo a 3 objetivos con reducción de daño adicional. Podría estar bien en modo desafío pero probablemente no es tu primera opción. **Consíguela si es carta de torre; no vale la pena esforzarse si acaba siendo recompensa de ranking.**
+:card[1576] es una versión mejorada de :card[1435]——daño de habilidad progresivo a 3 objetivos con reducción de daño adicional. Podría estar bien en modo desafío pero probablemente no es tu primera opción. **Consíguela si es carta de Conquista; no vale la pena esforzarse si acaba siendo recompensa de ranking.**
 
-*Update:* Carta de torre confirmada——adelante y consíguela.
+*Update:* Carta de Conquista confirmada——adelante y consíguela.
 
-:card[1577] está en el molde de :card[1489] pero proporciona un slot cuerpo a cuerpo [libre] para Anima. Mucha gente está interesada en ver qué hacen con el modelo de la carta, pero por lo demás no es particularmente especial. :card[1539] es probablemente más confiablemente resistente con una peor habilidad en la mayoría de los modos. De las cartas [libre], esta es probablemente la más fuerte dado que tiene reducción de daño, velocidad de ataque y restauración de HP. También podría ser un tanque decente para jugadores más nuevos de Anima si puedes activar la habilidad de manera confiable——aunque idealmente querrías más habilidades de soporte de un tanque. **Si es carta de torre, consigue el MLB; probablemente no vale la pena esforzarse de otra manera.**
+:card[1577] está en el molde de :card[1489] pero proporciona un slot cuerpo a cuerpo [libre] para Anima. Mucha gente está interesada en ver qué hacen con el modelo de la carta, pero por lo demás no es particularmente especial. :card[1539] es probablemente más confiablemente resistente con una peor habilidad en la mayoría de los modos. De las cartas [libre], esta es probablemente la más fuerte dado que tiene reducción de daño, velocidad de ataque y restauración de HP. También podría ser un tanque decente para jugadores más nuevos de Anima si puedes activar la habilidad de manera confiable——aunque idealmente querrías más habilidades de soporte de un tanque. **Si es carta de Conquista, consigue el MLB; probablemente no vale la pena esforzarse de otra manera.**
 
-*Update:* Carta de torre confirmada——consigue el MLB. La velocidad de ataque resultó ser 20% en lugar de 40%, más en línea con las otras cartas cuerpo a cuerpo [libre], pero no cambia mucho la valoración.
+*Update:* Carta de Conquista confirmada——consigue el MLB. La velocidad de ataque resultó ser 20% en lugar de 40%, más en línea con las otras cartas cuerpo a cuerpo [libre], pero no cambia mucho la valoración.
 
 ---
 
@@ -514,7 +514,7 @@ La parte complicada es cómo encaja en una formación de Divina establecida. Par
 
 ## Gacha Estándar
 
-:card[1458] podría ser LJS. Tiene un buff progresivo codicioso de 15% de daño crítico y tasa crítica por ronda y una habilidad de daño a 3 objetivos——casi una copia de :card[1314]. Todavía no veo un gran lugar para las cartas progresivas codiciosas en la mayoría de los formatos. Están bien en torre, historia y desafío, pero si puedes encontrar un buff de equipo eso es generalmente más fuerte que un atacante AoE codicioso. Donde realmente te beneficias es de un atacante de un solo objetivo codicioso, y diluir el daño de habilidad reduce tu velocidad de clear fuera del desafío. El vínculo de ATK a distancia podría hacer que valga la pena conseguir una copia si acaba en el intercambio y aún no tienes doble vínculo ATK a distancia de Phantasma. **Vale una copia si necesitas el vínculo ATK a distancia; de lo contrario situacional.**
+:card[1458] podría ser LJS. Tiene un buff progresivo codicioso de 15% de daño crítico y tasa crítica por ronda y una habilidad de daño a 3 objetivos——casi una copia de :card[1314]. Todavía no veo un gran lugar para las cartas progresivas codiciosas en la mayoría de los formatos. Están bien en Conquista, Historia Especial y desafío, pero si puedes encontrar un buff de equipo eso es generalmente más fuerte que un atacante AoE codicioso. Donde realmente te beneficias es de un atacante de un solo objetivo codicioso, y diluir el daño de habilidad reduce tu velocidad de clear fuera del desafío. El vínculo de ATK a distancia podría hacer que valga la pena conseguir una copia si acaba en el intercambio y aún no tienes doble vínculo ATK a distancia de Phantasma. **Vale una copia si necesitas el vínculo ATK a distancia; de lo contrario situacional.**
 
 *Update:* Es gacha estándar con un banner destacado del 12 al 19 de abril, no una carta limitada como había asumido. Como estará en el pool permanente irás acumulando copias con el tiempo——el vínculo ATK sigue siendo una razón para tener una copia, pero no hay prisa.
 
@@ -536,7 +536,7 @@ Gacha Limitada:
 - :card[1578] — **Objetivo principal de este evento**. Aumento de daño del 45% a 2 objetivos y extensión de tiempo del 10%; mejor en reserva, excelente valor en Jefe Mundial especialmente con :card[514]
 - :card[1638] — **De nicho**. Apilado de debuff de escudo con :card[642] o :card[661]; limitada, así que ahora es tu oportunidad si la quieres
 
-Cartas de Torre:
+Cartas de Conquista:
 - :card[1577] — **Consigue el MLB**. Cuerpo a cuerpo [libre] de Anima con reducción de daño, velocidad de ataque y restauración de HP; tanque decente para jugadores más nuevos de Anima
 - :card[1576] — **Consíguela**. Versión mejorada de :card[1435] con reducción de daño añadida
 

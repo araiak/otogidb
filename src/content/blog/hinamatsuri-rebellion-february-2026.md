@@ -28,7 +28,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 :card[1527] *(Standard Gacha)* is a 4★ but punches well above its rarity - 44% Crit DMG to the 2 allies with the highest ATK is a lot for a 4★, comparable to :card[600]. A strong reserve option for newer players who don't have better crit damage supports yet. **Strong reserve for newer players - grab if accessible.**
 
-:card[1539] *(Story Reward)* is an extremely tanky Anima melee. 40% damage reduction is more than most content requires, but if you run into any situation where you need a rock-solid tank, this is one of the best options available. When her HP drops to 10% or below, she gains a permanent 50% damage boost and heals 10% HP over 5 seconds - so the lower she gets, the harder she hits. **Strong niche pick for any content where survivability is the bottleneck.**
+:card[1539] *(Special Story Reward)* is an extremely tanky Anima melee. 40% damage reduction is more than most content requires, but if you run into any situation where you need a rock-solid tank, this is one of the best options available. When her HP drops to 10% or below, she gains a permanent 50% damage boost and heals 10% HP over 5 seconds - so the lower she gets, the harder she hits. **Strong niche pick for any content where survivability is the bottleneck.**
 
 :card[1540] *(Limited Gacha)* is a 10% progressive crit rate alternative to :card[1494]. He's probably better in Endless or reserve, while :card[1494] still edges out in XP modes thanks to the XP boost. If you don't have :card[1494] at level 75, this is one to target. **Good Divina reserve option, especially for Endless.**
 
@@ -41,8 +41,8 @@ After all the auction madness, here's the breakdown on the new event cards.
 - :card[1526] (Limited Gacha) + :card[1529] (Overall Ranking) - **High priority pair** - top single-round Anima damage with the combo active, potential WB meta
 - :card[1528] (Ranking - 1st & 2nd Half) - **Good Divina support** - solid passive, weak skill
 - :card[1540] (Limited Gacha) - **Good Divina reserve** - better than :card[1494] in Endless
-- :card[1539] (Story Reward) - **Strong Anima tank** - 40% DR if you need survivability
-- :card[1590] (Standard Gacha - post event) - **Solid Divina reserve** - defensive support for WB and story/tower
+- :card[1539] (Special Story Reward) - **Strong Anima tank** - 40% DR if you need survivability
+- :card[1590] (Standard Gacha - post event) - **Solid Divina reserve** - defensive support for WB and Special Story/Conquest
 - :card[1527] (Standard Gacha) - **Strong reserve for newer players** - 44% Crit DMG to top 2 ATK allies, comparable to :card[600]
 - :card[1531] (March Exchange) - **Niche** - small upgrade to :card[715], grab if accessible
 - :card[1584] (Standard Gacha) - **Skip** - XP/drop healer, doesn't displace :card[1321]
@@ -75,7 +75,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 :card[1527]（スタンダードガチャ）は4★ながら希少性をはるかに上回る性能——攻撃力上位2体への44%クリダメは4★としては破格で、:card[600]に匹敵します。まだクリダメサポートが揃っていない新規プレイヤーにとって強力なリザーブ選択肢です。**新規プレイヤーへの強力なリザーブ——入手できれば取ろう。**
 
-:card[1539]（ストーリー報酬）は極めて高耐久のAnima近接カードです。40%ダメージ軽減はほとんどのコンテンツの要求を超えていますが、どうしてもタンクが必要な場面では現在最強クラスの選択肢の一つです。HPが10%以下になると、永続50%ダメージブーストと5秒かけてHP10%回復を獲得——ピンチになるほど強くなります。**生存性がボトルネックになるコンテンツでの強力なニッチピック。**
+:card[1539]（スペシャルストーリー報酬）は極めて高耐久のAnima近接カードです。40%ダメージ軽減はほとんどのコンテンツの要求を超えていますが、どうしてもタンクが必要な場面では現在最強クラスの選択肢の一つです。HPが10%以下になると、永続50%ダメージブーストと5秒かけてHP10%回復を獲得——ピンチになるほど強くなります。**生存性がボトルネックになるコンテンツでの強力なニッチピック。**
 
 :card[1540]（限定ガチャ）は:card[1494]の代替となる10%累積クリ率カードです。エンドレスやリザーブでは:card[1494]より使いやすく、:card[1494]はEXPブーストがあるためEXPモードでは依然として上です。:card[1494]がレベル75に達していない場合はターゲットにする価値があります。**Divinaリザーブとして優秀、特にエンドレス向け。**
 
@@ -88,8 +88,8 @@ After all the auction madness, here's the breakdown on the new event cards.
 - :card[1526]（限定ガチャ）+ :card[1529]（総合ランキング）——**高優先度ペア** - コンボ発動時のトップAnima単ラウンドダメージ、WBメタ候補
 - :card[1528]（ランキング - 前半・後半）——**Divinaサポートとして優秀** - 堅実なパッシブ、スキルは弱め
 - :card[1540]（限定ガチャ）——**Divinaリザーブとして優秀** - エンドレスでは:card[1494]より上
-- :card[1539]（ストーリー報酬）——**強力なAnimaタンク** - 生存性が必要な場合の40%DR
-- :card[1590]（スタンダードガチャ——イベント後）——**堅実なDivinaリザーブ** - WBとストーリー/タワー向け防御サポート
+- :card[1539]（スペシャルストーリー報酬）——**強力なAnimaタンク** - 生存性が必要な場合の40%DR
+- :card[1590]（スタンダードガチャ——イベント後）——**堅実なDivinaリザーブ** - WBとスペシャルストーリー/コンクエスト向け防御サポート
 - :card[1527]（スタンダードガチャ）——**新規プレイヤー向け強力リザーブ** - 攻撃力上位2体への44%クリダメ、:card[600]に匹敵
 - :card[1531]（3月交換所）——**ニッチ** - :card[715]の小アップグレード、入手しやすければ取ろう
 - :card[1584]（スタンダードガチャ）——**スキップ** - EXP/ドロップヒーラー、:card[1321]の代替にはならない
@@ -122,7 +122,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 :card[1527] *(일반 가챠)*은 4★이지만 희귀도를 훨씬 뛰어넘는 성능——공격력 상위 2아군에게 44% 치명 피해는 4★치고는 많은 양으로 :card[600]에 필적합니다. 아직 더 나은 치명 피해 서포트가 없는 신규 플레이어에게 강력한 리저브 선택지입니다. **신규 플레이어에게 강력한 리저브——접근 가능하면 챙기자.**
 
-:card[1539] *(스토리 보상)*은 극도로 단단한 아니마 근접 카드입니다. 40% 데미지 감소는 대부분의 컨텐츠가 요구하는 것보다 많지만, 어디서든 단단한 탱크가 필요할 때 현재 최고의 선택지 중 하나입니다. HP가 10% 이하로 떨어지면 영구 50% 데미지 부스트와 5초에 걸쳐 HP 10% 회복을 얻습니다——위기에 몰릴수록 강해집니다. **생존성이 병목인 컨텐츠에서 강력한 틈새 픽.**
+:card[1539] *(스페셜 스토리 보상)*은 극도로 단단한 아니마 근접 카드입니다. 40% 데미지 감소는 대부분의 컨텐츠가 요구하는 것보다 많지만, 어디서든 단단한 탱크가 필요할 때 현재 최고의 선택지 중 하나입니다. HP가 10% 이하로 떨어지면 영구 50% 데미지 부스트와 5초에 걸쳐 HP 10% 회복을 얻습니다——위기에 몰릴수록 강해집니다. **생존성이 병목인 컨텐츠에서 강력한 틈새 픽.**
 
 :card[1540] *(한정 가챠)*은 :card[1494]의 대안인 10% 누적 치명 확률 카드입니다. 엔드리스나 리저브에서 더 유용하고, :card[1494]는 경험치 부스트 덕에 경험치 모드에서 여전히 우위입니다. :card[1494]가 레벨 75에 없다면 목표로 삼을 만합니다. **좋은 디비나 리저브, 특히 엔드리스용.**
 
@@ -135,8 +135,8 @@ After all the auction madness, here's the breakdown on the new event cards.
 - :card[1526] (한정 가챠) + :card[1529] (종합 랭킹) - **높은 우선순위 쌍** - 콤보 활성화 시 최고 단일 라운드 아니마 데미지, WB 메타 후보
 - :card[1528] (랭킹 - 전반·후반) - **좋은 디비나 서포트** - 탄탄한 패시브, 스킬 약함
 - :card[1540] (한정 가챠) - **좋은 디비나 리저브** - 엔드리스에서 :card[1494]보다 나음
-- :card[1539] (스토리 보상) - **강력한 아니마 탱크** - 생존성이 필요할 때 40% DR
-- :card[1590] (일반 가챠——이벤트 후) - **탄탄한 디비나 리저브** - WB와 스토리/타워용 방어 서포트
+- :card[1539] (스페셜 스토리 보상) - **강력한 아니마 탱크** - 생존성이 필요할 때 40% DR
+- :card[1590] (일반 가챠——이벤트 후) - **탄탄한 디비나 리저브** - WB와 스페셜 스토리/컨퀘스트용 방어 서포트
 - :card[1527] (일반 가챠) - **신규 플레이어에게 강력한 리저브** - 공격력 상위 2아군에게 44% 치명 피해, :card[600]에 필적
 - :card[1531] (3월 교환소) - **틈새** - :card[715]의 소폭 업그레이드, 쉽게 얻을 수 있다면 챙기자
 - :card[1584] (일반 가챠) - **스킵** - 경험치/드롭 힐러, :card[1321] 대체 불가
@@ -169,7 +169,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 :card[1527]（常规卡池）是4★但远超其稀有度——对攻击力前2名友军给予44%暴击伤害，对4★来说相当多，可与:card[600]相比。对于尚未拥有更好暴击伤害辅助的新手玩家来说是强力的备用选择。**新手玩家的强力备用——能获取就拿下。**
 
-:card[1539]（剧情奖励）是极度坚韧的Anima近战卡。40%减伤超过大多数内容的需求，但在任何需要坚实坦克的情况下都是现有的最佳选择之一。当HP降至10%或以下时，永久获得50%伤害提升并在5秒内恢复10% HP——越危险越强力。**在生存能力成为瓶颈的内容中是强力的小众选择。**
+:card[1539]（特别剧情奖励）是极度坚韧的Anima近战卡。40%减伤超过大多数内容的需求，但在任何需要坚实坦克的情况下都是现有的最佳选择之一。当HP降至10%或以下时，永久获得50%伤害提升并在5秒内恢复10% HP——越危险越强力。**在生存能力成为瓶颈的内容中是强力的小众选择。**
 
 :card[1540]（限定卡池）是:card[1494]的替代选择，提供10%渐进暴击率。在无尽或备用中可能更好用，而:card[1494]在经验模式中因为经验加成仍有优势。如果:card[1494]还未到75级，可以作为目标。**Divina备用的良好选择，尤其适合无尽模式。**
 
@@ -182,8 +182,8 @@ After all the auction madness, here's the breakdown on the new event cards.
 - :card[1526]（限定卡池）+ :card[1529]（综合排名）——**高优先级组合** - 组合开启时顶级单轮Anima伤害，世界BOSS元候选
 - :card[1528]（排名——前半段·后半段）——**Divina辅助良好** - 扎实的被动，技能较弱
 - :card[1540]（限定卡池）——**Divina备用良好** - 无尽模式中优于:card[1494]
-- :card[1539]（剧情奖励）——**强力Anima坦克** - 需要生存能力时的40%减伤
-- :card[1590]（常规卡池——活动后）——**Divina备用扎实** - 世界BOSS及剧情/塔的防守辅助
+- :card[1539]（特别剧情奖励）——**强力Anima坦克** - 需要生存能力时的40%减伤
+- :card[1590]（常规卡池——活动后）——**Divina备用扎实** - 世界BOSS及特别剧情/征服的防守辅助
 - :card[1527]（常规卡池）——**新手玩家的强力备用** - 攻击力前2名44%暴击伤害，媲美:card[600]
 - :card[1531]（3月交换所）——**小众** - :card[715]小幅升级，容易获取则顺便拿
 - :card[1584]（常规卡池）——**跳过** - 经验/掉落治疗者，无法取代:card[1321]
@@ -216,7 +216,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 :card[1527]（常規卡池）是4★但遠超其稀有度——對攻擊力前2名友軍給予44%暴擊傷害，對4★來說相當多，可與:card[600]相比。對於尚未擁有更好暴擊傷害輔助的新手玩家來說是強力的備用選擇。**新手玩家的強力備用——能獲取就拿下。**
 
-:card[1539]（劇情獎勵）是極度堅韌的Anima近戰卡。40%減傷超過大多數內容的需求，但在任何需要堅實坦克的情況下都是現有的最佳選擇之一。當HP降至10%或以下時，永久獲得50%傷害提升並在5秒內恢復10% HP——越危險越強力。**在生存能力成為瓶頸的內容中是強力的小眾選擇。**
+:card[1539]（特別劇情獎勵）是極度堅韌的Anima近戰卡。40%減傷超過大多數內容的需求，但在任何需要堅實坦克的情況下都是現有的最佳選擇之一。當HP降至10%或以下時，永久獲得50%傷害提升並在5秒內恢復10% HP——越危險越強力。**在生存能力成為瓶頸的內容中是強力的小眾選擇。**
 
 :card[1540]（限定卡池）是:card[1494]的替代選擇，提供10%漸進暴擊率。在無盡或備用中可能更好用，而:card[1494]在經驗模式中因為經驗加成仍有優勢。如果:card[1494]還未到75級，可以作為目標。**Divina備用的良好選擇，尤其適合無盡模式。**
 
@@ -229,8 +229,8 @@ After all the auction madness, here's the breakdown on the new event cards.
 - :card[1526]（限定卡池）+ :card[1529]（綜合排名）——**高優先級組合** - 組合開啟時頂級單輪Anima傷害，世界BOSS元候選
 - :card[1528]（排名——前半段·後半段）——**Divina輔助良好** - 紮實的被動，技能較弱
 - :card[1540]（限定卡池）——**Divina備用良好** - 無盡模式中優於:card[1494]
-- :card[1539]（劇情獎勵）——**強力Anima坦克** - 需要生存能力時的40%減傷
-- :card[1590]（常規卡池——活動後）——**Divina備用紮實** - 世界BOSS及劇情/塔的防守輔助
+- :card[1539]（特別劇情獎勵）——**強力Anima坦克** - 需要生存能力時的40%減傷
+- :card[1590]（常規卡池——活動後）——**Divina備用紮實** - 世界BOSS及特別劇情/征服的防守輔助
 - :card[1527]（常規卡池）——**新手玩家的強力備用** - 攻擊力前2名44%暴擊傷害，媲美:card[600]
 - :card[1531]（3月交換所）——**小眾** - :card[715]小幅升級，容易獲取則順便拿
 - :card[1584]（常規卡池）——**跳過** - 經驗/掉落治療者，無法取代:card[1321]
@@ -263,7 +263,7 @@ Después de toda la locura de las subastas, aquí está el análisis de las nuev
 
 :card[1527] *(Gacha Estándar)* es de 4★ pero rinde muy por encima de su rareza——44% de Daño Crítico a los 2 aliados con el ATK más alto es mucho para un 4★, comparable a :card[600]. Una fuerte opción de reserva para jugadores más nuevos que aún no tienen mejores soportes de daño crítico. **Fuerte reserva para jugadores nuevos——consíguela si es accesible.**
 
-:card[1539] *(Recompensa de Historia)* es un cuerpo a cuerpo de Anima extremadamente resistente. Una reducción de daño del 40% es más de lo que la mayoría del contenido requiere, pero si te encuentras con alguna situación donde necesitas un tanque completamente sólido, esta es una de las mejores opciones disponibles. Cuando su HP cae al 10% o menos, gana un aumento de daño permanente del 50% y cura un 10% de HP en 5 segundos——cuanto más al límite está, más fuerte golpea. **Fuerte elección de nicho para cualquier contenido donde la supervivencia sea el cuello de botella.**
+:card[1539] *(Recompensa de Historia Especial)* es un cuerpo a cuerpo de Anima extremadamente resistente. Una reducción de daño del 40% es más de lo que la mayoría del contenido requiere, pero si te encuentras con alguna situación donde necesitas un tanque completamente sólido, esta es una de las mejores opciones disponibles. Cuando su HP cae al 10% o menos, gana un aumento de daño permanente del 50% y cura un 10% de HP en 5 segundos——cuanto más al límite está, más fuerte golpea. **Fuerte elección de nicho para cualquier contenido donde la supervivencia sea el cuello de botella.**
 
 :card[1540] *(Gacha Limitada)* es una alternativa de 10% de tasa crítica progresiva a :card[1494]. Probablemente es mejor en Endless o como reserva, mientras que :card[1494] sigue siendo superior en los modos de XP gracias al aumento de XP. Si no tienes :card[1494] al nivel 75, este es uno a considerar. **Buena opción de reserva de Divina, especialmente para Endless.**
 
@@ -276,8 +276,8 @@ Después de toda la locura de las subastas, aquí está el análisis de las nuev
 - :card[1526] (Gacha Limitada) + :card[1529] (Ranking General) - **Par de alta prioridad** - mayor daño de Anima en una sola ronda con el combo activo, posible meta de JM
 - :card[1528] (Ranking - 1ª y 2ª Mitad) - **Buen soporte de Divina** - pasivo sólido, habilidad débil
 - :card[1540] (Gacha Limitada) - **Buena reserva de Divina** - mejor que :card[1494] en Endless
-- :card[1539] (Recompensa de Historia) - **Fuerte tanque de Anima** - 40% RD si necesitas supervivencia
-- :card[1590] (Gacha Estándar - post evento) - **Sólida reserva de Divina** - soporte defensivo para JM e historia/torre
+- :card[1539] (Recompensa de Historia Especial) - **Fuerte tanque de Anima** - 40% RD si necesitas supervivencia
+- :card[1590] (Gacha Estándar - post evento) - **Sólida reserva de Divina** - soporte defensivo para JM e Historia Especial/Conquista
 - :card[1527] (Gacha Estándar) - **Fuerte reserva para jugadores nuevos** - 44% Daño Crítico a los 2 aliados con mayor ATK, comparable a :card[600]
 - :card[1531] (Intercambio de Marzo) - **De nicho** - pequeña mejora a :card[715], consíguela si es accesible
 - :card[1584] (Gacha Estándar) - **Omitir** - sanadora de XP/drops, no desplaza a :card[1321]

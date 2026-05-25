@@ -20,7 +20,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[1991] is the first released card into the standard pool. This is a fairly strong Divina assist card, however Divina assists are fairly crowded with :card[689] which is currently on auction, or :card[723] which should be coming to permanent auction in several patches. It may not be the best option, but it is a good option and uncapping will net you duplicates on unseal that could be used on your whole team if you don't have better options. The main problem is top players probably don't need it, and newer players probably shouldn't waste pulls because it requires too many copies to be useful, and there are good assists on auction like :card[664]. **Probably hold your invokers.**
 
-:card[1435] is essentially a Divina version of :card[1312]'s skill (hitting 3 enemies with highest ATK) that increases in damage round over round. He looks like he's balanced to be a story card, so he may be accessible to newer players, and only requires 3 copies to get the skill which is... fine, I guess.
+:card[1435] is essentially a Divina version of :card[1312]'s skill (hitting 3 enemies with highest ATK) that increases in damage round over round. He looks like he's balanced to be a Special Story card, so he may be accessible to newer players, and only requires 3 copies to get the skill which is... fine, I guess.
 
 :card[1437] might be the best card of the bunch with very strong defensive value. That might help teams drop from 2 to 1 healers in some situations and enable higher overall damage. The ATK speed debuff is comparable to :card[690] and :card[725], and could allow teams that rely on those cards for indirect damage reduction to swap in a stronger offensive card and use this assist instead. This is very likely to be a gacha card so I'm guessing value only starts at 2 copies which is 70 pulls and 250 mochi, so this is a reasonable cost if you need tankiness very badly, and might be one of the more popular cards in the set.
 
@@ -30,7 +30,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## Auction Cards
 
-:card[689] is one of the strongest assists out there for Divina teams at MLB. Without MLB he's a weaker version of :card[707], but the MLB bonus in short content like World Boss or boss phases in Tower/Story makes him better for Divina teams. Since Toyouke-Omikami is in limited supply and likely going for close to 500 mochi each and requires MLB, Okita is still a decent alternative for players who don't have her even at one copy. You can also potentially MLB and then seal and sell back copies so if you are floating a bunch of jewels you can potentially get him for fairly cheap, especially if you already snagged one or more copies when the Gacha was live. **Must buy for Divina whales only**, a skip for everyone else.
+:card[689] is one of the strongest assists out there for Divina teams at MLB. Without MLB he's a weaker version of :card[707], but the MLB bonus in short content like World Boss or boss phases in Conquest/Special Story makes him better for Divina teams. Since Toyouke-Omikami is in limited supply and likely going for close to 500 mochi each and requires MLB, Okita is still a decent alternative for players who don't have her even at one copy. You can also potentially MLB and then seal and sell back copies so if you are floating a bunch of jewels you can potentially get him for fairly cheap, especially if you already snagged one or more copies when the Gacha was live. **Must buy for Divina whales only**, a skip for everyone else.
 
 :card[690] is a strong Anima melee whose MLB seems very strong for World Boss and has a good skill, but I don't think she's a must have. She's a nice one, but she's running 3000 jewels at the moment which is probably just too much for a solid melee world bosser. **Probably a pass for most.**
 
@@ -38,7 +38,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[688] was the ranking card from the event but its usefulness is... questionable? I'm sure there is use for it, maybe for a melee wave clearer where a little tankiness and skill damage could be useful, making the card work like :card[593] or the much stronger :card[734], or doubling down on one of those cards to make a super AoE skill nuker. But I think those assist slots are probably better used for support cards that increase damage of your carries directly like :card[664], :card[643], or more widely like :card[618] which are all fairly accessible on auction. **Pass unless you have a lot of mochi floating around.**
 
-:card[687] is a greedy attacker - there isn't a lot more to say there. Higher end teams are probably looking for more team buffs and effective health out of a melee slot, and new players may be more inclined to chase a tankier card to protect their back line. This one's an "if the price is right" situation, and at around 40 mochi, this might be a cheap opportunity for newer Phantasma players to fill an MLB front line unit. :card[227] is also a decent Phantasma tank for new players, coming to auction fairly soon - but given she was from a story event, the price is likely to be higher than Nue. **Not a bad pick for new players looking for a cheap Phantasma front liner.**
+:card[687] is a greedy attacker - there isn't a lot more to say there. Higher end teams are probably looking for more team buffs and effective health out of a melee slot, and new players may be more inclined to chase a tankier card to protect their back line. This one's an "if the price is right" situation, and at around 40 mochi, this might be a cheap opportunity for newer Phantasma players to fill an MLB front line unit. :card[227] is also a decent Phantasma tank for new players, coming to auction fairly soon - but given she was from a Special Story event, the price is likely to be higher than Nue. **Not a bad pick for new players looking for a cheap Phantasma front liner.**
 
 ---
 
@@ -60,7 +60,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[1991] は通常プールに追加された最初のカードです。かなり強いディヴィナアシストカードですが、ディヴィナアシストは :card[689]（現在オークション中）や :card[723]（数パッチ後に常設オークションに来る予定）で混雑しています。最良のオプションではないかもしれませんが、良いオプションです。**おそらくインヴォーカーは温存した方が良いでしょう。**
 
-:card[1435] は本質的に :card[1312] のスキルのディヴィナ版（ATKが最も高い3体の敵にヒット）で、ラウンドごとにダメージが増加します。ストーリーカードとしてバランス調整されているようなので、新規プレイヤーにもアクセスしやすいかもしれません。
+:card[1435] は本質的に :card[1312] のスキルのディヴィナ版（ATKが最も高い3体の敵にヒット）で、ラウンドごとにダメージが増加します。スペシャルストーリーカードとしてバランス調整されているようなので、新規プレイヤーにもアクセスしやすいかもしれません。
 
 :card[1437] は非常に強い防御力を持ち、このセットで最高のカードかもしれません。状況によっては2人から1人のヒーラーに減らすことができ、全体的なダメージを増やせる可能性があります。ATK速度デバフは :card[690] や :card[725] に匹敵し、これらのカードに依存しているチームがより攻撃的なカードに交換できます。ガチャカードになる可能性が高いので、価値は2コピーから始まると推測しています。**耐久性が非常に必要な場合は妥当なコストです。**
 
@@ -70,7 +70,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## オークションカード
 
-:card[689] はMLBでディヴィナチームにとって最強のアシストの一つです。MLBなしでは :card[707] の弱いバージョンですが、ワールドボスやタワー/ストーリーのボスフェーズのような短いコンテンツでは、MLBボーナスによりディヴィナチームにより良い選択肢になります。**ディヴィナクジラのみ必須購入**、それ以外の人はスキップ。
+:card[689] はMLBでディヴィナチームにとって最強のアシストの一つです。MLBなしでは :card[707] の弱いバージョンですが、ワールドボスやコンクエスト/スペシャルストーリーのボスフェーズのような短いコンテンツでは、MLBボーナスによりディヴィナチームにより良い選択肢になります。**ディヴィナクジラのみ必須購入**、それ以外の人はスキップ。
 
 :card[690] はMLBがワールドボスに非常に強そうな強力なアニマ近接です。良いカードですが、現在3000ジュエルで取引されており、堅実な近接ワールドボッサーには高すぎるでしょう。**ほとんどの人にはパスでしょう。**
 
@@ -100,7 +100,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[1991]은 상시 풀에 추가된 첫 번째 카드입니다. 꽤 강한 디비나 어시스트 카드지만, 디비나 어시스트는 현재 경매 중인 :card[689]나 몇 패치 후 상시 경매에 올 :card[723]로 꽤 혼잡합니다. 최고의 선택은 아닐 수 있지만 좋은 선택이고, 만돌 후 봉인을 풀면 더 나은 옵션이 없을 경우 팀 전체에 사용할 수 있는 복사본을 얻을 수 있습니다. 주요 문제는 탑 플레이어들은 아마 필요 없고, 신규 플레이어들은 유용하려면 너무 많은 복사본이 필요하고 :card[664] 같은 좋은 어시스트가 경매에 있어서 뽑기를 낭비하면 안 됩니다. **아마 인보커를 아껴두세요.**
 
-:card[1435]는 본질적으로 :card[1312]의 스킬(가장 높은 공격력의 적 3명을 공격)의 디비나 버전이며 라운드마다 데미지가 증가합니다. 스토리 카드로 밸런싱된 것 같아서 신규 플레이어들도 접근할 수 있을 것이고, 스킬을 얻는 데 3장만 필요한데... 괜찮은 것 같습니다.
+:card[1435]는 본질적으로 :card[1312]의 스킬(가장 높은 공격력의 적 3명을 공격)의 디비나 버전이며 라운드마다 데미지가 증가합니다. 스페셜 스토리 카드로 밸런싱된 것 같아서 신규 플레이어들도 접근할 수 있을 것이고, 스킬을 얻는 데 3장만 필요한데... 괜찮은 것 같습니다.
 
 :card[1437]은 매우 강한 방어력으로 이번 세트 최고의 카드일 수 있습니다. 일부 상황에서 힐러를 2에서 1로 줄여 전체 데미지를 높일 수 있게 해줄 수 있습니다. 공격속도 디버프는 :card[690]나 :card[725]와 비슷하며, 간접적인 데미지 감소를 위해 그 카드들에 의존하는 팀이 더 강한 공격 카드로 교체하고 이 어시스트를 대신 사용할 수 있게 해줄 수 있습니다. 가챠 카드일 가능성이 높아서 가치가 2장부터 시작될 것 같은데 이는 70뽑 250모찌입니다. 내구성이 매우 필요하다면 합리적인 비용이고, 이 세트에서 가장 인기 있는 카드 중 하나일 수 있습니다.
 
@@ -110,7 +110,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## 경매 카드
 
-:card[689]는 만돌 시 디비나 팀을 위한 가장 강력한 어시스트 중 하나입니다. 만돌 없이는 :card[707]의 약한 버전이지만, 월드보스나 타워/스토리의 보스 페이즈 같은 짧은 컨텐츠에서의 만돌 보너스가 이 카드를 디비나 팀에 더 좋게 만듭니다. 토요우케오미카미는 공급이 제한되어 있고 각각 500모찌 가까이에 거래될 것 같고 만돌이 필요해서, 오키타는 가챠가 열렸을 때 한 장 이상 얻지 못한 플레이어들에게도 한 장만으로도 괜찮은 대안입니다. 만돌 후 봉인해서 복사본을 되팔 수도 있어서 보석을 많이 가지고 있다면 꽤 저렴하게 얻을 수 있고, 특히 가챠가 열렸을 때 한 장 이상 이미 얻었다면 더 그렇습니다. **디비나 고래만 필수 구매**, 나머지는 스킵.
+:card[689]는 만돌 시 디비나 팀을 위한 가장 강력한 어시스트 중 하나입니다. 만돌 없이는 :card[707]의 약한 버전이지만, 월드보스나 컨퀘스트/스페셜 스토리의 보스 페이즈 같은 짧은 컨텐츠에서의 만돌 보너스가 이 카드를 디비나 팀에 더 좋게 만듭니다. 토요우케오미카미는 공급이 제한되어 있고 각각 500모찌 가까이에 거래될 것 같고 만돌이 필요해서, 오키타는 가챠가 열렸을 때 한 장 이상 얻지 못한 플레이어들에게도 한 장만으로도 괜찮은 대안입니다. 만돌 후 봉인해서 복사본을 되팔 수도 있어서 보석을 많이 가지고 있다면 꽤 저렴하게 얻을 수 있고, 특히 가챠가 열렸을 때 한 장 이상 이미 얻었다면 더 그렇습니다. **디비나 고래만 필수 구매**, 나머지는 스킵.
 
 :card[690]은 만돌이 월드보스에 매우 강해 보이고 좋은 스킬을 가진 강한 애니마 근접이지만, 필수라고 생각하지 않습니다. 좋은 카드지만 현재 3000보석에 거래되고 있어서 견고한 근접 월드보서치고는 너무 비쌉니다. **대부분에게 아마 패스.**
 
@@ -118,7 +118,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[688]은 이벤트의 랭킹 카드였지만 유용성은... 의문스럽습니다? 분명 용도가 있을 것입니다, 약간의 내구성과 스킬 데미지가 유용할 수 있는 근접 웨이브 클리어러에서 :card[593]이나 훨씬 강한 :card[734]처럼 작동하게 하거나, 그 카드들 중 하나에 더블다운해서 슈퍼 광역 스킬 딜러를 만들 수 있습니다. 하지만 그 어시스트 슬롯은 :card[664], :card[643] 같이 캐리의 데미지를 직접 증가시키거나 :card[618]처럼 더 넓게 증가시키는 서포트 카드에 사용하는 게 더 나을 것 같고, 이것들은 모두 경매에서 꽤 접근하기 쉽습니다. **모찌가 많이 남아있지 않다면 패스.**
 
-:card[687]은 탐욕스러운 공격자입니다 - 더 말할 게 별로 없습니다. 하이엔드 팀은 아마 근접 슬롯에서 더 많은 팀 버프와 유효 체력을 찾고 있고, 신규 플레이어들은 백라인을 보호할 더 탱키한 카드를 추구하는 경향이 있을 수 있습니다. 이건 "가격이 맞으면" 상황이고, 약 40모찌에 신규 팬터즈마 플레이어들이 만돌 프론트라인 유닛을 채울 저렴한 기회일 수 있습니다. :card[227]도 신규 플레이어를 위한 괜찮은 팬터즈마 탱커이고 곧 경매에 올라올 예정입니다 - 하지만 스토리 이벤트 출신이라 가격이 누에보다 높을 것 같습니다. **저렴한 팬터즈마 프론트라이너를 찾는 신규 플레이어에게 나쁘지 않은 선택.**
+:card[687]은 탐욕스러운 공격자입니다 - 더 말할 게 별로 없습니다. 하이엔드 팀은 아마 근접 슬롯에서 더 많은 팀 버프와 유효 체력을 찾고 있고, 신규 플레이어들은 백라인을 보호할 더 탱키한 카드를 추구하는 경향이 있을 수 있습니다. 이건 "가격이 맞으면" 상황이고, 약 40모찌에 신규 팬터즈마 플레이어들이 만돌 프론트라인 유닛을 채울 저렴한 기회일 수 있습니다. :card[227]도 신규 플레이어를 위한 괜찮은 팬터즈마 탱커이고 곧 경매에 올라올 예정입니다 - 하지만 스페셜 스토리 출신이라 가격이 누에보다 높을 것 같습니다. **저렴한 팬터즈마 프론트라이너를 찾는 신규 플레이어에게 나쁘지 않은 선택.**
 
 ---
 
@@ -140,7 +140,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[1991] 是第一张加入常规池的卡牌。这是一张相当强的迪维娜辅助卡，但迪维娜辅助已经很拥挤，有正在拍卖的 :card[689] 或几个版本后将加入常驻拍卖的 :card[723]。它可能不是最佳选择，但是一个不错的选择，满破后解封可以获得副本，如果没有更好的选择可以用于整个队伍。主要问题是顶级玩家可能不需要，新玩家可能不应该浪费抽卡因为需要太多副本才有用，而且拍卖有像 :card[664] 这样好的辅助。**可能应该保留你的召唤券。**
 
-:card[1435] 本质上是 :card[1312] 技能的迪维娜版本（攻击ATK最高的3个敌人），伤害每回合递增。看起来是作为剧情卡平衡的，所以新玩家可能也能获得，只需要3张就能获得技能，这...还行吧。
+:card[1435] 本质上是 :card[1312] 技能的迪维娜版本（攻击ATK最高的3个敌人），伤害每回合递增。看起来是作为特别剧情卡平衡的，所以新玩家可能也能获得，只需要3张就能获得技能，这...还行吧。
 
 :card[1437] 可能是这批卡牌中最好的，具有非常强的防御价值。在某些情况下可能帮助队伍从2个治疗减少到1个，从而提高整体伤害。攻击速度减益与 :card[690] 和 :card[725] 相当，可能允许依赖这些卡牌进行间接伤害减免的队伍换上更强的攻击卡并使用这个辅助。这很可能是抽卡卡牌，所以我猜价值从2张开始，即70抽250糯米，如果你非常需要坦度，这是合理的成本，可能是这个系列中最受欢迎的卡牌之一。
 
@@ -150,7 +150,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## 拍卖卡牌
 
-:card[689] 满破时是迪维娜队伍最强的辅助之一。没有满破就是 :card[707] 的弱化版，但在世界Boss或塔楼/剧情的Boss阶段等短期内容中，满破加成使这张卡对迪维娜队伍更好。由于丰受大神供应有限，可能每张接近500糯米且需要满破，冲田即使只有一张对没有它的玩家来说仍然是不错的替代品。你也可以满破后封印卖回副本，所以如果你有很多宝石，可能能相当便宜地获得，特别是如果你在卡池开放时已经抽到一张或更多。**仅迪维娜氪金玩家必买**，其他人跳过。
+:card[689] 满破时是迪维娜队伍最强的辅助之一。没有满破就是 :card[707] 的弱化版，但在世界Boss或征服/特别剧情的Boss阶段等短期内容中，满破加成使这张卡对迪维娜队伍更好。由于丰受大神供应有限，可能每张接近500糯米且需要满破，冲田即使只有一张对没有它的玩家来说仍然是不错的替代品。你也可以满破后封印卖回副本，所以如果你有很多宝石，可能能相当便宜地获得，特别是如果你在卡池开放时已经抽到一张或更多。**仅迪维娜氪金玩家必买**，其他人跳过。
 
 :card[690] 是一个强力的阿尼玛近战，满破看起来对世界Boss非常强且有好技能，但我不认为它是必须的。它很好，但目前交易价3000宝石，对于一个稳定的近战世界Boss手可能太贵了。**对大多数人来说可能跳过。**
 
@@ -158,7 +158,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[688] 是活动的排名卡，但它的实用性...有问题？肯定有用处，也许对于近战清波手，一点坦度和技能伤害可能有用，让卡牌像 :card[593] 或更强的 :card[734] 一样工作，或者在其中一张上加倍投入做一个超级范围技能输出。但我认为那些辅助位可能更适合用于直接增加C位伤害的辅助卡如 :card[664]、:card[643]，或更广泛的如 :card[618]，这些在拍卖都相当容易获得。**除非你糯米很多否则跳过。**
 
-:card[687] 是一个贪婪的攻击者——没什么更多要说的。高端队伍可能在近战位寻找更多队伍增益和有效生命值，新玩家可能更倾向于追求更肉的卡来保护后排。这是"价格合适就买"的情况，大约40糯米，对于新幻影玩家来说可能是填满满破前排单位的便宜机会。:card[227] 对新玩家来说也是不错的幻影坦克，很快就会上拍卖——但由于她来自剧情活动，价格可能比鵺高。**对寻找便宜幻影前排的新玩家来说不是坏选择。**
+:card[687] 是一个贪婪的攻击者——没什么更多要说的。高端队伍可能在近战位寻找更多队伍增益和有效生命值，新玩家可能更倾向于追求更肉的卡来保护后排。这是"价格合适就买"的情况，大约40糯米，对于新幻影玩家来说可能是填满满破前排单位的便宜机会。:card[227] 对新玩家来说也是不错的幻影坦克，很快就会上拍卖——但由于她来自特别剧情，价格可能比鵺高。**对寻找便宜幻影前排的新玩家来说不是坏选择。**
 
 ---
 
@@ -180,7 +180,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[1991] 是第一張加入常規池的卡牌。這是一張相當強的迪維娜輔助卡，但迪維娜輔助已經很擁擠，有正在拍賣的 :card[689] 或幾個版本後將加入常駐拍賣的 :card[723]。它可能不是最佳選擇，但是一個不錯的選擇，滿破後解封可以獲得副本，如果沒有更好的選擇可以用於整個隊伍。主要問題是頂級玩家可能不需要，新玩家可能不應該浪費抽卡因為需要太多副本才有用，而且拍賣有像 :card[664] 這樣好的輔助。**可能應該保留你的召喚券。**
 
-:card[1435] 本質上是 :card[1312] 技能的迪維娜版本（攻擊ATK最高的3個敵人），傷害每回合遞增。看起來是作為劇情卡平衡的，所以新玩家可能也能獲得，只需要3張就能獲得技能，這...還行吧。
+:card[1435] 本質上是 :card[1312] 技能的迪維娜版本（攻擊ATK最高的3個敵人），傷害每回合遞增。看起來是作為特別劇情卡平衡的，所以新玩家可能也能獲得，只需要3張就能獲得技能，這...還行吧。
 
 :card[1437] 可能是這批卡牌中最好的，具有非常強的防禦價值。在某些情況下可能幫助隊伍從2個治療減少到1個，從而提高整體傷害。攻擊速度減益與 :card[690] 和 :card[725] 相當，可能允許依賴這些卡牌進行間接傷害減免的隊伍換上更強的攻擊卡並使用這個輔助。這很可能是抽卡卡牌，所以我猜價值從2張開始，即70抽250糯米，如果你非常需要坦度，這是合理的成本，可能是這個系列中最受歡迎的卡牌之一。
 
@@ -190,7 +190,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 ## 拍賣卡牌
 
-:card[689] 滿破時是迪維娜隊伍最強的輔助之一。沒有滿破就是 :card[707] 的弱化版，但在世界Boss或塔樓/劇情的Boss階段等短期內容中，滿破加成使這張卡對迪維娜隊伍更好。由於豐受大神供應有限，可能每張接近500糯米且需要滿破，沖田即使只有一張對沒有它的玩家來說仍然是不錯的替代品。你也可以滿破後封印賣回副本，所以如果你有很多寶石，可能能相當便宜地獲得，特別是如果你在卡池開放時已經抽到一張或更多。**僅迪維娜課金玩家必買**，其他人跳過。
+:card[689] 滿破時是迪維娜隊伍最強的輔助之一。沒有滿破就是 :card[707] 的弱化版，但在世界Boss或征服/特別劇情的Boss階段等短期內容中，滿破加成使這張卡對迪維娜隊伍更好。由於豐受大神供應有限，可能每張接近500糯米且需要滿破，沖田即使只有一張對沒有它的玩家來說仍然是不錯的替代品。你也可以滿破後封印賣回副本，所以如果你有很多寶石，可能能相當便宜地獲得，特別是如果你在卡池開放時已經抽到一張或更多。**僅迪維娜課金玩家必買**，其他人跳過。
 
 :card[690] 是一個強力的阿尼瑪近戰，滿破看起來對世界Boss非常強且有好技能，但我不認為它是必須的。它很好，但目前交易價3000寶石，對於一個穩定的近戰世界Boss手可能太貴了。**對大多數人來說可能跳過。**
 
@@ -198,7 +198,7 @@ I've ranked top 80 overall in some recent events, and am hovering around world b
 
 :card[688] 是活動的排名卡，但它的實用性...有問題？肯定有用處，也許對於近戰清波手，一點坦度和技能傷害可能有用，讓卡牌像 :card[593] 或更強的 :card[734] 一樣工作，或者在其中一張上加倍投入做一個超級範圍技能輸出。但我認為那些輔助位可能更適合用於直接增加C位傷害的輔助卡如 :card[664]、:card[643]，或更廣泛的如 :card[618]，這些在拍賣都相當容易獲得。**除非你糯米很多否則跳過。**
 
-:card[687] 是一個貪婪的攻擊者——沒什麼更多要說的。高端隊伍可能在近戰位尋找更多隊伍增益和有效生命值，新玩家可能更傾向於追求更肉的卡來保護後排。這是「價格合適就買」的情況，大約40糯米，對於新幻影玩家來說可能是填滿滿破前排單位的便宜機會。:card[227] 對新玩家來說也是不錯的幻影坦克，很快就會上拍賣——但由於她來自劇情活動，價格可能比鵺高。**對尋找便宜幻影前排的新玩家來說不是壞選擇。**
+:card[687] 是一個貪婪的攻擊者——沒什麼更多要說的。高端隊伍可能在近戰位尋找更多隊伍增益和有效生命值，新玩家可能更傾向於追求更肉的卡來保護後排。這是「價格合適就買」的情況，大約40糯米，對於新幻影玩家來說可能是填滿滿破前排單位的便宜機會。:card[227] 對新玩家來說也是不錯的幻影坦克，很快就會上拍賣——但由於她來自特別劇情，價格可能比鵺高。**對尋找便宜幻影前排的新玩家來說不是壞選擇。**
 
 ---
 
@@ -220,7 +220,7 @@ He quedado en el top 80 general en algunos eventos recientes, y estoy alrededor 
 
 :card[1991] es la primera carta añadida al pool estándar. Es una carta de asistencia Divina bastante fuerte, pero los asistentes Divina están muy concurridos con :card[689] que está actualmente en subasta, o :card[723] que debería llegar a la subasta permanente en varios parches. Puede que no sea la mejor opción, pero es una buena opción y desbloquear el máximo nivel te dará duplicados al desbloquear que podrían usarse en todo tu equipo si no tienes mejores opciones. El problema principal es que los jugadores top probablemente no lo necesitan, y los jugadores nuevos probablemente no deberían desperdiciar tiradas porque requiere demasiadas copias para ser útil, y hay buenos asistentes en subasta como :card[664]. **Probablemente guarda tus invocadores.**
 
-:card[1435] es esencialmente una versión Divina del skill de :card[1312] (golpea a los 3 enemigos con mayor ATK) que aumenta el daño ronda tras ronda. Parece estar balanceado como carta de historia, así que puede ser accesible para jugadores nuevos, y solo requiere 3 copias para obtener el skill, lo cual es... aceptable.
+:card[1435] es esencialmente una versión Divina del skill de :card[1312] (golpea a los 3 enemigos con mayor ATK) que aumenta el daño ronda tras ronda. Parece estar balanceado como carta de Historia Especial Especial, así que puede ser accesible para jugadores nuevos, y solo requiere 3 copias para obtener el skill, lo cual es... aceptable.
 
 :card[1437] podría ser la mejor carta del conjunto con un valor defensivo muy fuerte. Eso podría ayudar a los equipos a reducir de 2 a 1 sanadores en algunas situaciones y permitir mayor daño general. El debuff de velocidad de ATK es comparable a :card[690] y :card[725], y podría permitir a equipos que dependen de esas cartas para reducción indirecta de daño cambiar a una carta más ofensiva y usar este asistente en su lugar. Es muy probable que sea una carta gacha así que supongo que el valor solo empieza a partir de 2 copias que son 70 tiradas y 250 mochi, así que es un costo razonable si necesitas mucha resistencia, y podría ser una de las cartas más populares del set.
 
@@ -230,7 +230,7 @@ He quedado en el top 80 general en algunos eventos recientes, y estoy alrededor 
 
 ## Cartas de Subasta
 
-:card[689] es uno de los asistentes más fuertes para equipos Divina en MLB. Sin MLB es una versión más débil de :card[707], pero el bonus MLB en contenido corto como World Boss o fases de boss en Torre/Historia hace que esta carta sea mejor para equipos Divina. Como Toyouke-Omikami tiene suministro limitado y probablemente se venderá cerca de 500 mochi cada una y requiere MLB, Okita sigue siendo una alternativa decente para jugadores que no la tienen incluso con una copia. También puedes potencialmente conseguir MLB y luego sellar y vender copias, así que si tienes muchas joyas podrías obtener esta bastante barata, especialmente si ya conseguiste una o más copias cuando el Gacha estaba activo. **Compra obligatoria solo para ballenas Divina**, skip para todos los demás.
+:card[689] es uno de los asistentes más fuertes para equipos Divina en MLB. Sin MLB es una versión más débil de :card[707], pero el bonus MLB en contenido corto como World Boss o fases de boss en Conquista/Historia Especial Especial hace que esta carta sea mejor para equipos Divina. Como Toyouke-Omikami tiene suministro limitado y probablemente se venderá cerca de 500 mochi cada una y requiere MLB, Okita sigue siendo una alternativa decente para jugadores que no la tienen incluso con una copia. También puedes potencialmente conseguir MLB y luego sellar y vender copias, así que si tienes muchas joyas podrías obtener esta bastante barata, especialmente si ya conseguiste una o más copias cuando el Gacha estaba activo. **Compra obligatoria solo para ballenas Divina**, skip para todos los demás.
 
 :card[690] es un melee Anima fuerte cuyo MLB parece muy fuerte para World Boss y tiene un buen skill, pero no creo que sea imprescindible. Es buena, pero está a 3000 joyas en este momento lo cual probablemente es demasiado para un melee sólido de World Boss. **Probablemente un pase para la mayoría.**
 
@@ -238,7 +238,7 @@ He quedado en el top 80 general en algunos eventos recientes, y estoy alrededor 
 
 :card[688] fue la carta de ranking del evento pero su utilidad es... ¿cuestionable? Seguro que tiene uso, quizás para un melee limpia-oleadas donde un poco de resistencia y daño de skill podría ser útil, haciendo que la carta funcione como :card[593] o el mucho más fuerte :card[734], o doblando en una de esas cartas para hacer un súper dealer de daño AoE. Pero creo que esos slots de asistente probablemente se usan mejor para cartas de soporte que aumenten el daño de tus carries directamente como :card[664], :card[643], o más ampliamente como :card[618] que son todos bastante accesibles en subasta. **Pasa a menos que tengas mucho mochi sobrante.**
 
-:card[687] es un atacante codicioso - no hay mucho más que decir. Los equipos de alto nivel probablemente buscan más buffs de equipo y vida efectiva de un slot melee, y los jugadores nuevos pueden estar más inclinados a buscar una carta más tanky para proteger su línea trasera. Esta es una situación de "si el precio es correcto", y a unos 40 mochi, podría ser una oportunidad barata para jugadores nuevos de Phantasma de llenar una unidad de línea frontal MLB. :card[227] también es un tanque Phantasma decente para jugadores nuevos, que llegará a subasta pronto - pero dado que era de un evento de historia, el precio probablemente será más alto que Nue. **No es mala elección para jugadores nuevos buscando un frontliner Phantasma barato.**
+:card[687] es un atacante codicioso - no hay mucho más que decir. Los equipos de alto nivel probablemente buscan más buffs de equipo y vida efectiva de un slot melee, y los jugadores nuevos pueden estar más inclinados a buscar una carta más tanky para proteger su línea trasera. Esta es una situación de "si el precio es correcto", y a unos 40 mochi, podría ser una oportunidad barata para jugadores nuevos de Phantasma de llenar una unidad de línea frontal MLB. :card[227] también es un tanque Phantasma decente para jugadores nuevos, que llegará a subasta pronto - pero dado que era de un evento de Historia Especial, el precio probablemente será más alto que Nue. **No es mala elección para jugadores nuevos buscando un frontliner Phantasma barato.**
 
 ---
 

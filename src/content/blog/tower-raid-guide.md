@@ -1,6 +1,6 @@
 ---
-title: "Otogi Spirit Agents Tower Raid Guide: SE Efficiency & Climbing Strategies"
-description: "Complete guide to Tower Raid events in Otogi Spirit Agents. Learn SE cost optimization, team composition strategies, and how to climb efficiently with guild support."
+title: "Otogi Spirit Agents Conquest Guide: SE Efficiency & Climbing Strategies"
+description: "Complete guide to Conquest events in Otogi Spirit Agents. Learn SE cost optimization, team composition strategies, and how to climb efficiently with guild support."
 date: "2026-01-20"
 author: "Araiak"
 tags: ["guide", "events"]
@@ -8,9 +8,9 @@ tags: ["guide", "events"]
 
 <div data-lang="en">
 
-This is intended as a new(er) player guide to Tower Raid events. Tower events are very good for new players because you can request help from guild mates - if you find a kind guild, there's a good chance you can get several 5-star cards with help.
+This is intended as a new(er) player guide to Conquest events. Conquest events are very good for new players because you can request help from guild mates - if you find a kind guild, there's a good chance you can get several 5-star cards with help.
 
-In tower events, you get attacked by a raid boss either from doing normal content or by searching for a boss using SE.
+In Conquest events, you get attacked by a raid boss either from doing normal content or by searching for a boss using SE.
 
 ---
 
@@ -31,9 +31,9 @@ In tower events, you get attacked by a raid boss either from doing normal conten
 
 ---
 
-## Tower Event Characteristics
+## Conquest Characteristics
 
-Tower events are:
+Conquest events are:
 
 - **Multiple rounds**, so nearly all skills and abilities are useful:
   - *Final wave abilities* activate on the last wave of combat
@@ -42,7 +42,7 @@ Tower events are:
 - **Untyped**, so use your strongest team regardless of element
 - **Variable SE costs** (4-18 SE based on your cards)
 - **Continuable** - if you time out, you can continue dealing damage for SE cost +1, or share the boss to your guild for help. For example, if your team costs 18 SE, you can deal the same amount of damage again for 19 SE.
-- **XP and drop rate boosts do not help** - save those for Story events!
+- **XP and drop rate boosts do not help** - save those for Special Story events!
 
 ### SE Cost Calculation
 
@@ -157,7 +157,7 @@ Most of your reserves probably won't come from auction, so check what you have a
 - :card[2373] (Lv. 75) - Phantasma only
 - :card[2191] (Lv. 75) - Anima only
 - :card[1321] (Lv. 75+) - Divina
-- :card[744] (Lv. 85) - Any type, 15% damage per round is huge! Usable in all multi-round content (tower raid, story) as a reserve, but not single-round. Worth PvP orbing if you can hit 85 (not beneficial before that) - otherwise save orbs for single-round content like World Boss or PvP
+- :card[744] (Lv. 85) - Any type, 15% damage per round is huge! Usable in all multi-round content (Conquest, Special Story) as a reserve, but not single-round. Worth PvP orbing if you can hit 85 (not beneficial before that) - otherwise save orbs for single-round content like World Boss or PvP
 - :card[661] (Lv. 85) - Any type
 - :card[600] (Lv. 77) - 4-star but might be worth PvP orbing, 40% crit damage is a big boost
 
@@ -194,15 +194,15 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 | Need more survival | Use a tankier card or add a DR assist |
 | Hit a wall | Share boss to guild for help, or add more of your own cards |
 | Card drop floor (2x HP) | Consider adding cards temporarily for the HP spike |
-| Late tower | Use your strongest full team (up to 4 cards + friend) |
+| Late Conquest | Use your strongest full team (up to 4 cards + friend) |
 
 </div>
 
 <div data-lang="ja">
 
-これは新規（または比較的新しい）プレイヤー向けのタワーレイドイベントガイドです。タワーイベントは新規プレイヤーにとって非常に良いです。ギルドメンバーに助けを求めることができるからです - 親切なギルドを見つければ、助けを借りて複数の5つ星カードを獲得できる可能性が高いです。
+これは新規（または比較的新しい）プレイヤー向けのコンクエストイベントガイドです。コンクエストは新規プレイヤーにとって非常に良いです。ギルドメンバーに助けを求めることができるからです - 親切なギルドを見つければ、助けを借りて複数の5つ星カードを獲得できる可能性が高いです。
 
-タワーイベントでは、通常コンテンツをプレイするか、SEを使ってボスを探すことでレイドボスに攻撃されます。
+コンクエストでは、通常コンテンツをプレイするか、SEを使ってボスを探すことでレイドボスに攻撃されます。
 
 ---
 
@@ -223,9 +223,9 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 
 ---
 
-## タワーイベントの特徴
+## コンクエストの特徴
 
-タワーイベントは：
+コンクエストは：
 
 - **複数ラウンド**なので、ほぼ全てのスキルとアビリティが有用：
   - *最終ウェーブアビリティ*は戦闘の最後のウェーブで発動
@@ -234,7 +234,7 @@ You can decide how much you want to min/max SE costs, but for most players it's 
 - **無属性**なので、属性に関係なく最強チームを使用
 - **可変SEコスト**（カードに基づき4-18 SE）
 - **継続可能** - タイムアウトしたら、SE+1でダメージを与え続けるか、ギルドにボスをシェアして助けを求められます。例えば、チームが18 SEなら、19 SEで同じダメージを再度与えられます。
-- **XPとドロップ率ブーストは効果なし** - ストーリーイベント用に取っておきましょう！
+- **XPとドロップ率ブーストは効果なし** - スペシャルストーリー用に取っておきましょう！
 
 ### SEコスト計算
 
@@ -351,7 +351,7 @@ SEコスト = 自分の1-4枚のカードの星の合計（最小4、最大18）
 - :card[2373] (Lv. 75) - ファンタズマ専用
 - :card[2191] (Lv. 75) - アニマ専用
 - :card[1321] (Lv. 75+) - ディビナ
-- :card[744] (Lv. 85) - 全タイプ、ラウンドごと15%ダメージは巨大！全てのマルチラウンドコンテンツ（タワーレイド、ストーリー）でリザーブとして使用可能、ただしシングルラウンドでは不可。85に達することができればPvPオーブの価値あり（その前は効果なし）- そうでなければワールドボスやPvPのようなシングルラウンドコンテンツ用にオーブを節約
+- :card[744] (Lv. 85) - 全タイプ、ラウンドごと15%ダメージは巨大！全てのマルチラウンドコンテンツ（コンクエスト、スペシャルストーリー）でリザーブとして使用可能、ただしシングルラウンドでは不可。85に達することができればPvPオーブの価値あり（その前は効果なし）- そうでなければワールドボスやPvPのようなシングルラウンドコンテンツ用にオーブを節約
 - :card[661] (Lv. 85) - 全タイプ
 - :card[600] (Lv. 77) - 4つ星だがPvPオーブの価値があるかも、40%クリティカルダメージは大きなブースト
 
@@ -388,15 +388,15 @@ SEコストをどこまで最適化するかは自分で決められますが、
 | より多くの生存が必要 | より耐久力のあるカードを使うかDRアシストを追加 |
 | 壁にぶつかった | ボスをギルドにシェアして助けを求めるか、自分のカードを追加 |
 | カードドロップフロア（2倍HP） | HPスパイク用に一時的にカードを追加検討 |
-| 後半タワー | 最強のフルチームを使用（最大4枚 + フレンド） |
+| 後半コンクエスト | 最強のフルチームを使用（最大4枚 + フレンド） |
 
 </div>
 
 <div data-lang="ko">
 
-이 가이드는 신규(또는 비교적 새로운) 플레이어를 위한 타워 레이드 이벤트 가이드입니다. 타워 이벤트는 길드원에게 도움을 요청할 수 있어 신규 플레이어에게 매우 좋습니다 - 친절한 길드를 찾으면 도움을 받아 여러 5성 카드를 얻을 가능성이 높습니다.
+이 가이드는 신규(또는 비교적 새로운) 플레이어를 위한 컨퀘스트 이벤트 가이드입니다. 컨퀘스트는 길드원에게 도움을 요청할 수 있어 신규 플레이어에게 매우 좋습니다 - 친절한 길드를 찾으면 도움을 받아 여러 5성 카드를 얻을 가능성이 높습니다.
 
-타워 이벤트에서는 일반 콘텐츠를 플레이하거나 SE를 사용해 보스를 찾으면 레이드 보스에게 공격받습니다.
+컨퀘스트에서는 일반 콘텐츠를 플레이하거나 SE를 사용해 보스를 찾으면 레이드 보스에게 공격받습니다.
 
 ---
 
@@ -417,9 +417,9 @@ SEコストをどこまで最適化するかは自分で決められますが、
 
 ---
 
-## 타워 이벤트 특징
+## 컨퀘스트 특징
 
-타워 이벤트는:
+컨퀘스트는:
 
 - **다중 라운드**이므로 거의 모든 스킬과 어빌리티가 유용:
   - *최종 웨이브 어빌리티*는 전투의 마지막 웨이브에서 발동
@@ -428,7 +428,7 @@ SEコストをどこまで最適化するかは自分で決められますが、
 - **무속성**이므로 속성에 관계없이 가장 강한 팀 사용
 - **가변 SE 비용** (카드에 따라 4-18 SE)
 - **계속 가능** - 타임아웃되면 SE+1로 계속 데미지를 주거나 길드에 보스를 공유해 도움 요청 가능. 예: 팀이 18 SE면 19 SE로 같은 데미지를 다시 줄 수 있음.
-- **XP와 드롭률 부스트는 효과 없음** - 스토리 이벤트용으로 아껴두세요!
+- **XP와 드롭률 부스트는 효과 없음** - 스페셜 스토리용으로 아껴두세요!
 
 ### SE 비용 계산
 
@@ -545,7 +545,7 @@ SE 비용 = 본인의 1-4장 카드 성급 합계 (최소 4, 최대 18)
 - :card[2373] (Lv. 75) - 판타즈마 전용
 - :card[2191] (Lv. 75) - 아니마 전용
 - :card[1321] (Lv. 75+) - 디비나
-- :card[744] (Lv. 85) - 모든 타입, 라운드당 15% 데미지는 거대! 모든 다중 라운드 콘텐츠(타워 레이드, 스토리)에서 리저브로 사용 가능, 단일 라운드에서는 불가. 85에 도달할 수 있으면 PvP 오브 가치 있음 (그 전에는 효과 없음) - 아니면 월드 보스나 PvP 같은 단일 라운드 콘텐츠용으로 오브 아끼기
+- :card[744] (Lv. 85) - 모든 타입, 라운드당 15% 데미지는 거대! 모든 다중 라운드 콘텐츠(컨퀘스트, 스페셜 스토리)에서 리저브로 사용 가능, 단일 라운드에서는 불가. 85에 도달할 수 있으면 PvP 오브 가치 있음 (그 전에는 효과 없음) - 아니면 월드 보스나 PvP 같은 단일 라운드 콘텐츠용으로 오브 아끼기
 - :card[661] (Lv. 85) - 모든 타입
 - :card[600] (Lv. 77) - 4성이지만 PvP 오브 가치 있을 수 있음, 40% 크리티컬 데미지는 큰 부스트
 
@@ -582,15 +582,15 @@ SE 비용을 얼마나 최적화할지는 본인이 결정할 수 있지만, 대
 | 더 많은 생존이 필요 | 더 탱키한 카드를 사용하거나 DR 어시스트 추가 |
 | 막혔을 때 | 보스를 길드에 공유해 도움 요청, 또는 본인 카드 추가 |
 | 카드 드롭 층 (2배 HP) | HP 스파이크용으로 일시적으로 카드 추가 고려 |
-| 후반 타워 | 가장 강한 풀팀 사용 (최대 4장 + 친구) |
+| 후반 컨퀘스트 | 가장 강한 풀팀 사용 (최대 4장 + 친구) |
 
 </div>
 
 <div data-lang="zh-cn">
 
-这是一份面向新手（或相对较新的）玩家的塔楼副本活动指南。塔楼活动对新玩家非常友好，因为你可以向公会成员寻求帮助——如果你找到一个友善的公会，很有可能在帮助下获得多张5星卡牌。
+这是一份面向新手（或相对较新的）玩家的征服活动指南。征服对新玩家非常友好，因为你可以向公会成员寻求帮助——如果你找到一个友善的公会，很有可能在帮助下获得多张5星卡牌。
 
-在塔楼活动中，你可以通过进行普通内容或使用SE搜索BOSS来遇到副本BOSS。
+在征服中，你可以通过进行普通内容或使用SE搜索BOSS来遇到副本BOSS。
 
 ---
 
@@ -611,9 +611,9 @@ SE 비용을 얼마나 최적화할지는 본인이 결정할 수 있지만, 대
 
 ---
 
-## 塔楼活动特点
+## 征服特点
 
-塔楼活动的特点：
+征服的特点：
 
 - **多回合**，因此几乎所有技能和能力都有用：
   - *最终波次能力* 在战斗的最后一波激活
@@ -740,7 +740,7 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小4，最大18）
 - :card[2373] (Lv. 75) - 仅限幻灵
 - :card[2191] (Lv. 75) - 仅限兽灵
 - :card[1321] (Lv. 75+) - 神灵
-- :card[744] (Lv. 85) - 任何属性，每回合15%伤害非常巨大！可用于所有多回合内容（塔楼副本、故事）作为后备，但不能用于单回合。如果你能达到85级值得使用PvP宝珠（之前无效）——否则为世界BOSS或PvP等单回合内容节省宝珠
+- :card[744] (Lv. 85) - 任何属性，每回合15%伤害非常巨大！可用于所有多回合内容（征服、特别剧情）作为后备，但不能用于单回合。如果你能达到85级值得使用PvP宝珠（之前无效）——否则为世界BOSS或PvP等单回合内容节省宝珠
 - :card[661] (Lv. 85) - 任何属性
 - :card[600] (Lv. 77) - 4星但可能值得使用PvP宝珠，40%暴击伤害是很大的加成
 
@@ -777,15 +777,15 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小4，最大18）
 | 需要更多生存 | 使用更耐久的卡或添加减伤辅助 |
 | 遇到瓶颈 | 将BOSS分享给公会寻求帮助，或添加更多你自己的卡 |
 | 掉落卡牌楼层（2倍血量）| 考虑临时添加卡牌应对血量峰值 |
-| 后期塔楼 | 使用你最强的完整队伍（最多4张卡 + 好友）|
+| 后期征服 | 使用你最强的完整队伍（最多4张卡 + 好友）|
 
 </div>
 
 <div data-lang="zh-tw">
 
-這是一份面向新手（或相對較新的）玩家的塔樓副本活動指南。塔樓活動對新玩家非常友好，因為你可以向公會成員尋求幫助——如果你找到一個友善的公會，很有可能在幫助下獲得多張5星卡牌。
+這是一份面向新手（或相對較新的）玩家的征服活動指南。征服對新玩家非常友好，因為你可以向公會成員尋求幫助——如果你找到一個友善的公會，很有可能在幫助下獲得多張5星卡牌。
 
-在塔樓活動中，你可以透過進行普通內容或使用SE搜索BOSS來遇到副本BOSS。
+在征服中，你可以透過進行普通內容或使用SE搜索BOSS來遇到副本BOSS。
 
 ---
 
@@ -806,9 +806,9 @@ SE消耗 = 你的1-4张卡牌的星级总和（最小4，最大18）
 
 ---
 
-## 塔樓活動特點
+## 征服特點
 
-塔樓活動的特點：
+征服的特點：
 
 - **多回合**，因此幾乎所有技能和能力都有用：
   - *最終波次能力* 在戰鬥的最後一波激活
@@ -934,7 +934,7 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小4，最大18）
 - :card[2373] (Lv. 75) - 僅限幻靈
 - :card[2191] (Lv. 75) - 僅限獸靈
 - :card[1321] (Lv. 75+) - 神靈
-- :card[744] (Lv. 85) - 任何屬性，每回合15%傷害非常巨大！可用於所有多回合內容（塔樓副本、故事）作為後備，但不能用於單回合。如果你能達到85級值得使用PvP寶珠（之前無效）——否則為世界BOSS或PvP等單回合內容節省寶珠
+- :card[744] (Lv. 85) - 任何屬性，每回合15%傷害非常巨大！可用於所有多回合內容（征服、特别剧情）作為後備，但不能用於單回合。如果你能達到85級值得使用PvP寶珠（之前無效）——否則為世界BOSS或PvP等單回合內容節省寶珠
 - :card[661] (Lv. 85) - 任何屬性
 - :card[600] (Lv. 77) - 4星但可能值得使用PvP寶珠，40%暴擊傷害是很大的加成
 
@@ -971,7 +971,7 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小4，最大18）
 | 需要更多生存 | 使用更耐久的卡或添加減傷輔助 |
 | 遇到瓶頸 | 將BOSS分享給公會尋求幫助，或添加更多你自己的卡 |
 | 掉落卡牌樓層（2倍血量）| 考慮臨時添加卡牌應對血量峰值 |
-| 後期塔樓 | 使用你最強的完整隊伍（最多4張卡 + 好友）|
+| 後期征服 | 使用你最強的完整隊伍（最多4張卡 + 好友）|
 
 <!-- markdownlint-enable MD024 -->
 
@@ -979,9 +979,9 @@ SE消耗 = 你的1-4張卡牌的星級總和（最小4，最大18）
 
 <div data-lang="es">
 
-Esta es una guía de eventos de Torre Raid para jugadores nuevos (o relativamente nuevos). Los eventos de torre son muy buenos para jugadores nuevos porque puedes pedir ayuda a los miembros del gremio - si encuentras un gremio amable, hay buenas posibilidades de obtener varias cartas de 5 estrellas con ayuda.
+Esta es una guía de eventos de Torre Raid para jugadores nuevos (o relativamente nuevos). Los eventos de Conquista son muy buenos para jugadores nuevos porque puedes pedir ayuda a los miembros del gremio - si encuentras un gremio amable, hay buenas posibilidades de obtener varias cartas de 5 estrellas con ayuda.
 
-En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal o al buscar un jefe usando SE.
+En los eventos de Conquista, te ataca un jefe raid ya sea al hacer contenido normal o al buscar un jefe usando SE.
 
 ---
 
@@ -1004,7 +1004,7 @@ En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal 
 
 ## Características del Evento de Torre
 
-Los eventos de torre son:
+Los eventos de Conquista son:
 
 - **Múltiples rondas**, así que casi todas las habilidades y habilidades son útiles:
   - *Habilidades de oleada final* se activan en la última oleada del combate
@@ -1013,7 +1013,7 @@ Los eventos de torre son:
 - **Sin tipo**, así que usa tu equipo más fuerte sin importar el elemento
 - **Costos de SE variables** (4-18 SE basado en tus cartas)
 - **Continuable** - si se acaba el tiempo, puedes continuar haciendo daño por costo de SE +1, o compartir el jefe con tu gremio para pedir ayuda. Por ejemplo, si tu equipo cuesta 18 SE, puedes hacer la misma cantidad de daño de nuevo por 19 SE.
-- **Los aumentos de XP y tasa de drop no ayudan** - ¡guárdalos para eventos de Historia!
+- **Los aumentos de XP y tasa de drop no ayudan** - ¡guárdalos para eventos de Historia Especial!
 
 ### Cálculo de Costo de SE
 
@@ -1130,7 +1130,7 @@ La mayoría de tus reservas probablemente no vendrán de subasta, así que revis
 - :card[2373] (Nv. 75) - Solo Phantasma
 - :card[2191] (Nv. 75) - Solo Anima
 - :card[1321] (Nv. 75+) - Divina
-- :card[744] (Nv. 85) - Cualquier tipo, ¡15% de daño por ronda es enorme! Usable en todo contenido multi-ronda (torre raid, historia) como reserva, pero no en ronda única. Vale la pena usar orbes de PvP si puedes llegar a 85 (no es beneficioso antes de eso) - de lo contrario guarda orbes para contenido de ronda única como World Boss o PvP
+- :card[744] (Nv. 85) - Cualquier tipo, ¡15% de daño por ronda es enorme! Usable en todo contenido multi-ronda (Conquista, Historia Especial) como reserva, pero no en ronda única. Vale la pena usar orbes de PvP si puedes llegar a 85 (no es beneficioso antes de eso) - de lo contrario guarda orbes para contenido de ronda única como World Boss o PvP
 - :card[661] (Nv. 85) - Cualquier tipo
 - :card[600] (Nv. 77) - 4 estrellas pero podría valer la pena usar orbes de PvP, 40% de daño crítico es un gran aumento
 

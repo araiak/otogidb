@@ -1,17 +1,17 @@
 ---
 title: "Ataque de los Dioses Malignos: Análisis de Cartas"
-description: "Vista previa del tower raid Ataque de los Dioses Malignos con Nyarlathotep, recompensas de ranking y poderosas cartas gacha"
+description: "Vista previa del Conquest Ataque de los Dioses Malignos con Nyarlathotep, recompensas de ranking y poderosas cartas gacha"
 date: "2026-01-23"
 author: "Araiak"
 tags: ["análisis", "gacha", "intercambio", "eventos"]
 locale: "es"
 ---
 
-Recibimos datos de ranking pero no de torre para Ataque de los Dioses Malignos. Nota: esto podría cambiar antes del inicio del evento. Para consejos generales de tower raid, consulta la [Guía de Tower Raid](/es/blog/tower-raid-guide).
+Recibimos datos de ranking pero no de torre para Ataque de los Dioses Malignos. Nota: esto podría cambiar antes del inicio del evento. Para consejos generales de Conquest, consulta la [Guía de Conquest](/es/blog/tower-raid-guide).
 
 ---
 
-## Drop de Torre
+## Drop de Conquista
 
 :card[1398] no está confirmado pero es el único sin fuente establecida, así que no sería sorpresa. Similar a :card[1489] pero intercambia reducción de daño por aumento de daño propio. Debería estar bien en la mayoría del contenido con un buen sanador. **Fácil de obtener para jugadores nuevos.**
 
@@ -55,7 +55,7 @@ El gacha de la segunda mitad va a drenar los invokers y mochi de todos.
 
 ## Resumen
 
-- :card[1398] (Torre) - **Fácil** para nuevos jugadores empezando Divina
+- :card[1398] (Conquista) - **Fácil** para nuevos jugadores empezando Divina
 - :card[1399] (Ranking Mitad) - **Baja prioridad** - consíguelo barato
 - :card[1402] (Ranking General) - **No te esfuerces** - consíguelo si estás cerca del corte
 - :card[1444] (Gacha) - **Muy recomendado** - invoker + mochi si tienes recursos

@@ -16,7 +16,7 @@ I'll do a really quick one here, generally these cards have been power crept and
 
 :card[383] is one of the top 5 Phantasma melee, and could be good for new players. At level 70, you get a decent reserve ability, and even her self buff for final wave only requires two copies. Her effective health is a bit low as she is attack heavy, so you need a good healer or to play a second more tanky melee. You get a side benefit you can move to reserve when you replace her, so she has some medium longevity in a new player's team as 30% crit damage to your two highest attack is not great, but it's not bad either.
 
-A good replacement is :card[738] or :card[734], but those are probably still 3 months out in Auction and probably are moderately expensive. On the plus side :card[738] is probably keeping her nice and cheap since Cao Cao owners aren't likely to buy her. Stock is fairly low though. Is that worth money to you, I don't know, but she's not that expensive if you are willing to spend or have 2000 jewels from level ups and story rewards burning a hole in your pocket. This is a pretty good choice if you can't wait for the 3rd Anniversary auction in probably 3 months. (We should have Dolls in January, Demon Hunter in Feb, and 3rd in March if my memory serves me). **Good pickup for new Phantasma players who can't wait.**
+A good replacement is :card[738] or :card[734], but those are probably still 3 months out in Auction and probably are moderately expensive. On the plus side :card[738] is probably keeping her nice and cheap since Cao Cao owners aren't likely to buy her. Stock is fairly low though. Is that worth money to you, I don't know, but she's not that expensive if you are willing to spend or have 2000 jewels from level ups and Special Story rewards burning a hole in your pocket. This is a pretty good choice if you can't wait for the 3rd Anniversary auction in probably 3 months. (We should have Dolls in January, Demon Hunter in Feb, and 3rd in March if my memory serves me). **Good pickup for new Phantasma players who can't wait.**
 
 :card[614] is a minor XP booster with the kicker of increasing the base stats of your attached card. This isn't as good as say :card[580] or :card[751], but if you are looking for a minor offensive boost to pair with a minor XP boost that's what this card is. At 4 copies for the minor offensive boost this card looks expensive even at 2000 jewels. **Pass for most players.**
 
@@ -46,7 +46,7 @@ A good replacement is :card[738] or :card[734], but those are probably still 3 m
 
 :card[383]はファンタズマの近接キャラトップ5の1枚で、新規プレイヤーに良いかもしれません。レベル70で使えるリザーブアビリティが手に入り、最終ウェーブ用の自己バフも2枚で解放できます。攻撃寄りのステータスなので実効HPは低めで、良いヒーラーか、もう1体タンク寄りの近接キャラが必要です。後で入れ替える時にリザーブに移せるという利点もあり、最高攻撃力2体への30%クリダメは最高ではないですが悪くもなく、新規プレイヤーのチームである程度長く使えます。
 
-より良い代替は:card[738]や:card[734]ですが、オークションに来るのはおそらく3ヶ月後で、それなりに高価でしょう。良い点として:card[738]の存在がこのカードを安く保っていますが、多くのファンタズマプレイヤーが既に持っているため在庫は少なめです。それがお金を出す価値があるかは分かりませんが、課金する気があるか、レベルアップやストーリー報酬で2000ジュエルが余っているなら高くはありません。3周年オークション（おそらく3ヶ月後）まで待てないなら良い選択です。（1月にドールズ、2月にデーモンハンター、3月に3周年が来るはずです）。**待てない新規ファンタズマプレイヤーには良い選択。**
+より良い代替は:card[738]や:card[734]ですが、オークションに来るのはおそらく3ヶ月後で、それなりに高価でしょう。良い点として:card[738]の存在がこのカードを安く保っていますが、多くのファンタズマプレイヤーが既に持っているため在庫は少なめです。それがお金を出す価値があるかは分かりませんが、課金する気があるか、レベルアップやスペシャルストーリー報酬で2000ジュエルが余っているなら高くはありません。3周年オークション（おそらく3ヶ月後）まで待てないなら良い選択です。（1月にドールズ、2月にデーモンハンター、3月に3周年が来るはずです）。**待てない新規ファンタズマプレイヤーには良い選択。**
 
 :card[614]は装備カードの基礎ステータスを上げるおまけ付きの経験値ブースターです。:card[580]や:card[751]ほど良くはないですが、軽い攻撃力アップと経験値ブーストの組み合わせを求めているならこのカードです。軽い攻撃力アップに4枚必要なので、2000ジュエルでも高く感じます。**ほとんどのプレイヤーはスルーで。**
 
@@ -76,7 +76,7 @@ A good replacement is :card[738] or :card[734], but those are probably still 3 m
 
 :card[383]는 판타즈마 근접 캐릭터 중 탑 5에 드는 카드로, 신규 플레이어에게 좋을 수 있습니다. 레벨 70에서 괜찮은 리저브 어빌리티를 얻고, 파이널 웨이브용 자기 버프도 2장이면 해금됩니다. 공격 위주 스탯이라 실효 HP가 낮은 편이므로, 좋은 힐러나 탱킹이 가능한 근접 캐릭터가 필요합니다. 나중에 교체할 때 리저브로 옮길 수 있다는 장점도 있고, 최고 공격력 2명에게 30% 크리티컬 데미지는 최고는 아니지만 나쁘지도 않아 신규 플레이어 팀에서 어느 정도 오래 쓸 수 있습니다.
 
-더 좋은 대체 카드는 :card[738]이나 :card[734]이지만, 경매에 나오려면 아마 3개월은 걸리고 가격도 적당히 비쌀 겁니다. 좋은 점은 :card[738] 덕분에 이 카드가 저렴하게 유지되고 있지만, 많은 판타즈마 플레이어들이 이미 가지고 있어 재고가 적습니다. 돈을 쓸 가치가 있는지는 모르겠지만, 과금할 의향이 있거나 레벨업과 스토리 보상으로 2000 쥬얼이 남아있다면 비싸지 않습니다. 3주년 경매(아마 3개월 후)까지 기다릴 수 없다면 좋은 선택입니다. (1월에 Dolls, 2월에 Demon Hunter, 3월에 3주년이 올 겁니다). **기다릴 수 없는 신규 판타즈마 플레이어에게 좋은 선택.**
+더 좋은 대체 카드는 :card[738]이나 :card[734]이지만, 경매에 나오려면 아마 3개월은 걸리고 가격도 적당히 비쌀 겁니다. 좋은 점은 :card[738] 덕분에 이 카드가 저렴하게 유지되고 있지만, 많은 판타즈마 플레이어들이 이미 가지고 있어 재고가 적습니다. 돈을 쓸 가치가 있는지는 모르겠지만, 과금할 의향이 있거나 레벨업과 스페셜 스토리 보상으로 2000 쥬얼이 남아있다면 비싸지 않습니다. 3주년 경매(아마 3개월 후)까지 기다릴 수 없다면 좋은 선택입니다. (1월에 Dolls, 2월에 Demon Hunter, 3월에 3주년이 올 겁니다). **기다릴 수 없는 신규 판타즈마 플레이어에게 좋은 선택.**
 
 :card[614]는 장착 카드의 기본 스탯을 올려주는 보너스가 있는 경험치 부스터입니다. :card[580]이나 :card[751]만큼 좋지는 않지만, 약간의 공격력 상승과 경험치 부스트를 원한다면 이 카드입니다. 약간의 공격력 상승에 4장이 필요해서 2000 쥬얼도 비싸 보입니다. **대부분의 플레이어는 패스.**
 
@@ -106,7 +106,7 @@ A good replacement is :card[738] or :card[734], but those are probably still 3 m
 
 :card[383]是幻灵系前5的近战角色之一，对新玩家来说可能不错。70级时你能获得一个不错的后备技能，而且最终波次的自我增益只需要两张。由于她攻击力较高，有效生命值偏低，所以你需要一个好的奶妈或者第二个更肉的近战。你还有一个好处是替换她时可以移到后备位，所以在新玩家队伍中有一定的持久性，因为给最高攻击力的两个角色30%暴击伤害虽然不是很好，但也不差。
 
-更好的替代品是:card[738]或:card[734]，但它们可能还要3个月才会进入拍卖，而且价格可能适中偏贵。好的一面是:card[738]可能让她保持便宜，但库存相当低，因为很多幻灵玩家已经有那张卡了。这是否值得花钱，我不知道，但如果你愿意花钱或者有升级和剧情奖励的2000宝石烧包的话，她不贵。如果你等不及大概3个月后的3周年拍卖，这是一个不错的选择。（应该是1月人偶、2月恶魔猎人、3月3周年，如果我没记错的话）。**对于等不及的新幻灵玩家是个好选择。**
+更好的替代品是:card[738]或:card[734]，但它们可能还要3个月才会进入拍卖，而且价格可能适中偏贵。好的一面是:card[738]可能让她保持便宜，但库存相当低，因为很多幻灵玩家已经有那张卡了。这是否值得花钱，我不知道，但如果你愿意花钱或者有升级和特别剧情奖励的2000宝石烧包的话，她不贵。如果你等不及大概3个月后的3周年拍卖，这是一个不错的选择。（应该是1月人偶、2月恶魔猎人、3月3周年，如果我没记错的话）。**对于等不及的新幻灵玩家是个好选择。**
 
 :card[614]是一个经验值加成卡，附带增加装备卡基础属性的效果。不如:card[580]或:card[751]好，但如果你想要一个小幅攻击提升配合小幅经验值提升，这就是这张卡的作用。4张才能获得小幅攻击提升，即使2000宝石也显得贵。**大多数玩家可以跳过。**
 
@@ -136,7 +136,7 @@ A good replacement is :card[738] or :card[734], but those are probably still 3 m
 
 :card[383]是幻靈系前5的近戰角色之一，對新玩家來說可能不錯。70級時你能獲得一個不錯的後備技能，而且最終波次的自我增益只需要兩張。由於她攻擊力較高，有效生命值偏低，所以你需要一個好的奶媽或者第二個更肉的近戰。你還有一個好處是替換她時可以移到後備位，所以在新玩家隊伍中有一定的持久性，因為給最高攻擊力的兩個角色30%暴擊傷害雖然不是很好，但也不差。
 
-更好的替代品是:card[738]或:card[734]，但它們可能還要3個月才會進入拍賣，而且價格可能適中偏貴。好的一面是:card[738]可能讓她保持便宜，但庫存相當低，因為很多幻靈玩家已經有那張卡了。這是否值得花錢，我不知道，但如果你願意花錢或者有升級和劇情獎勵的2000寶石燒包的話，她不貴。如果你等不及大概3個月後的3週年拍賣，這是一個不錯的選擇。（應該是1月人偶、2月惡魔獵人、3月3週年，如果我沒記錯的話）。**對於等不及的新幻靈玩家是個好選擇。**
+更好的替代品是:card[738]或:card[734]，但它們可能還要3個月才會進入拍賣，而且價格可能適中偏貴。好的一面是:card[738]可能讓她保持便宜，但庫存相當低，因為很多幻靈玩家已經有那張卡了。這是否值得花錢，我不知道，但如果你願意花錢或者有升級和特別劇情獎勵的2000寶石燒包的話，她不貴。如果你等不及大概3個月後的3週年拍賣，這是一個不錯的選擇。（應該是1月人偶、2月惡魔獵人、3月3週年，如果我沒記錯的話）。**對於等不及的新幻靈玩家是個好選擇。**
 
 :card[614]是一個經驗值加成卡，附帶增加裝備卡基礎屬性的效果。不如:card[580]或:card[751]好，但如果你想要一個小幅攻擊提升配合小幅經驗值提升，這就是這張卡的作用。4張才能獲得小幅攻擊提升，即使2000寶石也顯得貴。**大多數玩家可以跳過。**
 
@@ -166,7 +166,7 @@ Seré breve aquí, en general estas cartas han quedado obsoletas por el power cr
 
 :card[383] es una de las 5 mejores melee de Phantasma, y podría ser buena para jugadores nuevos. En el nivel 70, obtienes una habilidad de reserva decente, e incluso su buff propio para la oleada final solo requiere dos copias. Su salud efectiva es algo baja ya que tiene mucho ataque, así que necesitas un buen sanador o jugar con un segundo melee más tanque. Tienes el beneficio adicional de poder moverla a reserva cuando la reemplaces, así que tiene una longevidad media en el equipo de un jugador nuevo ya que 30% de daño crítico a tus dos mayores ataques no es genial, pero tampoco está mal.
 
-Un buen reemplazo es :card[738] o :card[734], pero probablemente faltan unos 3 meses para que lleguen a la Subasta y probablemente serán moderadamente caras. Por el lado positivo, :card[738] probablemente la mantiene barata, pero el stock es bastante bajo ya que muchos jugadores de Phantasma ya tienen esa carta. ¿Vale la pena gastar dinero? No lo sé, pero no es cara si estás dispuesto a gastar o tienes 2000 joyas de subidas de nivel y recompensas de historia quemándote el bolsillo. Es una buena elección si no puedes esperar a la subasta del 3er Aniversario en probablemente 3 meses. (Deberíamos tener Dolls en enero, Demon Hunter en febrero, y 3er Aniversario en marzo si mi memoria no falla). **Buena opción para nuevos jugadores de Phantasma que no pueden esperar.**
+Un buen reemplazo es :card[738] o :card[734], pero probablemente faltan unos 3 meses para que lleguen a la Subasta y probablemente serán moderadamente caras. Por el lado positivo, :card[738] probablemente la mantiene barata, pero el stock es bastante bajo ya que muchos jugadores de Phantasma ya tienen esa carta. ¿Vale la pena gastar dinero? No lo sé, pero no es cara si estás dispuesto a gastar o tienes 2000 joyas de subidas de nivel y recompensas de Historia Especial quemándote el bolsillo. Es una buena elección si no puedes esperar a la subasta del 3er Aniversario en probablemente 3 meses. (Deberíamos tener Dolls en enero, Demon Hunter en febrero, y 3er Aniversario en marzo si mi memoria no falla). **Buena opción para nuevos jugadores de Phantasma que no pueden esperar.**
 
 :card[614] es un potenciador menor de XP con el bonus de aumentar las estadísticas base de tu carta equipada. No es tan bueno como :card[580] o :card[751], pero si buscas un pequeño impulso ofensivo junto con un pequeño impulso de XP, esta es tu carta. Con 4 copias para el impulso ofensivo menor, esta carta parece cara incluso a 2000 joyas. **Pasa para la mayoría de jugadores.**
 

@@ -1,15 +1,15 @@
 ---
-title: "Guía de Eventos de Historia en Otogi Spirit Agents: Estrategias de Farmeo y XP"
-description: "Guía completa de eventos de Historia en Otogi Spirit Agents. Aprende la eficiencia del farmeo de moneda, estrategias de aumento de XP y qué cartas buscar en helpers."
+title: "Guía de Historia Especial en Otogi Spirit Agents: Estrategias de Farmeo y XP"
+description: "Guía completa de eventos de Historia Especial en Otogi Spirit Agents. Aprende la eficiencia del farmeo de moneda, estrategias de aumento de XP y qué cartas buscar en helpers."
 date: "2025-12-23"
 author: "Araiak"
 tags: ["guía", "eventos"]
 locale: "es"
 ---
 
-Esta es una guía de eventos de Historia para jugadores nuevos (o relativamente nuevos). Desafortunadamente para jugadores muy nuevos, los eventos de Historia tienden a ser muy difíciles. No te preocupes si te atascas y necesitas enfocarte en construir tu equipo.
+Esta es una guía de eventos de Historia Especial para jugadores nuevos (o relativamente nuevos). Desafortunadamente para jugadores muy nuevos, los eventos de Historia Especial tienden a ser muy difíciles. No te preocupes si te atascas y necesitas enfocarte en construir tu equipo.
 
-En los eventos de historia limpias capítulos para obtener una sola copia de una carta, desbloqueando la carta en el intercambio. El intercambio está en la página principal del evento - las cartas se compran con moneda específica del evento, ¡así que gástala toda antes de que termine el evento! Los costos aumentan progresivamente por cada copia de carta. Por eso las cartas de historia son típicamente más caras en Subasta.
+En los eventos de historia limpias capítulos para obtener una sola copia de una carta, desbloqueando la carta en el intercambio. El intercambio está en la página principal del evento - las cartas se compran con moneda específica del evento, ¡así que gástala toda antes de que termine el evento! Los costos aumentan progresivamente por cada copia de carta. Por eso las cartas de Historia Especial son típicamente más caras en Subasta.
 
 ### ¿Cuántas Copias?
 
@@ -22,9 +22,9 @@ Una carta de 5 estrellas comienza en nivel 70. Cada copia adicional añade 5 niv
 
 ---
 
-## Características de Eventos de Historia
+## Características de Eventos de Historia Especial
 
-Los eventos de Historia son:
+Los eventos de Historia Especial son:
 
 - **Múltiples rondas**, por lo que casi todas las habilidades y capacidades son útiles:
   - *Habilidades de última ola* se activan en la última ola de combate (ej. ola 5 de 5)
