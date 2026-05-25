@@ -1,0 +1,58 @@
+{
+  "version": "cbec7f5",
+  "version_date": "2026-05-25",
+  "previous_version": "082fbab",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 2
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "747",
+      "name": "Yagyu no Odachi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634663/otogi/cards_hd/100747_hd_f9434063924fda60b8e54e98068c7702.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0.event_name",
+          "field_label": "Event Name",
+          "old": "Guild Conquest",
+          "new": "Guild Conquest ーYagyu no Odachiー",
+          "display": "Event Name: Guild Conquest → Guild Conquest ーYagyu no Od..."
+        }
+      ]
+    },
+    {
+      "id": "1671",
+      "name": "Kuzuryu",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779332326/otogi/cards_hd/101671_hd_925e0a722b9dc3b8a134f491fb15305f.png",
+      "changes": [
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 3,
+          "new": 2,
+          "display": "Attribute: 3 → 2 (-1)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monster": {
+      "old_count": 967,
+      "new_count": 967,
+      "diff": 0
+    },
+    "raidBoss": {
+      "old_count": 200,
+      "new_count": 200,
+      "diff": 0
+    }
+  }
+}
