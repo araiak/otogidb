@@ -14,7 +14,7 @@ April auction is Greatest Show On Earth. Our re-run predictions have missed so f
 
 ## Event Cards
 
-:card[2189] is the event Tower card. She's a full team damage buffer with a small HP boost. There might be some situational uses for the HP boost, but full team damage buffs in Divina are too common, and no offensive abilities makes her not particularly strong overall. The most notable thing here is that she is a ranged Divina attack bond, meaning she gives 7.5% attack to ranged Divina carries. Grab 2 copies for that alone. Newer players can consider picking her up if your team lacks tankiness and you don't have stronger options yet. **Worth 2 copies for the attack bond; newer players can use her as budget tank support until better options arrive.**
+:card[2189] is the event Conquest drop card. She's a full team damage buffer with a small HP boost. There might be some situational uses for the HP boost, but full team damage buffs in Divina are too common, and no offensive abilities makes her not particularly strong overall. The most notable thing here is that she is a ranged Divina attack bond, meaning she gives 7.5% attack to ranged Divina carries. Grab 2 copies for that alone. Newer players can consider picking her up if your team lacks tankiness and you don't have stronger options yet. **Worth 2 copies for the attack bond; newer players can use her as budget tank support until better options arrive.**
 
 ---
 
@@ -93,7 +93,7 @@ Second Anniversary Rerun:
 
 ## イベントカード
 
-:card[2189]はイベントのタワーカードです。チーム全体へのダメージバッファーと小さなHPブーストを持ちます。HPブーストには状況によっては使い道がありますが、Divinaのチーム全体ダメージバフは選択肢が多く、攻撃的なアビリティがない点もあり、総合的に特別強いとは言えません。最も注目すべき点は、遠距離Divina攻撃ボンドである点で、遠距離Divinaキャリーに7.5%の攻撃力を提供します。それだけのために2枚手に入れる価値があります。チームのタンク性能が不足していて、まだ強力な選択肢がない新しいプレイヤーは、より良い選択肢が揃うまでの繋ぎとして検討してみてください。**攻撃ボンドのために2枚取得する価値あり。新規プレイヤーはより良い選択肢が揃うまでのタンク補佐として活用可能。**
+:card[2189]はイベントのコンクエストカードです。チーム全体へのダメージバッファーと小さなHPブーストを持ちます。HPブーストには状況によっては使い道がありますが、Divinaのチーム全体ダメージバフは選択肢が多く、攻撃的なアビリティがない点もあり、総合的に特別強いとは言えません。最も注目すべき点は、遠距離Divina攻撃ボンドである点で、遠距離Divinaキャリーに7.5%の攻撃力を提供します。それだけのために2枚手に入れる価値があります。チームのタンク性能が不足していて、まだ強力な選択肢がない新しいプレイヤーは、より良い選択肢が揃うまでの繋ぎとして検討してみてください。**攻撃ボンドのために2枚取得する価値あり。新規プレイヤーはより良い選択肢が揃うまでのタンク補佐として活用可能。**
 
 ---
 

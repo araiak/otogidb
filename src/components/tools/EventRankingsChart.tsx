@@ -1,7 +1,7 @@
 /**
  * Event Rankings Chart
  * Interactive chart showing score cutoffs per rank tier across events over time.
- * Events are split into Tower (billions) and Story (millions) types with separate charts.
+ * Events are split into Conquest (billions) and Special Story (millions) types with separate charts.
  */
 
 import { useState, useEffect, useMemo } from 'react';
@@ -142,7 +142,7 @@ function CustomXTick({
   );
 }
 
-// --- Sub-chart (Tower or Story) ---
+// --- Sub-chart (Conquest or Special Story) ---
 
 function RankingSubChart({
   title,
@@ -451,7 +451,7 @@ export function EventRankingsChart() {
       <div className="mb-8">
         <h1 className="text-2xl md:text-3xl font-bold mb-2">Event Ranking Cutoffs</h1>
         <p className="text-secondary">
-          Score thresholds per rank tier. Tower events (billions) and Story events (millions) use separate charts with independent Y-axis scales.
+          Score thresholds per rank tier. Conquest events (billions) and Special Story events (millions) use separate charts with independent Y-axis scales.
         </p>
       </div>
 
@@ -477,14 +477,14 @@ export function EventRankingsChart() {
             {!collapsed && (
               <>
                 <RankingSubChart
-                  title="Tower Events"
+                  title="Conquest Events"
                   subtitle="Scores in billions · log scale"
                   events={towerForPeriod}
                   period={period}
                   eventMeta={eventMeta}
                 />
                 <RankingSubChart
-                  title="Story Events"
+                  title="Special Story Events"
                   subtitle="Scores in millions · log scale"
                   events={storyForPeriod}
                   period={period}

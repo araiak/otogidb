@@ -605,21 +605,29 @@ function DpsStatComparison({ member }: StatComparisonProps) {
   const dpsDmgGain = dpsDmg - currentDps;
   const dpsDmgPercent = (dpsDmgGain / currentDps) * 100;
 
-  // Calculate DPS with +10% attack speed
-  // Use engine's piecewise cap logic: apply +10% to speed bonus, then recompute
-  // Engine formula: baseInterval = (speed + 750) / 900
-  // If speedBonus >= 0: effectiveSpeed = baseInterval * (1 - speedBonus / 2)
-  const baseSpeed = member.card?.stats.speed ?? 100; // Raw speed stat from card
+  // Calculate DPS with +10% attack speed bonus.
+  // Matches the engine formula in team-calc.ts:992-1001 and damage-calc.ts:200-212:
+  //   baseInterval = (speed + 750) / 900
+  //   buff:   newInterval = baseInterval * (1 - min(bonus, +cap) / 2)
+  //   debuff: newInterval = baseInterval * (1 + |max(bonus, -cap)|)
+  //   attackInterval = max(newInterval, 0.5)
+  //
+  // NOTE: `stats.effectiveSpeed` is the raw speed *stat* (see team-calc.ts:1061),
+  // NOT the seconds-per-attack interval. Reverse-deriving the bonus from it
+  // produces garbage that escapes the buff cap. Read the canonical bonus that
+  // was fed into the engine from the breakdown instead.
+  const baseSpeed = member.card?.stats.speed ?? 100;
   const baseInterval = (baseSpeed + 750) / 900;
-  // Derive current speed bonus from current effectiveSpeed
-  // effectiveSpeed = baseInterval * (1 - speedBonus/2)
-  // So: speedBonus = 2 * (1 - effectiveSpeed / baseInterval)
-  const currentSpeedBonus = 2 * (1 - stats.effectiveSpeed / baseInterval);
-  // Apply +10% to the speed bonus (multiplicative)
+  const currentSpeedBonus = stats.breakdown.speed.abilities;
   const newSpeedBonus = currentSpeedBonus + 0.10;
-  // Apply piecewise cap logic
-  const cappedNewBonus = Math.min(newSpeedBonus, STAT_CAPS.speedBuff);
-  const newEffectiveSpeed = baseInterval * (1 - cappedNewBonus / 2);
+  let newEffectiveSpeed: number;
+  if (newSpeedBonus >= 0) {
+    const cappedBonus = Math.min(newSpeedBonus, STAT_CAPS.speedBuff);
+    newEffectiveSpeed = baseInterval * (1 - cappedBonus / 2);
+  } else {
+    const cappedDebuff = Math.max(newSpeedBonus, STAT_CAPS.speedDebuff);
+    newEffectiveSpeed = baseInterval * (1 + Math.abs(cappedDebuff));
+  }
   const newAttackInterval = Math.max(newEffectiveSpeed, 0.5);
   const newAttacksPerSecond = 1 / newAttackInterval;
   const currentAttacksPerSecond = 1 / attackInterval;

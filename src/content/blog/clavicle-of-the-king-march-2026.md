@@ -18,7 +18,7 @@ Since the last update, the devs have raised some auction caps up to 1000 mochi, 
 
 :card[739] is a two-target mega damage buffer and Divina lead that increases skill damage. She will likely be extremely expensive — her cap may be 1000 mochi given the recent changes, though players should expect at least 500 when saving. Most of those Alice cards showed up after this event, so I suspect many players replaced :card[642] with :card[739]. She has a progressive passive that increases critical damage of the 2 allies with the highest attack each round by 25%. Her first passive is very good in multi-round battles for all attributes - not just Divina - making her a strong reserve option. A lot of these kind of crit buffers target random cards and have to be gamed, but hers always targets the cards you want the buffs on, so 5 rounds in when you need damage you are getting +125% critical damage on both of your two strongest cards. She has the same problem as a lot of Divina cards: her skill buffs damage, so it can make building Divina teams a bit awkward. All players probably want 2 copies to unlock her ability 1 for reserve. **Divina players looking for a strong ranged card should start pooling your mochi - she's the main target this event.**
 
-:card[738] is the story card, and I really like this card - it's a great mochi pickup. He's a relatively balanced melee support which makes him tanky enough. His first ability - which only requires a single copy - gives random 25% crit damage buffs to two party members. This can be gamed a bit by having non-Phantasma cards in your party, but it's a nice modest damage boost despite the bit of randomness it introduces. He also gives 20% damage on the final wave, which is not a lot but it's something and only requires 3 copies. He's not by any means top tier, but in a 5-round battle you could imagine each card in a full team getting around 50% critical damage give or take and 20% damage - very F2P friendly in multi-round battles. The game has recently given us a ton of F2P Phantasma melee cards, and he is probably my top pick of the bunch. **Great pickup for F2P Phantasma players, or Phantasma players looking to add support value to their tanky card.**
+:card[738] is the Special Story card, and I really like this card - it's a great mochi pickup. He's a relatively balanced melee support which makes him tanky enough. His first ability - which only requires a single copy - gives random 25% crit damage buffs to two party members. This can be gamed a bit by having non-Phantasma cards in your party, but it's a nice modest damage boost despite the bit of randomness it introduces. He also gives 20% damage on the final wave, which is not a lot but it's something and only requires 3 copies. He's not by any means top tier, but in a 5-round battle you could imagine each card in a full team getting around 50% critical damage give or take and 20% damage - very F2P friendly in multi-round battles. The game has recently given us a ton of F2P Phantasma melee cards, and he is probably my top pick of the bunch. **Great pickup for F2P Phantasma players, or Phantasma players looking to add support value to their tanky card.**
 
 ---
 
@@ -38,7 +38,7 @@ This event had 5★ helpers, so we are looking at more cash auctions this month.
 
 ## Second Week Gacha
 
-:card[740] is a top tier support carry and debuffer. With the addition of :card[1401] she is not the strongest carry for Phantasma, but her 10% progressive damage is hard to beat in multi-round battles. She also enables Phantasma challenge mode without :card[744]. Probably a must buy for Phantasma players if you didn't go in for :card[1401], and probably still usable in tower, story, and challenge even if you did pick up :card[1401]. If you check your friends list you'll probably find a ton of her because she is good and popular - the people aren't wrong. With many players sealing their copies now that :card[1401] is widely available, prices are likely to be lower than usual — a great opportunity for newer Phantasma players looking for a strong support carry at a discount. **Must buy for Phantasma players without :card[1401]; still usable if you have her.**
+:card[740] is a top tier support carry and debuffer. With the addition of :card[1401] she is not the strongest carry for Phantasma, but her 10% progressive damage is hard to beat in multi-round battles. She also enables Phantasma challenge mode without :card[744]. Probably a must buy for Phantasma players if you didn't go in for :card[1401], and probably still usable in Conquest, Special Story, and challenge even if you did pick up :card[1401]. If you check your friends list you'll probably find a ton of her because she is good and popular - the people aren't wrong. With many players sealing their copies now that :card[1401] is widely available, prices are likely to be lower than usual — a great opportunity for newer Phantasma players looking for a strong support carry at a discount. **Must buy for Phantasma players without :card[1401]; still usable if you have her.**
 
 :card[741] is the strongest single-target buffing healer in the game, and she is genuinely excellent. She provides 107% damage, 37% crit, and 100% critical damage — while her skill is active she completely transforms your strongest attacker, often pushing them to the damage cap for the duration. For most players this is a massive burst window and a very good thing. **For most rosters, she is a strong buy.**
 
@@ -64,7 +64,7 @@ The rerun this month is **The Great Feudal Music Festival**, a temporary window 
 
 :card[731] is this month's Guild Conquest card. On the surface she has some F2P appeal — crit rate is very valuable to an auto attacker, and her ATK stat is high. Her skill isn't anything special, and she has a small drop rate bonus on top. The problem is that getting meaningful value out of her requires 4 copies, which makes her a fairly expensive ask for F2P players upfront.
 
-She also doesn't have much to offer stronger players who already have solid Phantasma carries — a small drop rate boost is a niche perk, and it isn't commonly stacked outside of secondary slots on XP boosting teams. When she eventually comes around on auction she could be a cheap entry point for new players looking to get started with a Phantasma carry, but for now it's hard to recommend spending significant resources on her unless you specifically want a drop rate carry for niche story team compositions. **Hold off for now; worth revisiting at auction as a budget Phantasma carry for newer players.**
+She also doesn't have much to offer stronger players who already have solid Phantasma carries — a small drop rate boost is a niche perk, and it isn't commonly stacked outside of secondary slots on XP boosting teams. When she eventually comes around on auction she could be a cheap entry point for new players looking to get started with a Phantasma carry, but for now it's hard to recommend spending significant resources on her unless you specifically want a drop rate carry for niche Special Story team compositions. **Hold off for now; worth revisiting at auction as a budget Phantasma carry for newer players.**
 
 ---
 
@@ -115,7 +115,7 @@ Festival Auction:
 
 :card[739]は2ターゲットへの超大型ダメージバッファー兼スキルダメージ増加のDivinaリーダーです。おそらく非常に高価になります——最近の変更で上限は1000もちの可能性もありますが、少なくとも500は用意しておくべきです。多くのアリスカードがこのイベント後に登場しており、多くのプレイヤーが:card[642]を:card[739]に交代させたようです。累積パッシブで毎ラウンド攻撃力最上位2体のクリダメが25%増加します。最初のパッシブは多属性の長ラウンドバトルにおいて全属性で非常に優秀——Divina限定ではないため、強力なリザーブ選択肢にもなります。この種のクリバッファーの多くはランダムにターゲットを選択し、工夫が必要ですが、彼女のバフは常に狙ったカードに乗るため、5ラウンド目に最も強い2枚のカードに+125%クリダメが確実に入ります。多くのDivinaカードと同じ問題点として、スキルがダメージを増加させるためDivinaチームの構成がやや複雑になることがあります。全プレイヤーがアビリティ1解放のために2枚揃えておく価値があります。**Divinaプレイヤーの強力な遠距離カード志望者はもちを集めよう——このイベントのメインターゲット。**
 
-:card[738]はストーリーカードで、個人的に非常に気に入っています——コスパの良いもち購入先です。バランスの取れた近接サポートで十分なタンク性能があります。1枚でアンロックできる最初のアビリティは2体のパーティメンバーにランダム25%クリダメバフを付与します。ランダム性があるためPhantasma以外のカードをパーティに入れると操作できますが、ランダム要素があっても控えめながら良いダメージブーストです。3枚で解放できる最終ウェーブ20%ダメージも量は多くないですが効果はあります。決してトップクラスではありませんが、5ラウンドのバトルを想像すると全カードが大体50%前後のクリダメと20%ダメージを受けられる可能性があり、無課金プレイヤーに非常に優しいです。Phantasma近接の無課金向けカードが最近たくさん来ましたが、個人的にはその中でもトップピックです。**無課金Phantasmaプレイヤーや、タンク寄りカードにサポート価値を加えたいPhantasmaプレイヤーへの優秀なピック。**
+:card[738]はスペシャルストーリーカードで、個人的に非常に気に入っています——コスパの良いもち購入先です。バランスの取れた近接サポートで十分なタンク性能があります。1枚でアンロックできる最初のアビリティは2体のパーティメンバーにランダム25%クリダメバフを付与します。ランダム性があるためPhantasma以外のカードをパーティに入れると操作できますが、ランダム要素があっても控えめながら良いダメージブーストです。3枚で解放できる最終ウェーブ20%ダメージも量は多くないですが効果はあります。決してトップクラスではありませんが、5ラウンドのバトルを想像すると全カードが大体50%前後のクリダメと20%ダメージを受けられる可能性があり、無課金プレイヤーに非常に優しいです。Phantasma近接の無課金向けカードが最近たくさん来ましたが、個人的にはその中でもトップピックです。**無課金Phantasmaプレイヤーや、タンク寄りカードにサポート価値を加えたいPhantasmaプレイヤーへの優秀なピック。**
 
 ---
 
@@ -135,7 +135,7 @@ Festival Auction:
 
 ## 2週目ガチャ
 
-:card[740]はトップクラスのサポートキャリー兼デバッファーです。:card[1401]の追加で最強のPhantasmaキャリーではなくなりましたが、10%累積ダメージは長期戦では破格の性能です。:card[744]なしでPhantasmaのチャレンジモードも可能にします。:card[1401]を取っていないPhantasmaプレイヤーにはおそらく必須購入で、:card[1401]を取っていてもタワー・ストーリー・チャレンジでまだ使えます。:card[1401]が普及した今、封印して売るプレイヤーが増えて価格は普段より低めになるはずです——お得に強力なサポートキャリーを狙う新規Phantasmaプレイヤーには絶好のチャンス。**:card[1401]がいないPhantasmaプレイヤーには必須。持っている場合も依然として使える。**
+:card[740]はトップクラスのサポートキャリー兼デバッファーです。:card[1401]の追加で最強のPhantasmaキャリーではなくなりましたが、10%累積ダメージは長期戦では破格の性能です。:card[744]なしでPhantasmaのチャレンジモードも可能にします。:card[1401]を取っていないPhantasmaプレイヤーにはおそらく必須購入で、:card[1401]を取っていてもコンクエスト・スペシャルストーリー・チャレンジでまだ使えます。:card[1401]が普及した今、封印して売るプレイヤーが増えて価格は普段より低めになるはずです——お得に強力なサポートキャリーを狙う新規Phantasmaプレイヤーには絶好のチャンス。**:card[1401]がいないPhantasmaプレイヤーには必須。持っている場合も依然として使える。**
 
 :card[741]はゲームで最強の単体バッファーヒーラーで、本当に優秀です。107%ダメージ、37%クリ率、100%クリダメを提供——スキル発動中は最強アタッカーを完全に変貌させ、多くの場合その間ダメージ上限に到達します。ほとんどのプレイヤーにとって非常に大きなバーストウィンドウで有用です。**ほとんどのロスターにとって強力な購入。**
 
@@ -161,7 +161,7 @@ Festival Auction:
 
 :card[731]は今月のギルドコンクエストカードです。表面上は無課金向けの魅力があります——クリ率はオートアタッカーにとって非常に価値が高く、攻撃力ステータスも高い。スキルは特別でなく、小さなドロップ率ボーナスもあります。問題は意味ある価値を引き出すために4枚必要なことで、無課金プレイヤーには最初のハードルとして高めです。
 
-また、すでに優れたPhantasmaキャリーを持つ強いプレイヤーにはあまり提供できるものがありません——小さなドロップ率ブーストはニッチな特典で、EXPブーストチームのセカンダリスロット以外では一般的にスタックされません。いずれオークションに来た際には新規プレイヤーがPhantasmaキャリーを安く始める入口になりえますが、今は特にドロップ率キャリーを必要とするニッチなストーリーチーム構成でなければ大きなリソースを費やすのは難しいです。**今は保留。オークション時に新規プレイヤーのバジェットPhantasmaキャリーとして再検討する価値あり。**
+また、すでに優れたPhantasmaキャリーを持つ強いプレイヤーにはあまり提供できるものがありません——小さなドロップ率ブーストはニッチな特典で、EXPブーストチームのセカンダリスロット以外では一般的にスタックされません。いずれオークションに来た際には新規プレイヤーがPhantasmaキャリーを安く始める入口になりえますが、今は特にドロップ率キャリーを必要とするニッチなスペシャルスペシャルストーリーチーム構成でなければ大きなリソースを費やすのは難しいです。**今は保留。オークション時に新規プレイヤーのバジェットPhantasmaキャリーとして再検討する価値あり。**
 
 ---
 
@@ -212,7 +212,7 @@ Festival Auction:
 
 :card[739]는 2대상에 대한 메가 데미지 버퍼이자 스킬 데미지를 높이는 디비나 리더입니다. 매우 비쌀 가능성이 높습니다——최근 변화로 상한이 1000 모찌일 수도 있지만, 최소 500은 모아두어야 합니다. 이 이벤트 이후 많은 앨리스 카드들이 등장했고, 많은 플레이어가 :card[642]를 :card[739]로 교체한 것 같습니다. 매 라운드 공격력이 가장 높은 2아군의 치명 피해를 25% 올려주는 누적 패시브가 있습니다. 첫 번째 패시브는 디비나만이 아닌 모든 속성에서 다중 라운드 전투에 매우 유용해 강력한 리저브 선택지가 됩니다. 이런 종류의 치명 버퍼 중 상당수는 무작위 카드를 타게팅하여 게이밍이 필요하지만, 그녀는 원하는 카드에게 항상 버프가 돌아가므로 5라운드가 되면 가장 강한 2장 카드에 +125% 치명 피해가 확실히 들어갑니다. 디비나 카드 대부분의 문제처럼, 스킬이 데미지를 올려줘서 디비나 팀 구성이 약간 복잡해질 수 있습니다. 모든 플레이어가 어빌리티 1 해제를 위해 2장을 갖출 가치가 있습니다. **강력한 원거리 카드를 원하는 디비나 플레이어는 모찌를 모으기 시작하세요——이번 이벤트 메인 타겟.**
 
-:card[738]은 스토리 카드로, 정말 마음에 드는 카드입니다——좋은 모찌 구매 대상입니다. 충분히 탱키한 균형 잡힌 근접 서포트입니다. 1장으로 해제되는 첫 번째 어빌리티는 파티원 2명에게 무작위 25% 치명 피해 버프를 부여합니다. 판타즈마가 아닌 카드를 파티에 넣으면 어느 정도 게이밍이 가능하지만, 무작위성이 있어도 소소하지만 좋은 데미지 부스트입니다. 3장이면 해제되는 최종 웨이브 20% 데미지도 많은 양은 아니지만 뭔가 있습니다. 결코 최상위 티어는 아니지만 5라운드 전투에서 풀 팀의 모든 카드가 대략 50% 치명 피해와 20% 데미지를 얻을 수 있다고 상상해보면 무과금에 매우 친화적입니다. 최근 무과금용 판타즈마 근접 카드가 많이 나왔는데, 그 중 제 최우선 픽입니다. **무과금 판타즈마 플레이어 또는 탱키한 카드에 서포트 가치를 더하려는 판타즈마 플레이어에게 훌륭한 픽.**
+:card[738]은 스페셜 스토리 카드로, 정말 마음에 드는 카드입니다——좋은 모찌 구매 대상입니다. 충분히 탱키한 균형 잡힌 근접 서포트입니다. 1장으로 해제되는 첫 번째 어빌리티는 파티원 2명에게 무작위 25% 치명 피해 버프를 부여합니다. 판타즈마가 아닌 카드를 파티에 넣으면 어느 정도 게이밍이 가능하지만, 무작위성이 있어도 소소하지만 좋은 데미지 부스트입니다. 3장이면 해제되는 최종 웨이브 20% 데미지도 많은 양은 아니지만 뭔가 있습니다. 결코 최상위 티어는 아니지만 5라운드 전투에서 풀 팀의 모든 카드가 대략 50% 치명 피해와 20% 데미지를 얻을 수 있다고 상상해보면 무과금에 매우 친화적입니다. 최근 무과금용 판타즈마 근접 카드가 많이 나왔는데, 그 중 제 최우선 픽입니다. **무과금 판타즈마 플레이어 또는 탱키한 카드에 서포트 가치를 더하려는 판타즈마 플레이어에게 훌륭한 픽.**
 
 ---
 
@@ -232,7 +232,7 @@ Festival Auction:
 
 ## 2주차 가챠
 
-:card[740]은 최상위 서포트 캐리이자 디버퍼입니다. :card[1401] 추가로 판타즈마의 최강 캐리는 아니지만, 10% 누적 데미지는 다중 라운드 전투에서 타의 추종을 불허합니다. :card[744] 없이도 판타즈마 도전 모드를 가능하게 합니다. :card[1401]을 구하지 못한 판타즈마 플레이어에게는 필수 구매이며, :card[1401]이 있어도 타워, 스토리, 도전에서 여전히 쓸 수 있습니다. :card[1401]이 보편화되면서 봉인해서 파는 플레이어가 늘어 가격이 평소보다 낮을 가능성이 높습니다——강력한 서포트 캐리를 할인받아 원하는 신규 판타즈마 플레이어에게 좋은 기회입니다. **:card[1401] 없는 판타즈마 플레이어에게 필수. 있어도 여전히 쓸 만함.**
+:card[740]은 최상위 서포트 캐리이자 디버퍼입니다. :card[1401] 추가로 판타즈마의 최강 캐리는 아니지만, 10% 누적 데미지는 다중 라운드 전투에서 타의 추종을 불허합니다. :card[744] 없이도 판타즈마 도전 모드를 가능하게 합니다. :card[1401]을 구하지 못한 판타즈마 플레이어에게는 필수 구매이며, :card[1401]이 있어도 컨퀘스트, 스페셜 스토리, 도전에서 여전히 쓸 수 있습니다. :card[1401]이 보편화되면서 봉인해서 파는 플레이어가 늘어 가격이 평소보다 낮을 가능성이 높습니다——강력한 서포트 캐리를 할인받아 원하는 신규 판타즈마 플레이어에게 좋은 기회입니다. **:card[1401] 없는 판타즈마 플레이어에게 필수. 있어도 여전히 쓸 만함.**
 
 :card[741]은 게임 최강의 단일 대상 버퍼 힐러로, 정말 뛰어납니다. 107% 데미지, 37% 치명 확률, 100% 치명 피해를 제공합니다——스킬이 발동되는 동안 가장 강한 어태커를 완전히 변모시켜 보통 그 동안 데미지 상한에 도달합니다. 대부분의 플레이어에게 이것은 매우 큰 버스트 구간이며 매우 좋은 일입니다. **대부분의 로스터에게 강력한 구매.**
 
@@ -258,7 +258,7 @@ Festival Auction:
 
 :card[731]은 이번 달 길드 컨퀘스트 카드입니다. 표면적으로는 무과금 매력이 있습니다——치명 확률은 오토 어태커에게 매우 가치 있고, ATK 스탯도 높습니다. 스킬은 특별하지 않고 소소한 드롭률 보너스도 있습니다. 문제는 의미 있는 가치를 얻으려면 4장이 필요하다는 점으로, 무과금 플레이어에게는 선불 비용이 꽤 높습니다.
 
-또한 이미 탄탄한 판타즈마 캐리를 보유한 강한 플레이어에게는 제공할 게 많지 않습니다——작은 드롭률 부스트는 틈새 특전이고, 경험치 부스팅 팀의 보조 슬롯 외에는 일반적으로 쌓이지 않습니다. 언젠가 옥션에 올라오면 시작용 판타즈마 캐리를 저렴하게 찾는 신규 플레이어에게 진입점이 될 수 있지만, 지금은 드롭률 캐리가 필요한 틈새 스토리 팀 구성이 아니라면 상당한 자원을 쓰기 어렵습니다. **지금은 보류. 신규 플레이어를 위한 저렴한 판타즈마 캐리 선택지로 옥션에서 재고 가치 있음.**
+또한 이미 탄탄한 판타즈마 캐리를 보유한 강한 플레이어에게는 제공할 게 많지 않습니다——작은 드롭률 부스트는 틈새 특전이고, 경험치 부스팅 팀의 보조 슬롯 외에는 일반적으로 쌓이지 않습니다. 언젠가 옥션에 올라오면 시작용 판타즈마 캐리를 저렴하게 찾는 신규 플레이어에게 진입점이 될 수 있지만, 지금은 드롭률 캐리가 필요한 틈새 스페셜 스페셜 스토리 팀 구성이 아니라면 상당한 자원을 쓰기 어렵습니다. **지금은 보류. 신규 플레이어를 위한 저렴한 판타즈마 캐리 선택지로 옥션에서 재고 가치 있음.**
 
 ---
 
@@ -309,7 +309,7 @@ Festival Auction:
 
 :card[739]是一张双目标超级伤害增益卡兼提升技能伤害的Divina队长。价格可能极高——近期变化下上限可能达到1000饼，不过玩家至少应准备500饼。许多爱丽丝卡牌在本活动后出现，我猜不少玩家将:card[642]替换成了:card[739]。她有渐进被动，每轮提升攻击力最高的2位友军25%暴击伤害。第一个被动在各属性的多轮战斗中都非常好——不仅限于Divina——使她成为强力的备用选择。这类暴击增益中很多是随机选取目标需要操控，但她的增益总是作用于你想要的卡牌，所以在第5轮需要伤害时，你的两张最强卡牌确实能获得+125%暴击伤害。与许多Divina卡牌一样，她的技能是提升伤害，可能导致构建Divina队伍时有些复杂。所有玩家可能都需要2张来解锁备用能力1。**寻求强力远程卡牌的Divina玩家开始存饼吧——这是本次活动的主要目标。**
 
-:card[738]是剧情卡，我非常喜欢这张卡——是很划算的饼购入选择。她是相当均衡的近战辅助，坦度足够。第一个能力——只需1张——为2名队伍成员随机给予25%暴击伤害加成。通过在队伍中放入非Phantasma卡牌可以稍作操控，但尽管有些随机性，这也是不错的伤害提升。3张解锁的最终波20%伤害不算多但也是有的。绝对不是顶级水准，但在5轮战斗中可以想象队伍所有卡牌大约获得50%暴击伤害和20%伤害——对F2P玩家在多轮战斗中非常友好。游戏最近给了我们很多F2P Phantasma近战卡，这张可能是其中我的首选。**F2P Phantasma玩家或希望为坚韧卡牌增加辅助价值的Phantasma玩家的优秀选择。**
+:card[738]是特别剧情卡，我非常喜欢这张卡——是很划算的饼购入选择。她是相当均衡的近战辅助，坦度足够。第一个能力——只需1张——为2名队伍成员随机给予25%暴击伤害加成。通过在队伍中放入非Phantasma卡牌可以稍作操控，但尽管有些随机性，这也是不错的伤害提升。3张解锁的最终波20%伤害不算多但也是有的。绝对不是顶级水准，但在5轮战斗中可以想象队伍所有卡牌大约获得50%暴击伤害和20%伤害——对F2P玩家在多轮战斗中非常友好。游戏最近给了我们很多F2P Phantasma近战卡，这张可能是其中我的首选。**F2P Phantasma玩家或希望为坚韧卡牌增加辅助价值的Phantasma玩家的优秀选择。**
 
 ---
 
@@ -329,7 +329,7 @@ Festival Auction:
 
 ## 第二周卡池
 
-:card[740]是顶级辅助主力兼减益卡。加入:card[1401]后她不再是Phantasma最强主力，但10%渐进伤害在多轮战斗中难以超越。也让Phantasma无需:card[744]即可完成挑战模式。没有:card[1401]的Phantasma玩家可能是必买，就算有:card[1401]在塔、剧情和挑战中仍然可用。随着很多玩家在:card[1401]普及后封印卖出，价格可能低于往常——对寻找折扣强力辅助主力的Phantasma新手来说是好机会。**没有:card[1401]的Phantasma玩家必买；有的话仍然可用。**
+:card[740]是顶级辅助主力兼减益卡。加入:card[1401]后她不再是Phantasma最强主力，但10%渐进伤害在多轮战斗中难以超越。也让Phantasma无需:card[744]即可完成挑战模式。没有:card[1401]的Phantasma玩家可能是必买，就算有:card[1401]在征服、特别剧情和挑战中仍然可用。随着很多玩家在:card[1401]普及后封印卖出，价格可能低于往常——对寻找折扣强力辅助主力的Phantasma新手来说是好机会。**没有:card[1401]的Phantasma玩家必买；有的话仍然可用。**
 
 :card[741]是游戏中最强的单体增益治疗者，真的很优秀。提供107%伤害、37%暴击率和100%暴击伤害——技能生效期间完全改变最强攻击者的状态，通常在此期间达到伤害上限。对大多数玩家来说这是极大的爆发窗口，非常有价值。**对大多数阵容来说是强力购入选择。**
 
@@ -355,7 +355,7 @@ Festival Auction:
 
 :card[731]是本月的公会征伐卡牌。表面上有些F2P吸引力——暴击率对普攻手来说非常有价值，攻击力属性也高。技能没有特别之处，还有小幅掉落率加成。问题是要发挥有意义的价值需要4张，对F2P玩家来说前期成本相当高。
 
-对于已经有优秀Phantasma主力的强力玩家来说也提供不了多少——小幅掉落率提升是小众福利，除了经验提升队伍的次要位置外并不常见叠加。当她最终进入拍卖时可能成为新手玩家入手Phantasma主力的低价切入点，但目前除非专门需要掉落率主力用于小众剧情队伍，否则难以推荐花费大量资源。**现在先观望；作为新手玩家的低价Phantasma主力选择，可以等拍卖时再考虑。**
+对于已经有优秀Phantasma主力的强力玩家来说也提供不了多少——小幅掉落率提升是小众福利，除了经验提升队伍的次要位置外并不常见叠加。当她最终进入拍卖时可能成为新手玩家入手Phantasma主力的低价切入点，但目前除非专门需要掉落率主力用于小众特别特别剧情队伍，否则难以推荐花费大量资源。**现在先观望；作为新手玩家的低价Phantasma主力选择，可以等拍卖时再考虑。**
 
 ---
 
@@ -406,7 +406,7 @@ Festival Auction:
 
 :card[739]是一張雙目標超級傷害增益卡兼提升技能傷害的Divina隊長。價格可能極高——近期變化下上限可能達到1000餅，不過玩家至少應準備500餅。她有漸進被動，每輪提升攻擊力最高的2位友軍25%暴擊傷害。第一個被動在各屬性的多輪戰鬥中都非常好——不僅限於Divina——使她成為強力的備用選擇。這類暴擊增益中很多是隨機選取目標需要操控，但她的增益總是作用於你想要的卡牌，所以在第5輪需要傷害時，你的兩張最強卡牌確實能獲得+125%暴擊傷害。所有玩家可能都需要2張來解鎖備用能力1。**尋求強力遠程卡牌的Divina玩家開始存餅吧——這是本次活動的主要目標。**
 
-:card[738]是劇情卡，我非常喜歡這張卡——是很划算的餅購入選擇。她是相當均衡的近戰輔助，坦度足夠。第一個能力——只需1張——為2名隊伍成員隨機給予25%暴擊傷害加成。通過在隊伍中放入非Phantasma卡牌可以稍作操控，也給予3張解鎖的最終波20%傷害。在5輪戰鬥中可以想像隊伍所有卡牌大約獲得50%暴擊傷害和20%傷害——對F2P玩家在多輪戰鬥中非常友好。遊戲最近給了我們很多F2P Phantasma近戰卡，這張可能是其中我的首選。**F2P Phantasma玩家或希望為堅韌卡牌增加輔助價值的Phantasma玩家的優秀選擇。**
+:card[738]是特別劇情卡，我非常喜歡這張卡——是很划算的餅購入選擇。她是相當均衡的近戰輔助，坦度足夠。第一個能力——只需1張——為2名隊伍成員隨機給予25%暴擊傷害加成。通過在隊伍中放入非Phantasma卡牌可以稍作操控，也給予3張解鎖的最終波20%傷害。在5輪戰鬥中可以想像隊伍所有卡牌大約獲得50%暴擊傷害和20%傷害——對F2P玩家在多輪戰鬥中非常友好。遊戲最近給了我們很多F2P Phantasma近戰卡，這張可能是其中我的首選。**F2P Phantasma玩家或希望為堅韌卡牌增加輔助價值的Phantasma玩家的優秀選擇。**
 
 ---
 
@@ -501,7 +501,7 @@ Desde la última actualización, los desarrolladores han subido algunos límites
 
 :card[739] es un mega potenciador de daño de dos objetivos y líder Divina que aumenta el daño de habilidad. Probablemente sea extremadamente cara — su límite podría ser 1000 mochi dado los cambios recientes, aunque los jugadores deberían esperar al menos 500 al ahorrar. Tiene un pasivo progresivo que aumenta el daño crítico de los 2 aliados con el mayor ataque cada ronda en un 25%. Su primer pasivo es muy bueno en batallas de múltiples rondas para todos los atributos - no solo Divina - lo que la convierte en una fuerte opción de reserva. Muchos potenciadores de crítico apuntan a cartas aleatorias, pero el suyo siempre apunta a las cartas que quieres, así que en la ronda 5 obtienes +125% de daño crítico en tus dos cartas más fuertes. Todos los jugadores probablemente quieran 2 copias para desbloquear su habilidad 1 de reserva. **Los jugadores Divina que buscan una carta a distancia fuerte deberían empezar a acumular mochi - es el objetivo principal de este evento.**
 
-:card[738] es la carta de historia, y me encanta esta carta - es una buena compra de mochi. Es un soporte cuerpo a cuerpo equilibrado suficientemente resistente. Su primera habilidad - que solo requiere una copia - da bonificaciones aleatorias de 25% de daño crítico a dos miembros del grupo. También da 20% de daño en la oleada final con 3 copias. No es de máximo nivel, pero en una batalla de 5 rondas cada carta podría obtener aproximadamente 50% de daño crítico y 20% de daño - muy amigable para F2P. **Gran elección para jugadores F2P de Phantasma, o jugadores de Phantasma que buscan añadir valor de soporte a su carta resistente.**
+:card[738] es la carta de Historia Especial Especial, y me encanta esta carta - es una buena compra de mochi. Es un soporte cuerpo a cuerpo equilibrado suficientemente resistente. Su primera habilidad - que solo requiere una copia - da bonificaciones aleatorias de 25% de daño crítico a dos miembros del grupo. También da 20% de daño en la oleada final con 3 copias. No es de máximo nivel, pero en una batalla de 5 rondas cada carta podría obtener aproximadamente 50% de daño crítico y 20% de daño - muy amigable para F2P. **Gran elección para jugadores F2P de Phantasma, o jugadores de Phantasma que buscan añadir valor de soporte a su carta resistente.**
 
 ---
 

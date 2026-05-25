@@ -1,6 +1,6 @@
 ---
 title: "Evil Gods Attack: Card Analysis"
-description: "Preview of the upcoming Evil Gods Attack tower raid featuring Nyarlathotep, ranking rewards, and powerful new gacha cards"
+description: "Preview of the upcoming Evil Gods Attack Conquest featuring Nyarlathotep, ranking rewards, and powerful new gacha cards"
 date: "2026-01-23"
 author: "Araiak"
 tags: ["analysis", "gacha", "events", "exchange"]
@@ -8,11 +8,11 @@ tags: ["analysis", "gacha", "events", "exchange"]
 
 <div data-lang="en">
 
-We just got ranking data but not tower data for Evil Gods Attack. Note: any of these could change or be re-arranged before the event starts. For general tower raid tips, check out the [Tower Raid Guide](/blog/tower-raid-guide).
+We just got ranking data but not Conquest data for Evil Gods Attack. Note: any of these could change or be re-arranged before the event starts. For general Conquest tips, check out the [Conquest Guide](/blog/tower-raid-guide).
 
 ---
 
-## Tower Drop
+## Conquest Drop
 
 :card[1398] isn't confirmed but it's the only one without a source set, and that would be no surprise. She is a Divina melee card and it's been a while since we've gotten one from an event. She's similar to :card[1489] but trades damage reduction for a self damage boost for a single copy. The skill damage is also a bit lower. I think :card[1489] is probably better as a melee, but if :card[1398] is tanky enough on its own she should be fine in most content with a strong healer. It should be fairly easy to get and you can get help from your guild, so there's no reason not to grab at least one and have something to start a Divina team. **Easy pickup for new players.**
 
@@ -61,7 +61,7 @@ These next few look to join the standard gacha:
 
 ## TL;DR
 
-- :card[1398] (Tower) - **Easy pickup** for new players starting Divina
+- :card[1398] (Conquest) - **Easy pickup** for new players starting Divina
 - :card[1399] (Half Ranking) - **Low priority** - grab cheaply if you can
 - :card[1402] (Overall Ranking) - **Don't go hard** - niche endless use, grab if near cutoffs
 - :card[1444] (Gacha) - **Highly recommended** - invoker + mochi if you have resources
@@ -79,11 +79,11 @@ These next few look to join the standard gacha:
 
 <div data-lang="ja">
 
-邪神襲来のランキングデータは取得しましたが、タワーデータはまだです。イベント開始前に変更される可能性があります。タワーレイドのコツは[タワーレイドガイド](/ja/blog/tower-raid-guide)をご覧ください。
+邪神襲来のランキングデータは取得しましたが、コンクエストデータはまだです。イベント開始前に変更される可能性があります。コンクエストのコツは[コンクエストガイド](/ja/blog/tower-raid-guide)をご覧ください。
 
 ---
 
-## タワードロップ
+## コンクエストドロップ
 
 :card[1398]は確定ではありませんが、ソースが設定されていない唯一のカードなので驚きはないでしょう。:card[1489]に似ていますが、ダメージ軽減を自己ダメージブーストに交換しています。強いヒーラーがいれば大丈夫でしょう。**新規プレイヤーは簡単にゲット可能。**
 
@@ -127,7 +127,7 @@ These next few look to join the standard gacha:
 
 ## まとめ
 
-- :card[1398] (タワー) - ディヴァイナ始める新規に**簡単ピック**
+- :card[1398] (コンクエスト) - ディヴァイナ始める新規に**簡単ピック**
 - :card[1399] (前半ランキング) - **低優先度** - 安ければ取る
 - :card[1402] (総合ランキング) - **無理しない** - ボーダー近くなら取る
 - :card[1444] (ガチャ) - **強くおすすめ** - リソースあればインボーカー＋モチ
@@ -145,11 +145,11 @@ These next few look to join the standard gacha:
 
 <div data-lang="ko">
 
-사신 습격의 랭킹 데이터는 받았지만 타워 데이터는 아직입니다. 이벤트 시작 전에 변경될 수 있습니다. 타워 레이드 팁은 [타워 레이드 가이드](/ko/blog/tower-raid-guide)를 참조하세요.
+사신 습격의 랭킹 데이터는 받았지만 컨퀘스트 데이터는 아직입니다. 이벤트 시작 전에 변경될 수 있습니다. 컨퀘스트 팁은 [컨퀘스트 가이드](/ko/blog/tower-raid-guide)를 참조하세요.
 
 ---
 
-## 타워 드롭
+## 컨퀘스트 드롭
 
 :card[1398]은 확정은 아니지만 소스가 설정되지 않은 유일한 카드라 놀랍지 않을 것입니다. :card[1489]와 비슷하지만 피해 감소를 자기 피해 증가로 교환합니다. 강한 힐러가 있으면 괜찮을 것입니다. **신규 플레이어는 쉽게 획득 가능.**
 
@@ -193,7 +193,7 @@ These next few look to join the standard gacha:
 
 ## 요약
 
-- :card[1398] (타워) - 디비나 시작하는 신규에게 **쉬운 픽**
+- :card[1398] (컨퀘스트) - 디비나 시작하는 신규에게 **쉬운 픽**
 - :card[1399] (전반 랭킹) - **낮은 우선순위** - 싸면 획득
 - :card[1402] (종합 랭킹) - **무리하지 말기** - 컷오프 근처면 획득
 - :card[1444] (가챠) - **강력 추천** - 리소스 있으면 인보커 + 모찌
@@ -211,11 +211,11 @@ These next few look to join the standard gacha:
 
 <div data-lang="zh-cn">
 
-我们收到了邪神来袭的排名数据，但塔楼数据还没有。注意：活动开始前可能会有变化。塔楼突袭技巧请查看[塔楼突袭指南](/zh-cn/blog/tower-raid-guide)。
+我们收到了邪神来袭的排名数据，但征服数据还没有。注意：活动开始前可能会有变化。征服技巧请查看[征服指南](/zh-cn/blog/tower-raid-guide)。
 
 ---
 
-## 塔楼掉落
+## 征服掉落
 
 :card[1398]尚未确认，但它是唯一没有设置来源的卡牌，所以不会意外。类似:card[1489]但用自我伤害提升换取伤害减免。有强力奶妈应该没问题。**新玩家容易获取。**
 
@@ -259,7 +259,7 @@ These next few look to join the standard gacha:
 
 ## 总结
 
-- :card[1398] (塔楼) - 新玩家开始神圣**容易获取**
+- :card[1398] (征服) - 新玩家开始神圣**容易获取**
 - :card[1399] (前半排名) - **低优先级** - 便宜就拿
 - :card[1402] (综合排名) - **不要太拼** - 接近线就拿
 - :card[1444] (抽卡) - **强烈推荐** - 有资源就召唤石+麻糬
@@ -277,11 +277,11 @@ These next few look to join the standard gacha:
 
 <div data-lang="zh-tw">
 
-我們收到了邪神來襲的排名數據，但塔樓數據還沒有。注意：活動開始前可能會有變化。塔樓突襲技巧請查看[塔樓突襲指南](/zh-tw/blog/tower-raid-guide)。
+我們收到了邪神來襲的排名數據，但征服數據還沒有。注意：活動開始前可能會有變化。征服技巧請查看[征服指南](/zh-tw/blog/tower-raid-guide)。
 
 ---
 
-## 塔樓掉落
+## 征服掉落
 
 :card[1398]尚未確認，但它是唯一沒有設置來源的卡牌，所以不會意外。類似:card[1489]但用自我傷害提升換取傷害減免。有強力奶媽應該沒問題。**新玩家容易獲取。**
 
@@ -325,7 +325,7 @@ These next few look to join the standard gacha:
 
 ## 總結
 
-- :card[1398] (塔樓) - 新玩家開始神聖**容易獲取**
+- :card[1398] (征服) - 新玩家開始神聖**容易獲取**
 - :card[1399] (前半排名) - **低優先級** - 便宜就拿
 - :card[1402] (綜合排名) - **不要太拼** - 接近線就拿
 - :card[1444] (抽卡) - **強烈推薦** - 有資源就召喚石+麻糬
@@ -343,11 +343,11 @@ These next few look to join the standard gacha:
 
 <div data-lang="es">
 
-Recibimos datos de ranking pero no de torre para Ataque de los Dioses Malignos. Nota: esto podría cambiar antes del inicio del evento. Para consejos generales de tower raid, consulta la [Guía de Tower Raid](/es/blog/tower-raid-guide).
+Recibimos datos de ranking pero no de torre para Ataque de los Dioses Malignos. Nota: esto podría cambiar antes del inicio del evento. Para consejos generales de Conquest, consulta la [Guía de Conquest](/es/blog/tower-raid-guide).
 
 ---
 
-## Drop de Torre
+## Drop de Conquista
 
 :card[1398] no está confirmado pero es el único sin fuente establecida, así que no sería sorpresa. Similar a :card[1489] pero intercambia reducción de daño por aumento de daño propio. Debería estar bien en la mayoría del contenido con un buen sanador. **Fácil de obtener para jugadores nuevos.**
 
@@ -391,7 +391,7 @@ El gacha de la segunda mitad va a drenar los invokers y mochi de todos.
 
 ## Resumen
 
-- :card[1398] (Torre) - **Fácil** para nuevos jugadores empezando Divina
+- :card[1398] (Conquista) - **Fácil** para nuevos jugadores empezando Divina
 - :card[1399] (Ranking Mitad) - **Baja prioridad** - consíguelo barato
 - :card[1402] (Ranking General) - **No te esfuerces** - consíguelo si estás cerca del corte
 - :card[1444] (Gacha) - **Muy recomendado** - invoker + mochi si tienes recursos

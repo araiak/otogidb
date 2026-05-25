@@ -1,6 +1,6 @@
 ---
 title: "Dolls Festival & January 2026 Cards"
-description: "Analysis of the story event assist, ranking card, exchange card, and gacha cards for the Dolls Festival auction"
+description: "Analysis of the Guild Conquest event assist, ranking card, exchange card, and gacha cards for the Dolls Festival auction"
 date: "2026-01-13"
 author: "Araiak"
 tags: ["analysis", "auction", "gacha"]
@@ -12,7 +12,7 @@ A bit late but here's some notes on this month's cards!
 
 ---
 
-## Story Event
+## Guild Conquest Event
 
 :card[715] has an active event. The card was also buffed from 13% to 28% making it decent for a free card. In practice you are likely to run at least 2 ranged, however your damage tends to be weighted heavily to your strongest card especially as you get buffs with fewer targets, so how well it fares in a team will depend a lot on what other assists you have and your damage balance. It's not a top pick for assist, but it probably can see some play depending on what you need to maximize damage even if you just look at it as 28% damage to your highest ranged attacker - that's not your first choice, but it might be your 6th or 7th depending on what you have available. I would highly recommend new players try to join a guild that can clear level 30 to snag a copy, but it is probably not worth using items for extra copies if you would have to wait 7 months for auction to get the ability anyway. For everyone else, you were probably going to grab a few copies anyway - it is probably worth the 2M contribution to get it uncapped, but it is also not a high priority to do so, so I'd save or go light on pots. **Worth grabbing for new players; veterans can uncap cheaply but don't go hard.**
 
@@ -70,7 +70,7 @@ A few more cards showed up in the auction worth mentioning:
 
 ---
 
-## ストーリーイベント
+## ギルドコンクエスト
 
 :card[715]はアクティブイベント中です。13%から28%にバフされ、無料カードとしては十分な性能になりました。**新規プレイヤーは取る価値あり。ベテランは安くアンキャップできるが無理しない。**
 
@@ -126,7 +126,7 @@ A few more cards showed up in the auction worth mentioning:
 
 ---
 
-## 스토리 이벤트
+## 길드 컨퀘스트
 
 :card[715]는 활성 이벤트 중입니다. 13%에서 28%로 버프되어 무료 카드치고는 괜찮은 성능이 되었습니다. **신규 플레이어는 가져갈 가치 있음. 베테랑은 저렴하게 언캡 가능하지만 무리하지 마세요.**
 
@@ -182,7 +182,7 @@ A few more cards showed up in the auction worth mentioning:
 
 ---
 
-## 故事活动
+## 公会征伐
 
 :card[715]有活动进行中。该卡从13%提升到28%，作为免费卡还算不错。**新玩家值得获取；老玩家可以便宜解锁但不要太拼。**
 
@@ -238,7 +238,7 @@ A few more cards showed up in the auction worth mentioning:
 
 ---
 
-## 故事活動
+## 公會征伐
 
 :card[715]有活動進行中。該卡從13%提升到28%，作為免費卡還算不錯。**新玩家值得獲取；老玩家可以便宜解鎖但不要太拼。**
 
@@ -294,7 +294,7 @@ A few more cards showed up in the auction worth mentioning:
 
 ---
 
-## Evento de Historia
+## Conquista de Gremio
 
 :card[715] tiene un evento activo. La carta fue mejorada del 13% al 28%, haciéndola decente para una carta gratuita. **Vale la pena para jugadores nuevos; veteranos pueden desbloquear barato pero no se esfuercen demasiado.**
 

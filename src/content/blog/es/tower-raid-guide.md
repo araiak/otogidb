@@ -7,9 +7,9 @@ tags: ["guía", "eventos"]
 locale: "es"
 ---
 
-Esta es una guía de eventos de Torre Raid para jugadores nuevos (o relativamente nuevos). Los eventos de torre son muy buenos para jugadores nuevos porque puedes pedir ayuda a los miembros del gremio - si encuentras un gremio amable, hay buenas posibilidades de obtener varias cartas de 5 estrellas con ayuda.
+Esta es una guía de eventos de Torre Raid para jugadores nuevos (o relativamente nuevos). Los eventos de Conquista son muy buenos para jugadores nuevos porque puedes pedir ayuda a los miembros del gremio - si encuentras un gremio amable, hay buenas posibilidades de obtener varias cartas de 5 estrellas con ayuda.
 
-En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal o al buscar un jefe usando SE.
+En los eventos de Conquista, te ataca un jefe raid ya sea al hacer contenido normal o al buscar un jefe usando SE.
 
 ---
 
@@ -32,7 +32,7 @@ En los eventos de torre, te ataca un jefe raid ya sea al hacer contenido normal 
 
 ## Características del Evento de Torre
 
-Los eventos de torre son:
+Los eventos de Conquista son:
 
 - **Múltiples rondas**, así que casi todas las habilidades y abilidades son útiles:
   - *Habilidades de oleada final* se activan en la última oleada del combate
@@ -41,7 +41,7 @@ Los eventos de torre son:
 - **Sin tipo**, así que usa tu equipo más fuerte sin importar el elemento
 - **Costos de SE variables** (3-18 SE basado en tus cartas)
 - **Continuable** - si se acaba el tiempo, puedes continuar haciendo daño por costo de SE +1, o compartir el jefe con tu gremio para pedir ayuda. Por ejemplo, si tu equipo cuesta 18 SE, puedes hacer la misma cantidad de daño de nuevo por 19 SE.
-- **Los aumentos de XP y tasa de drop no ayudan** - ¡guárdalos para eventos de Historia!
+- **Los aumentos de XP y tasa de drop no ayudan** - ¡guárdalos para eventos de Historia Especial!
 
 ### Cálculo de Costo de SE
 
@@ -156,7 +156,7 @@ La mayoría de tus reservas probablemente no vendrán de subasta, así que revis
 - :card[2373] (Nv. 75) - Solo Phantasma
 - :card[2191] (Nv. 75) - Solo Anima
 - :card[1321] (Nv. 75+) - Divina
-- :card[744] (Nv. 85) - Cualquier tipo, ¡15% de daño por ronda es enorme! Usable en todo contenido multi-ronda (torre raid, historia) como reserva, pero no en ronda única. Vale la pena usar orbes de PvP si puedes llegar a 85 (no es beneficioso antes de eso) - de lo contrario guarda orbes para contenido de ronda única como World Boss o PvP
+- :card[744] (Nv. 85) - Cualquier tipo, ¡15% de daño por ronda es enorme! Usable en todo contenido multi-ronda (Conquista, Historia Especial) como reserva, pero no en ronda única. Vale la pena usar orbes de PvP si puedes llegar a 85 (no es beneficioso antes de eso) - de lo contrario guarda orbes para contenido de ronda única como World Boss o PvP
 - :card[661] (Nv. 85) - Cualquier tipo
 - :card[600] (Nv. 77) - 4 estrellas pero podría valer la pena usar orbes de PvP, 40% de daño crítico es un gran aumento
 

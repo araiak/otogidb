@@ -1,13 +1,13 @@
 ---
-title: "O Holy Night 剧情活动：卡片分析"
-description: "O Holy Night 剧情活动卡片、排名奖励和抽卡卡片的新手玩家推荐指南。"
+title: "O Holy Night 特别剧情：卡片分析"
+description: "O Holy Night 特别特别剧情卡片、排名奖励和抽卡卡片的新手玩家推荐指南。"
 date: "2025-12-23"
 author: "Araiak"
 tags: ["分析", "抽卡", "活动"]
 locale: "zh-cn"
 ---
 
-现在我们有了完整的卡片信息，我想快速总结一下 O Holy Night 剧情活动。关于剧情活动的一般技巧，请查看[剧情活动指南](/zh-cn/blog/story-event-guide)。
+现在我们有了完整的卡片信息，我想快速总结一下 O Holy Night 特别剧情。关于特别剧情的一般技巧，请查看[特别剧情指南](/zh-cn/blog/story-event-guide)。
 
 ---
 
@@ -32,7 +32,7 @@ locale: "zh-cn"
 
 ---
 
-## 剧情奖励
+## 特别剧情奖励
 
 | 卡片 | 章节奖励 | 新手评分 | 评论 |
 |------|----------------|-------------------|---------|

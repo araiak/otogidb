@@ -1,6 +1,6 @@
 ---
-title: "Otogi Spirit Agents Story Event Guide: Farming & XP Strategies"
-description: "Complete guide to Story events in Otogi Spirit Agents. Learn currency farming efficiency, XP boosting strategies, and which cards to look for in helpers."
+title: "Otogi Spirit Agents Special Story Guide: Farming & XP Strategies"
+description: "Complete guide to Special Story events in Otogi Spirit Agents. Learn currency farming efficiency, XP boosting strategies, and which cards to look for in helpers."
 date: "2025-12-23"
 author: "Araiak"
 tags: ["guide", "events"]
@@ -8,9 +8,9 @@ tags: ["guide", "events"]
 
 <div data-lang="en">
 
-This is intended as a new(er) player guide to Story events. Unfortunately for very new players, Story events can tend to be very difficult. Don't worry if you get stuck and need to focus on building your team.
+This is intended as a new(er) player guide to Special Story events. Unfortunately for very new players, Special Story events can tend to be very difficult. Don't worry if you get stuck and need to focus on building your team.
 
-In story events you clear chapters to get a single copy of a card, unlocking the card in the exchange. The exchange is on the main event page - cards are purchased with event-specific currency, so spend it all before the event ends! Costs progressively increase for each card copy, which is why story cards are typically more expensive in Auction.
+In Special Story events you clear chapters to get a single copy of a card, unlocking the card in the exchange. The exchange is on the main event page - cards are purchased with event-specific currency, so spend it all before the event ends! Costs progressively increase for each card copy, which is why Special Story cards are typically more expensive in Auction.
 
 ### How Many Copies?
 
@@ -23,9 +23,9 @@ A 5-star card starts at level 70. Each additional copy adds 5 levels (75, 80, 85
 
 ---
 
-## Story Event Characteristics
+## Special Story Characteristics
 
-Story events are:
+Special Story events are:
 
 - **Multiple rounds**, so nearly all skills and abilities are useful:
   - *Final wave abilities* activate on the last wave of combat (e.g. wave 5 of 5)
@@ -88,9 +88,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 <div data-lang="ja">
 
-これは新規（または比較的新しい）プレイヤー向けのストーリーイベントガイドです。残念ながら、非常に新しいプレイヤーにとってストーリーイベントは非常に難しい傾向があります。行き詰まってチームの育成に集中する必要があっても心配しないでください。
+これは新規（または比較的新しい）プレイヤー向けのスペシャルストーリーガイドです。残念ながら、非常に新しいプレイヤーにとってスペシャルストーリーは非常に難しい傾向があります。行き詰まってチームの育成に集中する必要があっても心配しないでください。
 
-ストーリーイベントではチャプターをクリアしてカードを1枚入手し、交換所でカードをアンロックします。交換所はメインイベントページにあります - カードはイベント専用通貨で購入でき、イベント終了前に全て使い切りましょう！コストはカードのコピーごとに徐々に増加します。そのため、ストーリーカードは通常オークションで高価です。
+スペシャルストーリーではチャプターをクリアしてカードを1枚入手し、交換所でカードをアンロックします。交換所はメインイベントページにあります - カードはイベント専用通貨で購入でき、イベント終了前に全て使い切りましょう！コストはカードのコピーごとに徐々に増加します。そのため、スペシャルストーリーカードは通常オークションで高価です。
 
 ### 何枚必要？
 
@@ -103,9 +103,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 ---
 
-## ストーリーイベントの特徴
+## スペシャルストーリーの特徴
 
-ストーリーイベントは：
+スペシャルストーリーは：
 
 - **複数ラウンド**なので、ほぼ全てのスキルとアビリティが有用です：
   - *最終ウェーブアビリティ*は戦闘の最後のウェーブで発動（例：5ウェーブ中の5ウェーブ目）
@@ -168,9 +168,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 <div data-lang="ko">
 
-이 가이드는 신규(또는 비교적 새로운) 플레이어를 위한 스토리 이벤트 가이드입니다. 안타깝게도 아주 신규 플레이어에게 스토리 이벤트는 매우 어려울 수 있습니다. 막히더라도 걱정하지 마시고 팀 육성에 집중하세요.
+이 가이드는 신규(또는 비교적 새로운) 플레이어를 위한 스페셜 스토리 가이드입니다. 안타깝게도 아주 신규 플레이어에게 스페셜 스토리는 매우 어려울 수 있습니다. 막히더라도 걱정하지 마시고 팀 육성에 집중하세요.
 
-스토리 이벤트에서는 챕터를 클리어하여 카드 1장을 획득하고 교환소에서 카드를 잠금 해제합니다. 교환소는 메인 이벤트 페이지에 있습니다 - 카드는 이벤트 전용 재화로 구매하며, 이벤트 종료 전에 모두 사용하세요! 비용은 카드 복사본마다 점진적으로 증가합니다. 그래서 스토리 카드는 보통 경매에서 더 비쌉니다.
+스페셜 스토리에서는 챕터를 클리어하여 카드 1장을 획득하고 교환소에서 카드를 잠금 해제합니다. 교환소는 메인 이벤트 페이지에 있습니다 - 카드는 이벤트 전용 재화로 구매하며, 이벤트 종료 전에 모두 사용하세요! 비용은 카드 복사본마다 점진적으로 증가합니다. 그래서 스페셜 스토리 카드는 보통 경매에서 더 비쌉니다.
 
 ### 몇 장이 필요할까요?
 
@@ -183,9 +183,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 ---
 
-## 스토리 이벤트 특징
+## 스페셜 스토리 특징
 
-스토리 이벤트는:
+스페셜 스토리는:
 
 - **다중 라운드**이므로 거의 모든 스킬과 어빌리티가 유용합니다:
   - *최종 웨이브 어빌리티*는 전투의 마지막 웨이브에서 발동 (예: 5웨이브 중 5번째)
@@ -248,9 +248,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 <div data-lang="zh-cn">
 
-这是一份给新手（或相对较新的）玩家的剧情活动指南。不幸的是，对于非常新的玩家来说，剧情活动往往非常困难。如果你卡住了需要专注于培养队伍，不用担心。
+这是一份给新手（或相对较新的）玩家的特别剧情指南。不幸的是，对于非常新的玩家来说，特别剧情往往非常困难。如果你卡住了需要专注于培养队伍，不用担心。
 
-在剧情活动中，你通过通关章节获得一张卡片的单个副本，在交换所解锁该卡片。交换所在活动主页面 - 卡片使用活动专属货币购买，所以活动结束前全部花掉！每张卡片副本的成本会逐渐增加。所以剧情卡在拍卖行通常更贵。
+在特别剧情中，你通过通关章节获得一张卡片的单个副本，在交换所解锁该卡片。交换所在活动主页面 - 卡片使用活动专属货币购买，所以活动结束前全部花掉！每张卡片副本的成本会逐渐增加。所以特别剧情卡在拍卖行通常更贵。
 
 ### 需要多少张？
 
@@ -263,9 +263,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 ---
 
-## 剧情活动特点
+## 特别剧情特点
 
-剧情活动是：
+特别剧情是：
 
 - **多轮制**，所以几乎所有技能和能力都有用：
   - *最终波次能力*在战斗的最后一波激活（例如5波中的第5波）
@@ -329,9 +329,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 <div data-lang="zh-tw">
 
-這是一份給新手（或相對較新的）玩家的劇情活動指南。不幸的是，對於非常新的玩家來說，劇情活動往往非常困難。如果你卡住了需要專注於培養隊伍，不用擔心。
+這是一份給新手（或相對較新的）玩家的特別劇情指南。不幸的是，對於非常新的玩家來說，特別劇情往往非常困難。如果你卡住了需要專注於培養隊伍，不用擔心。
 
-在劇情活動中，你通過通關章節獲得一張卡片的單個副本，在交換所解鎖該卡片。交換所在活動主頁面 - 卡片使用活動專屬貨幣購買，所以活動結束前全部花掉！每張卡片副本的成本會逐漸增加。所以劇情卡在拍賣行通常更貴。
+在特別劇情中，你通過通關章節獲得一張卡片的單個副本，在交換所解鎖該卡片。交換所在活動主頁面 - 卡片使用活動專屬貨幣購買，所以活動結束前全部花掉！每張卡片副本的成本會逐漸增加。所以特別劇情卡在拍賣行通常更貴。
 
 ### 需要多少張？
 
@@ -344,9 +344,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 ---
 
-## 劇情活動特點
+## 特別劇情特點
 
-劇情活動是：
+特別劇情是：
 
 - **多輪制**，所以幾乎所有技能和能力都有用：
   - *最終波次能力*在戰鬥的最後一波激活（例如5波中的第5波）
@@ -411,9 +411,9 @@ Look for :card[580] - sometimes players will include "Holmes" or "SH" in their n
 
 <div data-lang="es">
 
-Esta es una guía de eventos de Historia para jugadores nuevos (o relativamente nuevos). Desafortunadamente para jugadores muy nuevos, los eventos de Historia tienden a ser muy difíciles. No te preocupes si te atascas y necesitas enfocarte en construir tu equipo.
+Esta es una guía de eventos de Historia Especial para jugadores nuevos (o relativamente nuevos). Desafortunadamente para jugadores muy nuevos, los eventos de Historia Especial tienden a ser muy difíciles. No te preocupes si te atascas y necesitas enfocarte en construir tu equipo.
 
-En los eventos de historia limpias capítulos para obtener una sola copia de una carta, desbloqueando la carta en el intercambio. El intercambio está en la página principal del evento - las cartas se compran con moneda específica del evento, ¡así que gástala toda antes de que termine el evento! Los costos aumentan progresivamente por cada copia de carta. Por eso las cartas de historia son típicamente más caras en Subasta.
+En los eventos de historia limpias capítulos para obtener una sola copia de una carta, desbloqueando la carta en el intercambio. El intercambio está en la página principal del evento - las cartas se compran con moneda específica del evento, ¡así que gástala toda antes de que termine el evento! Los costos aumentan progresivamente por cada copia de carta. Por eso las cartas de Historia Especial son típicamente más caras en Subasta.
 
 ### ¿Cuántas Copias?
 
@@ -426,9 +426,9 @@ Una carta de 5 estrellas comienza en nivel 70. Cada copia adicional añade 5 niv
 
 ---
 
-## Características de Eventos de Historia
+## Características de Eventos de Historia Especial
 
-Los eventos de Historia son:
+Los eventos de Historia Especial son:
 
 - **Múltiples rondas**, por lo que casi todas las habilidades y capacidades son útiles:
   - *Habilidades de última ola* se activan en la última ola de combate (ej. ola 5 de 5)
