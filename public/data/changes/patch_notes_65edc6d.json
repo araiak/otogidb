@@ -1,0 +1,1805 @@
+{
+  "version": "65edc6d",
+  "version_date": "2026-05-28",
+  "previous_version": "cbec7f5",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 18
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1488",
+      "name": "Vaiśravaṇa",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953009/otogi/cards_hd/101488_hd_5c6c83c802cce910d6097091d52bf83a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-13 15:00:00",
+            "end": "2026-06-20 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-13 15:00:00', 'end': '2026-06-20 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "1609",
+      "name": "Sasuke Sarutobi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765944/otogi/cards_hd/101609_hd_5f425573808bc48d3347c50cfec75ea8.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "7 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 7 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1611",
+      "name": "Shotaro Fuma",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765943/otogi/cards_hd/101611_hd_b18674eb28ab696aada660c3076fc192.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "5 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 5 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1666",
+      "name": "Tristan",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953008/otogi/cards_hd/101666_hd_640359eeabf5c3b2cb0c522dcfd565bb.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-01 00:00:00",
+            "end": "2026-07-31 23:59:59",
+            "price": 65,
+            "currency": "gApple",
+            "limit": 0,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-01 00:00:00', 'end': '2026-07-31 23:59:59', 'price': 65, 'currency': 'gApple', 'limit': 0, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        }
+      ]
+    },
+    {
+      "id": "1667",
+      "name": "Diamond Dragon",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953001/otogi/cards_hd/101667_hd_836d50468e07b8c4a12086b59e79cbfa.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "180",
+            "event_name": "",
+            "floors": [
+              80,
+              100,
+              150,
+              175,
+              200
+            ],
+            "first_seen": "2026-05-28",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '180', 'event_name': '', 'floors': [80, 100, 150, 175, 200], 'first_seen': '2026-05-28', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1668",
+      "name": "Tristan EX",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953004/otogi/cards_hd/101668_hd_4309b26cf6a8f8c9fbb26ebeec10e1f6.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-06 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-06 15:00:00', 'end': '2026-06-13 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-06 15:00:00",
+            "end": "2026-06-10 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-06 15:00:00', 'end': '2026-06-10 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1669",
+      "name": "Dragon Princess",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953006/otogi/cards_hd/101669_hd_56bce307ca9e5a7ea9d5ba87b7c786b1.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-06 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-06 15:00:00', 'end': '2026-06-13 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-10 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-10 15:00:00', 'end': '2026-06-13 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1670",
+      "name": "Insolentia",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953000/otogi/cards_hd/101670_hd_07322ec8c5b8446363e1742661bc2f7b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "7 items",
+          "display": "Reward Tiers: 0 items → 7 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1672",
+      "name": "Leviathan",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953005/otogi/cards_hd/101672_hd_9202acf4b479f783faaafc54ad6bceea.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "5 items",
+          "display": "Reward Tiers: 0 items → 5 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 5, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 4, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 3, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 2, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1617",
+      "name": "Fire Mistress",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765946/otogi/cards_hd/101617_hd_91d8b5ecd30639d2aee1a604f054c211.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1618",
+      "name": "Water Mistress",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765950/otogi/cards_hd/101618_hd_9bd1032a085f08c65aa4b0d1644c890a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1660",
+      "name": "Dragonslayer",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953003/otogi/cards_hd/101660_hd_7e1ca409533f2af5aefd977111c08e80.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-10 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-10 15:00:00', 'end': '2026-06-13 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-05-25 15:00:00",
+            "end": "2026-06-06 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-05-25 15:00:00', 'end': '2026-06-06 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1662",
+      "name": "The Selfless Summoner",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953002/otogi/cards_hd/101662_hd_005ee0d1275cfeb19388a1e3533ef8f2.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-10 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-10 15:00:00', 'end': '2026-06-13 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-05-25 15:00:00",
+            "end": "2026-06-06 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-05-25 15:00:00', 'end': '2026-06-06 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1664",
+      "name": "Francis Drake",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953003/otogi/cards_hd/101664_hd_dae97097cb832062d6d1a79b0197f190.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "180",
+            "event_name": "",
+            "floors": [
+              40,
+              50,
+              120,
+              160
+            ],
+            "first_seen": "2026-05-28",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '180', 'event_name': '', 'floors': [40, 50, 120, 160], 'first_seen': '2026-05-28', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1665",
+      "name": "Koi Carp",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953009/otogi/cards_hd/101665_hd_ac31bb1fa01a48e70cc7b63e6c1ac0dd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-06-10 15:00:00",
+            "end": "2026-06-13 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-06-10 15:00:00', 'end': '2026-06-13 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-05-25 15:00:00",
+            "end": "2026-06-06 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-05-25 15:00:00', 'end': '2026-06-06 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1673",
+      "name": "Cyclops Dragon",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953007/otogi/cards_hd/101673_hd_eb3e60033da63f65b10d4305a825b7ec.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "180",
+            "event_name": "",
+            "floors": [
+              60,
+              70,
+              140,
+              180
+            ],
+            "first_seen": "2026-05-28",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '180', 'event_name': '', 'floors': [60, 70, 140, 180], 'first_seen': '2026-05-28', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1614",
+      "name": "Mizugumo",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765951/otogi/cards_hd/101614_hd_214d79c8f7089bfc4241aa17ee6ccf79.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "3 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 3 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "178",
+            "event_name": "The Ninjas' Elegy",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1663",
+      "name": "Jewelia",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953000/otogi/cards_hd/101663_hd_2b2d3dd7b7d17cf0ce0c776160370b05.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Reward Tiers: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '180', 'event_name': \"Dragon's Roar - Summer Breeze Superstar\", 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "180",
+            "event_name": "",
+            "floors": [
+              10,
+              20,
+              30
+            ],
+            "first_seen": "2026-05-28",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '180', 'event_name': '', 'floors': [10, 20, 30], 'first_seen': '2026-05-28', 'is_current': False})"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "eventSettings": {
+      "old_count": 2,
+      "new_count": 1,
+      "diff": -1
+    },
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "eventHelpers": {
+      "old_count": 13,
+      "new_count": 10,
+      "diff": -3
+    },
+    "raidBoss": {
+      "old_count": 200,
+      "new_count": 200,
+      "diff": 0
+    },
+    "banner": {
+      "old_count": 534,
+      "new_count": 542,
+      "diff": 8
+    },
+    "raidBattles": {
+      "old_count": 38,
+      "new_count": 38,
+      "diff": 0
+    },
+    "gachaGuarentee": {
+      "old_count": 174,
+      "new_count": 178,
+      "diff": 4
+    },
+    "cardInit": {
+      "old_count": 429,
+      "new_count": 437,
+      "diff": 8
+    },
+    "gachaTrade": {
+      "old_count": 325,
+      "new_count": 331,
+      "diff": 6
+    },
+    "gachaContents": {
+      "old_count": 753,
+      "new_count": 754,
+      "diff": 1
+    },
+    "eventRankings": {
+      "old_count": 19,
+      "new_count": 19,
+      "diff": 0
+    }
+  }
+}

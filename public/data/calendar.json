@@ -1,15 +1,72 @@
 {
-  "generated_at": "2026-05-25T16:29:46Z",
-  "events": [],
+  "generated_at": "2026-05-28T07:23:32Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "180",
+      "start": "2026-05-30T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "name": "Dragon's Roar - Summer Breeze Superstar",
+      "half": "2026-06-06T07:00:00Z",
+      "kill": "2026-06-15T07:00:00Z",
+      "boss_card": {
+        "id": "1667"
+      }
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "283",
-      "start": "2026-05-20T07:00:00Z",
-      "end": "2026-05-28T07:00:00Z",
+      "banner_id": "284",
+      "start": "2026-05-25T07:00:00Z",
+      "end": "2026-06-06T07:00:00Z",
       "cards": [
         {
-          "id": "1634"
+          "id": "1665"
+        },
+        {
+          "id": "1662"
+        },
+        {
+          "id": "1660"
+        }
+      ],
+      "pity_step": 35
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "285",
+      "start": "2026-06-06T07:00:00Z",
+      "end": "2026-06-10T07:00:00Z",
+      "cards": [
+        {
+          "id": "1668"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "285"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "286",
+      "start": "2026-06-10T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "cards": [
+        {
+          "id": "1669"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "285"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "287",
+      "start": "2026-06-13T07:00:00Z",
+      "end": "2026-06-20T07:00:00Z",
+      "cards": [
+        {
+          "id": "1488"
         }
       ],
       "pity_step": 100
@@ -40,6 +97,79 @@
       "price_add": 15,
       "card": {
         "id": "1521"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1660",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-06-10T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "card": {
+        "id": "1660"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1662",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-06-10T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "card": {
+        "id": "1662"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1665",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-06-10T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "card": {
+        "id": "1665"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1668",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-06-06T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "card": {
+        "id": "1668"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1669",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-06-06T07:00:00Z",
+      "end": "2026-06-13T07:00:00Z",
+      "card": {
+        "id": "1669"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1666",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-05-31T16:00:00Z",
+      "end": "2026-07-31T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1666"
       }
     },
     {
@@ -573,6 +703,12 @@
       "event_name": "The Ninjas' Elegy",
       "event_date": "2026-04-29",
       "estimated_date": "2026-11-15"
+    },
+    {
+      "event_id": "180",
+      "event_name": "Dragon's Roar - Summer Breeze Superstar",
+      "event_date": "2026-06-01",
+      "estimated_date": "2027-01-15"
     }
   ]
 }
