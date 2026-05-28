@@ -22,7 +22,7 @@ Three cards from this event stand out as worth paying attention to — whether f
 
 :card[1669] is interesting as a potential phantasma reserve. At MLB it gives the same final round 25% crit rate to the top 2 phantasma as :card[1615] does for divina. This is a bit more relevant because of the strength of :card[1401], and could allow you to either crit cap :card[1401] or swap in :card[549] if you had been using :card[734], that seems like it could be very strong.  Its a bit niche because its likely only usable for very short fights, but this could be a boost for a lot of phatasma players in world boss.  Last month some players found some use for :card[1615], so I think :card[1669] could be at least as useful.  **Niche short-fight world boss pick; potentially an upgrade for Phantasma teams running :card[1401].**
 
-*Update:* LJS as expected — featured banner June 10–13 with a paired exchange at 200 gApple (limit 1).  A single exchange copy is reasonable for most Phantasma players; MLB is a real ask as with most niche cards, but that may appeal to some.
+*Update:* LJS as expected — featured banner June 10–13 with a paired exchange at 200 mochi (limit 1).  A single exchange copy is reasonable for most Phantasma players; MLB is a real ask as with most niche cards, but that may appeal to some.
 
 :card[1672] is a more modern version of :card[495] — the jump from 5% crit rate to 10% crit rate is pretty significant and makes it worth consideration when compared to :card[1307] or :card[1540]. The majority of those two cards' value comes from the benefit to the top attackers anyway, and this card can also cover mixed or anima teams. For multi round battles this is a strong option to trade a healer or a reserve slot. That being said there are strong alternatives in :card[1307] or :card[1540] and multi round battles probably don't need that level of optimization so it's easy enough to skip if you have either card and play divina or phantasma respectively.  But its nice as a flexable option for Special Story and Conquest. Her source isn't confirmed yet, but I'd speculate she's the event ranking reward. If that pans out it shifts things quite a bit — :card[495] was an LJS card, so picking up a straight modern upgrade just for ranking would make :card[1672] excellent value and well worth pushing for. Bear in mind the last event (Alice) ran fairly high cutoffs, so if she is a ranking reward expect to put in at least that much effort to secure her. **Flexible reserve for Special Story and Conquest, especially for mixed or Anima teams — easy to skip if you have :card[1307] or :card[1540], but if she turns out to be the event ranking reward she's well worth pushing for as a far more accessible modern :card[495].**
 
@@ -58,7 +58,7 @@ Three cards from this event stand out as worth paying attention to — whether f
 
 :card[1668] is a greedy attacker in a slot Divina normally fills with passive team buffers (:card[724], :card[536], :card[733], :card[458] — all currently unobtainable, by the way). His personal damage ceiling is capped by low melee crit, but his 60% on-skill DMG amp is real team value, especially in an attribute that runs short on damage amps. He has :card[747] built in, and a dispel, which isn't critical right now but is a nice tack-on. Won't push past the staple buffers if you have them, but a defensible placeholder for anyone who doesn't — and a slightly more active playstyle than parking a leader in the slot for stats. Note he's also fairly ATK-heavy on the stat spread, so you'll want a strong healer behind him to keep him standing on the front line. He's probably fine at 2 copies for Superstar (the 60% amp at Lv75) — MLB isn't worth chasing since the Lv90 ability is just a 10% self DMG boost per wave, but in most cases he won't be your main damage dealer so its a bit expensive. **Defensible placeholder if you're missing the Divina melee buffer staples (:card[724], :card[536], :card[733], :card[458]) — easy skip if you have them; 2 copies for Superstar is enough, don't chase MLB; pair with a strong healer.**
 
-*Update:* LJS confirmed — featured banner June 6–10 with a paired exchange at 200 gApple (limit 1). That flips the verdict to a skip: 200 gApple is too steep for a placeholder, and the Lv90 ability doesn't justify chasing MLB. **Revised: skip — save your orbs for a stronger Divina melee or hold for buffer staples returning to circulation.**
+*Update:* LJS confirmed — featured banner June 6–10 with a paired exchange at 200 mochi (limit 1). That flips the verdict to a skip: 200 mochi is too steep for a placeholder, and the Lv90 ability doesn't justify chasing MLB. **Revised: skip — save your orbs for a stronger Divina melee or hold for buffer staples returning to circulation.**
 
 ---
 
@@ -74,13 +74,13 @@ Three cards from this event stand out as worth paying attention to — whether f
 
 :card[1666] provides 20% DR to all melee allies. You generally don't want to be running a lot of melee so it won't see broad use, but 20% DR across a front line can be useful situationally, and the ability comes online at just 2 copies. If it turns out to be an event card or available for mochi that makes it a mildly interesting pickup — and the single ability makes an event/mochi source fairly plausible. Not enough to invest in, though. **Situationally useful front-line DR — a cheap grab if it's an event/mochi card (ability at 2 copies), but not worth investment.**
 
-*Update:* Monthly exchange — 65 gApple per copy, unlimited copies, June 1 – July 31. The unlimited cap and 2-copy ability unlock make him a real budget option for newer Divina players who specifically need a front-line tank, and per the monthly wildcard pattern expect him to roll into permanent auction around February 2027. **Revised: decent deal for newer Divina players needing a front-line tank; skip otherwise.**
+*Update:* Monthly exchange — 65 mochi per copy, increasing cost per copy, June 1 – July 31. The unlimited cap and 2-copy ability unlock make him a real budget option for newer Divina players who specifically need a front-line tank, and per the monthly wildcard pattern expect him to roll into permanent auction around February 2027. **Revised: decent deal for newer Divina players needing a front-line tank; skip otherwise.**
 
 ---
 
 ## Gacha Helper Exchange
 
-These three share the same paired exchange slot alongside the LJS window: 50 gApple per copy, 5-copy limit, June 10–13.
+These you will might buy for their event bonuses, but they are ok as utility assists worth keeping around till you get better options.
 
 :card[1660] is 17% DR which is weaker than :card[1062] so it's probably better to wait for him to come to auction if you want to have a self DR card. **Wait for :card[1062] on auction instead.**
 
@@ -112,15 +112,15 @@ Event Cards:
 - :card[1673] — **Skip** — look for 40%+ crit damage reserves instead
 
 Limited Jewel Summons:
-- :card[1668] — **Skip** — LJS pricing (200 gApple) doesn't justify a placeholder; save orbs for a stronger Divina melee or buffer staples returning to circulation
+- :card[1668] — **Skip** — LJS pricing (200 mochi) doesn't justify a placeholder; save orbs for a stronger Divina melee or buffer staples returning to circulation
 
 Standard Gacha:
 - :card[1634] — **Niche pick for very high-end saturated teams** — newer players shouldn't invest; most others should wait for :card[1444] or :card[707] in auction. No rush — he's in the standard pool
 
 Monthly Exchange:
-- :card[1666] — **Decent deal for newer Divina players needing a front-line tank** — 65 gApple, unlimited copies; skip if you don't need a Divina front-line
+- :card[1666] — **Decent deal for newer Divina players needing a front-line tank** — 65 mochi, unlimited copies; skip if you don't need a Divina front-line
 
-Gacha Helper Exchange (50 gApple × 5, Jun 10–13):
+Gacha Helper Exchange (50 mochi × 5, Jun 10–13):
 - :card[1660] — **Wait for :card[1062]** — 17% DR is weaker
 - :card[1662] — **Grab if you want one on hand** — 6% HP regen, non-critical niche
 - :card[1665] — **For newer players** — 43% skill damage; don't specifically target
