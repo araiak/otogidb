@@ -1,6 +1,6 @@
 {
   "version": "1.6.0",
-  "last_updated": "2026-05-28",
+  "last_updated": "2026-05-30",
   "description": "Tracked bugs in game data discovered through reverse engineering and automated auditing. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -2747,6 +2747,36 @@
           "game_version": "cbec7f5"
         }
       ]
+    },
+    {
+      "id": "BUG-069",
+      "card_id": 1673,
+      "card_name": "Cyclops Dragon",
+      "affected_field": "skill",
+      "affected_id": "1673",
+      "category": "description",
+      "severity": "visual",
+      "summary": "Skill description shows Assist placeholder text on Ranged card",
+      "details": {
+        "description_says": "Can be used as bond and in guild conquest.",
+        "expected_behavior": "Description should describe the actual skill effect: SHIELD -18% (-0.55% scale) on 2 enemies for 8 seconds (DMG Up debuff).",
+        "card_type": "Ranged",
+        "card_type_id": 2,
+        "de_field": "SHIELD<-18.00%,-0.55%,8>",
+        "ts_field": "enemy;count<2>"
+      },
+      "analysis": "The skill description \"Can be used as bond and in guild conquest.\" is the standard placeholder text for Assist-type cards (which cannot use skills in battle, see BUG-002). Card 1673 (Cyclops Dragon) is a Ranged card with a real skill that applies a SHIELD debuff to 2 enemies, but the localization shows the Assist placeholder text instead of describing the actual effect. This is the only non-Assist card with this description text out of 165 cards using it.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-05-30",
+      "description_check": {
+        "condition": "not_contains",
+        "value": "Can be used as bond"
+      },
+      "last_checked": "2026-05-30",
+      "check_history": []
     }
   ],
   "categories": {
