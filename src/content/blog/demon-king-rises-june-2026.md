@@ -1,6 +1,6 @@
 ---
 title: "Demon King Rises: June 2026 Auction"
-description: "Analysis of the June auction headlined by Demon King Rises, covering the Guild Conquest drop, ranking cards, Limited Jewel Summons, and the possible reruns"
+description: "Analysis of the June auction headlined by Demon King Rises, covering the Guild Conquest drop, ranking cards, Limited Jewel Summons, the exchange card, and the Record of the Spirit Halloween rerun"
 date: "2026-06-13"
 author: "Araiak"
 tags: ["analysis", "auction"]
@@ -8,7 +8,7 @@ tags: ["analysis", "auction"]
 
 <div data-lang="en">
 
-This month we feature Demon King Rises, with a rerun of either Record of the Spirit Halloween or Maze of Red Leaves. The reason I list two is that there's some precedent for skipping seasonal events and moving them to special auction instead — so if you're holding out for :card[580], either this is your month or he could be back in October, or both.
+This month we feature Demon King Rises, with a rerun of Record of the Spirit Halloween. I'd hedged this one against Maze of Red Leaves — there's precedent for seasonal events getting shifted to special auction instead — but it's confirmed as Halloween, so if you're holding out for :card[580], this is your month.
 
 ---
 
@@ -32,25 +32,19 @@ None of the event 3★ and 4★ cards are of note.
 
 ---
 
+## Exchange
+
+:card[2196] is this month's exchange card — a 50% crit damage assist. At exchange price she could serve as a placeholder until you can pick up :card[1444] or :card[707], but she's weaker than :card[723] or :card[643], so she'd have to be real cheap to be worth it even in that role. For most players this is a skip — if you can save up for any of the auction cards listed above, do that instead. **Skip for most; only a cheap placeholder for :card[1444]/:card[707] if you've got nothing better.**
+
+---
+
 ## Rerun
 
-The rerun is uncertain this month. The most likely candidate is Record of the Spirit Halloween, but there's precedent for seasonal events being moved to special auction instead, so Maze of Red Leaves is also possible. I'll cover both.
-
-### Record of the Spirit Halloween
-
-This is the most likely re-run, but it's possible it could get moved to special auction.
+The rerun this month is Record of the Spirit Halloween.
 
 :card[579] is sufficiently powercrept. 20% damage to all allies is nice, but most players shouldn't spend jewels on a card that's only a minor boost to their team and will be replaced later. **Skip — minor 20% all-ally damage boost, powercrept.**
 
 :card[580] is a staple drop rate and XP assist card — do I need to say more. He's required if you're trying to min/max XP/drop rate, but this isn't a required niche. It only takes 3 copies to unlock fully as well, which is nice in this day and age where cards most all require 5 copies. The only real question is the stock: when it came up the first time around, stock was very high, but many copies may be lost to time. If stock is very high you can try to buy, seal, and sell copies back — that's what I did on the first run myself. **Must buy for XP/drop-rate min-maxers (only 3 copies to fully unlock); otherwise fine to skip — watch the stock.**
-
-### Maze of Red Leaves
-
-Less likely but possible, so we'll cover it.
-
-:card[596] gives 60% skill damage and a 20% chance to stun on normal attack. I imagine he could be very strong in real PvP, but very few people do that. Maybe there's some stun niche to attack-speed up and stun-lock something, but in most cases you're better off just blasting through. **Skip — PvP stun niche only.**
-
-:card[597] is an attacker with a 45% slow at the start of each wave. 45% is actually quite high for a slow and does a good job reducing incoming normal-attack damage — but that's all she brings; she offers no team value beyond the defensiveness. Cards like :card[690] or :card[725] pair a slow with real team value (crit damage, damage amps, skill damage), which makes them the better picks for the slot — though both may be a while before they come around for a second re-run. **Skip — the 45% slow is high but purely defensive; :card[690] or :card[725] give both defense and team value, if you can wait for them to re-run.**
 
 ---
 
@@ -65,13 +59,12 @@ Limited Jewel Summons:
 - :card[1453] — **Skip** — better last-round survivability options (:card[661], :card[1590], :card[1438]); not worth jewels
 - :card[2370] — **Niche skip** — skill-damage and defensive halves want different cards; :card[1444] owns the carry slot, and :card[1437] is a better Phantasma defensive assist next month
 
-Rerun — Record of the Spirit Halloween *(most likely)*:
+Exchange:
+- :card[2196] — **Skip for most** — 50% crit damage; only a cheap placeholder until :card[1444]/:card[707], and weaker than :card[723]/:card[643]
+
+Rerun — Record of the Spirit Halloween:
 - :card[579] — **Skip** — minor all-ally damage, powercrept
 - :card[580] — **Must buy for XP/drop-rate min-maxers** — only 3 copies to fully unlock; otherwise fine to skip, watch stock
-
-Rerun — Maze of Red Leaves *(less likely)*:
-- :card[596] — **Skip** — PvP stun niche only
-- :card[597] — **Skip** — 45% slow is high but purely defensive; :card[690]/:card[725] give defense plus team value (though a while from re-running)
 
 ---
 
