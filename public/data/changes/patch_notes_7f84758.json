@@ -1,0 +1,1440 @@
+{
+  "version": "7f84758",
+  "version_date": "2026-06-14",
+  "previous_version": "a671b35",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 19
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "579",
+      "name": "Yuki Onna[HW2]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634488/otogi/cards_hd/100579_hd_affd54a06b15b7af1d3bfcbd96ac6703.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "580",
+      "name": "Sherlock Holmes",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634489/otogi/cards_hd/100580_hd_782afbbb8ce09c4f2ad5a0822ed49320.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "1453",
+      "name": "Cloud Mirror",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634724/otogi/cards_hd/101453_hd_fde377c52036f2d61daf5a15546d2df1.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 100000,
+          "display": "Max Auction Price: Added (100000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 1000,
+          "display": "Min Auction Price: Added (1000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "1489",
+      "name": "Shuten-doji (Wild)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634729/otogi/cards_hd/101489_hd_f84dc3b69afee1f864c559e417f9d32b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "1494",
+      "name": "Goddess of Good Fortune",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634733/otogi/cards_hd/101494_hd_c156255303ac724bebe7b9984a7c510f.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "1498",
+      "name": "Dojigiri",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634736/otogi/cards_hd/101498_hd_86af02fd06d3a912accc965fb92684bd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "2196",
+      "name": "Cat Sith [Circus]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634772/otogi/cards_hd/102196_hd_2033a28c5bfd9a8dfc15894281ad9165.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "auction",
+          "display": "Sources: Added (auction)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Max Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 30,
+          "display": "Min Auction Price: Added (30)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "2370",
+      "name": "Peculiar Raine",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634773/otogi/cards_hd/102370_hd_24115c4cd3d48e8d9fe29c87f1e4fd0f.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 100000,
+          "display": "Max Auction Price: Added (100000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 1000,
+          "display": "Min Auction Price: Added (1000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "571",
+      "name": "Dorothy[HW2]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634478/otogi/cards_hd/100571_hd_e30ca6d1bb4d0adff8413a668d920c98.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "572",
+      "name": "Zombilina[HW2]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634479/otogi/cards_hd/100572_hd_64f423b67072f1835467711b3edcd3e3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "573",
+      "name": "Aka \"Red\" Chochin[HW2]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634481/otogi/cards_hd/100573_hd_c430dd0c11765fd093dd03d8fa5d9cdf.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "581",
+      "name": "Gargoyle[HW2]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634490/otogi/cards_hd/100581_hd_c12534da8993109602fc546557eda5c4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-11-04 15:00:00",
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: 2025-11-04 15:00:00 → 2026-06-18 15:00:00"
+        }
+      ]
+    },
+    {
+      "id": "1452",
+      "name": "Go-Go",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634723/otogi/cards_hd/101452_hd_4d596ddf0e7fd90e2bd9c605ad6e47ab.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "2 items",
+          "new": "3 items",
+          "display": "Sources: 2 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "1476",
+      "name": "Hariti",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634727/otogi/cards_hd/101476_hd_118d25992c4666d55d68836d3fd596fb.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50,
+          "display": "Max Auction Price: Added (50)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Min Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "1491",
+      "name": "Kintaro",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634730/otogi/cards_hd/101491_hd_f092166e9522c8a7125024d04cc60a7a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "1493",
+      "name": "Kishimojin[aya]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634732/otogi/cards_hd/101493_hd_8d1f3a1270820ce9c91900f4b9257248.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "1496",
+      "name": "Hive Hunter",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634734/otogi/cards_hd/101496_hd_7b806c885448c9d1a04eb76a4e607cdc.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "3 items",
+          "new": "4 items",
+          "display": "Sources: 3 items → 4 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.3",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-06-18 15:00:00",
+          "display": "End Date: Added (2026-06-18 15:00:00)"
+        }
+      ]
+    },
+    {
+      "id": "1497",
+      "name": "Ibaraki Doji[aya]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634735/otogi/cards_hd/101497_hd_d20cae1de404babd392535d20187fa46.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50,
+          "display": "Max Auction Price: Added (50)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Min Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    },
+    {
+      "id": "1495",
+      "name": "Sakatokego no Kami",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634734/otogi/cards_hd/101495_hd_cd6c7138031da8bbfdd8bfaa78f12d0d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": "event",
+          "new": "auction",
+          "display": "Sources: event → auction"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 5,
+          "display": "Max Auction Price: Added (5)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 2,
+          "display": "Min Auction Price: Added (2)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": false,
+          "display": "Is Time Limited: Added (False)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gApple",
+          "display": "Currency: Added (gApple)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "",
+          "display": "End Date: Added ()"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "tradeMonster": {
+      "old_count": 533,
+      "new_count": 546,
+      "diff": 13
+    }
+  }
+}
