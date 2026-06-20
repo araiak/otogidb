@@ -3,6 +3,7 @@ import BaseLayout from '../../../layouts/BaseLayout.astro';
 import { getCollection, render } from 'astro:content';
 import { formatDate } from '../../../lib/formatters';
 import CardReferencePopups from '../../../components/blog/CardReferencePopups';
+import GlossaryPopups from '../../../components/blog/GlossaryPopups';
 import FilteredCardsBlock from '../../../components/blog/FilteredCardsBlock';
 import ListBlock from '../../../components/blog/ListBlock';
 import TeamBlock from '../../../components/blog/TeamBlock';
@@ -12,6 +13,7 @@ import { getImageUrl } from '../../../lib/images';
 // Import cards, skills, and tier data for popups
 import cardsDataRaw from '../../../data/cards.json';
 import skillsDataRaw from '../../../data/skills.json';
+import glossaryData from '../../../data/glossary.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
 const skillsData = (skillsDataRaw as any).skills || {};
@@ -223,6 +225,9 @@ const jsonLd = {
     <!-- Card reference hover popups -->
     <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
 
+    <!-- Glossary term definition popups -->
+    <GlossaryPopups client:load glossary={glossaryData} />
+
     <!-- Filter block card grids with hover popups -->
     <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
 
@@ -315,6 +320,13 @@ const jsonLd = {
     margin: 1em 0;
     font-style: italic;
     color: var(--color-text-secondary);
+  }
+
+  .glossary-term {
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    cursor: help;
   }
 
   .prose-spoiler {

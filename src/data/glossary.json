@@ -1,0 +1,212 @@
+{
+  "LJS": {
+    "definition": "Limited Jewel Summon — the premium limited banner that runs alongside an event. It costs jewels (the game's real-money currency), and its cards are usually the strongest of the batch.",
+    "aliases": ["Limited Jewel Summon"]
+  },
+  "mochi": {
+    "definition": "Mochi — the primary free-to-play currency, earned mainly by selling cards of 3★ rarity or higher. It's spent to acquire cards, so it's a valuable resource for building a team without paying.",
+    "aliases": ["mochis"]
+  },
+  "invoker": {
+    "definition": "The standard gacha summon currency, used to pull on banners. Earned from World Boss, Guild Conquest, and as occasional drops and rewards from other content; can also be exchanged for mochi. Save invokers for cards you really want.",
+    "aliases": ["invokers"]
+  },
+  "orb": {
+    "definition": "A PvP-earned currency, capped at 2 five-star (5★) orbs and 2 four-star (4★) orbs per month. An orb is used to limit break a card of the matching rarity (a 5★ orb on a 5★ card). Because the monthly supply is so small, 'orbing' a card is a major investment.",
+    "aliases": ["orbs", "orbing"]
+  },
+  "MLB": {
+    "definition": "Max Limit Break — a card raised to its highest level cap. You reach it by combining the required number of duplicate copies of the card.",
+    "aliases": ["max limit break"]
+  },
+  "limit break": {
+    "definition": "Combining a duplicate copy of a card to raise its level cap (and stats). Each copy is one limit break; a card needs a set number of copies to reach Max Limit Break (MLB). This is why a card needing '5 copies' is expensive.",
+    "aliases": ["limit broken", "limit breaks"]
+  },
+  "DR": {
+    "definition": "Damage Reduction — the defensive 'shield' stat that lowers incoming damage by a percentage, capped at 85%. Its opposite (a negative shield) is damage amp.",
+    "aliases": ["damage reduction", "DMG reduction"]
+  },
+  "endless": {
+    "definition": "An endless game mode (also called Challenge mode) with continuous waves of enemies. Cards that ramp up over time or clear whole waves shine here.",
+    "aliases": ["challenge mode", "endless dungeon"]
+  },
+  "ranking": {
+    "definition": "Event ranking — a leaderboard during an event where the top scorers earn an exclusive 'ranking reward' card. A 'half-ranking' card is a weaker reward given at a lower rank threshold.",
+    "aliases": ["ranking reward", "half-ranking"]
+  },
+  "greedy": {
+    "definition": "A 'greedy' attacker is built purely for damage with little support value; a 'greedy assist' is a support card whose buffs only benefit one self-focused carry rather than the whole team.",
+    "aliases": ["greedy attacker", "greedy assist"]
+  },
+  "progressive": {
+    "definition": "A buff that grows over the course of a battle (e.g. progressive ATK or crit climbs each wave/turn), so the card gets stronger the longer the fight goes."
+  },
+  "crit cap": {
+    "definition": "Crit rate caps at 100%. Once a carry reaches 100% crit rate, extra crit rate is wasted — it 'overcaps' and unlocks no additional damage. Crit rate only pays off while you're still climbing toward 100%.",
+    "aliases": ["crit ceiling", "crit rate ceiling", "overcap", "overcaps", "overcapping"]
+  },
+  "soul stone": {
+    "definition": "The game's generic currency (like gold), earned from almost all content and required to level up cards. A 'soul stone boost' card increases how many you earn.",
+    "aliases": ["soul stones", "soul stone boost"]
+  },
+  "assist": {
+    "definition": "A card type that can't be placed on a team to fight — instead it's slotted onto another card to grant that card (or the team) its buffs. Filling out good assists is a core part of team building.",
+    "aliases": ["assists"]
+  },
+  "wave": {
+    "definition": "Battles are split into waves (also called rounds) of enemies. The 'final wave' is the last one — many buffs are timed to trigger at its start, which makes them strong in short fights but weaker in long content.",
+    "aliases": ["final wave", "waves", "round", "rounds", "multi-round"]
+  },
+  "carry": {
+    "definition": "Your main damage dealer — the card the rest of the team is built to buff. A 'crit-rate carry' is a carry whose kit pushes the team's crit rate.",
+    "aliases": ["carries"]
+  },
+  "damage amp": {
+    "definition": "Damage amplification — increases the damage a target takes (under the hood it's a negative shield, a '-shield'). It stacks additively, and in some modes such as World Boss total damage amp is capped at 75%, so stacking past the cap is wasted and always-on 'passive' amps can crowd out other amp effects.",
+    "aliases": ["DMG amp", "damage amps", "damage amplification"]
+  },
+  "silence": {
+    "definition": "A debuff that stops an enemy from using their skill. Often attached to a card's attack or ability.",
+    "aliases": ["silenced"]
+  },
+  "stepping stone": {
+    "definition": "A cheap, good-enough card used early to fill a slot, then replaced once you can afford a stronger (usually multi-buff) option. Fine for now, but a long-term dead end.",
+    "aliases": ["stepping-stone", "stepping stones"]
+  },
+  "additive": {
+    "definition": "Most buffs in Otogi stack additively — two +20% buffs give +40%, not a compounded amount. The exception is level-driven ATK, which multiplies on top of your additive buff stack, so raising a carry's base ATK quietly scales every percentage buff applied to it.",
+    "aliases": ["additively"]
+  },
+  "Anima": {
+    "definition": "One of the three battle attributes. Anima is strong against Divina and weak to Phantasma. The triangle is Anima → Divina → Phantasma → Anima."
+  },
+  "Divina": {
+    "definition": "One of the three battle attributes. Divina is strong against Phantasma and weak to Anima. The triangle is Anima → Divina → Phantasma → Anima."
+  },
+  "Phantasma": {
+    "definition": "One of the three battle attributes. Phantasma is strong against Anima and weak to Divina. The triangle is Anima → Divina → Phantasma → Anima."
+  },
+  "Neutral": {
+    "definition": "The off-triangle attribute: it deals and takes normal damage versus every attribute (no advantage or disadvantage)."
+  },
+  "Healer": {
+    "definition": "A card role that auto-heals the most injured ally each turn (for ATK × 1.1) instead of attacking, and only attacks once the whole team is at full HP. This healing is innate to the type — it isn't a skill, so it can't be silenced.",
+    "aliases": ["healers"]
+  },
+  "Melee": {
+    "definition": "A front-line card role that auto-attacks the nearest enemy.",
+    "aliases": ["melees"]
+  },
+  "Ranged": {
+    "definition": "A back-line card role that auto-attacks the nearest enemy from range."
+  },
+  "crit rate": {
+    "definition": "Your chance to land a critical hit (a crit deals 2× damage). It caps at 100% — see crit cap. Distinct from crit damage.",
+    "aliases": ["crit chance"]
+  },
+  "crit DMG": {
+    "definition": "Critical damage — how much extra damage your crits deal on top of the base 2× crit multiplier. It multiplies that base, so +100% crit damage makes a crit hit for 4× (2× base × 2), not 3×. Unlike crit rate it has no cap, so it keeps scaling.",
+    "aliases": ["crit damage", "critical damage"]
+  },
+  "skill DMG": {
+    "definition": "Skill damage — a buff that increases the damage dealt by a card's active skill. Stacks additively and has no cap.",
+    "aliases": ["skill damage"]
+  },
+  "lifesteal": {
+    "definition": "Healing the attacker for a portion of the damage they deal.",
+    "aliases": ["life steal"]
+  },
+  "cleanse": {
+    "definition": "Removes debuffs from your own allies.",
+    "aliases": ["cleanses"]
+  },
+  "dispel": {
+    "definition": "Removes buffs from enemies.",
+    "aliases": ["dispels"]
+  },
+  "immunity": {
+    "definition": "Prevents a specific debuff (such as poison) from being applied."
+  },
+  "stun": {
+    "definition": "A crowd-control debuff: the target cannot act until it wears off.",
+    "aliases": ["stunned"]
+  },
+  "freeze": {
+    "definition": "A crowd-control debuff: the target cannot act, but can break free early when it takes damage.",
+    "aliases": ["frozen"]
+  },
+  "petrify": {
+    "definition": "A crowd-control debuff (Stone): the target cannot act and takes reduced damage while petrified.",
+    "aliases": ["petrified"]
+  },
+  "paralysis": {
+    "definition": "A crowd-control debuff (Numb): the target has a 50% chance to fail each action.",
+    "aliases": ["paralyzed", "numb"]
+  },
+  "sleep": {
+    "definition": "A crowd-control debuff: the target cannot act, but wakes early when it takes damage."
+  },
+  "poison": {
+    "definition": "A damage-over-time debuff that deals damage each second for its duration."
+  },
+  "burn": {
+    "definition": "A damage-over-time debuff that deals damage each second for its duration."
+  },
+  "AoE": {
+    "definition": "Area of Effect — an attack or effect that hits many targets at once (5+), as opposed to single- or multi-target.",
+    "aliases": ["area of effect"]
+  },
+  "spirit shards": {
+    "definition": "The resource skills cost to cast. They build up during a battle, and each cast costs more than the last.",
+    "aliases": ["spirit shard"]
+  },
+  "auction": {
+    "definition": "The in-game auction house — buy and sell a limited set of tradeable cards using Jewels or Mochi. Unlocks at player level 30.",
+    "aliases": ["auction house"]
+  },
+  "exchange": {
+    "definition": "An in-game shop where you spend currency (mainly Mochi) on specific cards and other goods — perk-up pots, invokers, card inventory slots, and more. Includes the monthly Mochi exchange and the permanent Soulstone exchange.",
+    "aliases": ["exchange shop"]
+  },
+  "jewel": {
+    "definition": "The premium real-money currency, used for Limited Jewel Summon (LJS) banners and to pay high auction prices.",
+    "aliases": ["jewels"]
+  },
+  "world boss": {
+    "definition": "A monthly co-op boss fight, ranked by the total damage you deal.",
+    "aliases": ["world bosses"]
+  },
+  "special story": {
+    "definition": "A game mode (also called Tower) where you progress through story chapters. The team 'race bonus' (extra damage from matching attributes and your leader) applies here, and you gain player XP from these battles.",
+    "aliases": ["special story mode", "tower"]
+  },
+  "conquest": {
+    "definition": "A conquest battle mode, also called Raid. Unlike special story, conquest battles don't grant player XP. In Guild Conquest, assist cards and bonds contribute.",
+    "aliases": ["guild conquest", "raid", "raids"]
+  },
+  "reserve": {
+    "definition": "A reserve team slot — the card contributes its passive abilities only; it never auto-attacks or casts a skill.",
+    "aliases": ["reserves"]
+  },
+  "drop rate": {
+    "definition": "A buff that increases item/reward drops from content.",
+    "aliases": ["drop rate boost"]
+  },
+  "tank": {
+    "definition": "A defensive, high-survivability card — usually a Melee — built to soak damage rather than deal it.",
+    "aliases": ["tanky"]
+  },
+  "attack speed": {
+    "definition": "How fast a card auto-attacks (the SPD stat). Note that speed buffs are halved when applied and cap at +100%.",
+    "aliases": ["speed", "atk speed", "SPD"]
+  },
+  "highest ATK": {
+    "definition": "Single-target buffs (and some abilities) are applied to your highest-ATK ally. Players sometimes tweak ATK values to control which card receives them.",
+    "aliases": ["highest-atk", "highest atk ally", "highest attack"]
+  },
+  "level": {
+    "definition": "Can mean a card's level (raises its stats, with the cap set by limit break) or your player level (account progression that unlocks features). Context decides which.",
+    "aliases": ["levels"]
+  }
+}
