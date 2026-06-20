@@ -18106,5 +18106,474 @@
       "DMG Reduction"
     ],
     "synergy_partners": []
+  },
+  "171701": {
+    "id": "171701",
+    "name": "Sturdy Bridge",
+    "description": "Normal attack targets have 28% chances of increasing 13% more DMG taken.(only take effect once to the team)",
+    "card_id": "1717",
+    "card_name": "Great Galactic Bridge",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<28.00%,0%>;SHIELD<-13.00%,0%,8>",
+    "o": false,
+    "tags": [
+      "On Attack",
+      "DMG Amp"
+    ],
+    "synergy_partners": []
+  },
+  "172801": {
+    "id": "172801",
+    "name": "Zero Gravity",
+    "description": "Increases 43% of Crit DMG.(only take effect once to the team)",
+    "card_id": "1728",
+    "card_name": "Hayate Space Shuttle",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT_ATK<43.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "171301": {
+    "id": "171301",
+    "name": "Starlight Threads",
+    "description": "Reflects 13% of DMG taken back to attacker.(only take effect once to the team)",
+    "card_id": "1713",
+    "card_name": "Loom",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "REVENGE<13.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Counter"
+    ],
+    "synergy_partners": []
+  },
+  "172401": {
+    "id": "172401",
+    "name": "Tanabata Wish",
+    "description": "All allies take 3% less DMG.(only take effect once to the team)",
+    "card_id": "1724",
+    "card_name": "Bamboo Sprig",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SHIELD<3.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "172601": {
+    "id": "172601",
+    "name": "Everlasting Love",
+    "description": "Increases 6% all Divina team members' Crit Rate.(only take effect once to the team)",
+    "card_id": "1726",
+    "card_name": "Romeo (Tanabata)",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT<6.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "172701": {
+    "id": "172701",
+    "name": "Love Beyond Death",
+    "description": "Increases 48% of DMG dealt at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1727",
+    "card_name": "Juliet (Tanabata)",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "ATK<48.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "171801": {
+    "id": "171801",
+    "name": "Shy Girl",
+    "description": "Increases 17% of Max HP.(only take effect once to the team)",
+    "card_id": "1718",
+    "card_name": "Satori (Tanabata)",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HP<17.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "171901": {
+    "id": "171901",
+    "name": "Stardust Collector",
+    "description": "Decreases 10% the ATK speed of all foes at the start of each wave.\r",
+    "card_id": "1719",
+    "card_name": "Shotaro Fuma (Tanabata)",
+    "er": "entry_wave",
+    "ts": "enemy;count<5>",
+    "de": "SPD<-10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "AoE",
+      "Slow"
+    ],
+    "synergy_partners": []
+  },
+  "171902": {
+    "id": "171902",
+    "name": "Slacker Extraordinaire",
+    "description": "Increases 40% of ATK speed.",
+    "card_id": "1719",
+    "card_name": "Shotaro Fuma (Tanabata)",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SPD<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "172201": {
+    "id": "172201",
+    "name": "Stellar Guardian",
+    "description": "Restores 15% HP to Anima team members at the start of each wave.",
+    "card_id": "1722",
+    "card_name": "Milky Way",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "HEAL<15.00%,0%,1>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Heal"
+    ],
+    "synergy_partners": []
+  },
+  "172202": {
+    "id": "172202",
+    "name": "Romantic Milky Way",
+    "description": "at the start of each wave, all foes take 15% more damage.",
+    "card_id": "1722",
+    "card_name": "Milky Way",
+    "er": "entry_wave",
+    "ts": "enemy;count<5>",
+    "de": "SHIELD<-15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "AoE",
+      "DMG Amp"
+    ],
+    "synergy_partners": []
+  },
+  "172001": {
+    "id": "172001",
+    "name": "Romantic Passion",
+    "description": "Increases own level by 10 when Hikoboshi is on the team.",
+    "card_id": "1720",
+    "card_name": "Orihime",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "LEVEL<10,0>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Level Boost"
+    ],
+    "synergy_partners": [
+      "299",
+      "513",
+      "1721"
+    ]
+  },
+  "172002": {
+    "id": "172002",
+    "name": "Daughter of the Heavenly Emperor",
+    "description": "Increases 50% of Crit DMG by the 2 allies with the highest ATK.",
+    "card_id": "1720",
+    "card_name": "Orihime",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT_ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "172101": {
+    "id": "172101",
+    "name": "Carnival Planner",
+    "description": "Increases own level by 10 when Orihime is on the team.",
+    "card_id": "1721",
+    "card_name": "Hikoboshi",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "LEVEL<10,0>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Level Boost"
+    ],
+    "synergy_partners": [
+      "300",
+      "510",
+      "1720"
+    ]
+  },
+  "172102": {
+    "id": "172102",
+    "name": "Unwavering Love",
+    "description": "Increases 40% of Crit Rate and 40% Crit DMG at the start of the final wave.",
+    "card_id": "1721",
+    "card_name": "Hikoboshi",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "CHIT<40.00%,0%>;CHIT_ATK<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Crit Rate",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173401": {
+    "id": "173401",
+    "name": "Star Halo",
+    "description": "Increases 40% of Skill DMG and 40% Crit DMG at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1734",
+    "card_name": "Andromeda (Tanabata)",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<40.00%,0%>;CHIT_ATK<40.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Skill DMG",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173402": {
+    "id": "173402",
+    "name": "Snack Lover",
+    "description": "Inflicts Silence on all Phantasma team members and Increases 35% of their DMG dealt at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1734",
+    "card_name": "Andromeda (Tanabata)",
+    "er": "last_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "SILENCE<5>;ATK<35.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Silence",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "173601": {
+    "id": "173601",
+    "name": "Charming Evil God",
+    "description": "Increases 15% of skill DMG dealt at the start of each wave.",
+    "card_id": "1736",
+    "card_name": "Nyarlathotep (Tanabata)",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173602": {
+    "id": "173602",
+    "name": "Hidden Malice",
+    "description": "Increases 10% of ATK speed at the start of each wave.",
+    "card_id": "1736",
+    "card_name": "Nyarlathotep (Tanabata)",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SPD<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "173001": {
+    "id": "173001",
+    "name": "Oni King's Coercion",
+    "description": "Skill attacks decrease target's ATK speed by 50%.",
+    "card_id": "1730",
+    "card_name": "Shuten-doji (Calm) (Tanabata)",
+    "er": "attack_skill",
+    "ts": "none",
+    "de": "SPD<-50.00%,0%,8>",
+    "o": true,
+    "tags": [
+      "On Skill",
+      "Slow"
+    ],
+    "synergy_partners": []
+  },
+  "173002": {
+    "id": "173002",
+    "name": "Summer Night Carnival",
+    "description": "Increases 10% of DMG dealt at the start of each wave.",
+    "card_id": "1730",
+    "card_name": "Shuten-doji (Calm) (Tanabata)",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "173101": {
+    "id": "173101",
+    "name": "Bottomless Stomach",
+    "description": "Increases 15% of DMG of Phantasma team members at the start of each wave.",
+    "card_id": "1731",
+    "card_name": "Behemoth (Calm) (Tanabata)",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "172301": {
+    "id": "172301",
+    "name": "Fangirl's Obsession",
+    "description": "Increases 55% of Skill DMG at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1723",
+    "card_name": "Ibaraki Doji (Tanabata)",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<55.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173501": {
+    "id": "173501",
+    "name": "Pop Superstar",
+    "description": "Increases 100% Crit DMG to skill targets.",
+    "card_id": "1735",
+    "card_name": "Leviathan (Tanabata)",
+    "er": "attack_skill",
+    "ts": "none",
+    "de": "CHIT_ATK<100.00%,0%,8>",
+    "o": true,
+    "tags": [
+      "On Skill",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173502": {
+    "id": "173502",
+    "name": "Summer Hit",
+    "description": "Increases 15% of skill DMG of Phantasma team members at the start of each wave.",
+    "card_id": "1735",
+    "card_name": "Leviathan (Tanabata)",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "173201": {
+    "id": "173201",
+    "name": "Elegant Temperament",
+    "description": "At the start of the final wave, enemy with the most HP takes 14% more damage.(only take effect once to the team)",
+    "card_id": "1732",
+    "card_name": "Bisque Doll (Tanabata)",
+    "er": "last_wave",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SHIELD<-14.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Single",
+      "DMG Amp"
+    ],
+    "synergy_partners": []
+  },
+  "172901": {
+    "id": "172901",
+    "name": "Space Pirate",
+    "description": "Increases 50% of the number of soulstones received from battle.",
+    "card_id": "1729",
+    "card_name": "Bonnie Anne (Tanabata)",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "COIN<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Soulstone Boost"
+    ],
+    "synergy_partners": []
   }
 }

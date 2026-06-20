@@ -13997,6 +13997,261 @@
         "type_name": "Ranged"
       }
     },
+    "1713": {
+      "abilities": [
+        {
+          "description": "將自身所受傷害反射13%至攻擊者（除助戰外，己方全體僅生效1次）",
+          "name": "星光絲線",
+          "tags": [
+            "Self",
+            "Counter"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101713",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1713",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "織布機",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "電光飾帶",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1717": {
+      "abilities": [
+        {
+          "description": "使普通攻擊目標28%概率所受傷害13%增加（除助戰外，己方全體僅生效1次）",
+          "name": "堅固橋樑",
+          "tags": [
+            "On Attack",
+            "DMG Amp"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101717",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1717",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "銀河大橋",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "閃光一擊",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1718": {
+      "abilities": [
+        {
+          "description": "血量上限17%增加（除助戰外，己方全體僅生效1次）",
+          "name": "害羞少女",
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101718",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1718",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "悟（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "讀心術",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1719": {
+      "abilities": [
+        {
+          "description": "每回合開始時，敵方全體攻擊速度10%減少",
+          "name": "星塵收集者",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "攻擊速度40%增加",
+          "name": "摸魚達人",
+          "tags": [
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101719",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1719",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "風魔小太郎（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "對隨機1名敵人造成{value}點傷害，並使目標一定時間內速度降低{delay1}",
+        "name": "大祕術永恆黑暗",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,229",
+        "slv_mlb": "5,049",
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4300,
+        "base_hp": 3100,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12900,
+        "max_hp": 9300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "172": {
       "abilities": [
         {
@@ -14070,6 +14325,593 @@
         "type_name": "Melee"
       }
     },
+    "1720": {
+      "abilities": [
+        {
+          "description": "牛郎在場時，等級+10",
+          "name": "浪漫熱戀",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "使己方攻擊力最高的2名隊員暴擊傷害50%增加",
+          "name": "天帝之女",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101720",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1720",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "織女",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "104.69%",
+        "delay_mlb": "124.89%",
+        "description": "一定時間內，2名ATK最高的隊員傷害提升{delay1}",
+        "name": "天界聖光",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4630,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13900,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1721": {
+      "abilities": [
+        {
+          "description": "織女在場時，等級+10",
+          "name": "狂歡策劃",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "最終回合，自身暴擊率40%增加，同時暴擊傷害40%增加",
+          "name": "不變的愛",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101721",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1721",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "牛郎",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "74.68%",
+        "delay_mlb": "89.08%",
+        "description": "對1名HP最高的敵人造成{value}點傷害，並使目標一定時間內所受傷害提升{delay1}",
+        "name": "流星",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "7,529",
+        "slv_mlb": "9,029",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4800,
+        "base_hp": 3165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 9500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1722": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方全體付屬性隊員血量15%回復",
+          "name": "星之守護",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，敵方全體所受傷害15%增加",
+          "name": "浪漫銀河",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "DMG Amp"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101722",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1722",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "銀河",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對3名敵方（遠程優先）造成{value}點傷害",
+        "name": "眾星奔流",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,496",
+        "slv_mlb": "2,976",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1723": {
+      "abilities": [
+        {
+          "description": "最終回合，自身技能傷害55%增加（除助戰外，己方全體僅生效1次）",
+          "name": "迷妹的執念",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101723",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1723",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955524/otogi/android/101723_2e21a0780350cc2eee77717a2c66e9a9.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955525/otogi/cards_hd/101723_hd_79beb0b0b24f6b0e1e6b9c0b974f0bcd.png"
+      },
+      "name": "茨木童子（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "超自然鬼之大愛",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1724": {
+      "abilities": [
+        {
+          "description": "己方全體所受傷害3%減少（除助戰外，己方全體僅生效1次）",
+          "name": "七夕祈願",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 66
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101724",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1724",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "竹飾",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "可用於羈絆和公會討伐",
+        "name": "竹子攻擊",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1726": {
+      "abilities": [
+        {
+          "description": "己方全體靈屬性隊員暴擊率6%增加（除助戰外，己方全體僅生效1次）",
+          "name": "至死不渝",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101726",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1726",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "羅密歐（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "癡情",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1727": {
+      "abilities": [
+        {
+          "description": "最終回合，自身戰鬥傷害48%增加（除助戰外，己方全體僅生效1次）",
+          "name": "超越生死的愛",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101727",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1727",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "茱麗葉（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "渴望",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1728": {
+      "abilities": [
+        {
+          "description": "暴擊傷害43%增加（除助戰外，己方全體僅生效1次）",
+          "name": "無重力",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101728",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1728",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "星球探測太空梭",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "星球光環",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1729": {
+      "abilities": [
+        {
+          "description": "妖石結算獎勵50%增加",
+          "name": "星際海盜",
+          "tags": [
+            "Self",
+            "Soulstone Boost"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101729",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1729",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "邦妮安（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對敵方全體造成{value}點傷害",
+        "name": "海盜女王",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,880",
+        "slv_mlb": "2,240",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4330,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 8000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "173": {
       "abilities": [
         {
@@ -14131,6 +14973,431 @@
         "crit": 2250,
         "max_atk": 11600,
         "max_hp": 8200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1730": {
+      "abilities": [
+        {
+          "description": "使技能目標攻擊速度50%減少",
+          "name": "鬼王威壓",
+          "tags": [
+            "On Skill",
+            "Slow"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "每回合開始時，自身戰鬥傷害10%增加",
+          "name": "夏夜狂歡",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101730",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1730",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955524/otogi/android/101730_34bec1b51d9a178d9c0369e11975359b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955526/otogi/cards_hd/101730_hd_8e02a2ec7d2c1e3e7bd28785b9c798e2.png"
+      },
+      "name": "酒天童子（鎮）（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "44.67%",
+        "delay_mlb": "53.27%",
+        "description": "對2名HP最高的敵人造成{value}點傷害，並使目標{probability}中強毒",
+        "name": "終極惡鬼野心",
+        "prob_lb0": "66.16%",
+        "prob_mlb": "78.96%",
+        "slv_lb0": "3,883",
+        "slv_mlb": "4,583",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4665,
+        "base_hp": 3665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14000,
+        "max_hp": 11000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1731": {
+      "abilities": [
+        {
+          "description": "每回合開始時，己方全體怪屬性隊員戰鬥傷害15%增加",
+          "name": "無底胃",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101731",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1731",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955523/otogi/android/101731_a6a3f8b298325e628cbfd211dec8fb41.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955527/otogi/cards_hd/101731_hd_d37454586a1c0a6bdc2cfdf0e222b8ed.png"
+      },
+      "name": "比蒙巨獸（鎮）（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "76.56%",
+        "delay_mlb": "91.36%",
+        "description": "對敵方全體造成{value}點傷害，並使目標一定時間內速度降低{delay1}",
+        "name": "圓滾滾",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,555",
+        "slv_mlb": "1,855",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4600,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1732": {
+      "abilities": [
+        {
+          "description": "最終回合，血量最高的敵人所受傷害14%增加（除助戰外，己方全體僅生效1次）",
+          "name": "高雅氣質",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "DMG Amp"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101732",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1732",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "素瓷娃娃（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "陶瓷人偶",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1734": {
+      "abilities": [
+        {
+          "description": "最終回合，自身技能傷害40%增加，同時暴擊傷害40%增加（除助戰外，己方全體僅生效1次）",
+          "name": "明星光環",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最終回合，己方全體怪屬性隊員沉默，同時戰鬥傷害35%增加（除助戰外，己方全體僅生效1次）",
+          "name": "零食愛好者",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101734",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1734",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "仙女座（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "可用於羈絆和公會討伐",
+        "name": "黑暗光環",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1735": {
+      "abilities": [
+        {
+          "description": "使技能目標暴擊傷害100%增加",
+          "name": "流行巨星",
+          "tags": [
+            "On Skill",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "每回合開始時，己方全體怪屬性隊員技能傷害15%增加",
+          "name": "夏日熱歌",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101735",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1735",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "利維坦（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "恢復ATK最高的隊員{value}點血量，並使目標一定時間內暴擊率提升{delay1}",
+        "name": "夏日光芒",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,704",
+        "slv_mlb": "3,224",
+        "tags": [
+          "Heal",
+          "Single",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1736": {
+      "abilities": [
+        {
+          "description": "每回合開始時，自身技能傷害15%增加",
+          "name": "魅惑的邪神",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，自身攻擊速度10%增加",
+          "name": "隱藏的惡意",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101736",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1736",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "奈亞魯法特（七夕）",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對3名ATK最高的敵人造成{value}點傷害，並使目標{probability}沉默",
+        "name": "混沌迷航",
+        "prob_lb0": "60.02%",
+        "prob_mlb": "71.62%",
+        "slv_lb0": "2,585",
+        "slv_mlb": "3,085",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4730,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 10000,
         "max_level": 70,
         "rarity": 5,
         "speed": 1300,
@@ -62719,8 +63986,8 @@
       }
     }
   },
-  "data_hash": "e4585ab2",
+  "data_hash": "a8437f84",
   "locale": "zh-tw",
-  "total_cards": 967,
-  "version": "7f84758"
+  "total_cards": 986,
+  "version": "e511c0c"
 }
