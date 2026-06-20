@@ -13997,6 +13997,261 @@
         "type_name": "Ranged"
       }
     },
+    "1713": {
+      "abilities": [
+        {
+          "description": "자신이 받는 데미지의 13%을 공격자에게 반사한다(조력자이외 아군파티 1회유효)",
+          "name": "별빛 실",
+          "tags": [
+            "Self",
+            "Counter"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101713",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1713",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "베틀",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "베틀 보",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1717": {
+      "abilities": [
+        {
+          "description": "28%확률로 일반 공격 대상이 받는 데미지를 13% 증가시킨다(조력자이외 아군파티 1회유효)",
+          "name": "튼튼한 다리",
+          "tags": [
+            "On Attack",
+            "DMG Amp"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101717",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1717",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "대은하교",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "빛나는 공습",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1718": {
+      "abilities": [
+        {
+          "description": "최대 HP가 17% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "부끄럼쟁이 소녀",
+          "tags": [
+            "Self",
+            "Max HP"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101718",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1718",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "사토리 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "독심술",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1719": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 적의 공격 속도를 10% 감소시킨다",
+          "name": "별가루 수집가",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Slow"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "공격 속도가 40% 증가한다.",
+          "name": "농땡이 달인",
+          "tags": [
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101719",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1719",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "쇼타로 푸마 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "랜덤으로 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 속도를 {delay1} 감소시킨다",
+        "name": "불가사의한 영원한 어둠",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,229",
+        "slv_mlb": "5,049",
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4300,
+        "base_hp": 3100,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 12900,
+        "max_hp": 9300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "172": {
       "abilities": [
         {
@@ -14070,6 +14325,593 @@
         "type_name": "Melee"
       }
     },
+    "1720": {
+      "abilities": [
+        {
+          "description": "파티에 견우가 있으면 자신의 레벨 +10",
+          "name": "로맨틱한 열애",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "공격력이 가장 높은 아군 2명의 치명타 데미지가 50% 증가한다",
+          "name": "천제의 딸",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101720",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1720",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "직녀",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "104.69%",
+        "delay_mlb": "124.89%",
+        "description": "일정 시간 동안 공격력이 가장 높은 아군 2명의 입히는 데미지를 {delay1} 증가시킨다",
+        "name": "천상의 빛",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4630,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13900,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1721": {
+      "abilities": [
+        {
+          "description": "파티에 직녀가 있으면 자신의 레벨 +10",
+          "name": "파티 기획자",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "최종 WAVE시 자신의 치명타율이 40% 증가하고 치명타 데미지가 40% 증가한다",
+          "name": "변치 않는 사랑",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101721",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1721",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "견우",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "74.68%",
+        "delay_mlb": "89.08%",
+        "description": "HP가 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 받는 데미지를 {delay1} 증가시킨다",
+        "name": "유성",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "7,529",
+        "slv_mlb": "9,029",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4800,
+        "base_hp": 3165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 9500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1722": {
+      "abilities": [
+        {
+          "description": "WAVE 시작시 마다 모든 영물 속성의 파티원의 HP를 15% 회복한다",
+          "name": "별의 수호",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE시작 시마다 모든 적이 받는 데미지가 15% 증가한다",
+          "name": "로맨틱한 은하수",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "DMG Amp"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101722",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1722",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "은하수",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "적 3명(원거리형 우선)에게 {value}의 데미지를 입힌다",
+        "name": "성류",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,496",
+        "slv_mlb": "2,976",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1723": {
+      "abilities": [
+        {
+          "description": "최종 WAVE시 자신의 스킬 데미지가 55% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "극성팬의 집념",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101723",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1723",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955524/otogi/android/101723_2e21a0780350cc2eee77717a2c66e9a9.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955525/otogi/cards_hd/101723_hd_79beb0b0b24f6b0e1e6b9c0b974f0bcd.png"
+      },
+      "name": "이바라키 동자 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "불가사의한 악마의 사랑",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1724": {
+      "abilities": [
+        {
+          "description": "모든 아군이 받는 데미지가 3% 감소한다(조력자이외 아군파티 1회유효)",
+          "name": "칠석의 기도",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 66
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101724",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1724",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "대나무 잔가지",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "밤부스터",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1726": {
+      "abilities": [
+        {
+          "description": "모든 신령 속성 파티원의 치명타율이 6% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "죽음도 갈라놓지 못할 사랑",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101726",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1726",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "로미오 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "상사병",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1727": {
+      "abilities": [
+        {
+          "description": "최종 WAVE 시 자신의 전투 데미지가 48% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "생사를 초월한 사랑",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 65
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101727",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1727",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "줄리엣 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "끈질긴 소망",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1728": {
+      "abilities": [
+        {
+          "description": "치명타 데미지가 43% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "무중력",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101728",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1728",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "하야테 우주 셔틀",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "궤도 아우라",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1729": {
+      "abilities": [
+        {
+          "description": "영혼석 보상이 50% 증가한다",
+          "name": "우주 해적",
+          "tags": [
+            "Self",
+            "Soulstone Boost"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101729",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1729",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "보니 앤 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "모든 적에게 {value}의 데미지를 입힌다",
+        "name": "해적 여왕",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,880",
+        "slv_mlb": "2,240",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4330,
+        "base_hp": 2665,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 8000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "173": {
       "abilities": [
         {
@@ -14131,6 +14973,431 @@
         "crit": 2250,
         "max_atk": 11600,
         "max_hp": 8200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1730": {
+      "abilities": [
+        {
+          "description": "스킬 대상의 공격 속도를 50% 감소시킨다",
+          "name": "오니 왕의 위압",
+          "tags": [
+            "On Skill",
+            "Slow"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "WAVE 시작 시마다 자신의 전투 데미지가 10% 증가한다",
+          "name": "여름밤의 축제",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101730",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1730",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955524/otogi/android/101730_34bec1b51d9a178d9c0369e11975359b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955526/otogi/cards_hd/101730_hd_8e02a2ec7d2c1e3e7bd28785b9c798e2.png"
+      },
+      "name": "주천동자 (진정상태) (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "44.67%",
+        "delay_mlb": "53.27%",
+        "description": "HP가 가장 높은 적 2명에게 {value}의 데미지를 입히고 {probability}로 맹독 상태로 만든다",
+        "name": "악령의 강한 야망",
+        "prob_lb0": "66.16%",
+        "prob_mlb": "78.96%",
+        "slv_lb0": "3,883",
+        "slv_mlb": "4,583",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4665,
+        "base_hp": 3665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14000,
+        "max_hp": 11000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1731": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 요괴 속성 파티원의 데미지가 15% 증가한다",
+          "name": "밑 빠진 독",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101731",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1731",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955523/otogi/android/101731_a6a3f8b298325e628cbfd211dec8fb41.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1781955527/otogi/cards_hd/101731_hd_d37454586a1c0a6bdc2cfdf0e222b8ed.png"
+      },
+      "name": "비히모스 (진정상태) (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "76.56%",
+        "delay_mlb": "91.36%",
+        "description": "모든 적에게 {value}의 데미지를 입히고 일정 시간 동안 속도를 {delay1} 감소시킨다",
+        "name": "오뚝이",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,555",
+        "slv_mlb": "1,855",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4600,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1732": {
+      "abilities": [
+        {
+          "description": "최종 WAVE시 HP가 가장 높은 적이 받는 데미지가 14% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "우아한 기품",
+          "tags": [
+            "Final Wave",
+            "Single",
+            "DMG Amp"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101732",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1732",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "비스크 인형 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "세라믹 인형",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1734": {
+      "abilities": [
+        {
+          "description": "최종 WAVE시 자신의 스킬 데미지가 40% 증가하고 치명타 데미지가 40% 증가한다(조력자이외 아군파티 1회유효)",
+          "name": "스타의 오라",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최종 WAVE 시 모든 요괴 속성 파티원을 침묵 상태로 만드는 대신 전투 데미지를 35% 증가시킨다(조력자이외 아군파티 1회유효)",
+          "name": "간식 애호가",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101734",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1734",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "안드로메다 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "길드 토벌과 결속시 사용가능",
+        "name": "어둠의 후광",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1735": {
+      "abilities": [
+        {
+          "description": "스킬 대상의 치명타 데미지가 100% 증가한다",
+          "name": "팝의 거장",
+          "tags": [
+            "On Skill",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 요괴 속성 파티원의 스킬 데미지가 15% 증가한다",
+          "name": "여름의 히트곡",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101735",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1735",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "레비아단 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "공격력이 가장 높은 아군 1명의 HP를 {value}회복시키고 일정 시간동안 치명타율을 {delay1}증가시킨다",
+        "name": "여름빛",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,704",
+        "slv_mlb": "3,224",
+        "tags": [
+          "Heal",
+          "Single",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1736": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 자신의 스킬 데미지가 15% 증가한다",
+          "name": "매혹의 사신",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 자신의 공격 속도가 10% 증가한다",
+          "name": "숨겨진 악의",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101736",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1736",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "니알라토텝 (타나바타)",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "공격력이 가장 높은 적 3명에게 {value}의 데미지를 입히고 {probability}로 침묵 상태로 만든다",
+        "name": "뒤죽박죽 여행",
+        "prob_lb0": "60.02%",
+        "prob_mlb": "71.62%",
+        "slv_lb0": "2,585",
+        "slv_mlb": "3,085",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Silence",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4730,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14200,
+        "max_hp": 10000,
         "max_level": 70,
         "rarity": 5,
         "speed": 1300,
@@ -62719,8 +63986,8 @@
       }
     }
   },
-  "data_hash": "e4585ab2",
+  "data_hash": "a8437f84",
   "locale": "ko",
-  "total_cards": 967,
-  "version": "7f84758"
+  "total_cards": 986,
+  "version": "e511c0c"
 }

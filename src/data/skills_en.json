@@ -14379,6 +14379,311 @@
       "DMG Down"
     ]
   },
+  "1717": {
+    "id": "1717",
+    "name": "Shining Strike",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1717",
+    "card_name": "Great Galactic Bridge",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1728": {
+    "id": "1728",
+    "name": "Orbit Aura",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1728",
+    "card_name": "Hayate Space Shuttle",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1713": {
+    "id": "1713",
+    "name": "Bolt of Lace",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1713",
+    "card_name": "Loom",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1724": {
+    "id": "1724",
+    "name": "Bambooster",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1724",
+    "card_name": "Bamboo Sprig",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1726": {
+    "id": "1726",
+    "name": "Lovestruck",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1726",
+    "card_name": "Romeo (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1727": {
+    "id": "1727",
+    "name": "Deep Desire",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1727",
+    "card_name": "Juliet (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1718": {
+    "id": "1718",
+    "name": "Mind Absorb",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1718",
+    "card_name": "Satori (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1719": {
+    "id": "1719",
+    "name": "Arcane Art Eternal Darkness",
+    "description": "Deals {value} DMG to a random enemy, Decreases target speed by {delay1} for a limited time.",
+    "card_id": "1719",
+    "card_name": "Shotaro Fuma (Tanabata)",
+    "ie": "ATK<1400,41>",
+    "ts": "enemy;count<1>",
+    "de": "SPD<-20.00%,-0.58%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Slow",
+      "Debuff"
+    ]
+  },
+  "1722": {
+    "id": "1722",
+    "name": "Star Stream",
+    "description": "Deals {value} DMG to 3 enemies (ranged priority).",
+    "card_id": "1722",
+    "card_name": "Milky Way",
+    "ie": "ATK<840,24>",
+    "ts": "enemy;count<3>;prof<2,3,1>",
+    "de": "none",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1720": {
+    "id": "1720",
+    "name": "Celestial Light",
+    "description": "Increases the DMG of 2 allies with the highest ATK by {delay1} for a limited time.",
+    "card_id": "1720",
+    "card_name": "Orihime",
+    "ie": "none",
+    "ts": "self;count<2>;max_atk",
+    "de": "ATK<35.00%,1.01%,8>",
+    "tn": 2,
+    "tags": [
+      "Multi",
+      "DMG Boost"
+    ]
+  },
+  "1721": {
+    "id": "1721",
+    "name": "Shooting Star",
+    "description": "Deals {value} DMG to the enemy with the most HP. Targets take {delay1} more DMG for a limited time.",
+    "card_id": "1721",
+    "card_name": "Hikoboshi",
+    "ie": "ATK<2354,75>",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SHIELD<-25.00%,-0.72%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1734": {
+    "id": "1734",
+    "name": "Dark Halo",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1734",
+    "card_name": "Andromeda (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1736": {
+    "id": "1736",
+    "name": "Topsy-Turvy Trek",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK, with a {probability} of inflicting Silence.",
+    "card_id": "1736",
+    "card_name": "Nyarlathotep (Tanabata)",
+    "ie": "ATK<860,25>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "SILENCE<5>;HIT<20.00%,0.58%>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Silence",
+      "Debuff"
+    ]
+  },
+  "1730": {
+    "id": "1730",
+    "name": "Demonic Ultra-Ambition",
+    "description": "Deals {value} DMG to the 2 enemies with the most HP, with a {probability} of inflicting Virulent Poison.",
+    "card_id": "1730",
+    "card_name": "Shuten-doji (Calm) (Tanabata)",
+    "ie": "ATK<1468,35>",
+    "ts": "enemy;count<2>;max_hp",
+    "de": "POISON<15.0%,0.43%,5>;HIT<22.00%,0.64%>",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Poison",
+      "Debuff"
+    ]
+  },
+  "1731": {
+    "id": "1731",
+    "name": "Roly Poly",
+    "description": "Deals {value} DMG to all enemies; decreases targets' speed by {delay1} for a limited time.",
+    "card_id": "1731",
+    "card_name": "Behemoth (Calm) (Tanabata)",
+    "ie": "ATK<520,15>",
+    "ts": "enemy;count<5>",
+    "de": "SPD<-25.50%,-0.74%,8>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Slow",
+      "Debuff"
+    ]
+  },
+  "1723": {
+    "id": "1723",
+    "name": "Paranormal Demon Love",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1723",
+    "card_name": "Ibaraki Doji (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1735": {
+    "id": "1735",
+    "name": "Summer Shine",
+    "description": "Restores {value} HP to ally with the highest ATK, increases {delay1} crit rate to target for a limited time.",
+    "card_id": "1735",
+    "card_name": "Leviathan (Tanabata)",
+    "ie": "HEAL<910,26>",
+    "ts": "self;count<1>;max_atk",
+    "de": "CHIT<20.00%,0.58%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Single",
+      "Crit Rate"
+    ]
+  },
+  "1732": {
+    "id": "1732",
+    "name": "Ceramic Doll",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1732",
+    "card_name": "Bisque Doll (Tanabata)",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1729": {
+    "id": "1729",
+    "name": "Pirate Queen",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "1729",
+    "card_name": "Bonnie Anne (Tanabata)",
+    "ie": "ATK<638,18>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",
