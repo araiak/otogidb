@@ -32,7 +32,7 @@ Stacked against that :card[1526] / :card[1529] pair — the obvious template —
 
 :card[1730] is currently active and is an ATK-heavy melee with a 2-target skill and self progressive ATK. Her stats are pretty high, but ultimately this card will struggle to find a niche. **Skip — high stats, but an ATK-heavy melee that struggles to find a niche.**
 
-:card[1731] is very interesting as a wave clearer. She has progressive 15% DMG to Phantasma, which is larger than :card[740] and is great for endless Phantasma. Since she's in standard gacha I don't think you should pull, especially not for 4 copies, but if you end up with enough copies over time she should be very strong in endless, and fine as a support and wave clearer in any multi-round content. **Don't pull (standard gacha) — but a strong endless/wave-clearer if you accumulate copies over time; progressive 15% DMG to Phantasma beats :card[740].**
+:card[1731] is very interesting as a wave clearer. She has progressive 15% DMG to Phantasma, which is larger than :card[740] and is great for endless Phantasma. That ability only unlocks at 4 copies, so a single copy isn't usable on its own. Since she's standard gacha I wouldn't pull — but if you don't have :card[740] or :card[744], grabbing one copy is still worth it: it gives you the option to limit break her the rest of the way with PvP orbs if you later decide you need her, rather than waiting to accumulate all 4 copies. Otherwise don't over-invest; just pick up copies over time from standard gacha, and once she's unlocked she should be very strong in endless and fine as a support and wave clearer in any multi-round content. **Don't pull (standard gacha). Her progressive 15% DMG to Phantasma ability only unlocks at 4 copies, so one copy isn't usable — but if you lack :card[740]/:card[744], grabbing a copy keeps the option to finish her with PvP orbs. Otherwise just accumulate copies over time. Beats :card[740] in endless or reserve.**
 
 :card[1723] is also active. 55% skill damage on the final wave is an easy skip for anyone but new players who don't have a full set of assists. It's a fine single-buff stepping stone for a greedy attacker, but it's a dead end two ways: for a support slot you want an assist that gives one or more *team* buffs, and for a greedy attacker you'd rather save up for a multi-buff greedy assist like :card[1444] or :card[707] from auction, which gives you the value of several of these single-buff cards combined. **Easy skip — 55% final-wave skill damage; a single-buff stepping stone only for new players lacking assists. Build toward a multi-buff greedy assist (:card[1444]/:card[707]) instead.**
 
@@ -69,7 +69,7 @@ Notable Picks:
 
 Standard Gacha:
 - :card[1730] — **Skip** — high stats, but an ATK-heavy melee with no clear niche
-- :card[1731] — **Don't pull, but strong long-term** — progressive 15% DMG to Phantasma beats :card[740]; great endless/wave-clearer if copies accumulate
+- :card[1731] — **Don't pull, but strong long-term** — progressive 15% DMG to Phantasma (beats :card[740]) only unlocks at 4 copies; if you lack :card[740]/:card[744] grab one copy to keep the option of finishing her with PvP orbs, otherwise accumulate copies over time
 - :card[1723] — **Easy skip** — 55% final-wave skill damage; single-buff stepping stone for new players only, build toward a multi-buff greedy assist (:card[1444]/:card[707])
 
 Event Cards:
