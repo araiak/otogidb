@@ -205,8 +205,16 @@
     "definition": "Single-target buffs (and some abilities) are applied to your highest-ATK ally. Players sometimes tweak ATK values to control which card receives them.",
     "aliases": ["highest-atk", "highest atk ally", "highest attack"]
   },
+  "card level": {
+    "definition": "A card's level — raise it to grow that card's ATK and HP, up to a cap set by limit break. Leveling also raises the card's active-skill damage (skill level tracks card level), but its passive abilities give fixed values that don't change with level. Some abilities stay locked until the card reaches a set level — and that's its real level, not the temporary level boosts some cards gain in battle (such as when paired). Because ATK from levels multiplies on top of your other (additive) buffs, leveling a carry quietly makes every percentage buff on it worth more. Distinct from player level, which is your account's progression.",
+    "aliases": ["card levels", "card's level"]
+  },
+  "player level": {
+    "definition": "Your account's progression level, raised by earning player XP (mainly from special story / Tower battles or daily XP dungeons). Each level up raises your max Spirit Essence (SE — the stamina you spend to play stages, which refills 1 every 5 minutes) and grants more friend slots, and unlocks features as it climbs (for example the auction house opens at player level 30). Because an SE potion refills you to full, a larger max SE makes each potion go further — so a high player level is very valuable for event ranking, where the number of stamina runs you can make is your score. Distinct from a card's level.",
+    "aliases": ["player levels", "account level"]
+  },
   "level": {
-    "definition": "Can mean a card's level (raises its stats, with the cap set by limit break) or your player level (account progression that unlocks features). Context decides which.",
+    "definition": "On its own, 'level' can mean a card's level (raises that card's stats, capped by limit break) or your player level (account progression that unlocks features) — context decides which. See card level and player level.",
     "aliases": ["levels"]
   }
 }
