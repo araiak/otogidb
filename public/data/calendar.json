@@ -1,32 +1,85 @@
 {
-  "generated_at": "2026-06-20T11:38:49Z",
-  "events": [],
+  "generated_at": "2026-06-27T07:06:29Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "182",
+      "start": "2026-06-28T07:00:00Z",
+      "end": "2026-07-12T07:00:00Z",
+      "name": "Interstellar Tanabata Festival",
+      "half": "2026-07-05T07:00:00Z",
+      "kill": "2026-07-14T07:00:00Z"
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "288",
-      "start": "2026-06-20T07:00:00Z",
-      "end": "2026-06-24T07:00:00Z",
+      "banner_id": "290",
+      "start": "2026-06-25T07:00:00Z",
+      "end": "2026-07-05T07:00:00Z",
       "cards": [
         {
-          "id": "1730"
+          "id": "1717"
+        },
+        {
+          "id": "1728"
+        },
+        {
+          "id": "1713"
         }
       ],
-      "pity_step": 100,
-      "group_id": "288"
+      "pity_step": 35
     },
     {
       "type": "featured_banner",
-      "banner_id": "289",
-      "start": "2026-06-24T07:00:00Z",
-      "end": "2026-06-27T07:00:00Z",
+      "banner_id": "291",
+      "start": "2026-07-05T07:00:00Z",
+      "end": "2026-07-08T07:00:00Z",
       "cards": [
         {
-          "id": "1731"
+          "id": "1721"
         }
       ],
       "pity_step": 100,
-      "group_id": "288"
+      "group_id": "291"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "292",
+      "start": "2026-07-08T07:00:00Z",
+      "end": "2026-07-11T07:00:00Z",
+      "cards": [
+        {
+          "id": "1734"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "291"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "293",
+      "start": "2026-07-11T07:00:00Z",
+      "end": "2026-07-14T07:00:00Z",
+      "cards": [
+        {
+          "id": "1736"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "291"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "294",
+      "start": "2026-07-14T07:00:00Z",
+      "end": "2026-07-21T07:00:00Z",
+      "cards": [
+        {
+          "id": "1735"
+        }
+      ],
+      "pity_step": 100
     }
   ],
   "exchanges": [
@@ -54,6 +107,91 @@
       "price_add": 15,
       "card": {
         "id": "1666"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1717",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-07-09T07:00:00Z",
+      "end": "2026-07-12T07:00:00Z",
+      "card": {
+        "id": "1717"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1728",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-07-09T07:00:00Z",
+      "end": "2026-07-12T07:00:00Z",
+      "card": {
+        "id": "1728"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1713",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-07-09T07:00:00Z",
+      "end": "2026-07-12T07:00:00Z",
+      "card": {
+        "id": "1713"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1721",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-07-05T07:00:00Z",
+      "end": "2026-07-14T07:00:00Z",
+      "card": {
+        "id": "1721"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1734",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-07-05T07:00:00Z",
+      "end": "2026-07-14T07:00:00Z",
+      "card": {
+        "id": "1734"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1736",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-07-05T07:00:00Z",
+      "end": "2026-07-14T07:00:00Z",
+      "card": {
+        "id": "1736"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1729",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-06-30T16:00:00Z",
+      "end": "2026-08-31T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1729"
       }
     },
     {
@@ -587,6 +725,12 @@
       "event_name": "Dragon's Roar - Summer Breeze Superstar",
       "event_date": "2026-05-30",
       "estimated_date": "2026-12-15"
+    },
+    {
+      "event_id": "182",
+      "event_name": "Interstellar Tanabata Festival",
+      "event_date": "2026-06-30",
+      "estimated_date": "2027-01-15"
     }
   ]
 }

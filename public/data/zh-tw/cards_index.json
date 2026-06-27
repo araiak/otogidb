@@ -14011,7 +14011,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101713",
       "bonds": [
@@ -14023,8 +14026,8 @@
       "has_bugs": false,
       "id": "1713",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543962/otogi/android/101713_5f9fa97e6012b416acff90322a6d3825.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543977/otogi/cards_hd/101713_hd_f53b3a361327a6971ccc1e502c906240.png"
       },
       "name": "織布機",
       "playable": true,
@@ -14072,7 +14075,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101717",
       "bonds": [
@@ -14084,8 +14090,8 @@
       "has_bugs": false,
       "id": "1717",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543973/otogi/android/101717_954d3f88054b1c53182f7a0f47815e94.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543981/otogi/cards_hd/101717_hd_cf520c1e479a55e6b69e8e34d1c4f3c5.png"
       },
       "name": "銀河大橋",
       "playable": true,
@@ -14132,8 +14138,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101718",
       "bonds": [
@@ -14145,16 +14153,16 @@
       "has_bugs": false,
       "id": "1718",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543961/otogi/android/101718_2ebe9f2e6694f8722a887117db9dcf86.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543976/otogi/cards_hd/101718_hd_e0d901b6bed1bbd3893a06b60e9ec779.png"
       },
       "name": "悟（七夕）",
       "playable": true,
       "receives_special_bond": false,
       "skill": {
-        "delay_lb0": "430",
-        "delay_mlb": "530",
-        "description": "可用於羈絆和公會討伐",
+        "delay_lb0": "712",
+        "delay_mlb": "872",
+        "description": "一定時間內，己方全體防禦提升{delay1}",
         "name": "讀心術",
         "prob_lb0": null,
         "prob_mlb": null,
@@ -14162,22 +14170,21 @@
         "slv_mlb": null,
         "tags": [
           "AoE",
-          "DEF Down",
-          "Debuff"
+          "DEF Up"
         ]
       },
       "stats": {
-        "attribute_name": "Phantasma",
-        "base_atk": 2500,
-        "base_hp": 2330,
-        "cost": 1,
-        "crit": 750,
-        "max_atk": 7500,
-        "max_hp": 7000,
+        "attribute_name": "Anima",
+        "base_atk": 2865,
+        "base_hp": 2200,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 8600,
+        "max_hp": 6600,
         "max_level": 60,
         "rarity": 4,
         "speed": 1300,
-        "type_name": "Assist"
+        "type_name": "Ranged"
       }
     },
     "1719": {
@@ -14203,8 +14210,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101719",
       "bonds": [
@@ -14216,8 +14225,8 @@
       "has_bugs": false,
       "id": "1719",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543966/otogi/android/101719_85045af5266704d8b8bb7d2a0c2e4aad.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543980/otogi/cards_hd/101719_hd_694c1c080cc7cea03ec09fd77e334ac1.png"
       },
       "name": "風魔小太郎（七夕）",
       "playable": true,
@@ -14349,7 +14358,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101720",
       "bonds": [
@@ -14361,8 +14372,8 @@
       "has_bugs": false,
       "id": "1720",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543960/otogi/android/101720_c1d8012fc1f8ac5596c9680d11c41e74.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543974/otogi/cards_hd/101720_hd_3460c8f6f56672d8de27a4b562154c40.png"
       },
       "name": "織女",
       "playable": true,
@@ -14420,7 +14431,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101721",
       "bonds": [
@@ -14432,8 +14446,8 @@
       "has_bugs": false,
       "id": "1721",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543973/otogi/android/101721_012930806508bad82a736b3a8ac52317.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543979/otogi/cards_hd/101721_hd_f555f27784b9df4fe405ceb6a6c99010.png"
       },
       "name": "牛郎",
       "playable": true,
@@ -14494,7 +14508,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101722",
       "bonds": [
@@ -14506,8 +14522,8 @@
       "has_bugs": false,
       "id": "1722",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543965/otogi/android/101722_a36ed7eaa4da51c981bd2a9332c4be0a.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543987/otogi/cards_hd/101722_hd_fa2f07a99b18a923c7ec4a18f0bb5315.png"
       },
       "name": "銀河",
       "playable": true,
@@ -14618,8 +14634,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101724",
       "bonds": [
@@ -14631,8 +14649,8 @@
       "has_bugs": false,
       "id": "1724",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543970/otogi/android/101724_6a81b16111a0007d6d0fe4699e11a7ea.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543982/otogi/cards_hd/101724_hd_584388831493cdb4428785a630fc1929.png"
       },
       "name": "竹飾",
       "playable": true,
@@ -14681,8 +14699,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101726",
       "bonds": [
@@ -14694,8 +14714,8 @@
       "has_bugs": false,
       "id": "1726",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543964/otogi/android/101726_5b873718e18957bd8fe9d070f4158acf.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543984/otogi/cards_hd/101726_hd_7f5a424fcf04b4dd5449054155c34f24.png"
       },
       "name": "羅密歐（七夕）",
       "playable": true,
@@ -14743,8 +14763,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101727",
       "bonds": [
@@ -14756,39 +14778,38 @@
       "has_bugs": false,
       "id": "1727",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543970/otogi/android/101727_6f8e8f7443ce5a3bbc571a25087ac911.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543986/otogi/cards_hd/101727_hd_ded248ae7b57a188a68c34eed0c754f6.png"
       },
       "name": "茱麗葉（七夕）",
       "playable": true,
       "receives_special_bond": false,
       "skill": {
-        "delay_lb0": "430",
-        "delay_mlb": "530",
-        "description": "可用於羈絆和公會討伐",
+        "delay_lb0": "51.04%",
+        "delay_mlb": "62.24%",
+        "description": "一定時間內，隨機2名敵人所受傷害提升{delay1}",
         "name": "渴望",
         "prob_lb0": null,
         "prob_mlb": null,
         "slv_lb0": null,
         "slv_mlb": null,
         "tags": [
-          "AoE",
-          "DEF Down",
-          "Debuff"
+          "Multi",
+          "DMG Up"
         ]
       },
       "stats": {
-        "attribute_name": "Divina",
-        "base_atk": 2500,
-        "base_hp": 2330,
-        "cost": 1,
-        "crit": 750,
-        "max_atk": 7500,
-        "max_hp": 7000,
+        "attribute_name": "Anima",
+        "base_atk": 2600,
+        "base_hp": 1930,
+        "cost": 2,
+        "crit": 2250,
+        "max_atk": 7800,
+        "max_hp": 5800,
         "max_level": 60,
         "rarity": 4,
         "speed": 1300,
-        "type_name": "Assist"
+        "type_name": "Ranged"
       }
     },
     "1728": {
@@ -14805,7 +14826,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101728",
       "bonds": [
@@ -14817,8 +14841,8 @@
       "has_bugs": false,
       "id": "1728",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543968/otogi/android/101728_c71c5be15690dee4d4257f940c292404.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543983/otogi/cards_hd/101728_hd_f1b4f9979bca711cff51e848b9423fbc.png"
       },
       "name": "星球探測太空梭",
       "playable": true,
@@ -14866,7 +14890,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101729",
       "bonds": [
@@ -14878,8 +14904,8 @@
       "has_bugs": false,
       "id": "1729",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543965/otogi/android/101729_ba87f38bf0f52b1e9f2a82af6d029655.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543977/otogi/cards_hd/101729_hd_3250b04917f55f54b395448e6dc1a9e0.png"
       },
       "name": "邦妮安（七夕）",
       "playable": true,
@@ -15135,7 +15161,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101732",
       "bonds": [
@@ -15147,8 +15175,8 @@
       "has_bugs": false,
       "id": "1732",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543971/otogi/android/101732_6f1f5803aca430cf033cf2954a5aae1f.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543983/otogi/cards_hd/101732_hd_83aa035e00f2f564be3fc83f0e0f8224.png"
       },
       "name": "素瓷娃娃（七夕）",
       "playable": true,
@@ -15211,7 +15239,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101734",
       "bonds": [
@@ -15223,8 +15254,8 @@
       "has_bugs": false,
       "id": "1734",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543962/otogi/android/101734_7a97b9ef80ca84b9074be8693e17ad41.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543978/otogi/cards_hd/101734_hd_2415604d469581bbe785d4583ed5d766.png"
       },
       "name": "仙女座（七夕）",
       "playable": true,
@@ -15284,7 +15315,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101735",
       "bonds": [
@@ -15296,8 +15329,8 @@
       "has_bugs": false,
       "id": "1735",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543963/otogi/android/101735_c378d5dc87c12604084dcf057d60d0ca.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543975/otogi/cards_hd/101735_hd_afb0264a9c79fe5c49bf777ec091785d.png"
       },
       "name": "利維坦（七夕）",
       "playable": true,
@@ -15356,7 +15389,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
       },
       "asset_id": "101736",
       "bonds": [
@@ -15368,8 +15404,8 @@
       "has_bugs": false,
       "id": "1736",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543964/otogi/android/101736_5f1361c7a590a68c3fbb38b629dbb6e5.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543985/otogi/cards_hd/101736_hd_7dbcfa80dcb737e6f204fbc528291755.png"
       },
       "name": "奈亞魯法特（七夕）",
       "playable": true,
@@ -63986,8 +64022,8 @@
       }
     }
   },
-  "data_hash": "742090dd",
+  "data_hash": "27e027bb",
   "locale": "zh-tw",
   "total_cards": 986,
-  "version": "2792929"
+  "version": "5ff9a63"
 }

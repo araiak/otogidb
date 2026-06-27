@@ -14462,33 +14462,31 @@
   "1727": {
     "id": "1727",
     "name": "Deep Desire",
-    "description": "Can be used as bond and in guild conquest.",
+    "description": "Increases DMG taken by 2 random enemies by {delay1} for a limited time.",
     "card_id": "1727",
     "card_name": "Juliet (Tanabata)",
     "ie": "none",
-    "ts": "enemy;count<5>",
-    "de": "DEFENSE<-135,-5,8>",
-    "tn": 5,
+    "ts": "enemy;count<2>",
+    "de": "SHIELD<-18.00%,-0.56%,8>",
+    "tn": 2,
     "tags": [
-      "AoE",
-      "DEF Down",
-      "Debuff"
+      "Multi",
+      "DMG Up"
     ]
   },
   "1718": {
     "id": "1718",
     "name": "Mind Absorb",
-    "description": "Can be used as bond and in guild conquest.",
+    "description": "Increases all allies' DEF by {delay1} for a limited time.",
     "card_id": "1718",
     "card_name": "Satori (Tanabata)",
     "ie": "none",
-    "ts": "enemy;count<5>",
-    "de": "DEFENSE<-135,-5,8>",
+    "ts": "self;count<5>",
+    "de": "DEFENSE<240,8,8>",
     "tn": 5,
     "tags": [
       "AoE",
-      "DEF Down",
-      "Debuff"
+      "DEF Up"
     ]
   },
   "1719": {
