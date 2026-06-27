@@ -1,0 +1,2307 @@
+{
+  "version": "5ff9a63",
+  "version_date": "2026-06-27",
+  "previous_version": "2792929",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 21
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1670",
+      "name": "Insolentia",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953000/otogi/cards_hd/101670_hd_07322ec8c5b8446363e1742661bc2f7b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "7 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 7 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1672",
+      "name": "Leviathan",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953005/otogi/cards_hd/101672_hd_9202acf4b479f783faaafc54ad6bceea.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "5 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 5 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1719",
+      "name": "Shotaro Fuma (Tanabata)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543980/otogi/cards_hd/101719_hd_694c1c080cc7cea03ec09fd77e334ac1.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "182",
+            "event_name": "",
+            "floors": [
+              80
+            ],
+            "first_seen": "2026-06-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '182', 'event_name': '', 'floors': [80], 'first_seen': '2026-06-27', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1720",
+      "name": "Orihime",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543974/otogi/cards_hd/101720_hd_3460c8f6f56672d8de27a4b562154c40.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "5 items",
+          "display": "Reward Tiers: 0 items → 5 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 5, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 4, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 3, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 2, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1721",
+      "name": "Hikoboshi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543979/otogi/cards_hd/101721_hd_f555f27784b9df4fe405ceb6a6c99010.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-05 15:00:00",
+            "end": "2026-07-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-05 15:00:00', 'end': '2026-07-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-07-05 15:00:00",
+            "end": "2026-07-08 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-07-05 15:00:00', 'end': '2026-07-08 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1722",
+      "name": "Milky Way",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543987/otogi/cards_hd/101722_hd_fa2f07a99b18a923c7ec4a18f0bb5315.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "7 items",
+          "display": "Reward Tiers: 0 items → 7 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1729",
+      "name": "Bonnie Anne (Tanabata)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543977/otogi/cards_hd/101729_hd_3250b04917f55f54b395448e6dc1a9e0.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-01 00:00:00",
+            "end": "2026-08-31 23:59:59",
+            "price": 65,
+            "currency": "gApple",
+            "limit": 0,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-01 00:00:00', 'end': '2026-08-31 23:59:59', 'price': 65, 'currency': 'gApple', 'limit': 0, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        }
+      ]
+    },
+    {
+      "id": "1734",
+      "name": "Andromeda (Tanabata)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543978/otogi/cards_hd/101734_hd_2415604d469581bbe785d4583ed5d766.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-05 15:00:00",
+            "end": "2026-07-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-05 15:00:00', 'end': '2026-07-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-07-08 15:00:00",
+            "end": "2026-07-11 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-07-08 15:00:00', 'end': '2026-07-11 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1735",
+      "name": "Leviathan (Tanabata)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543975/otogi/cards_hd/101735_hd_afb0264a9c79fe5c49bf777ec091785d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-07-14 15:00:00",
+            "end": "2026-07-21 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-07-14 15:00:00', 'end': '2026-07-21 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1736",
+      "name": "Nyarlathotep (Tanabata)",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543985/otogi/cards_hd/101736_hd_7dbcfa80dcb737e6f204fbc528291755.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-05 15:00:00",
+            "end": "2026-07-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-05 15:00:00', 'end': '2026-07-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-07-11 15:00:00",
+            "end": "2026-07-14 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-07-11 15:00:00', 'end': '2026-07-14 15:00:00', 'pity': 100, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1664",
+      "name": "Francis Drake",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953003/otogi/cards_hd/101664_hd_dae97097cb832062d6d1a79b0197f190.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1673",
+      "name": "Cyclops Dragon",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953007/otogi/cards_hd/101673_hd_eb3e60033da63f65b10d4305a825b7ec.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1713",
+      "name": "Loom",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543977/otogi/cards_hd/101713_hd_f53b3a361327a6971ccc1e502c906240.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-09 15:00:00",
+            "end": "2026-07-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-09 15:00:00', 'end': '2026-07-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-25 15:00:00",
+            "end": "2026-07-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-25 15:00:00', 'end': '2026-07-05 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1717",
+      "name": "Great Galactic Bridge",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543981/otogi/cards_hd/101717_hd_cf520c1e479a55e6b69e8e34d1c4f3c5.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-09 15:00:00",
+            "end": "2026-07-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-09 15:00:00', 'end': '2026-07-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-25 15:00:00",
+            "end": "2026-07-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-25 15:00:00', 'end': '2026-07-05 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1718",
+      "name": "Satori (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543976/otogi/cards_hd/101718_hd_e0d901b6bed1bbd3893a06b60e9ec779.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "182",
+            "event_name": "",
+            "floors": [
+              64
+            ],
+            "first_seen": "2026-06-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '182', 'event_name': '', 'floors': [64], 'first_seen': '2026-06-27', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags",
+          "field_label": "Skill Tags",
+          "old": "3 items",
+          "new": "2 items",
+          "display": "Skill Tags: 3 items → 2 items"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.1",
+          "field_label": "Skill Tags",
+          "old": "DEF Down",
+          "new": "DEF Up",
+          "display": "Skill Tags: DEF Down → DEF Up"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.2",
+          "field_label": "Skill Tags",
+          "old": "Debuff",
+          "new": null,
+          "display": "Skill Tags: Removed"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.slvup",
+          "field_label": "Skill Level Scaling",
+          "old": 18,
+          "new": 20,
+          "display": "Skill Level Scaling: 18 → 20 (+2)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.slv1",
+          "field_label": "Skill Base Damage",
+          "old": 540,
+          "new": 587,
+          "display": "Skill Base Damage: 540 → 587 (+47)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.target.type",
+          "field_label": "Target Type",
+          "old": "enemy",
+          "new": "ally",
+          "display": "Target Type: enemy → ally"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.scale",
+          "field_label": "Scale",
+          "old": -5.0,
+          "new": 8.0,
+          "display": "Scale: -5.0 → 8.0 (+13.0)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": -135.0,
+          "new": 240.0,
+          "display": "Value: -135.0 → 240.0 (+375.0)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.description",
+          "field_label": "Skill Effect",
+          "old": "Can be used as bond and in guild conquest.",
+          "new": "Increases all allies' DEF by {delay1} for a limited time.",
+          "display": "Skill Effect: Updated"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_atk",
+          "field_label": "Base ATK",
+          "old": 2500,
+          "new": 2865,
+          "display": "Base ATK: 2500 → 2865 (+365)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.cost",
+          "field_label": "Cost",
+          "old": 1,
+          "new": 2,
+          "display": "Cost: 1 → 2 (+1)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_atk",
+          "field_label": "Max ATK",
+          "old": 7500,
+          "new": 8600,
+          "display": "Max ATK: 7500 → 8600 (+1100)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_hp",
+          "field_label": "Max HP",
+          "old": 7000,
+          "new": 6600,
+          "display": "Max HP: 7000 → 6600 (-400)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_hp",
+          "field_label": "Base HP",
+          "old": 2330,
+          "new": 2200,
+          "display": "Base HP: 2330 → 2200 (-130)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.type",
+          "field_label": "Type",
+          "old": 4,
+          "new": 2,
+          "display": "Type: 4 → 2 (-2)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 2,
+          "new": 3,
+          "display": "Attribute: 2 → 3 (+1)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.crit",
+          "field_label": "Crit",
+          "old": 750,
+          "new": 2250,
+          "display": "Crit: 750 → 2250 (+1500)"
+        }
+      ]
+    },
+    {
+      "id": "1726",
+      "name": "Romeo (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543984/otogi/cards_hd/101726_hd_7f5a424fcf04b4dd5449054155c34f24.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "182",
+            "event_name": "",
+            "floors": [
+              32
+            ],
+            "first_seen": "2026-06-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '182', 'event_name': '', 'floors': [32], 'first_seen': '2026-06-27', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1727",
+      "name": "Juliet (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543986/otogi/cards_hd/101727_hd_ded248ae7b57a188a68c34eed0c754f6.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "182",
+            "event_name": "",
+            "floors": [
+              48
+            ],
+            "first_seen": "2026-06-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '182', 'event_name': '', 'floors': [48], 'first_seen': '2026-06-27', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags",
+          "field_label": "Skill Tags",
+          "old": "3 items",
+          "new": "2 items",
+          "display": "Skill Tags: 3 items → 2 items"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.0",
+          "field_label": "Skill Tags",
+          "old": "AoE",
+          "new": "Multi",
+          "display": "Skill Tags: AoE → Multi"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.1",
+          "field_label": "Skill Tags",
+          "old": "DEF Down",
+          "new": "DMG Up",
+          "display": "Skill Tags: DEF Down → DMG Up"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.tags.2",
+          "field_label": "Skill Tags",
+          "old": "Debuff",
+          "new": null,
+          "display": "Skill Tags: Removed"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.slvup",
+          "field_label": "Skill Level Scaling",
+          "old": 18,
+          "new": 24,
+          "display": "Skill Level Scaling: 18 → 24 (+6)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.slv1",
+          "field_label": "Skill Base Damage",
+          "old": 540,
+          "new": 800,
+          "display": "Skill Base Damage: 540 → 800 (+260)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.target.count",
+          "field_label": "Target Count",
+          "old": 5,
+          "new": 2,
+          "display": "Target Count: 5 → 2 (-3)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.scale",
+          "field_label": "Scale",
+          "old": -5.0,
+          "new": -0.56,
+          "display": "Scale: -5.0 → -0.56 (+4.4399999999999995)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.type",
+          "field_label": "Type",
+          "old": "DEFENSE",
+          "new": "SHIELD",
+          "display": "Type: DEFENSE → SHIELD"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.parsed.effects.0.value",
+          "field_label": "Value",
+          "old": -135.0,
+          "new": -18.0,
+          "display": "Value: -135.0 → -18.0 (+117.0)"
+        },
+        {
+          "category": "skill",
+          "category_label": "Skill",
+          "field": "skill.description",
+          "field_label": "Skill Effect",
+          "old": "Can be used as bond and in guild conquest.",
+          "new": "Increases DMG taken by 2 random enemies by {delay1} for a limited time.",
+          "display": "Skill Effect: Updated"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_atk",
+          "field_label": "Base ATK",
+          "old": 2500,
+          "new": 2600,
+          "display": "Base ATK: 2500 → 2600 (+100)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.cost",
+          "field_label": "Cost",
+          "old": 1,
+          "new": 2,
+          "display": "Cost: 1 → 2 (+1)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_atk",
+          "field_label": "Max ATK",
+          "old": 7500,
+          "new": 7800,
+          "display": "Max ATK: 7500 → 7800 (+300)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_hp",
+          "field_label": "Max HP",
+          "old": 7000,
+          "new": 5800,
+          "display": "Max HP: 7000 → 5800 (-1200)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_hp",
+          "field_label": "Base HP",
+          "old": 2330,
+          "new": 1930,
+          "display": "Base HP: 2330 → 1930 (-400)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.type",
+          "field_label": "Type",
+          "old": 4,
+          "new": 2,
+          "display": "Type: 4 → 2 (-2)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 1,
+          "new": 3,
+          "display": "Attribute: 1 → 3 (+2)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.crit",
+          "field_label": "Crit",
+          "old": 750,
+          "new": 2250,
+          "display": "Crit: 750 → 2250 (+1500)"
+        }
+      ]
+    },
+    {
+      "id": "1728",
+      "name": "Hayate Space Shuttle",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543983/otogi/cards_hd/101728_hd_f1b4f9979bca711cff51e848b9423fbc.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-07-09 15:00:00",
+            "end": "2026-07-12 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-07-09 15:00:00', 'end': '2026-07-12 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Sources: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-06-25 15:00:00",
+            "end": "2026-07-05 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-06-25 15:00:00', 'end': '2026-07-05 15:00:00', 'pity': 35, 'is_current': True})"
+        }
+      ]
+    },
+    {
+      "id": "1732",
+      "name": "Bisque Doll (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543983/otogi/cards_hd/101732_hd_83aa035e00f2f564be3fc83f0e0f8224.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "1663",
+      "name": "Jewelia",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1779953000/otogi/cards_hd/101663_hd_2b2d3dd7b7d17cf0ce0c776160370b05.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "3 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 3 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "180",
+            "event_name": "Dragon's Roar - Summer Breeze Superstar",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1724",
+      "name": "Bamboo Sprig",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543982/otogi/cards_hd/101724_hd_584388831493cdb4428785a630fc1929.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Reward Tiers: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '182', 'event_name': 'Interstellar Tanabata Festival', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "182",
+            "event_name": "",
+            "floors": [
+              16
+            ],
+            "first_seen": "2026-06-27",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '182', 'event_name': '', 'floors': [16], 'first_seen': '2026-06-27', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "eventHelpers": {
+      "old_count": 10,
+      "new_count": 13,
+      "diff": 3
+    },
+    "gachaTrade": {
+      "old_count": 331,
+      "new_count": 338,
+      "diff": 7
+    },
+    "towerEpisode": {
+      "old_count": 80,
+      "new_count": 80,
+      "diff": 0
+    },
+    "cardInit": {
+      "old_count": 440,
+      "new_count": 452,
+      "diff": 12
+    },
+    "towerBattles": {
+      "old_count": 231,
+      "new_count": 231,
+      "diff": 0
+    },
+    "npc": {
+      "old_count": 296,
+      "new_count": 298,
+      "diff": 2
+    },
+    "eventRankings": {
+      "old_count": 19,
+      "new_count": 19,
+      "diff": 0
+    },
+    "monster": {
+      "old_count": 986,
+      "new_count": 986,
+      "diff": 0
+    },
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "towerTrade": {
+      "old_count": 10,
+      "new_count": 10,
+      "diff": 0
+    },
+    "monsterSkill": {
+      "old_count": 964,
+      "new_count": 964,
+      "diff": 0
+    },
+    "banner": {
+      "old_count": 544,
+      "new_count": 554,
+      "diff": 10
+    },
+    "gachaContents": {
+      "old_count": 757,
+      "new_count": 759,
+      "diff": 2
+    },
+    "gachaGuarentee": {
+      "old_count": 180,
+      "new_count": 185,
+      "diff": 5
+    }
+  }
+}
