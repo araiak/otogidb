@@ -1,0 +1,130 @@
+{
+  "version": "6631b16",
+  "version_date": "2026-07-01",
+  "previous_version": "9926e1a",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 2
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "1718",
+      "name": "Satori (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543976/otogi/cards_hd/101718_hd_e0d901b6bed1bbd3893a06b60e9ec779.png",
+      "changes": [
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.crit",
+          "field_label": "Crit",
+          "old": 2250,
+          "new": 750,
+          "display": "Crit: 2250 → 750 (-1500)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 3,
+          "new": 2,
+          "display": "Attribute: 3 → 2 (-1)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.cost",
+          "field_label": "Cost",
+          "old": 2,
+          "new": 1,
+          "display": "Cost: 2 → 1 (-1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.stackable",
+          "field_label": "Stackable",
+          "old": false,
+          "new": true,
+          "display": "Stackable: False → True (+1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Increases 17% of Max HP.(only take effect once to the team)",
+          "new": "Increases 17% of Max HP.",
+          "display": "Description: Updated"
+        }
+      ]
+    },
+    {
+      "id": "1727",
+      "name": "Juliet (Tanabata)",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1782543986/otogi/cards_hd/101727_hd_ded248ae7b57a188a68c34eed0c754f6.png",
+      "changes": [
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.crit",
+          "field_label": "Crit",
+          "old": 2250,
+          "new": 750,
+          "display": "Crit: 2250 → 750 (-1500)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.attribute",
+          "field_label": "Attribute",
+          "old": 3,
+          "new": 1,
+          "display": "Attribute: 3 → 1 (-2)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.cost",
+          "field_label": "Cost",
+          "old": 2,
+          "new": 1,
+          "display": "Cost: 2 → 1 (-1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.stackable",
+          "field_label": "Stackable",
+          "old": false,
+          "new": true,
+          "display": "Stackable: False → True (+1)"
+        },
+        {
+          "category": "ability",
+          "category_label": "Ability",
+          "field": "abilities.0.description",
+          "field_label": "Description",
+          "old": "Increases 48% of DMG dealt at the start of the final wave.(only take effect once to the team)",
+          "new": "Increases 48% of DMG dealt at the start of the final wave.",
+          "display": "Description: Updated"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "monster": {
+      "old_count": 986,
+      "new_count": 986,
+      "diff": 0
+    },
+    "monsterAbility": {
+      "old_count": 1105,
+      "new_count": 1105,
+      "diff": 0
+    }
+  }
+}
