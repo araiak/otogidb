@@ -3223,7 +3223,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "101313",
@@ -5456,6 +5457,7 @@
         "has_tower_drops": false,
         "sources": [
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -5520,6 +5522,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -5647,6 +5650,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -5712,6 +5716,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -5776,6 +5781,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -5838,6 +5844,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -5915,6 +5922,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -5989,6 +5997,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -6061,6 +6070,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -17386,6 +17396,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -17452,6 +17463,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -17520,6 +17532,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -17583,6 +17596,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -39627,7 +39641,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "100449",
       "bonds": [
@@ -64028,8 +64044,8 @@
       }
     }
   },
-  "data_hash": "02587153",
+  "data_hash": "e9ae713d",
   "locale": "ko",
   "total_cards": 986,
-  "version": "88fd1a3"
+  "version": "36f4aae"
 }
