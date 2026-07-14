@@ -8547,9 +8547,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -8580,7 +8584,8 @@
           "in_standard_pool": false
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -8598,11 +8603,63 @@
       "description": "<color=#f4e48e>「看到你的笑臉，我好開心喔！」</color><br/>她是<color=#ef9843>塔之靈，</color>只會在萬聖節出現。是狗妖和貓妖的盟友，為人慷慨，願意走到天涯海角，讓大家開心。她什麼都不要，只要你開心。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.582679+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.556720+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.863298+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1313",
       "image_urls": {
@@ -15877,17 +15934,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -15925,6 +15978,7 @@
         },
         "sources": [
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -15961,12 +16015,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.590810+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.889942+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1430",
       "image_urls": {
@@ -16066,17 +16176,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16114,6 +16220,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -16161,12 +16268,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.593317+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.891501+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1431",
       "image_urls": {
@@ -16416,17 +16579,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16464,6 +16623,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -16511,12 +16671,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.597328+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.894486+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1433",
       "image_urls": {
@@ -16613,17 +16829,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16669,6 +16881,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -16705,12 +16918,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.598333+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.896129+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1434",
       "image_urls": {
@@ -16810,17 +17079,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16858,6 +17123,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -16905,12 +17171,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.600842+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.897652+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1435",
       "image_urls": {
@@ -17006,17 +17328,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -17054,6 +17372,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -17101,12 +17420,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.603350+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.899276+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1436",
       "image_urls": {
@@ -17241,17 +17616,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -17297,6 +17668,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -17333,12 +17705,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.605859+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.901220+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1437",
       "image_urls": {
@@ -17467,17 +17895,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -17505,6 +17929,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -17541,12 +17966,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.608007+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.903006+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1438",
       "image_urls": {
@@ -17678,17 +18159,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -17716,6 +18193,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -17752,12 +18230,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.611037+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.904751+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1439",
       "image_urls": {
@@ -56323,17 +56857,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -56379,6 +56909,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -56415,12 +56946,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.615313+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.908413+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1992",
       "image_urls": {
@@ -56525,17 +57112,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -56581,6 +57164,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -56617,12 +57201,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.617348+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.910053+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1993",
       "image_urls": {
@@ -56724,17 +57364,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-07-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -56780,6 +57416,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -56816,12 +57453,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.620555+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.911686+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1994",
       "image_urls": {
@@ -56921,17 +57614,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-07-15",
-            "event_date": "2025-12-23",
-            "event_id": "172",
-            "event_name": "O Holy Night",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -56969,6 +57658,7 @@
           "in_standard_pool": false
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -57016,12 +57706,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-03-13T06:07:58.622624+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.913250+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "1995",
       "image_urls": {
@@ -113116,6 +113862,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-15",
+            "event_id": "186",
+            "event_name": "Guild Conquest ーBelle Bonshoー",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -113127,7 +113881,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "186",
+              "event_name": "公會討伐ー梵鐘ー",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -113138,7 +113898,9 @@
           "featured_banners": [],
           "in_standard_pool": false
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "100449",
@@ -113181,12 +113943,42 @@
             ],
             "date": "2026-07-14",
             "version": "88fd1a3"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "186",
+                  "event_name": "Guild Conquest ーBelle Bonshoー",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.513450+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T07:14:02.000500+00:00",
-        "last_modified_version": "88fd1a3"
+        "last_modified": "2026-07-14T15:00:53.314281+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "449",
       "image_urls": {
@@ -139857,9 +140649,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -139928,11 +140720,28 @@
       "description": "<color=#f4e48e>「哎呀，糟了…那可真是辛苦你了呢。」</color><br/><color=#ef9843>格林童話中出現的魔女之家化身的妖怪。</color>有著可以將手所碰到的東西變成糖果的能力，對於肚子餓的人不分敵我皆會給予糖果，是個如同聖母般的大姐姐。在童話內雖是無心之過，但仍讓漢賽爾他們遇險，現在為了贖罪也仍舊在照顧他們兄妹。至於最近的煩惱，好像是要如何讓迎接反抗期的葛麗特變得更坦率一點。<br/><color=#f45d68>[活動]紅葉的迷宮</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.542048+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.112087+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.533675+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "587",
       "image_urls": {
@@ -140032,9 +140841,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -140103,11 +140912,28 @@
       "description": "<color=#f4e48e>「無妨，正所謂船到橋頭自然直啊！」</color><br/><color=#ef9843>江戶時代有名的俳諧師化身的妖怪。</color>成為妖怪後的現在也依舊邊漫遊全國悠悠哉哉地詠著俳歌繼續旅行。但是，有傳聞說他其實是政府任命的密探，與服部半藏正成之間也有親交。精通百般武藝，最近的興趣是找出前途有望的年輕人，並對其雞婆管教。雖然他看起來樂觀，言行舉止也有輕薄的感覺，但他的弟子說他其實令人捉摸不定。<br/><color=#f45d68>[活動]紅葉的迷宮</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.113587+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.535312+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "588",
       "image_urls": {
@@ -140212,9 +141038,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -140283,11 +141109,28 @@
       "description": "<color=#f4e48e>「這個姿態不是很可愛，所以我不喜歡！」</color><br/><color=#ef9843>有著巨大熊貓姿態，身份不明的美少女（自稱）妖怪。</color>別稱，熊貓的精靈。平時因為重視可愛度而裝乖，但一旦竹子不夠就會陷入禁斷症狀解放出身為肉食獸的本能。在那個狀態下的戰鬥力，聽說就連像金太郎這種對力量自滿的妖怪都會退避三舍。由於每次進行死鬥，頭部就會因對手飛濺來的血而整個染紅，而有「紅兜帽」這個相撲界藝名。<br/><color=#f45d68>[活動]紅葉的迷宮</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.115592+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.536953+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "589",
       "image_urls": {
@@ -141542,9 +142385,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -141613,11 +142456,28 @@
       "description": "<color=#f4e48e>「真奇怪啊～驗算的時候明明就沒問題的說…」</color><br/><color=#ef9843>克蘇魯神話中潛藏在地下迷宮的神化身的妖怪。</color>「頭腦雖好但卻是笨蛋」完全體現出這點的瘋狂發明家。是個從小道具涵蓋到迷宮，可以製造出各式各樣東西的天才，但每一樣東西都一定會有運用上的缺陷。例如，「會連同使用者都焚燒殆盡的劍」、「會將周圍都沉入水中的灑水器」等等可說是不勝枚舉。如今由於仰慕著自由奔放的紅葉姬主動成為她的部下。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.544051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.129238+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.548063+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "596",
       "image_urls": {
@@ -141717,9 +142577,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -141788,11 +142648,28 @@
       "description": "<color=#f4e48e>「機會只會造訪在努力的人身上。」</color><br/><color=#ef9843>擁有慈悲心腸、不吝於給任何人機會的妖怪。</color>被魅角派去救援於鬼哭山遇險的靈等人，雖說她頗有實力，但容易感到厭煩是她美中不足之處。本人雖說「所謂女人心啊」擺出一切都無所謂的態度，但她那份容易看得開的個性意外地是她的強項也說不定。最近，看別人釣螃蟹似乎讓她頓悟了什麼。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.130242+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.549695+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "597",
       "image_urls": {
@@ -141898,9 +142775,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-06-18 15:00:00",
+          "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -141954,11 +142831,28 @@
       "description": "<color=#f4e48e>「才、才不是為了你這傢伙咧。」</color><br/><color=#ef9843>格林童話中登場的兄妹的妹妹化身的妖怪。</color>崇拜「地縛靈」前輩而以不良少女身份出道的豪邁武鬥派女孩。討厭過去被魔女囚禁的自己，在重新鍛鍊自己的過程中，不知不覺間已變得比哥哥還強。雖然平時都瞧不起哥哥，但其實她很喜歡哥哥，直到現在都還以把自己從魔女手中救出的哥哥為榮。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-07-18 15:00:00",
+                "old": "2025-06-18 15:00:00"
+              }
+            ],
+            "date": "2026-07-14",
+            "version": "36f4aae"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.132749+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-07-14T15:00:53.551202+00:00",
+        "last_modified_version": "36f4aae"
       },
       "id": "598",
       "image_urls": {
@@ -177494,5 +178388,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 986,
-  "version": "88fd1a3"
+  "version": "36f4aae"
 }
