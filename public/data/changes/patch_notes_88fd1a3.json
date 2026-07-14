@@ -1,0 +1,83 @@
+{
+  "version": "88fd1a3",
+  "version_date": "2026-07-14",
+  "previous_version": "6631b16",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "449",
+      "name": "Belle Bonsho",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634348/otogi/cards_hd/100449_hd_808a559be3fa92cb9d7d42c077f4eaea.png",
+      "changes": [
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_hp",
+          "field_label": "Base HP",
+          "old": 3030,
+          "new": 3665,
+          "display": "Base HP: 3030 → 3665 (+635)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_atk",
+          "field_label": "Base ATK",
+          "old": 2530,
+          "new": 3165,
+          "display": "Base ATK: 2530 → 3165 (+635)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_hp",
+          "field_label": "Max HP",
+          "old": 9100,
+          "new": 11000,
+          "display": "Max HP: 9100 → 11000 (+1900)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_atk",
+          "field_label": "Max ATK",
+          "old": 7600,
+          "new": 9500,
+          "display": "Max ATK: 7600 → 9500 (+1900)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "guildRaidBoss": {
+      "old_count": 50,
+      "new_count": 50,
+      "diff": 0
+    },
+    "monster": {
+      "old_count": 986,
+      "new_count": 986,
+      "diff": 0
+    },
+    "cardInit": {
+      "old_count": 452,
+      "new_count": 452,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "banner": {
+      "old_count": 554,
+      "new_count": 555,
+      "diff": 1
+    }
+  }
+}
