@@ -14682,6 +14682,39 @@
       "AoE"
     ]
   },
+  "1779": {
+    "id": "1779",
+    "name": "Order of Annihilation",
+    "description": "Deals {value} DMG to the 2 enemies with the highest ATK, target receives {delay1} more DMG for a limited time.",
+    "card_id": "1779",
+    "card_name": "Emperor Wulie [Summer]",
+    "ie": "ATK<840,24>",
+    "ts": "enemy;count<2>;max_atk",
+    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi",
+      "DMG Up"
+    ]
+  },
+  "1777": {
+    "id": "1777",
+    "name": "Furinkazan Motto",
+    "description": "Deals {value} DMG to the enemy with the highest ATK and decreases targets' speed by {delay1} for a limited time.",
+    "card_id": "1777",
+    "card_name": "Shingen Takeda [Summer]",
+    "ie": "ATK<1760,51>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "SPD<-20.00%,-0.68%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Slow",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

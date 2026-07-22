@@ -15718,6 +15718,153 @@
         "type_name": "Melee"
       }
     },
+    "1777": {
+      "abilities": [
+        {
+          "description": "Normal attacks have 50% chances of inflicting Silence.",
+          "name": "Tiger of Kai",
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of max HP of all allies.",
+          "name": "Cool Summer",
+          "tags": [
+            "Team",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101777",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1777",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704215/otogi/android/101777_d9736e86e5fb05afb06236c800f3c288.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704218/otogi/cards_hd/101777_hd_e2adf200ca8fb222b5c0da6ad0489d3a.png"
+      },
+      "name": "Shingen Takeda [Summer]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "66.92%",
+        "delay_mlb": "80.52%",
+        "description": "Deals {value} DMG to the enemy with the highest ATK and decreases targets' speed by {delay1} for a limited time.",
+        "name": "Furinkazan Motto",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "5,279",
+        "slv_mlb": "6,299",
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4700,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14100,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1779": {
+      "abilities": [
+        {
+          "description": "Reduces 30% of DMG taken.",
+          "name": "Tiger of Jiangdong",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 45% of Crit Rate and increases 15% of battle reward drop rate.",
+          "name": "Summer Exploration",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101779",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1779",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704216/otogi/android/101779_8c533738c7f53a1afe72aaf1f61fe99b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704217/otogi/cards_hd/101779_hd_e4713aaadc452d2cae91de92d9868605.png"
+      },
+      "name": "Emperor Wulie [Summer]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "Deals {value} DMG to the 2 enemies with the highest ATK, target receives {delay1} more DMG for a limited time.",
+        "name": "Order of Annihilation",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,496",
+        "slv_mlb": "2,976",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
     "178": {
       "abilities": [
         {
@@ -64044,7 +64191,7 @@
       }
     }
   },
-  "data_hash": "e9ae713d",
-  "total_cards": 986,
-  "version": "36f4aae"
+  "data_hash": "0ec5d753",
+  "total_cards": 988,
+  "version": "ad23172"
 }

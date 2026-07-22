@@ -18575,5 +18575,71 @@
       "Soulstone Boost"
     ],
     "synergy_partners": []
+  },
+  "177901": {
+    "id": "177901",
+    "name": "Tiger of Jiangdong",
+    "description": "Reduces 30% of DMG taken.",
+    "card_id": "1779",
+    "card_name": "Emperor Wulie [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SHIELD<30.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "177902": {
+    "id": "177902",
+    "name": "Summer Exploration",
+    "description": "Increases 45% of Crit Rate and increases 15% of battle reward drop rate.",
+    "card_id": "1779",
+    "card_name": "Emperor Wulie [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<45.00%,0%>;ITEM<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit Rate",
+      "Drop Rate"
+    ],
+    "synergy_partners": []
+  },
+  "177701": {
+    "id": "177701",
+    "name": "Tiger of Kai",
+    "description": "Normal attacks have 50% chances of inflicting Silence.",
+    "card_id": "1777",
+    "card_name": "Shingen Takeda [Summer]",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<50.00%,0%>;SILENCE<5>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Silence"
+    ],
+    "synergy_partners": []
+  },
+  "177702": {
+    "id": "177702",
+    "name": "Cool Summer",
+    "description": "Increases 20% of max HP of all allies.",
+    "card_id": "1777",
+    "card_name": "Shingen Takeda [Summer]",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "HP<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "AoE",
+      "Max HP"
+    ],
+    "synergy_partners": []
   }
 }

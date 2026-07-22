@@ -15718,6 +15718,153 @@
         "type_name": "Melee"
       }
     },
+    "1777": {
+      "abilities": [
+        {
+          "description": "50% 확률로 일반 공격 대상을 침묵 상태로 만든다",
+          "name": "카이의 호랑이",
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "모든 파티원의 최대 HP가 20% 증가한다",
+          "name": "시원한 여름",
+          "tags": [
+            "Team",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101777",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1777",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704215/otogi/android/101777_d9736e86e5fb05afb06236c800f3c288.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704218/otogi/cards_hd/101777_hd_e2adf200ca8fb222b5c0da6ad0489d3a.png"
+      },
+      "name": "타케다 신겐 [여름]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "66.92%",
+        "delay_mlb": "80.52%",
+        "description": "공격력이 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 속도를 {delay1} 감소시킨다",
+        "name": "풍림화산",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "5,279",
+        "slv_mlb": "6,299",
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4700,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14100,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1779": {
+      "abilities": [
+        {
+          "description": "받는 데미지가 30% 감소한다",
+          "name": "강동의 호랑이",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "치명타율이 45% 증가와 동시에 보상의 드랍률이 15% 상승한다",
+          "name": "여름의 탐험",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101779",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1779",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704216/otogi/android/101779_8c533738c7f53a1afe72aaf1f61fe99b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704217/otogi/cards_hd/101779_hd_e4713aaadc452d2cae91de92d9868605.png"
+      },
+      "name": "무열 황제 [여름]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "공격력이 가장 높은 적 2명에게 {value}의 데미지를 입히고 일정시간 동안 받는 데미지를 {delay1} 증가시킨다",
+        "name": "섬멸의 호령",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,496",
+        "slv_mlb": "2,976",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
     "178": {
       "abilities": [
         {
@@ -64044,8 +64191,8 @@
       }
     }
   },
-  "data_hash": "e9ae713d",
+  "data_hash": "0ec5d753",
   "locale": "ko",
-  "total_cards": 986,
-  "version": "36f4aae"
+  "total_cards": 988,
+  "version": "ad23172"
 }

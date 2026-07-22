@@ -15934,7 +15934,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -16071,12 +16071,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.889942+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.354077+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1430",
       "image_urls": {
@@ -16829,7 +16840,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -16974,12 +16985,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.896129+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.360194+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1434",
       "image_urls": {
@@ -17616,7 +17638,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -17761,12 +17783,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.901220+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.365206+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1437",
       "image_urls": {
@@ -51484,7 +51517,7 @@
           "featured_banners": [
             {
               "end": "2026-07-21 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-07-14 15:00:00"
             }
@@ -52607,6 +52640,385 @@
         "max_hp": 6150,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1777": {
+      "abilities": [
+        {
+          "description": "50% 확률로 일반 공격 대상을 침묵 상태로 만든다",
+          "id": "177701",
+          "name": "카이의 호랑이",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 50.0,
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "모든 파티원의 최대 HP가 20% 증가한다",
+          "id": "177702",
+          "name": "시원한 여름",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-07-29 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-07-26 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101777",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "177701",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"멋진 몸매의 육체를 얻었는걸!\"</color><br/>여성의 형태로 변한 유명한 장군. 옥새가 소원을 말해보라고 했을 때 시원하게 지내는 것이 소원이라고 대답했다. 그의 새로운 모습은 분명 시원하겠지만 분명 더 좋은 방법이 있었을 것이다. 어쨌든 본인은 만족하는 듯하다. 마음속 깊은 곳에서는 이렇게 풍만한 몸은 아니었으면 하고 생각하고 있다. 이런 점에 대해서는 충분히 설명하지 않았던 것이다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-22T07:10:20.605292+00:00",
+        "first_seen_version": "ad23172",
+        "last_modified": "2026-07-22T07:10:20.605292+00:00",
+        "last_modified_version": "ad23172"
+      },
+      "id": "1777",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704215/otogi/android/101777_d9736e86e5fb05afb06236c800f3c288.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704218/otogi/cards_hd/101777_hd_e2adf200ca8fb222b5c0da6ad0489d3a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177701"
+        ],
+        "generation": 0
+      },
+      "name": "타케다 신겐 [여름]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "공격력이 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 속도를 {delay1} 감소시킨다",
+        "id": "1777",
+        "name": "풍림화산",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.68,
+              "type": "SPD",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1760.0,
+            "scale": 51.0,
+            "type": "ATK"
+          },
+          "ml": 50,
+          "slv1": 3852,
+          "slvup": 71,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4700,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14100,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1779": {
+      "abilities": [
+        {
+          "description": "받는 데미지가 30% 감소한다",
+          "id": "177901",
+          "name": "강동의 호랑이",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "치명타율이 45% 증가와 동시에 보상의 드랍률이 15% 상승한다",
+          "id": "177902",
+          "name": "여름의 탐험",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 45.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-07-26 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-07-21 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101779",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "177901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"아, 그러니까 수영복은 이렇게 입는 것이로군.\"</color><br/>그의 아내와 아이들에 대한 감정과는 별개로 여성의 몸의 비밀에 대해 알고 싶어하는 그의 욕망이 지금의 여성 모습으로 나타나게 되었다. 그의 본명은 손견이다. 자신의 딸 앞에 여자로 나타나기로 결정하고 또 그것을 즐기는 바람에 가족 간의 정에 약간의 금이 갔다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-22T07:10:20.604953+00:00",
+        "first_seen_version": "ad23172",
+        "last_modified": "2026-07-22T07:10:20.604953+00:00",
+        "last_modified_version": "ad23172"
+      },
+      "id": "1779",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704216/otogi/android/101779_8c533738c7f53a1afe72aaf1f61fe99b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704217/otogi/cards_hd/101779_hd_e4713aaadc452d2cae91de92d9868605.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177901"
+        ],
+        "generation": 0
+      },
+      "name": "무열 황제 [여름]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "공격력이 가장 높은 적 2명에게 {value}의 데미지를 입히고 일정시간 동안 받는 데미지를 {delay1} 증가시킨다",
+        "id": "1779",
+        "name": "섬멸의 호령",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "SHIELD",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 840.0,
+            "scale": 24.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1439,
+          "slvup": 60,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
@@ -56857,7 +57269,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57002,12 +57414,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.908413+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.372422+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1992",
       "image_urls": {
@@ -57112,7 +57535,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57257,12 +57680,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.910053+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.374122+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1993",
       "image_urls": {
@@ -57364,7 +57798,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57509,12 +57943,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.911686+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.375771+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1994",
       "image_urls": {
@@ -140649,7 +141094,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -140736,12 +141181,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.542048+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.533675+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.993190+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "587",
       "image_urls": {
@@ -140841,7 +141297,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -140928,12 +141384,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.535312+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.994824+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "588",
       "image_urls": {
@@ -141038,7 +141505,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -141125,12 +141592,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.536953+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.996492+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "589",
       "image_urls": {
@@ -142385,7 +142863,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142472,12 +142950,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.544051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.548063+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.007708+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "596",
       "image_urls": {
@@ -142577,7 +143066,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142664,12 +143153,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.549695+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.009372+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "597",
       "image_urls": {
@@ -142775,7 +143275,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142847,12 +143347,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.551202+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.010880+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "598",
       "image_urls": {
@@ -178387,6 +178898,6 @@
     }
   },
   "locale": "ko_KR",
-  "total_cards": 986,
-  "version": "36f4aae"
+  "total_cards": 988,
+  "version": "ad23172"
 }
