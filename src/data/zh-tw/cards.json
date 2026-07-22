@@ -15934,7 +15934,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -16071,12 +16071,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.889942+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.354077+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1430",
       "image_urls": {
@@ -16829,7 +16840,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -16974,12 +16985,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.256887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.896129+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.360194+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1434",
       "image_urls": {
@@ -17616,7 +17638,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -17761,12 +17783,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.901220+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.365206+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1437",
       "image_urls": {
@@ -51484,7 +51517,7 @@
           "featured_banners": [
             {
               "end": "2026-07-21 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-07-14 15:00:00"
             }
@@ -52607,6 +52640,385 @@
         "max_hp": 6150,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1777": {
+      "abilities": [
+        {
+          "description": "使普通攻擊目標50%概率沉默",
+          "id": "177701",
+          "name": "甲斐之虎",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 50.0,
+                "scale": 0.0,
+                "type": "SILENCE",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Silence"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "己方全體隊員血量上限20%增加",
+          "id": "177702",
+          "name": "清涼一夏",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-07-29 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-07-26 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101777",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "177701",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「我的曲線真不錯啊！」</color><br/>那位有名的將軍，現在變成女人了。玉璽讓他許個願望，他說他想要維持涼爽。他的新外貌的確讓他感到涼爽了...但是難道沒有更好的方式嗎？無論如何，信玄還蠻享受的。雖然，他在心中偷偷希望自己能不要這麼豐滿就好了。不過他從來沒有說出口。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-22T07:10:20.605292+00:00",
+        "first_seen_version": "ad23172",
+        "last_modified": "2026-07-22T07:10:20.605292+00:00",
+        "last_modified_version": "ad23172"
+      },
+      "id": "1777",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704215/otogi/android/101777_d9736e86e5fb05afb06236c800f3c288.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704218/otogi/cards_hd/101777_hd_e2adf200ca8fb222b5c0da6ad0489d3a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177701"
+        ],
+        "generation": 0
+      },
+      "name": "武田信玄[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "對1名攻擊最高的敵人造成{value}點傷害，並使目標一定時間內速度下降{delay1}",
+        "id": "1777",
+        "name": "風林火山",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.68,
+              "type": "SPD",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1760.0,
+            "scale": 51.0,
+            "type": "ATK"
+          },
+          "ml": 50,
+          "slv1": 3852,
+          "slvup": 71,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4700,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14100,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1779": {
+      "abilities": [
+        {
+          "description": "所受傷害30%減少",
+          "id": "177901",
+          "name": "江東之虎",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴擊率45%增加，同時獎勵掉落概率15%增加",
+          "id": "177902",
+          "name": "夏日探索",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 45.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Drop Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-07-26 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-07-21 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101779",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "177901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「啊，原來泳裝是這樣穿的啊。」</color><br/>不顧妻小的感受，他想要了解女性奧秘的願望讓他開啟了新的生活方式。他的真名是孫堅。他十分享受自己的女性身份，並展現給自己的女兒看，這樣的行為導致他的家庭關係出現了裂縫。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-22T07:10:20.604953+00:00",
+        "first_seen_version": "ad23172",
+        "last_modified": "2026-07-22T07:10:20.604953+00:00",
+        "last_modified_version": "ad23172"
+      },
+      "id": "1779",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704216/otogi/android/101779_8c533738c7f53a1afe72aaf1f61fe99b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1784704217/otogi/cards_hd/101779_hd_e4713aaadc452d2cae91de92d9868605.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177901"
+        ],
+        "generation": 0
+      },
+      "name": "武烈皇帝[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "對2名ATK最高的敵人造成{value}點傷害，並使目標一定時間內所受傷害提升{delay1}",
+        "id": "1779",
+        "name": "殲滅命令",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "SHIELD",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 840.0,
+            "scale": 24.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1439,
+          "slvup": 60,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4500,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13500,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
@@ -56857,7 +57269,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57002,12 +57414,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.257886+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.908413+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.372422+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1992",
       "image_urls": {
@@ -57112,7 +57535,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57257,12 +57680,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.910053+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.374122+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1993",
       "image_urls": {
@@ -57364,7 +57798,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -57509,12 +57943,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-13T08:47:27.258887+00:00",
         "first_seen_version": "3d06ec7",
-        "last_modified": "2026-07-14T15:00:53.911686+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.375771+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "1994",
       "image_urls": {
@@ -140649,7 +141094,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -140736,12 +141181,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.542048+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.533675+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.993190+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "587",
       "image_urls": {
@@ -140841,7 +141297,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -140928,12 +141384,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.535312+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.994824+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "588",
       "image_urls": {
@@ -141038,7 +141505,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -141125,12 +141592,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.543051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.536953+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:19.996492+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "589",
       "image_urls": {
@@ -142385,7 +142863,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142472,12 +142950,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.544051+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.548063+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.007708+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "596",
       "image_urls": {
@@ -142577,7 +143066,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142664,12 +143153,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.549695+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.009372+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "597",
       "image_urls": {
@@ -142775,7 +143275,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-07-18 15:00:00",
           "is_time_limited": true,
@@ -142847,12 +143347,23 @@
             ],
             "date": "2026-07-14",
             "version": "36f4aae"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-07-22",
+            "version": "ad23172"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.545556+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-07-14T15:00:53.551202+00:00",
-        "last_modified_version": "36f4aae"
+        "last_modified": "2026-07-22T07:10:20.010880+00:00",
+        "last_modified_version": "ad23172"
       },
       "id": "598",
       "image_urls": {
@@ -178387,6 +178898,6 @@
     }
   },
   "locale": "zh_TW",
-  "total_cards": 986,
-  "version": "36f4aae"
+  "total_cards": 988,
+  "version": "ad23172"
 }
