@@ -23,6 +23,25 @@ export const STAT_CAPS = {
 // Base crit multiplier
 export const BASE_CRIT_MULT = 2.0;
 
+/**
+ * Expected damage across crit/non-crit outcomes, capped per outcome.
+ *
+ * The cap applies to each individual hit in-game, so it must be applied to the
+ * crit and non-crit branches BEFORE averaging them. Averaging first and capping
+ * after overestimates any build whose crits blow past the cap: a non-crit that
+ * lands below the cap gets pulled up to it by the (capped) crit branch.
+ */
+export function expectedCappedDamage(
+  base: number,
+  critRate: number,
+  critMult: number,
+  cap: number
+): number {
+  const nonCrit = Math.min(Math.round(base), cap);
+  const crit = Math.min(Math.round(base * critMult), cap);
+  return Math.round(nonCrit * (1 - critRate) + crit * critRate);
+}
+
 // Attack interval formula constants (validated 2026-01-06 via Frida timing)
 // Formula: interval = (speed_stat + 750) / 900
 export const ATTACK_INTERVAL_OFFSET = 750;
@@ -235,7 +254,12 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const normalBase = effectiveAtk * exceedMult * dmgMult * normalDmgMult * enemyVulnerability;
   const normalDamage = Math.round(normalBase);
   const normalDamageCrit = Math.round(normalBase * effectiveCritMult);
-  const normalDamageExpected = Math.round(normalBase * expectedCritMult);
+  const normalDamageExpected = expectedCappedDamage(
+    normalBase,
+    effectiveCritRate,
+    effectiveCritMult,
+    DAMAGE_CAPS.normal
+  );
   const normalDamageCapped = normalDamageCrit >= DAMAGE_CAPS.normal;
 
   // Skill-specific crit stats (includes skill-triggered ability bonuses)
@@ -263,7 +287,12 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
   const skillBase = bondedSkillBase * exceedMult * dmgMult * skillDmgMult * enemyVulnerability;
   const skillDamage = Math.round(skillBase);
   const skillDamageCrit = Math.round(skillBase * skillCritMult);
-  const skillDamageExpected = Math.round(skillBase * skillExpectedCritMult);
+  const skillDamageExpected = expectedCappedDamage(
+    skillBase,
+    skillCritRate,
+    skillCritMult,
+    DAMAGE_CAPS.skill
+  );
   const skillDamageCapped = skillDamageCrit >= DAMAGE_CAPS.skill;
 
   // Apply caps
@@ -274,9 +303,7 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
 
   // Calculate DPS (expected damage per second)
   const attacksPerSecond = 1 / attackInterval;
-  const normalDps = Math.round(
-    Math.min(normalDamageExpected, DAMAGE_CAPS.normal) * attacksPerSecond
-  );
+  const normalDps = Math.round(normalDamageExpected * attacksPerSecond);
 
   // Total multiplier for display
   const rawMultiplier = dmgMult * enemyVulnerability * expectedCritMult;
@@ -302,12 +329,12 @@ export function calculateDamage(input: DamageCalcInput): DamageCalcResult {
 
     normalDamage: cappedNormalDamage,
     normalDamageCrit: cappedNormalCrit,
-    normalDamageExpected: Math.min(normalDamageExpected, DAMAGE_CAPS.normal),
+    normalDamageExpected,
     normalDamageCapped,
 
     skillDamage: cappedSkillDamage,
     skillDamageCrit: cappedSkillCrit,
-    skillDamageExpected: Math.min(skillDamageExpected, DAMAGE_CAPS.skill),
+    skillDamageExpected,
     skillDamageCapped,
 
     normalDps,

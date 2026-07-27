@@ -43,6 +43,7 @@ import {
   LB_EXCEED_MIN,
   LB_EXCEED_MAX,
   calcAtkAtLevel,
+  expectedCappedDamage,
 } from './damage-calc';
 
 // ============================================================================
@@ -1143,9 +1144,9 @@ export function calculatePhase4FinalDamage(
       const normalDamageCrit = Math.min(Math.round(normalBase * effectiveCritDmg), DAMAGE_CAPS.normal);
       const normalDamageCritMin = Math.min(Math.round(normalBaseMin * effectiveCritDmg), DAMAGE_CAPS.normal);
       const normalDamageCritMax = Math.min(Math.round(normalBaseMax * effectiveCritDmg), DAMAGE_CAPS.normal);
-      const normalDamageExpected = Math.min(Math.round(normalBase * expectedCritMult), DAMAGE_CAPS.normal);
-      const normalDamageExpectedMin = Math.min(Math.round(normalBaseMin * expectedCritMult), DAMAGE_CAPS.normal);
-      const normalDamageExpectedMax = Math.min(Math.round(normalBaseMax * expectedCritMult), DAMAGE_CAPS.normal);
+      const normalDamageExpected = expectedCappedDamage(normalBase, effectiveCritRate, effectiveCritDmg, DAMAGE_CAPS.normal);
+      const normalDamageExpectedMin = expectedCappedDamage(normalBaseMin, effectiveCritRate, effectiveCritDmg, DAMAGE_CAPS.normal);
+      const normalDamageExpectedMax = expectedCappedDamage(normalBaseMax, effectiveCritRate, effectiveCritDmg, DAMAGE_CAPS.normal);
       const normalDamageCapped = normalDamageCrit >= DAMAGE_CAPS.normal;
 
       // DPS
@@ -1183,9 +1184,9 @@ export function calculatePhase4FinalDamage(
       const skillDamageCrit = Math.min(Math.round(skillBase * skillEffectiveCritDmg), DAMAGE_CAPS.skill);
       const skillDamageCritMin = Math.min(Math.round(skillBaseMin * skillEffectiveCritDmg), DAMAGE_CAPS.skill);
       const skillDamageCritMax = Math.min(Math.round(skillBaseMax * skillEffectiveCritDmg), DAMAGE_CAPS.skill);
-      const skillDamageExpected = Math.min(Math.round(skillBase * skillExpectedCritMult), DAMAGE_CAPS.skill);
-      const skillDamageExpectedMin = Math.min(Math.round(skillBaseMin * skillExpectedCritMult), DAMAGE_CAPS.skill);
-      const skillDamageExpectedMax = Math.min(Math.round(skillBaseMax * skillExpectedCritMult), DAMAGE_CAPS.skill);
+      const skillDamageExpected = expectedCappedDamage(skillBase, skillEffectiveCritRate, skillEffectiveCritDmg, DAMAGE_CAPS.skill);
+      const skillDamageExpectedMin = expectedCappedDamage(skillBaseMin, skillEffectiveCritRate, skillEffectiveCritDmg, DAMAGE_CAPS.skill);
+      const skillDamageExpectedMax = expectedCappedDamage(skillBaseMax, skillEffectiveCritRate, skillEffectiveCritDmg, DAMAGE_CAPS.skill);
       const skillDamageCapped = skillDamageCrit >= DAMAGE_CAPS.skill;
 
       // Build damage breakdown for debug display

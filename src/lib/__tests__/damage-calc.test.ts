@@ -867,33 +867,121 @@ describe('Damage Cap Interactions with Expected Damage', () => {
   });
 
   it('expected damage calculation when only crit exceeds cap', () => {
-    // Find inputs where non-crit < cap but crit >= cap
-    // This is a critical edge case for expected damage accuracy
+    // Inputs tuned so non-crit < cap but crit >= cap.
+    // This is a critical edge case for expected damage accuracy.
     const result = calculateDamage({
       ...baseInput,
       baseCrit: 5000, // 50% crit
-      dmgPercent: 0.8, // Tune to get non-crit below cap, crit above
+      // ATK 5000 internal: non-crit 60000 (< 99999 cap), crit 120000 (> cap).
+      dmgPercent: 11.0,
     });
 
-    // If non-crit < cap but crit >= cap, expected should be:
-    // (1 - critRate) * nonCrit + critRate * cap
-    // NOT: min(nonCrit * expectedCritMult, cap)
+    // Precondition: we're actually in the edge case.
+    expect(result.normalDamage).toBeLessThan(DAMAGE_CAPS.normal);
+    expect(result.normalDamageCrit).toBe(DAMAGE_CAPS.normal);
 
-    if (result.normalDamage < DAMAGE_CAPS.normal && result.normalDamageCrit >= DAMAGE_CAPS.normal) {
-      // This is the edge case - expected should blend capped crit with uncapped non-crit
-      const correctExpected = Math.round(
-        (1 - result.effectiveCritRate) * result.normalDamage +
-        result.effectiveCritRate * DAMAGE_CAPS.normal
-      );
+    // Expected must blend the capped crit with the UNCAPPED non-crit:
+    //   (1 - critRate) * nonCrit + critRate * cap
+    // NOT min(nonCrit * expectedCritMult, cap), which pins expected to the cap
+    // even though half the hits land below it.
+    const correctExpected = Math.round(
+      (1 - result.effectiveCritRate) * result.normalDamage +
+      result.effectiveCritRate * DAMAGE_CAPS.normal
+    );
 
-      // Document current behavior vs correct behavior
-      // If this fails, it reveals a potential bug in expected damage calculation
-      console.log('Edge case detected:');
-      console.log(`  Non-crit: ${result.normalDamage}`);
-      console.log(`  Crit: ${result.normalDamageCrit}`);
-      console.log(`  Current expected: ${result.normalDamageExpected}`);
-      console.log(`  Correct expected: ${correctExpected}`);
-    }
+    expect(result.normalDamageExpected).toBe(correctExpected);
+    // The old cap-after-averaging bug produced exactly the cap here.
+    expect(result.normalDamageExpected).toBeLessThan(DAMAGE_CAPS.normal);
+  });
+
+  it('expected damage is never pinned to the cap when non-crit is below it', () => {
+    // Massively over-cap crit: the bug was worst here, reporting the full cap
+    // as "expected" even though non-crit hits land far below it.
+    const result = calculateDamage({
+      ...baseInput,
+      baseCrit: 1000, // 10% crit — 90% of hits are non-crit
+      dmgPercent: 0.5,
+      critDmgBonus: 10.0, // absurd crit dmg, crits blow way past the cap
+    });
+
+    expect(result.normalDamage).toBeLessThan(DAMAGE_CAPS.normal);
+    expect(result.normalDamageCrit).toBe(DAMAGE_CAPS.normal);
+
+    // Expected must sit between the non-crit hit and the cap, much closer to
+    // the non-crit end given the 10% crit rate.
+    expect(result.normalDamageExpected).toBeGreaterThan(result.normalDamage);
+    expect(result.normalDamageExpected).toBeLessThan(DAMAGE_CAPS.normal);
+
+    const correctExpected = Math.round(
+      0.9 * result.normalDamage + 0.1 * DAMAGE_CAPS.normal
+    );
+    expect(result.normalDamageExpected).toBe(correctExpected);
+  });
+
+  it('expected damage equals the cap only when non-crit also reaches the cap', () => {
+    const result = calculateDamage({
+      ...baseInput,
+      dmgPercent: 50.0, // even non-crit is far past the cap
+    });
+
+    expect(result.normalDamage).toBe(DAMAGE_CAPS.normal);
+    expect(result.normalDamageExpected).toBe(DAMAGE_CAPS.normal);
+  });
+
+  it('expected damage is unchanged when nothing is capped', () => {
+    // Below the cap the capped-branch blend must reduce to base * expectedCritMult.
+    const result = calculateDamage({
+      ...baseInput,
+      baseAtk: 1000,
+      maxAtk: 5000,
+      dmgPercent: 0,
+    });
+
+    expect(result.normalDamageCrit).toBeLessThan(DAMAGE_CAPS.normal);
+
+    const blended = Math.round(
+      (1 - result.effectiveCritRate) * result.normalDamage +
+      result.effectiveCritRate * result.normalDamageCrit
+    );
+    expect(result.normalDamageExpected).toBe(blended);
+    // And within rounding of the simple multiplier form.
+    expect(result.normalDamageExpected).toBeCloseTo(
+      result.normalDamage * result.expectedCritMult,
+      -1
+    );
+  });
+
+  it('skill expected damage caps per-outcome, not after averaging', () => {
+    // Tune skill so non-crit < skill cap but crit >= skill cap.
+    const result = calculateDamage({
+      ...baseInput,
+      baseCrit: 5000, // 50% crit
+      skillSlv1: 600000,
+      skillSlvup: 0,
+      skillDmgPercent: 0,
+    });
+
+    expect(result.skillDamage).toBeLessThan(DAMAGE_CAPS.skill);
+    expect(result.skillDamageCrit).toBe(DAMAGE_CAPS.skill);
+
+    const correctExpected = Math.round(
+      (1 - result.skillCritRate) * result.skillDamage +
+      result.skillCritRate * DAMAGE_CAPS.skill
+    );
+    expect(result.skillDamageExpected).toBe(correctExpected);
+    expect(result.skillDamageExpected).toBeLessThan(DAMAGE_CAPS.skill);
+  });
+
+  it('DPS uses the per-outcome capped expected damage', () => {
+    const result = calculateDamage({
+      ...baseInput,
+      baseCrit: 5000,
+      dmgPercent: 11.0, // in the crit-capped-but-non-crit-isn't band
+    });
+
+    expect(result.normalDps).toBe(
+      Math.round(result.normalDamageExpected / result.attackInterval)
+    );
   });
 
   it('skill damage expected respects skill cap correctly', () => {
