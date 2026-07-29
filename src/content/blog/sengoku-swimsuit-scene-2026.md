@@ -8,7 +8,9 @@ tags: ["analysis", "gacha"]
 
 <div data-lang="en">
 
-For this upcoming event some of the data was staggered, so that may be how it goes forward. This event is relatively disappointing — maybe the devs are letting us save up for an anni event? We can dream...
+Data for this event came in staggered. Config updates used to land all at once with the standard gacha, but the pre-event gacha and the event cards are split now, so the event data arrives later — that may be how it goes forward. It meant we were late on the two pre-event summons, though luckily neither turned out to be worth chasing.
+
+The rest is relatively disappointing too — maybe the devs are letting us save up for an anni event? We can dream... though a thin card list should at least make the ranking race cheaper: the [event rankings](/en/tools/event-rankings) projection has T1 at 20.54B–38.23B, and with a lineup like this I'd expect the bottom of that band or under it.
 
 ---
 
