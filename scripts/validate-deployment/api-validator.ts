@@ -31,8 +31,16 @@ export const DATA_ENDPOINTS: ApiEndpoint[] = [
       if (typeof obj.total_cards !== 'number') {
         return { valid: false, error: 'total_cards is not a number' };
       }
-      if (obj.total_cards < 850 || obj.total_cards > 1000) {
-        return { valid: false, error: `Unexpected card count: ${obj.total_cards} (expected 850-1000)` };
+      // Sanity band, not a precise expectation: the catalogue only grows, ~10-15
+      // cards per event. Raise the ceiling when it is approached rather than
+      // tightening it — a hard failure here blocks deployment.
+      const MIN_CARDS = 850;
+      const MAX_CARDS = 1200;
+      if (obj.total_cards < MIN_CARDS || obj.total_cards > MAX_CARDS) {
+        return {
+          valid: false,
+          error: `Unexpected card count: ${obj.total_cards} (expected ${MIN_CARDS}-${MAX_CARDS})`,
+        };
       }
 
       // Check cards is an object with entries

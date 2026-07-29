@@ -52844,6 +52844,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -52855,7 +52863,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -52884,7 +52898,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -52902,10 +52917,41 @@
       "description": "<color=#f4e48e>“不动如山。”</color><br/>此座右铭刻在武田信玄的旗帜上。自从以妖怪的形态出现后，其灵魂在战场上担任主人的影武者。这表示信玄即使忽然变成女人，他依旧有个男人的形体来坚守岗位。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.508427+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.508427+00:00",
+        "last_modified": "2026-07-29T08:15:48.748825+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1770",
@@ -53013,6 +53059,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53024,7 +53078,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -53053,7 +53113,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -53071,10 +53132,41 @@
       "description": "<color=#f4e48e>“我知道如何让自己保持清凉！”</color><br/>被制造来保冷保热的瓶子。它能维持饮料的温度，长达好几个小时。这是怎么做到的啊？答案只有一个... 是魔法！一个受其主人万般宠爱的妖怪。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.508724+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.508724+00:00",
+        "last_modified": "2026-07-29T08:15:48.756951+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1771",
@@ -53209,6 +53301,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53220,7 +53320,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -53286,10 +53392,31 @@
       "description": "<color=#f4e48e>“父亲，你够了！”</color><br/>仿佛看见父亲变成女人还不够扰人似的，尚香还得接受父亲变得比她还漂亮这个事实。一旦回到她的国度后，她很认真地考虑只字不提这次的事件。她最大的恐惧就是她的父亲，武烈皇帝，会带着女性的外貌回家。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510819+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510819+00:00",
+        "last_modified": "2026-07-29T08:15:48.816983+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1773",
@@ -53428,6 +53555,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53439,7 +53574,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -53519,10 +53660,31 @@
       "description": "<color=#f4e48e>“在陆地上还不赖耶。”</color><br/>这次的夏日事件发生离海床上的一间皇宫不远的地方。乙姬想要亲自一探究竟这些骚乱所为何事，于是便离开她的深海住处。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510504+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510504+00:00",
+        "last_modified": "2026-07-29T08:15:48.807882+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1774",
@@ -53620,6 +53782,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53631,7 +53801,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -53660,7 +53836,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -53678,10 +53855,41 @@
       "description": "<color=#f4e48e>“在虎族首领面前恐惧吧！”</color><br/>拥有老虎外型的外星幻影妖怪。在她到达地球时，因为害怕自己因为酷暑而憔悴，第一件事就是买了新泳衣。她决定买一套豹纹的泳衣，以示尊重她的猫科同胞们。（特此澄清，这只是印刷的豹纹。不是用真的豹皮做的。）",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509006+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509006+00:00",
+        "last_modified": "2026-07-29T08:15:48.764086+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1776",
@@ -53987,6 +54195,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53998,7 +54214,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": [
             {
@@ -54042,10 +54264,31 @@
       "description": "<color=#f4e48e>“吼吼吼！”</color><br/>一只漂亮又能实现人们愿望的老虎。不过要是没有适当使用的话，如我们所见，可能会造成各式各样的麻烦。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510177+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510177+00:00",
+        "last_modified": "2026-07-29T08:15:48.798624+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1778",
@@ -54677,6 +54920,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -54688,7 +54939,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -54774,10 +55031,31 @@
       "description": "<color=#f4e48e>“欢迎！请问几位呢...？”</color><br/>超受欢迎、总是爆满之海水浴场的九十九神。她在这每日营业的餐馆里，表现的并不淑女，可是有种特质让许多人拜倒在她的石榴裙下。在与爱恋着她的男人在一起时，会变得十分小女人，至少他们这么说。虽然有点难以相信。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509875+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509875+00:00",
+        "last_modified": "2026-07-29T08:15:48.790490+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1781",
@@ -54879,6 +55157,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -54890,7 +55176,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -54976,10 +55268,31 @@
       "description": "<color=#f4e48e>“人生里一定要能分辨好恶...”</color><br/>自幼便是神童而名闻遐迩的高僧。虽然成年后也依然享有盛名，人们记得的还是他身为孩童的印象。这样想起来，他跟那些长大以后就销声匿迹的童星有点像。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509596+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509596+00:00",
+        "last_modified": "2026-07-29T08:15:48.781373+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1782",
@@ -55081,6 +55394,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55092,7 +55413,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -55156,10 +55483,31 @@
       "description": "<color=#f4e48e>“夏日炎炎，来吃一口吧！”</color><br/>夏日消暑圣品刨冰的九十九神。一位俏皮又欢乐的灵魂，听说她的个性会随着口味改变。点一份草莓口味的，她会像位老朋友那样招呼你。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509313+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509313+00:00",
+        "last_modified": "2026-07-29T08:15:48.772194+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1783",
@@ -55294,10 +55642,18 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55305,7 +55661,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55321,10 +55683,11 @@
               "start": "2026-08-15 15:00:00"
             }
           ],
-          "in_standard_pool": true
+          "in_standard_pool": false
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55342,10 +55705,46 @@
       "description": "<color=#f4e48e>“暴雨就是我最好的武器！”</color><br/>东亚常见的一种天气现象。她会在夏季开始时带来极多的雨量。有人认为这场雨是恩泽，也有人认为是场浩劫。她希望人们能早点拿定主意...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.in_standard_pool",
+                "new": false,
+                "old": true
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.512074+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.512074+00:00",
+        "last_modified": "2026-07-29T08:15:48.852535+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1784",
@@ -55504,6 +55903,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55515,7 +55922,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55544,7 +55957,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55562,10 +55976,41 @@
       "description": "<color=#f4e48e>“吼！一定要这么热吗？”</color><br/>这神剑之灵对酷暑有点应付不来。她来到海边想让自己凉快一点。她担心带着盐分的海风会让自己生锈，所以每一次换衣服时都仔细地冲洗身体。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511135+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511135+00:00",
+        "last_modified": "2026-07-29T08:15:48.827214+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1786",
@@ -55709,6 +56154,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55720,7 +56173,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55749,7 +56208,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55767,10 +56227,41 @@
       "description": "<color=#f4e48e>“看看这回旋的潮水... 你不觉得这像是个坏预兆吗？”</color><br/>就算是掌管死亡的女神偶尔也想到大海里清凉一下。不过，有她的地方通常不会有好消息，所以不管在任何风景优美的景点，最好还是避开她。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511463+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511463+00:00",
+        "last_modified": "2026-07-29T08:15:48.835907+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1787",
@@ -55899,6 +56390,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55910,7 +56409,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55939,7 +56444,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55957,10 +56463,41 @@
       "description": "<color=#f4e48e>“好热啊！这天气是怎么回事啊？！”</color><br/>正常来说，妖精森林是个凉爽又有微风的绿洲，但是因为今年的酷热，让妖精女王都躲到海边来避暑了。她不习惯暴露在阳光下，不过还蛮喜欢享受浸在海里的。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511763+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511763+00:00",
+        "last_modified": "2026-07-29T08:15:48.844067+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1788",

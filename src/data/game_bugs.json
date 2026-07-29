@@ -2784,6 +2784,46 @@
         }
       ],
       "fixed_in_version": "a671b35"
+    },
+    {
+      "id": "BUG-070",
+      "card_id": 1778,
+      "card_name": "Red-Striped Tiger",
+      "affected_field": "ability",
+      "affected_id": "177801",
+      "category": "description",
+      "severity": "visual",
+      "summary": "HP regen percentage mismatch (7.5% vs 10%)",
+      "details": {
+        "description_says": "When HP is below 1/2, restores 7.5% HP every 5 seconds, increases 40% of Crit Rate, and increases 40% of skill DMG.",
+        "de_field": "HPP_IN<0.00%,50.00%>;HEAL_DOT<10.00%,0%,5>;CHIT<40.00%,0%>;SKILL_ATK<40.00%,0%>",
+        "description_percentage": 7.5,
+        "actual_percentage": 10.0
+      },
+      "analysis": "Description says 7.5% HP regen every 5s but the HEAL_DOT effect in the de field applies 10%. Same defect as BUG-067 (Diamond Dragon), which shares the ability template.",
+      "affects_gameplay": false,
+      "visual_only": true,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-07-29",
+      "resolution_check": {
+        "field": "de",
+        "condition": "value_equals",
+        "effect_type": "HEAL_DOT",
+        "expected_value": 7.5
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "10%"
+      },
+      "last_checked": "2026-07-29",
+      "check_history": [
+        {
+          "date": "2026-07-29",
+          "status": "persists",
+          "game_version": "0b19dc5"
+        }
+      ]
     }
   ],
   "categories": {

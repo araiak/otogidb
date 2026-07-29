@@ -350,6 +350,38 @@ export default function CardTable({ initialCards }: CardTableProps) {
     setSortDropdownOpen(false);
   }, []);
 
+  // True when any filter, search, or sort differs from its default
+  const hasActiveFilters =
+    globalFilter !== '' ||
+    attributeFilter.length > 0 ||
+    typeFilter.length > 0 ||
+    rarityFilter.length > 0 ||
+    bondFilter.length > 0 ||
+    skillTagFilter.length > 0 ||
+    abilityTagFilter.length > 0 ||
+    sourceFilter.length > 0 ||
+    availableOnly ||
+    !hideNonPlayable ||
+    bugsOnly ||
+    sorting.length > 0;
+
+  // Reset every filter, the search box, and sorting back to defaults.
+  // Display preferences (Show Bugs, LB0/MLB) are persisted user settings, not filters, so they're left alone.
+  const handleClearFilters = useCallback(() => {
+    setGlobalFilter('');
+    setAttributeFilter([]);
+    setTypeFilter([]);
+    setRarityFilter([]);
+    setBondFilter([]);
+    setSkillTagFilter([]);
+    setAbilityTagFilter([]);
+    setSourceFilter([]);
+    setAvailableOnly(false);
+    setHideNonPlayable(true);
+    setBugsOnly(false);
+    setSorting([]);
+  }, []);
+
   // Reset focused sort index when dropdown opens/closes
   useEffect(() => {
     if (sortDropdownOpen) {
@@ -854,6 +886,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
               <span>Bugs Only</span>
             </label>
           )}
+
+          <button
+            onClick={handleClearFilters}
+            disabled={!hasActiveFilters}
+            data-testid="clear-filters"
+            className="flex items-center gap-1 px-2 py-1 text-xs rounded border transition-colors enabled:hover:bg-surface disabled:opacity-40 disabled:cursor-not-allowed"
+            style={{ borderColor: hasActiveFilters ? 'var(--color-accent)' : 'var(--color-border)' }}
+            title="Reset all filters, search, and sorting to defaults"
+          >
+            <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            <span>Clear filters</span>
+          </button>
         </div>
       </div>
 
@@ -861,29 +907,10 @@ export default function CardTable({ initialCards }: CardTableProps) {
       <div className="flex flex-wrap items-center justify-between gap-2 text-sm text-secondary">
         <div aria-live="polite" aria-atomic="true">
           Showing {table.getRowModel().rows.length} of {cards.length} cards
-          {(attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || !hideNonPlayable || bugsOnly) && (
-            <button
-              onClick={() => {
-                setAttributeFilter([]);
-                setTypeFilter([]);
-                setRarityFilter([]);
-                setBondFilter([]);
-                setSkillTagFilter([]);
-                setAbilityTagFilter([]);
-                setSourceFilter([]);
-                setAvailableOnly(false);
-                setHideNonPlayable(true);
-                setBugsOnly(false);
-              }}
-              className="ml-2 text-accent hover:underline"
-            >
-              Clear filters
-            </button>
-          )}
         </div>
 
         {/* Share button */}
-        {(globalFilter || attributeFilter.length > 0 || typeFilter.length > 0 || rarityFilter.length > 0 || bondFilter.length > 0 || skillTagFilter.length > 0 || abilityTagFilter.length > 0 || sourceFilter.length > 0 || availableOnly || sorting.length > 0 || !hideNonPlayable || bugsOnly) && (
+        {hasActiveFilters && (
           <div className="relative">
             <button
               onClick={handleShare}
