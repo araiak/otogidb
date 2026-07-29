@@ -15718,6 +15718,354 @@
         "type_name": "Melee"
       }
     },
+    "1770": {
+      "abilities": [
+        {
+          "description": "与ダメージ値が12%増加し、最大ＨＰを6%増加（助っ人以外、味方陣容一回有効）",
+          "name": "不動如山",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Max HP"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101770",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1770",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308805/otogi/android/101770_5ce7c0ea2a1f14daf5ac681594e0f981.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101770_hd_01bc66ce0234ffcd1c0b3b017db73f4b.png"
+      },
+      "name": "風林火山",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "雄叫び",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1771": {
+      "abilities": [
+        {
+          "description": "毒状態を無効化し、与ダメージ値を4%増加（助っ人以外、味方陣容一回有効）",
+          "name": "保温魔法",
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101771",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1771",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101771_a1147cb320449254cea3d537f000b123.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101771_hd_12c237950eba7c12254e9cecd9e41143.png"
+      },
+      "name": "まほうびん",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "熱湯をかける",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1773": {
+      "abilities": [
+        {
+          "description": "WAVE開始ごとに、霊験属性の味方式神の特技ダメージ値が15%増加",
+          "name": "弓腰姫",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、霊験属性の味方式神の最大ＨＰが4%上昇",
+          "name": "夏の活力",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101773",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1773",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308809/otogi/android/101773_af9453ac7c13328c4a78327230e0b7ec.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308811/otogi/cards_hd/101773_hd_35322feabcd4f4e4b9b52baacfb1dd53.png"
+      },
+      "name": "孫尚香[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "残ＨＰのパセントの比率が最も低い味方3体のＨＰを{value}回復し、対象の被ダメージ値を一時的に{delay1}軽減する",
+        "name": "弓腰姫",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,397",
+        "slv_mlb": "2,857",
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3930,
+        "base_hp": 3830,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11800,
+        "max_hp": 11500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1774": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神のクリティカル率8%上昇",
+          "name": "竜宮の使者",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、味方式神全体のＨＰを25%回復",
+          "name": "真夏の海",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101774",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1774",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101774_69db9ff3a37a15c1b4a432f89d79856c.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101774_hd_018eb8c0616842e8cabc4d83500ce747.png"
+      },
+      "name": "乙姫[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "味方全体のＨＰを{value}回復する",
+        "name": "魔性の誘い",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,387",
+        "slv_mlb": "2,847",
+        "tags": [
+          "Heal",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 3930,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1776": {
+      "abilities": [
+        {
+          "description": "特技の威力が向上23%（助っ人以外、味方陣容一回有効）",
+          "name": "虎族の長",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 67
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101776",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1776",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308800/otogi/android/101776_dc728f78d568ff9a55f7f4b39f97b4e7.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308813/otogi/cards_hd/101776_hd_1fe0ce730fd7805b4cd1892294c00821.png"
+      },
+      "name": "クァール[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "ガンマ線照射",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1777": {
       "abilities": [
         {
@@ -15790,6 +16138,73 @@
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1778": {
+      "abilities": [
+        {
+          "description": "残ったHPが50％以下の時、HPを5秒毎に7.5%回復し、同時にクリティカル率が40%増加、特技の威力向上40%。",
+          "name": "願いの成就",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "Crit Rate",
+            "Skill DMG"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101778",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1778",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308801/otogi/android/101778_2d11cf1b29d40148fb0a77f8bdcb98cb.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308815/otogi/cards_hd/101778_hd_a5e9147b6cfed39952b530e48d0dfe7d.png"
+      },
+      "name": "紅白虎",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "自分の周り広範囲の敵に{value}のダメージを与え、対象を{probability}で火傷状態にする",
+        "name": "食いちぎる",
+        "prob_lb0": "40.29%",
+        "prob_mlb": "48.49%",
+        "slv_lb0": "2,268",
+        "slv_mlb": "2,708",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3830,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "1779": {
@@ -15929,6 +16344,560 @@
         "max_hp": 5560,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1780": {
+      "abilities": [
+        {
+          "description": "近接型の味方の与ダメージ値が25%増加",
+          "name": "越後の龍",
+          "tags": [
+            "Team",
+            "Melee",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "exchange"
+        ]
+      },
+      "asset_id": "101780",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1780",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101780_1d30c40607fc95fab9ad0ee58a7f17c2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308814/otogi/cards_hd/101780_hd_65606c3d18df6a1b4e963c6036da61af.png"
+      },
+      "name": "上杉謙信[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "敵全体に{value}のダメージを与える",
+        "name": "越後の龍",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,880",
+        "slv_mlb": "2,240",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3830,
+        "base_hp": 3500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 10500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1781": {
+      "abilities": [
+        {
+          "description": "相手にダメージを与えた時、ダメージ値12%ほどのＨＰを回復（助っ人以外、味方陣容一回有効）",
+          "name": "看板娘",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101781",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1781",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101781_7cb7d5915f88f988a65b6499d37e1fc4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101781_hd_6779e389c0de9f2ff2cbdaa659966c01.png"
+      },
+      "name": "海の家とらや",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "アツアツ鉄板の刑",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1782": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、自身の与ダメージ値が49%向上（助っ人以外、味方陣容一回有効）",
+          "name": "機知に富む",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 60
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101782",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1782",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101782_4342808a1b23b82966dc34def54c3a35.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101782_hd_da60022c21d9216cf748a8fb1dcac0df.png"
+      },
+      "name": "一休宗純",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "とんち",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1783": {
+      "abilities": [
+        {
+          "description": "味方式神の被ダメージを4%軽減（助っ人以外、味方陣容一回有効）",
+          "name": "夏の風物詩",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101783",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1783",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308803/otogi/android/101783_42bd6755312c904dd3acbf8df051b2db.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101783_hd_78662fbc457cb37206d24bf237d00ec3.png"
+      },
+      "name": "かき氷",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "頭がキーン",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1784": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、付喪属性の味方式神のクリティカル率10%上昇",
+          "name": "潤物無声",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、付喪属性の味方式神の与ダメージ値が13%増加",
+          "name": "遣らずの雨",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101784",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1784",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101784_c5c48f493053204fd741f6afa1b3b6f2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308817/otogi/cards_hd/101784_hd_fd973cdbfe9ccae275b2d7394043533b.png"
+      },
+      "name": "梅雨前線",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "44.67%",
+        "delay_mlb": "53.27%",
+        "description": "最も攻撃力が高い敵３体に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "name": "集中豪雨",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,585",
+        "slv_mlb": "3,085",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4365,
+        "base_hp": 4300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 12900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1786": {
+      "abilities": [
+        {
+          "description": "「天下五剣」のいずれかと同じ陣容だと、自身のレベル＋１5",
+          "name": "天下五剣",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "特技の威力が向上45%、クリティカルダメージ値が45%に増加",
+          "name": "夏の沐浴",
+          "tags": [
+            "Self",
+            "Skill DMG",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101786",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1786",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101786_0d22baa92baf23dbbed9a99032a08b04.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101786_hd_913840f8e6dc1b7d48416bc54bc0f9d4.png"
+      },
+      "name": "童子切[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "最も攻撃力が高い敵１体に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "name": "月下大輪斬・改",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "5,081",
+        "slv_mlb": "6,061",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4630,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13900,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1787": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神のクリティカルダメージ値が40%増加（助っ人以外、味方陣容一回有効）",
+          "name": "死の宣告",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "相手にダメージを与えた時、ダメージ値15%ほどのＨＰを回復（助っ人以外、味方陣容一回有効）",
+          "name": "厄災の降臨",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101787",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1787",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308807/otogi/android/101787_e1fe07d1147703676e8a7693d6f1527b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101787_hd_ec605b6fad3e6ea61950084fbc7e68c4.png"
+      },
+      "name": "死神[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "機関特務と協力関係に使用できる",
+        "name": "断罪の夏",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1788": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、敵全体のクリティカルダメージ値を40%軽減",
+          "name": "妖精の女王",
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "クリティカル率が50%に増加",
+          "name": "夏のそよ風",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101788",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1788",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101788_7d05cccf13a36686698f241bb0af4f93.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308819/otogi/cards_hd/101788_hd_967524f216bbc15ef64b5153ea49c0f9.png"
+      },
+      "name": "ティターニア[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "HP最高敵１体に{value}のダメージを与える",
+        "name": "女王の休暇",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "7,979",
+        "slv_mlb": "9,519",
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4830,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
       }
@@ -64191,8 +65160,8 @@
       }
     }
   },
-  "data_hash": "0ec5d753",
+  "data_hash": "64db6639",
   "locale": "ja",
-  "total_cards": 988,
-  "version": "ad23172"
+  "total_cards": 1002,
+  "version": "0b19dc5"
 }

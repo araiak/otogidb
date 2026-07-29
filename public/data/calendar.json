@@ -1,32 +1,88 @@
 {
-  "generated_at": "2026-07-22T07:10:20Z",
-  "events": [],
+  "generated_at": "2026-07-29T07:07:01Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "183",
+      "start": "2026-07-30T07:00:00Z",
+      "end": "2026-08-13T07:00:00Z",
+      "name": "Sengoku Swimsuit Scene",
+      "half": "2026-08-06T07:00:00Z",
+      "kill": "2026-08-15T07:00:00Z",
+      "boss_card": {
+        "id": "1778"
+      }
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "295",
-      "start": "2026-07-21T07:00:00Z",
-      "end": "2026-07-26T07:00:00Z",
+      "banner_id": "297",
+      "start": "2026-07-26T07:00:00Z",
+      "end": "2026-08-06T07:00:00Z",
       "cards": [
         {
-          "id": "1779"
+          "id": "1776"
+        },
+        {
+          "id": "1771"
+        },
+        {
+          "id": "1770"
         }
       ],
-      "pity_step": 100,
-      "group_id": "295"
+      "pity_step": 35
     },
     {
       "type": "featured_banner",
-      "banner_id": "296",
-      "start": "2026-07-26T07:00:00Z",
-      "end": "2026-07-29T07:00:00Z",
+      "banner_id": "298",
+      "start": "2026-08-06T07:00:00Z",
+      "end": "2026-08-09T07:00:00Z",
       "cards": [
         {
-          "id": "1777"
+          "id": "1786"
         }
       ],
       "pity_step": 100,
-      "group_id": "295"
+      "group_id": "298"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "299",
+      "start": "2026-08-09T07:00:00Z",
+      "end": "2026-08-12T07:00:00Z",
+      "cards": [
+        {
+          "id": "1787"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "298"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "300",
+      "start": "2026-08-12T07:00:00Z",
+      "end": "2026-08-15T07:00:00Z",
+      "cards": [
+        {
+          "id": "1788"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "298"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "301",
+      "start": "2026-08-15T07:00:00Z",
+      "end": "2026-08-22T07:00:00Z",
+      "cards": [
+        {
+          "id": "1784"
+        }
+      ],
+      "pity_step": 100
     }
   ],
   "exchanges": [
@@ -54,6 +110,91 @@
       "price_add": 15,
       "card": {
         "id": "1729"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1770",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-08-10T07:00:00Z",
+      "end": "2026-08-13T07:00:00Z",
+      "card": {
+        "id": "1770"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1771",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-08-10T07:00:00Z",
+      "end": "2026-08-13T07:00:00Z",
+      "card": {
+        "id": "1771"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1776",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-08-10T07:00:00Z",
+      "end": "2026-08-13T07:00:00Z",
+      "card": {
+        "id": "1776"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1786",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-08-06T07:00:00Z",
+      "end": "2026-08-15T07:00:00Z",
+      "card": {
+        "id": "1786"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1787",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-08-06T07:00:00Z",
+      "end": "2026-08-15T07:00:00Z",
+      "card": {
+        "id": "1787"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1788",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-08-06T07:00:00Z",
+      "end": "2026-08-15T07:00:00Z",
+      "card": {
+        "id": "1788"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1780",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-07-31T16:00:00Z",
+      "end": "2026-09-30T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1780"
       }
     },
     {
@@ -587,6 +728,12 @@
       "event_name": "Interstellar Tanabata Festival",
       "event_date": "2026-06-28",
       "estimated_date": "2027-01-15"
+    },
+    {
+      "event_id": "183",
+      "event_name": "Sengoku Swimsuit Scene",
+      "event_date": "2026-07-31",
+      "estimated_date": "2027-02-15"
     }
   ]
 }

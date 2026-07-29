@@ -14715,6 +14715,228 @@
       "Debuff"
     ]
   },
+  "1770": {
+    "id": "1770",
+    "name": "Battle Cry",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1770",
+    "card_name": "Furinkazan Motto",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1771": {
+    "id": "1771",
+    "name": "Steaming Strike",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1771",
+    "card_name": "Vacuum Flask",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1776": {
+    "id": "1776",
+    "name": "Gamma Beam",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1776",
+    "card_name": "Coeurl [Summer]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1783": {
+    "id": "1783",
+    "name": "Brain Freeze",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1783",
+    "card_name": "Shaved Ice",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1782": {
+    "id": "1782",
+    "name": "Razor-sharp Repartee",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1782",
+    "card_name": "Ikkyū",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1781": {
+    "id": "1781",
+    "name": "Teppanyaki Touch",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1781",
+    "card_name": "Toraya",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1778": {
+    "id": "1778",
+    "name": "Tiger Teeth",
+    "description": "Deals {value} DMG to a wide area of enemies, with a {probability} of inflicting Burn.",
+    "card_id": "1778",
+    "card_name": "Red-Striped Tiger",
+    "ie": "ATK<750,22>",
+    "ts": "enemy;range<3>",
+    "de": "BURN<5.0%,0.17%,5>;HIT<12.00%,0.41%>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Burn",
+      "Debuff"
+    ]
+  },
+  "1774": {
+    "id": "1774",
+    "name": "Enchanted Invitation",
+    "description": "Restores {value} HP to all allies.",
+    "card_id": "1774",
+    "card_name": "The Princess [Summer]",
+    "ie": "HEAL<800,23>",
+    "ts": "self;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "AoE"
+    ]
+  },
+  "1773": {
+    "id": "1773",
+    "name": "Bow-Waisted Princess",
+    "description": "Restores {value} HP to 3 allies with the lowest percentage of HP. Targets receive {delay1} less DMG for a limited time.",
+    "card_id": "1773",
+    "card_name": "Shangxiang Sun [Summer]",
+    "ie": "HEAL<810,23>",
+    "ts": "self;count<3>;min_hpp",
+    "de": "SHIELD<20.00%,0.58%,8>",
+    "tn": 3,
+    "tags": [
+      "Heal",
+      "Multi",
+      "DMG Reduction"
+    ]
+  },
+  "1786": {
+    "id": "1786",
+    "name": "Moonlit Slice Plus",
+    "description": "Deals {value} DMG to enemy with highest ATK. Target takes {delay1} more DMG for a limited time.",
+    "card_id": "1786",
+    "card_name": "Dojigiri [Summer]",
+    "ie": "ATK<1700,49>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1787": {
+    "id": "1787",
+    "name": "Fateful Summer",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1787",
+    "card_name": "Grim Reaper [Summer]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1788": {
+    "id": "1788",
+    "name": "A Queen Resting",
+    "description": "Deals {value} DMG to the enemy with the most HP.",
+    "card_id": "1788",
+    "card_name": "Titania [Summer]",
+    "ie": "ATK<2666,77>",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "none",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single"
+    ]
+  },
+  "1784": {
+    "id": "1784",
+    "name": "Downpour",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK. Targets receive {delay1} more DMG for a limited time.",
+    "card_id": "1784",
+    "card_name": "Summer Rain",
+    "ie": "ATK<860,25>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "SHIELD<-15.00%,-0.43%,8>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "DMG Up"
+    ]
+  },
+  "1780": {
+    "id": "1780",
+    "name": "Echigo Dragon",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "1780",
+    "card_name": "Kenshin Uesugi [Summer]",
+    "ie": "ATK<638,18>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",
