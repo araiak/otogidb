@@ -14,7 +14,11 @@ For this upcoming event some of the data was staggered, so that may be how it go
 
 ## Notable Picks
 
-:card[1784] is an Anima healer that brings both :card[1540]'s crit rate per wave and :card[740]'s DMG per wave in a single card, and with 3 target damage amp to boot. This card is extremely strong. If you picked up :card[1672] this isn't a card you need, but it's an extremely strong card in any multi-round format for any Anima player. This card is coming to standard gacha after the event ends, so it may not be critical to MLB it, but it may be worth grabbing a copy to have options. **Extremely strong for Anima — crit rate and team DMG per wave in one card. Not needed if you have :card[1672]. Coming to standard gacha after the event, so MLB isn't urgent, but a copy is worth having for the options.**
+:card[1784] is an Anima healer that brings both :card[1540]'s crit rate per wave and :card[744]'s DMG per wave in a single card, and with 3 target damage amp to boot. This card is extremely strong.
+
+What makes it so is that she isn't a watered down version of either one. She matches what :card[1540] does for Divina exactly — 10% team crit rate at the start of each wave. On the damage side :card[744] is honestly the bigger number, 15% to all allies against her 13% to Anima, but that is the entirety of what :card[744] brings. She's an awkward card to fit — effectively a healer sitting in a ranged slot — and her skill does almost no damage. :card[1784] gives up two points of team damage and gets 10% crit rate, a skill that actually hits for something, and a 3 target damage amp, all out of the healer slot you were filling anyway.
+
+There also isn't much else in the attribute doing this job. Of the Anima healers you can actually get hold of right now, :card[478] gives 3% crit rate against her 10%, :card[118] is a small team heal, and :card[549] only switches on as Team Leader. If you picked up :card[1672] this isn't a card you need, but it's an extremely strong card in any multi-round format for any Anima player. This card is coming to standard gacha after the event ends, so it may not be critical to MLB it, but it may be worth grabbing a copy to have options. **Extremely strong for Anima — crit rate and team DMG per wave in one card. Not needed if you have :card[1672]. Coming to standard gacha after the event, so MLB isn't urgent, but a copy is worth having for the options.**
 
 :card[1773] is a Divina healer that makes Divina viable in Endless. She's the Divina member of a small family — :card[2373] does the same job for Phantasma and :card[1445] for Anima, all three healers with the same 4% max HP per wave. Where she loses out is how universally useful the rest of the kit is. :card[2373]'s 45% DMG to the two highest-ATK allies and :card[1445]'s 12% less DMG taken both do work in every piece of content — and :card[1445] in particular meets all of a team's defensive needs in a single card. Her 15% skill DMG per wave is narrower than either. That makes sense given those two are gacha cards and she isn't.
 
@@ -79,7 +83,7 @@ The remaining new cards are all 4★ and lower, and none of them stand out: :car
 ## TL;DR
 
 Notable Picks:
-- :card[1784] — **Extremely strong for Anima** — crit rate and team DMG per wave in one card; not needed if you have :card[1672]; going to standard gacha after the event, so a copy for options beats rushing an MLB
+- :card[1784] — **Extremely strong for Anima** — :card[1540]'s crit rate and :card[744]'s team DMG per wave in one card, plus a 3 target damage amp, all from the healer slot; not needed if you have :card[1672]; going to standard gacha after the event, so a copy for options beats rushing an MLB
 - :card[1773] — **Must have for Divina endless players** — probably the overall ranking reward; the Divina answer to :card[2373] and :card[1445], and the attribute's only progressive max HP now that :card[658] is unavailable. One dimensional — both abilities only matter in endless — but very strong there
 
 Standard Gacha (already passed, rate up during the event):
