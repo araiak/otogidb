@@ -64,9 +64,9 @@ Really it falls right on the edge of usable. As a Divina player you're probably 
 
 ## Conquest Drops
 
-:card[1778] is your standard wild card. Below 50% HP it gets 10% HP every 5 seconds, increases 40% of Crit Rate, and increases 40% of skill DMG.
+:card[1778] is your standard wild card. Below 50% HP it gets 7.5% HP every 5 seconds, increases 40% of Crit Rate, and increases 40% of skill DMG.
 
-:spoiler["The in-game description says 7.5% HP, but the card actually applies 10%."]
+:spoiler["HP regen is actually 10%, not 7.5% as listed in-game."]
 
 This is ok as a filler melee, but doesn't change much from :card[1667], where it trades DR for skill damage. The DR is probably more useful below 50% HP, but these are cards you are only using if you need to fill out your team with a cheap MLB melee. **Filler only — a :card[1667] variant trading DR for skill damage, and the DR is probably the more useful half below 50% HP. Grab it only if you need a cheap MLB melee.**
 
