@@ -52844,6 +52844,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -52855,7 +52863,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -52884,7 +52898,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -52902,10 +52917,41 @@
       "description": "<color=#f4e48e>\"Like a mountain, I move for no man.\"</color><br/>The motto inscribed on the banner of Shingen Takeda. Since taking on ghostly form, this spirit has acted as the body double for its master on the battlefield. This means that even if Shingen were to suddenly, let's say, become a woman, he would still have an original manly version to hold the fort.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.508427+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.508427+00:00",
+        "last_modified": "2026-07-29T08:15:48.748825+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1770",
@@ -53013,6 +53059,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53024,7 +53078,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -53053,7 +53113,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -53071,10 +53132,41 @@
       "description": "<color=#f4e48e>\"I know how to keep my cool!\"</color><br/>A flask designed to keep cold liquids cold, and hot ones hot. It can maintain the temperature of drinks for hours on end. How can it possibly do this? There can be only one answer... By magic! A ghost that is much loved by its master.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.508724+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.508724+00:00",
+        "last_modified": "2026-07-29T08:15:48.756951+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1771",
@@ -53209,6 +53301,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53220,7 +53320,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -53286,10 +53392,31 @@
       "description": "<color=#f4e48e>\"Father, you are the pits!\"</color><br/>As if it wasn't disturbing enough to see your father turned into a woman, Shangxiang has had to cope with the fact that he's actually prettier than her. Once she returns to her kingdom, she is seriously tempted to never speak of this incident again. Her great fear is that her father, the Emperor Wulie, will go home still in female form.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510819+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510819+00:00",
+        "last_modified": "2026-07-29T08:15:48.816983+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1773",
@@ -53428,6 +53555,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53439,7 +53574,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -53519,10 +53660,31 @@
       "description": "<color=#f4e48e>\"It's not so bad here on dry land.\"</color><br/>This summer's events unfolded not far from a palace located on the ocean floor. Wondering what all the fuss was about, the Princess emerged from her deep-sea abode to see for herself.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510504+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510504+00:00",
+        "last_modified": "2026-07-29T08:15:48.807882+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1774",
@@ -53620,6 +53782,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53631,7 +53801,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -53660,7 +53836,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -53678,10 +53855,41 @@
       "description": "<color=#f4e48e>\"Quail before your tiger overlord!\"</color><br/>A ghostly intergalactic apparition in the form of a tiger. Upon her arrival on earth, so fearful was she of wilting in the intense heat that the first thing she did was buy a new swimsuit. She decided to purchase a leopard-skin swimsuit as a way of paying her respects to her late fellow felines. (Just to be clear, it was a leopard-skin print. It wasn't actually made from leopard's skin.)",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509006+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509006+00:00",
+        "last_modified": "2026-07-29T08:15:48.764086+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1776",
@@ -53987,6 +54195,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -53998,7 +54214,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": [
             {
@@ -54042,10 +54264,31 @@
       "description": "<color=#f4e48e>\"Grrraaarrr!\"</color><br/>A splendid tiger who can grant people wishes. But if not used correctly, it can end in all sorts of trouble, as we have seen.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.510177+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.510177+00:00",
+        "last_modified": "2026-07-29T08:15:48.798624+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1778",
@@ -54677,6 +54920,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -54688,7 +54939,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -54774,10 +55031,31 @@
       "description": "<color=#f4e48e>\"Welcome! Table for...?\"</color><br/>The Anima of a supremely popular and always packed beach resort. She is far from ladylike in the day-to-day running of her restaurant, but there's something about her that causes people to fall head over heels for her. She becomes extremely feminine when she is with a man who is smitten with her, or so they say. It's a little hard to believe, though.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509875+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509875+00:00",
+        "last_modified": "2026-07-29T08:15:48.790490+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1781",
@@ -54879,6 +55157,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -54890,7 +55176,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -54976,10 +55268,31 @@
       "description": "<color=#f4e48e>\"One must be discerning in life...\"</color><br/>A high priest who was known as a precocious prodigy when he was a child. Though he's pretty famous even as an adult, it's the impression he made as a child that sticks in people's memory. Come to think of it, he's a bit like one of those child actors who never seem to succeed as adults.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509596+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509596+00:00",
+        "last_modified": "2026-07-29T08:15:48.781373+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1782",
@@ -55081,6 +55394,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55092,7 +55413,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [
             {
               "event_id": "183",
@@ -55156,10 +55483,31 @@
       "description": "<color=#f4e48e>\"Take a bite on a hot summer's day!\"</color><br/>The Anima of the refreshing summer favorite, shaved ice. A mischievous, merry soul, her character is believed to change with her flavor. Order a strawberry one, and she'll greet you like an old friend.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.509313+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.509313+00:00",
+        "last_modified": "2026-07-29T08:15:48.772194+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1783",
@@ -55294,10 +55642,18 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55305,7 +55661,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55321,10 +55683,11 @@
               "start": "2026-08-15 15:00:00"
             }
           ],
-          "in_standard_pool": true
+          "in_standard_pool": false
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55342,10 +55705,46 @@
       "description": "<color=#f4e48e>\"This deluge is my greatest weapon!\"</color><br/>A weather phenomenon common across East Asia. She brings vast quantities of rain at the start of every summer. Some people call the rain a blessing, others call it a curse. She wishes people would just make up their minds...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.in_standard_pool",
+                "new": false,
+                "old": true
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.512074+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.512074+00:00",
+        "last_modified": "2026-07-29T08:15:48.852535+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1784",
@@ -55504,6 +55903,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55515,7 +55922,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55544,7 +55957,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55562,10 +55976,41 @@
       "description": "<color=#f4e48e>\"Gah! Does it have to be quite so hot?\"</color><br/>This heavenly sword spirit is finding the summer heat tough to handle. She has come to the ocean to try and cool down a bit. She's worried about rusting in the salty sea air, so is careful to shower every time she changes.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511135+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511135+00:00",
+        "last_modified": "2026-07-29T08:15:48.827214+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1786",
@@ -55709,6 +56154,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55720,7 +56173,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55749,7 +56208,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55767,10 +56227,41 @@
       "description": "<color=#f4e48e>\"Gaze at the swirling tide... Does it not seem like an ill omen to you?\"</color><br/>Even goddesses with dominion over death itself like to cool down with an occasional dip in the ocean. Still, she doesn't usually spell good news, so it's best to avoid bumping into her, no matter how scenic the spot.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511463+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511463+00:00",
+        "last_modified": "2026-07-29T08:15:48.835907+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1787",
@@ -55899,6 +56390,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-02-15",
+            "event_date": "2026-07-31",
+            "event_id": "183",
+            "event_name": "Sengoku Swimsuit Scene",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -55910,7 +56409,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "183",
+              "event_name": "Sengoku Swimsuit Scene",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -55939,7 +56444,8 @@
         },
         "sources": [
           "gacha",
-          "exchange"
+          "exchange",
+          "event"
         ],
         "stock_level": "unavailable"
       },
@@ -55957,10 +56463,41 @@
       "description": "<color=#f4e48e>\"It's so hot! What's with this weather?!\"</color><br/>The Enchanted Forest is normally a cool and breezy oasis, but this year the unbearable heat has driven the queen of the sylvan sprites to flee to the ocean. She's not used to being in direct sunlight, but is rather enjoying soaking in the sea.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
+          }
+        ],
         "first_seen": "2026-07-29T07:07:01.511763+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T07:07:01.511763+00:00",
+        "last_modified": "2026-07-29T08:15:48.844067+00:00",
         "last_modified_version": "0b19dc5"
       },
       "id": "1788",
