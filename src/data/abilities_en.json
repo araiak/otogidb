@@ -18641,5 +18641,362 @@
       "Max HP"
     ],
     "synergy_partners": []
+  },
+  "177001": {
+    "id": "177001",
+    "name": "Immovable as a Mountain",
+    "description": "Increases 12% of DMG dealt and 6% of max HP.(only take effect once to the team)",
+    "card_id": "1770",
+    "card_name": "Furinkazan Motto",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<12.00%,0%>;HP<6.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "177101": {
+    "id": "177101",
+    "name": "Insulation Magic",
+    "description": "Immune to Poison and increases DMG dealt by 4% at the same time.(only take effect once to the team)",
+    "card_id": "1771",
+    "card_name": "Vacuum Flask",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "IMMUNE<10,100>;ATK<4.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Immunity",
+      "Poison",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "177601": {
+    "id": "177601",
+    "name": "Tiger Clan Leader",
+    "description": "Increases 23% of skill DMG.(only take effect once to the team)",
+    "card_id": "1776",
+    "card_name": "Coeurl [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<23.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "178301": {
+    "id": "178301",
+    "name": "Cooling Treat",
+    "description": "All allies take 4% less DMG.(only take effect once to the team)",
+    "card_id": "1783",
+    "card_name": "Shaved Ice",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SHIELD<4.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "178201": {
+    "id": "178201",
+    "name": "Exceptional Wit",
+    "description": "Increases 49% of DMG dealt at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1782",
+    "card_name": "Ikkyū",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "ATK<49.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "178101": {
+    "id": "178101",
+    "name": "Poster Girl",
+    "description": "Absorbs 12% of DMG dealt as HP.(only take effect once to the team)",
+    "card_id": "1781",
+    "card_name": "Toraya",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "VAMP<12.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Lifesteal"
+    ],
+    "synergy_partners": []
+  },
+  "177801": {
+    "id": "177801",
+    "name": "Wish Granted",
+    "description": "When HP is below 1/2, restores 7.5% HP every 5 seconds, increases 40% of Crit Rate, and increases 40% of skill DMG.",
+    "card_id": "1778",
+    "card_name": "Red-Striped Tiger",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HPP_IN<0.00%,50.00%>;HEAL_DOT<10.00%,0%,5>;CHIT<40.00%,0%>;SKILL_ATK<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Conditional",
+      "Heal",
+      "Crit Rate",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "177401": {
+    "id": "177401",
+    "name": "Envoy of the Dragon Palace",
+    "description": "Increases 8% all Divina team members' Crit Rate.",
+    "card_id": "1774",
+    "card_name": "The Princess [Summer]",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT<8.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "177402": {
+    "id": "177402",
+    "name": "Midsummer Sea",
+    "description": "Restores 25% HP to all allies at the start of each wave.",
+    "card_id": "1774",
+    "card_name": "The Princess [Summer]",
+    "er": "entry_wave",
+    "ts": "self;count<5>",
+    "de": "HEAL<25.00%,0%,1>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "AoE",
+      "Heal"
+    ],
+    "synergy_partners": []
+  },
+  "177301": {
+    "id": "177301",
+    "name": "Princess of the Bow",
+    "description": "Increases 15% of skill DMG by Divina team members at the start of each wave.",
+    "card_id": "1773",
+    "card_name": "Shangxiang Sun [Summer]",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "177302": {
+    "id": "177302",
+    "name": "Summer Vitality",
+    "description": "Increases 4% of max HP of Divina team members at the start of each wave.",
+    "card_id": "1773",
+    "card_name": "Shangxiang Sun [Summer]",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "HP<4.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "178601": {
+    "id": "178601",
+    "name": "Five Swords under Heaven",
+    "description": "Increases own level by 15 when one of the Five Swords under Heaven is on the team.",
+    "card_id": "1786",
+    "card_name": "Dojigiri [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "LEVEL<15,0>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Level Boost"
+    ],
+    "synergy_partners": [
+      "73",
+      "114",
+      "172",
+      "193",
+      "301",
+      "341",
+      "476"
+    ]
+  },
+  "178602": {
+    "id": "178602",
+    "name": "Summer Bath",
+    "description": "Increases 45% of Skill DMG and Crit DMG.",
+    "card_id": "1786",
+    "card_name": "Dojigiri [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<45.00%,0%>;CHIT_ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Skill DMG",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "178701": {
+    "id": "178701",
+    "name": "Death Sentence",
+    "description": "Increases 40% of Crit DMG dealt of Divina allies.(only take effect once to the team)",
+    "card_id": "1787",
+    "card_name": "Grim Reaper [Summer]",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "CHIT_ATK<40.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "178702": {
+    "id": "178702",
+    "name": "Doom Descends",
+    "description": "Absorbs 15% of DMG dealt as HP.(only take effect once to the team)",
+    "card_id": "1787",
+    "card_name": "Grim Reaper [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "VAMP<15.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Lifesteal"
+    ],
+    "synergy_partners": []
+  },
+  "178801": {
+    "id": "178801",
+    "name": "Fairy Queen",
+    "description": "Reduces 40% of Crit DMG by all foes at the start of the final wave.",
+    "card_id": "1788",
+    "card_name": "Titania [Summer]",
+    "er": "last_wave",
+    "ts": "enemy;count<5>",
+    "de": "CHIT_ATK<-40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "AoE"
+    ],
+    "synergy_partners": []
+  },
+  "178802": {
+    "id": "178802",
+    "name": "Summer Breeze",
+    "description": "Increases 50% of Crit Rate.",
+    "card_id": "1788",
+    "card_name": "Titania [Summer]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "178401": {
+    "id": "178401",
+    "name": "Silent Nourishment",
+    "description": "Increases 10% of Crit Rate of Anima allies at the start of each wave.",
+    "card_id": "1784",
+    "card_name": "Summer Rain",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "178402": {
+    "id": "178402",
+    "name": "Continuous Drizzle",
+    "description": "Increases 13% of DMG dealt by Anima team members at the start of each wave.",
+    "card_id": "1784",
+    "card_name": "Summer Rain",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "ATK<13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "178001": {
+    "id": "178001",
+    "name": "Dragon of Echigo",
+    "description": "All melee allies deal 25% more DMG.",
+    "card_id": "1780",
+    "card_name": "Kenshin Uesugi [Summer]",
+    "er": "entry",
+    "ts": "self;prof<1>;count<5>",
+    "de": "ATK<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Melee",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
   }
 }

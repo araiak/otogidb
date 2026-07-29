@@ -15718,6 +15718,354 @@
         "type_name": "Melee"
       }
     },
+    "1770": {
+      "abilities": [
+        {
+          "description": "战斗伤害12%增加，同时血量上限6%增加(除助战外，己方全体仅生效1次)",
+          "name": "不动如山",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Max HP"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101770",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1770",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308805/otogi/android/101770_5ce7c0ea2a1f14daf5ac681594e0f981.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101770_hd_01bc66ce0234ffcd1c0b3b017db73f4b.png"
+      },
+      "name": "风林火山",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "战嚎",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1771": {
+      "abilities": [
+        {
+          "description": "免疫中毒状态，同时战斗伤害4%增加(除助战外，己方全体仅生效1次)",
+          "name": "保温魔法",
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101771",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1771",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101771_a1147cb320449254cea3d537f000b123.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101771_hd_12c237950eba7c12254e9cecd9e41143.png"
+      },
+      "name": "保温瓶",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "热水攻击",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1773": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体灵属性队员技能伤害15%增加",
+          "name": "弓腰姬",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体灵属性队员血量上限4%增加",
+          "name": "夏日活力",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101773",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1773",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308809/otogi/android/101773_af9453ac7c13328c4a78327230e0b7ec.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308811/otogi/cards_hd/101773_hd_35322feabcd4f4e4b9b52baacfb1dd53.png"
+      },
+      "name": "孙尚香[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "恢复3名血量百分比最低的队员{value}点血量，并使目标一定时间内所受伤害降低{delay1}",
+        "name": "细腰公主",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,397",
+        "slv_mlb": "2,857",
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3930,
+        "base_hp": 3830,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11800,
+        "max_hp": 11500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1774": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员暴击率8%增加",
+          "name": "龙宫使者",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "每回合开始时，己方全体队员血量25%回复",
+          "name": "盛夏之海",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101774",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1774",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101774_69db9ff3a37a15c1b4a432f89d79856c.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101774_hd_018eb8c0616842e8cabc4d83500ce747.png"
+      },
+      "name": "乙姬[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "恢复己方全体队员{value}点血量",
+        "name": "魔法邀请",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,387",
+        "slv_mlb": "2,847",
+        "tags": [
+          "Heal",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 3930,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1776": {
+      "abilities": [
+        {
+          "description": "技能伤害23%增加(除助战外，己方全体仅生效1次)",
+          "name": "虎族首领",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 67
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101776",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1776",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308800/otogi/android/101776_dc728f78d568ff9a55f7f4b39f97b4e7.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308813/otogi/cards_hd/101776_hd_1fe0ce730fd7805b4cd1892294c00821.png"
+      },
+      "name": "豹虎[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "伽马射线",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1777": {
       "abilities": [
         {
@@ -15790,6 +16138,73 @@
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1778": {
+      "abilities": [
+        {
+          "description": "血量低于1/2时，血量每5秒回复7.5%，同时暴击率40%增加，技能伤害40%增加",
+          "name": "愿望实现",
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "Crit Rate",
+            "Skill DMG"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101778",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1778",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308801/otogi/android/101778_2d11cf1b29d40148fb0a77f8bdcb98cb.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308815/otogi/cards_hd/101778_hd_a5e9147b6cfed39952b530e48d0dfe7d.png"
+      },
+      "name": "红白虎",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "对自身周围大范围的敌人造成{value}点伤害,并使目标{probability}灼伤",
+        "name": "虎牙",
+        "prob_lb0": "40.29%",
+        "prob_mlb": "48.49%",
+        "slv_lb0": "2,268",
+        "slv_mlb": "2,708",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 3830,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "1779": {
@@ -15929,6 +16344,560 @@
         "max_hp": 5560,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1780": {
+      "abilities": [
+        {
+          "description": "己方全体近战职业战斗伤害25%增加",
+          "name": "越后之龙",
+          "tags": [
+            "Team",
+            "Melee",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "exchange"
+        ]
+      },
+      "asset_id": "101780",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1780",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101780_1d30c40607fc95fab9ad0ee58a7f17c2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308814/otogi/cards_hd/101780_hd_65606c3d18df6a1b4e963c6036da61af.png"
+      },
+      "name": "上杉谦信[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "对敌方全体造成{value}点伤害",
+        "name": "越后之龙",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,880",
+        "slv_mlb": "2,240",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3830,
+        "base_hp": 3500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 10500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1781": {
+      "abilities": [
+        {
+          "description": "战斗伤害12%转化为自身血量(除助战外，己方全体仅生效1次)",
+          "name": "招牌女郎",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101781",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1781",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101781_7cb7d5915f88f988a65b6499d37e1fc4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101781_hd_6779e389c0de9f2ff2cbdaa659966c01.png"
+      },
+      "name": "虎屋",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "铁板烧之触",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1782": {
+      "abilities": [
+        {
+          "description": "最终回合，自身战斗伤害49%增加(除助战外，己方全体仅生效1次)",
+          "name": "机智过人",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 60
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101782",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1782",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101782_4342808a1b23b82966dc34def54c3a35.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101782_hd_da60022c21d9216cf748a8fb1dcac0df.png"
+      },
+      "name": "一休宗纯",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "针锋相对",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1783": {
+      "abilities": [
+        {
+          "description": "己方全体队员所受伤害4%减少(除助战外，己方全体仅生效1次)",
+          "name": "消暑圣品",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101783",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1783",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308803/otogi/android/101783_42bd6755312c904dd3acbf8df051b2db.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101783_hd_78662fbc457cb37206d24bf237d00ec3.png"
+      },
+      "name": "刨冰",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "脑冻结",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1784": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体付属性队员暴击率10%增加",
+          "name": "润物无声",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "每回合开始时，己方全体付属性队员战斗伤害13%增加",
+          "name": "绵绵细雨",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101784",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1784",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101784_c5c48f493053204fd741f6afa1b3b6f2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308817/otogi/cards_hd/101784_hd_fd973cdbfe9ccae275b2d7394043533b.png"
+      },
+      "name": "梅雨",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "44.67%",
+        "delay_mlb": "53.27%",
+        "description": "对3名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "name": "暴雨",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,585",
+        "slv_mlb": "3,085",
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4365,
+        "base_hp": 4300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 12900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1786": {
+      "abilities": [
+        {
+          "description": "有其他“天下五剑”在场时，自身等级+15",
+          "name": "天下五剑",
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "技能伤害45%增加，同时暴击伤害45%增加",
+          "name": "夏日洗浴",
+          "tags": [
+            "Self",
+            "Skill DMG",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101786",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1786",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101786_0d22baa92baf23dbbed9a99032a08b04.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101786_hd_913840f8e6dc1b7d48416bc54bc0f9d4.png"
+      },
+      "name": "童子切[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "对1名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "name": "强化月下斩击",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "5,081",
+        "slv_mlb": "6,061",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4630,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13900,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1787": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员暴击伤害40%增加。(除助战外，己方全体仅生效1次)",
+          "name": "死亡宣告",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "战斗伤害15%转化为自身血量。(除助战外，己方全体仅生效1次)",
+          "name": "厄运降临",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101787",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1787",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308807/otogi/android/101787_e1fe07d1147703676e8a7693d6f1527b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101787_hd_ec605b6fad3e6ea61950084fbc7e68c4.png"
+      },
+      "name": "死神[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "宿命之夏",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1788": {
+      "abilities": [
+        {
+          "description": "最终回合，敌方全体暴击伤害40%减少",
+          "name": "妖精女王",
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴击率50%增加",
+          "name": "夏日微风",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange"
+        ]
+      },
+      "asset_id": "101788",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1788",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101788_7d05cccf13a36686698f241bb0af4f93.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308819/otogi/cards_hd/101788_hd_967524f216bbc15ef64b5153ea49c0f9.png"
+      },
+      "name": "泰坦妮亚[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "对1名血量最高的敌人造成{value}点伤害",
+        "name": "女王的休假",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "7,979",
+        "slv_mlb": "9,519",
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4830,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
       }
@@ -64191,8 +65160,8 @@
       }
     }
   },
-  "data_hash": "0ec5d753",
+  "data_hash": "64db6639",
   "locale": "zh-cn",
-  "total_cards": 988,
-  "version": "ad23172"
+  "total_cards": 1002,
+  "version": "0b19dc5"
 }

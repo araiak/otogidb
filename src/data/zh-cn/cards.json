@@ -47862,43 +47862,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -48023,12 +47987,78 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "5 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514068+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.613613+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-07-29T07:07:01.488698+00:00",
+        "last_modified_version": "0b19dc5"
       },
       "id": "1720",
       "image_urls": {
@@ -48506,57 +48536,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -48703,12 +48683,100 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "7 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.513772+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.611526+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-07-29T07:07:01.486747+00:00",
+        "last_modified_version": "0b19dc5"
       },
       "id": "1722",
       "image_urls": {
@@ -48978,29 +49046,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "182",
@@ -49131,12 +49177,56 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.512321+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.602420+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-07-29T07:07:01.478130+00:00",
+        "last_modified_version": "0b19dc5"
       },
       "id": "1724",
       "image_urls": {
@@ -49264,50 +49354,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "182",
@@ -49471,12 +49518,89 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.512630+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.604297+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-07-29T07:07:01.479805+00:00",
+        "last_modified_version": "0b19dc5"
       },
       "id": "1726",
       "image_urls": {
@@ -49603,50 +49727,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "182",
-              "event_name": "星际七夕祭",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "182",
@@ -49936,12 +50017,89 @@
             ],
             "date": "2026-07-01",
             "version": "6631b16"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "182",
+                  "event_name": "Interstellar Tanabata Festival",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-07-29",
+            "version": "0b19dc5"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.512910+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-07-01T15:22:31.955482+00:00",
-        "last_modified_version": "6631b16"
+        "last_modified": "2026-07-29T07:07:01.481442+00:00",
+        "last_modified_version": "0b19dc5"
       },
       "id": "1727",
       "image_urls": {
@@ -52646,6 +52804,950 @@
       },
       "synergies": []
     },
+    "1770": {
+      "abilities": [
+        {
+          "description": "战斗伤害12%增加，同时血量上限6%增加(除助战外，己方全体仅生效1次)",
+          "id": "177001",
+          "name": "不动如山",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 12.0
+              },
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 6.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Max HP"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-08-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-06 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-07-26 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101770",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "177001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“不动如山。”</color><br/>此座右铭刻在武田信玄的旗帜上。自从以妖怪的形态出现后，其灵魂在战场上担任主人的影武者。这表示信玄即使忽然变成女人，他依旧有个男人的形体来坚守岗位。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.508427+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.508427+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1770",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308805/otogi/android/101770_5ce7c0ea2a1f14daf5ac681594e0f981.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101770_hd_01bc66ce0234ffcd1c0b3b017db73f4b.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177001"
+        ],
+        "generation": 0
+      },
+      "name": "风林火山",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1770",
+        "name": "战嚎",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1771": {
+      "abilities": [
+        {
+          "description": "免疫中毒状态，同时战斗伤害4%增加(除助战外，己方全体仅生效1次)",
+          "id": "177101",
+          "name": "保温魔法",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-08-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-06 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-07-26 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101771",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "177101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“我知道如何让自己保持清凉！”</color><br/>被制造来保冷保热的瓶子。它能维持饮料的温度，长达好几个小时。这是怎么做到的啊？答案只有一个... 是魔法！一个受其主人万般宠爱的妖怪。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.508724+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.508724+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1771",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101771_a1147cb320449254cea3d537f000b123.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101771_hd_12c237950eba7c12254e9cecd9e41143.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177101"
+        ],
+        "generation": 0
+      },
+      "name": "保温瓶",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1771",
+        "name": "热水攻击",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1773": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体灵属性队员技能伤害15%增加",
+          "id": "177301",
+          "name": "弓腰姬",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体灵属性队员血量上限4%增加",
+          "id": "177302",
+          "name": "夏日活力",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101773",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "177301",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“父亲，你够了！”</color><br/>仿佛看见父亲变成女人还不够扰人似的，尚香还得接受父亲变得比她还漂亮这个事实。一旦回到她的国度后，她很认真地考虑只字不提这次的事件。她最大的恐惧就是她的父亲，武烈皇帝，会带着女性的外貌回家。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.510819+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.510819+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1773",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308809/otogi/android/101773_af9453ac7c13328c4a78327230e0b7ec.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308811/otogi/cards_hd/101773_hd_35322feabcd4f4e4b9b52baacfb1dd53.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177301"
+        ],
+        "generation": 0
+      },
+      "name": "孙尚香[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复3名血量百分比最低的队员{value}点血量，并使目标一定时间内所受伤害降低{delay1}",
+        "id": "1773",
+        "name": "细腰公主",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.58,
+              "type": "SHIELD",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 810.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1346,
+          "slvup": 33,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3930,
+        "base_hp": 3830,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11800,
+        "max_hp": 11500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1774": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员暴击率8%增加",
+          "id": "177401",
+          "name": "龙宫使者",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 8.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "每回合开始时，己方全体队员血量25%回复",
+          "id": "177402",
+          "name": "盛夏之海",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 1,
+                "scale": 0.0,
+                "type": "HEAL",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101774",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "177401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“在陆地上还不赖耶。”</color><br/>这次的夏日事件发生离海床上的一间皇宫不远的地方。乙姬想要亲自一探究竟这些骚乱所为何事，于是便离开她的深海住处。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.510504+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.510504+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1774",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101774_69db9ff3a37a15c1b4a432f89d79856c.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308812/otogi/cards_hd/101774_hd_018eb8c0616842e8cabc4d83500ce747.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177401"
+        ],
+        "generation": 0
+      },
+      "name": "乙姬[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方全体队员{value}点血量",
+        "id": "1774",
+        "name": "魔法邀请",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 805,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 3930,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 11800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1776": {
+      "abilities": [
+        {
+          "description": "技能伤害23%增加(除助战外，己方全体仅生效1次)",
+          "id": "177601",
+          "name": "虎族首领",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 23.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 67
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-08-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-06 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-07-26 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101776",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "177601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“在虎族首领面前恐惧吧！”</color><br/>拥有老虎外型的外星幻影妖怪。在她到达地球时，因为害怕自己因为酷暑而憔悴，第一件事就是买了新泳衣。她决定买一套豹纹的泳衣，以示尊重她的猫科同胞们。（特此澄清，这只是印刷的豹纹。不是用真的豹皮做的。）",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.509006+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.509006+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1776",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308800/otogi/android/101776_dc728f78d568ff9a55f7f4b39f97b4e7.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308813/otogi/cards_hd/101776_hd_1fe0ce730fd7805b4cd1892294c00821.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177601"
+        ],
+        "generation": 0
+      },
+      "name": "豹虎[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1776",
+        "name": "伽马射线",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "1777": {
       "abilities": [
         {
@@ -52834,6 +53936,188 @@
       },
       "synergies": []
     },
+    "1778": {
+      "abilities": [
+        {
+          "description": "血量低于1/2时，血量每5秒回复7.5%，同时暴击率40%增加，技能伤害40%增加",
+          "id": "177801",
+          "name": "愿望实现",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "Crit Rate",
+            "Skill DMG"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "first_seen": "2026-07-29",
+              "floors": [
+                80,
+                100,
+                150,
+                175,
+                200
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101778",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "177801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“吼吼吼！”</color><br/>一只漂亮又能实现人们愿望的老虎。不过要是没有适当使用的话，如我们所见，可能会造成各式各样的麻烦。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.510177+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.510177+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1778",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308801/otogi/android/101778_2d11cf1b29d40148fb0a77f8bdcb98cb.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308815/otogi/cards_hd/101778_hd_a5e9147b6cfed39952b530e48d0dfe7d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "177801"
+        ],
+        "generation": 0
+      },
+      "name": "红白虎",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对自身周围大范围的敌人造成{value}点伤害,并使目标{probability}灼伤",
+        "id": "1778",
+        "name": "虎牙",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.17,
+              "type": "BURN",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 750.0,
+            "scale": 22.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 713,
+          "slvup": 22,
+          "target": {
+            "count": 3,
+            "filter": "enemy;range<3>",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 3830,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
     "1779": {
       "abilities": [
         {
@@ -52924,7 +54208,7 @@
           "featured_banners": [
             {
               "end": "2026-07-26 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-07-21 15:00:00"
             }
@@ -53200,6 +54484,1540 @@
         "max_hp": 5560,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1780": {
+      "abilities": [
+        {
+          "description": "己方全体近战职业战斗伤害25%增加",
+          "id": "178001",
+          "name": "越后之龙",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "prof<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Melee",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-30 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-08-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101780",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "178001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“人们的欲望是罪恶的。”</color><br/>一直有人很严肃地声称这位广为人知的大名其实是女儿身。随着相信的人越来越多，谦信的灵魂终于被逼着以女性的外貌现身。毕竟，妖怪们在某种程度上都是由活着的人的想法所创造的，而谦信学到了这惨痛的这一课。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.512369+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.512369+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1780",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101780_1d30c40607fc95fab9ad0ee58a7f17c2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308814/otogi/cards_hd/101780_hd_65606c3d18df6a1b4e963c6036da61af.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178001"
+        ],
+        "generation": 0
+      },
+      "name": "上杉谦信[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对敌方全体造成{value}点伤害",
+        "id": "1780",
+        "name": "越后之龙",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 638.0,
+            "scale": 18.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 638,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3830,
+        "base_hp": 3500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11500,
+        "max_hp": 10500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1781": {
+      "abilities": [
+        {
+          "description": "战斗伤害12%转化为自身血量(除助战外，己方全体仅生效1次)",
+          "id": "178101",
+          "name": "招牌女郎",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 57
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "first_seen": "2026-07-29",
+              "floors": [
+                60,
+                70,
+                140,
+                180
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101781",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "178101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“欢迎！请问几位呢...？”</color><br/>超受欢迎、总是爆满之海水浴场的九十九神。她在这每日营业的餐馆里，表现的并不淑女，可是有种特质让许多人拜倒在她的石榴裙下。在与爱恋着她的男人在一起时，会变得十分小女人，至少他们这么说。虽然有点难以相信。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.509875+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.509875+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1781",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101781_7cb7d5915f88f988a65b6499d37e1fc4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101781_hd_6779e389c0de9f2ff2cbdaa659966c01.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178101"
+        ],
+        "generation": 0
+      },
+      "name": "虎屋",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1781",
+        "name": "铁板烧之触",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1782": {
+      "abilities": [
+        {
+          "description": "最终回合，自身战斗伤害49%增加(除助战外，己方全体仅生效1次)",
+          "id": "178201",
+          "name": "机智过人",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 49.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 60
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "first_seen": "2026-07-29",
+              "floors": [
+                40,
+                50,
+                120,
+                160
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101782",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "178201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“人生里一定要能分辨好恶...”</color><br/>自幼便是神童而名闻遐迩的高僧。虽然成年后也依然享有盛名，人们记得的还是他身为孩童的印象。这样想起来，他跟那些长大以后就销声匿迹的童星有点像。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.509596+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.509596+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1782",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308802/otogi/android/101782_4342808a1b23b82966dc34def54c3a35.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101782_hd_da60022c21d9216cf748a8fb1dcac0df.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178201"
+        ],
+        "generation": 0
+      },
+      "name": "一休宗纯",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1782",
+        "name": "针锋相对",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1783": {
+      "abilities": [
+        {
+          "description": "己方全体队员所受伤害4%减少(除助战外，己方全体仅生效1次)",
+          "id": "178301",
+          "name": "消暑圣品",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "183",
+              "event_name": "战国泳装百景",
+              "first_seen": "2026-07-29",
+              "floors": [
+                10,
+                20,
+                30
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101783",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "SKILL_ATK<3.0%,0.0%>",
+          "id": "178301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“夏日炎炎，来吃一口吧！”</color><br/>夏日消暑圣品刨冰的九十九神。一位俏皮又欢乐的灵魂，听说她的个性会随着口味改变。点一份草莓口味的，她会像位老朋友那样招呼你。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.509313+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.509313+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1783",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308803/otogi/android/101783_42bd6755312c904dd3acbf8df051b2db.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308818/otogi/cards_hd/101783_hd_78662fbc457cb37206d24bf237d00ec3.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178301"
+        ],
+        "generation": 0
+      },
+      "name": "刨冰",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1783",
+        "name": "脑冻结",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1784": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体付属性队员暴击率10%增加",
+          "id": "178401",
+          "name": "润物无声",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "每回合开始时，己方全体付属性队员战斗伤害13%增加",
+          "id": "178402",
+          "name": "绵绵细雨",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "value": 13.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-22 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-08-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101784",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "178401",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“暴雨就是我最好的武器！”</color><br/>东亚常见的一种天气现象。她会在夏季开始时带来极多的雨量。有人认为这场雨是恩泽，也有人认为是场浩劫。她希望人们能早点拿定主意...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.512074+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.512074+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1784",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308804/otogi/android/101784_c5c48f493053204fd741f6afa1b3b6f2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308817/otogi/cards_hd/101784_hd_fd973cdbfe9ccae275b2d7394043533b.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178401"
+        ],
+        "generation": 0
+      },
+      "name": "梅雨",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对3名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "id": "1784",
+        "name": "暴雨",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.43,
+              "type": "SHIELD",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 860.0,
+            "scale": 25.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1985,
+          "slvup": 46,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4365,
+        "base_hp": 4300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 12900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1786": {
+      "abilities": [
+        {
+          "description": "有其他“天下五剑”在场时，自身等级+15",
+          "id": "178601",
+          "name": "天下五剑",
+          "parsed": {
+            "conditions": {
+              "mns_ids": [
+                "73",
+                "114",
+                "172",
+                "193",
+                "301",
+                "341",
+                "476"
+              ],
+              "mns_type": "OR"
+            },
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "LEVEL",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [
+            "73",
+            "114",
+            "172",
+            "193",
+            "301",
+            "341",
+            "476"
+          ],
+          "tags": [
+            "Self",
+            "Level Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "技能伤害45%增加，同时暴击伤害45%增加",
+          "id": "178602",
+          "name": "夏日洗浴",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "value": 45.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-08-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-09 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-08-06 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101786",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "178601",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“吼！一定要这么热吗？”</color><br/>这神剑之灵对酷暑有点应付不来。她来到海边想让自己凉快一点。她担心带着盐分的海风会让自己生锈，所以每一次换衣服时都仔细地冲洗身体。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.511135+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.511135+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1786",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308806/otogi/android/101786_0d22baa92baf23dbbed9a99032a08b04.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308810/otogi/cards_hd/101786_hd_913840f8e6dc1b7d48416bc54bc0f9d4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178601"
+        ],
+        "generation": 0
+      },
+      "name": "童子切[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对1名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "id": "1786",
+        "name": "强化月下斩击",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "SHIELD",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1700.0,
+            "scale": 49.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1809,
+          "slvup": 52,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4630,
+        "base_hp": 3400,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13900,
+        "max_hp": 10200,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": [
+        "73",
+        "114",
+        "172",
+        "193",
+        "301",
+        "341",
+        "476"
+      ]
+    },
+    "1787": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员暴击伤害40%增加。(除助战外，己方全体仅生效1次)",
+          "id": "178701",
+          "name": "死亡宣告",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "战斗伤害15%转化为自身血量。(除助战外，己方全体仅生效1次)",
+          "id": "178702",
+          "name": "厄运降临",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-08-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-12 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-08-09 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101787",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "178701",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“看看这回旋的潮水... 你不觉得这像是个坏预兆吗？”</color><br/>就算是掌管死亡的女神偶尔也想到大海里清凉一下。不过，有她的地方通常不会有好消息，所以不管在任何风景优美的景点，最好还是避开她。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.511463+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.511463+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1787",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308807/otogi/android/101787_e1fe07d1147703676e8a7693d6f1527b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308816/otogi/cards_hd/101787_hd_ec605b6fad3e6ea61950084fbc7e68c4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178701"
+        ],
+        "generation": 0
+      },
+      "name": "死神[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1787",
+        "name": "宿命之夏",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1788": {
+      "abilities": [
+        {
+          "description": "最终回合，敌方全体暴击伤害40%减少",
+          "id": "178801",
+          "name": "妖精女王",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "value": -40.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "type": "enemy"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "AoE"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴击率50%增加",
+          "id": "178802",
+          "name": "夏日微风",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-08-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-08-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-15 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-08-12 15:00:00"
+            }
+          ],
+          "in_standard_pool": false
+        },
+        "sources": [
+          "gacha",
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101788",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "178801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“好热啊！这天气是怎么回事啊？！”</color><br/>正常来说，妖精森林是个凉爽又有微风的绿洲，但是因为今年的酷热，让妖精女王都躲到海边来避暑了。她不习惯暴露在阳光下，不过还蛮喜欢享受浸在海里的。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-07-29T07:07:01.511763+00:00",
+        "first_seen_version": "0b19dc5",
+        "last_modified": "2026-07-29T07:07:01.511763+00:00",
+        "last_modified_version": "0b19dc5"
+      },
+      "id": "1788",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308808/otogi/android/101788_7d05cccf13a36686698f241bb0af4f93.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1785308819/otogi/cards_hd/101788_hd_967524f216bbc15ef64b5153ea49c0f9.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178801"
+        ],
+        "generation": 0
+      },
+      "name": "泰坦妮亚[夏]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对1名血量最高的敌人造成{value}点伤害",
+        "id": "1788",
+        "name": "女王的休假",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 2666.0,
+            "scale": 77.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 2266,
+          "slvup": 65,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4830,
+        "base_hp": 2965,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 8900,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -178898,6 +181716,6 @@
     }
   },
   "locale": "zh_CN",
-  "total_cards": 988,
-  "version": "ad23172"
+  "total_cards": 1002,
+  "version": "0b19dc5"
 }
