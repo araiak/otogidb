@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro check && node --max-old-space-size=8192 node_modules/astro/bin/astro.mjs build",
     "build:fast": "node --max-old-space-size=8192 node_modules/astro/bin/astro.mjs build",
+    "build:deploy": "npm run build && node scripts/upload-sourcemaps.mjs",
     "build:check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
@@ -47,6 +48,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
+    "@posthog/cli": "^0.9.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",

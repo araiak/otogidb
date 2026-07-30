@@ -55,6 +55,12 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
     build: {
+      // Emit source maps so PostHog error tracking can symbolicate stack traces.
+      // `true` (not 'hidden') on purpose: posthog-cli finds each map via the
+      // sourceMappingURL comment. Both the comment and the .map files are
+      // stripped again by scripts/upload-sourcemaps.mjs after upload, so
+      // nothing extra is deployed.
+      sourcemap: true,
       rollupOptions: {
         output: {
           // Astro 6 / newer Rollup rejects manualChunks for externalized modules.
