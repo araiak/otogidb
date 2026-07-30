@@ -32,6 +32,24 @@ const require = createRequire(import.meta.url);
 // shell on Windows, this works the same everywhere.
 const cli = require.resolve('@posthog/cli/run-posthog-cli.js');
 
+// --delete-after only removes maps the CLI paired with a JS chunk. Astro inlines the
+// <script> blocks from .astro files into the HTML, so their maps have no chunk to pair
+// with and survive. This also runs when the upload is skipped entirely: a build that
+// can't symbolicate must still never ship source maps to the public.
+function sweepRemainingMaps() {
+  const leftover = readdirSync('dist', { recursive: true, encoding: 'utf8' }).filter((f) =>
+    f.endsWith('.map')
+  );
+
+  for (const file of leftover) {
+    rmSync(join('dist', file));
+  }
+
+  if (leftover.length > 0) {
+    console.log(`[sourcemaps] Removed ${leftover.length} unuploaded source map(s) from dist/.`);
+  }
+}
+
 function releaseVersion() {
   // Cloudflare Pages injects the commit SHA; fall back to git for local runs.
   if (process.env.CF_PAGES_COMMIT_SHA) return process.env.CF_PAGES_COMMIT_SHA;
@@ -49,8 +67,9 @@ if (!inEnv && !dotenvFile) {
   console.warn(
     '[sourcemaps] No PostHog credentials (POSTHOG_CLI_API_KEY / POSTHOG_CLI_PROJECT_ID\n' +
       '[sourcemaps] in the environment, or a .env.local file) — skipping upload.\n' +
-      '[sourcemaps] Source maps remain in dist/. Do not deploy this build as-is.'
+      '[sourcemaps] Stack traces from this build will NOT be symbolicated.'
   );
+  sweepRemainingMaps();
   process.exit(0);
 }
 
@@ -75,17 +94,4 @@ if (result.status !== 0) {
   console.warn(`[sourcemaps] posthog-cli exited with ${result.status} — continuing anyway.`);
 }
 
-// --delete-after only removes maps the CLI paired with a JS chunk. Astro inlines the
-// <script> blocks from .astro files into the HTML, so their maps have no chunk to pair
-// with and survive. Sweep them up — otherwise they ship as publicly fetchable source.
-const leftover = readdirSync('dist', { recursive: true, encoding: 'utf8' }).filter((f) =>
-  f.endsWith('.map')
-);
-
-for (const file of leftover) {
-  rmSync(join('dist', file));
-}
-
-if (leftover.length > 0) {
-  console.log(`[sourcemaps] Removed ${leftover.length} unpaired source map(s) from dist/.`);
-}
+sweepRemainingMaps();
