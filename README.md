@@ -149,6 +149,19 @@ PUBLIC_ENV=development  # or 'production'
 4. Test locally with `npm run dev`
 5. Submit a pull request
 
+## Disclaimer
+
+OtogiDB is an unofficial fan project. It is not affiliated with, endorsed by, or connected to the
+publisher or developers of Otogi: Spirit Agents. Game names, images, and data remain the property of
+MyRealLife Games and Mitama Games.
+
+For content removal or rights inquiries, contact [contact@otogidb.com](mailto:contact@otogidb.com).
+
 ## License
 
-MIT License - see [LICENSE](LICENSE)
+The **source code** in this repository is MIT licensed - see [LICENSE](LICENSE).
+
+The MIT grant does **not** extend to game-derived content included in this repository, including
+`public/data/**` (card names, descriptions, stats, and other game data) and `public/icons/**`
+(game art assets). That content remains the property of MyRealLife Games and Mitama Games, and is
+included here for reference purposes under a claim of fair use - it is not ours to license.

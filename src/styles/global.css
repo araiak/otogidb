@@ -1,6 +1,10 @@
-/* Fonts are loaded asynchronously in BaseLayout.astro to avoid render-blocking */
-
 @import "tailwindcss";
+
+/* Self-hosted webfonts (generated - see scripts/fetch-fonts.mjs).
+   Previously loaded from Google Fonts via a <link> that Cloudflare Fonts rewrote
+   at the edge. Self-hosting removes that dashboard dependency and keeps ~460KB of
+   @font-face CSS out of every page's HTML. */
+@import "./fonts.css";
 
 /* Override Tailwind's dark mode to use .dark class instead of media query */
 @custom-variant dark (&:where(.dark, .dark *));
@@ -544,14 +548,18 @@ html[data-theme="new"]:not(.dark) body {
 
 /* Site logo: brush-stroke display font in Spirit Scroll mode */
 [data-theme="new"] .site-logo {
-  font-family: 'Reggae One', 'Noto Serif JP', serif;
+  /* Noto Serif JP dropped: it only ever sat behind Reggae One here, and this text
+     is ASCII, so it never rendered a glyph. System JP serifs cover any future CJK. */
+  font-family: 'Reggae One', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   font-weight: 400;
   letter-spacing: 0.03em;
 }
 
 /* Nav links: same brush-stroke font in Spirit Scroll mode */
 [data-theme="new"] header .link {
-  font-family: 'Reggae One', 'Noto Serif JP', serif;
+  /* Noto Serif JP dropped: it only ever sat behind Reggae One here, and this text
+     is ASCII, so it never rendered a glyph. System JP serifs cover any future CJK. */
+  font-family: 'Reggae One', 'Hiragino Mincho ProN', 'Yu Mincho', serif;
   font-weight: 400;
   letter-spacing: 0.03em;
 }

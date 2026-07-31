@@ -113,6 +113,7 @@ const navLinks = {
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
   tools: `${localePrefix}/tools`,
+  privacy: `${localePrefix}/privacy`,
 };
 
 // ─── Maintenance banner ─────────────────────────────────────────────────────
@@ -213,6 +214,10 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           ui_host: 'https://us.posthog.com',
           defaults: '2025-11-30',
           person_profiles: 'identified_only',
+          // Cookieless by design - no consent banner needed. Changing this
+          // requires one. See docs/infrastructure/ANALYTICS.md.
+          persistence: 'memory',
+          respect_dnt: true,
           autocapture: false,
           capture_pageleave: false,
           disable_session_recording: true,
@@ -222,6 +227,13 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
 
         // PostHog snippet (loads SDK from api_host)
         !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister getFeatureFlag isFeatureEnabled on reset get_distinct_id get_session_id opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+
+        // Honour Do Not Track before anything touches the network. posthog.init has
+        // respect_dnt, but the reachability probe below runs BEFORE init and would
+        // still hand a DNT visitor's IP to PostHog. The privacy policy promises we
+        // record nothing at all under DNT, so bail out entirely.
+        var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+        if (dnt === '1' || dnt === 'yes') return;
 
         // Try direct PostHog first, fallback to proxy if blocked by ad blocker
         // HEAD request to SDK file - returns 200 if reachable, network error if blocked
@@ -243,26 +255,15 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-    <!-- Preconnect to Google Fonts for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!--
-      Font loading strategy:
-      - Use preconnect (above) for early connection
-      - Preload font CSS to load it before render (with crossorigin)
-      - Use font-display=swap to swap fonts in once loaded (prevents invisible text)
-    -->
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
-      crossorigin
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
-    />
+    {/*
+      Fonts are self-hosted - see scripts/fetch-fonts.mjs and src/styles/fonts.css.
+      Deliberately NO Google Fonts <link> and no preconnect to fonts.googleapis.com
+      or fonts.gstatic.com. Re-adding one would resume sending visitor IPs to Google
+      and would re-enable Cloudflare Fonts' edge rewriting, which injects ~460KB of
+      @font-face CSS into every page.
+      Note: this is an Astro comment, stripped from output. HTML comments ship on
+      every page.
+    */}
 
     <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
     {preloadIcons && (
@@ -444,6 +445,17 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           </a>
           <span class="mx-2">·</span>
           <a href="https://github.com/araiak/otogidb/issues" class="link hover:no-underline hover:opacity-80 transition-opacity" target="_blank" rel="noopener noreferrer">Report Issue</a>
+          <span class="mx-2">·</span>
+          <a href={navLinks.privacy} class="link hover:no-underline hover:opacity-80 transition-opacity">Privacy</a>
+          <span class="mx-2">·</span>
+          <a href="mailto:contact@otogidb.com" class="link hover:no-underline hover:opacity-80 transition-opacity">Contact</a>
+        </p>
+
+        <p class="mt-4 text-xs max-w-2xl mx-auto" style="color: var(--color-text-secondary); opacity: 0.8;">
+          OtogiDB is an unofficial fan project. It is not affiliated with, endorsed by, or connected to
+          the publisher or developers of Otogi: Spirit Agents. Game names, images, and data remain the
+          property of MyRealLife Games and Mitama Games. For content removal or rights inquiries,
+          contact <a href="mailto:contact@otogidb.com" class="link">contact@otogidb.com</a>.
         </p>
       </div>
     </footer>
