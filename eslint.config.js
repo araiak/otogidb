@@ -28,6 +28,24 @@ export default tseslint.config(
     },
   },
   {
+    // Build-time Node scripts. `npm run lint` only covers src/, but these are still
+    // linted when eslint is pointed at the repo root, and they run on Node globals
+    // that the default browser-ish environment doesn't declare.
+    files: ["scripts/**/*.mjs"],
+    languageOptions: {
+      globals: {
+        fetch: "readonly",
+        console: "readonly",
+        process: "readonly",
+        Buffer: "readonly",
+        URL: "readonly",
+        AbortSignal: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+      },
+    },
+  },
+  {
     ignores: [
       "dist/",
       ".astro/",

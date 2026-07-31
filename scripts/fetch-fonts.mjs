@@ -19,7 +19,6 @@
  */
 
 import { mkdir, writeFile, readdir, rm } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -62,9 +61,31 @@ const FAMILIES = [
 
 const BASIC_LATIN = 'U+0000-00FF';
 
-async function fetchText(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+const TIMEOUT_MS = 30_000;
+
+/**
+ * Fetch with a timeout and a single retry. Downloading ~132 files from Google in
+ * batches means one stalled connection would otherwise hang or fail the whole run.
+ */
+async function fetchOnce(url) {
+  const res = await fetch(url, {
+    headers: { 'User-Agent': UA },
+    signal: AbortSignal.timeout(TIMEOUT_MS),
+  });
   if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
+  return res;
+}
+
+async function fetchRetrying(url) {
+  try {
+    return await fetchOnce(url);
+  } catch {
+    return fetchOnce(url);
+  }
+}
+
+async function fetchText(url) {
+  const res = await fetchRetrying(url);
   return res.text();
 }
 
@@ -72,7 +93,7 @@ async function fetchText(url) {
 function parseFaces(css) {
   return [...css.matchAll(/@font-face\s*\{([^}]*)\}/g)].map((m) => {
     const body = m[1];
-    const pick = (re) => (body.match(re) || [, ''])[1].trim();
+    const pick = (re) => (body.match(re)?.[1] ?? '').trim();
     return {
       family: pick(/font-family:\s*([^;]+);/).replace(/['"]/g, ''),
       style: pick(/font-style:\s*([^;]+);/) || 'normal',
@@ -87,10 +108,8 @@ async function main() {
   await mkdir(FONT_DIR, { recursive: true });
 
   // Start clean so removed subsets don't linger as orphans.
-  if (existsSync(FONT_DIR)) {
-    for (const f of await readdir(FONT_DIR)) {
-      if (f.endsWith('.woff2')) await rm(path.join(FONT_DIR, f));
-    }
+  for (const f of await readdir(FONT_DIR)) {
+    if (f.endsWith('.woff2')) await rm(path.join(FONT_DIR, f));
   }
 
   const chunks = [
@@ -114,12 +133,14 @@ async function main() {
     }
 
     // Stable local name per unique remote file, deduped across weights: a variable
-    // font serves one file for every weight, so many faces share a URL.
+    // font serves one file for every weight, so many faces share a URL. The index
+    // is always used - a shared constant name would collapse two distinct URLs onto
+    // one file, so the last download would silently win.
     let idx = 0;
     const nameFor = new Map();
     for (const f of faces) {
       if (!nameFor.has(f.url)) {
-        nameFor.set(f.url, `${fam.slug}-${fam.latinOnly ? 'latin' : idx++}.woff2`);
+        nameFor.set(f.url, `${fam.slug}-${idx++}.woff2`);
       }
     }
 
@@ -170,8 +191,7 @@ async function main() {
   for (let i = 0; i < entries.length; i += LIMIT) {
     await Promise.all(
       entries.slice(i, i + LIMIT).map(async ([local, url]) => {
-        const res = await fetch(url, { headers: { 'User-Agent': UA } });
-        if (!res.ok) throw new Error(`GET ${url} -> ${res.status}`);
+        const res = await fetchRetrying(url);
         const buf = Buffer.from(await res.arrayBuffer());
         bytes += buf.length;
         await writeFile(path.join(FONT_DIR, local), buf);
