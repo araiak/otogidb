@@ -4,13 +4,13 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 const lastUpdated = '31 July 2026';
 
 // Functional browser-storage keys. Keep in sync with the code that sets them:
-// theme.ts, i18n.ts, and the inline preference script in BaseLayout.astro.
+// theme.ts, i18n.ts, CardTable.tsx, and the inline preference script in BaseLayout.astro.
 const storageKeys = [
   { key: 'otogidb-theme', purpose: 'Light or dark mode' },
   { key: 'otogidb-style-variant', purpose: 'Classic or Spirit Scroll styling' },
   { key: 'otogidb-locale', purpose: 'Your chosen language' },
   { key: 'otogidb-show-bugs', purpose: 'Whether known-bug notices are shown' },
-  { key: 'otogidb-lb-mode', purpose: 'Leaderboard display preference' },
+  { key: 'otogidb-lb-mode', purpose: 'Whether card stats are shown at LB0 or MLB' },
 ];
 
 const processors = [
