@@ -248,28 +248,15 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <link rel="preconnect" href="https://res.cloudinary.com" />
     <link rel="dns-prefetch" href="https://res.cloudinary.com" />
 
-    <!-- Preconnect to Google Fonts for faster font loading -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     {/*
-      Font loading strategy:
-      - Cloudflare Fonts rewrites the stylesheet below into an inline @font-face
-        block pointing at same-origin /cf-fonts/ paths, and strips the preconnects
-        above, so font files are never fetched from Google. Keep the stylesheet
-        link: it is the tag Cloudflare rewrites.
-      - Deliberately NO rel="preload" here. Cloudflare does not rewrite preload
-        links, so one makes a real cold connection to Google's font CSS host and
-        downloads a response nothing consumes (the stylesheet it would prime has
-        already been replaced). Do not re-add it.
-      - font-display=swap avoids invisible text while fonts load.
-      Note: this is an Astro comment, stripped from output. HTML comments here
-      ship on every page.
+      Fonts are self-hosted - see scripts/fetch-fonts.mjs and src/styles/fonts.css.
+      Deliberately NO Google Fonts <link> and no preconnect to fonts.googleapis.com
+      or fonts.gstatic.com. Re-adding one would resume sending visitor IPs to Google
+      and would re-enable Cloudflare Fonts' edge rewriting, which injects ~460KB of
+      @font-face CSS into every page.
+      Note: this is an Astro comment, stripped from output. HTML comments ship on
+      every page.
     */}
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
-    />
 
     <!-- Preload icon files on card table pages to start downloads before JS hydrates -->
     {preloadIcons && (
