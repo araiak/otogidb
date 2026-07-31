@@ -1,0 +1,233 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const lastUpdated = '31 July 2026';
+
+// Functional browser-storage keys. Keep in sync with the code that sets them:
+// theme.ts, i18n.ts, and the inline preference script in BaseLayout.astro.
+const storageKeys = [
+  { key: 'otogidb-theme', purpose: 'Light or dark mode' },
+  { key: 'otogidb-style-variant', purpose: 'Classic or Spirit Scroll styling' },
+  { key: 'otogidb-locale', purpose: 'Your chosen language' },
+  { key: 'otogidb-show-bugs', purpose: 'Whether known-bug notices are shown' },
+  { key: 'otogidb-lb-mode', purpose: 'Leaderboard display preference' },
+];
+
+const processors = [
+  {
+    name: 'Cloudflare',
+    purpose: 'Hosts the site and delivers it worldwide',
+    href: 'https://www.cloudflare.com/privacypolicy/',
+  },
+  {
+    name: 'Cloudinary',
+    purpose: 'Delivers card images',
+    href: 'https://cloudinary.com/privacy',
+  },
+  {
+    name: 'PostHog',
+    purpose: 'Page-view counts and error reports (United States)',
+    href: 'https://posthog.com/privacy',
+  },
+];
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="How OtogiDB handles your data: no accounts, no ads, no tracking cookies."
+>
+  <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <h1 class="text-3xl font-bold mb-2" style="color: var(--color-text);">Privacy Policy</h1>
+    <p class="text-sm mb-8" style="color: var(--color-text-secondary);">
+      Last updated: {lastUpdated}
+    </p>
+
+    <div
+      class="rounded-lg border p-4 mb-8"
+      style="border-color: var(--color-border); background-color: var(--color-surface);"
+    >
+      <h2 class="font-bold mb-2" style="color: var(--color-text);">The short version</h2>
+      <p style="color: var(--color-text-secondary);">
+        OtogiDB has no accounts, no ads, and no tracking cookies. We don't know who you are
+        and we don't try to find out. We count page views so we can tell which pages are
+        useful and whether something is broken. That's it.
+      </p>
+    </div>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Who runs this site</h2>
+      <p style="color: var(--color-text-secondary);">
+        OtogiDB is a small, independently run fan project. For anything relating to privacy,
+        contact <a href="mailto:privacy@otogidb.com" class="link">privacy@otogidb.com</a>.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">What we don't do</h2>
+      <ul class="list-disc pl-5 space-y-1" style="color: var(--color-text-secondary);">
+        <li>No user accounts, sign-ups, or logins</li>
+        <li>No advertising and no advertising networks</li>
+        <li>No tracking cookies</li>
+        <li>No session recording, heatmaps, or scroll tracking</li>
+        <li>No profiles built about you, and no attempt to recognise you across visits</li>
+        <li>We never sell or share your data</li>
+      </ul>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">
+        What's stored on your device
+      </h2>
+      <p class="mb-3" style="color: var(--color-text-secondary);">
+        We store a few settings in your browser so the site remembers how you like it. These
+        are preferences you choose. They stay in your browser, are never sent to us, and
+        clearing your site data removes them.
+      </p>
+      <ul class="list-disc pl-5 space-y-1 mb-3" style="color: var(--color-text-secondary);">
+        {storageKeys.map(({ key, purpose }) => (
+          <li><code class="text-sm">{key}</code> &mdash; {purpose}</li>
+        ))}
+      </ul>
+      <p style="color: var(--color-text-secondary);">
+        The site also installs a service worker, which caches pages and images so it loads
+        faster and keeps working on a poor connection. It stores site content, not
+        information about you.
+      </p>
+      <p class="mt-3" style="color: var(--color-text-secondary);">
+        Nothing is stored on your device for analytics.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Analytics</h2>
+      <p class="mb-3" style="color: var(--color-text-secondary);">
+        We use PostHog to count page views. It is configured to store nothing at all on your
+        device &mdash; no cookie, no browser storage. For each page view we record the page
+        address, the referring page, your browser and device type, and an approximate country.
+      </p>
+      <p class="mb-3" style="color: var(--color-text-secondary);">
+        Because nothing is stored on your device, we cannot tell whether you are a new or
+        returning visitor, and we cannot follow you from one page to the next. Our visitor
+        numbers are rough counts, which is all we need them to be.
+      </p>
+      <p style="color: var(--color-text-secondary);">
+        If your browser sends a "Do Not Track" signal, we don't record anything at all.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Error reporting</h2>
+      <p style="color: var(--color-text-secondary);">
+        When something breaks, the error is reported to PostHog so we find out about it. These
+        reports describe what went wrong in the code and which page it happened on. They don't
+        contain anything you typed.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">
+        Who processes data for us
+      </h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm">
+          <thead>
+            <tr style="color: var(--color-text);">
+              <th class="py-2 pr-4 font-semibold">Provider</th>
+              <th class="py-2 font-semibold">What they do</th>
+            </tr>
+          </thead>
+          <tbody style="color: var(--color-text-secondary);">
+            {processors.map(({ name, purpose, href }) => (
+              <tr class="border-t" style="border-color: var(--color-border);">
+                <td class="py-2 pr-4 whitespace-nowrap">
+                  <a href={href} class="link" target="_blank" rel="noopener noreferrer">{name}</a>
+                </td>
+                <td class="py-2">{purpose}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">IP addresses</h2>
+      <p class="mb-3" style="color: var(--color-text-secondary);">
+        Every website receives your IP address &mdash; it is how the page reaches you. Our
+        analytics is configured to discard it: your IP is used briefly to work out an
+        approximate country and to filter out bot traffic, then thrown away. It is never
+        stored alongside anything you did on the site.
+      </p>
+      <p style="color: var(--color-text-secondary);">
+        Cloudflare and Cloudinary necessarily handle your IP address in order to send you the
+        site and its images, under their own privacy policies linked above.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">
+        How long we keep things
+      </h2>
+      <p style="color: var(--color-text-secondary);">
+        Page-view and error records are kept for one year and then deleted. Because they
+        contain no identifier for you, they cannot be connected back to you at any point.
+        Settings saved in your browser stay until you clear your site data.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Your rights</h2>
+      <p class="mb-3" style="color: var(--color-text-secondary);">
+        If you are in the UK, EU, or another region with similar laws, you have the right to
+        access your personal data, have it corrected or deleted, object to how it is used, and
+        complain to your data protection authority.
+      </p>
+      <p style="color: var(--color-text-secondary);">
+        In practice there is usually nothing for us to act on. We store no identifier for you,
+        so we have no way to find records relating to any particular person &mdash; there is
+        nothing to look up, hand over, or delete. If you think we hold something about you,
+        write to <a href="mailto:privacy@otogidb.com" class="link">privacy@otogidb.com</a> and
+        we'll look into it.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Children</h2>
+      <p style="color: var(--color-text-secondary);">
+        This site is not aimed at children, and we don't knowingly collect information about
+        anyone. Since we collect no personal information from any visitor, no special handling
+        applies.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">Links to other sites</h2>
+      <p style="color: var(--color-text-secondary);">
+        We link to places like GitHub and the app stores. Following one of those links takes
+        you somewhere with its own privacy policy, which we don't control. Simply having the
+        link on the page sends nothing to them.
+      </p>
+    </section>
+
+    <section class="mb-8">
+      <h2 class="text-xl font-bold mb-3" style="color: var(--color-text);">
+        Changes to this policy
+      </h2>
+      <p style="color: var(--color-text-secondary);">
+        If we change how any of this works, we'll update this page and the date at the top.
+      </p>
+    </section>
+
+    <section
+      class="rounded-lg border p-4"
+      style="border-color: var(--color-border); background-color: var(--color-surface);"
+    >
+      <h2 class="font-bold mb-2" style="color: var(--color-text);">Not an official site</h2>
+      <p style="color: var(--color-text-secondary);">
+        OtogiDB is an unofficial fan project. It is not affiliated with, endorsed by, or
+        connected to the publisher or developers of Otogi: Spirit Agents. Game names, images,
+        and data remain the property of their respective owners.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

@@ -113,6 +113,7 @@ const navLinks = {
   updates: `${localePrefix}/updates`,
   blog: `${localePrefix}/blog`,
   tools: `${localePrefix}/tools`,
+  privacy: `${localePrefix}/privacy`,
 };
 
 // ─── Maintenance banner ─────────────────────────────────────────────────────
@@ -213,6 +214,10 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           ui_host: 'https://us.posthog.com',
           defaults: '2025-11-30',
           person_profiles: 'identified_only',
+          // Cookieless by design - no consent banner needed. Changing this
+          // requires one. See docs/infrastructure/ANALYTICS.md.
+          persistence: 'memory',
+          respect_dnt: true,
           autocapture: false,
           capture_pageleave: false,
           disable_session_recording: true,
@@ -247,18 +252,20 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <!--
+    {/*
       Font loading strategy:
-      - Use preconnect (above) for early connection
-      - Preload font CSS to load it before render (with crossorigin)
-      - Use font-display=swap to swap fonts in once loaded (prevents invisible text)
-    -->
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
-      crossorigin
-    />
+      - Cloudflare Fonts rewrites the stylesheet below into an inline @font-face
+        block pointing at same-origin /cf-fonts/ paths, and strips the preconnects
+        above, so font files are never fetched from Google. Keep the stylesheet
+        link: it is the tag Cloudflare rewrites.
+      - Deliberately NO rel="preload" here. Cloudflare does not rewrite preload
+        links, so one makes a real cold connection to Google's font CSS host and
+        downloads a response nothing consumes (the stylesheet it would prime has
+        already been replaced). Do not re-add it.
+      - font-display=swap avoids invisible text while fonts load.
+      Note: this is an Astro comment, stripped from output. HTML comments here
+      ship on every page.
+    */}
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600&family=Reggae+One&display=swap"
@@ -444,6 +451,8 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           </a>
           <span class="mx-2">·</span>
           <a href="https://github.com/araiak/otogidb/issues" class="link hover:no-underline hover:opacity-80 transition-opacity" target="_blank" rel="noopener noreferrer">Report Issue</a>
+          <span class="mx-2">·</span>
+          <a href={navLinks.privacy} class="link hover:no-underline hover:opacity-80 transition-opacity">Privacy</a>
         </p>
       </div>
     </footer>
