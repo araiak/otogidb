@@ -255,6 +255,14 @@ function getStockLevel(auctionData: AuctionCardData | null): 'high' | 'medium' |
 const stockLevel = getStockLevel(cardAuctionData);
 
 // Get image URLs (uses fallback to construct from asset_id if needed)
+//
+// Deliberately UNTRANSFORMED. Do not route this through getHDImageUrl or add
+// f_auto/q_auto: this renders on ~1000 static card pages, and f_auto negotiates
+// a separate derived asset per format (AVIF/WebP/PNG), so auto mode here would
+// mint ~3000 derivatives on first crawl and put the Cloudinary free tier at risk.
+// The source is only 492x632 (~150KB) and displays at ~485px, so there is little
+// bandwidth to reclaim anyway. If this ever needs optimizing, lock it to ONE
+// explicit transform string (e.g. w_492,f_webp,q_80) = 1 derivative per card.
 const hdImageUrl = getImageUrl(card, 'hd');
 
 // SEO image - use HD image for social sharing (convert null to undefined for TypeScript)
