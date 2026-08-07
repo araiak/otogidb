@@ -24026,9 +24026,11 @@
                 "114",
                 "172",
                 "193",
+                "281",
                 "301",
                 "341",
-                "476"
+                "476",
+                "1786"
               ],
               "mns_type": "OR"
             },
@@ -24052,9 +24054,11 @@
             "114",
             "172",
             "193",
+            "281",
             "301",
             "341",
-            "476"
+            "476",
+            "1786"
           ],
           "tags": [
             "Self",
@@ -24220,12 +24224,108 @@
             ],
             "date": "2026-06-14",
             "version": "7f84758"
+          },
+          {
+            "changes": [
+              {
+                "field": "synergies",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "synergies.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "synergies.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "synergies.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "synergies.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "synergies.8",
+                "new": "1786",
+                "old": null
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.8",
+                "new": "1786",
+                "old": null
+              },
+              {
+                "field": "abilities.0.synergy_partners",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "abilities.0.synergy_partners.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "abilities.0.synergy_partners.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "abilities.0.synergy_partners.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "abilities.0.synergy_partners.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "abilities.0.synergy_partners.8",
+                "new": "1786",
+                "old": null
+              }
+            ],
+            "date": "2026-08-07",
+            "version": "730c39f"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.584677+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-06-14T12:25:58.018976+00:00",
-        "last_modified_version": "7f84758"
+        "last_modified": "2026-08-07T03:56:33.006385+00:00",
+        "last_modified_version": "730c39f"
       },
       "id": "1498",
       "image_urls": {
@@ -24299,9 +24399,11 @@
         "114",
         "172",
         "193",
+        "281",
         "301",
         "341",
-        "476"
+        "476",
+        "1786"
       ]
     },
     "15": {
@@ -43086,7 +43188,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -43103,7 +43205,7 @@
             {
               "currency": "gApple",
               "end": "2026-07-31 23:59:59",
-              "is_current": true,
+              "is_current": false,
               "limit": 0,
               "price": 65,
               "start": "2026-06-01 00:00:00"
@@ -52847,7 +52949,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -52867,7 +52969,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -52889,7 +52991,7 @@
           "featured_banners": [
             {
               "end": "2026-08-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-07-26 15:00:00"
             }
@@ -53062,7 +53164,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -53082,7 +53184,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -53104,7 +53206,7 @@
           "featured_banners": [
             {
               "end": "2026-08-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-07-26 15:00:00"
             }
@@ -53304,7 +53406,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -53312,7 +53414,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -53324,42 +53426,42 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -53558,7 +53660,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -53566,7 +53668,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -53578,56 +53680,56 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -53785,7 +53887,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -53805,7 +53907,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -53827,7 +53929,7 @@
           "featured_banners": [
             {
               "end": "2026-08-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-07-26 15:00:00"
             }
@@ -54198,7 +54300,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -54206,7 +54308,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54218,7 +54320,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -54234,7 +54336,7 @@
                 175,
                 200
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -54772,7 +54874,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54789,7 +54891,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-30 23:59:59",
-              "is_current": false,
+              "is_current": true,
               "limit": 0,
               "price": 65,
               "start": "2026-08-01 00:00:00"
@@ -54923,7 +55025,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -54931,7 +55033,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54943,49 +55045,49 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -55001,7 +55103,7 @@
                 140,
                 180
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -55160,7 +55262,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -55168,7 +55270,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55180,49 +55282,49 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -55238,7 +55340,7 @@
                 120,
                 160
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -55397,7 +55499,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -55405,7 +55507,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55417,28 +55519,28 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -55453,7 +55555,7 @@
                 20,
                 30
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -55645,7 +55747,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -55829,9 +55931,11 @@
                 "114",
                 "172",
                 "193",
+                "281",
                 "301",
                 "341",
-                "476"
+                "476",
+                "1498"
               ],
               "mns_type": "OR"
             },
@@ -55855,9 +55959,11 @@
             "114",
             "172",
             "193",
+            "281",
             "301",
             "341",
-            "476"
+            "476",
+            "1498"
           ],
           "tags": [
             "Self",
@@ -55906,7 +56012,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -55914,7 +56020,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55926,7 +56032,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -55937,7 +56043,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -55948,7 +56054,7 @@
           "featured_banners": [
             {
               "end": "2026-08-09 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-08-06 15:00:00"
             }
@@ -56006,12 +56112,108 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "synergies",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "synergies.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "synergies.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "synergies.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "synergies.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "synergies.8",
+                "new": "1498",
+                "old": null
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "abilities.0.parsed.conditions.mns_ids.8",
+                "new": "1498",
+                "old": null
+              },
+              {
+                "field": "abilities.0.synergy_partners",
+                "new": "9 items",
+                "old": "7 items"
+              },
+              {
+                "field": "abilities.0.synergy_partners.4",
+                "new": "281",
+                "old": "301"
+              },
+              {
+                "field": "abilities.0.synergy_partners.5",
+                "new": "301",
+                "old": "341"
+              },
+              {
+                "field": "abilities.0.synergy_partners.6",
+                "new": "341",
+                "old": "476"
+              },
+              {
+                "field": "abilities.0.synergy_partners.7",
+                "new": "476",
+                "old": null
+              },
+              {
+                "field": "abilities.0.synergy_partners.8",
+                "new": "1498",
+                "old": null
+              }
+            ],
+            "date": "2026-08-07",
+            "version": "730c39f"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.511135+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.827214+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-07T03:56:33.198214+00:00",
+        "last_modified_version": "730c39f"
       },
       "id": "1786",
       "image_urls": {
@@ -56085,9 +56287,11 @@
         "114",
         "172",
         "193",
+        "281",
         "301",
         "341",
-        "476"
+        "476",
+        "1498"
       ]
     },
     "1787": {
@@ -56157,7 +56361,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -56165,7 +56369,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -56177,7 +56381,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -56188,7 +56392,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -56393,7 +56597,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-02-15",
-            "event_date": "2026-07-31",
+            "event_date": "2026-07-30",
             "event_id": "183",
             "event_name": "Sengoku Swimsuit Scene",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -56401,7 +56605,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -56413,7 +56617,7 @@
             {
               "event_id": "183",
               "event_name": "戰國泳裝百景",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -56424,7 +56628,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -182254,5 +182458,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 1002,
-  "version": "b245672"
+  "version": "730c39f"
 }
