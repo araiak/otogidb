@@ -19,11 +19,25 @@ export interface ParsedSkillTarget {
   count: number;
   attribute?: string;
   filter?: string;
+  /**
+   * Which side the selector resolves against. Tracked separately because an
+   * 'attribute' or 'ranked' modifier overwrites `type`, which would otherwise
+   * lose the enemy/ally distinction (e.g. ts "enemy;count<1>;max_atk" is an
+   * enemy debuff, not an ally buff on the highest-ATK member).
+   */
+  side?: 'ally' | 'enemy';
 }
 
 export interface ParsedSkillEffect {
   type: string;
+  /** Percentage (0-100) or flat points — check `unit`, they are not all the same. */
   value: number;
+  /**
+   * Unit of `value`/`scale`. DEFENSE is flat points (-638, scale -18) while
+   * SHIELD is percent (-25, scale -0.72); treating DEFENSE as a percentage
+   * invents damage amplification that does not exist.
+   */
+  unit?: 'percent' | 'flat';
   scale?: number;
   duration?: number;  // Duration in seconds for buffs/debuffs/CC
 }
@@ -68,6 +82,8 @@ export interface ParsedAbilityTarget {
   count: number;
   attribute?: string;  // 'Divina' | 'Anima' | 'Phantasma'
   filter?: string;     // 'max_atk' | 'max_spd' | 'max_hp' for deterministic targeting
+  /** See ParsedSkillTarget.side — survives a 'ranked'/'attribute' type override. */
+  side?: 'ally' | 'enemy';
 }
 
 export interface ParsedAbilityEffect {
@@ -76,6 +92,12 @@ export interface ParsedAbilityEffect {
   value: number;
   scale?: number;
   isPercent: boolean;
+  /**
+   * Emitted by the pipeline. Prefer this over `isPercent`, which the pipeline
+   * never populates (it appears only in hand-built fixtures). DEFENSE is flat
+   * points; SHIELD and the rest are percentages.
+   */
+  unit?: 'percent' | 'flat';
 }
 
 export interface ParsedAbility {
