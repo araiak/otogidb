@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback, useMemo } from 'react';
 
 interface FilterDropdownProps {
   options: string[] | number[];
@@ -7,6 +7,10 @@ interface FilterDropdownProps {
   renderOption?: (opt: string | number) => React.ReactNode;
   placeholder: string;
   dropdownClassName?: string;
+  /** Show a filter box above the options. Worth it past ~20 options (e.g. events). */
+  searchable?: boolean;
+  /** Placeholder for the search box. */
+  searchPlaceholder?: string;
 }
 
 /**
@@ -20,21 +24,51 @@ export default function FilterDropdown({
   onChange,
   renderOption,
   placeholder,
-  dropdownClassName = ''
+  dropdownClassName = '',
+  searchable = false,
+  searchPlaceholder = 'Search...'
 }: FilterDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState(-1);
+  const [query, setQuery] = useState('');
   const dropdownRef = useRef<HTMLDivElement>(null);
   const optionRefs = useRef<(HTMLLabelElement | null)[]>([]);
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  // Options actually rendered. Everything below indexes against THIS, not `options`,
+  // or keyboard navigation would select a different row than the one highlighted.
+  const visibleOptions = useMemo(() => {
+    if (!searchable || !query.trim()) return options;
+    const q = query.trim().toLowerCase();
+    return (options as (string | number)[]).filter(opt =>
+      String(opt).toLowerCase().includes(q)
+    );
+  }, [options, query, searchable]);
 
   // Reset focused index when dropdown opens/closes
   useEffect(() => {
     if (isOpen) {
-      setFocusedIndex(0);
+      // Searchable dropdowns start with focus in the search box, not on an option.
+      setFocusedIndex(searchable ? -1 : 0);
     } else {
       setFocusedIndex(-1);
+      setQuery('');
     }
-  }, [isOpen]);
+  }, [isOpen, searchable]);
+
+  // Focus the search box on open, but only for mouse/trackpad users — autofocusing on
+  // touch pops the on-screen keyboard over the list the user just asked to see.
+  useEffect(() => {
+    if (!isOpen || !searchable) return;
+    if (window.matchMedia('(pointer: fine)').matches) {
+      searchRef.current?.focus();
+    }
+  }, [isOpen, searchable]);
+
+  // Keep the highlight inside the list as it shrinks while typing
+  useEffect(() => {
+    setFocusedIndex(prev => (prev >= visibleOptions.length ? visibleOptions.length - 1 : prev));
+  }, [visibleOptions.length]);
 
   // Focus the option when focusedIndex changes
   useEffect(() => {
@@ -71,6 +105,10 @@ export default function FilterDropdown({
       return;
     }
 
+    // While typing in the search box, Space/Home/End belong to the text field — the
+    // listbox must not swallow them, or the query can never contain a space.
+    const typing = event.target === searchRef.current;
+
     switch (event.key) {
       case 'Escape':
         event.preventDefault();
@@ -78,29 +116,33 @@ export default function FilterDropdown({
         break;
       case 'ArrowDown':
         event.preventDefault();
-        setFocusedIndex(prev => Math.min(prev + 1, options.length - 1));
+        setFocusedIndex(prev => Math.min(prev + 1, visibleOptions.length - 1));
         break;
       case 'ArrowUp':
         event.preventDefault();
         setFocusedIndex(prev => Math.max(prev - 1, 0));
         break;
-      case 'Enter':
       case ' ':
+        if (typing) return;
+      // falls through
+      case 'Enter':
         event.preventDefault();
-        if (focusedIndex >= 0 && focusedIndex < options.length) {
-          toggleOption(options[focusedIndex]);
+        if (focusedIndex >= 0 && focusedIndex < visibleOptions.length) {
+          toggleOption(visibleOptions[focusedIndex]);
         }
         break;
       case 'Home':
+        if (typing) return;
         event.preventDefault();
         setFocusedIndex(0);
         break;
       case 'End':
+        if (typing) return;
         event.preventDefault();
-        setFocusedIndex(options.length - 1);
+        setFocusedIndex(visibleOptions.length - 1);
         break;
     }
-  }, [isOpen, focusedIndex, options, toggleOption]);
+  }, [isOpen, focusedIndex, visibleOptions, toggleOption]);
 
   return (
     <div className="relative" ref={dropdownRef} onKeyDown={handleKeyDown}>
@@ -121,7 +163,24 @@ export default function FilterDropdown({
           role="listbox"
           aria-multiselectable="true"
         >
-          {options.map((opt, index) => (
+          {/* sticky: the panel scrolls, and a search box that scrolls out of reach is
+              worse than none once the list is long enough to need one. */}
+          {searchable && (
+            <input
+              ref={searchRef}
+              type="text"
+              value={query}
+              onChange={e => setQuery(e.target.value)}
+              placeholder={searchPlaceholder}
+              aria-label={searchPlaceholder}
+              className="w-full mb-2 px-2 py-1 text-xs rounded border bg-primary outline-none focus:ring-2 focus:ring-accent sticky top-0 z-10"
+              style={{ borderColor: 'var(--color-border)' }}
+            />
+          )}
+          {searchable && visibleOptions.length === 0 && (
+            <p className="px-2 py-1 text-xs text-secondary">No matches</p>
+          )}
+          {visibleOptions.map((opt, index) => (
             <label
               key={String(opt)}
               ref={el => { optionRefs.current[index] = el; }}

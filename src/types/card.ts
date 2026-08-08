@@ -165,7 +165,14 @@ export interface GachaBanner {
 }
 
 export interface GachaAcquisition {
+  /** Card belongs to the standard pool. NOT a statement about current obtainability. */
   in_standard_pool: boolean;
+  /**
+   * When the pool entry opens, "YYYY-MM-DD HH:MM:SS" in UTC+8. Null means it has always
+   * been in the pool. Gate availability on this via isStandardPoolOpen() — the pipeline
+   * only runs on game data changes, so it cannot decide this on the server.
+   */
+  standard_pool_start?: string | null;
   featured_banners: GachaBanner[];
 }
 

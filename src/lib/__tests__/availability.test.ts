@@ -11,6 +11,7 @@ import {
   mergeAvailability,
   computeClientSideAvailability,
   isAuctionWindowActive,
+  isStandardPoolOpen,
 } from '../availability';
 import type { AvailabilityData } from '../availability';
 import type { CardsData } from '../../types/card';
@@ -272,5 +273,51 @@ describe('computeClientSideAvailability', () => {
 
     expect(result.currentlyAvailable).toBe(true);
     expect(result.auctionAvailable).toBe(true);
+  });
+});
+
+
+// ---------------------------------------------------------------------------
+// isStandardPoolOpen
+// ---------------------------------------------------------------------------
+
+describe('isStandardPoolOpen', () => {
+  const shift = (days: number) => {
+    const d = new Date(Date.now() + days * 86400000);
+    const p = (n: number) => String(n).padStart(2, '0');
+    // Emit in config format (UTC+8), which is what the pipeline ships.
+    const u = new Date(d.getTime() + 8 * 3600000);
+    return `${u.getUTCFullYear()}-${p(u.getUTCMonth() + 1)}-${p(u.getUTCDate())} ${p(u.getUTCHours())}:${p(u.getUTCMinutes())}:${p(u.getUTCSeconds())}`;
+  };
+
+  it('treats a missing start date as always in pool', () => {
+    // Older pool cards often carry no start date; absence must not hide them.
+    expect(isStandardPoolOpen(null)).toBe(true);
+    expect(isStandardPoolOpen(undefined)).toBe(true);
+    expect(isStandardPoolOpen('')).toBe(true);
+  });
+
+  it('returns false while the start date is still in the future', () => {
+    expect(isStandardPoolOpen(shift(30))).toBe(false);
+  });
+
+  it('returns true once the start date has passed', () => {
+    expect(isStandardPoolOpen(shift(-30))).toBe(true);
+  });
+
+  it('assumes open when the date cannot be parsed', () => {
+    // Only a date we can read AND that is in the future should hide a card.
+    expect(isStandardPoolOpen('not-a-date')).toBe(true);
+    expect(isStandardPoolOpen('2026-13-45 99:99:99')).toBe(true);
+  });
+
+  it('applies the UTC+8 offset rather than treating the string as UTC', () => {
+    // 8h ahead of UTC: a config time 4h in the "future" by naive UTC reading is
+    // actually already open once the offset is applied.
+    const now = new Date();
+    const p = (n: number) => String(n).padStart(2, '0');
+    const plus4 = new Date(now.getTime() + 4 * 3600000);
+    const naiveUtc = `${plus4.getUTCFullYear()}-${p(plus4.getUTCMonth() + 1)}-${p(plus4.getUTCDate())} ${p(plus4.getUTCHours())}:${p(plus4.getUTCMinutes())}:${p(plus4.getUTCSeconds())}`;
+    expect(isStandardPoolOpen(naiveUtc)).toBe(true);
   });
 });
