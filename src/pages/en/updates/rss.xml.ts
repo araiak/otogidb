@@ -90,7 +90,8 @@ export async function GET(context: APIContext) {
     }
 
     items.push({
-      title: `Version ${notes.version} - ${notes.summary.new_cards} new, ${notes.summary.modified_cards} changed`,
+      // Titled by date rather than the internal version identifier, matching the page.
+      title: `${(notes.version_date || versionInfo.date || '').slice(0, 10)} - ${notes.summary.new_cards} new, ${notes.summary.modified_cards} changed`,
       description: descParts.join('. ') || 'Card data updates',
       pubDate: new Date(notes.version_date || versionInfo.date || new Date().toISOString()),
       link: `/en/updates/#${notes.version}`,

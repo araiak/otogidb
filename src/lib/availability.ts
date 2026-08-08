@@ -50,6 +50,7 @@ interface CardAvailability {
   };
   gacha?: {
     in_standard_pool?: boolean;
+    standard_pool_start?: string | null; // "YYYY-MM-DD HH:MM:SS" in UTC+8
     featured_banners?: string[];
   };
 }
@@ -134,6 +135,48 @@ export async function fetchAvailabilityData(version: string): Promise<Availabili
 }
 
 /**
+ * Check whether a card's standard-pool gacha entry has actually opened.
+ *
+ * in_standard_pool says the card BELONGS to the pool; this says it is obtainable now.
+ * Evaluated against the browser clock on purpose: the pipeline only runs on game data
+ * changes, so a pipeline-computed flag can lag the real opening by days.
+ *
+ * A missing or unparseable date means "always been in the pool" — only a date we can
+ * read AND that is still in the future should hide a card.
+ *
+ * @param startStr - Start date string in "YYYY-MM-DD HH:MM:SS" format (UTC+8)
+ * @returns true if the pool entry is open
+ */
+export function isStandardPoolOpen(startStr: string | null | undefined): boolean {
+  if (!startStr) return true; // No start date = always in pool
+
+  try {
+    const [datePart, timePart] = startStr.split(' ');
+    const [year, month, day] = datePart.split('-').map(Number);
+    const [hour, minute, second] = timePart.split(':').map(Number);
+
+    // Date.UTC silently rolls over out-of-range values, so "2026-13-45 99:99:99" would
+    // become a real future date and hide the card. Only gate on a date we understand.
+    const inRange =
+      [year, month, day, hour, minute, second].every(Number.isFinite) &&
+      month >= 1 && month <= 12 &&
+      day >= 1 && day <= 31 &&
+      hour >= 0 && hour < 24 &&
+      minute >= 0 && minute < 60 &&
+      second >= 0 && second < 60 &&
+      // Rejects Feb 30 and friends: the rollover changes the day back.
+      new Date(Date.UTC(year, month - 1, day)).getUTCDate() === day;
+    if (!inRange) return true;
+
+    // Create date as UTC by subtracting the 8 hour offset
+    const startUTC = new Date(Date.UTC(year, month - 1, day, hour - 8, minute, second));
+    return new Date() >= startUTC;
+  } catch {
+    return true; // Parse error = assume open
+  }
+}
+
+/**
  * Check if auction window is active based on end_date.
  * Game dates are UTC+8 timezone.
  *
@@ -199,7 +242,8 @@ export function computeClientSideAvailability(
       if (cardAvailability.currently_available) {
         // Check if card is still available via other sources in R2 data
         const hasOtherSource =
-          cardAvailability.gacha?.in_standard_pool ||
+          (cardAvailability.gacha?.in_standard_pool &&
+            isStandardPoolOpen(cardAvailability.gacha?.standard_pool_start)) ||
           cardAvailability.daily?.available ||
           (cardAvailability.gacha?.featured_banners &&
             cardAvailability.gacha.featured_banners.length > 0);
@@ -272,9 +316,14 @@ export function mergeAvailability(
       if (!windowActive && cardAvailability.currently_available) {
         // Check if other sources still make card available
         const gacha = acquisition.gacha;
+        // Pool membership only counts once the entry has opened (browser clock).
+        const poolOpen = isStandardPoolOpen(
+          gacha?.standard_pool_start ?? cardAvailability.gacha?.standard_pool_start
+        );
         const gachaAvail =
-          gacha?.in_standard_pool ||
-          cardAvailability.gacha?.in_standard_pool || // fallback: index may not have gacha object
+          (gacha?.in_standard_pool && poolOpen) ||
+          // fallback: index may not have gacha object
+          (cardAvailability.gacha?.in_standard_pool && poolOpen) ||
           gacha?.featured_banners?.some((b) => b.is_current);
         const eventAvail =
           acquisition.event?.reward_tiers?.some((e) => e.is_current) ||

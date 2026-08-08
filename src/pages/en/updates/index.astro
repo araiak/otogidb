@@ -306,13 +306,13 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
 
             <div class="mt-4 space-y-8">
               {group.updates.map((notes) => (
-                <article class="card overflow-hidden">
+                <article id={notes.version} class="card overflow-hidden">
             {/* Header */}
             <div class="p-4 md:p-6 border-b" style="border-color: var(--color-border);">
               <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                 <div>
-                  <h2 class="text-xl font-bold">Version {notes.version}</h2>
-                  <p class="text-sm text-secondary">{formatDate(notes.version_date)}</p>
+                  {/* Date is the heading; the internal version identifier is not shown. */}
+                  <h2 class="text-xl font-bold">{formatDate(notes.version_date)}</h2>
                 </div>
 
                 <div class="flex flex-wrap gap-2">

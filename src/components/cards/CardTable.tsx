@@ -25,6 +25,9 @@ import MobileCardGrid from './MobileCardGrid';
 import { getCardTableColumns } from './cardTableColumns';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useCardFilterOptions } from '../../hooks/useCardFilterOptions';
+import { selectedEventCardIds, eventCardIdsMatchingQuery } from '../../lib/eventFilter';
+import { FUSE_OPTIONS } from '../../lib/cardSearch';
+import type { EventEntry } from '../../lib/eventFilter';
 import {
   extractLocaleFromPath,
   getStoredLocale,
@@ -44,25 +47,6 @@ import {
 interface CardTableProps {
   initialCards?: Card[];
 }
-
-// Fuse.js configuration for search
-const FUSE_OPTIONS = {
-  keys: [
-    { name: 'id', weight: 2 },
-    { name: 'name', weight: 3 },
-    { name: 'description', weight: 0.5 },
-    { name: 'skill.name', weight: 2 },
-    { name: 'skill.description', weight: 1 },
-    { name: 'abilities.name', weight: 2 },
-    { name: 'abilities.description', weight: 1 },
-    { name: 'stats.attribute_name', weight: 1.5 },
-    { name: 'stats.type_name', weight: 1.5 }
-  ],
-  threshold: 0.3,
-  includeScore: true,
-  ignoreLocation: true,
-  minMatchCharLength: 2
-};
 
 export default function CardTable({ initialCards }: CardTableProps) {
   // Detect locale from URL path first, then fall back to stored preference
@@ -98,6 +82,29 @@ export default function CardTable({ initialCards }: CardTableProps) {
   useEffect(() => {
     setLocale(detectLocale());
   }, [detectLocale]);
+
+  // Load the event -> cards map for the event filter. Small (~3 KB gz) and only needed
+  // once the table is interactive, so a plain fetch is enough; failure just means the
+  // event dropdown stays empty.
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/data/events.json')
+      .then(res => (res.ok ? res.json() : []))
+      .then(data => {
+        if (cancelled || !Array.isArray(data)) return;
+        setEvents(data);
+        // Drop names from a stale ?event= param — an unknown name matches no cards and
+        // would otherwise leave the table permanently empty.
+        const known = new Set(data.map((e: EventEntry) => e.name));
+        setEventFilter(prev => prev.filter(n => known.has(n)));
+      })
+      .catch(() => {
+        /* event filter is optional; leave it empty */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Listen for locale changes (when user switches language)
   useEffect(() => {
@@ -139,6 +146,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   const [skillTagFilter, setSkillTagFilter] = useState<string[]>([]);
   const [abilityTagFilter, setAbilityTagFilter] = useState<string[]>([]);
   const [sourceFilter, setSourceFilter] = useState<string[]>([]); // Acquisition sources: gacha, auction, exchange, event
+  const [eventFilter, setEventFilter] = useState<string[]>([]); // Event names from events.json
+  // events.json is a list ordered newest-first; keep that order for the dropdown.
+  const [events, setEvents] = useState<EventEntry[]>([]);
   const [availableOnly, setAvailableOnly] = useState(false); // Only show currently available cards
   const [hideNonPlayable, setHideNonPlayable] = useState(true); // Hide NPC/enemy cards by default
   const [showBugs, setShowBugs] = useState<boolean>(false);
@@ -218,6 +228,17 @@ export default function CardTable({ initialCards }: CardTableProps) {
     const sourceValues = parseAndValidateStringParam(params.get('source'), ALLOWED_FILTER_VALUES.sources);
     if (sourceValues.length > 0) setSourceFilter(sourceValues);
 
+    // Event filter - names come from data, so bound length and strip control characters
+    const eventParam = params.get('event');
+    if (eventParam) {
+      const eventNames = eventParam.split('|')
+        .map(e => e.trim().slice(0, 100))
+        // Names are matched against events.json below, so an unknown or malformed
+        // value simply selects nothing.
+        .filter(Boolean);
+      if (eventNames.length > 0) setEventFilter(eventNames);
+    }
+
     // Available only filter - validate boolean
     if (validateBooleanParam(params.get('available'))) {
       setAvailableOnly(true);
@@ -261,6 +282,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
       if (skillTagFilter.length > 0) params.set('skill', skillTagFilter.join(','));
       if (abilityTagFilter.length > 0) params.set('ability', abilityTagFilter.join(','));
       if (sourceFilter.length > 0) params.set('source', sourceFilter.join(','));
+      if (eventFilter.length > 0) params.set('event', eventFilter.join('|'));
       if (availableOnly) params.set('available', '1');
       if (sorting.length > 0) {
         params.set('sort', sorting[0].id);
@@ -277,7 +299,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     }, 300);
 
     return () => clearTimeout(timeoutId);
-  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, availableOnly, sorting, hideNonPlayable, bugsOnly]);
+  }, [globalFilter, attributeFilter, typeFilter, rarityFilter, bondFilter, skillTagFilter, abilityTagFilter, sourceFilter, eventFilter, availableOnly, sorting, hideNonPlayable, bugsOnly]);
 
   // Close mobile preview when clicking outside
   useEffect(() => {
@@ -360,6 +382,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     skillTagFilter.length > 0 ||
     abilityTagFilter.length > 0 ||
     sourceFilter.length > 0 ||
+    eventFilter.length > 0 ||
     availableOnly ||
     !hideNonPlayable ||
     bugsOnly ||
@@ -376,6 +399,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     setSkillTagFilter([]);
     setAbilityTagFilter([]);
     setSourceFilter([]);
+    setEventFilter([]);
     setAvailableOnly(false);
     setHideNonPlayable(true);
     setBugsOnly(false);
@@ -551,6 +575,9 @@ export default function CardTable({ initialCards }: CardTableProps) {
   // Get filter options and tag categories from hook
   const { filterOptions, skillTagCategories, abilityTagCategories } = useCardFilterOptions(cards);
 
+  // events.json is already ordered newest-first, so preserve it — do not sort.
+  const eventNames = useMemo(() => events.map(e => e.name), [events]);
+
   // Filter data based on global search - lazily creates search index on first search
   const filteredData = useMemo(() => {
     let filtered = cards;
@@ -558,6 +585,13 @@ export default function CardTable({ initialCards }: CardTableProps) {
     // Apply bugs-only filter (only when showBugs is active)
     if (showBugs && bugsOnly) {
       filtered = filtered.filter(card => card.has_bugs === true);
+    }
+
+    // Event filter. Done here rather than as a TanStack column because event membership
+    // lives in events.json, not on the card — no column to filter on.
+    if (eventFilter.length > 0) {
+      const cardIds = selectedEventCardIds(events, eventFilter);
+      filtered = filtered.filter(card => cardIds.has(card.id));
     }
 
     if (!globalFilter.trim()) return filtered;
@@ -570,16 +604,28 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (!searchIndexRef.current) return filtered;
 
     const results = searchIndexRef.current.search(globalFilter);
-    const searchResults = results.map(result => result.item);
+    let searchResults = results.map(result => result.item);
+
+    // Also surface cards from events whose NAME matches the query ("anniversary",
+    // "halloween"). Event names are not in the card index, so Fuse cannot see them.
+    // Appended rather than merged by score: a card literally named X ranks above cards
+    // that merely came from an event called X.
+    const eventMatches = eventCardIdsMatchingQuery(events, globalFilter);
+    if (eventMatches.size > 0) {
+      const alreadyFound = new Set(searchResults.map(c => c.id));
+      searchResults = searchResults.concat(
+        cards.filter(c => eventMatches.has(c.id) && !alreadyFound.has(c.id))
+      );
+    }
 
     // Intersect with pre-filtered results
-    if (showBugs && bugsOnly) {
+    if ((showBugs && bugsOnly) || eventFilter.length > 0) {
       const filteredIds = new Set(filtered.map(c => c.id));
       return searchResults.filter(c => filteredIds.has(c.id));
     }
 
     return searchResults;
-  }, [cards, globalFilter, showBugs, bugsOnly]);
+  }, [cards, globalFilter, showBugs, bugsOnly, eventFilter, events]);
 
   // Column definitions (extracted to cardTableColumns.tsx)
   const columns = useMemo(
@@ -827,6 +873,20 @@ export default function CardTable({ initialCards }: CardTableProps) {
             }}
           />
           </div>
+          {events.length > 0 && (
+            <div className="flex items-center">
+              <FilterDropdown
+                options={eventNames}
+                value={eventFilter}
+                onChange={(v) => setEventFilter(v as string[])}
+                placeholder='Event'
+                dropdownClassName="min-w-[260px]"
+                searchable
+                searchPlaceholder='Search events...'
+              />
+              <FilterInfoTooltip text="Event: Cards obtainable from an event, newest first. Includes rewards and helper cards." />
+            </div>
+          )}
           <div className="flex items-center">
             <label className="flex items-center gap-1.5 px-2 py-1 text-xs rounded border cursor-pointer hover:bg-surface transition-colors"
                    style={{ borderColor: availableOnly ? 'var(--color-accent)' : 'var(--color-border)' }}>

@@ -33,7 +33,7 @@ The site automatically deploys to **Cloudflare Pages** when changes are merged t
 ```
 otogidb/
 ├── public/
-│   ├── data/               # JSON data files (synced from pipeline)
+│   ├── data/               # JSON data files (synced externally)
 │   │   ├── cards.json      # Full card data
 │   │   ├── cards_index.json # Optimized for table loading
 │   │   ├── skills.json     # Skill scaling data
@@ -105,22 +105,14 @@ Output goes to `dist/` folder.
 npm run preview
 ```
 
-## Data Pipeline
+## Data
 
-Card data comes from the parent `OtogiReverse` project's pipeline:
+Card data is maintained in a separate private tooling repository and synced into
+`public/data/` as JSON. This repository contains the website only.
 
-1. **Pipeline** (`scripts/pipeline.py`) extracts and processes game files
-2. **Sync** (`scripts/sync_website.py`) copies JSON to `otogidb/public/data/`
-3. **Build** generates 880+ static pages (one per card)
+After a data sync, rebuild the site:
 
-To update card data:
 ```bash
-# From OtogiReverse root
-python scripts/pipeline.py
-python scripts/sync_website.py
-
-# Then rebuild website
-cd otogidb
 npm run build
 ```
 
