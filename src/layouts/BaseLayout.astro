@@ -161,11 +161,15 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
     <!-- Prevent flash of wrong style variant -->
     <script is:inline>
       (function() {
-        try {
-          if (localStorage.getItem('otogidb-style-variant') === 'new') {
-            document.documentElement.setAttribute('data-theme', 'new');
-          }
-        } catch(e) {}
+        // Spirit ('new') is the default. Only an explicit 'classic' opt-out falls back to
+        // the old styling, so visitors with no stored preference get Spirit.
+        // Read outside the branch so a blocked/throwing localStorage still lands on the
+        // default rather than silently reverting to Classic.
+        var variant = null;
+        try { variant = localStorage.getItem('otogidb-style-variant'); } catch(e) {}
+        if (variant !== 'classic') {
+          document.documentElement.setAttribute('data-theme', 'new');
+        }
       })();
     </script>
 

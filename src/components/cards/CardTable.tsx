@@ -25,7 +25,8 @@ import MobileCardGrid from './MobileCardGrid';
 import { getCardTableColumns } from './cardTableColumns';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 import { useCardFilterOptions } from '../../hooks/useCardFilterOptions';
-import { selectedEventCardIds } from '../../lib/eventFilter';
+import { selectedEventCardIds, eventCardIdsMatchingQuery } from '../../lib/eventFilter';
+import { FUSE_OPTIONS } from '../../lib/cardSearch';
 import type { EventEntry } from '../../lib/eventFilter';
 import {
   extractLocaleFromPath,
@@ -46,25 +47,6 @@ import {
 interface CardTableProps {
   initialCards?: Card[];
 }
-
-// Fuse.js configuration for search
-const FUSE_OPTIONS = {
-  keys: [
-    { name: 'id', weight: 2 },
-    { name: 'name', weight: 3 },
-    { name: 'description', weight: 0.5 },
-    { name: 'skill.name', weight: 2 },
-    { name: 'skill.description', weight: 1 },
-    { name: 'abilities.name', weight: 2 },
-    { name: 'abilities.description', weight: 1 },
-    { name: 'stats.attribute_name', weight: 1.5 },
-    { name: 'stats.type_name', weight: 1.5 }
-  ],
-  threshold: 0.3,
-  includeScore: true,
-  ignoreLocation: true,
-  minMatchCharLength: 2
-};
 
 export default function CardTable({ initialCards }: CardTableProps) {
   // Detect locale from URL path first, then fall back to stored preference
@@ -617,7 +599,19 @@ export default function CardTable({ initialCards }: CardTableProps) {
     if (!searchIndexRef.current) return filtered;
 
     const results = searchIndexRef.current.search(globalFilter);
-    const searchResults = results.map(result => result.item);
+    let searchResults = results.map(result => result.item);
+
+    // Also surface cards from events whose NAME matches the query ("anniversary",
+    // "halloween"). Event names are not in the card index, so Fuse cannot see them.
+    // Appended rather than merged by score: a card literally named X ranks above cards
+    // that merely came from an event called X.
+    const eventMatches = eventCardIdsMatchingQuery(events, globalFilter);
+    if (eventMatches.size > 0) {
+      const alreadyFound = new Set(searchResults.map(c => c.id));
+      searchResults = searchResults.concat(
+        cards.filter(c => eventMatches.has(c.id) && !alreadyFound.has(c.id))
+      );
+    }
 
     // Intersect with pre-filtered results
     if ((showBugs && bugsOnly) || eventFilter.length > 0) {
