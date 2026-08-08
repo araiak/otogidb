@@ -91,7 +91,12 @@ export default function CardTable({ initialCards }: CardTableProps) {
     fetch('/data/events.json')
       .then(res => (res.ok ? res.json() : []))
       .then(data => {
-        if (!cancelled && Array.isArray(data)) setEvents(data);
+        if (cancelled || !Array.isArray(data)) return;
+        setEvents(data);
+        // Drop names from a stale ?event= param — an unknown name matches no cards and
+        // would otherwise leave the table permanently empty.
+        const known = new Set(data.map((e: EventEntry) => e.name));
+        setEventFilter(prev => prev.filter(n => known.has(n)));
       })
       .catch(() => {
         /* event filter is optional; leave it empty */

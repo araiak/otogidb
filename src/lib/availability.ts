@@ -161,7 +161,11 @@ export function isStandardPoolOpen(startStr: string | null | undefined): boolean
       [year, month, day, hour, minute, second].every(Number.isFinite) &&
       month >= 1 && month <= 12 &&
       day >= 1 && day <= 31 &&
-      hour < 24 && minute < 60 && second < 60;
+      hour >= 0 && hour < 24 &&
+      minute >= 0 && minute < 60 &&
+      second >= 0 && second < 60 &&
+      // Rejects Feb 30 and friends: the rollover changes the day back.
+      new Date(Date.UTC(year, month - 1, day)).getUTCDate() === day;
     if (!inRange) return true;
 
     // Create date as UTC by subtracting the 8 hour offset

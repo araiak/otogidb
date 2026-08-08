@@ -309,6 +309,9 @@ describe('isStandardPoolOpen', () => {
     // Only a date we can read AND that is in the future should hide a card.
     expect(isStandardPoolOpen('not-a-date')).toBe(true);
     expect(isStandardPoolOpen('2026-13-45 99:99:99')).toBe(true);
+    // Date.UTC would roll these into real future dates and hide the card.
+    expect(isStandardPoolOpen('2099-02-30 12:00:00')).toBe(true);
+    expect(isStandardPoolOpen('2099-01-01 -5:00:00')).toBe(true);
   });
 
   it('applies the UTC+8 offset rather than treating the string as UTC', () => {

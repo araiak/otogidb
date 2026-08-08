@@ -161,8 +161,9 @@ but doesn't run.
 I'd rather say that plainly than claim the site talks to nobody.
 
 Privacy is something I actually care about, which is why there's a
-[privacy page](/en/privacy) at all — a site this size with no ads and no accounts isn't
-legally obliged to have one. It's there because I think you should be able to know exactly
+[privacy page](/en/privacy) at all — whether a hobby site like this one is legally required to
+have one depends on where you (and I) happen to be, and I didn't want to work that out first.
+It's there because I think you should be able to know exactly
 what a site is doing with your data rather than having to assume, and writing it down keeps
 me honest about it too.
 
