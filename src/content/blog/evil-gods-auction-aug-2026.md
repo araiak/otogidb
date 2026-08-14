@@ -46,6 +46,12 @@ The rest of the batch — :card[1389], :card[1390], :card[1391], :card[1403] and
 
 ---
 
+## Guild Conquest
+
+:card[715] is returning to guild conquest and got missed in the first pass.  She's 28% DMG to all ranged allies, an OK assist that lands at the bottom of a long list of usable assists.  :card[1531] does the same job for 30% to the same set and outclasses her, though the two do stack if you want both.  :card[664], our staple %DMG assist from auction, is slightly better than either — mostly because of the cliff at 2 targets.  The third target doesn't gain much, so even minor gains to your top 2 ATK will generally do more damage.  There is some future upside for :card[715] and :card[1531] if 3 carry teams ever start getting real support, but that isn't likely to materialize soon and both may be powercrept by then.  Buy it if the price is right and you don't have better assists, or if you need some flexibility in your assists and can't wait for :card[1531].
+
+---
+
 ## Rerun
 
 The second re-run is probably Two Santas, but you have seen these cards more recently in special auction.
@@ -71,6 +77,9 @@ Event Cards:
 
 Exchange:
 - :card[1465] — **Easy skip** — :card[1780] on the current exchange is the better card, :card[1398] should be dirt cheap, and :card[1607] is another option later but not worth waiting for
+
+Guild Conquest:
+- :card[715] — **Buy if the price is right** — 28% DMG to all ranged, but outclassed by :card[1531] at 30% (they do stack) and by :card[664], which wins on the 2 target cliff. Upside only if 3 carry teams ever get real support
 
 Rerun — Two Santas:
 - :card[613] — **Skip** — :card[1401] is better in all ways; leave the supply for the collectors
