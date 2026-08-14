@@ -12053,17 +12053,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -12105,6 +12101,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -12278,12 +12275,68 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002413+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.638389+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.589619+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1389",
       "image_urls": {
@@ -12535,17 +12588,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -12592,6 +12641,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -12701,12 +12751,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001709+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-05-08T16:24:09.947439+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-08-14T15:02:09.584129+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1390",
       "image_urls": {
@@ -12807,17 +12913,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -12859,6 +12961,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -13032,12 +13135,68 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002164+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.635877+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.587796+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1391",
       "image_urls": {
@@ -13152,17 +13311,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -13205,6 +13360,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -13291,12 +13447,68 @@
             ],
             "date": "2026-02-04",
             "version": "a1597cc"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002649+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.639897+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.591518+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1398",
       "image_urls": {
@@ -13425,17 +13637,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -13464,6 +13672,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -13621,12 +13830,68 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.002894+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.642405+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.593596+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1399",
       "image_urls": {
@@ -14047,17 +14312,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -14098,6 +14359,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -14345,12 +14607,68 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001926+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.632841+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.585951+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1400",
       "image_urls": {
@@ -14500,17 +14818,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -14557,6 +14871,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -14626,12 +14941,68 @@
             ],
             "date": "2026-02-04",
             "version": "a1597cc"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003409+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.652431+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.599866+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1401",
       "image_urls": {
@@ -14771,17 +15142,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -14810,6 +15177,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -14945,12 +15313,68 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003139+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.646414+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.595585+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1402",
       "image_urls": {
@@ -15052,17 +15476,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -15109,6 +15529,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -15218,12 +15639,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-23T07:04:58.840549+00:00",
         "first_seen_version": "ffd99c6",
-        "last_modified": "2026-05-08T16:24:09.957941+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-08-14T15:02:09.597496+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1403",
       "image_urls": {
@@ -15358,17 +15835,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -15415,6 +15888,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -15524,12 +15998,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001191+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-05-08T16:24:09.944659+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-08-14T15:02:09.580693+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1404",
       "image_urls": {
@@ -19508,17 +20038,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-25",
-            "event_id": "175",
-            "event_name": "Evil Gods Attack",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -19565,6 +20091,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -19639,12 +20166,68 @@
             ],
             "date": "2026-02-04",
             "version": "a1597cc"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003661+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.654448+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.602016+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1444",
       "image_urls": {
@@ -21281,9 +21864,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -21315,7 +21902,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -21333,11 +21921,63 @@
       "description": "<color=#f4e48e>\"누굴 보고 '자기'라고 부르는 거야? 얼굴에 웃음이 싹 사라지게 해주지!\"아버지의 <color=#ef9843>복수</color>를 위해 검술을 익힌 </color><br/>떠도는 <color=#ef9843>전사</color>입니다. 자신보다 약한 자를 위해 종종 대신 싸우는 그녀는 현재 당신의 <color=#ef9843>경호원</color> 역할을 하고 있습니다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.585676+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.588301+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.548772+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "1465",
       "image_urls": {
@@ -54217,7 +54857,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54229,7 +54869,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -54438,7 +55078,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54450,7 +55090,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -54687,7 +55327,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54699,42 +55339,42 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             }
@@ -54948,7 +55588,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -54960,56 +55600,56 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             }
@@ -55179,7 +55819,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55191,7 +55831,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -55606,7 +56246,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -55618,7 +56258,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -55634,7 +56274,7 @@
                 175,
                 200
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -56353,7 +56993,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -56365,49 +57005,49 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -56423,7 +57063,7 @@
                 140,
                 180
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -56595,7 +57235,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -56607,49 +57247,49 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -56665,7 +57305,7 @@
                 120,
                 160
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -56837,7 +57477,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -56849,28 +57489,28 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -56885,7 +57525,7 @@
                 20,
                 30
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -57392,7 +58032,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -57414,7 +58054,7 @@
           "featured_banners": [
             {
               "end": "2026-08-09 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-08-06 15:00:00"
             }
@@ -57748,7 +58388,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -57991,7 +58631,7 @@
             {
               "event_id": "183",
               "event_name": "수영복 화보",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -58013,7 +58653,7 @@
           "featured_banners": [
             {
               "end": "2026-08-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-08-12 15:00:00"
             }
@@ -152482,9 +153122,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-12-28 15:00:00",
+          "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -152554,11 +153194,28 @@
       "description": "<color=#f4e48e>\"자자, 팍팍 나눠 주자고~!\"</color><br/><color=#ef9843>산타의 파트너인 순록 아야카시. </color>\"빨간 코 루돌프\"는 형식적으로 전승되는 이름이며 그녀는 3대 루돌프의 수습생이다. 쉽게 잘난체하는 성격으로 조금만 띄워 주면 심각할 정도로 우쭐거리는 골칫덩이지만 같이 있는 것만으로도 분위기가 부드러워지는 분위기 메이커이기도 하다. 이번 이벤트에서 처음으로 혼자 일을 맡아 상당히 분발하고 있는 것 같다. 참고로 2대 루돌프는 그녀의 어머니로, 그녀가 가장 두려워하는 존재이다.<br/><color=#f45d68>[이벤트]산타 두 사람</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": "2025-12-28 15:00:00"
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.145290+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.167822+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "605",
       "image_urls": {
@@ -152662,9 +153319,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-12-28 15:00:00",
+          "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -152734,11 +153391,28 @@
       "description": "<color=#f4e48e>\"모든 것은 아가씨를 위해...\"</color><br/><color=#ef9843>어두운 밤을 물들이는 조명 아야카시. </color>눈 내리는 밤에 방치되었던 그를 크리스마스 트리 별 아가씨가 거둔 후로 집사로서 그녀를 섬기고 있다. 제멋대로인 아가씨가 사실은 착하다는 사실을 아는 몇 안 되는 인물이다. 24시간 내내 아가씨에게 불려 다니지만 그 믿음은 전혀 흔들리지 않는다. 오히려 진심으로 트리 별 아가씨의 행복을 바란다. 교육을 맡은 할아버지 탓인지, 귀여운 외모와는 달리 아저씨 말투를 쓰는데 할아버지를 존경하는 마음에서 그러는 것 같다. 트리 별 아가씨에게 위해를 가하려는 자에게는 자비를 베풀지 않으며 거침 없이 죽인다.<br/><color=#f45d68>[이벤트]산타 두 사람</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": "2025-12-28 15:00:00"
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.146793+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.169691+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "606",
       "image_urls": {
@@ -152841,9 +153515,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-12-28 15:00:00",
+          "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -152913,11 +153587,28 @@
       "description": "<color=#f4e48e>\"꼭대기는 나 혼자서도 충분해요!\"</color><br/><color=#ef9843> 크리스마스 트리 꼭대기에 놓는 별 장식 아아캬시. </color>본인을 크리스마스에 빠뜨리면 안 되는 존재라고 자부할 정도로 자의식이 강하며 눈에 띌 정도로 세상 물정을 모르고 언행이 오만하다. 사실 상냥한데도 오만한 언행 때문에 그녀가 문제를 일으켰다는 소리를 자주 듣는다. 이번 이벤트에서도 사회 공부를 한다는 차원에서 산타를 따라 선물을 나눠준 것까지는 좋았는데... 참고로 이런 그녀도 크리스마스 트리의 기원인 \"선악과나무\"는 이상하리만큼 동경한다. 숭배에 가까운 감정이랄까.<br/><color=#f45d68>[이벤트]산타 두 사람</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": "2025-12-28 15:00:00"
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.149299+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.171521+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "607",
       "image_urls": {
@@ -154037,9 +154728,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-12-28 15:00:00",
+          "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -154109,11 +154800,28 @@
       "description": "<color=#f4e48e>\"진짜 산타가 뭔지 알려 주겠어!\"</color><br/><color=#ef9843>7대 죄악 중 분노를 맡은 지옥의 황제 아야카시. </color>산타와 이름이 비슷하다는 이유로 지옥에서 산타클로스 역할을 맡고 있다. 이전에 폭주한 메이드 로봇을 개조하고 난 후 선물 배송을 쉬운 일이라고 생각하게 되어 선배로서 여유 넘치는 모습을 산타에게 보여 주었는데, 산타?\"선물은 한 사람 한 사람에게 정성을 담아 전달해야 해요\"라며 효율성을 무시한 발언을 해 반감이 생겼다. 일은 완벽하고 순조롭게 마무리했지만 다른 사람에게 부정당했다는 사실에 초조함을 느끼며 솔직하게 마음을 표현하지 못한다. 지옥을 다스린다 해도 아직은 어린 여자애라 이런저런 고민이 많다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": "2025-12-28 15:00:00"
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.547560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.161825+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.182772+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "613",
       "image_urls": {
@@ -154249,9 +154957,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-12-28 15:00:00",
+          "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -154321,11 +155029,28 @@
       "description": "<color=#f4e48e>\"어머?　재밌는 일을 하고 있네?\"</color><br/><color=#ef9843>크리스마스 트리의 원형이자 에덴동산에서 자란 거대 나무 아야카시. </color>크리스마스와 관련된 아야카시들에게 존경받는 엄청난 존재이며 매년 파티의 게스트로 초대받는다. 지혜를 관장하는 자답게 통찰력이 탁월하며 한눈에 사물의 진의를 간파하는 혜안을 소유하고 있다. 그러나 성격이 매우 고약하다. 뭔가를 알고 있어도 말하고 나면 재미없어진다며 당사자에게 절대 말해 주지 않는다. 결과를 알고 있음에도 불구하고 당황하는 제삼자를 보며 히죽거리는 것을 즐긴다. 정말로 성격이 나쁜 미인이다. 참고로 사마엘, 릴리스와는 구면인 사이.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-18 15:00:00",
+                "old": "2025-12-28 15:00:00"
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.547560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.164331+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.184976+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "614",
       "image_urls": {
@@ -173725,17 +174450,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-08-15",
-            "event_date": "2026-01-08",
-            "event_id": "170",
-            "event_name": "Guild Conquest ーStella: Cetusー",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -173764,6 +174485,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -173899,12 +174621,68 @@
             ],
             "date": "2026-02-03",
             "version": "860a7ef"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-14",
+            "version": "5db6240"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.567653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.376331+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-14T15:02:09.371072+00:00",
+        "last_modified_version": "5db6240"
       },
       "id": "715",
       "image_urls": {
@@ -187761,5 +188539,5 @@
   },
   "locale": "ko_KR",
   "total_cards": 1002,
-  "version": "730c39f"
+  "version": "5db6240"
 }
