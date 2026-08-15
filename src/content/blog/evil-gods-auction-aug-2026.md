@@ -83,7 +83,7 @@ Guild Conquest:
 
 Rerun — Two Santas:
 - :card[613] — **Skip** — :card[1401] is better in all ways; leave the supply for the collectors
-- :card[614] — **Grab 1 if you want the EXP boost** — very low value next to the other EXP assists, but :card[580], :card[751] and :card[708] are all hard to get right now. Almost certainly not worth 4 copies for 5 levels. Her EXP boost ability is stackable across multiple assist slots — low value, but a fallback if you unlock the level boost or end up with multiple copies
+- :card[614] — **Grab 1 if you want the EXP boost** — very low value next to the other EXP assists, but :card[580], :card[751] and :card[708] are all hard to get right now. Almost certainly not worth 4 copies for 5 levels. Her EXP boost ability is stackable across multiple assist slots — low value, but a fallback if you unlock the level boost or end up with multiple copies.
 
 ---
 
