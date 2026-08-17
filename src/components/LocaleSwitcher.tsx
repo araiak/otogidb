@@ -15,9 +15,15 @@ function getInitialLocale(): SupportedLocale {
 }
 
 export default function LocaleSwitcher() {
-  const [currentLocale, setCurrentLocale] = useState<SupportedLocale>(getInitialLocale);
+  // Must start at 'en' to match the prerendered HTML — reading localStorage during
+  // render made the first client render disagree with the server (React #418).
+  const [currentLocale, setCurrentLocale] = useState<SupportedLocale>('en');
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    setCurrentLocale(getInitialLocale());
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
