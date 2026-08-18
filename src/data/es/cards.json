@@ -12588,7 +12588,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -12807,12 +12807,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001709+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-08-14T15:02:09.584129+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.722694+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1390",
       "image_urls": {
@@ -14818,7 +14829,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -14997,12 +15008,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003409+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-08-14T15:02:09.599866+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.737035+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1401",
       "image_urls": {
@@ -15476,7 +15498,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -15695,12 +15717,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-01-23T07:04:58.840549+00:00",
         "first_seen_version": "ffd99c6",
-        "last_modified": "2026-08-14T15:02:09.597496+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.734809+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1403",
       "image_urls": {
@@ -15835,7 +15868,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -16054,12 +16087,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.001191+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-08-14T15:02:09.580693+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.719508+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1404",
       "image_urls": {
@@ -20038,7 +20082,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -20222,12 +20266,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.003661+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-08-14T15:02:09.602016+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.739014+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1444",
       "image_urls": {
@@ -50102,17 +50157,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -50159,6 +50210,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -50260,12 +50312,68 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514411+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.615648+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-08-18T15:40:28.880975+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1721",
       "image_urls": {
@@ -50780,9 +50888,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -50805,7 +50917,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -50823,11 +50936,63 @@
       "description": "<color=#f4e48e>\"I just can't wait to see her in that yukata!\"</color><br/>Many of Japan's demons have received invitations to the Interstellar Tanabata Festival. Ibaraki Doji, for one, has been really looking forward to it. She has been particularly looking forward to seeing how \"my lady\" looks in a nice yukata gown. She's a huge Tanabata fan.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
+          }
+        ],
         "first_seen": "2026-06-20T11:38:49.515892+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-20T11:38:49.515892+00:00",
-        "last_modified_version": "e511c0c"
+        "last_modified": "2026-08-18T15:40:28.890405+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1723",
       "image_urls": {
@@ -52771,9 +52936,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -52803,7 +52972,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -52821,11 +52991,63 @@
       "description": "<color=#f4e48e>\"This festival sure is lively! This is everything a summer evening should be!\"</color><br/>The Demon King Shuten-doji is just as imposing in space as she is on solid ground, and no sooner does she arrive at the festival than the crowd parts to let her pass. It may also be her looks that draw admiring glances, though she is completely oblivious to this.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
+          }
+        ],
         "first_seen": "2026-06-20T11:38:49.515333+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-20T11:38:49.515333+00:00",
-        "last_modified_version": "e511c0c"
+        "last_modified": "2026-08-18T15:40:28.887222+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1730",
       "image_urls": {
@@ -52937,9 +53159,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -52969,7 +53195,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -52987,11 +53214,63 @@
       "description": "<color=#f4e48e>\"Heh heh... That looks delicious...\"</color><br/>For this beast with a bottomless pit for a stomach, the Interstellar Tanabata Festival is all about eating endless snacks from the countless stalls. The rumble of her tummy sends the stallholders into a blind panic as they struggle to cope with the demand. The Behemoth can't wait for next year... Its only hope is that the stalls stock up with even more candy.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
+          }
+        ],
         "first_seen": "2026-06-20T11:38:49.515618+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-20T11:38:49.515618+00:00",
-        "last_modified_version": "e511c0c"
+        "last_modified": "2026-08-18T15:40:28.888876+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1731",
       "image_urls": {
@@ -53101,9 +53380,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -53126,7 +53409,8 @@
           "standard_pool_start": "2026-07-14 15:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -53165,12 +53449,63 @@
             ],
             "date": "2026-06-27",
             "version": "5ff9a63"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516477+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-27T07:06:28.977435+00:00",
-        "last_modified_version": "5ff9a63"
+        "last_modified": "2026-08-18T15:40:28.893924+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1732",
       "image_urls": {
@@ -53321,17 +53656,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -53378,6 +53709,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -53479,12 +53811,68 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514715+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.617626+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-08-18T15:40:28.883223+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1734",
       "image_urls": {
@@ -53621,9 +54009,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -53653,7 +54045,8 @@
           "standard_pool_start": "2026-07-14 15:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -53707,12 +54100,63 @@
             ],
             "date": "2026-06-27",
             "version": "5ff9a63"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516184+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-27T07:06:28.976429+00:00",
-        "last_modified_version": "5ff9a63"
+        "last_modified": "2026-08-18T15:40:28.892397+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1735",
       "image_urls": {
@@ -53852,17 +54296,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-08-22 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -53909,6 +54349,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -54010,12 +54451,68 @@
             ],
             "date": "2026-06-28",
             "version": "9926e1a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515003+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-06-28T05:06:24.619502+00:00",
-        "last_modified_version": "9926e1a"
+        "last_modified": "2026-08-18T15:40:28.885283+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "1736",
       "image_urls": {
@@ -57724,7 +58221,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -57743,7 +58240,7 @@
           "featured_banners": [
             {
               "end": "2026-08-22 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-08-15 15:00:00"
             }
@@ -58020,7 +58517,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -58043,7 +58540,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -58376,7 +58873,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -58399,7 +58896,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -58619,7 +59116,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -58642,7 +59139,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 200,
               "start": "2026-08-06 15:00:00"
@@ -58653,7 +59150,7 @@
           "featured_banners": [
             {
               "end": "2026-08-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-08-12 15:00:00"
             }
@@ -134476,9 +134973,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-02-18 15:00:00",
+          "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -134575,12 +135072,28 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-08-22 15:00:00",
+                "old": "2026-02-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.952937+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-08-18T15:40:28.176113+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "513",
       "image_urls": {
@@ -153122,7 +153635,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -153210,12 +153723,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-14T15:02:09.167822+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.332784+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "605",
       "image_urls": {
@@ -153319,7 +153843,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -153407,12 +153931,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-14T15:02:09.169691+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.334552+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "606",
       "image_urls": {
@@ -153515,7 +154050,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -153603,12 +154138,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.546560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-14T15:02:09.171521+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.336279+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "607",
       "image_urls": {
@@ -154728,7 +155274,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -154816,12 +155362,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.547560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-14T15:02:09.182772+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.346655+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "613",
       "image_urls": {
@@ -154957,7 +155514,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-18 15:00:00",
           "is_time_limited": true,
@@ -155045,12 +155602,23 @@
             ],
             "date": "2026-08-14",
             "version": "5db6240"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-18",
+            "version": "d5739d7"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.547560+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-14T15:02:09.184976+00:00",
-        "last_modified_version": "5db6240"
+        "last_modified": "2026-08-18T15:40:28.348695+00:00",
+        "last_modified_version": "d5739d7"
       },
       "id": "614",
       "image_urls": {
@@ -188539,5 +189107,5 @@
   },
   "locale": "es_ES",
   "total_cards": 1002,
-  "version": "5db6240"
+  "version": "d5739d7"
 }
