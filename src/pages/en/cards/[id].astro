@@ -1225,10 +1225,9 @@ const jsonLd = {
 
   <!-- Card hover popups for synergy cards -->
   {card.synergies && card.synergies.length > 0 && (
+    <!-- No card data as props: island props are serialized into this page. -->
     <CardPopups
       client:load
-      cards={cardsData.cards}
-      skills={skillsData}
       selector=".synergy-card"
     />
   )}

@@ -481,6 +481,84 @@
         "type_name": "Melee"
       }
     },
+    "1051": {
+      "abilities": [
+        {
+          "description": "己方攻擊最高的2名隊員技能傷害50%增加",
+          "name": "魔女詛咒",
+          "tags": [
+            "Team",
+            "Multi",
+            "Skill DMG"
+          ],
+          "unlock_level": 77
+        },
+        {
+          "description": "最終回合，己方全體怪屬性隊員沉默，同時戰鬥傷害35%增加",
+          "name": "復仇之毒",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101051",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1051",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787382170/otogi/android/101051_1f4342c221a27776123dff04c985d23f.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787382170/otogi/cards_hd/101051_hd_8e43fbd1a9ddcf06dd6c26f54e1e55a7.png"
+      },
+      "name": "美狄亞",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "50.19%",
+        "delay_mlb": "60.39%",
+        "description": "對敵方全體造成{value}點傷害，並使目標{probability}中強毒",
+        "name": "猛毒餞別",
+        "prob_lb0": "30.01%",
+        "prob_mlb": "35.81%",
+        "slv_lb0": "1,842",
+        "slv_mlb": "2,202",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4665,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "106": {
       "abilities": [
         {
@@ -65226,8 +65304,8 @@
       }
     }
   },
-  "data_hash": "3152f813",
+  "data_hash": "7aef5351",
   "locale": "zh-tw",
-  "total_cards": 1002,
-  "version": "d5739d7"
+  "total_cards": 1003,
+  "version": "e374eac"
 }
