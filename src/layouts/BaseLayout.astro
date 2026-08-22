@@ -86,6 +86,14 @@ interface Props {
   hasLocalizedUrls?: boolean;
   /** Set to true on card table pages to preload icon files in <head> */
   preloadIcons?: boolean;
+  /**
+   * Set to true on pages whose islands read the card index (blog posts with
+   * :card/:list/:team blocks, card detail pages). Starts the index download in
+   * parallel with the JS bundle instead of after hydration — without it the
+   * chain is HTML -> bundle -> hydrate -> fetch, which on a slow connection
+   * leaves card grids blank for seconds.
+   */
+  preloadCardIndex?: boolean;
   article?: {
     publishedTime?: string;
     modifiedTime?: string;
@@ -102,6 +110,7 @@ const {
   lang = currentLocale,
   hasLocalizedUrls = false,
   preloadIcons = false,
+  preloadCardIndex = false,
   article,
 } = Astro.props;
 
@@ -206,6 +215,38 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
 
     <!-- Data version for cache busting -->
     <script is:inline set:html={`window.OTOGIDB_DATA_VERSION="${dataVersion}";window.OTOGIDB_DATA_PATHS=${JSON.stringify(dataPaths)};`} />
+
+    {preloadCardIndex && (
+      <script is:inline>
+        {/* Preload the reader's own locale index. A static <link rel=preload> can
+            only name one locale, which would push ~150KB of the wrong file at
+            non-English readers — exactly the slow connections this is for. The
+            stored locale is only known to the client, so inject the hint here,
+            before the bundle loads. */}
+        (function () {
+          try {
+            var paths = window.OTOGIDB_DATA_PATHS;
+            if (!paths) return;
+            var locale = localStorage.getItem('otogidb-locale') || 'en';
+            var entry = paths[locale] || paths.en;
+            if (!entry || !entry.cards_index) return;
+            // Must match the real request byte-for-byte or the browser
+            // downloads the file twice. cache.ts fetches
+            // `<path>?v=<OTOGIDB_DATA_VERSION>` with a plain same-origin
+            // fetch(), so: same query string, and no crossorigin attribute
+            // (that would set credentials:omit and fail to match).
+            var version = window.OTOGIDB_DATA_VERSION;
+            var link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'fetch';
+            link.href = version
+              ? entry.cards_index + '?v=' + encodeURIComponent(version)
+              : entry.cards_index;
+            document.head.appendChild(link);
+          } catch (e) { /* preload is an optimisation; never block the page */ }
+        })();
+      </script>
+    )}
 
     <!-- PostHog Analytics (direct first, proxy fallback to reduce costs) -->
     <script is:inline>

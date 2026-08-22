@@ -27,6 +27,11 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+
+// Only posts that actually render card data should preload the index — pushing
+// ~150KB at a post with no card references would hurt exactly the slow
+// connections the preload is meant to help.
+const needsCardIndex = /:card\[|:list\[|:team\[|:filter\[/.test(post.body || '');
 const { Content } = await render(post);
 
 // Format date for JSON-LD
@@ -106,6 +111,7 @@ const jsonLd = {
   image={socialImage}
   type="article"
   hasLocalizedUrls={true}
+  preloadCardIndex={needsCardIndex}
   article={{
     publishedTime: publishedDate,
     author: post.data.author,
