@@ -2,7 +2,8 @@ import type { Card } from '../../types/card';
 import CardHoverProvider from '../cards/CardHoverProvider';
 
 interface CardReferencePopupsProps {
-  cards: Record<string, Card>;
+  /** Optional card data; omitted by default so the cached locale index is used. */
+  cards?: Record<string, Card>;
   skills?: Record<string, any>;
 }
 

@@ -10,13 +10,12 @@ import TeamBlock from '../../../components/blog/TeamBlock';
 import type { CardsData, Card } from '../../../types/card';
 import { getImageUrl } from '../../../lib/images';
 
-// Import cards, skills, and tier data for popups
+// Card data is used at build time only (social image lookup) — it is never
+// handed to the client islands below, which load it from the shared cache.
 import cardsDataRaw from '../../../data/cards.json';
-import skillsDataRaw from '../../../data/skills.json';
 import glossaryData from '../../../data/glossary.json';
 
 const cardsData = cardsDataRaw as unknown as CardsData;
-const skillsData = (skillsDataRaw as any).skills || {};
 
 export async function getStaticPaths() {
   // Only get English posts (locale is 'en' or unspecified)
@@ -163,11 +162,12 @@ const jsonLd = {
   </script>
 
   <script is:inline>
-    // Update card links to use /en/ prefix for English blog pages
+    // Update card links to use /en/ prefix for English blog pages.
+    // Note: this must NOT write to the locale storage key — the reader's chosen
+    // language decides which card index the popups load, and clobbering it here
+    // reset every non-English reader back to English.
     (function() {
-      var STORAGE_KEY = 'otogidb-locale';
       var prefix = '/en';
-      try { localStorage.setItem(STORAGE_KEY, 'en'); } catch(e) {}
 
       function updateCardLinks() {
         document.querySelectorAll('a[href^="/cards/"]').forEach(function(link) {
@@ -222,20 +222,27 @@ const jsonLd = {
       </div>
     </article>
 
+    <!--
+      These islands deliberately take no card data as props: Astro serializes
+      island props into this page, so passing the database inlined ~6MB per
+      island (~24MB per post). They load the reader's locale index from the
+      shared IndexedDB cache instead.
+    -->
+
     <!-- Card reference hover popups -->
-    <CardReferencePopups client:load cards={cardsData.cards} skills={skillsData} />
+    <CardReferencePopups client:load />
 
     <!-- Glossary term definition popups -->
     <GlossaryPopups client:load glossary={glossaryData} />
 
     <!-- Filter block card grids with hover popups -->
-    <FilteredCardsBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <FilteredCardsBlock client:load />
 
     <!-- List block card grids with hover popups -->
-    <ListBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <ListBlock client:load />
 
     <!-- Team composition blocks with hover popups -->
-    <TeamBlock client:load cards={cardsData.cards} skills={skillsData} />
+    <TeamBlock client:load />
 
     <!-- Back to blog -->
     <div class="mt-6">

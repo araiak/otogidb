@@ -8,6 +8,35 @@ The card hover system provides consistent hover previews across the site:
 - **Desktop**: Floating popup appears on mouse hover
 - **Mobile**: Modal appears on tap (touch devices)
 
+## ⚠️ Never pass card data from an Astro page
+
+Astro serializes island props into the page's HTML so the browser can hydrate.
+Passing `cards={cardsData.cards}` to a `client:load` island therefore inlines the
+entire ~5.6MB database into **every page that renders it, once per island**. Four
+islands on a blog post produced ~26MB HTML files and broke deploys (Cloudflare
+Pages rejects anything over 25 MiB).
+
+Leave `cards`/`skills` off. Components resolve data themselves via
+`useCardsData()` → `getCardsData({ locale })`, which serves the reader's locale
+index from memory/IndexedDB, applies delta updates, and dedupes concurrent
+callers — so every island on a page shares one load and repeat visits cost no
+network.
+
+```astro
+<!-- Wrong: inlines the database into this page -->
+<CardPopups client:load cards={cardsData.cards} skills={skillsData} />
+
+<!-- Right -->
+<CardPopups client:load />
+```
+
+`npm run check:html-size` enforces this after every build (wired into
+`build:deploy`) and fails long before Cloudflare's limit.
+
+Note `cards_index.json` has no `skill.id`; `CardPreviewContent` detects index
+data and renders from the pre-computed `slv_lb0`/`slv_mlb` values, so `skills`
+is not needed on this path.
+
 ## Components
 
 | Component | Purpose | When to Use |

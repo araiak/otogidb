@@ -1,15 +1,17 @@
-import { useState, useEffect } from 'react';
 import type { Placement } from '@floating-ui/react';
 import { useFloating, offset, flip, shift, autoUpdate, FloatingPortal } from '@floating-ui/react';
 import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
+import { useCardsData } from './useCardsData';
 import CardPreviewContent from './CardPreviewContent';
-import { SUPPORTED_LOCALES, LOCALE_STORAGE_KEY, DEFAULT_LOCALE, type SupportedLocale } from '../../lib/i18n';
-import { getCardsData } from '../../lib/cards';
+import type { SupportedLocale } from '../../lib/i18n';
 
 interface CardHoverProviderProps {
-  /** Card data lookup by ID */
-  cards: Record<string, Card>;
+  /**
+   * Optional card data lookup by ID. Normally omitted — the provider loads the
+   * reader's locale index from cache instead (see useCardsData).
+   */
+  cards?: Record<string, Card>;
   /** Skill data for formatting descriptions */
   skills?: Record<string, any>;
   /** CSS selector for elements with data-card-id attribute */
@@ -32,13 +34,13 @@ interface CardHoverProviderProps {
  * Universal card hover provider component.
  * Drop this anywhere to enable card preview popups on elements with data-card-id.
  *
+ * Do NOT pass `cards` from an Astro page — island props are serialized into the
+ * page's HTML, so that inlines the whole database into every page. Leave it off
+ * and the provider loads the reader's locale index from the shared cache.
+ *
  * Usage:
  * ```tsx
- * <CardHoverProvider
- *   cards={cardsRecord}
- *   selector="[data-card-id]"
- *   placement="top"
- * />
+ * <CardHoverProvider selector="[data-card-id]" placement="top" />
  * ```
  *
  * Then add data-card-id to any element:
@@ -57,39 +59,8 @@ export default function CardHoverProvider({
   container = null,
   updateLinkText = false,
 }: CardHoverProviderProps) {
-  // Detect locale for URLs
-  const [locale, setLocale] = useState<SupportedLocale>('en');
-  const [internalCards, setInternalCards] = useState<Record<string, Card> | null>(null);
-
-  useEffect(() => {
-    // Locale is stored in localStorage — URL is always /en/ and is not the source of truth
-    try {
-      const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
-      if (stored && SUPPORTED_LOCALES.includes(stored as SupportedLocale)) {
-        setLocale(stored as SupportedLocale);
-        // Fetch localized card data if non-default locale (e.g. after a redirect from /ja/)
-        if (stored !== DEFAULT_LOCALE) {
-          getCardsData({ locale: stored as SupportedLocale }).then((data) => {
-            setInternalCards(data.cards as Record<string, Card>);
-          });
-        }
-      }
-    } catch { /* localStorage unavailable */ }
-  }, []);
-
-  useEffect(() => {
-    const handleLocaleChange = (e: Event) => {
-      const newLocale = (e as CustomEvent<{ locale: SupportedLocale }>).detail.locale;
-      setLocale(newLocale);
-      getCardsData({ locale: newLocale }).then((data) => {
-        setInternalCards(data.cards as Record<string, Card>);
-      });
-    };
-    window.addEventListener('otogidb-locale-change', handleLocaleChange);
-    return () => window.removeEventListener('otogidb-locale-change', handleLocaleChange);
-  }, []);
-
-  const effectiveCards = internalCards ?? cards;
+  // Locale is stored in localStorage — URL is always /en/ and is not the source of truth
+  const { cards: effectiveCards, locale } = useCardsData(cards);
 
   const {
     activeCard,
