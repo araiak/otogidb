@@ -20,14 +20,14 @@ We discussed :card[1401] and :card[1721] in the last two posts. A key differenti
 
 I don't think she's meta defining, but she should be in the discussion for Phantasma reserves and support, especially for players who aren't hitting the skill damage cap. She probably falls below strong Phantasma supports like :card[734], :card[2373], or :card[1669], and some that aren't locked to a specific type like :card[549], :card[1720], :card[739], or :card[514] — but she isn't far behind, so she's probably a big improvement for a lot of players.
 
-As to whether you should pull: given that she's in the standard gacha and discounted, she's a good pickup for Phantasma players who need stronger reserves and aren't hitting the skill damage cap. I wouldn't invest more than one copy unless you're a big spender, though — there's a good chance we see some more solid anniversary cards, and you can potentially pick up additional copies while pulling any banner for the event, or via the standard gacha after it ends. **Solid Phantasma support, not meta defining — a cheap pickup for players below the skill damage cap, but one copy is plenty.**
+As to whether you should pull: given that she's in the standard gacha and discounted, she's a good pickup for Phantasma players who need stronger reserves and aren't hitting the skill damage cap. I wouldn't invest more than one copy unless you're a big spender, though — there's a good chance we see some more solid anniversary cards, and you can potentially pick up additional copies while pulling any banner for the event, or via the standard gacha after it ends. More importantly, try to hold at least 70 invokers going into the event — that's a full pity, so it's the difference between being able to guarantee a card you actually want and hoping for it. If pulling her would drop you below that, skip her. **Solid Phantasma support, not meta defining — a cheap pickup for players below the skill damage cap, but one copy is plenty.**
 
 ---
 
 ## TL;DR
 
 Standard Gacha:
-- :card[1051] — **Cheap pickup, don't over-invest** — 50% skill DMG to the top 2 ATK allies; good for Phantasma players below the skill damage cap. One copy is plenty
+- :card[1051] — **Cheap pickup, don't over-invest** — 50% skill DMG to the top 2 ATK allies; good for Phantasma players below the skill damage cap. One copy is plenty, and skip her entirely if pulling would leave you under 70 invokers for the event
 
 More to come as the event data lands.
 
