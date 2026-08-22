@@ -1148,6 +1148,210 @@
       },
       "synergies": []
     },
+    "1051": {
+      "abilities": [
+        {
+          "description": "Increases 50% of skill DMG of the 2 allies with highest ATK.",
+          "id": "105101",
+          "name": "Witch's Curse",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Multi",
+            "Skill DMG"
+          ],
+          "unlock_level": 77
+        },
+        {
+          "description": "Inflicts Silence on all Phantasma team members and Increases 35% of their DMG dealt at the start of the final wave.",
+          "id": "105102",
+          "name": "Poison of Vengeance",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SILENCE",
+                "unit": "flat",
+                "value": 5.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Silence",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-08-29 15:00:00",
+              "is_current": true,
+              "pity": 70,
+              "start": "2026-08-21 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101051",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "105101",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"You're a sweet thing... I'm rather partial to you.\"</color><br/><color=#ef9843>Ultimate form</color>. A Colchian <color=#ef9843>queen</color> in Greek mythology. An unparalleled <color=#ef9843>enchantress</color> who lived a life full of love, betrayal, and revenge.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-22T07:02:53.127368+00:00",
+        "first_seen_version": "e374eac",
+        "last_modified": "2026-08-22T07:02:53.127368+00:00",
+        "last_modified_version": "e374eac"
+      },
+      "id": "1051",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787382170/otogi/android/101051_1f4342c221a27776123dff04c985d23f.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787382170/otogi/cards_hd/101051_hd_8e43fbd1a9ddcf06dd6c26f54e1e55a7.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "105101"
+        ],
+        "generation": 0
+      },
+      "name": "Medea",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting strong Poison.",
+        "id": "1051",
+        "name": "Bitter Farewell",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.51,
+              "type": "POISON",
+              "unit": "percent",
+              "value": 15.0
+            }
+          ],
+          "immediate": {
+            "base": 600.0,
+            "scale": 18.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 765,
+          "slvup": 22,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Poison",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4665,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "106": {
       "abilities": [
         {
@@ -58240,7 +58444,7 @@
           "featured_banners": [
             {
               "end": "2026-08-22 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-08-15 15:00:00"
             }
@@ -189105,6 +189309,6 @@
       ]
     }
   },
-  "total_cards": 1002,
-  "version": "d5739d7"
+  "total_cards": 1003,
+  "version": "e374eac"
 }

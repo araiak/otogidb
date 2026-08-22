@@ -14937,6 +14937,23 @@
       "AoE"
     ]
   },
+  "1051": {
+    "id": "1051",
+    "name": "Bitter Farewell",
+    "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting strong Poison.",
+    "card_id": "1051",
+    "card_name": "Medea",
+    "ie": "ATK<600,18>",
+    "ts": "enemy;count<5>",
+    "de": "POISON<15.0%,0.51%,5>;HIT<10.00%,0.29%>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Poison",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

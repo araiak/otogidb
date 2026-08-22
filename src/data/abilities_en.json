@@ -19002,5 +19002,42 @@
       "DMG Boost"
     ],
     "synergy_partners": []
+  },
+  "105101": {
+    "id": "105101",
+    "name": "Witch's Curse",
+    "description": "Increases 50% of skill DMG of the 2 allies with highest ATK.",
+    "card_id": "1051",
+    "card_name": "Medea",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "SKILL_ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "105102": {
+    "id": "105102",
+    "name": "Poison of Vengeance",
+    "description": "Inflicts Silence on all Phantasma team members and Increases 35% of their DMG dealt at the start of the final wave.",
+    "card_id": "1051",
+    "card_name": "Medea",
+    "er": "last_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "SILENCE<5>;ATK<35.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Silence",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
   }
 }
