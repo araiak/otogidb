@@ -10,6 +10,8 @@ tags: ["analysis", "gacha"]
 
 The fourth anniversary events are starting. Event data will come with the event itself, but this time I wanted to get coverage started with the new card that dropped into the standard gacha. I'll update this post as cards are added to the game.
 
+Going into the event I think most players are expecting a pretty bloody event, and many players who may have sat out recent events may be back, noit to mention the 10 full pots everyone got from main.  The [event rankings](/en/tools/event-rankings) projection has T1 at 35.1M–37.8M.  These are estimates based a standard deviation on either side of the past cutoffs trend line.  If you are trying to figure out a target consider the higher end of these to be minimums and it may well go higher, happy hunting.
+
 ---
 
 ## Standard Gacha

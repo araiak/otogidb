@@ -93,8 +93,14 @@ export default function CardPreviewContent({
         <img
           src={imageUrl || PLACEHOLDER_IMAGE}
           alt={card.name || `Card #${card.id}`}
-          className={`${imageWidth} h-auto rounded`}
-          loading="lazy"
+          // Reserve the box before the bytes arrive. Card art is 492x632 for
+          // 884 of 888 cards, and object-contain letterboxes the handful that
+          // aren't (plus the 128x128 android fallback and the placeholder).
+          // Without a reserved height the popup grows when the image decodes,
+          // which both jumps under the cursor and fires floating-ui's
+          // ResizeObserver mid-reposition. No lazy: this only mounts on hover,
+          // already in the viewport, so lazy just delays the fetch.
+          className={`${imageWidth} aspect-[492/632] object-contain rounded`}
           onError={(e) => {
             (e.target as HTMLImageElement).src = PLACEHOLDER_IMAGE;
           }}
