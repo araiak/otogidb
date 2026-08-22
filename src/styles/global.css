@@ -978,3 +978,44 @@ html[data-theme="new"]:not(.dark) .card {
     text-shadow: none !important;
   }
 }
+
+
+/* ─── Blog block height reservation ─────────────────────────────────────── */
+/*
+ * :list[], :team[] and :filter[] blocks ship as empty divs and are filled in by
+ * JS once the card index resolves. Without a reserved height they collapse to
+ * 0px and then shove the surrounding text down when the data lands — which on a
+ * slow connection happens seconds after the reader has started reading.
+ *
+ * :empty means the reservation applies only while the block is still unfilled,
+ * so it releases automatically with no cleanup and no second shift.
+ *
+ * Row height: 48px avatar + 4px margin + ~12px label + 8px grid gap = 72px,
+ * minus the trailing gap on the last row.
+ */
+.card-list-block:empty {
+  min-height: calc(var(--rows-4, 1) * 72px - 8px);
+}
+
+@media (min-width: 640px) {
+  .card-list-block:empty { min-height: calc(var(--rows-6, 1) * 72px - 8px); }
+}
+
+@media (min-width: 768px) {
+  .card-list-block:empty { min-height: calc(var(--rows-8, 1) * 72px - 8px); }
+}
+
+@media (min-width: 1024px) {
+  .card-list-block:empty { min-height: calc(var(--rows-10, 1) * 72px - 8px); }
+}
+
+/*
+ * Team and filter blocks have no build-time size: a team's member count varies
+ * with the layout it renders, and a filter's result count isn't known until the
+ * query runs client-side. Reserve a representative height rather than an exact
+ * one — an approximate reservation still removes most of the shift, where zero
+ * removes none.
+ */
+.team-block:empty { min-height: 190px; }
+.team-block[data-team-reserve]:empty { min-height: 300px; }
+.filtered-cards-block:empty { min-height: 136px; }

@@ -120,9 +120,20 @@ export function remarkListReference() {
           .filter(Boolean)
           .join(',');
 
+        // Reserve the grid's height up front. The block is filled in by JS only
+        // after the card index arrives, so without this it is a zero-height div
+        // that suddenly pushes the surrounding text down — seconds later on a
+        // slow connection. The grid is 4/6/8/10 columns across the breakpoints,
+        // so emit the row count for each and let CSS pick (avoids CSS ceil(),
+        // which is not safe to rely on yet).
+        const cardCount = cardIds ? cardIds.split(',').length : 0;
+        const rowVars = [4, 6, 8, 10]
+          .map((cols) => `--rows-${cols}:${Math.ceil(cardCount / cols)}`)
+          .join(';');
+
         newNodes.push({
           type: 'html',
-          value: `<div class="card-list-block" data-card-ids="${cardIds}"></div>`,
+          value: `<div class="card-list-block" data-card-ids="${cardIds}" style="${rowVars}"></div>`,
         });
 
         lastIndex = match.index + match[0].length;
