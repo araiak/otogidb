@@ -3,10 +3,12 @@ import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import { decodeHtmlEntities } from '../../lib/security';
 import CardHoverProvider from '../cards/CardHoverProvider';
+import { useCardsData } from '../cards/useCardsData';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
 interface FilteredCardsBlockProps {
-  cards: Record<string, Card>;
+  /** Optional card data; omitted by default so the cached locale index is used. */
+  cards?: Record<string, Card>;
   skills?: Record<string, any>;
 }
 
@@ -199,8 +201,9 @@ function matchesFilters(card: Card, filters: ParsedFilters): boolean {
  * FilteredCardsBlock - Hydrates all .filtered-cards-block containers
  * Renders matching cards as a grid with hover popups (desktop) and tap preview (mobile)
  */
-export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCardsBlockProps) {
+export default function FilteredCardsBlock({ cards: initialCards, skills = {} }: FilteredCardsBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
+  const { cards } = useCardsData(initialCards);
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
 
@@ -208,6 +211,10 @@ export default function FilteredCardsBlock({ cards, skills = {} }: FilteredCards
     // Find all filter block containers
     const containers = document.querySelectorAll<HTMLElement>('.filtered-cards-block');
     if (containers.length === 0) return;
+
+    // Card data arrives asynchronously from cache — wait for it rather than
+    // marking the containers hydrated with nothing to render.
+    if (Object.keys(cards).length === 0) return;
 
     let hydrated = false;
 

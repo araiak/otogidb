@@ -2,7 +2,8 @@ import type { Card } from '../../types/card';
 import CardHoverProvider from './CardHoverProvider';
 
 interface CardPopupsProps {
-  cards: Record<string, Card>;
+  /** Optional card data; omitted by default so the cached locale index is used. */
+  cards?: Record<string, Card>;
   skills?: Record<string, any>;
   /** CSS selector for elements that trigger popups (must have data-card-id attribute) */
   selector?: string;

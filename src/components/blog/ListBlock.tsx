@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react';
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback, getPlaceholderMascot } from '../../lib/images';
 import CardHoverProvider from '../cards/CardHoverProvider';
+import { useCardsData } from '../cards/useCardsData';
 import { getLocaleFromUrl, type SupportedLocale } from '../../lib/i18n';
 
 interface ListBlockProps {
-  cards: Record<string, Card>;
+  /** Optional card data; omitted by default so the cached locale index is used. */
+  cards?: Record<string, Card>;
   skills?: Record<string, any>;
 }
 
@@ -18,8 +20,9 @@ interface ListBlockProps {
  *
  * The cards will be displayed in the order specified.
  */
-export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
+export default function ListBlock({ cards: initialCards, skills = {} }: ListBlockProps) {
   const [locale] = useState<SupportedLocale>(getLocaleFromUrl);
+  const { cards } = useCardsData(initialCards);
   // Counter to trigger CardHoverProvider re-scan after DOM hydration
   const [hydrationKey, setHydrationKey] = useState(0);
 
@@ -27,6 +30,10 @@ export default function ListBlock({ cards, skills = {} }: ListBlockProps) {
     // Find all list block containers
     const containers = document.querySelectorAll<HTMLElement>('.card-list-block');
     if (containers.length === 0) return;
+
+    // Card data arrives asynchronously from cache — wait for it rather than
+    // marking the containers hydrated with nothing to render.
+    if (Object.keys(cards).length === 0) return;
 
     let hydrated = false;
 
