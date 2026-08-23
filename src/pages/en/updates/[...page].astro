@@ -2,6 +2,8 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import CardPopups from '../../../components/cards/CardPopups';
 import { formatChangeDisplay } from '../../../lib/changeFormatters';
+import type { Page, PaginateFunction } from 'astro';
+import { getMonthGroups, type MonthGroup } from '../../../lib/updates';
 
 // Minimal card type for thumbnail lookups (cards_index.json doesn't have all Card fields)
 interface CardIndexEntry {
@@ -68,88 +70,6 @@ function getCardThumbnail(cardId: string): string {
   return PLACEHOLDER_MASCOT_URL;
 }
 
-// Load manifest at build time
-let manifest: PatchNotesManifest;
-try {
-  const manifestRaw = await import('../../../../public/data/changes/manifest.json');
-  manifest = manifestRaw.default || manifestRaw;
-} catch (e) {
-  manifest = { total_versions: 0, versions: [] };
-}
-
-interface PatchNotesManifest {
-  total_versions: number;
-  versions: Array<{
-    version: string;
-    date: string | null;
-    new_cards: number;
-    modified_cards: number;
-  }>;
-}
-
-interface CardChange {
-  category: string;
-  category_label: string;
-  field: string;
-  field_label: string;
-  old: unknown;
-  new: unknown;
-  display: string;
-}
-
-interface NewCard {
-  id: string;
-  name: string;
-  rarity: number;
-  attribute: string;
-  type: string;
-  image_url: string | null;
-}
-
-interface ModifiedCard {
-  id: string;
-  name: string;
-  rarity: number;
-  image_url: string | null;
-  changes: CardChange[];
-}
-
-interface PatchNotes {
-  version: string;
-  version_date: string;
-  previous_version: string | null;
-  generated_at: string;
-  summary: {
-    new_cards: number;
-    modified_cards: number;
-  };
-  new_cards: NewCard[];
-  modified_cards: ModifiedCard[];
-}
-
-// Load all patch notes
-const patchNotes: PatchNotes[] = [];
-for (const versionInfo of manifest.versions) {
-  try {
-    const notes = await import(`../../../../public/data/changes/patch_notes_${versionInfo.version}.json`);
-    patchNotes.push(notes.default || notes);
-  } catch (e) {
-    console.warn(`Failed to load patch notes for version ${versionInfo.version}`);
-  }
-}
-
-// Sort by date descending (newest first)
-patchNotes.sort((a, b) => {
-  const dateA = a.version_date || a.generated_at || '';
-  const dateB = b.version_date || b.generated_at || '';
-  return dateB.localeCompare(dateA);
-});
-
-// Filter out versions with no changes
-const visiblePatchNotes = patchNotes.filter(notes =>
-  notes.summary.new_cards > 0 || notes.summary.modified_cards > 0
-);
-
 // Helper to format date
 function formatDate(dateStr: string): string {
   if (!dateStr) return 'Unknown date';
@@ -170,49 +90,13 @@ function renderStars(rarity: number): string {
   return '★'.repeat(Math.min(Math.max(rarity, 0), 5));
 }
 
-// Group updates by month/year
-function getCurrentMonthKey(): string {
-  const now = new Date();
-  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+// ponytail: paginate whole months (2 per page) so the first page stays small.
+// Page 1 keeps the /en/updates URL via the rest param.
+export async function getStaticPaths({ paginate }: { paginate: PaginateFunction }) {
+  return paginate(await getMonthGroups(), { pageSize: 2 });
 }
 
-interface MonthGroup {
-  key: string;
-  label: string;
-  updates: PatchNotes[];
-  isCurrentMonth: boolean;
-}
-
-function groupByMonth(updates: PatchNotes[]): MonthGroup[] {
-  const groups = new Map<string, PatchNotes[]>();
-
-  for (const update of updates) {
-    const dateStr = update.version_date || update.generated_at || '';
-    const date = new Date(dateStr);
-    const key = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}`;
-
-    if (!groups.has(key)) {
-      groups.set(key, []);
-    }
-    groups.get(key)!.push(update);
-  }
-
-  const currentMonthKey = getCurrentMonthKey();
-
-  // Sort keys descending (newest first) and build result
-  return Array.from(groups.entries())
-    .sort((a, b) => b[0].localeCompare(a[0]))
-    .map(([key, updates]) => ({
-      key,
-      label: updates[0]
-        ? new Date(updates[0].version_date || updates[0].generated_at || '').toLocaleDateString('en-US', { year: 'numeric', month: 'long' })
-        : key,
-      updates,
-      isCurrentMonth: key === currentMonthKey
-    }));
-}
-
-const groupedUpdates = groupByMonth(visiblePatchNotes);
+const { page } = Astro.props as { page: Page<MonthGroup> };
 ---
 
 <BaseLayout title="Updates" description="Otogi Spirit Agents card patch notes - new cards and balance changes" hasLocalizedUrls={true}>
@@ -278,13 +162,13 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
       <p class="text-secondary">Card updates, new releases, and balance changes.</p>
     </div>
 
-    {groupedUpdates.length === 0 ? (
+    {page.data.length === 0 ? (
       <div class="card p-6 text-center">
         <p class="text-secondary">No patch notes available yet.</p>
       </div>
     ) : (
       <div class="space-y-6">
-        {groupedUpdates.map((group, groupIndex) => (
+        {page.data.map((group, groupIndex) => (
           <details class="group" open={group.isCurrentMonth || groupIndex === 0}>
             <summary class="cursor-pointer p-4 bg-base-200 rounded-lg flex items-center justify-between hover:bg-base-300 transition-colors list-none [&::-webkit-details-marker]:hidden">
               <div class="flex items-center gap-3">
@@ -436,6 +320,18 @@ const groupedUpdates = groupByMonth(visiblePatchNotes);
           </details>
         ))}
       </div>
+    )}
+
+    {page.lastPage > 1 && (
+      <nav class="mt-8 flex items-center justify-between gap-4" aria-label="Pagination">
+        {page.url.prev
+          ? <a href={page.url.prev} class="link" rel="prev">&larr; Newer</a>
+          : <span></span>}
+        <span class="text-secondary text-sm">Page {page.currentPage} of {page.lastPage}</span>
+        {page.url.next
+          ? <a href={page.url.next} class="link" rel="next">Older &rarr;</a>
+          : <span></span>}
+      </nav>
     )}
 
     <!-- Card hover popups with mobile modal support -->
