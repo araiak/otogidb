@@ -268,6 +268,21 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           disable_session_recording: true,
           capture_pageview: true,
           capture_exceptions: true,
+          // Chrome raises "ResizeObserver loop completed with undelivered
+          // notifications" whenever an observer callback dirties layout again in
+          // the same frame. @floating-ui/react's autoUpdate (card + glossary hover
+          // popups) and recharts both do that by design; the browser just defers
+          // delivery to the next frame, so it is a notice, not a fault. Drop it
+          // rather than let it drown the real exceptions.
+          before_send: function (event) {
+            if (event && event.event === '$exception') {
+              var list = (event.properties && event.properties.$exception_list) || [];
+              for (var i = 0; i < list.length; i++) {
+                if (/ResizeObserver loop/.test(list[i] && list[i].value || '')) return null;
+              }
+            }
+            return event;
+          },
         };
 
         // PostHog snippet (loads SDK from api_host)

@@ -1,5 +1,6 @@
 import type { Placement } from '@floating-ui/react';
-import { useFloating, offset, flip, shift, autoUpdate, FloatingPortal } from '@floating-ui/react';
+import { useFloating, offset, flip, shift, FloatingPortal } from '@floating-ui/react';
+import { rafAutoUpdate } from '../../lib/floating';
 import type { Card } from '../../types/card';
 import { useCardHover } from './useCardHover';
 import { useCardsData } from './useCardsData';
@@ -173,7 +174,7 @@ export function CardFloatingPopup({
     placement,
     strategy: 'fixed', // Use fixed positioning to avoid clipping from overflow containers
     middleware: [offset(10), flip(), shift({ padding: 10 })],
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: rafAutoUpdate,
     elements: {
       reference: referenceElement,
     },

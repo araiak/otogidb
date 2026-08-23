@@ -90,7 +90,8 @@ When creating elements dynamically via DOM manipulation, manage hover state manu
 
 ```tsx
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { useFloating, offset, flip, shift, autoUpdate } from '@floating-ui/react';
+import { useFloating, offset, flip, shift } from '@floating-ui/react';
+import { rafAutoUpdate } from '../../lib/floating';
 import CardPreviewContent from '../cards/CardPreviewContent';
 
 function MyDynamicComponent({ cards, skills }) {
@@ -107,7 +108,7 @@ function MyDynamicComponent({ cards, skills }) {
     open: !!activeCard,
     placement: 'top',
     middleware: [offset(8), flip(), shift({ padding: 10 })],
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: rafAutoUpdate, // not autoUpdate — see src/lib/floating.ts
     elements: { reference: referenceElement },
   });
 

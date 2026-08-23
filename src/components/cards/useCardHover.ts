@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useFloating, offset, flip, shift, autoUpdate, type Placement } from '@floating-ui/react';
+import { useFloating, offset, flip, shift, type Placement } from '@floating-ui/react';
+import { rafAutoUpdate } from '../../lib/floating';
 import type { Card } from '../../types/card';
 import { useFocusTrap } from '../../hooks/useFocusTrap';
 
@@ -70,7 +71,7 @@ export function useCardHover({
     placement,
     strategy: 'fixed', // Use fixed positioning to avoid layout shifts
     middleware: [offset(offsetDistance), flip(), shift({ padding: 10 })],
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: rafAutoUpdate,
     elements: {
       reference: referenceElement,
     },
@@ -217,7 +218,7 @@ export function useCardHoverManual(cards: Record<string, Card>, placement: Place
     placement,
     strategy: 'fixed', // Use fixed positioning to avoid layout shifts
     middleware: [offset(10), flip(), shift({ padding: 10 })],
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: rafAutoUpdate,
     elements: {
       reference: referenceElement,
     },

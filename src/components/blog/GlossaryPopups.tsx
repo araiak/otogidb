@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
-import { useFloating, offset, flip, shift, autoUpdate, FloatingPortal } from '@floating-ui/react';
+import { useFloating, offset, flip, shift, FloatingPortal } from '@floating-ui/react';
+import { rafAutoUpdate } from '../../lib/floating';
 
 interface GlossaryEntry {
   definition: string;
@@ -38,7 +39,7 @@ export default function GlossaryPopups({ glossary }: GlossaryPopupsProps) {
     placement: 'top',
     strategy: 'fixed',
     middleware: [offset(8), flip(), shift({ padding: 10 })],
-    whileElementsMounted: autoUpdate,
+    whileElementsMounted: rafAutoUpdate,
     elements: { reference: referenceElement },
   });
 
