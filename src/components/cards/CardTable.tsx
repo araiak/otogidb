@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { withIslandBoundary } from '../IslandBoundary';
 
 interface ColumnMeta {
   hidden?: boolean;
@@ -48,7 +49,7 @@ interface CardTableProps {
   initialCards?: Card[];
 }
 
-export default function CardTable({ initialCards }: CardTableProps) {
+function CardTable({ initialCards }: CardTableProps) {
   // Detect locale from URL path first, then fall back to stored preference
   const detectLocale = useCallback((): SupportedLocale => {
     if (typeof window === 'undefined') return 'en';
@@ -1133,3 +1134,7 @@ export default function CardTable({ initialCards }: CardTableProps) {
     </div>
   );
 }
+
+// Wrapped so an external DOM mutation (page translators, extensions) can't blank
+// the whole table — see IslandBoundary.
+export default withIslandBoundary(CardTable);

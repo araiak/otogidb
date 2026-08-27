@@ -5,6 +5,7 @@ import { SUPPORTED_LOCALES, type SupportedLocale } from '../../lib/i18n';
 import type { Card } from '../../types/card';
 import EventCalendar from './EventCalendar';
 import CardPopups from '../cards/CardPopups';
+import { withIslandBoundary } from '../IslandBoundary';
 
 interface CalendarPageProps {
   data: any;
@@ -29,7 +30,7 @@ function detectLocale(): SupportedLocale {
  * Client-side wrapper that loads locale-appropriate card data
  * for both EventCalendar and CardPopups.
  */
-export default function CalendarPage({ data }: CalendarPageProps) {
+function CalendarPage({ data }: CalendarPageProps) {
   const [cards, setCards] = useState<Record<string, Card>>({});
   const [skills, setSkills] = useState<Record<string, any>>({});
   const [loading, setLoading] = useState(true);
@@ -65,3 +66,5 @@ export default function CalendarPage({ data }: CalendarPageProps) {
     </>
   );
 }
+
+export default withIslandBoundary(CalendarPage);
