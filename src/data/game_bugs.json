@@ -2824,6 +2824,40 @@
           "game_version": "0b19dc5"
         }
       ]
+    },
+    {
+      "id": "BUG-071",
+      "card_id": 1631,
+      "card_name": "Tsukuyomi",
+      "affected_field": "ability",
+      "affected_id": "163101",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Crit DMG buff restricts to Anima allies only, not all allies",
+      "details": {
+        "description_says": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+        "target_string": "self;type<3>;count<5>",
+        "expected": "self;count<5>",
+        "extra": "type<3>",
+        "effect": "CHIT_ATK<15.00%,0%>"
+      },
+      "analysis": "Target selector contains type<3> (Anima attribute filter), restricting the crit DMG buff to Anima allies only. The description says \"all allies\" with no attribute restriction. Tsukuyomi is Divina herself, so on a mixed team any non-Anima ally is skipped, and on a team with no Anima allies the buff does nothing at all. Structurally identical to BUG-057 (Classic Alice), where a type<N> filter contradicted an unrestricted description. count<5> with no type filter is the shape that matches \"all allies\".",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-08-29",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "not_contains",
+        "value": "type<3>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "anima"
+      },
+      "last_checked": "2026-08-29",
+      "check_history": []
     }
   ],
   "categories": {
