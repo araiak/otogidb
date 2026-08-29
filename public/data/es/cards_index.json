@@ -1114,6 +1114,83 @@
         "type_name": "Melee"
       }
     },
+    "1129": {
+      "abilities": [
+        {
+          "description": "All allies take 15% less DMG.(only take effect once to the team)",
+          "name": "War Goddess",
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "Increases 35% of DMG of all allies at the start of final wave.(only take effect once to the team)",
+          "name": "Soulguide Feather",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "101129",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1129",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/101129_6f4ae98cddcf9ed2f5f4c6ff0bd6528d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/101129_hd_1089abf0453d01eb84274508276f3007.png"
+      },
+      "name": "Valkyrie",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Wings of Victory",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "113": {
       "abilities": [
         {
@@ -12301,6 +12378,82 @@
         "type_name": "Ranged"
       }
     },
+    "1631": {
+      "abilities": [
+        {
+          "description": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+          "name": "Ruler of the Night",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "Reduces 35% of DMG dealt by the opponent with the highest ATK at the start of each wave, while that opponent also takes 35% more DMG.",
+          "name": "Lunar Penitence",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "DMG Amp",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101631",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1631",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/android/101631_bbd16f712cca53178d64701528d561bd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987005/otogi/cards_hd/101631_hd_b083234ca843b4064bfa1f997670c655.png"
+      },
+      "name": "Tsukuyomi",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "67.35%",
+        "delay_mlb": "80.35%",
+        "description": "Increases the Crit Rate of 3 allies with the highest ATK by {delay1} for a limited time.",
+        "name": "Moonreading",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4900,
+        "base_hp": 3100,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14700,
+        "max_hp": 9300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "1634": {
       "abilities": [
         {
@@ -12714,6 +12867,162 @@
         "max_hp": 5100,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1650": {
+      "abilities": [
+        {
+          "description": "Increases 45% more DMG dealt of all team members when this daemon is Team Leader.",
+          "name": "Ancient Mirror's Might",
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "Increases all allies' level by 20 when this daemon is Team Leader.",
+          "name": "Potential Burst",
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "Level Boost"
+          ],
+          "unlock_level": 88
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "101650",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1650",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987001/otogi/android/101650_ddbfdecd89b2a247fe5031040cbdd1a2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987011/otogi/cards_hd/101650_hd_72466a08252120db901b7f26e352f85a.png"
+      },
+      "name": "Mira [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "Restaura {value} de PS a todos los aliados y sube temporalmente su daño un {delay1}.",
+        "name": "All-Illuminating Flame",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "1,040",
+        "slv_mlb": "1,240",
+        "tags": [
+          "Heal",
+          "AoE",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13000,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
+    "1651": {
+      "abilities": [
+        {
+          "description": "Increases 10% of Crit Rate by all Phantasma team members at the start of every wave.",
+          "name": "Bounty Hunter",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "Increases 10% of DMG of Phantasma team members at the start of each wave.",
+          "name": "Eerie Aura",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "101651",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1651",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/101651_00b17e55041f35f48e0096c42ac91983.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/101651_hd_29a22f9376413b4dc60d7dbdb908a7dc.png"
+      },
+      "name": "Dora [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "86.30%",
+        "delay_mlb": "100.30%",
+        "description": "Deals {value} DMG to enemy with highest ATK, target receives {delay1} more DMG for a limited time.",
+        "name": "Dregs of Desire",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "7,230",
+        "slv_mlb": "8,630",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4865,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14600,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
       }
@@ -23476,6 +23785,143 @@
         "type_name": "Melee"
       }
     },
+    "2236": {
+      "abilities": [
+        {
+          "description": "Reduces 40% of DMG taken.",
+          "name": "Desolate Behemoth",
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "Transforma parte del daño causado en PS.",
+          "name": "Sin of Gluttony",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102236",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2236",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/102236_03bb066542194041a180d820e42a66f6.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102236_hd_82d7a4b39fe171dfae0a48225d2e81d0.png"
+      },
+      "name": "Behemoth (Calm) [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "66.16%",
+        "delay_mlb": "78.96%",
+        "description": "Restores {value} HP. Target deal {delay1} more DMG for a limited time.",
+        "name": "Sneeze",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,229",
+        "slv_mlb": "5,049",
+        "tags": [
+          "Heal",
+          "Self",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4365,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "2238": {
+      "abilities": [
+        {
+          "description": "Increases 23% of Crit Rate.(only take effect once to the team)",
+          "name": "Top Idol",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "102238",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2238",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986996/otogi/android/102238_fee6b0dd2770e1bf859072b5dc07a2f4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987009/otogi/cards_hd/102238_hd_31db263cfd844b2ac6f30b312eb93f45.png"
+      },
+      "name": "Alucio (Bayashi-5) [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Bayashi-5",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "224": {
       "abilities": [],
       "acquisition": {
@@ -23525,6 +23971,411 @@
         "max_hp": 4120,
         "max_level": 50,
         "rarity": 3,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "2240": {
+      "abilities": [
+        {
+          "description": "Increases 56% of Skill DMG at the start of the final wave.(only take effect once to the team)",
+          "name": "Shower of Blossoms",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "102240",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2240",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102240_2b9adb5deda70fa0972e2742501afde4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102240_hd_1e2222e921fbef5ba84cb34efb3970f9.png"
+      },
+      "name": "Sakura Sumizome [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Fatal Confetti",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "2242": {
+      "abilities": [
+        {
+          "description": "b38b4ea",
+          "name": "Gold Is King",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 55
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102242",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2242",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102242_ee93abf0bc7fb2daeba8ad5f223aa625.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987003/otogi/cards_hd/102242_hd_0a3bb952625fd8c9cd1c533892ecc31c.png"
+      },
+      "name": "Merchant Chuck Eye [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Animal Trap",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "2243": {
+      "abilities": [
+        {
+          "description": "Reduces 13% of DMG dealt by opponent with highest ATK at the start of each wave.",
+          "name": "Best Dressed",
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102243",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2243",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986993/otogi/android/102243_8d9e88b9fc7eb85adac7c1c2934abeb4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987006/otogi/cards_hd/102243_hd_190ddd1d222a1c89772cd31bee232851.png"
+      },
+      "name": "Bisque Doll [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "36.10%",
+        "delay_mlb": "44.10%",
+        "description": "Increases DMG dealt by 3 allies (melee priority) by {delay1} for a limited time.",
+        "name": "Fine Ceramic Doll",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 3230,
+        "base_hp": 2265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9700,
+        "max_hp": 6800,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "2244": {
+      "abilities": [
+        {
+          "description": "Restores 7% HP every 5 seconds.(only take effect once to the team)",
+          "name": "Infernal Commander",
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102244",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2244",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/102244_d9ab63c12bf80000a88b173870c814e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987007/otogi/cards_hd/102244_hd_6d1a70810cb181142d57c3b85a32f921.png"
+      },
+      "name": "Amaymon [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Royal Excess",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "2245": {
+      "abilities": [
+        {
+          "description": "Increases the ATK speed of all Anima allies by 25%.",
+          "name": "Endless Monologue",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 13% of DMG dealt at the start of each wave.",
+          "name": "Autumn Moon Viewing",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102245",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2245",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102245_14c5d410ebecc2005c491bccc8e2376e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/102245_hd_853d6cedcb66058e9638771d8e452649.png"
+      },
+      "name": "Moon Viewing Set [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "Causa {value} de daño a los 3 rivales con más ATQ.",
+        "name": "Crimson Projectile",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,090",
+        "slv_mlb": "3,690",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4600,
+        "base_hp": 3230,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 9700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "2248": {
+      "abilities": [
+        {
+          "description": "4bf29c4",
+          "name": "Midnight Present",
+          "tags": [
+            "On Attack",
+            "Freeze"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of skill DMG dealt at the start of each wave.",
+          "name": "Feverish Holy Night",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
+      },
+      "asset_id": "102248",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2248",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102248_14c10e77e732c9aa2e35d47b69f58d15.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102248_hd_b436286237d59a7e2ce8a380cfdc19ef.png"
+      },
+      "name": "Santa Claus [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Freeze.",
+        "name": "Party Down",
+        "prob_lb0": "63.16%",
+        "prob_mlb": "75.96%",
+        "slv_lb0": "1,238",
+        "slv_mlb": "1,478",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Freeze",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4465,
+        "base_hp": 3130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13400,
+        "max_hp": 9400,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
       }
@@ -23590,6 +24441,229 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "2250": {
+      "abilities": [
+        {
+          "description": "Sube moderadamente la tasa de golpes críticos de los animia con este demonio de líder.",
+          "name": "Resurrection",
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of skill DMG to Anima team members at the start of each wave.",
+          "name": "Divine Blade's Might",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "102250",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2250",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102250_8c8c0fe9dfa03a393b73935bfe313357.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102250_hd_39d6691a0a3af83ca924364739068a4d.png"
+      },
+      "name": "Ikutachi the Living Blade [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "Causa {value} de daño a todos los rivales.",
+        "name": "Blade of Life",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,682",
+        "slv_mlb": "3,202",
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4700,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14100,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "2252": {
+      "abilities": [
+        {
+          "description": "Immune to Poison and increases DMG dealt by 4% at the same time.(only take effect once to the team)",
+          "name": "Prima Steps",
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
+      },
+      "asset_id": "102252",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2252",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986999/otogi/android/102252_e89d2723cc6fc05635743e47ec248c0d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/cards_hd/102252_hd_fc947f3a7c4a5a5152e928e636821056.png"
+      },
+      "name": "Dancing Doll [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "Can be used as bond and in guild conquest.",
+        "name": "Floral Dance",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "2253": {
+      "abilities": [
+        {
+          "description": "Increases 20% of skill DMG of all anima allies.",
+          "name": "Exorcism Shot",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 60
+        },
+        {
+          "description": "Sube moderadamente la tasa de golpes críticos de los animia con este demonio de líder.",
+          "name": "Setsubun Brawl",
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "exchange"
+        ]
+      },
+      "asset_id": "102253",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2253",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102253_f51a6bb0799c816866849b0063111367.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/102253_hd_b8af523dfe1699209bbedc740a4d293d.png"
+      },
+      "name": "Fortune Bean",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "46.23%",
+        "delay_mlb": "55.63%",
+        "description": "Restores {value} HP to all allies, increases {delay1} crit rate to target for a limited time.",
+        "name": "Devil Begone",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "525",
+        "slv_mlb": "625",
+        "tags": [
+          "Heal",
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 3665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 11000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
       }
     },
     "226": {
@@ -65304,8 +66378,8 @@
       }
     }
   },
-  "data_hash": "7aef5351",
+  "data_hash": "19511ced",
   "locale": "es",
-  "total_cards": 1003,
-  "version": "e374eac"
+  "total_cards": 1018,
+  "version": "d2d2c18"
 }
