@@ -1,19 +1,85 @@
 {
-  "generated_at": "2026-08-22T07:02:39Z",
-  "events": [],
+  "generated_at": "2026-08-29T07:02:30Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "185",
+      "start": "2026-08-30T07:00:00Z",
+      "end": "2026-09-13T07:00:00Z",
+      "name": "Otogi 4th Anniversary Tower",
+      "half": "2026-09-06T07:00:00Z",
+      "kill": "2026-09-15T07:00:00Z"
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "302",
-      "start": "2026-08-21T07:00:00Z",
-      "end": "2026-08-29T07:00:00Z",
+      "banner_id": "303",
+      "start": "2026-08-28T07:00:00Z",
+      "end": "2026-09-06T07:00:00Z",
       "cards": [
         {
-          "id": "1051"
+          "id": "2238"
+        },
+        {
+          "id": "2252"
+        },
+        {
+          "id": "2240"
+        }
+      ],
+      "pity_step": 25
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "304",
+      "start": "2026-09-06T07:00:00Z",
+      "end": "2026-09-09T07:00:00Z",
+      "cards": [
+        {
+          "id": "1651"
         }
       ],
       "pity_step": 70,
-      "group_id": "302"
+      "group_id": "304"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "305",
+      "start": "2026-09-09T07:00:00Z",
+      "end": "2026-09-12T07:00:00Z",
+      "cards": [
+        {
+          "id": "1129"
+        }
+      ],
+      "pity_step": 70,
+      "group_id": "304"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "306",
+      "start": "2026-09-12T07:00:00Z",
+      "end": "2026-09-15T07:00:00Z",
+      "cards": [
+        {
+          "id": "2250"
+        }
+      ],
+      "pity_step": 70,
+      "group_id": "304"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "307",
+      "start": "2026-09-15T07:00:00Z",
+      "end": "2026-09-22T07:00:00Z",
+      "cards": [
+        {
+          "id": "1631"
+        }
+      ],
+      "pity_step": 70
     }
   ],
   "exchanges": [
@@ -41,6 +107,91 @@
       "price_add": 15,
       "card": {
         "id": "1780"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2238",
+      "currency": "gApple",
+      "price": 35,
+      "limit": 5,
+      "start": "2026-09-10T07:00:00Z",
+      "end": "2026-09-13T07:00:00Z",
+      "card": {
+        "id": "2238"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2240",
+      "currency": "gApple",
+      "price": 35,
+      "limit": 5,
+      "start": "2026-09-10T07:00:00Z",
+      "end": "2026-09-13T07:00:00Z",
+      "card": {
+        "id": "2240"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2252",
+      "currency": "gApple",
+      "price": 35,
+      "limit": 5,
+      "start": "2026-09-10T07:00:00Z",
+      "end": "2026-09-13T07:00:00Z",
+      "card": {
+        "id": "2252"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1651",
+      "currency": "gApple",
+      "price": 140,
+      "limit": 1,
+      "start": "2026-09-06T07:00:00Z",
+      "end": "2026-09-15T07:00:00Z",
+      "card": {
+        "id": "1651"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1129",
+      "currency": "gApple",
+      "price": 140,
+      "limit": 1,
+      "start": "2026-09-06T07:00:00Z",
+      "end": "2026-09-15T07:00:00Z",
+      "card": {
+        "id": "1129"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2250",
+      "currency": "gApple",
+      "price": 140,
+      "limit": 1,
+      "start": "2026-09-06T07:00:00Z",
+      "end": "2026-09-15T07:00:00Z",
+      "card": {
+        "id": "2250"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2253",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-08-31T16:00:00Z",
+      "end": "2026-10-31T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "2253"
       }
     },
     {
@@ -574,6 +725,12 @@
       "event_name": "Sengoku Swimsuit Scene",
       "event_date": "2026-07-30",
       "estimated_date": "2027-02-15"
+    },
+    {
+      "event_id": "185",
+      "event_name": "Otogi 4th Anniversary Tower",
+      "event_date": "2026-09-01",
+      "estimated_date": "2027-04-15"
     }
   ]
 }

@@ -19039,5 +19039,428 @@
       "DMG Boost"
     ],
     "synergy_partners": []
+  },
+  "225201": {
+    "id": "225201",
+    "name": "Prima Steps",
+    "description": "Immune to Poison and increases DMG dealt by 4% at the same time.(only take effect once to the team)",
+    "card_id": "2252",
+    "card_name": "Dancing Doll [4th anniversary]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "IMMUNE<10,100>;ATK<4.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Immunity",
+      "Poison",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "224001": {
+    "id": "224001",
+    "name": "Shower of Blossoms",
+    "description": "Increases 56% of Skill DMG at the start of the final wave.(only take effect once to the team)",
+    "card_id": "2240",
+    "card_name": "Sakura Sumizome [4th anniversary]",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<56.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "223801": {
+    "id": "223801",
+    "name": "Top Idol",
+    "description": "Increases 23% of Crit Rate.(only take effect once to the team)",
+    "card_id": "2238",
+    "card_name": "Alucio (Bayashi-5) [4th anniversary]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<23.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "224201": {
+    "id": "224201",
+    "name": "Gold Is King",
+    "description": "Increases 4% of max HP of Divina team members.(only take effect once to the team)",
+    "card_id": "2242",
+    "card_name": "Merchant Chuck Eye [4th anniversary]",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "HP<3.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "224301": {
+    "id": "224301",
+    "name": "Best Dressed",
+    "description": "Reduces 13% of DMG dealt by opponent with highest ATK at the start of each wave.",
+    "card_id": "2243",
+    "card_name": "Bisque Doll [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "ATK<-13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Single",
+      "Enemy DMG Down"
+    ],
+    "synergy_partners": []
+  },
+  "224401": {
+    "id": "224401",
+    "name": "Infernal Commander",
+    "description": "Restores 7% HP every 5 seconds.(only take effect once to the team)",
+    "card_id": "2244",
+    "card_name": "Amaymon [4th anniversary]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HEAL_DOT<7.00%,0%,5>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Heal"
+    ],
+    "synergy_partners": []
+  },
+  "223601": {
+    "id": "223601",
+    "name": "Desolate Behemoth",
+    "description": "Reduces 40% of DMG taken.",
+    "card_id": "2236",
+    "card_name": "Behemoth (Calm) [4th anniversary]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SHIELD<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "223602": {
+    "id": "223602",
+    "name": "Sin of Gluttony",
+    "description": "Absorbs 20% of DMG dealt as HP.",
+    "card_id": "2236",
+    "card_name": "Behemoth (Calm) [4th anniversary]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "VAMP<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Lifesteal"
+    ],
+    "synergy_partners": []
+  },
+  "224801": {
+    "id": "224801",
+    "name": "Midnight Present",
+    "description": "Normal attacks have a 30% of inflicting Freeze.",
+    "card_id": "2248",
+    "card_name": "Santa Claus [4th anniversary]",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<30.00%,0%>;FROZEN<5>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Freeze"
+    ],
+    "synergy_partners": []
+  },
+  "224802": {
+    "id": "224802",
+    "name": "Feverish Holy Night",
+    "description": "Increases 20% of skill DMG dealt at the start of each wave.",
+    "card_id": "2248",
+    "card_name": "Santa Claus [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "224501": {
+    "id": "224501",
+    "name": "Endless Monologue",
+    "description": "Increases the ATK speed of all Anima allies by 25%.",
+    "card_id": "2245",
+    "card_name": "Moon Viewing Set [4th anniversary]",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "SPD<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "224502": {
+    "id": "224502",
+    "name": "Autumn Moon Viewing",
+    "description": "Increases 13% of DMG dealt at the start of each wave.",
+    "card_id": "2245",
+    "card_name": "Moon Viewing Set [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "ATK<13.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "165001": {
+    "id": "165001",
+    "name": "Ancient Mirror's Might",
+    "description": "Increases 45% more DMG dealt of all team members when this daemon is Team Leader.",
+    "card_id": "1650",
+    "card_name": "Mira [4th anniversary]",
+    "er": "entry_leader",
+    "ts": "self;count<5>",
+    "de": "ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "165002": {
+    "id": "165002",
+    "name": "Potential Burst",
+    "description": "Increases all allies' level by 20 when this daemon is Team Leader.",
+    "card_id": "1650",
+    "card_name": "Mira [4th anniversary]",
+    "er": "entry_leader",
+    "ts": "self;count<5>",
+    "de": "LEVEL<20,0>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "AoE",
+      "Level Boost"
+    ],
+    "synergy_partners": []
+  },
+  "165101": {
+    "id": "165101",
+    "name": "Bounty Hunter",
+    "description": "Increases 10% of Crit Rate by all Phantasma team members at the start of every wave.",
+    "card_id": "1651",
+    "card_name": "Dora [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "CHIT<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "165102": {
+    "id": "165102",
+    "name": "Eerie Aura",
+    "description": "Increases 10% of DMG of Phantasma team members at the start of each wave.",
+    "card_id": "1651",
+    "card_name": "Dora [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<5>",
+    "de": "ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "112901": {
+    "id": "112901",
+    "name": "War Goddess",
+    "description": "All allies take 15% less DMG.(only take effect once to the team)",
+    "card_id": "1129",
+    "card_name": "Valkyrie",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SHIELD<15.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "112902": {
+    "id": "112902",
+    "name": "Soulguide Feather",
+    "description": "Increases 35% of DMG of all allies at the start of final wave.(only take effect once to the team)",
+    "card_id": "1129",
+    "card_name": "Valkyrie",
+    "er": "last_wave",
+    "ts": "self;count<5>",
+    "de": "ATK<35.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "225001": {
+    "id": "225001",
+    "name": "Resurrection",
+    "description": "Increases 25% all Anima team members' Crit Rate when this daemon is Team Leader.",
+    "card_id": "2250",
+    "card_name": "Ikutachi the Living Blade [4th anniversary]",
+    "er": "entry_leader",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "225002": {
+    "id": "225002",
+    "name": "Divine Blade's Might",
+    "description": "Increases 20% of skill DMG to Anima team members at the start of each wave.",
+    "card_id": "2250",
+    "card_name": "Ikutachi the Living Blade [4th anniversary]",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "SKILL_ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "163101": {
+    "id": "163101",
+    "name": "Ruler of the Night",
+    "description": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+    "card_id": "1631",
+    "card_name": "Tsukuyomi",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "163102": {
+    "id": "163102",
+    "name": "Lunar Penitence",
+    "description": "Reduces 35% of DMG dealt by the opponent with the highest ATK at the start of each wave, while that opponent also takes 35% more DMG.",
+    "card_id": "1631",
+    "card_name": "Tsukuyomi",
+    "er": "entry_wave",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "SHIELD<-35.00%,0%>;ATK<-35.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Single",
+      "DMG Amp",
+      "Enemy DMG Down"
+    ],
+    "synergy_partners": []
+  },
+  "225301": {
+    "id": "225301",
+    "name": "Exorcism Shot",
+    "description": "Increases 20% of skill DMG of all anima allies.",
+    "card_id": "2253",
+    "card_name": "Fortune Bean",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "SKILL_ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "225302": {
+    "id": "225302",
+    "name": "Setsubun Brawl",
+    "description": "Increases 20% all Anima team members' Crit Rate when this daemon is Team Leader.",
+    "card_id": "2253",
+    "card_name": "Fortune Bean",
+    "er": "entry_leader",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
   }
 }

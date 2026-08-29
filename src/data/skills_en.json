@@ -14954,6 +14954,243 @@
       "Debuff"
     ]
   },
+  "2252": {
+    "id": "2252",
+    "name": "Floral Dance",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2252",
+    "card_name": "Dancing Doll [4th anniversary]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2240": {
+    "id": "2240",
+    "name": "Fatal Confetti",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2240",
+    "card_name": "Sakura Sumizome [4th anniversary]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2238": {
+    "id": "2238",
+    "name": "Bayashi-5",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2238",
+    "card_name": "Alucio (Bayashi-5) [4th anniversary]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2242": {
+    "id": "2242",
+    "name": "Animal Trap",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2242",
+    "card_name": "Merchant Chuck Eye [4th anniversary]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2243": {
+    "id": "2243",
+    "name": "Fine Ceramic Doll",
+    "description": "Increases DMG dealt by 3 allies (melee priority) by {delay1} for a limited time.",
+    "card_id": "2243",
+    "card_name": "Bisque Doll [4th anniversary]",
+    "ie": "none",
+    "ts": "self;count<3>;prof<1,2,3>",
+    "de": "ATK<12.50%,0.40%,8>",
+    "tn": 3,
+    "tags": [
+      "Multi",
+      "DMG Boost"
+    ]
+  },
+  "2244": {
+    "id": "2244",
+    "name": "Royal Excess",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2244",
+    "card_name": "Amaymon [4th anniversary]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2236": {
+    "id": "2236",
+    "name": "Sneeze",
+    "description": "Restores {value} HP. Target deal {delay1} more DMG for a limited time.",
+    "card_id": "2236",
+    "card_name": "Behemoth (Calm) [4th anniversary]",
+    "ie": "HEAL<1400,41>",
+    "ts": "self_ime",
+    "de": "ATK<22.00%,0.64%,8>",
+    "tn": 1,
+    "tags": [
+      "Heal",
+      "Self",
+      "DMG Boost"
+    ]
+  },
+  "2248": {
+    "id": "2248",
+    "name": "Party Down",
+    "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Freeze.",
+    "card_id": "2248",
+    "card_name": "Santa Claus [4th anniversary]",
+    "ie": "ATK<410,12>",
+    "ts": "enemy;count<5>",
+    "de": "FROZEN<5>;HIT<19.00%,0.64%>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Freeze",
+      "Debuff"
+    ]
+  },
+  "2245": {
+    "id": "2245",
+    "name": "Crimson Projectile",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK.",
+    "card_id": "2245",
+    "card_name": "Moon Viewing Set [4th anniversary]",
+    "ie": "ATK<1020,30>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "none",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1650": {
+    "id": "1650",
+    "name": "All-Illuminating Flame",
+    "description": "Restores {value} HP to all allies. Targets deal {delay1} more DMG for a limited time.",
+    "card_id": "1650",
+    "card_name": "Mira [4th anniversary]",
+    "ie": "HEAL<350,10>",
+    "ts": "self;count<5>",
+    "de": "ATK<20.00%,0.58%,8>",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "AoE",
+      "DMG Boost"
+    ]
+  },
+  "1651": {
+    "id": "1651",
+    "name": "Dregs of Desire",
+    "description": "Deals {value} DMG to enemy with highest ATK, target receives {delay1} more DMG for a limited time.",
+    "card_id": "1651",
+    "card_name": "Dora [4th anniversary]",
+    "ie": "ATK<2400,70>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "SHIELD<-38.00%,-0.7%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1129": {
+    "id": "1129",
+    "name": "Wings of Victory",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1129",
+    "card_name": "Valkyrie",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "2250": {
+    "id": "2250",
+    "name": "Blade of Life",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "2250",
+    "card_name": "Ikutachi the Living Blade [4th anniversary]",
+    "ie": "ATK<888,26>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
+  "1631": {
+    "id": "1631",
+    "name": "Moonreading",
+    "description": "Increases the Crit Rate of 3 allies with the highest ATK by {delay1} for a limited time.",
+    "card_id": "1631",
+    "card_name": "Tsukuyomi",
+    "ie": "none",
+    "ts": "self;count<3>;max_atk",
+    "de": "CHIT<22.50%,0.65%,8>",
+    "tn": 3,
+    "tags": [
+      "Multi",
+      "Crit Rate"
+    ]
+  },
+  "2253": {
+    "id": "2253",
+    "name": "Devil Begone",
+    "description": "Restores {value} HP to all allies, increases {delay1} crit rate to target for a limited time.",
+    "card_id": "2253",
+    "card_name": "Fortune Bean",
+    "ie": "HEAL<180,5>",
+    "ts": "self;count<5>",
+    "de": "CHIT<13.80%,0.47%,8>",
+    "tn": 2,
+    "tags": [
+      "Heal",
+      "Multi",
+      "Crit Rate"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

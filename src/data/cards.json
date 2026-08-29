@@ -1247,7 +1247,7 @@
           "featured_banners": [
             {
               "end": "2026-08-29 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 70,
               "start": "2026-08-21 15:00:00"
             }
@@ -1263,8 +1263,8 @@
       "asset_id": "101051",
       "bonds": [
         {
-          "bonus_percent": 4.0,
-          "effect": "NORM_ATK<4.0%,0.0%>",
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
           "id": "105101",
           "name": "",
           "target_id": "",
@@ -1274,11 +1274,28 @@
       "description": "<color=#f4e48e>\"You're a sweet thing... I'm rather partial to you.\"</color><br/><color=#ef9843>Ultimate form</color>. A Colchian <color=#ef9843>queen</color> in Greek mythology. An unparalleled <color=#ef9843>enchantress</color> who lived a life full of love, betrayal, and revenge.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "bonds.0.effect",
+                "new": "NORM_ATK<5.0%,0.0%>",
+                "old": "NORM_ATK<4.0%,0.0%>"
+              },
+              {
+                "field": "bonds.0.bonus_percent",
+                "new": 5.0,
+                "old": 4.0
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
+          }
+        ],
         "first_seen": "2026-08-22T07:02:53.127368+00:00",
         "first_seen_version": "e374eac",
-        "last_modified": "2026-08-22T07:02:53.127368+00:00",
-        "last_modified_version": "e374eac"
+        "last_modified": "2026-08-29T07:03:34.576482+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1051",
       "image_urls": {
@@ -2765,6 +2782,221 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1129": {
+      "abilities": [
+        {
+          "description": "All allies take 15% less DMG.(only take effect once to the team)",
+          "id": "112901",
+          "name": "War Goddess",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "Increases 35% of DMG of all allies at the start of final wave.(only take effect once to the team)",
+          "id": "112902",
+          "name": "Soulguide Feather",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-12 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-09 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101129",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "NORM_ATK<7.0%,0.0%>",
+          "id": "112901",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"I am grateful to you. You are the hero that was foretold.\"</color><br/><color=#ef9843>Original form</color>. A <color=#ef9843>demigoddess</color> from Norse mythology. She is charged by <color=#ef9843>Odin, the god of war,</color> with escorting fallen heroes to Valhalla. She was revived by a certain ghost agent.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580190+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580190+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1129",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/101129_6f4ae98cddcf9ed2f5f4c6ff0bd6528d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/101129_hd_1089abf0453d01eb84274508276f3007.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "112901"
+        ],
+        "generation": 0
+      },
+      "name": "Valkyrie",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1129",
+        "name": "Wings of Victory",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -42232,6 +42464,203 @@
       },
       "synergies": []
     },
+    "1631": {
+      "abilities": [
+        {
+          "description": "Increases 15% of all allies' Crit DMG at the start of each wave.",
+          "id": "163101",
+          "name": "Ruler of the Night",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "Reduces 35% of DMG dealt by the opponent with the highest ATK at the start of each wave, while that opponent also takes 35% more DMG.",
+          "id": "163102",
+          "name": "Lunar Penitence",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": -35.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -35.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "side": "enemy",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "DMG Amp",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-22 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": "2026-09-15 15:00:00"
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101631",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "163101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Will they find it in their heart to forgive me...? I certainly hope so.\"</color><br/>The goddess of <color=#ef9843>night and the moon</color> from Japanese mythology. It seems as though she's seeking forgiveness from someone, but is a bit reluctant to speak about it. She's permanently got a bit of a sad look in her eye.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580638+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580638+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1631",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/android/101631_bbd16f712cca53178d64701528d561bd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987005/otogi/cards_hd/101631_hd_b083234ca843b4064bfa1f997670c655.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "163101"
+        ],
+        "generation": 0
+      },
+      "name": "Tsukuyomi",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Increases the Crit Rate of 3 allies with the highest ATK by {delay1} for a limited time.",
+        "id": "1631",
+        "name": "Moonreading",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.65,
+              "type": "CHIT",
+              "unit": "percent",
+              "value": 22.5
+            }
+          ],
+          "ml": 60,
+          "slv1": 1974,
+          "slvup": 58,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4900,
+        "base_hp": 3100,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14700,
+        "max_hp": 9300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "1634": {
       "abilities": [
         {
@@ -43385,6 +43814,468 @@
         "max_hp": 5100,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1650": {
+      "abilities": [
+        {
+          "description": "Increases 45% more DMG dealt of all team members when this daemon is Team Leader.",
+          "id": "165001",
+          "name": "Ancient Mirror's Might",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "Increases all allies' level by 20 when this daemon is Team Leader.",
+          "id": "165002",
+          "name": "Potential Burst",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "LEVEL",
+                "unit": "flat",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "Level Boost"
+          ],
+          "unlock_level": 88
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101650",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "165001",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Let's do the best we can, Master!\"</color><br/>The <color=#ef9843>Anima of an old mirror</color>, and Master's devoted servant. She claims to have grown a great deal in the year since she met her master (not that she looks any taller, mind...) <color=#ef9843>Professor Mikado</color>, her fellow mirror Anima and director of the Guild, claims that Sola has great untapped potential, though it remains to be seen when this potential will be fulfilled...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579740+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579740+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1650",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987001/otogi/android/101650_ddbfdecd89b2a247fe5031040cbdd1a2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987011/otogi/cards_hd/101650_hd_72466a08252120db901b7f26e352f85a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "165001"
+        ],
+        "generation": 0
+      },
+      "name": "Mira [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Restores {value} HP to all allies. Targets deal {delay1} more DMG for a limited time.",
+        "id": "1650",
+        "name": "All-Illuminating Flame",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.58,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 350.0,
+            "scale": 10.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1418,
+          "slvup": 37,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13000,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1651": {
+      "abilities": [
+        {
+          "description": "Increases 10% of Crit Rate by all Phantasma team members at the start of every wave.",
+          "id": "165101",
+          "name": "Bounty Hunter",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "Increases 10% of DMG of Phantasma team members at the start of each wave.",
+          "id": "165102",
+          "name": "Eerie Aura",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-09 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-06 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101651",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "165101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Here we go! Today's going to be a good one, I know it!\"</color><br/>Dora claims to be a <color=#ef9843>bounty hunter</color> who exchanges the daemons she captures for money, though it's not actually clear if such a profession exists in the ghost world... Sometimes her love of money leads to her <color=#ef9843>speaking in some rather strange ways</color>. Despite being<color=#ef9843>human, she emits the same unearthly force as ghosts</color>, making her a most mysterious entity. She also seems to have some kind of special connection with ghost agents...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579969+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579969+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1651",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/101651_00b17e55041f35f48e0096c42ac91983.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/101651_hd_29a22f9376413b4dc60d7dbdb908a7dc.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "165101"
+        ],
+        "generation": 0
+      },
+      "name": "Dora [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to enemy with highest ATK, target receives {delay1} more DMG for a limited time.",
+        "id": "1651",
+        "name": "Dregs of Desire",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.7,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -38.0
+            }
+          ],
+          "immediate": {
+            "base": 2400.0,
+            "scale": 70.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 5583,
+          "slvup": 64,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4865,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14600,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -50361,7 +51252,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -50572,12 +51463,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514411+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.880975+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.535858+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1721",
       "image_urls": {
@@ -51092,7 +51994,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -51191,12 +52093,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515892+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.890405+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.544241+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1723",
       "image_urls": {
@@ -53140,7 +54053,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53246,12 +54159,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515333+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.887222+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.541338+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1730",
       "image_urls": {
@@ -53363,7 +54287,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53469,12 +54393,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515618+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.888876+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.542861+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1731",
       "image_urls": {
@@ -53584,7 +54519,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53704,12 +54639,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516477+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.893924+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.547395+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1732",
       "image_urls": {
@@ -53860,7 +54806,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54071,12 +55017,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514715+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.883223+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.537714+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1734",
       "image_urls": {
@@ -54213,7 +55170,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54355,12 +55312,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516184+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.892397+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.545982+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1735",
       "image_urls": {
@@ -54500,7 +55468,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54711,12 +55679,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515003+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.885283+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.539544+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1736",
       "image_urls": {
@@ -56043,43 +57022,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -56129,12 +57072,78 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "5 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.510819+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.816983+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.566486+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1773",
       "image_urls": {
@@ -56304,57 +57313,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -56404,12 +57363,100 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "7 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.510504+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.807882+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.564855+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1774",
       "image_urls": {
@@ -57709,50 +58756,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -57815,12 +58819,89 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509875+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.790490+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.561439+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1781",
       "image_urls": {
@@ -57951,50 +59032,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -58057,12 +59095,89 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509596+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.781373+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.559919+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1782",
       "image_urls": {
@@ -58193,29 +59308,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "183",
-              "event_name": "Sengoku Swimsuit Scene",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -58277,12 +59370,56 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509313+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.772194+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.558335+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1783",
       "image_urls": {
@@ -76915,6 +78052,397 @@
       },
       "synergies": []
     },
+    "2236": {
+      "abilities": [
+        {
+          "description": "Reduces 40% of DMG taken.",
+          "id": "223601",
+          "name": "Desolate Behemoth",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "Absorbs 20% of DMG dealt as HP.",
+          "id": "223602",
+          "name": "Sin of Gluttony",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "first_seen": "2026-08-29",
+              "floors": [
+                64
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102236",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "223601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Ngh... (Mumble, mumble...)\"</color><br/>A monster that rose from the underworld. She has the power to wipe out half the planet in a heartbeat, but she wouldn't hurt a fly in her tiny form. <color=#ef9843>Push her buttons enough to make her change back to her true form, and you better say goodbye to loved ones, for the end is nigh.</color> Of course, handling someone like her is nothing for my master. Right, master?",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579025+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579025+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2236",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/102236_03bb066542194041a180d820e42a66f6.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102236_hd_82d7a4b39fe171dfae0a48225d2e81d0.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "223601"
+        ],
+        "generation": 0
+      },
+      "name": "Behemoth (Calm) [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Restores {value} HP. Target deal {delay1} more DMG for a limited time.",
+        "id": "2236",
+        "name": "Sneeze",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.64,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 22.0
+            }
+          ],
+          "immediate": {
+            "base": 1400.0,
+            "scale": 41.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 2134,
+          "slvup": 54,
+          "target": {
+            "count": 1,
+            "filter": null,
+            "side": "ally",
+            "type": "self"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Self",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4365,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "2238": {
+      "abilities": [
+        {
+          "description": "Increases 23% of Crit Rate.(only take effect once to the team)",
+          "id": "223801",
+          "name": "Top Idol",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 23.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102238",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "223801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"It's time for tonight's special performance!\"</color><br/><color=#ef9843>Bayashi-5 is a pop idol group from the spirit world made up of five members.</color> These rising stars of showbiz count singing, acting, and performing comedy on their list of many talents. What with each of their schedules being so full, it's a rare sight to see all five of them come together for a show. <color=#ef9843>Alucio is known as the group's leading man, the shining star whose charisma is so powerful it causes fans to faint at his feet. </color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578016+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578016+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2238",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986996/otogi/android/102238_fee6b0dd2770e1bf859072b5dc07a2f4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987009/otogi/cards_hd/102238_hd_31db263cfd844b2ac6f30b312eb93f45.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "223801"
+        ],
+        "generation": 0
+      },
+      "name": "Alucio (Bayashi-5) [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2238",
+        "name": "Bayashi-5",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "224": {
       "abilities": [],
       "acquisition": {
@@ -77038,6 +78566,1276 @@
         "max_hp": 4120,
         "max_level": 50,
         "rarity": 3,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2240": {
+      "abilities": [
+        {
+          "description": "Increases 56% of Skill DMG at the start of the final wave.(only take effect once to the team)",
+          "id": "224001",
+          "name": "Shower of Blossoms",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 56.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102240",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "224001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Do you see the nice flowers that bloom atop the sky?\"</color><br/>The <color=#ef9843>soul of the cherry blossom</color> said to be the finest in all Kyoto. She has dedicated her all to Emperor Sutoku, accompanying him wherever he goes. It was she who procured fireworks from the capital's pyrotechnician. Her plan was to use her position as person in charge of the cake to lace it with something dangerous so that the others would learn to fear Emperor Sutoku.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.577739+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.577739+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2240",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102240_2b9adb5deda70fa0972e2742501afde4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102240_hd_1e2222e921fbef5ba84cb34efb3970f9.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224001"
+        ],
+        "generation": 0
+      },
+      "name": "Sakura Sumizome [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2240",
+        "name": "Fatal Confetti",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2242": {
+      "abilities": [
+        {
+          "description": "Increases 4% of max HP of Divina team members.(only take effect once to the team)",
+          "id": "224201",
+          "name": "Gold Is King",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 3.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 55
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "first_seen": "2026-08-29",
+              "floors": [
+                16
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102242",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "SKILL_ATK<3.0%,0.0%>",
+          "id": "224201",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"That doesn't include sales tax.\"</color><br/><color=#ef9843>A hardcore online gamer who lives in cyberspace. </color>\"Chuck Eye\" is his online handle. He's a merchant in the \"Grilled Meat Gobblers\" guild.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578269+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578269+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2242",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102242_ee93abf0bc7fb2daeba8ad5f223aa625.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987003/otogi/cards_hd/102242_hd_0a3bb952625fd8c9cd1c533892ecc31c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224201"
+        ],
+        "generation": 0
+      },
+      "name": "Merchant Chuck Eye [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2242",
+        "name": "Animal Trap",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2243": {
+      "abilities": [
+        {
+          "description": "Reduces 13% of DMG dealt by opponent with highest ATK at the start of each wave.",
+          "id": "224301",
+          "name": "Best Dressed",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "side": "enemy",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "first_seen": "2026-08-29",
+              "floors": [
+                32
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102243",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "224301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"All this staring is starting to make me blush!\"</color><br/>A doll popular among ladies and daughters of nobility in 19th century Europe. Not one to miss the occasion, she arrived adorned in a magnificent ensemble, which the other party guests were quick to compliment. <color=#ef9843>And, not surprisingly, she took home the event's \"Best Dressed\" award. </color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578520+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578520+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2243",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986993/otogi/android/102243_8d9e88b9fc7eb85adac7c1c2934abeb4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987006/otogi/cards_hd/102243_hd_190ddd1d222a1c89772cd31bee232851.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224301"
+        ],
+        "generation": 0
+      },
+      "name": "Bisque Doll [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Increases DMG dealt by 3 allies (melee priority) by {delay1} for a limited time.",
+        "id": "2243",
+        "name": "Fine Ceramic Doll",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.4,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 12.5
+            }
+          ],
+          "ml": 60,
+          "slv1": 546,
+          "slvup": 19,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3230,
+        "base_hp": 2265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9700,
+        "max_hp": 6800,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2244": {
+      "abilities": [
+        {
+          "description": "Restores 7% HP every 5 seconds.(only take effect once to the team)",
+          "id": "224401",
+          "name": "Infernal Commander",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "first_seen": "2026-08-29",
+              "floors": [
+                48
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102244",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "224401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Behemoth! Behemoth! Behemoth!\"</color><br/><color=#ef9843>One of the eight princes of the underworld, he is responsible for the evil that is greed. </color>He commands a legion that is 40-strong. He is also one of the underworld's most loyal Behemoth fans. <color=#ef9843>He hadn't really considered going to the party until he was informed that Behemoth would make an appearance, which made him change his mind instantly. </color>There's a rumor going around that he gathered a huge stock of cake just to give to Behemoth.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578773+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578773+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2244",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/102244_d9ab63c12bf80000a88b173870c814e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987007/otogi/cards_hd/102244_hd_6d1a70810cb181142d57c3b85a32f921.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224401"
+        ],
+        "generation": 0
+      },
+      "name": "Amaymon [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2244",
+        "name": "Royal Excess",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2245": {
+      "abilities": [
+        {
+          "description": "Increases the ATK speed of all Anima allies by 25%.",
+          "id": "224501",
+          "name": "Endless Monologue",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 13% of DMG dealt at the start of each wave.",
+          "id": "224502",
+          "name": "Autumn Moon Viewing",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102245",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "224501",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Don't start the party without me!\"</color><br/><color=#ef9843>The Anima of a traditional moon viewing meal comprised of pampas grass and dumplings. </color>She made the opening speech at the party, although she unfortunately lost out on giving the closing speech. On a side note, the draft of her speech was so long she needed 3,000 sheets of paper to write it out. <color=#ef9843>Believe it not, this bagged her numerous job offers as a writer. </color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579499+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579499+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2245",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102245_14c5d410ebecc2005c491bccc8e2376e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/102245_hd_853d6cedcb66058e9638771d8e452649.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224501"
+        ],
+        "generation": 0
+      },
+      "name": "Moon Viewing Set [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to the 3 enemies with the highest ATK.",
+        "id": "2245",
+        "name": "Crimson Projectile",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1020.0,
+            "scale": 30.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 960,
+          "slvup": 26,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4600,
+        "base_hp": 3230,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 9700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2248": {
+      "abilities": [
+        {
+          "description": "Normal attacks have a 30% of inflicting Freeze.",
+          "id": "224801",
+          "name": "Midnight Present",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 30.0,
+                "scale": 0.0,
+                "type": "FROZEN",
+                "unit": "flat",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Freeze"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of skill DMG dealt at the start of each wave.",
+          "id": "224802",
+          "name": "Feverish Holy Night",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "first_seen": "2026-08-29",
+              "floors": [
+                80
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102248",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "224801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"It was destiny to meet you here, on this very night I party down. My gift to you is me myself. The space beside me belongs to you and you only...\"</color><br/>The one and only <color=#ef9843>Santa Claus</color>, who makes everyone's wishes come true. He made it to the party, but it was the middle of the night when he arrived, and everyone had already gone to bed. <color=#ef9843>His one-liners would sound better if they weren't so long-winded. </color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579277+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579277+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2248",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102248_14c10e77e732c9aa2e35d47b69f58d15.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102248_hd_b436286237d59a7e2ce8a380cfdc19ef.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224801"
+        ],
+        "generation": 0
+      },
+      "name": "Santa Claus [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Freeze.",
+        "id": "2248",
+        "name": "Party Down",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "FROZEN",
+              "unit": "flat",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 410.0,
+            "scale": 12.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1445,
+          "slvup": 45,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Freeze",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4465,
+        "base_hp": 3130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13400,
+        "max_hp": 9400,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -77206,6 +80004,609 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2250": {
+      "abilities": [
+        {
+          "description": "Increases 25% all Anima team members' Crit Rate when this daemon is Team Leader.",
+          "id": "225001",
+          "name": "Resurrection",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of skill DMG to Anima team members at the start of each wave.",
+          "id": "225002",
+          "name": "Divine Blade's Might",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-12 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102250",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "225001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Death is not the end.\"</color><br/>A <color=#ef9843>precious blade</color> that features in Japanese mythology. This blade contains a powerful life force that is said to be able to bring the dead back from the grave. After displaying his power in front of everyone, a drunken Shuten-doji started to call him a fake. This dragged on for some time, but fortunately Sasuke had an eye on the both of them from the beginning to make sure nothing came of it.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580411+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580411+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2250",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102250_8c8c0fe9dfa03a393b73935bfe313357.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102250_hd_39d6691a0a3af83ca924364739068a4d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225001"
+        ],
+        "generation": 0
+      },
+      "name": "Ikutachi the Living Blade [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to all enemies.",
+        "id": "2250",
+        "name": "Blade of Life",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 888.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 888,
+          "slvup": 26,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4700,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14100,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "2252": {
+      "abilities": [
+        {
+          "description": "Immune to Poison and increases DMG dealt by 4% at the same time.(only take effect once to the team)",
+          "id": "225201",
+          "name": "Prima Steps",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "unit": "flat",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "Otogi 4th Anniversary Tower",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102252",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "225201",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"You couldn't tell me the password for the Wi-Fi, could you?\"</color><br/><color=#ef9843>You wouldn't know it from her youthful appearance, but this ghost is actually an extremely refined dancer</color>. Her popularity has spread far beyond Japan's borders. So popular, it seems, she regularly performs internationally now. You can often catch her performing with Bayashi-5, who apparently refer to her as their BFF.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.576755+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.576755+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2252",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986999/otogi/android/102252_e89d2723cc6fc05635743e47ec248c0d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/cards_hd/102252_hd_fc947f3a7c4a5a5152e928e636821056.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225201"
+        ],
+        "generation": 0
+      },
+      "name": "Dancing Doll [4th anniversary]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2252",
+        "name": "Floral Dance",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2253": {
+      "abilities": [
+        {
+          "description": "Increases 20% of skill DMG of all anima allies.",
+          "id": "225301",
+          "name": "Exorcism Shot",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 60
+        },
+        {
+          "description": "Increases 20% all Anima team members' Crit Rate when this daemon is Team Leader.",
+          "id": "225302",
+          "name": "Setsubun Brawl",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-10-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-09-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102253",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "225301",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Away with you, demons!\"</color><br/><color=#ef9843>A spirit that dispenses beans to exorcise demons and bring good fortune.</color> The beans she unleashes are infused with a spell known as \"Retribution,\" made specifically for exorcising demons. To say she doesn't give her enemies any quarter would be an understatement. She uses a remote-controlled mobile battery with multiple barrels from which she indiscriminately fires the beans.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580874+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580874+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2253",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102253_f51a6bb0799c816866849b0063111367.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/102253_hd_b8af523dfe1699209bbedc740a4d293d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225301"
+        ],
+        "generation": 0
+      },
+      "name": "Fortune Bean",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Restores {value} HP to all allies, increases {delay1} crit rate to target for a limited time.",
+        "id": "2253",
+        "name": "Devil Begone",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.47,
+              "type": "CHIT",
+              "unit": "percent",
+              "value": 13.8
+            }
+          ],
+          "immediate": {
+            "base": 180.0,
+            "scale": 5.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1145,
+          "slvup": 33,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 3665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 11000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
       },
       "synergies": []
     },
@@ -135177,7 +138578,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -135292,12 +138693,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-18T15:40:28.176113+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:33.916311+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "513",
       "image_urls": {
@@ -189309,6 +192721,6 @@
       ]
     }
   },
-  "total_cards": 1003,
-  "version": "e374eac"
+  "total_cards": 1018,
+  "version": "d2d2c18"
 }

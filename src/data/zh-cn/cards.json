@@ -1247,7 +1247,7 @@
           "featured_banners": [
             {
               "end": "2026-08-29 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 70,
               "start": "2026-08-21 15:00:00"
             }
@@ -1263,8 +1263,8 @@
       "asset_id": "101051",
       "bonds": [
         {
-          "bonus_percent": 4.0,
-          "effect": "NORM_ATK<4.0%,0.0%>",
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
           "id": "105101",
           "name": "",
           "target_id": "",
@@ -1274,11 +1274,28 @@
       "description": "<color=#f4e48e>「你真是可爱... 让我好好宠爱你吧。」</color><br/><color=#ef9843>最终形态</color>。她是希腊神话中的科尔基斯<color=#ef9843>公主</color>。身为不可思议的<color=#ef9843>魔女</color>，她的一生交织着爱恋、背叛与复仇。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "bonds.0.effect",
+                "new": "NORM_ATK<5.0%,0.0%>",
+                "old": "NORM_ATK<4.0%,0.0%>"
+              },
+              {
+                "field": "bonds.0.bonus_percent",
+                "new": 5.0,
+                "old": 4.0
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
+          }
+        ],
         "first_seen": "2026-08-22T07:02:53.127368+00:00",
         "first_seen_version": "e374eac",
-        "last_modified": "2026-08-22T07:02:53.127368+00:00",
-        "last_modified_version": "e374eac"
+        "last_modified": "2026-08-29T07:03:34.576482+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1051",
       "image_urls": {
@@ -2765,6 +2782,221 @@
         "speed": 1300,
         "type": 1,
         "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1129": {
+      "abilities": [
+        {
+          "description": "己方全体队员所受伤害15%减少(除助战外，己方全体仅生效1次)",
+          "id": "112901",
+          "name": "战女神",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "最终回合，己方全体队员战斗伤害35%增加(除助战外，己方全体仅生效1次)",
+          "id": "112902",
+          "name": "引魂之羽",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-12 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-09 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101129",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "NORM_ATK<7.0%,0.0%>",
+          "id": "112901",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「非常感谢你。你就是传说中的英雄吧。」</color><br/><color=#ef9843>初始形态</color>。来自北欧神话的<color=#ef9843>半女神</color>。她奉<color=#ef9843>主神奥丁</color>之命将英魂引渡至英灵殿，后经由某位阴阳师之手复活苏醒。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580190+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580190+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1129",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/101129_6f4ae98cddcf9ed2f5f4c6ff0bd6528d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/101129_hd_1089abf0453d01eb84274508276f3007.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "112901"
+        ],
+        "generation": 0
+      },
+      "name": "女武神",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1129",
+        "name": "胜利之翼",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -42232,6 +42464,203 @@
       },
       "synergies": []
     },
+    "1631": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体队员暴击伤害15%增加",
+          "id": "163101",
+          "name": "夜之支配者",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "每回合开始时，攻击最高的敌人战斗伤害35%减少，同时所受伤害35%增加",
+          "id": "163102",
+          "name": "月之悔悟",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": -35.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -35.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "side": "enemy",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "DMG Amp",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-22 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-15 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": "2026-09-15 15:00:00"
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101631",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "163101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「他们会发自内心地原谅我吗...？但愿如此。」</color><br/>现身于日本神话中，掌管<color=#ef9843>黑夜与明月</color>的女神。她似乎一直在寻求某人的原谅，却不愿透露细节，眼眸中总是弥漫着挥之不去的哀伤。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580638+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580638+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1631",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/android/101631_bbd16f712cca53178d64701528d561bd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987005/otogi/cards_hd/101631_hd_b083234ca843b4064bfa1f997670c655.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "163101"
+        ],
+        "generation": 0
+      },
+      "name": "月读命",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "一定时间内，3名攻击最高的队员暴击率提升{delay1}",
+        "id": "1631",
+        "name": "阅读月光",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.65,
+              "type": "CHIT",
+              "unit": "percent",
+              "value": 22.5
+            }
+          ],
+          "ml": 60,
+          "slv1": 1974,
+          "slvup": 58,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4900,
+        "base_hp": 3100,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14700,
+        "max_hp": 9300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "1634": {
       "abilities": [
         {
@@ -43385,6 +43814,468 @@
         "max_hp": 5100,
         "max_level": 60,
         "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1650": {
+      "abilities": [
+        {
+          "description": "身为队长时，己方全体队员战斗伤害45%增加",
+          "id": "165001",
+          "name": "古灵之威",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "身为队长时，己方全体队员等级+20",
+          "id": "165002",
+          "name": "潜能爆发",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "LEVEL",
+                "unit": "flat",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "Level Boost"
+          ],
+          "unlock_level": 88
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101650",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "165001",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「让我们全力以赴吧，主人！」</color><br/>她是侍奉主人的<color=#ef9843>古灵付丧神</color>。她自称与主人相遇后的一年里取得了巨大的成长（尽管身高和心智依然毫无变化）。而在阴阳寮中同为灵之付丧神、亦师亦友的<color=#ef9843>魅角师父</color>则表示，灵拥有巨大的未开发潜力，但在潜力被完全激发之前也只能先维持现状了。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579740+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579740+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1650",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987001/otogi/android/101650_ddbfdecd89b2a247fe5031040cbdd1a2.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987011/otogi/cards_hd/101650_hd_72466a08252120db901b7f26e352f85a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "165001"
+        ],
+        "generation": 0
+      },
+      "name": "镜[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方全体{value}点血量，并使目标一定时间内伤害提升{delay1}",
+        "id": "1650",
+        "name": "万世照亮之火",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.58,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 350.0,
+            "scale": 10.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1418,
+          "slvup": 37,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13000,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1651": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体怪属性队员暴击率10%增加",
+          "id": "165101",
+          "name": "赏金猎人",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "每回合开始时，己方全体怪属性队员战斗伤害10%增加",
+          "id": "165102",
+          "name": "异样妖气",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-09 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-06 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101651",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "165101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「来吧！今天运气肯定超级好，我敢肯定！」</color><br/>朵拉自称要成为一名<color=#ef9843>赏金猎人</color>，把捕获的式神通通换成金币，但不确定妖怪世界中是否真的存在这种职业... 有时她对金钱的痴迷会让她的<color=#ef9843>言行走向奇怪的方向</color>。尽管身为<color=#ef9843>人类，她身上却散发着如妖怪般的妖气</color>，是一位极其不可思议的存在。她似乎也与阴阳师之间有着某种特殊的牵绊...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579969+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579969+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "1651",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/101651_00b17e55041f35f48e0096c42ac91983.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/101651_hd_29a22f9376413b4dc60d7dbdb908a7dc.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "165101"
+        ],
+        "generation": 0
+      },
+      "name": "朵拉[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对1名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "id": "1651",
+        "name": "残余欲望",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.7,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -38.0
+            }
+          ],
+          "immediate": {
+            "base": 2400.0,
+            "scale": 70.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 5583,
+          "slvup": 64,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4865,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14600,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -50361,7 +51252,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -50572,12 +51463,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514411+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.880975+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.535858+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1721",
       "image_urls": {
@@ -51092,7 +51994,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -51191,12 +52093,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515892+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.890405+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.544241+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1723",
       "image_urls": {
@@ -53140,7 +54053,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53246,12 +54159,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515333+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.887222+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.541338+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1730",
       "image_urls": {
@@ -53363,7 +54287,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53469,12 +54393,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515618+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.888876+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.542861+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1731",
       "image_urls": {
@@ -53584,7 +54519,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -53704,12 +54639,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516477+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.893924+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.547395+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1732",
       "image_urls": {
@@ -53860,7 +54806,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54071,12 +55017,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.514715+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.883223+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.537714+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1734",
       "image_urls": {
@@ -54213,7 +55170,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54355,12 +55312,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.516184+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.892397+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.545982+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1735",
       "image_urls": {
@@ -54500,7 +55468,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -54711,12 +55679,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-06-20T11:38:49.515003+00:00",
         "first_seen_version": "e511c0c",
-        "last_modified": "2026-08-18T15:40:28.885283+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:34.539544+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1736",
       "image_urls": {
@@ -56043,43 +57022,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -56129,12 +57072,78 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "5 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.510819+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.816983+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.566486+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1773",
       "image_urls": {
@@ -56304,57 +57313,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -56404,12 +57363,100 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "7 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.510504+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.807882+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.564855+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1774",
       "image_urls": {
@@ -57709,50 +58756,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -57815,12 +58819,89 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509875+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.790490+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.561439+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1781",
       "image_urls": {
@@ -57951,50 +59032,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -58057,12 +59095,89 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509596+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.781373+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.559919+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1782",
       "image_urls": {
@@ -58193,29 +59308,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "183",
-              "event_name": "战国泳装百景",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "183",
@@ -58277,12 +59370,56 @@
             ],
             "date": "2026-07-29",
             "version": "0b19dc5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "183",
+                  "event_name": "Sengoku Swimsuit Scene",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2026-07-29T07:07:01.509313+00:00",
         "first_seen_version": "0b19dc5",
-        "last_modified": "2026-07-29T08:15:48.772194+00:00",
-        "last_modified_version": "0b19dc5"
+        "last_modified": "2026-08-29T07:03:34.558335+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "1783",
       "image_urls": {
@@ -76915,6 +78052,397 @@
       },
       "synergies": []
     },
+    "2236": {
+      "abilities": [
+        {
+          "description": "所受伤害40%减少",
+          "id": "223601",
+          "name": "荒芜巨兽",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Reduction"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "战斗伤害20%转化为自身血量增加",
+          "id": "223602",
+          "name": "暴食原罪",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "first_seen": "2026-08-29",
+              "floors": [
+                64
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102236",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "223601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「呃... （咕哝、咕哝...）</color><br/>一只从魔界崛起的怪兽。她有能力在顷刻之间铲平半个星球，不过她在体型小的时候连苍蝇都伤不了。<color=#ef9843>若把她惹毛到变回真实模样，你就最好和挚爱道别，因为末日已经临近。</color>当然，对付像她这种家伙难不倒主人。对吧，主人？",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579025+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579025+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2236",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986995/otogi/android/102236_03bb066542194041a180d820e42a66f6.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102236_hd_82d7a4b39fe171dfae0a48225d2e81d0.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "223601"
+        ],
+        "generation": 0
+      },
+      "name": "比蒙巨兽（镇）[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复自身{value}点血量，并使目标一定时间内战斗伤害增加{delay1}",
+        "id": "2236",
+        "name": "喷嚏",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.64,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 22.0
+            }
+          ],
+          "immediate": {
+            "base": 1400.0,
+            "scale": 41.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 2134,
+          "slvup": 54,
+          "target": {
+            "count": 1,
+            "filter": null,
+            "side": "ally",
+            "type": "self"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Self",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4365,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13100,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "2238": {
+      "abilities": [
+        {
+          "description": "暴击率23%增加(除助战外，己方全体仅生效1次)",
+          "id": "223801",
+          "name": "顶级偶像",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 23.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102238",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "223801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「今晚的特别演出开始喽！」</color><br/><color=#ef9843>五人囃子是来自灵界的五人流行偶像团体。</color>这些演艺界的新起之秀拥有唱歌、演戏、喜剧表演等多项才华。由于他们每个人都行程满档，五人一同登台演出实属难得一见。<color=#ef9843>阿路西奥是团队的领队，也是璀璨的明星，其魅力足以让粉丝为之倾倒昏厥。</color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578016+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578016+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2238",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986996/otogi/android/102238_fee6b0dd2770e1bf859072b5dc07a2f4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987009/otogi/cards_hd/102238_hd_31db263cfd844b2ac6f30b312eb93f45.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "223801"
+        ],
+        "generation": 0
+      },
+      "name": "阿路西奥（五人囃子）[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "2238",
+        "name": "五人囃子",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "224": {
       "abilities": [],
       "acquisition": {
@@ -77038,6 +78566,1276 @@
         "max_hp": 4120,
         "max_level": 50,
         "rarity": 3,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2240": {
+      "abilities": [
+        {
+          "description": "最终回合，自身技能伤害56%增加(除助战外，己方全体仅生效1次)",
+          "id": "224001",
+          "name": "樱落如雨",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 56.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102240",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "224001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「你看到在空中绽放的美丽花朵了吗？」</color><br/>她是<color=#ef9843>樱花之灵</color>，传闻是京都最为娇艳的花朵。她将一切奉献给了崇德天皇，与之形影不离。正是她从王都的花火师手中获得了烟火。她的计划是借掌管蛋糕之便，在蛋糕里添上一些危险的东西，好让世人懂得敬畏崇德天皇。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.577739+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.577739+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2240",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102240_2b9adb5deda70fa0972e2742501afde4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102240_hd_1e2222e921fbef5ba84cb34efb3970f9.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224001"
+        ],
+        "generation": 0
+      },
+      "name": "墨染樱[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "2240",
+        "name": "致命五彩碎纸",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2242": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员血量上限4%增加(除助战外，己方全体仅生效1次)",
+          "id": "224201",
+          "name": "金币至上",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 3.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 55
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "first_seen": "2026-08-29",
+              "floors": [
+                16
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102242",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "SKILL_ATK<3.0%,0.0%>",
+          "id": "224201",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「消费税另计。」</color><br/><color=#ef9843>一位生活在电脑世界里的骨灰级网游玩家。</color>“肋眼”是他的网络昵称。他是“烧肉定食”公会的商人。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578269+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578269+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2242",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102242_ee93abf0bc7fb2daeba8ad5f223aa625.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987003/otogi/cards_hd/102242_hd_0a3bb952625fd8c9cd1c533892ecc31c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224201"
+        ],
+        "generation": 0
+      },
+      "name": "肋眼商人[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "2242",
+        "name": "动物陷阱",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2243": {
+      "abilities": [
+        {
+          "description": "每回合开始时，攻击最高的敌人战斗伤害13%减少",
+          "id": "224301",
+          "name": "最佳服装",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": "max_atk",
+              "side": "enemy",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Single",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "first_seen": "2026-08-29",
+              "floors": [
+                32
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102243",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "224301",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「大家都看着我，我都害羞了！」</color><br/>深受19世纪欧洲贵族女士与少女们喜爱的人偶。从不错过任何社交场合的她，身着一袭华丽礼服亮相宴会，转眼便赢得了全场宾客的由衷赞叹。<color=#ef9843>毫不意外地，她一举夺得了本次活动的“最佳服装”奖。</color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578520+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578520+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2243",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986993/otogi/android/102243_8d9e88b9fc7eb85adac7c1c2934abeb4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987006/otogi/cards_hd/102243_hd_190ddd1d222a1c89772cd31bee232851.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224301"
+        ],
+        "generation": 0
+      },
+      "name": "素瓷娃娃[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "一定时间内，3名己方（近战优先）伤害提升{delay1}",
+        "id": "2243",
+        "name": "精致陶瓷人偶",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.4,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 12.5
+            }
+          ],
+          "ml": 60,
+          "slv1": 546,
+          "slvup": 19,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3230,
+        "base_hp": 2265,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9700,
+        "max_hp": 6800,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2244": {
+      "abilities": [
+        {
+          "description": "血量每5秒回复7%(除助战外，己方全体仅生效1次)",
+          "id": "224401",
+          "name": "地狱统帅",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Heal"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "first_seen": "2026-08-29",
+              "floors": [
+                48
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102244",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "224401",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「比蒙巨兽！比蒙巨兽！比蒙巨兽！」</color><br/><color=#ef9843>他是魔界八王子之一，执掌贪婪之恶。</color>他统领四十支军团，同时也是魔界首屈一指的比蒙巨兽狂热粉丝。<color=#ef9843>他原本对宴会毫无兴致，但在得知比蒙巨兽也会出席后便瞬间改变了主意。</color>坊间传闻他搜集了堆积如山的蛋糕准备献给比蒙巨兽。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.578773+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.578773+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2244",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986997/otogi/android/102244_d9ab63c12bf80000a88b173870c814e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987007/otogi/cards_hd/102244_hd_6d1a70810cb181142d57c3b85a32f921.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224401"
+        ],
+        "generation": 0
+      },
+      "name": "亚麦蒙[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "2244",
+        "name": "皇家超量",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2245": {
+      "abilities": [
+        {
+          "description": "己方全体付属性队员攻击速度25%增加",
+          "id": "224501",
+          "name": "长篇大论",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，自身战斗伤害13%增加",
+          "id": "224502",
+          "name": "中秋赏月",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102245",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "224501",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「我到了才准开始派对！」</color><br/><color=#ef9843>传统月见套餐的付丧神，由芒草与团子化身而成。</color>她在宴会上发表了开幕致辞，可惜最终未被允许做闭幕发言。顺带一提，她的演讲原稿冗长至极，足足写满了3000张纸。<color=#ef9843>信不信由你，这居然为她赢得了不少成为作家的工作邀约。</color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579499+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579499+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2245",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102245_14c5d410ebecc2005c491bccc8e2376e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/102245_hd_853d6cedcb66058e9638771d8e452649.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224501"
+        ],
+        "generation": 0
+      },
+      "name": "月见套餐[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对3名攻击最高的敌人造成{value}点伤害",
+        "id": "2245",
+        "name": "猩红子弹",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1020.0,
+            "scale": 30.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 960,
+          "slvup": 26,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4600,
+        "base_hp": 3230,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13800,
+        "max_hp": 9700,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2248": {
+      "abilities": [
+        {
+          "description": "使普通攻击目标30%概率冻结",
+          "id": "224801",
+          "name": "午夜赠礼",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 30.0,
+                "scale": 0.0,
+                "type": "FROZEN",
+                "unit": "flat",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Freeze"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，自身技能伤害20%增加",
+          "id": "224802",
+          "name": "狂热圣夜",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "first_seen": "2026-08-29",
+              "floors": [
+                80
+              ],
+              "is_current": false
+            }
+          ]
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102248",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "224801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「在这个让我沉醉的狂欢之夜，与你的相遇是命运的安排。我想把自己作为礼物献给你。我身边的位置只为你保留，且专属一人...」</color><br/>独一无二的<color=#ef9843>圣诞老人</color>，能实现每个人的心愿。他应邀参加派对，但直到深夜才赶到，那时大家都已入睡。<color=#ef9843>如果他的甜言蜜语能别这么冗长，听起来或许会迷人得多。</color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.579277+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.579277+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2248",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986998/otogi/android/102248_14c10e77e732c9aa2e35d47b69f58d15.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987010/otogi/cards_hd/102248_hd_b436286237d59a7e2ce8a380cfdc19ef.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "224801"
+        ],
+        "generation": 0
+      },
+      "name": "圣诞老人[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对敌方全体造成{value}点伤害，并使目标{probability}冻结",
+        "id": "2248",
+        "name": "狂欢派对",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "FROZEN",
+              "unit": "flat",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 410.0,
+            "scale": 12.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1445,
+          "slvup": 45,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Freeze",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4465,
+        "base_hp": 3130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13400,
+        "max_hp": 9400,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -77206,6 +80004,609 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2250": {
+      "abilities": [
+        {
+          "description": "身为队长时，己方全体付属性队员暴击率25%增加",
+          "id": "225001",
+          "name": "起死回生",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体付属性队员技能伤害20%增加",
+          "id": "225002",
+          "name": "神剑灵威",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 140,
+              "start": "2026-09-06 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-15 15:00:00",
+              "is_current": false,
+              "pity": 70,
+              "start": "2026-09-12 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102250",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "225001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「死亡并非终结。」</color><br/>日本神话中的<color=#ef9843>宝剑</color>。此剑蕴含着无尽的生机，据说能让亡者自坟墓中苏醒。在当众展现神威之后，醉醺醺的酒吞童子却嘲讽他是冒牌货。两人为此争执了许久，好在佐助从一开始就紧盯着他们，才没有酿成大祸。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580411+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580411+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2250",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987000/otogi/android/102250_8c8c0fe9dfa03a393b73935bfe313357.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987004/otogi/cards_hd/102250_hd_39d6691a0a3af83ca924364739068a4d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225001"
+        ],
+        "generation": 0
+      },
+      "name": "生太刀[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对敌方全体造成{value}点伤害",
+        "id": "2250",
+        "name": "生命之刃",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 888.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 888,
+          "slvup": 26,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4700,
+        "base_hp": 3300,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14100,
+        "max_hp": 9900,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "2252": {
+      "abilities": [
+        {
+          "description": "免疫中毒状态，同时战斗伤害4%增加(除助战外，己方全体仅生效1次)",
+          "id": "225201",
+          "name": "名伶舞步",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 100.0,
+                "type": "IMMUNE",
+                "unit": "flat",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Immunity",
+            "Poison",
+            "DMG Boost"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-01",
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [
+            {
+              "event_id": "185",
+              "event_name": "御灵录Otogi四周年纪念塔",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-09-13 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 35,
+              "start": "2026-09-10 15:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-09-06 15:00:00",
+              "is_current": true,
+              "pity": 25,
+              "start": "2026-08-28 15:00:00"
+            }
+          ],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102252",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "225201",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「你知道Wi-Fi密码是多少吗？」</color><br/><color=#ef9843>单凭娇小的外表，你大概很难看出这个妖怪其实是位技艺纯熟的顶级舞者</color>。她的人气早已远播海外，凭借着超高声誉，如今她定期在世界各地巡回演出。你经常能看到她和五人囃子同台献艺，因为他们是最好的挚友。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.576755+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.576755+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2252",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986999/otogi/android/102252_e89d2723cc6fc05635743e47ec248c0d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987002/otogi/cards_hd/102252_hd_fc947f3a7c4a5a5152e928e636821056.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225201"
+        ],
+        "generation": 0
+      },
+      "name": "跳舞娃娃[四周年]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "2252",
+        "name": "花舞",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "2253": {
+      "abilities": [
+        {
+          "description": "己方全体付属性队员技能伤害20%增加",
+          "id": "225301",
+          "name": "驱邪射击",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 60
+        },
+        {
+          "description": "身为队长时，己方全体付属性队员暴击率20%增加",
+          "id": "225302",
+          "name": "节分大乱斗",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 70
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-10-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-09-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102253",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "225301",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「鬼怪在外！」</color><br/><color=#ef9843>撒豆驱鬼、招来好运的精灵。</color>她所撒出的豆子注入了名为“惩罚”的咒术，专为驱除恶鬼而制。说她对敌人毫不留情都算客气的。她操纵着装有数个大桶的遥控炮台，进行无差别的豆子狂轰滥炸。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-08-29T07:03:34.580874+00:00",
+        "first_seen_version": "d2d2c18",
+        "last_modified": "2026-08-29T07:03:34.580874+00:00",
+        "last_modified_version": "d2d2c18"
+      },
+      "id": "2253",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787986994/otogi/android/102253_f51a6bb0799c816866849b0063111367.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987012/otogi/cards_hd/102253_hd_b8af523dfe1699209bbedc740a4d293d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "225301"
+        ],
+        "generation": 0
+      },
+      "name": "福豆",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方全体{value}点血量，并使目标一定时间内暴击率提升{delay1}",
+        "id": "2253",
+        "name": "鬼在外",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.47,
+              "type": "CHIT",
+              "unit": "percent",
+              "value": 13.8
+            }
+          ],
+          "immediate": {
+            "base": 180.0,
+            "scale": 5.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1145,
+          "slvup": 33,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "Crit Rate"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 3665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 11000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
       },
       "synergies": []
     },
@@ -135177,7 +138578,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
           "is_time_limited": true,
@@ -135292,12 +138693,23 @@
             ],
             "date": "2026-08-18",
             "version": "d5739d7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-08-29",
+            "version": "d2d2c18"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.527513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-08-18T15:40:28.176113+00:00",
-        "last_modified_version": "d5739d7"
+        "last_modified": "2026-08-29T07:03:33.916311+00:00",
+        "last_modified_version": "d2d2c18"
       },
       "id": "513",
       "image_urls": {
@@ -189310,6 +192722,6 @@
     }
   },
   "locale": "zh_CN",
-  "total_cards": 1003,
-  "version": "e374eac"
+  "total_cards": 1018,
+  "version": "d2d2c18"
 }
