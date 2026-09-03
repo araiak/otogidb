@@ -4,7 +4,7 @@ description: "Card-by-card coverage of the off-cadence anniversary special aucti
 date: "2026-09-03"
 author: "Araiak"
 tags: ["analysis", "auction"]
-draft: true
+draft: false
 ---
 
 <div data-lang="en">
