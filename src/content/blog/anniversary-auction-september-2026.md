@@ -67,7 +67,7 @@ Notable Picks:
 
 3rd Anniversary:
 - :card[732] — **Skip** — :card[228] and :card[2253] cost mochi instead of cash and lead better; the current event has stronger anima targets
-- :card[733] — **Only buy if he's leading your Divina team** — the 50% crit damage is a leader ability and it's most of the card, live on one copy. Off-leader he's just a body, and :card[2250] takes that slot across attributes
+- :card[733] — **Only buy if he's leading your Divina team** — the 50% crit damage is a leader ability and it's most of the card, live on one copy. Off-leader he's just a body, and :card[2250] can take that slot across attributes
 
 ---
 
