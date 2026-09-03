@@ -2865,7 +2865,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -2877,7 +2877,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -2928,11 +2928,23 @@
       "description": "<color=#f4e48e>\"I am grateful to you. You are the hero that was foretold.\"</color><br/><color=#ef9843>Original form</color>. A <color=#ef9843>demigoddess</color> from Norse mythology. She is charged by <color=#ef9843>Odin, the god of war,</color> with escorting fallen heroes to Valhalla. She was revived by a certain ghost agent.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "stats.attribute",
+                "new": 1,
+                "old": 3
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.580190+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.580190+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-03T07:18:27.153342+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "1129",
       "image_urls": {
@@ -2984,8 +2996,8 @@
         ]
       },
       "stats": {
-        "attribute": 3,
-        "attribute_name": "Anima",
+        "attribute": 1,
+        "attribute_name": "Divina",
         "base_atk": 4265,
         "base_hp": 2865,
         "cost": 1,
@@ -43901,7 +43913,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -43913,42 +43925,42 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -44142,7 +44154,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -44154,7 +44166,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -53676,7 +53688,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -53693,7 +53705,7 @@
             {
               "currency": "gApple",
               "end": "2026-08-31 23:59:59",
-              "is_current": true,
+              "is_current": false,
               "limit": 0,
               "price": 65,
               "start": "2026-07-01 00:00:00"
@@ -78129,7 +78141,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78141,7 +78153,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -78153,7 +78165,7 @@
               "floors": [
                 64
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -78320,7 +78332,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -78632,7 +78644,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -78804,7 +78816,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78816,28 +78828,28 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -78850,7 +78862,7 @@
               "floors": [
                 16
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -79001,7 +79013,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79013,49 +79025,49 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -79068,7 +79080,7 @@
               "floors": [
                 32
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -79218,7 +79230,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79230,49 +79242,49 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -79285,7 +79297,7 @@
               "floors": [
                 48
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -79468,7 +79480,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79480,56 +79492,56 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -79710,7 +79722,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79722,7 +79734,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -79734,7 +79746,7 @@
               "floors": [
                 80
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -80090,7 +80102,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -80102,7 +80114,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -80288,7 +80300,7 @@
             {
               "event_id": "185",
               "event_name": "Otogi 4th Anniversary Tower",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -80485,7 +80497,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -80502,7 +80514,7 @@
             {
               "currency": "gApple",
               "end": "2026-10-31 23:59:59",
-              "is_current": false,
+              "is_current": true,
               "limit": 0,
               "price": 65,
               "start": "2026-09-01 00:00:00"
@@ -143239,9 +143251,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143338,12 +143350,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.271714+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.564856+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "536",
       "image_urls": {
@@ -143454,9 +143482,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143553,12 +143581,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.273490+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.566297+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "537",
       "image_urls": {
@@ -143669,9 +143713,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143768,12 +143812,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.275229+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.567637+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "538",
       "image_urls": {
@@ -146072,9 +146132,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -146171,12 +146231,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.295219+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.583738+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "550",
       "image_urls": {
@@ -146279,9 +146355,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -146370,12 +146446,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.296801+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.585049+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "551",
       "image_urls": {
@@ -146478,9 +146570,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -146569,12 +146661,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.298348+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.586413+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "552",
       "image_urls": {
@@ -146709,9 +146817,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -146808,12 +146916,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.300343+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.588074+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "553",
       "image_urls": {
@@ -146921,9 +147045,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-04-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 20000,
           "price_min": 200,
@@ -147012,12 +147136,28 @@
             ],
             "date": "2026-04-21",
             "version": "6ff5af5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-04-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.535052+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-04-21T10:06:00.301904+00:00",
-        "last_modified_version": "6ff5af5"
+        "last_modified": "2026-09-03T07:18:26.589398+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "554",
       "image_urls": {
@@ -183206,9 +183346,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -183357,12 +183497,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.952169+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.833055+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "732",
       "image_urls": {
@@ -183497,9 +183653,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -183648,12 +183804,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.954055+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.834733+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "733",
       "image_urls": {
@@ -183788,9 +183960,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -183939,12 +184111,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.955918+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.836318+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "734",
       "image_urls": {
@@ -185469,9 +185657,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -185620,12 +185808,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.965668+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.844622+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "740",
       "image_urls": {
@@ -185781,9 +185985,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -185932,12 +186136,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.967687+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.846399+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "741",
       "image_urls": {
@@ -186052,9 +186272,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-03-18 15:00:00",
+          "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -186178,12 +186398,28 @@
             ],
             "date": "2026-03-19",
             "version": "eaf7a7e"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-08 15:00:00",
+                "old": "2026-03-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-09-03",
+            "version": "e9dfd0b"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-19T23:44:09.969216+00:00",
-        "last_modified_version": "eaf7a7e"
+        "last_modified": "2026-09-03T07:18:26.847748+00:00",
+        "last_modified_version": "e9dfd0b"
       },
       "id": "742",
       "image_urls": {
@@ -192722,5 +192958,5 @@
     }
   },
   "total_cards": 1018,
-  "version": "fd57ea8"
+  "version": "e9dfd0b"
 }
