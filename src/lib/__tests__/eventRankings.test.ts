@@ -6,6 +6,7 @@ import {
   linearRegression,
   buildTrendData,
   buildLogAxis,
+  buildNextEventPredictions,
 } from '../eventRankings';
 import type { EventCutoff } from '../eventRankings';
 
@@ -309,5 +310,28 @@ describe('buildLogAxis', () => {
     expect(buildLogAxis([0, -5, 1500])).toEqual({ domain: [1e3, 1500], ticks: [1e3] });
     expect(buildLogAxis([])).toBeNull();
     expect(buildLogAxis([0])).toBeNull();
+  });
+});
+
+describe('buildTrendData with an outlier', () => {
+  it('stays positive where a raw-value fit would go negative', () => {
+    // Real T1 first-half story scores: the 4th Anniversary spike drags the
+    // fitted line negative at the first event.
+    const chartData = [1431485, 1442562, 1852477, 2430938, 10056894].map((v, i) => ({
+      name: `e${i}`,
+      T1: v,
+    }));
+    const tiers = [{ key: 'T1', rank_min: 1, rank_max: 70, rangeLabel: '#1–70' }];
+    const trend = buildTrendData(chartData, tiers, new Set(['T1']));
+    // A raw-value regression puts this first point at -204,968, which blanks the
+    // log axis. Fitted in log space every point is positive and rising.
+    expect(trend.every(r => (r.trend_T1 as number) > 0)).toBe(true);
+    expect(trend[0].trend_T1! < trend[4].trend_T1!).toBe(true);
+
+    // And the prediction stays near the recent events rather than being dragged
+    // past the outlier itself.
+    const next = buildNextEventPredictions(chartData, tiers).T1!;
+    expect(next).toBeGreaterThan(2_430_938);
+    expect(next).toBeLessThan(10_056_894);
   });
 });
