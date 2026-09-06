@@ -48,6 +48,10 @@ export default function LocaleSwitcher() {
     );
   }
 
+  // suppressHydrationWarning below: this button's label is the island's only SSR
+  // text, and page translators / extensions rewrite text nodes before a
+  // client:load island hydrates, which throws React #418 and regenerates the
+  // tree. The effect above sets the real code on mount regardless.
   const displayCode = currentLocale.startsWith('zh-') ? 'ZH' : currentLocale.toUpperCase();
 
   return (
@@ -56,6 +60,7 @@ export default function LocaleSwitcher() {
         onClick={(e) => { e.stopPropagation(); setOpen((o) => !o); }}
         className="btn-secondary px-2 py-1 rounded-md text-xs font-medium uppercase touch-target"
         aria-label="Change language"
+        suppressHydrationWarning
       >
         {displayCode}
       </button>

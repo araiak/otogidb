@@ -93,6 +93,32 @@ export function buildChartData(
   });
 }
 
+// --- Log Y-axis domain ---
+
+/**
+ * Decade-aligned domain and ticks for a log-scaled Y axis.
+ *
+ * Recharts' `domain={['auto','auto']}` on a log scale silently yields no ticks
+ * for some data ranges (it nice-rounds linearly), which blanks the axis. Pinning
+ * the domain to whole powers of ten and supplying the ticks ourselves keeps the
+ * axis labelled whatever the data spans. Returns null when there is nothing
+ * positive to plot (a log scale cannot show <= 0).
+ */
+export function buildLogAxis(
+  values: number[],
+): { domain: [number, number]; ticks: number[] } | null {
+  const positive = values.filter(v => typeof v === 'number' && isFinite(v) && v > 0);
+  if (!positive.length) return null;
+  const max = Math.max(...positive);
+  const lo = Math.floor(Math.log10(Math.min(...positive)));
+  const hi = Math.floor(Math.log10(max));
+  const ticks: number[] = [];
+  for (let e = lo; e <= hi; e++) ticks.push(10 ** e);
+  // Top of the axis is the data itself, not the next decade up, so a max that
+  // just clears a power of ten does not waste half the plot on empty space.
+  return { domain: [10 ** lo, max], ticks };
+}
+
 // --- Linear regression ---
 
 /**
@@ -115,6 +141,27 @@ export function linearRegression(
   return { slope, intercept };
 }
 
+// --- Log-space fitting ---
+
+/**
+ * Cutoff scores grow multiplicatively, and the chart plots them on a log axis,
+ * so every trend and prediction is fitted to log(score) and mapped back with
+ * exp(). A single blowout event (an anniversary, say) then shifts the line by a
+ * ratio instead of dragging a raw-value fit hundreds of thousands of points —
+ * and the fitted line is positive by construction, which a log axis requires.
+ */
+function logPoints(
+  chartData: Record<string, string | number>[],
+  tierKey: string,
+): { x: number; y: number }[] {
+  const points: { x: number; y: number }[] = [];
+  chartData.forEach((row, i) => {
+    const y = row[tierKey];
+    if (typeof y === 'number' && isFinite(y) && y > 0) points.push({ x: i, y: Math.log(y) });
+  });
+  return points;
+}
+
 // --- Trend data construction ---
 
 export function buildTrendData(
@@ -126,11 +173,8 @@ export function buildTrendData(
     const trendRow: Record<string, number | undefined> = {};
     for (const tier of tiers) {
       if (!activeTiers.has(tier.key)) continue;
-      const points = chartData
-        .map((r, i) => ({ x: i, y: r[tier.key] as number }))
-        .filter(p => p.y != null && !isNaN(p.y));
-      const reg = linearRegression(points);
-      if (reg) trendRow[`trend_${tier.key}`] = reg.slope * idx + reg.intercept;
+      const reg = linearRegression(logPoints(chartData, tier.key));
+      if (reg) trendRow[`trend_${tier.key}`] = Math.exp(reg.slope * idx + reg.intercept);
     }
     return trendRow;
   });
@@ -139,9 +183,9 @@ export function buildTrendData(
 // --- Next-event predictions ---
 
 /**
- * Extrapolate the trend line one step beyond the last data point to predict
- * the cutoff score for the next event. Returns null for a tier if there are
- * fewer than 2 data points or if the predicted value is non-positive.
+ * Extrapolate the log-space trend one step beyond the last data point to
+ * predict the cutoff score for the next event. Returns null for a tier with
+ * fewer than 2 usable data points.
  */
 export function buildNextEventPredictions(
   chartData: Record<string, string | number>[],
@@ -150,16 +194,10 @@ export function buildNextEventPredictions(
   const nextIdx = chartData.length;
   const predictions: Record<string, number | null> = {};
   for (const tier of tiers) {
-    const points = chartData
-      .map((r, i) => ({ x: i, y: r[tier.key] as number }))
-      .filter(p => p.y != null && !isNaN(p.y));
-    const reg = linearRegression(points);
-    if (reg) {
-      const value = Math.round(reg.slope * nextIdx + reg.intercept);
-      predictions[tier.key] = value > 0 ? value : null;
-    } else {
-      predictions[tier.key] = null;
-    }
+    const reg = linearRegression(logPoints(chartData, tier.key));
+    predictions[tier.key] = reg
+      ? Math.round(Math.exp(reg.slope * nextIdx + reg.intercept))
+      : null;
   }
   return predictions;
 }
@@ -170,19 +208,21 @@ export interface PredictionRange {
   predicted: number;
   low: number;
   high: number;
-  /** Standard deviation of residuals from the trend line. */
+  /** Residual spread as a ratio: the range is predicted ÷ and × this factor. */
   stdDev: number;
   /** Number of historical data points used. */
   n: number;
 }
 
 /**
- * Extrapolate the trend line one step ahead and express uncertainty as ±1
+ * Extrapolate the log-space trend one step ahead and express uncertainty as ±1
  * standard deviation of the residuals from that trend line (using n−2 degrees
  * of freedom, which is the standard error for a simple linear regression).
+ * Because the fit is logarithmic the interval is multiplicative, so a noisy
+ * tier widens the range proportionally instead of by a flat score offset.
  *
- * Returns null for a tier when there are fewer than 3 data points (need at
- * least n−2 = 1 degree of freedom) or if the predicted value is non-positive.
+ * Returns null for a tier with fewer than 3 usable data points (need at least
+ * n−2 = 1 degree of freedom).
  */
 export function buildNextEventPredictionRanges(
   chartData: Record<string, string | number>[],
@@ -192,23 +232,18 @@ export function buildNextEventPredictionRanges(
   const ranges: Record<string, PredictionRange | null> = {};
 
   for (const tier of tiers) {
-    const points = chartData
-      .map((r, i) => ({ x: i, y: r[tier.key] as number }))
-      .filter(p => p.y != null && !isNaN(p.y));
-
+    const points = logPoints(chartData, tier.key);
     const reg = linearRegression(points);
     if (!reg || points.length < 3) {
       ranges[tier.key] = null;
       continue;
     }
 
-    const predicted = Math.round(reg.slope * nextIdx + reg.intercept);
-    if (predicted <= 0) {
-      ranges[tier.key] = null;
-      continue;
-    }
+    const fit = reg.slope * nextIdx + reg.intercept;
 
-    // Residual standard deviation (n−2 degrees of freedom for linear regression)
+    // Residual standard deviation (n−2 degrees of freedom for linear regression).
+    // In log space this is a ratio, so the range is the prediction multiplied and
+    // divided by it rather than offset by a fixed number of points.
     const n = points.length;
     const sumSqResiduals = points.reduce((sum, p) => {
       const fitted = reg.slope * p.x + reg.intercept;
@@ -217,10 +252,10 @@ export function buildNextEventPredictionRanges(
     const stdDev = Math.sqrt(sumSqResiduals / (n - 2));
 
     ranges[tier.key] = {
-      predicted,
-      low: Math.max(1, Math.round(predicted - stdDev)),
-      high: Math.round(predicted + stdDev),
-      stdDev: Math.round(stdDev),
+      predicted: Math.round(Math.exp(fit)),
+      low: Math.max(1, Math.round(Math.exp(fit - stdDev))),
+      high: Math.round(Math.exp(fit + stdDev)),
+      stdDev: Math.round(Math.exp(stdDev) * 100) / 100,
       n,
     };
   }

@@ -21,6 +21,7 @@ import {
   buildTrendData,
   buildNextEventPredictions,
   buildNextEventPredictionRanges,
+  buildLogAxis,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -180,6 +181,18 @@ function RankingSubChart({
     [chartData, trendData],
   );
 
+  // Axis bounds come from the real cutoffs only, so toggling tiers or the trend
+  // lines' extrapolation cannot move the scale.
+  const logAxis = useMemo(
+    () =>
+      buildLogAxis(
+        chartData.flatMap(row =>
+          tiers.map(t => row[t.key]).filter((v): v is number => typeof v === 'number'),
+        ),
+      ),
+    [chartData, tiers],
+  );
+
   const nextEventPredictions = useMemo(
     () => buildNextEventPredictionRanges(chartData, tiers),
     [chartData, tiers],
@@ -248,7 +261,9 @@ function RankingSubChart({
             />
             <YAxis
               scale="log"
-              domain={['auto', 'auto']}
+              domain={logAxis ? logAxis.domain : ['auto', 'auto']}
+              ticks={logAxis ? logAxis.ticks : undefined}
+              allowDataOverflow={false}
               tickFormatter={formatScore}
               tick={{ fontSize: 11 }}
               width={65}
@@ -342,11 +357,11 @@ function RankingSubChart({
                 return (
                   <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums text-secondary italic">
                     {range != null ? (
-                      <span title={`±1 std dev over ${range.n} events (σ = ${formatScore(range.stdDev)})`}>
+                      <span title={`±1 std dev over ${range.n} events (σ = ×${range.stdDev})`}>
                         {formatScore(range.low)}–{formatScore(range.high)}
                       </span>
                     ) : linear != null ? (
-                      <span title="Linear trend projection from 2 data points">
+                      <span title="Log-scale trend projection from 2 data points">
                         ~{formatScore(linear)}
                       </span>
                     ) : (
@@ -363,10 +378,10 @@ function RankingSubChart({
       {(hasLinearPrediction || hasRangePrediction) && (
         <p className="text-xs text-secondary mt-2 leading-relaxed">
           {hasLinearPrediction && !hasRangePrediction
-            ? '* Linear trend projection from 2 data points — treat as a rough extrapolation only. Range estimate will appear once a 3rd event is recorded.'
+            ? '* Projected from a trend fitted on a log scale (growth tracked as a ratio, so one blowout event skews it far less) over just 2 data points — treat as a rough extrapolation only. A range estimate will appear once a 3rd event is recorded.'
             : hasRangePrediction && !hasLinearPrediction
-              ? '* Predicted range is trend-line ± one standard deviation of historical residuals — for rough planning reference. With a small pool of events, the range may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.'
-              : '* Values prefixed ~ are linear trend projections (2 data points). Range estimates (low–high) use trend-line ± one standard deviation of historical residuals. Both are for rough planning reference only.'}
+              ? '* The trend is fitted on a log scale, so it tracks growth as a ratio and one blowout event skews it far less. The range is that trend divided and multiplied by one standard deviation of historical residuals (a ratio, not a fixed score), so it widens with the numbers instead of by a flat amount — rough planning reference only. With a small pool of events it may not capture outliers: exceptionally strong or weak reward cards can push actual cutoffs well outside these bounds.'
+              : '* Everything here is fitted on a log scale, tracking growth as a ratio so one blowout event skews it far less. Values prefixed ~ are bare trend projections (2 data points). Ranges (low–high) are that trend divided and multiplied by one standard deviation of historical residuals — a ratio, not a fixed score. Both are for rough planning reference only.'}
         </p>
       )}
     </div>

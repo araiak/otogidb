@@ -43,6 +43,13 @@ const stockInfo = {
  * Auction stock badge with client-side hydration.
  * Shows static data initially, then fetches live stock_level from R2.
  */
+/*
+ * suppressHydrationWarning on the text-bearing element: this island's SSR text is
+ * the only visible text in it, and page translators / extensions rewrite text
+ * nodes before a client:load island hydrates. React then throws #418 and
+ * regenerates the tree. The state here is prop-seeded and refreshed from R2 on
+ * mount anyway, so accepting the DOM's text costs nothing.
+ */
 export default function AuctionStockBadge({
   cardId,
   initialStockLevel,
@@ -97,6 +104,7 @@ export default function AuctionStockBadge({
     <span
       className={`px-2 py-0.5 text-xs rounded ${style.bg} ${style.text} font-medium cursor-help inline-flex items-center gap-1`}
       title={style.tooltip}
+      suppressHydrationWarning
     >
       {style.label}
       {isLive && (
