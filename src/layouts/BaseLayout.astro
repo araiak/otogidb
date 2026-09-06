@@ -268,17 +268,24 @@ const maintenanceMsg = maintenanceMessages[currentLocale] ?? maintenanceMessages
           disable_session_recording: true,
           capture_pageview: true,
           capture_exceptions: true,
-          // Chrome raises "ResizeObserver loop completed with undelivered
-          // notifications" whenever an observer callback dirties layout again in
-          // the same frame. @floating-ui/react's autoUpdate (card + glossary hover
-          // popups) and recharts both do that by design; the browser just defers
-          // delivery to the next frame, so it is a notice, not a fault. Drop it
-          // rather than let it drown the real exceptions.
+          // Noise filter for window.onerror reports we can never act on:
+          //  - "ResizeObserver loop completed with undelivered notifications":
+          //    Chrome raises this whenever an observer callback dirties layout
+          //    again in the same frame. @floating-ui/react's autoUpdate (card +
+          //    glossary hover popups) and recharts both do that by design; the
+          //    browser defers delivery a frame, so it is a notice, not a fault.
+          //  - "Script error.": the opaque message the browser substitutes when a
+          //    cross-origin script throws. Our own bundles are same-origin (and
+          //    the PostHog SDK loads with crossorigin=anonymous), so these come
+          //    from browser extensions and injected third-party scripts, and
+          //    arrive with no message, file or stack.
           before_send: function (event) {
             if (event && event.event === '$exception') {
               var list = (event.properties && event.properties.$exception_list) || [];
               for (var i = 0; i < list.length; i++) {
-                if (/ResizeObserver loop/.test(list[i] && list[i].value || '')) return null;
+                var value = ((list[i] && list[i].value) || '').trim();
+                if (/ResizeObserver loop/.test(value)) return null;
+                if (/^Script error\.?$/.test(value)) return null;
               }
             }
             return event;

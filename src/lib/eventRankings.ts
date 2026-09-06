@@ -93,6 +93,32 @@ export function buildChartData(
   });
 }
 
+// --- Log Y-axis domain ---
+
+/**
+ * Decade-aligned domain and ticks for a log-scaled Y axis.
+ *
+ * Recharts' `domain={['auto','auto']}` on a log scale silently yields no ticks
+ * for some data ranges (it nice-rounds linearly), which blanks the axis. Pinning
+ * the domain to whole powers of ten and supplying the ticks ourselves keeps the
+ * axis labelled whatever the data spans. Returns null when there is nothing
+ * positive to plot (a log scale cannot show <= 0).
+ */
+export function buildLogAxis(
+  values: number[],
+): { domain: [number, number]; ticks: number[] } | null {
+  const positive = values.filter(v => typeof v === 'number' && isFinite(v) && v > 0);
+  if (!positive.length) return null;
+  const max = Math.max(...positive);
+  const lo = Math.floor(Math.log10(Math.min(...positive)));
+  const hi = Math.floor(Math.log10(max));
+  const ticks: number[] = [];
+  for (let e = lo; e <= hi; e++) ticks.push(10 ** e);
+  // Top of the axis is the data itself, not the next decade up, so a max that
+  // just clears a power of ten does not waste half the plot on empty space.
+  return { domain: [10 ** lo, max], ticks };
+}
+
 // --- Linear regression ---
 
 /**

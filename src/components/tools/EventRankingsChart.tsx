@@ -21,6 +21,7 @@ import {
   buildTrendData,
   buildNextEventPredictions,
   buildNextEventPredictionRanges,
+  buildLogAxis,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -180,6 +181,18 @@ function RankingSubChart({
     [chartData, trendData],
   );
 
+  // Axis bounds come from the real cutoffs only, so toggling tiers or the trend
+  // lines' extrapolation cannot move the scale.
+  const logAxis = useMemo(
+    () =>
+      buildLogAxis(
+        chartData.flatMap(row =>
+          tiers.map(t => row[t.key]).filter((v): v is number => typeof v === 'number'),
+        ),
+      ),
+    [chartData, tiers],
+  );
+
   const nextEventPredictions = useMemo(
     () => buildNextEventPredictionRanges(chartData, tiers),
     [chartData, tiers],
@@ -248,7 +261,9 @@ function RankingSubChart({
             />
             <YAxis
               scale="log"
-              domain={['auto', 'auto']}
+              domain={logAxis ? logAxis.domain : ['auto', 'auto']}
+              ticks={logAxis ? logAxis.ticks : undefined}
+              allowDataOverflow={false}
               tickFormatter={formatScore}
               tick={{ fontSize: 11 }}
               width={65}

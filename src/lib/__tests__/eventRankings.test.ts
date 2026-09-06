@@ -5,6 +5,7 @@ import {
   buildChartData,
   linearRegression,
   buildTrendData,
+  buildLogAxis,
 } from '../eventRankings';
 import type { EventCutoff } from '../eventRankings';
 
@@ -292,5 +293,21 @@ describe('buildTrendData', () => {
 
     const trends = buildTrendData(chartData, tiers, new Set<string>());
     expect(Object.keys(trends[0])).toHaveLength(0);
+  });
+});
+
+describe('buildLogAxis', () => {
+  it('spans whole decades covering the data', () => {
+    // Real first-half story range once the 4th Anniversary event landed.
+    expect(buildLogAxis([82846, 10056894])).toEqual({
+      domain: [1e4, 10056894],
+      ticks: [1e4, 1e5, 1e6, 1e7],
+    });
+  });
+
+  it('ignores values a log scale cannot plot', () => {
+    expect(buildLogAxis([0, -5, 1500])).toEqual({ domain: [1e3, 1500], ticks: [1e3] });
+    expect(buildLogAxis([])).toBeNull();
+    expect(buildLogAxis([0])).toBeNull();
   });
 });
