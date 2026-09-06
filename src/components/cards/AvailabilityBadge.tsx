@@ -17,6 +17,13 @@ interface AvailabilityBadgeProps {
  * Uses currently_available directly from R2 - already calculated by pipeline
  * using compute_card_availability() from availability_service.py
  */
+/*
+ * suppressHydrationWarning on the text-bearing element: this island's SSR text is
+ * the only visible text in it, and page translators / extensions rewrite text
+ * nodes before a client:load island hydrates. React then throws #418 and
+ * regenerates the tree. The state here is prop-seeded and refreshed from R2 on
+ * mount anyway, so accepting the DOM's text costs nothing.
+ */
 export default function AvailabilityBadge({
   cardId,
   initialAvailable,
@@ -70,6 +77,7 @@ export default function AvailabilityBadge({
       <span
         className="px-2 py-0.5 text-xs rounded-full bg-green-500/20 text-green-700 dark:text-green-400 font-medium cursor-help inline-flex items-center gap-1"
         title="Currently obtainable through at least one method"
+        suppressHydrationWarning
       >
         Available Now
         {isLive && (
@@ -86,6 +94,7 @@ export default function AvailabilityBadge({
     <span
       className="px-2 py-0.5 text-xs rounded-full bg-red-500/20 text-red-700 dark:text-red-400 font-medium cursor-help inline-flex items-center gap-1"
       title="Not currently obtainable - may return in future events or banners"
+      suppressHydrationWarning
     >
       Not Available
       {isLive && (

@@ -19,6 +19,13 @@ interface AuctionEstimateProps {
  *
  * This ensures the estimate only shows for cards that have never appeared on auction.
  */
+/*
+ * suppressHydrationWarning on the text-bearing element: this island's SSR text is
+ * the only visible text in it, and page translators / extensions rewrite text
+ * nodes before a client:load island hydrates. React then throws #418 and
+ * regenerates the tree. The state here is prop-seeded and refreshed from R2 on
+ * mount anyway, so accepting the DOM's text costs nothing.
+ */
 export default function AuctionEstimate({
   cardId,
   estimatedDate,
@@ -84,7 +91,7 @@ export default function AuctionEstimate({
     return (
       <div className="mt-2 pt-2 border-t border-gray-200 dark:border-gray-700">
         <div className="flex items-center gap-1.5">
-          <span className="text-xs text-secondary">Checking auction status...</span>
+          <span className="text-xs text-secondary" suppressHydrationWarning>Checking auction status...</span>
           <span className="w-1.5 h-1.5 rounded-full bg-yellow-500 animate-pulse" />
         </div>
       </div>
