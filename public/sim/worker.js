@@ -47,11 +47,16 @@ async function boot() {
   pyodide = await loadPyodide({ indexURL: PYODIDE_URL });
 
   progress('engine', 'Loading simulator');
-  // no-cache, not no-store: the bundle is a build artifact that changes whenever the
-  // engine does, and a stale copy fails as missing FIELDS in the result rather than as
-  // a load error -- which surfaces as the page blanking on render. It is ~150 KB, so
-  // revalidating costs nothing next to the 6 MB of card data below.
-  const zip = await fetch('/sim/otogi_sim.zip', { cache: 'no-cache' });
+  // The bundle filename carries a hash of its contents, so the zip itself can be
+  // cached hard and forever: a new engine build produces a new name. Only the tiny
+  // manifest is revalidated. A stale bundle does not fail loudly -- it surfaces as
+  // missing FIELDS in the result, which blanks the page on render -- so the freshness
+  // check has to be something we cannot forget, not a cache header we hope is right.
+  const mf = await fetch('/sim/manifest.json', { cache: 'no-cache' });
+  if (!mf.ok) throw new Error(`simulator manifest: HTTP ${mf.status}`);
+  const { engine } = await mf.json();
+  if (!engine) throw new Error('simulator manifest names no engine bundle');
+  const zip = await fetch(`/sim/${engine}`, { cache: 'force-cache' });
   if (!zip.ok) throw new Error(`simulator bundle: HTTP ${zip.status}`);
   await pyodide.unpackArchive(await zip.arrayBuffer(), 'zip', {
     extractDir: '/lib/otogi',
