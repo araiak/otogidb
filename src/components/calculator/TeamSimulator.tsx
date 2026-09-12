@@ -451,6 +451,13 @@ export default function TeamSimulator() {
               group repeats roughly every 20s on its own. Same group means fire together;
               to keep two cards apart, put them in different groups.
             </p>
+            <p className="text-[10px] text-secondary/80 mt-1 leading-relaxed">
+              <span className="text-secondary">Stuns and silences cost casts.</span> A card
+              that is CC'd when its group fires is stepped over rather than holding the
+              group up, and CC also pauses its orb-cost decay — so against a boss that
+              applies it, expect fewer casts than a clean 20s cadence would suggest. The
+              timeline shows each one.
+            </p>
           </div>
 
           {/* The sub-tabs are desktop-only: on a phone Timeline is a step of its own
@@ -481,7 +488,7 @@ export default function TeamSimulator() {
             {result && (
               <span className="ml-auto text-[10px] text-secondary pb-1.5">
                 {tab === 'timeline'
-                  ? `first run · ${result.timeline?.length ?? 0} events`
+                  ? `example run · ${result.timeline?.length ?? 0} events`
                   : 'after abilities, bonds and assists — before anyone acts'}
               </span>
             )}

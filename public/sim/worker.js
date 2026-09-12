@@ -107,7 +107,18 @@ self.onmessage = async (e) => {
       // The engine seeds a module-global RNG and installs the cast policy on a
       // process-wide singleton, so one battle at a time. The page serialises
       // requests; this worker never runs two concurrently.
-      const out = runFn(msg.payload);
+      // Pyodide turns this JS function into something Python can call, so the seed
+      // loop inside spec.score can report which run it is on. A ten-seed run is ten
+      // seconds of otherwise silent work.
+      const onStep = (done, total) =>
+        self.postMessage({
+          type: 'progress',
+          phase: 'run',
+          detail: done >= total ? 'Finishing' : `Run ${done} of ${total - 1}`,
+          done,
+          total,
+        });
+      const out = runFn(msg.payload, onStep);
       self.postMessage({ type: 'result', id: msg.id, data: JSON.parse(out) });
     } catch (err) {
       self.postMessage({ type: 'error', id: msg.id, message: String(err) });

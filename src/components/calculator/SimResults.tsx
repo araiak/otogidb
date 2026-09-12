@@ -15,7 +15,8 @@ const fmt = (n: number) => Math.round(n).toLocaleString();
 /** 33,524,837 -> "33.5M" — the rail is too narrow for the full figure. */
 function short(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
-  if (n >= 1_000) return `${(n / 1_000).toFixed(0)}K`;
+  if (n >= 10_000) return `${(n / 1_000).toFixed(0)}K`;
+  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
   return String(Math.round(n));
 }
 
@@ -71,27 +72,106 @@ export function SimResults({ result, running, error, nameOf }: SimResultsProps) 
       </div>
 
       <div>
-        <div className="text-xs text-secondary mb-1.5">Damage by card</div>
+        <div className="flex items-baseline gap-2 mb-1.5">
+          <span className="text-xs text-secondary">Damage by card</span>
+          {/* The headline mean averages every run; this breakdown comes from the one
+              traced battle, so say which is which rather than letting them look like
+              the same number. */}
+          <span className="text-[10px] text-secondary/60">example run</span>
+        </div>
         <div className="flex flex-col gap-2">
-          {byDamage.map((c) => (
-            <div key={c.slot}>
-              <div className="flex items-baseline text-xs">
-                <span className="text-secondary mr-1">{slotIdFor(c.slot)}</span>
-                <span className="truncate text-primary" title={nameOf(c.slot)}>
-                  {nameOf(c.slot)}
+          {byDamage.map((c) => {
+            // The bar does double duty: its LENGTH is this card's share of the team's
+            // damage, and its two segments are how that damage was dealt. One graphic
+            // answers both "who carried" and "on autos or on casts".
+            const autoTot = c.auto?.total ?? 0;
+            const skillTot = c.skill?.total ?? 0;
+            const own = autoTot + skillTot || 1;
+            const row = (
+              kind: 'auto' | 'skill',
+              d: NonNullable<typeof c.auto>,
+              dim: boolean
+            ) => (
+              <>
+                <span className="flex items-center gap-1 text-secondary/70">
+                  <span
+                    style={{
+                      display: 'inline-block',
+                      width: 6,
+                      height: 6,
+                      borderRadius: 999,
+                      background: dim
+                        ? 'color-mix(in srgb, var(--color-accent) 45%, transparent)'
+                        : 'var(--color-accent)',
+                    }}
+                  />
+                  {kind}
                 </span>
-                <span className="ml-auto pl-2 text-secondary tabular-nums">
-                  {short(c.damage)}
+                <span className="text-right text-primary/80">{short(d.total)}</span>
+                <span className="text-right">
+                  {d.n}×{short(d.mean)}
                 </span>
-              </div>
-              <div className="h-1.5 mt-1 rounded-full bg-surface overflow-hidden">
+                <span
+                  className="text-right text-secondary/50"
+                  title={`${d.min.toLocaleString()} – ${d.max.toLocaleString()}`}
+                >
+                  {short(d.min)}–{short(d.max)}
+                </span>
+              </>
+            );
+            return (
+              <div key={c.slot}>
+                <div className="flex items-baseline text-xs">
+                  <span className="text-secondary mr-1">{slotIdFor(c.slot)}</span>
+                  <span className="truncate text-primary" title={nameOf(c.slot)}>
+                    {nameOf(c.slot)}
+                  </span>
+                  <span className="ml-auto pl-2 text-secondary tabular-nums">
+                    {short(c.damage)}
+                  </span>
+                </div>
+                {/* Inline styles, not utilities: global.css carries unlayered rules
+                    and in Tailwind v4 unlayered CSS beats @layer utilities, so the
+                    bar's height and colours were being dropped and it rendered as
+                    nothing at all. */}
                 <div
-                  className="h-full bg-accent rounded-full"
-                  style={{ width: `${(c.damage / total) * 100}%` }}
-                />
+                  style={{
+                    height: 8,
+                    marginTop: 4,
+                    borderRadius: 999,
+                    background: 'var(--color-surface)',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div
+                    style={{
+                      display: 'flex',
+                      height: '100%',
+                      width: `${(c.damage / total) * 100}%`,
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: `${(autoTot / own) * 100}%`,
+                        background: 'color-mix(in srgb, var(--color-accent) 45%, transparent)',
+                      }}
+                      title={`auto ${short(autoTot)}`}
+                    />
+                    <div
+                      style={{ width: `${(skillTot / own) * 100}%`, background: 'var(--color-accent)' }}
+                      title={`skill ${short(skillTot)}`}
+                    />
+                  </div>
+                </div>
+                {(c.auto || c.skill) && (
+                  <div className="mt-1 grid grid-cols-[2.4rem_2.6rem_3.8rem_1fr] gap-x-2 text-[10px] text-secondary/80 tabular-nums">
+                    {c.auto && row('auto', c.auto, true)}
+                    {c.skill && row('skill', c.skill, false)}
+                  </div>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

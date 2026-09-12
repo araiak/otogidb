@@ -83,6 +83,15 @@ export interface SimEvent {
   snapshot?: Partial<SimCardStats> | null;
 }
 
+/** Damage a card dealt with one kind of hit, over the traced (seed 0) battle. */
+export interface DamageSpread {
+  n: number;
+  total: number;
+  min: number;
+  max: number;
+  mean: number;
+}
+
 export interface SimResult {
   mean: number;
   sd: number;
@@ -92,7 +101,13 @@ export interface SimResult {
   wiped: boolean;
   deaths: number;
   survival_time: number;
-  per_card: { slot: string; damage: number }[];
+  per_card: {
+    slot: string;
+    damage: number;
+    /** Absent when the card never landed that kind of hit. */
+    auto?: DamageSpread;
+    skill?: DamageSpread;
+  }[];
   /** Cast timestamps per slot, from the seed-0 battle. */
   casts: Record<string, number[]>;
   /** Followable play-by-play of the seed-0 battle. */
@@ -100,13 +115,15 @@ export interface SimResult {
   stats: SimCardStats[];
 }
 
-export type SimPhase = 'runtime' | 'engine' | 'data' | 'init';
+export type SimPhase = 'runtime' | 'engine' | 'data' | 'init' | 'run';
 
 export interface SimClient {
   /** Start downloading the runtime. Safe to call repeatedly. */
   warmup(): Promise<void>;
   run(req: SimRequest): Promise<SimResult>;
-  onProgress(cb: (phase: SimPhase, detail: string) => void): () => void;
+  onProgress(
+    cb: (phase: SimPhase, detail: string, done?: number, total?: number) => void
+  ): () => void;
   terminate(): void;
 }
 
@@ -117,7 +134,9 @@ export function createSimClient(): SimClient {
     number,
     { resolve: (r: SimResult) => void; reject: (e: Error) => void }
   >();
-  const listeners = new Set<(phase: SimPhase, detail: string) => void>();
+  const listeners = new Set<
+    (phase: SimPhase, detail: string, done?: number, total?: number) => void
+  >();
   let nextId = 1;
   let ready: Promise<void> | null = null;
   let readyResolve: (() => void) | null = null;
@@ -126,7 +145,7 @@ export function createSimClient(): SimClient {
   worker.onmessage = (e: MessageEvent) => {
     const msg = e.data || {};
     if (msg.type === 'progress') {
-      listeners.forEach((cb) => cb(msg.phase, msg.detail));
+      listeners.forEach((cb) => cb(msg.phase, msg.detail, msg.done, msg.total));
       return;
     }
     if (msg.type === 'ready') {
