@@ -17,7 +17,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
-    "validate:delta": "tsx ./scripts/validate-deployment/delta-validator.ts"
+    "validate:delta": "tsx ./scripts/validate-deployment/delta-validator.ts",
+    "prebuild": "python ../scripts/build_sim_bundle.py || echo \"(no python: using the committed otogi_sim.zip)\""
   },
   "engines": {
     "node": ">=22"

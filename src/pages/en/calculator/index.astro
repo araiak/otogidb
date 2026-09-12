@@ -1,16 +1,45 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { TeamDamageCalculator } from '../../../components/calculator/TeamDamageCalculator';
-
-const currentLocale = 'en';
-
-const pageTitle = "Team Damage Calculator - Build & Optimize Your Team";
-const pageDescription = "Build and optimize your 5-member team in Otogi: Spirit Agents. Configure cards, assists, bonds, and abilities to maximize damage output.";
+import TeamSimulator from '../../../components/calculator/TeamSimulator';
 ---
 
-<BaseLayout title={pageTitle} description={pageDescription} lang={currentLocale}>
-  <div class="container mx-auto px-4 py-6">
-    <!-- Calculator (React Island) -->
-    <TeamDamageCalculator client:load />
-  </div>
+<BaseLayout
+  title="Team Simulator"
+  description="Compare teams and skill rotations against the target dummy or a world boss using the battle simulator. Alpha — verify anything that matters in game."
+>
+  <main class="max-w-[100rem] mx-auto px-4 py-6">
+    <div class="flex items-center gap-2 mb-1">
+      <h1 class="text-xl font-semibold text-primary">Team Simulator</h1>
+      <span
+        class="px-2 py-0.5 rounded-full border border-highlight/50 bg-highlight/10 text-highlight text-[10px] font-semibold uppercase tracking-wider"
+        title="Early build — expect bugs"
+      >
+        Alpha
+      </span>
+    </div>
+    <p class="text-sm text-secondary mb-3">
+      Runs the same battle simulator used to generate the tier lists, in your browser.
+    </p>
+
+    <div class="mb-5 p-3 rounded-lg border border-highlight/40 bg-highlight/5">
+      <p class="text-sm text-primary leading-relaxed">
+        <strong class="font-medium">The simulator almost certainly still has bugs.</strong>
+        Treat the game itself as the source of truth — if a number here matters to you,
+        verify it in game.
+      </p>
+      <p class="text-sm text-secondary leading-relaxed mt-1.5">
+        Cast groups also cannot reproduce an optimal rotation — they fire on a fixed
+        rule, where a solver would exploit timings no player could hit anyway. What they
+        do show is which skill combinations and orderings are more or less likely to
+        work.
+      </p>
+      <p class="text-sm text-secondary leading-relaxed mt-1.5">
+        So what it is good for is <em>comparison</em>: which rotation, which bonds, which
+        card in the last slot. Use it to narrow down what is worth your time testing for
+        real, not to predict the damage you will actually hit.
+      </p>
+    </div>
+
+    <TeamSimulator client:only="react" />
+  </main>
 </BaseLayout>
