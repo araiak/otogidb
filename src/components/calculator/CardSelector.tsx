@@ -3,9 +3,11 @@
  * Reusable searchable dropdown for selecting cards
  */
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback } from '../../lib/images';
+import { getSkillsData } from '../../lib/cards';
+import { formatSkillDescription } from '../../lib/formatters';
 
 interface CardSelectorProps {
   cards: Card[];
@@ -25,6 +27,13 @@ export function CardSelector({
   showClear = true,
 }: CardSelectorProps) {
   const [search, setSearch] = useState('');
+  // skills.json carries the ie/de templates the {value}/{probability} placeholders
+  // need; cards.json only has the parsed battle numbers. getSkillsData caches, so
+  // the seven selectors on the page share one fetch.
+  const [skills, setSkills] = useState<Record<string, any>>({});
+  useEffect(() => {
+    getSkillsData().then((d) => setSkills(d.skills)).catch(() => {});
+  }, []);
 
   const filteredCards = useMemo(() => {
     if (!search) return cards.slice(0, 50);
@@ -94,6 +103,36 @@ export function CardSelector({
               </div>
             </div>
           </div>
+          {selectedCard.skill && (
+            <div className="mt-2">
+              <div className="text-xs font-medium" style={{ color: 'var(--color-accent)' }}>
+                Skill: {selectedCard.skill.name}
+              </div>
+              <div
+                className="text-xs text-secondary"
+                dangerouslySetInnerHTML={{
+                  __html: formatSkillDescription(
+                    selectedCard.skill.description,
+                    skills[selectedCard.skill.id],
+                    selectedCard.stats.rarity
+                  ),
+                }}
+              />
+            </div>
+          )}
+          {selectedCard.abilities?.map((ability, idx) => (
+            <div key={ability.id || idx} className="mt-2">
+              <div className="text-xs font-medium" style={{ color: 'var(--color-accent)' }}>
+                Lv.{ability.unlock_level}: {ability.name}
+              </div>
+              <div
+                className="text-xs text-secondary"
+                dangerouslySetInnerHTML={{
+                  __html: formatSkillDescription(ability.description, null, selectedCard.stats.rarity),
+                }}
+              />
+            </div>
+          ))}
         </div>
       )}
     </div>
