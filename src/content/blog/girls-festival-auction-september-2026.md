@@ -9,7 +9,7 @@ draft: true
 
 <div data-lang="en">
 
-TODO intro — the Sept 3-8 anniversary special was off-cadence and added nothing permanent; this is the regular monthly batch. Doll Festival theme, Odairi/Ohina pair is the story.
+Hopefully everyones found a few new cards that improve their teams coming out of that bloodbath.  I hope people fighting at least got a copy of :card[1650], evne if you didn't get as many as you'd like probably worth looking to orb her up, and if you missed entierly theres some oppertunity to snag :card[549] from other players who may be more willing to part with copies now that they have :card[1650].  This months auction is Girls' Festival Rebellion, which features some of the better Anima cards so this is one to watch if you are looking to fill out an Anima team.
 
 ---
 
