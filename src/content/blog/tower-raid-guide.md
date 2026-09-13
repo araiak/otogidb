@@ -35,9 +35,9 @@ In Conquest events, you get attacked by a raid boss either from doing normal con
 
 Conquest events are:
 
-- **Multiple rounds**, so nearly all skills and abilities are useful:
+- **Multiple waves**, so nearly all skills and abilities are useful:
   - *Final wave abilities* activate on the last wave of combat
-  - *Progressive bonuses* say "gain X at the start of a wave" - these stack up over multiple rounds
+  - *Progressive bonuses* say "gain X at the start of a wave" - these stack up over multiple waves
   - *Flat bonuses* are always active
 - **Untyped**, so use your strongest team regardless of element
 - **Variable SE costs** (4-18 SE based on your cards)
@@ -157,7 +157,7 @@ Most of your reserves probably won't come from auction, so check what you have a
 - :card[2373] (Lv. 75) - Phantasma only
 - :card[2191] (Lv. 75) - Anima only
 - :card[1321] (Lv. 75+) - Divina
-- :card[744] (Lv. 85) - Any type, 15% damage per round is huge! Usable in all multi-round content (Conquest, Special Story) as a reserve, but not single-round. Worth PvP orbing if you can hit 85 (not beneficial before that) - otherwise save orbs for single-round content like World Boss or PvP
+- :card[744] (Lv. 85) - Any type, 15% damage per wave is huge! Usable in all multi-wave content (Conquest, Special Story) as a reserve, but not single-wave. Worth PvP orbing if you can hit 85 (not beneficial before that) - otherwise save orbs for single-wave content like World Boss or PvP
 - :card[661] (Lv. 85) - Any type
 - :card[600] (Lv. 77) - 4-star but might be worth PvP orbing, 40% crit damage is a big boost
 

@@ -41,7 +41,7 @@ There's a **5-star bonus orb available at half price** until the event ends! Giv
 | :card[1433] | 2 | * | Her skill is pretty underwhelming, probably a skip for everyone |
 | :card[1431] | 3 | * | Skill is bad and her ability is too weak for 3 copies |
 | :card[1436] | 4 | ***** | For new players struggling with tankiness this is a pretty good card 25% Damage Reduction (Self) for 2 copies is pretty great, the skill adds to the tankiness, but would be preferred to be targeting the highest attack rather than itself! |
-| :card[1435] | 5 | **** | This is a slightly weaker Divina version of :card[1312] or :card[658] (wave clearers with progressive skill damage). If you're looking for multi-target damage that scales over rounds, there aren't many other available options. |
+| :card[1435] | 5 | **** | This is a slightly weaker Divina version of :card[1312] or :card[658] (wave clearers with progressive skill damage). If you're looking for multi-target damage that scales over waves, there aren't many other available options. |
 | :card[30015] | N/A | *** | Leveling up your monsters is not a bad choice if none of the cards really hit a need for your team, or if you get stuck to level up and try to push the next chapter, don't feel bad if you need to take some level up cards! |
 
 ---

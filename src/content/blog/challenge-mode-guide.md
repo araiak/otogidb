@@ -41,7 +41,7 @@ You will notice three key ability requirements to finish or push Endless:
 
 There are other nice-to-have abilities like crit rate per wave or crit damage per wave. These increase clear speed and decrease risk by reducing time spent on each floor, but they aren't required as you will hit damage cap on damage per wave alone. Crit rate is highly recommended - without it you may want some unit that self-boosts its skill damage or team skill damage, or you're in for a long run.
 
-The reason for this is pretty clear: the things that tank runs are generally large crits or multiple criticals in a small window to a single character, breaking your front line or healer. Other reasons you might fail include being unable to burn through enemy healers' healing in late rounds, or having units fall during CC.
+The reason for this is pretty clear: the things that tank runs are generally large crits or multiple criticals in a small window to a single character, breaking your front line or healer. Other reasons you might fail include being unable to burn through enemy healers' healing in late waves, or having units fall during CC.
 
 Once you have your max HP boosters, and progression damage abilities covered you want to primary throw as much as you can at survivability, until you can live level 100, and then stack any additional bond slots to add more damage ramp to go faster.
 

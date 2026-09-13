@@ -14,7 +14,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 ## Standard Banner
 
-:card[1608] is the currently active standard banner card. Her skill targets enemies with ranged priority and leaves a damage amplification debuff, making her useful in both lineup and reserve. Her main draw is in endless mode — paired with :card[740] and/or :card[1307] in reserve you can build a strong attack damage ramp that leaves your assist slots free for defensive options. She can also contribute in multi-round content like Special Story and Conquest. She's not a card you'd prioritize PvP orbs on, and the investment to get the most out of her is fairly high. That said, if you find yourself close to MLB via RNG over time, she looks like a strong niche card that holds value. **Niche pick; don't prioritize PvP orbs, but she's worth investing in if you land close to MLB naturally.**
+:card[1608] is the currently active standard banner card. Her skill targets enemies with ranged priority and leaves a damage amplification debuff, making her useful in both lineup and reserve. Her main draw is in endless mode — paired with :card[740] and/or :card[1307] in reserve you can build a strong attack damage ramp that leaves your assist slots free for defensive options. She can also contribute in multi-wave content like Special Story and Conquest. She's not a card you'd prioritize PvP orbs on, and the investment to get the most out of her is fairly high. That said, if you find yourself close to MLB via RNG over time, she looks like a strong niche card that holds value. **Niche pick; don't prioritize PvP orbs, but she's worth investing in if you land close to MLB naturally.**
 
 :spoiler["Her skill description says it targets 2 enemies, but the data has count<3> — she actually hits 3 targets. This is likely a description error, meaning she's slightly stronger than advertised in multi-target situations, especially for wave clearing in endless."]
 
@@ -58,7 +58,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 
 :card[1610] has a small Divina crit rate buff at MLB. If he's a Special Story reward, he could serve as decent filler until better options are available. Crit rate is a strong stat, though it often shows its best value when paired with strong crit damage buffers, which you may not have if you're relying on this card. **Decent filler if he's a Special Story reward; skip otherwise.**
 
-:card[1601] is a progressive 8% skill damage assist you can slot onto any card with strong skill output. In general that's not a particularly strong effect. If you're interested in this type of effect, the auction may have :card[688] — 13% skill damage per round plus 10% DR and 10% damage — though even that card is at best niche in most formats. **Pass; check the auction for :card[688] if you want this type of effect.**
+:card[1601] is a progressive 8% skill damage assist you can slot onto any card with strong skill output. In general that's not a particularly strong effect. If you're interested in this type of effect, the auction may have :card[688] — 13% skill damage per wave plus 10% DR and 10% damage — though even that card is at best niche in most formats. **Pass; check the auction for :card[688] if you want this type of effect.**
 
 :card[1602] is a lifesteal assist, slightly weaker than :card[604] or :card[1430]. Lifesteal is a niche stat and 12% is a fairly modest value. **Skip.**
 
@@ -75,7 +75,7 @@ Here's a first look at the new cards for The Ninjas' Elegy. This is a quieter ev
 ## TL;DR
 
 **5★ Cards:**
-- :card[1608] — **Niche; don't prioritize PvP orbs, but invest if you approach MLB naturally** — strong in endless with :card[740]/:card[1307] ramp; also useful in multi-round content
+- :card[1608] — **Niche; don't prioritize PvP orbs, but invest if you approach MLB naturally** — strong in endless with :card[740]/:card[1307] ramp; also useful in multi-wave content
 - :card[1615] — **Mochi copy if you play Divina** — LJS May 6–10; lineups didn't come together, pretty niche otherwise
 - :card[1611] — **Worth picking up at ranking** — ranking reward; close to :card[741] power but falls short; real Phantasma niche in endless
 - :card[1616] — **Special Story card; grab an MLB** — odd kit, nothing changed from initial read
