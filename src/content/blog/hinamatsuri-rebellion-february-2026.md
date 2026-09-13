@@ -20,7 +20,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 ## Event Cards
 
-:card[1526] *(Limited Gacha)* and :card[1529] *(Overall Ranking)* are the pair to watch. Together they give :card[1526] +60% crit rate, 65% crit damage (progressive), and 60% final wave damage. I don't know yet if this will crack into the world boss meta - it's possible but we may have to wait and see. In any case the combo is very good across all content. :card[1526] probably already dethrones :card[1401] as the highest single-round damage card, though :card[1401] doesn't have the conditional requiring two card slots. Note that only :card[1529] grants the bonus to :card[1526] - :card[228] does not apply. These two will be the main targets for most players this event. **High priority pair - the best thing this event has to offer.**
+:card[1526] *(Limited Gacha)* and :card[1529] *(Overall Ranking)* are the pair to watch. Together they give :card[1526] +60% crit rate, 65% crit damage (progressive), and 60% final wave damage. I don't know yet if this will crack into the world boss meta - it's possible but we may have to wait and see. In any case the combo is very good across all content. :card[1526] probably already dethrones :card[1401] as the highest single-wave damage card, though :card[1401] doesn't have the conditional requiring two card slots. Note that only :card[1529] grants the bonus to :card[1526] - :card[228] does not apply. These two will be the main targets for most players this event. **High priority pair - the best thing this event has to offer.**
 
 :card[1528] *(Ranking Reward - 1st & 2nd Half)* is a fairly strong support or reserve pick for Divina teams. Her skill isn't very impactful, but her passives are solid - 25% attack speed for all Divina allies and 35% final wave damage for Divina team members. **Good Divina support, weak skill.**
 
@@ -38,7 +38,7 @@ After all the auction madness, here's the breakdown on the new event cards.
 
 ## TL;DR
 
-- :card[1526] (Limited Gacha) + :card[1529] (Overall Ranking) - **High priority pair** - top single-round Anima damage with the combo active, potential WB meta
+- :card[1526] (Limited Gacha) + :card[1529] (Overall Ranking) - **High priority pair** - top single-wave Anima damage with the combo active, potential WB meta
 - :card[1528] (Ranking - 1st & 2nd Half) - **Good Divina support** - solid passive, weak skill
 - :card[1540] (Limited Gacha) - **Good Divina reserve** - better than :card[1494] in Endless
 - :card[1539] (Special Story Reward) - **Strong Anima tank** - 40% DR if you need survivability

@@ -27,7 +27,7 @@ A 5-star card starts at level 70. Each additional copy adds 5 levels (75, 80, 85
 
 Special Story events are:
 
-- **Multiple rounds**, so nearly all skills and abilities are useful:
+- **Multiple waves**, so nearly all skills and abilities are useful:
   - *Final wave abilities* activate on the last wave of combat (e.g. wave 5 of 5)
   - *Progressive bonuses* say "gain X at the start of a wave" - a 10% boost becomes 10% on wave 1, 20% on wave 2, up to 50% on wave 5
   - *Flat bonuses* are always active
