@@ -1,10 +1,10 @@
 ---
 title: "Girls' Festival Rebellion: September 2026 Auction"
 description: "Analysis of the September auction headlined by Elegance! Girls' Festival Rebellion!, covering the event cards, Limited Jewel Summons, the exchange card, and the New Year Spirit Battle Marathon rerun"
-date: "2026-09-14"
+date: "2026-09-13"
 author: "Araiak"
 tags: ["analysis", "auction"]
-draft: true
+draft: false
 ---
 
 <div data-lang="en">
