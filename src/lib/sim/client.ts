@@ -19,6 +19,12 @@ export interface SimRequest {
   /** Ordered cast groups of slot keys ("P1".."P5"); priority left to right. */
   groups: string[][];
   iters: number;
+  /**
+   * Base seed. A battle is deterministic in (team, scenario, seed), so this is the
+   * run's identity: pass one to reproduce a result exactly, omit it for a fresh
+   * random sample. The seed actually used always comes back on the result.
+   */
+  seed?: number | null;
   time_limit: number;
   /** 1-4 for a world boss; omit for the immortal dummy. */
   boss_id?: number | null;
@@ -95,6 +101,8 @@ export interface DamageSpread {
 export interface SimResult {
   mean: number;
   sd: number;
+  /** The base seed this run used -- echoed back whether you chose it or not. */
+  seed: number;
   per_seed: number[];
   iters: number;
   effective_time: number;
