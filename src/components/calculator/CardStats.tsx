@@ -27,7 +27,14 @@ export function CardStats({ stats, compact = false }: CardStatsProps) {
   const bondPct = ((stats.skill_bond ?? 1) - 1) * 100;
 
   const rows: { label: string; value: string; hint: string }[] = [
-    { label: 'ATK', value: num(stats.atk), hint: 'Display ATK — the engine divides by 10 internally' },
+    {
+      label: 'ATK',
+      value: num(stats.atk),
+      hint:
+        stats.atk_base && stats.atk !== stats.atk_base
+          ? `Includes Attack bonds (${num(stats.atk_base)} before bonds). Ranked buffs target on this value.`
+          : 'Display ATK — the engine divides by 10 internally. Ranked buffs target on this value.',
+    },
     { label: 'HP', value: num(stats.hp), hint: 'Max HP after bonds and passives' },
     { label: 'Crit rate', value: pct(stats.crit_rate), hint: 'Resolved rate, capped the way the battle caps it' },
     { label: 'Crit DMG', value: pct(stats.crit_dmg), hint: 'Added on top of the 2x crit, on crit only' },

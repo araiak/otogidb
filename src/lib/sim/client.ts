@@ -44,7 +44,14 @@ export interface SimCardStats {
   name: string;
   alive: boolean;
   /** Display ATK (internal x10), the number the site shows elsewhere. */
+  /**
+   * Display ATK including the Attack-bond contribution -- the same value the
+   * engine ranks `max_atk` on, so the order shown here is the order a ranked buff
+   * (Orihime's top-2, Tsukuyomi's top-3) actually targets.
+   */
   atk: number;
+  /** The card's ATK before bonds, for reference. */
+  atk_base: number;
   hp: number;
   /** Resolved crit rate as a percentage, capped the way the battle caps it. */
   crit_rate: number;
