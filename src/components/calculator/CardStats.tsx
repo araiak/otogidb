@@ -39,14 +39,17 @@ export function CardStats({ stats, compact = false }: CardStatsProps) {
     { label: 'Crit rate', value: pct(stats.crit_rate), hint: 'Resolved rate, capped the way the battle caps it' },
     { label: 'Crit DMG', value: pct(stats.crit_dmg), hint: 'Added on top of the 2x crit, on crit only' },
     { label: 'DMG', value: pct(stats.dmg), hint: 'General damage modifier — applies to autos and skills' },
-    { label: 'Normal DMG', value: pct(stats.normal_dmg), hint: 'Auto-attacks only; the skill path never reads it' },
+    // Called "ATK Bond" rather than "Normal DMG" to match what the game shows a
+    // player: bonds are the only thing that writes to this bucket (no ability or
+    // skill in the game grants NORM_ATK), and in game they are Attack bonds.
+    { label: 'ATK Bond', value: pct(stats.normal_dmg), hint: 'Attack bonds from bond slots and assists. Auto-attacks only; the skill path never reads it' },
     { label: 'Skill DMG', value: pct(stats.skill_dmg), hint: 'Skill casts only' },
   ];
   if (bondPct > 0) {
     rows.push({
       label: 'Skill bond',
       value: `+${bondPct.toFixed(1)}%`,
-      hint: 'Multiplicative on skill base, from bonds',
+      hint: 'Skill bonds from bond slots and assists, applied to skill damage',
     });
   }
   rows.push({
