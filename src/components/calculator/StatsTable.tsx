@@ -52,7 +52,7 @@ export function StatsTable({ stats }: { stats: SimCardStats[] }) {
           <thead>
             <tr className="text-left">
               <th className={head}>Card</th>
-              <th className={`${head} text-right`} title="Decides who receives ranked buffs">ATK</th>
+              <th className={`${head} text-right`} title="After ATK bonds — decides who receives ranked buffs">ATK</th>
               <th className={`${head} text-right`}>Crit rate</th>
               <th className={`${head} text-right`}>Crit DMG</th>
               <th className={`${head} text-right`} title="Applies to autos and skills">DMG</th>
@@ -77,6 +77,12 @@ export function StatsTable({ stats }: { stats: SimCardStats[] }) {
                     <div>{num(s.atk)}</div>
                     <div className={`text-[10px] ${rank <= 2 ? 'text-highlight' : 'text-secondary/70'}`}>
                       {rank <= 2 ? `buff target ${rank}` : ordinal(rank)}
+                    </div>
+                    {/* The ATK bond belongs next to the ranking it decides: it is the
+                        only lever a player has over who receives a ranked buff, and it
+                        was previously visible only in the single-card panel. */}
+                    <div className="text-[10px] text-secondary/70">
+                      {s.normal_dmg > 0 ? `ATK bond +${s.normal_dmg.toFixed(1)}%` : 'no ATK bond'}
                     </div>
                   </td>
                   <td className={`${cell} text-right tabular-nums`}>
