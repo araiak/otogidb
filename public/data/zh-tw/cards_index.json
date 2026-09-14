@@ -648,7 +648,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "101062",
@@ -8495,6 +8496,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -8558,6 +8560,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -8634,6 +8637,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -8775,6 +8779,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -8853,6 +8858,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -8981,6 +8987,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -9175,6 +9182,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -9241,6 +9249,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -9304,6 +9313,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -9372,6 +9382,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -9447,6 +9458,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -9601,6 +9613,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -66378,8 +66391,8 @@
       }
     }
   },
-  "data_hash": "b7df0dd5",
+  "data_hash": "022f2a6a",
   "locale": "zh-tw",
   "total_cards": 1018,
-  "version": "e9dfd0b"
+  "version": "550a400"
 }
