@@ -19,6 +19,12 @@ export interface SimRequest {
   /** Ordered cast groups of slot keys ("P1".."P5"); priority left to right. */
   groups: string[][];
   iters: number;
+  /**
+   * Base seed. A battle is deterministic in (team, scenario, seed), so this is the
+   * run's identity: pass one to reproduce a result exactly, omit it for a fresh
+   * random sample. The seed actually used always comes back on the result.
+   */
+  seed?: number | null;
   time_limit: number;
   /** 1-4 for a world boss; omit for the immortal dummy. */
   boss_id?: number | null;
@@ -38,7 +44,14 @@ export interface SimCardStats {
   name: string;
   alive: boolean;
   /** Display ATK (internal x10), the number the site shows elsewhere. */
+  /**
+   * Display ATK including the Attack-bond contribution -- the same value the
+   * engine ranks `max_atk` on, so the order shown here is the order a ranked buff
+   * (Orihime's top-2, Tsukuyomi's top-3) actually targets.
+   */
   atk: number;
+  /** The card's ATK before bonds, for reference. */
+  atk_base: number;
   hp: number;
   /** Resolved crit rate as a percentage, capped the way the battle caps it. */
   crit_rate: number;
@@ -95,6 +108,8 @@ export interface DamageSpread {
 export interface SimResult {
   mean: number;
   sd: number;
+  /** The base seed this run used -- echoed back whether you chose it or not. */
+  seed: number;
   per_seed: number[];
   iters: number;
   effective_time: number;

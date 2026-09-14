@@ -27,19 +27,29 @@ export function CardStats({ stats, compact = false }: CardStatsProps) {
   const bondPct = ((stats.skill_bond ?? 1) - 1) * 100;
 
   const rows: { label: string; value: string; hint: string }[] = [
-    { label: 'ATK', value: num(stats.atk), hint: 'Display ATK — the engine divides by 10 internally' },
+    {
+      label: 'ATK',
+      value: num(stats.atk),
+      hint:
+        stats.atk_base && stats.atk !== stats.atk_base
+          ? `Includes Attack bonds (${num(stats.atk_base)} before bonds). Ranked buffs target on this value.`
+          : 'Display ATK — the engine divides by 10 internally. Ranked buffs target on this value.',
+    },
     { label: 'HP', value: num(stats.hp), hint: 'Max HP after bonds and passives' },
     { label: 'Crit rate', value: pct(stats.crit_rate), hint: 'Resolved rate, capped the way the battle caps it' },
     { label: 'Crit DMG', value: pct(stats.crit_dmg), hint: 'Added on top of the 2x crit, on crit only' },
     { label: 'DMG', value: pct(stats.dmg), hint: 'General damage modifier — applies to autos and skills' },
-    { label: 'Normal DMG', value: pct(stats.normal_dmg), hint: 'Auto-attacks only; the skill path never reads it' },
+    // Called "ATK Bond" rather than "Normal DMG" to match what the game shows a
+    // player: bonds are the only thing that writes to this bucket (no ability or
+    // skill in the game grants NORM_ATK), and in game they are Attack bonds.
+    { label: 'ATK Bond', value: pct(stats.normal_dmg), hint: 'Attack bonds from bond slots and assists. Auto-attacks only; the skill path never reads it' },
     { label: 'Skill DMG', value: pct(stats.skill_dmg), hint: 'Skill casts only' },
   ];
   if (bondPct > 0) {
     rows.push({
       label: 'Skill bond',
       value: `+${bondPct.toFixed(1)}%`,
-      hint: 'Multiplicative on skill base, from bonds',
+      hint: 'Skill bonds from bond slots and assists, applied to skill damage',
     });
   }
   rows.push({

@@ -59,6 +59,8 @@ export interface TeamState {
   bossLevel: number;
   iters: number;
   timeLimit: number;
+  /** null = roll a fresh seed each run; a number pins the fight. */
+  seed: number | null;
 }
 
 export function emptySlot(): SlotState {
@@ -75,6 +77,7 @@ export function emptyTeam(): TeamState {
     bossLevel: 30,
     iters: 5,
     timeLimit: 300,
+    seed: null,
   };
 }
 
@@ -85,6 +88,7 @@ export function toRequest(team: TeamState): SimRequest {
     bonds: team.slots.map((s) => s.bonds),
     groups: team.groups.filter((g) => g.length > 0),
     iters: team.iters,
+    seed: team.seed,
     time_limit: team.timeLimit,
     boss_id: team.bossId,
     boss_level: team.bossLevel,

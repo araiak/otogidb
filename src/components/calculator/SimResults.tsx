@@ -60,7 +60,7 @@ export function SimResults({ result, running, error, nameOf }: SimResultsProps) 
         </div>
         <div className="text-xs text-secondary mt-1">
           {result.iters} run{result.iters === 1 ? '' : 's'} · ±{spread.toFixed(1)}% ·{' '}
-          {result.effective_time.toFixed(0)}s
+          {result.effective_time.toFixed(0)}s · seed {result.seed}
           {result.deaths > 0 && (
             <span className="text-red-400">
               {' '}

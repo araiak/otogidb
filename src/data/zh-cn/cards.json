@@ -1608,9 +1608,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -1642,7 +1646,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -1660,11 +1665,63 @@
       "description": "<color=#f4e48e>「即使赌上性命，也要讨伐德川家康！」</color><br/><color=#ef9843>最终形态</color>。他是来自战国时代的战争<color=#ef9843>英雄</color>。他是西军武将，战力如神鬼凌厉。是东军<color=#ef9843>德川家康</color>的眼中钉。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2026-01-01T05:29:40.658902+00:00",
         "first_seen_version": "e36f95a",
-        "last_modified": "2026-03-13T06:07:58.624853+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.285581+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1062",
       "image_urls": {
@@ -2877,7 +2934,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -2888,7 +2945,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -27276,17 +27333,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -27325,6 +27378,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -27557,12 +27611,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.255363+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-27T07:17:57.887879+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-09-14T14:33:27.327349+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1523",
       "image_urls": {
@@ -27663,17 +27773,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -27712,6 +27818,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -27796,12 +27903,68 @@
             ],
             "date": "2026-02-25",
             "version": "d50eca3"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.254357+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.666044+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.317979+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1525",
       "image_urls": {
@@ -27949,17 +28112,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -28006,6 +28165,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -28150,12 +28310,68 @@
             ],
             "date": "2026-03-01",
             "version": "bbc95d9"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.256955+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.702838+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.346916+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1526",
       "image_urls": {
@@ -28478,17 +28694,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -28517,6 +28729,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -28753,12 +28966,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.256403+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-27T07:17:57.897153+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-09-14T14:33:27.340174+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1528",
       "image_urls": {
@@ -28909,17 +29178,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -28948,6 +29213,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -29140,12 +29406,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.256673+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-27T07:17:57.899662+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-09-14T14:33:27.343371+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1529",
       "image_urls": {
@@ -29402,17 +29724,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -29459,6 +29777,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -29572,12 +29891,68 @@
             ],
             "date": "2026-02-25",
             "version": "d50eca3"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.254616+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.668551+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.320400+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1530",
       "image_urls": {
@@ -30045,17 +30420,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -30094,6 +30465,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -30260,12 +30632,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.255122+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-27T07:17:57.885781+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-09-14T14:33:27.324953+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1535",
       "image_urls": {
@@ -30375,17 +30803,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -30432,6 +30856,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -30556,12 +30981,68 @@
             ],
             "date": "2026-03-09",
             "version": "df010ec"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.254883+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.671590+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.322406+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1536",
       "image_urls": {
@@ -30665,17 +31146,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -30714,6 +31191,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -30946,12 +31424,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.255607+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-27T07:17:57.889969+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-09-14T14:33:27.329863+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1537",
       "image_urls": {
@@ -31057,17 +31591,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -31114,6 +31644,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -31227,12 +31758,68 @@
             ],
             "date": "2026-02-25",
             "version": "d50eca3"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.255869+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.684269+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.332678+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1538",
       "image_urls": {
@@ -31382,17 +31969,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -31431,6 +32014,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -31515,12 +32099,68 @@
             ],
             "date": "2026-02-25",
             "version": "d50eca3"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.256139+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.688789+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.337095+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1539",
       "image_urls": {
@@ -31862,17 +32502,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-09-15",
-            "event_date": "2026-02-26",
-            "event_id": "176",
-            "event_name": "Elegance! Girls' Festival Rebellion!",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -31919,6 +32555,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -32058,12 +32695,68 @@
             ],
             "date": "2026-03-09",
             "version": "b94014d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.257219+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.706355+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:27.350042+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "1540",
       "image_urls": {
@@ -43913,7 +44606,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -43925,42 +44618,42 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             }
@@ -44166,7 +44859,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -44177,7 +44870,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -78141,7 +78834,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78153,7 +78846,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -78165,7 +78858,7 @@
               "floors": [
                 64
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -78320,7 +79013,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78332,7 +79025,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -78354,7 +79047,7 @@
           "featured_banners": [
             {
               "end": "2026-09-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 25,
               "start": "2026-08-28 15:00:00"
             }
@@ -78632,7 +79325,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78644,7 +79337,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -78666,7 +79359,7 @@
           "featured_banners": [
             {
               "end": "2026-09-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 25,
               "start": "2026-08-28 15:00:00"
             }
@@ -78816,7 +79509,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -78828,28 +79521,28 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -78862,7 +79555,7 @@
               "floors": [
                 16
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -79013,7 +79706,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79025,49 +79718,49 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -79080,7 +79773,7 @@
               "floors": [
                 32
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -79230,7 +79923,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79242,49 +79935,49 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "5"
             }
@@ -79297,7 +79990,7 @@
               "floors": [
                 48
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -79480,7 +80173,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79492,56 +80185,56 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true,
+              "is_current": false,
               "quantity": 1,
               "tier": "1"
             }
@@ -79722,7 +80415,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -79734,7 +80427,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -79746,7 +80439,7 @@
               "floors": [
                 80
               ],
-              "is_current": true
+              "is_current": false
             }
           ]
         },
@@ -80114,7 +80807,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -80125,7 +80818,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -80136,7 +80829,7 @@
           "featured_banners": [
             {
               "end": "2026-09-15 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 70,
               "start": "2026-09-12 15:00:00"
             }
@@ -80288,7 +80981,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -80300,7 +80993,7 @@
             {
               "event_id": "185",
               "event_name": "御灵录Otogi四周年纪念塔",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -80322,7 +81015,7 @@
           "featured_banners": [
             {
               "end": "2026-09-06 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 25,
               "start": "2026-08-28 15:00:00"
             }
@@ -143251,7 +143944,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -143366,12 +144059,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.564856+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.757879+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "536",
       "image_urls": {
@@ -143482,7 +144186,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -143597,12 +144301,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.566297+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.759784+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "537",
       "image_urls": {
@@ -143713,7 +144428,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -143828,12 +144543,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.531544+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.567637+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.761573+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "538",
       "image_urls": {
@@ -146132,7 +146858,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -146247,12 +146973,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.583738+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.782995+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "550",
       "image_urls": {
@@ -146355,7 +147092,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -146462,12 +147199,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.585049+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.784759+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "551",
       "image_urls": {
@@ -146570,7 +147318,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -146677,12 +147425,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.586413+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.786494+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "552",
       "image_urls": {
@@ -146817,7 +147576,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -146932,12 +147691,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.534050+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.588074+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.788660+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "553",
       "image_urls": {
@@ -147045,7 +147815,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -147152,12 +147922,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.535052+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.589398+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:26.790374+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "554",
       "image_urls": {
@@ -160681,9 +161462,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-08-18 15:00:00",
+          "end_date": "2026-09-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -160753,11 +161534,28 @@
       "description": "<color=#f4e48e>“亚葛尔会加油的！”</color><br/><color=#ef9843>知名喽囉角色，为哥布林化身的妖怪。</color>但她绝对不容小觑，她是接受过哥布林族中的英雄‧碧鲁多的英才教育，可谓精英中的精英。拥有令人不敢相信是哥布林的敏锐身体能力，完全不辜负备受族人期待的新星之名。再加上她那天真无邪的性格，除了哥布林族以外，也有很多粉丝支持着亚葛尔。将来的梦想似乎是加入ELF118。她究竟能否跨越种族的障壁呢？<br/><color=#f45d68>[活动]春节妖怪战斗马拉松</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": "2025-08-18 15:00:00"
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.548561+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.177873+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:26.910529+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "621",
       "image_urls": {
@@ -160860,9 +161658,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-08-18 15:00:00",
+          "end_date": "2026-09-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -160932,11 +161730,28 @@
       "description": "<color=#f4e48e>“有事吗？感觉好懒喔～”</color><br/><color=#ef9843>别名硬玉的矿石化身的妖怪。</color>是“软玉”的表妹。以为她的性格会和软玉成对比，如同其别名硬玉一本正经，结果却是个更加懒散的辣妹，跌破周遭人的眼镜。听说是小时候双亲管教太严造成的反弹……虽然表面上是这样，但心里某处还是有着对坚硬事物的憧憬，会乖乖顺从钻石的命令。<br/><color=#f45d68>[活动]春节妖怪战斗马拉松</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": "2025-08-18 15:00:00"
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.549609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.180380+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:26.912401+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "622",
       "image_urls": {
@@ -161053,9 +161868,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-08-18 15:00:00",
+          "end_date": "2026-09-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -161125,11 +161940,28 @@
       "description": "<color=#f4e48e>“让我见识你的实力吧？”</color><br/><color=#ef9843>三皇之一，创造人类的古代神化身的妖怪。</color>是同为三皇的伏羲的妹妹。个性喜欢恶作剧，容易生气。每当闲暇时总是会企图作弄人，但是她那异常惊人的妖力总是让事态变得难以收拾……现在则因为过去做的恶作剧（其实并不是可以这么简单形容）遭到惩罚，与伏羲一起被封印了九成的妖力。然而她却依旧自视甚高，认为与自己对等的人只有“神农”和“元始天尊”……<br/><color=#f45d68>[活动]春节妖怪战斗马拉松</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": "2025-08-18 15:00:00"
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.549609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.181884+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:26.914398+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "623",
       "image_urls": {
@@ -162404,9 +163236,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-08-18 15:00:00",
+          "end_date": "2026-09-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -162476,11 +163308,28 @@
       "description": "<color=#f4e48e>“你觉得擅长射击的女孩子如何？”</color><br/><color=#ef9843>远离战线后依然被慎重保管的自动手鎗化身的妖怪。</color>一旦拿起枪，性格会豹变的危险女孩。拥有超群的战斗力，就算一般妖怪成群结队也无法胜过她。发现自己在主人身旁时性格不会变化之后，似乎就觊觎起灵的地位……换上春节服装，目标是射穿主人的心。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": "2025-08-18 15:00:00"
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.550609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.195424+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:26.927859+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "630",
       "image_urls": {
@@ -162625,9 +163474,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-08-18 15:00:00",
+          "end_date": "2026-09-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -162697,11 +163546,28 @@
       "description": "<color=#f4e48e>“吾自认不输给天下五剑。”</color><br/><color=#ef9843>被称为西之横纲的名刀化身的妖怪。</color>纵使有着美名，知名度却不足，她对这点相当在意，每天都烦恼著该怎么做才能成为一流的知名人物。个性认真又不服输。常常因为不想输而训练过度，结果却在比赛前累倒……实力的确足以匹敌天下五剑，然而实际上场表现时总是无法发挥实力的类型。尤其是对童子切安纲有着强烈的竞争意识，曾发下豪语，表明当前的目标是要胜过她变得有名……",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-18 15:00:00",
+                "old": "2025-08-18 15:00:00"
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.550609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.199434+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-14T14:33:26.930089+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "631",
       "image_urls": {
@@ -183346,7 +184212,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -183513,12 +184379,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.833055+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.115223+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "732",
       "image_urls": {
@@ -183653,7 +184530,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -183820,12 +184697,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.834733+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.117381+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "733",
       "image_urls": {
@@ -183960,7 +184848,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -184127,12 +185015,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.836318+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.119542+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "734",
       "image_urls": {
@@ -185657,7 +186556,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -185824,12 +186723,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.844622+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.130790+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "740",
       "image_urls": {
@@ -185985,7 +186895,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -186152,12 +187062,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.846399+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.133127+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "741",
       "image_urls": {
@@ -186272,7 +187193,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-08 15:00:00",
           "is_time_limited": true,
@@ -186414,12 +187335,23 @@
             ],
             "date": "2026-09-03",
             "version": "e9dfd0b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-14",
+            "version": "550a400"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-03T07:18:26.847748+00:00",
-        "last_modified_version": "e9dfd0b"
+        "last_modified": "2026-09-14T14:33:27.134932+00:00",
+        "last_modified_version": "550a400"
       },
       "id": "742",
       "image_urls": {
@@ -192959,5 +193891,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 1018,
-  "version": "e9dfd0b"
+  "version": "550a400"
 }
