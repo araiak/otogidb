@@ -257,21 +257,28 @@ export default function TeamSimulator() {
         </label>
         <label className="flex items-center gap-2 text-xs text-secondary">
           Seed
-          {/* Empty = a fresh random fight each run. Type a number to pin one, or
-              click the seed under the result to lock in what you just saw. */}
+          {/* Random = a fresh fight each run. Untick to pin one, or click the seed
+              under the result to lock in what you just saw. */}
           <input
             type="number"
             min={0}
-            placeholder="random"
+            disabled={team.seed === null}
             value={team.seed ?? ''}
             onChange={(e) =>
-              setTeam((t) => ({
-                ...t,
-                seed: e.target.value === '' ? null : Math.max(0, Number(e.target.value)),
-              }))
+              setTeam((t) => ({ ...t, seed: Math.max(0, Number(e.target.value)) }))
             }
-            className="w-20 px-2 py-1 bg-surface border border-border rounded text-primary text-sm"
+            className="w-20 px-2 py-1 bg-surface border border-border rounded text-primary text-sm disabled:opacity-40"
           />
+        </label>
+        <label className="flex items-center gap-2 text-xs text-secondary">
+          <input
+            type="checkbox"
+            checked={team.seed === null}
+            onChange={(e) =>
+              setTeam((t) => ({ ...t, seed: e.target.checked ? null : (result?.seed ?? 0) }))
+            }
+          />
+          Random
         </label>
         <label className="flex items-center gap-2 text-xs text-secondary">
           Seconds
