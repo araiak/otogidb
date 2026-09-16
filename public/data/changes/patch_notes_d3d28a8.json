@@ -1,0 +1,123 @@
+{
+  "version": "d3d28a8",
+  "version_date": "2026-09-16",
+  "previous_version": "550a400",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 1
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "465",
+      "name": "Huanglong",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634365/otogi/cards_hd/100465_hd_0e9fb113ad4a8c9f435242ed032ba38e.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.0",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "188",
+            "event_name": "Guild Conquest ーHuanglongー",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '188', 'event_name': 'Guild Conquest ーHuanglongー', 'is_current': False})"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_hp",
+          "field_label": "Base HP",
+          "old": 2465,
+          "new": 2800,
+          "display": "Base HP: 2465 → 2800 (+335)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_atk",
+          "field_label": "Max ATK",
+          "old": 12600,
+          "new": 13100,
+          "display": "Max ATK: 12600 → 13100 (+500)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.base_atk",
+          "field_label": "Base ATK",
+          "old": 4200,
+          "new": 4365,
+          "display": "Base ATK: 4200 → 4365 (+165)"
+        },
+        {
+          "category": "stats",
+          "category_label": "Stats",
+          "field": "stats.max_hp",
+          "field_label": "Max HP",
+          "old": 7400,
+          "new": 8400,
+          "display": "Max HP: 7400 → 8400 (+1000)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "guildRaidBoss": {
+      "old_count": 50,
+      "new_count": 50,
+      "diff": 0
+    },
+    "banner": {
+      "old_count": 576,
+      "new_count": 577,
+      "diff": 1
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "cardInit": {
+      "old_count": 475,
+      "new_count": 475,
+      "diff": 0
+    },
+    "monster": {
+      "old_count": 1018,
+      "new_count": 1018,
+      "diff": 0
+    }
+  }
+}
