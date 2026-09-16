@@ -1,14 +1,7 @@
 {
-  "data_hash": "022f2a6a",
+  "data_hash": "439a1901",
   "delta": {
     "available_deltas": [
-      {
-        "file": "/data/delta/17257b0c_to_591a0cc7.json",
-        "from_version": "17257b0c",
-        "operations": 10,
-        "size_bytes": 995,
-        "to_version": "591a0cc7"
-      },
       {
         "file": "/data/delta/591a0cc7_to_02587153.json",
         "from_version": "591a0cc7",
@@ -141,43 +134,50 @@
         "operations": 15,
         "size_bytes": 1334,
         "to_version": "022f2a6a"
+      },
+      {
+        "file": "/data/delta/022f2a6a_to_439a1901.json",
+        "from_version": "022f2a6a",
+        "operations": 7,
+        "size_bytes": 698,
+        "to_version": "439a1901"
       }
     ],
-    "current_version": "022f2a6a",
-    "oldest_supported_version": "17257b0c"
+    "current_version": "439a1901",
+    "oldest_supported_version": "591a0cc7"
   },
   "files": {
     "en": {
-      "cards_index": "/data/cards_index.15a6e802.json",
+      "cards_index": "/data/cards_index.7a46d5c3.json",
       "cards_index_base": "/data/cards_index.json",
-      "cards_skeleton": "/data/cards_skeleton.5a215b63.json"
+      "cards_skeleton": "/data/cards_skeleton.d85894d7.json"
     },
     "es": {
-      "cards_index": "/data/es/cards_index.d56e774d.json",
+      "cards_index": "/data/es/cards_index.e703a275.json",
       "cards_index_base": "/data/es/cards_index.json",
-      "cards_skeleton": "/data/es/cards_skeleton.b5baf971.json"
+      "cards_skeleton": "/data/es/cards_skeleton.ced68ef0.json"
     },
     "ja": {
-      "cards_index": "/data/ja/cards_index.7722f033.json",
+      "cards_index": "/data/ja/cards_index.9130dc06.json",
       "cards_index_base": "/data/ja/cards_index.json",
-      "cards_skeleton": "/data/ja/cards_skeleton.5570b095.json"
+      "cards_skeleton": "/data/ja/cards_skeleton.26d80421.json"
     },
     "ko": {
-      "cards_index": "/data/ko/cards_index.9c51abde.json",
+      "cards_index": "/data/ko/cards_index.47174f45.json",
       "cards_index_base": "/data/ko/cards_index.json",
-      "cards_skeleton": "/data/ko/cards_skeleton.394fdbf9.json"
+      "cards_skeleton": "/data/ko/cards_skeleton.6fe4d271.json"
     },
     "zh-cn": {
-      "cards_index": "/data/zh-cn/cards_index.c7184248.json",
+      "cards_index": "/data/zh-cn/cards_index.e961e157.json",
       "cards_index_base": "/data/zh-cn/cards_index.json",
-      "cards_skeleton": "/data/zh-cn/cards_skeleton.739bb42a.json"
+      "cards_skeleton": "/data/zh-cn/cards_skeleton.9dcee8e4.json"
     },
     "zh-tw": {
-      "cards_index": "/data/zh-tw/cards_index.62983d33.json",
+      "cards_index": "/data/zh-tw/cards_index.fbdcc974.json",
       "cards_index_base": "/data/zh-tw/cards_index.json",
-      "cards_skeleton": "/data/zh-tw/cards_skeleton.436c594b.json"
+      "cards_skeleton": "/data/zh-tw/cards_skeleton.3d1ae353.json"
     }
   },
-  "generated_at": "2026-09-14T14:33:38.310328",
-  "version": "550a400"
+  "generated_at": "2026-09-16T09:02:21.157003",
+  "version": "d3d28a8"
 }
