@@ -7,7 +7,7 @@
  */
 
 import type { Card } from '../../types/card';
-import type { BondSlot, SimRequest } from './client';
+import type { BondSlot, Scheduler, SimRequest } from './client';
 
 export const SLOT_COUNT = 7;
 export const BATTLE_SLOTS = 5; // P1..P5; P5 is the helper
@@ -55,6 +55,8 @@ export interface TeamState {
   slots: SlotState[];
   /** Ordered cast groups of engine slot keys; priority left to right. */
   groups: string[][];
+  /** 'group' runs the groups above; 'cadence' lets the engine choose. */
+  scheduler: Scheduler;
   bossId: number | null;
   bossLevel: number;
   iters: number;
@@ -73,6 +75,7 @@ export function emptyTeam(): TeamState {
     // One group by default: every battle slot fires together, which is the simplest
     // thing to reason about and the baseline other groupings get compared against.
     groups: [['P1', 'P2', 'P3', 'P4', 'P5']],
+    scheduler: 'group',
     bossId: null,
     bossLevel: 30,
     iters: 5,
@@ -87,6 +90,7 @@ export function toRequest(team: TeamState): SimRequest {
     assists: team.slots.map((s) => (s.assistId ? Number(s.assistId) : null)),
     bonds: team.slots.map((s) => s.bonds),
     groups: team.groups.filter((g) => g.length > 0),
+    scheduler: team.scheduler,
     iters: team.iters,
     seed: team.seed,
     time_limit: team.timeLimit,
@@ -113,6 +117,8 @@ export function loadTeam(): TeamState {
         (_, i) => parsed.slots?.[i] ?? emptySlot()
       ),
       groups: parsed.groups?.length ? parsed.groups : base.groups,
+      // Teams saved before the control existed have no scheduler.
+      scheduler: parsed.scheduler ?? base.scheduler,
     };
   } catch {
     return emptyTeam();

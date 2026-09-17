@@ -14,7 +14,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Card } from '../../types/card';
 import { getFullCardsData } from '../../lib/cards';
 import { createSimClient } from '../../lib/sim/client';
-import type { SimClient, SimResult, BondSlot } from '../../lib/sim/client';
+import type { SimClient, SimResult, BondSlot, Scheduler } from '../../lib/sim/client';
 import {
   HELPER_INDEX,
   SLOT_LABELS,
@@ -227,6 +227,25 @@ export default function TeamSimulator() {
             </option>
           ))}
         </select>
+
+        {/* Cast policy. 'Groups' plays the rotation the player built below;
+            'Optimized' ignores it and lets the engine pick, which is what the tier
+            lists run -- so it answers "is my rotation better than the default?".
+            NOT labelled "Auto": the game has its own auto-battle and this is not it. */}
+        <label className="flex items-center gap-2 text-xs text-secondary">
+          Casting
+          <select
+            value={team.scheduler}
+            onChange={(e) =>
+              setTeam((t) => ({ ...t, scheduler: e.target.value as Scheduler }))
+            }
+            className="px-2 py-1 bg-surface border border-border rounded text-primary text-sm"
+            title="Groups: run the cast groups below. Optimized: let the engine work out the best rotation itself."
+          >
+            <option value="group">Groups</option>
+            <option value="cadence">Optimized</option>
+          </select>
+        </label>
 
         {team.bossId !== null && (
           <label className="flex items-center gap-2 text-xs text-secondary">
@@ -463,14 +482,23 @@ export default function TeamSimulator() {
             <h2 className="text-sm font-medium text-primary mb-2 xl:block hidden">
               Rotation
             </h2>
-            <SkillGroups
-              available={available}
-              groups={team.groups}
-              onChange={(groups) => setTeam((t) => ({ ...t, groups }))}
-              cardOf={cardOf}
-              assistOf={assistOf}
-              nameOf={nameOf}
-            />
+            {team.scheduler === 'cadence' && (
+              <p className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
+                Casting is set to <strong className="text-primary">Optimized</strong> —
+                the engine works out its own rotation and these groups are not used.
+                They are kept, so switch back to Groups to compare.
+              </p>
+            )}
+            <div className={team.scheduler === 'cadence' ? 'opacity-50' : undefined}>
+              <SkillGroups
+                available={available}
+                groups={team.groups}
+                onChange={(groups) => setTeam((t) => ({ ...t, groups }))}
+                cardOf={cardOf}
+                assistOf={assistOf}
+                nameOf={nameOf}
+              />
+            </div>
             <p className="text-[10px] text-secondary mt-2 leading-relaxed">
               Groups fire in order, and only when the lead card can cast at 1 orb — so a
               group repeats roughly every 20s on its own. Same group means fire together;

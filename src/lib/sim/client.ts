@@ -10,6 +10,8 @@
 export type BondKind = 'normal' | 'skill' | 'hp';
 export type BondSlot = [BondKind, number];
 
+export type Scheduler = 'group' | 'cadence';
+
 export interface SimRequest {
   /** 7 card ids in slot order: 4 active (0 is leader), helper, then 2 reserves. */
   cards: (number | null)[];
@@ -18,6 +20,12 @@ export interface SimRequest {
   bonds?: BondSlot[][];
   /** Ordered cast groups of slot keys ("P1".."P5"); priority left to right. */
   groups: string[][];
+  /**
+   * Cast policy. 'group' executes the rotation above; 'cadence' ignores it and lets
+   * the engine pick its own (what the tier lists run). Groups are sent either way so
+   * toggling does not lose them.
+   */
+  scheduler?: Scheduler;
   iters: number;
   /**
    * Base seed. A battle is deterministic in (team, scenario, seed), so this is the
