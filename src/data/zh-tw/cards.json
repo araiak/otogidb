@@ -2922,7 +2922,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -2945,7 +2945,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -43249,7 +43249,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -43268,7 +43268,7 @@
           "featured_banners": [
             {
               "end": "2026-09-22 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 70,
               "start": "2026-09-15 15:00:00"
             }
@@ -44847,7 +44847,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -44870,7 +44870,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -80795,7 +80795,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -80818,7 +80818,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "limit": 1,
               "price": 140,
               "start": "2026-09-06 15:00:00"
@@ -80829,7 +80829,7 @@
           "featured_banners": [
             {
               "end": "2026-09-15 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 70,
               "start": "2026-09-12 15:00:00"
             }
@@ -129687,6 +129687,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-04-15",
+            "event_date": "2026-09-19",
+            "event_id": "188",
+            "event_name": "Guild Conquest ーHuanglongー",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -129698,7 +129706,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "188",
+              "event_name": "公會討伐ー黃龍ー",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -129710,7 +129724,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "100465",
@@ -129727,11 +129743,62 @@
       "description": "<color=#f4e48e>「人類的孩子啊，歡迎來到我的府邸。」</color><br/><color=#ef9843>四神的中心，也被稱為是四神之長的龍所化身而成的妖怪。</color>她毫不畏懼，常常讓自己躍居於話題的中心。反過來說，她有點小任性，不管是什麼話題，只要自己不是話題的中心就會心情不爽。<br/><color=#f45d68>[活動]公會討伐</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0",
+                "new": {
+                  "event_id": "188",
+                  "event_name": "Guild Conquest ーHuanglongー",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "stats.base_hp",
+                "new": 2800,
+                "old": 2465
+              },
+              {
+                "field": "stats.max_atk",
+                "new": 13100,
+                "old": 12600
+              },
+              {
+                "field": "stats.base_atk",
+                "new": 4365,
+                "old": 4200
+              },
+              {
+                "field": "stats.max_hp",
+                "new": 8400,
+                "old": 7400
+              }
+            ],
+            "date": "2026-09-16",
+            "version": "d3d28a8"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.519514+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.838142+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-16T09:02:10.373898+00:00",
+        "last_modified_version": "d3d28a8"
       },
       "id": "465",
       "image_urls": {
@@ -129791,12 +129858,12 @@
       "stats": {
         "attribute": 1,
         "attribute_name": "Divina",
-        "base_atk": 4200,
-        "base_hp": 2465,
+        "base_atk": 4365,
+        "base_hp": 2800,
         "cost": 1,
         "crit": 2000,
-        "max_atk": 12600,
-        "max_hp": 7400,
+        "max_atk": 13100,
+        "max_hp": 8400,
         "max_level": 70,
         "rarity": 5,
         "speed": 1300,
@@ -193891,5 +193958,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 1018,
-  "version": "550a400"
+  "version": "d3d28a8"
 }
