@@ -17,8 +17,10 @@ import { createSimClient } from '../../lib/sim/client';
 import type { SimClient, SimResult, BondSlot, Scheduler } from '../../lib/sim/client';
 import {
   HELPER_INDEX,
+  SAVE_SLOTS,
   SLOT_LABELS,
   emptyTeam,
+  hasSavedTeam,
   isAssistCard,
   loadTeam,
   saveTeam,
@@ -74,10 +76,14 @@ export default function TeamSimulator() {
   const [importOpen, setImportOpen] = useState(false);
   const [importText, setImportText] = useState('');
   const [shareNote, setShareNote] = useState<string | null>(null);
+  // Which save slots hold a team. Kept in state because localStorage is not
+  // reactive and the Load buttons have to grey out on first paint.
+  const [filledSaves, setFilledSaves] = useState<number[]>([]);
   const client = useRef<SimClient | null>(null);
 
   useEffect(() => {
     setTeam(loadTeam());
+    setFilledSaves(SAVE_SLOTS.filter(hasSavedTeam));
     getFullCardsData()
       .then((d) => setCards(Object.values(d.cards) as Card[]))
       .catch((e) => setError(`Could not load card data: ${e}`));
@@ -157,6 +163,24 @@ export default function TeamSimulator() {
       setRunning(false);
       setStatus(null);
     }
+  }
+
+  function note(message: string) {
+    setShareNote(message);
+    setTimeout(() => setShareNote(null), 2500);
+  }
+
+  function saveToSlot(slot: number) {
+    saveTeam(team, slot);
+    setFilledSaves(SAVE_SLOTS.filter(hasSavedTeam));
+    note(`Saved to slot ${slot}`);
+  }
+
+  function loadFromSlot(slot: number) {
+    // loadTeam() already rebuilds the slot list to full length and backfills
+    // fields added since the save, so an old slot cannot shift the team.
+    setTeam(loadTeam(slot));
+    note(`Loaded slot ${slot}`);
   }
 
   async function exportTeam() {
@@ -316,6 +340,29 @@ export default function TeamSimulator() {
 
         <div className="ml-auto flex items-center gap-2">
           {shareNote && <span className="text-xs text-secondary">{shareNote}</span>}
+          {SAVE_SLOTS.map((n) => (
+            <span key={n} className="flex items-center rounded border border-border">
+              <button
+                type="button"
+                onClick={() => saveToSlot(n)}
+                title={`Save this team to slot ${n} (this browser only)`}
+                className="px-2 py-1 text-xs text-secondary hover:text-primary"
+              >
+                S{n}
+              </button>
+              <button
+                type="button"
+                onClick={() => loadFromSlot(n)}
+                disabled={!filledSaves.includes(n)}
+                title={
+                  filledSaves.includes(n) ? `Load slot ${n}` : `Slot ${n} is empty`
+                }
+                className="px-2 py-1 text-xs text-secondary border-l border-border hover:text-primary disabled:opacity-40"
+              >
+                L{n}
+              </button>
+            </span>
+          ))}
           <button
             type="button"
             onClick={exportTeam}

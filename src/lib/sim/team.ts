@@ -101,9 +101,18 @@ export function toRequest(team: TeamState): SimRequest {
 
 const STORAGE_KEY = 'otogidb-team-simulator';
 
-export function loadTeam(): TeamState {
+/** Named save slots, on top of the autosave. Three is enough to compare a couple of
+ *  builds without turning this into a team manager. */
+export const SAVE_SLOTS = [1, 2, 3];
+
+/** No slot = the autosave the calculator restores on load. */
+function storageKey(slot?: number): string {
+  return slot ? `${STORAGE_KEY}-save${slot}` : STORAGE_KEY;
+}
+
+export function loadTeam(slot?: number): TeamState {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey(slot));
     if (!raw) return emptyTeam();
     const parsed = JSON.parse(raw) as Partial<TeamState>;
     const base = emptyTeam();
@@ -125,11 +134,20 @@ export function loadTeam(): TeamState {
   }
 }
 
-export function saveTeam(team: TeamState): void {
+export function saveTeam(team: TeamState, slot?: number): void {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(team));
+    localStorage.setItem(storageKey(slot), JSON.stringify(team));
   } catch {
     // Private browsing or blocked storage: the calculator still works, it just
     // forgets. Not worth surfacing.
+  }
+}
+
+/** Does this save slot hold a team? Drives the Load buttons' disabled state. */
+export function hasSavedTeam(slot: number): boolean {
+  try {
+    return localStorage.getItem(storageKey(slot)) !== null;
+  } catch {
+    return false;
   }
 }
