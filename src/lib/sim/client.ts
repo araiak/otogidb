@@ -179,6 +179,8 @@ export interface SuggestResult {
   groups: string[][];
   /** {retiring: replacement} -- a permanent-stack buffer vacating once it caps. */
   swap: Record<string, string>;
+  /** The condition the suggested swap was measured under. */
+  swap_when: SwapWhen;
   score: number;
   /** Members the orb budget allows: cost decay / orb regen. */
   cap: number;

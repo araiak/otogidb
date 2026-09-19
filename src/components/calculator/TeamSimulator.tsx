@@ -179,7 +179,13 @@ export default function TeamSimulator() {
       setStatus(null);
       const s = await c.suggest(toRequest(team));
       setSuggestion(s);
-      setTeam((t) => ({ ...t, groups: s.groups, swap: s.swap ?? {}, scheduler: 'group' }));
+      setTeam((t) => ({
+        ...t,
+        groups: s.groups,
+        swap: s.swap ?? {},
+        swapWhen: s.swap_when ?? 'autos',
+        scheduler: 'group',
+      }));
       setStep('rotation');
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
