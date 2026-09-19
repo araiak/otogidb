@@ -138,12 +138,47 @@ export interface SimResult {
   stats: SimCardStats[];
 }
 
-export type SimPhase = 'runtime' | 'engine' | 'data' | 'init' | 'run';
+/** One step of the greedy group search, in the order it was decided. */
+export interface SuggestStep {
+  /** The group after this step, or null when the step was a rejection. */
+  group: string[] | null;
+  score: number;
+  /** The slot this step added. */
+  added?: string | null;
+  /** The slot considered and turned down, which is why the search stopped. */
+  rejected?: string;
+  /** A ramp swap that beat the plain group. */
+  swap?: Record<string, string>;
+}
+
+export interface SuggestResult {
+  groups: string[][];
+  /** {retiring: replacement} -- a permanent-stack buffer vacating once it caps. */
+  swap: Record<string, string>;
+  score: number;
+  /** Members the orb budget allows: cost decay / orb regen. */
+  cap: number;
+  /** Castable slots the search left out. */
+  dropped: string[];
+  info: Record<string, { name: string; damage: boolean; ramp: boolean }>;
+  trace: SuggestStep[];
+  seed: number;
+}
+
+export type SimPhase =
+  | 'runtime'
+  | 'engine'
+  | 'data'
+  | 'init'
+  | 'run'
+  | 'suggest';
 
 export interface SimClient {
   /** Start downloading the runtime. Safe to call repeatedly. */
   warmup(): Promise<void>;
   run(req: SimRequest): Promise<SimResult>;
+  /** Pick the cast group for this team. Ignores `req.groups`; returns new ones. */
+  suggest(req: SimRequest): Promise<SuggestResult>;
   onProgress(
     cb: (phase: SimPhase, detail: string, done?: number, total?: number) => void
   ): () => void;
@@ -153,9 +188,11 @@ export interface SimClient {
 export function createSimClient(): SimClient {
   // Module worker, not classic: Pyodide 314 refuses to run in a classic worker.
   const worker = new Worker('/sim/worker.js', { type: 'module' });
+  // Untyped payload: the same request/response plumbing carries both a scored run
+  // and a group suggestion, and only the caller knows which it asked for.
   const pending = new Map<
     number,
-    { resolve: (r: SimResult) => void; reject: (e: Error) => void }
+    { resolve: (r: unknown) => void; reject: (e: Error) => void }
   >();
   const listeners = new Set<
     (phase: SimPhase, detail: string, done?: number, total?: number) => void
@@ -215,12 +252,12 @@ export function createSimClient(): SimClient {
   // policy on a process-wide singleton, so concurrent runs would interleave state.
   let queue: Promise<unknown> = Promise.resolve();
 
-  function run(req: SimRequest): Promise<SimResult> {
+  function ask<T>(type: 'run' | 'suggest', req: SimRequest): Promise<T> {
     const task = queue.then(() => {
       const id = nextId++;
-      return new Promise<SimResult>((resolve, reject) => {
-        pending.set(id, { resolve, reject });
-        worker.postMessage({ type: 'run', id, payload: JSON.stringify(req) });
+      return new Promise<T>((resolve, reject) => {
+        pending.set(id, { resolve: resolve as (r: unknown) => void, reject });
+        worker.postMessage({ type, id, payload: JSON.stringify(req) });
       });
     });
     queue = task.catch(() => undefined);
@@ -229,7 +266,8 @@ export function createSimClient(): SimClient {
 
   return {
     warmup,
-    run,
+    run: (req) => ask<SimResult>('run', req),
+    suggest: (req) => ask<SuggestResult>('suggest', req),
     onProgress(cb) {
       listeners.add(cb);
       return () => listeners.delete(cb);

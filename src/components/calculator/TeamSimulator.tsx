@@ -13,7 +13,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Card } from '../../types/card';
 import { getFullCardsData } from '../../lib/cards';
-import { createSimClient } from '../../lib/sim/client';
+import { createSimClient, type SuggestResult } from '../../lib/sim/client';
 import type { SimClient, SimResult, BondSlot, Scheduler } from '../../lib/sim/client';
 import {
   HELPER_INDEX,
@@ -68,6 +68,7 @@ export default function TeamSimulator() {
   const [team, setTeam] = useState<TeamState>(emptyTeam);
   const [result, setResult] = useState<SimResult | null>(null);
   const [running, setRunning] = useState(false);
+  const [suggestion, setSuggestion] = useState<SuggestResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [activeSlot, setActiveSlot] = useState(0);
@@ -165,6 +166,29 @@ export default function TeamSimulator() {
     }
   }
 
+  // Pick the group rather than score one. The size is arithmetic -- a skill's cost
+  // decays to 1 orb every 20s and the team earns an orb every 5s, so a group of more
+  // than four costs casts rather than adding them -- but which four is a question
+  // only the engine answers, because a buffer's worth depends on the group it joins.
+  async function suggestGroups() {
+    setRunning(true);
+    setError(null);
+    try {
+      const c = getClient();
+      await c.warmup();
+      setStatus(null);
+      const s = await c.suggest(toRequest(team));
+      setSuggestion(s);
+      setTeam((t) => ({ ...t, groups: s.groups, scheduler: 'group' }));
+      setStep('rotation');
+    } catch (e) {
+      setError(String(e instanceof Error ? e.message : e));
+    } finally {
+      setRunning(false);
+      setStatus(null);
+    }
+  }
+
   function note(message: string) {
     setShareNote(message);
     setTimeout(() => setShareNote(null), 2500);
@@ -253,9 +277,12 @@ export default function TeamSimulator() {
         </select>
 
         {/* Cast policy. 'Groups' plays the rotation the player built below;
-            'Optimized' ignores it and lets the engine pick, which is what the tier
-            lists run -- so it answers "is my rotation better than the default?".
-            NOT labelled "Auto": the game has its own auto-battle and this is not it. */}
+            'Buff & Dump' ignores it and runs the engine's own rotation, which is what
+            the tier lists run -- so it answers "is my rotation better than that one?".
+            NOT labelled "Optimized": it loses to a good set of groups often enough
+            that the word was reading as a promise. NOT "Auto" either -- the game has
+            its own auto-battle and this is not it. The label names the mechanic:
+            pool orbs, cast the buffers, dump the carries inside the buff window. */}
         <label className="flex items-center gap-2 text-xs text-secondary">
           Casting
           <select
@@ -264,10 +291,10 @@ export default function TeamSimulator() {
               setTeam((t) => ({ ...t, scheduler: e.target.value as Scheduler }))
             }
             className="px-2 py-1 bg-surface border border-border rounded text-primary text-sm"
-            title="Groups: run the cast groups below. Optimized: let the engine work out the best rotation itself."
+            title="Groups: run the cast groups below. Buff & Dump: the engine pools orbs, buffs, then dumps the carries on a ~21s beat."
           >
             <option value="group">Groups</option>
-            <option value="cadence">Optimized</option>
+            <option value="cadence">Buff &amp; Dump</option>
           </select>
         </label>
 
@@ -376,6 +403,15 @@ export default function TeamSimulator() {
             className="px-2 py-1 rounded border border-border text-xs text-secondary hover:text-primary"
           >
             Import
+          </button>
+          <button
+            type="button"
+            onClick={suggestGroups}
+            disabled={running || filled === 0}
+            title="Work out which skills are worth casting, and put them in a group."
+            className="px-2 py-1 rounded border border-border text-xs text-secondary hover:text-primary disabled:opacity-50"
+          >
+            Suggest groups
           </button>
           <button
             type="button"
@@ -531,10 +567,55 @@ export default function TeamSimulator() {
             </h2>
             {team.scheduler === 'cadence' && (
               <p className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
-                Casting is set to <strong className="text-primary">Optimized</strong> —
-                the engine works out its own rotation and these groups are not used.
-                They are kept, so switch back to Groups to compare.
+                Casting is set to <strong className="text-primary">Buff &amp; Dump</strong> —
+                the engine runs its own rotation and these groups are not used. They
+                are kept, so switch back to Groups to compare.
               </p>
+            )}
+            {suggestion && (
+              <div className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
+                <p className="mb-1">
+                  Kept{' '}
+                  <strong className="text-primary">
+                    {suggestion.groups[0]
+                      .map((s) => suggestion.info[s]?.name ?? s)
+                      .join(', ')}
+                  </strong>
+                  {suggestion.dropped.length > 0 && (
+                    <>
+                      {' '}— left out{' '}
+                      {suggestion.dropped
+                        .map((s) => suggestion.info[s]?.name ?? s)
+                        .join(', ')}
+                      .
+                    </>
+                  )}
+                </p>
+                {/* The budget is the whole reason a group has a size at all, so say it
+                    rather than letting the cut look arbitrary. */}
+                <p className="mb-1">
+                  At one orb every 5s and a cost that decays every 20s, {suggestion.cap}{' '}
+                  casts per cycle is all the team can fund. A fifth member does not add
+                  casts — it takes them off your best cards.
+                </p>
+                <ul className="space-y-0.5">
+                  {suggestion.trace.map((st, i) => (
+                    <li key={i}>
+                      {st.rejected
+                        ? `stopped: adding ${suggestion.info[st.rejected]?.name ?? st.rejected} scored ${(st.score / 1e6).toFixed(1)}M, no better`
+                        : st.swap
+                          ? `${Object.entries(st.swap).map(([a, b]) => `${suggestion.info[a]?.name ?? a} retires for ${suggestion.info[b]?.name ?? b} once autos cap`).join('; ')} — ${(st.score / 1e6).toFixed(1)}M`
+                          : `${st.added ? `+ ${suggestion.info[st.added]?.name ?? st.added}` : 'carries only'} — ${(st.score / 1e6).toFixed(1)}M`}
+                    </li>
+                  ))}
+                </ul>
+                {Object.keys(suggestion.swap).length > 0 && (
+                  <p className="mt-1 text-amber-500">
+                    The retire-and-replace above is not something the group editor can
+                    express yet, so the group below is the version without it.
+                  </p>
+                )}
+              </div>
             )}
             <div className={team.scheduler === 'cadence' ? 'opacity-50' : undefined}>
               <SkillGroups
