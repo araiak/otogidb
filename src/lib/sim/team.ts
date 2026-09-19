@@ -7,7 +7,7 @@
  */
 
 import type { Card } from '../../types/card';
-import type { BondSlot, Scheduler, SimRequest } from './client';
+import type { BondSlot, Scheduler, SimRequest, SwapWhen } from './client';
 
 export const SLOT_COUNT = 7;
 export const BATTLE_SLOTS = 5; // P1..P5; P5 is the helper
@@ -55,6 +55,10 @@ export interface TeamState {
   slots: SlotState[];
   /** Ordered cast groups of engine slot keys; priority left to right. */
   groups: string[][];
+  /** {retiring: replacement} -- a card that stands down once the carry's autos cap. */
+  swap: Record<string, string>;
+  /** Which channel has to cap before the swap above fires. */
+  swapWhen: SwapWhen;
   /** 'group' runs the groups above; 'cadence' lets the engine choose. */
   scheduler: Scheduler;
   bossId: number | null;
@@ -75,6 +79,8 @@ export function emptyTeam(): TeamState {
     // One group by default: every battle slot fires together, which is the simplest
     // thing to reason about and the baseline other groupings get compared against.
     groups: [['P1', 'P2', 'P3', 'P4', 'P5']],
+    swap: {},
+    swapWhen: 'autos',
     scheduler: 'group',
     bossId: null,
     bossLevel: 30,
@@ -90,6 +96,15 @@ export function toRequest(team: TeamState): SimRequest {
     assists: team.slots.map((s) => (s.assistId ? Number(s.assistId) : null)),
     bonds: team.slots.map((s) => s.bonds),
     groups: team.groups.filter((g) => g.length > 0),
+    // Only send a swap whose BOTH ends still have a card and a group -- an edit that
+    // removed one of them would otherwise ship a dangling rule the engine silently
+    // ignores, and the run would not match what the editor shows.
+    swap: Object.fromEntries(
+      Object.entries(team.swap ?? {}).filter(
+        ([a, b]) => team.groups.flat().includes(a) && team.groups.flat().includes(b)
+      )
+    ),
+    swap_when: team.swapWhen ?? 'autos',
     scheduler: team.scheduler,
     iters: team.iters,
     seed: team.seed,
@@ -126,6 +141,8 @@ export function loadTeam(slot?: number): TeamState {
         (_, i) => parsed.slots?.[i] ?? emptySlot()
       ),
       groups: parsed.groups?.length ? parsed.groups : base.groups,
+      swap: parsed.swap ?? base.swap,
+      swapWhen: parsed.swapWhen ?? base.swapWhen,
       // Teams saved before the control existed have no scheduler.
       scheduler: parsed.scheduler ?? base.scheduler,
     };

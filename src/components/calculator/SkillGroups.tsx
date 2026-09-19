@@ -17,12 +17,18 @@ import { useState } from 'react';
 import type { Card } from '../../types/card';
 import { getAndroidImageWithFallback } from '../../lib/images';
 import { SLOT_LABELS, slotIdFor } from '../../lib/sim/team';
+import { SWAP_WHEN_LABELS, type SwapWhen } from '../../lib/sim/client';
 
 interface SkillGroupsProps {
   /** Engine slot keys that have a card, in slot order. */
   available: string[];
   groups: string[][];
   onChange: (groups: string[][]) => void;
+  /** {retiring: replacement}; both ends live in the same group, adjacent. */
+  swap: Record<string, string>;
+  onSwapChange: (swap: Record<string, string>) => void;
+  swapWhen: SwapWhen;
+  onSwapWhenChange: (when: SwapWhen) => void;
   cardOf: (slotKey: string) => Card | null;
   assistOf: (slotKey: string) => Card | null;
   nameOf: (slotKey: string) => string;
@@ -32,6 +38,10 @@ export function SkillGroups({
   available,
   groups,
   onChange,
+  swap,
+  onSwapChange,
+  swapWhen,
+  onSwapWhenChange,
   cardOf,
   assistOf,
   nameOf,
@@ -59,6 +69,36 @@ export function SkillGroups({
     if (dragging && dragging !== before) move(dragging, target, before);
     setDragging(null);
     setOver(null);
+  }
+
+  /** Dropping ONTO a portrait pairs the two: `onto` stands down, `incoming` takes
+   *  over. The engine wants both listed in the same group and adjacent, so the
+   *  incoming card is moved in behind the one it replaces. */
+  function pair(onto: string, incoming: string) {
+    if (onto === incoming) return;
+    const gi = groups.findIndex((g) => g.includes(onto));
+    if (gi < 0) return;
+    const next = groups.map((g) => g.filter((s) => s !== incoming));
+    const at = next[gi].indexOf(onto);
+    next[gi].splice(at + 1, 0, incoming);
+    while (next.length > 1 && next[next.length - 1].length === 0) next.pop();
+    onChange(next);
+    // A card can retire for one replacement and be one replacement, never both --
+    // a chain would need a second trigger and there is only one.
+    const cleaned = Object.fromEntries(
+      Object.entries(swap).filter(
+        ([a, b]) => a !== onto && b !== incoming && a !== incoming && b !== onto
+      )
+    );
+    onSwapChange({ ...cleaned, [onto]: incoming });
+    setDragging(null);
+    setOver(null);
+  }
+
+  function unpair(slot: string) {
+    const next = { ...swap };
+    delete next[slot];
+    onSwapChange(next);
   }
 
   function circle(slot: string, index: number, group: number) {
@@ -105,7 +145,26 @@ export function SkillGroups({
           <span className="absolute -top-1 -left-1 z-10 px-1 rounded bg-surface text-secondary text-[10px] font-medium border border-background">
             {id}
           </span>
-          <div className="w-12 h-12 rounded-full overflow-hidden border border-border bg-surface">
+          <div
+            onDragOver={(e) => {
+              if (dragging && dragging !== slot) {
+                e.preventDefault();
+                e.stopPropagation();
+              }
+            }}
+            onDrop={(e) => {
+              e.stopPropagation();
+              if (dragging) pair(slot, dragging);
+            }}
+            // Drop ON the portrait to pair; drop on the padding around it to reorder.
+            // Two meanings for one gesture, so the ring is the only thing that says
+            // which you are about to get.
+            className={`w-12 h-12 rounded-full overflow-hidden border bg-surface ${
+              dragging && dragging !== slot
+                ? 'border-accent border-2 ring-2 ring-accent/40'
+                : 'border-border'
+            }`}
+          >
             {img ? (
               <img src={img} alt={name} className="w-full h-full object-cover rounded-full" />
             ) : (
@@ -126,6 +185,26 @@ export function SkillGroups({
               />
             </div>
           )}
+          {swap[slot] && (
+            <button
+              type="button"
+              onClick={() => unpair(slot)}
+              title={`Stands down for ${nameOf(swap[slot])} once ${SWAP_WHEN_LABELS[swapWhen]}. Click to remove.`}
+              className="absolute -bottom-1 -left-1 z-20 px-1 rounded bg-amber-500 text-black text-[9px] font-semibold border border-background"
+            >
+              ⇄{slotIdFor(swap[slot])}
+            </button>
+          )}
+          {Object.values(swap).includes(slot) && (
+            <span
+              title={`Takes over from ${nameOf(
+                Object.keys(swap).find((k) => swap[k] === slot) || ''
+              )} once ${SWAP_WHEN_LABELS[swapWhen]}.`}
+              className="absolute -bottom-1 -left-1 z-20 px-1 rounded bg-surface text-amber-500 text-[9px] font-semibold border border-amber-500/50"
+            >
+              ⇄in
+            </span>
+          )}
           {index >= 0 && (
             <span
               className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-accent text-white text-[10px] flex items-center justify-center border border-background"
@@ -142,8 +221,34 @@ export function SkillGroups({
     );
   }
 
+  const pairs = Object.entries(swap);
+
   return (
     <div className="flex flex-col gap-2">
+      {/* Only shown once a pair exists: the condition is meaningless on its own, and
+          an always-visible control implies the feature is doing something when it
+          is not. */}
+      {pairs.length > 0 && (
+        <label className="flex items-center gap-2 text-[11px] text-secondary px-2">
+          <span className="text-amber-500">⇄</span>
+          {pairs
+            .map(([a, b]) => `${slotIdFor(a)} stands down for ${slotIdFor(b)}`)
+            .join(', ')}{' '}
+          once
+          <select
+            value={swapWhen}
+            onChange={(e) => onSwapWhenChange(e.target.value as SwapWhen)}
+            className="px-1 py-0.5 bg-surface border border-border rounded text-primary text-[11px]"
+            title="Auto attacks cap at 99,999 and skill hits at 999,999. They saturate independently, so a card feeding only one channel is spent as soon as that channel caps."
+          >
+            {(Object.keys(SWAP_WHEN_LABELS) as SwapWhen[]).map((k) => (
+              <option key={k} value={k}>
+                {SWAP_WHEN_LABELS[k]}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
       {groups.map((g, i) => (
         <div
           key={i}

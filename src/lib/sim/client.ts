@@ -12,6 +12,18 @@ export type BondSlot = [BondKind, number];
 
 export type Scheduler = 'group' | 'cadence';
 
+/** When a retire-and-replace fires. Autos cap at 99,999 and skills at 999,999, and
+ *  they saturate independently, so a card feeding only one channel is spent as soon
+ *  as THAT one caps -- which is why this is a choice and not a constant. */
+export type SwapWhen = 'autos' | 'skills' | 'either' | 'both';
+
+export const SWAP_WHEN_LABELS: Record<SwapWhen, string> = {
+  autos: 'auto attacks cap',
+  skills: 'skill hits cap',
+  either: 'autos or skills cap',
+  both: 'autos and skills cap',
+};
+
 export interface SimRequest {
   /** 7 card ids in slot order: 4 active (0 is leader), helper, then 2 reserves. */
   cards: (number | null)[];
@@ -20,6 +32,16 @@ export interface SimRequest {
   bonds?: BondSlot[][];
   /** Ordered cast groups of slot keys ("P1".."P5"); priority left to right. */
   groups: string[][];
+  /**
+   * Player-authored retire-and-replace, {retiring: replacement}. The retiring slot
+   * stops casting once a carry's auto attacks reach the damage cap, and the named
+   * replacement starts. Deliberately the player's call, not something the engine
+   * infers: retiring a card whose skill still carries an unsaturated buff measured
+   * -1.8% on the team the mechanism was written for.
+   */
+  swap?: Record<string, string>;
+  /** Which damage channel must saturate before the swap fires. */
+  swap_when?: SwapWhen;
   /**
    * Cast policy. 'group' executes the rotation above; 'cadence' ignores it and lets
    * the engine pick its own (what the tier lists run). Groups are sent either way so
@@ -149,6 +171,8 @@ export interface SuggestStep {
   rejected?: string;
   /** A ramp swap that beat the plain group. */
   swap?: Record<string, string>;
+  /** Which damage channel must saturate before the swap fires. */
+  swap_when?: SwapWhen;
 }
 
 export interface SuggestResult {
@@ -161,6 +185,8 @@ export interface SuggestResult {
   /** Castable slots the search left out. */
   dropped: string[];
   info: Record<string, { name: string; damage: boolean; ramp: boolean }>;
+  /** Caveats the groups cannot express -- a ramp buffer's retire-at-cap, say. */
+  notes: string[];
   trace: SuggestStep[];
   seed: number;
 }

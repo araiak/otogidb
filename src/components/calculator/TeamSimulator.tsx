@@ -179,7 +179,7 @@ export default function TeamSimulator() {
       setStatus(null);
       const s = await c.suggest(toRequest(team));
       setSuggestion(s);
-      setTeam((t) => ({ ...t, groups: s.groups, scheduler: 'group' }));
+      setTeam((t) => ({ ...t, groups: s.groups, swap: s.swap ?? {}, scheduler: 'group' }));
       setStep('rotation');
     } catch (e) {
       setError(String(e instanceof Error ? e.message : e));
@@ -609,6 +609,11 @@ export default function TeamSimulator() {
                     </li>
                   ))}
                 </ul>
+                {(suggestion.notes ?? []).map((n, i) => (
+                  <p key={`note-${i}`} className="mt-1 text-amber-500">
+                    {n}
+                  </p>
+                ))}
                 {Object.keys(suggestion.swap).length > 0 && (
                   <p className="mt-1 text-amber-500">
                     The retire-and-replace above is not something the group editor can
@@ -622,6 +627,10 @@ export default function TeamSimulator() {
                 available={available}
                 groups={team.groups}
                 onChange={(groups) => setTeam((t) => ({ ...t, groups }))}
+                swap={team.swap ?? {}}
+                onSwapChange={(swap) => setTeam((t) => ({ ...t, swap }))}
+                swapWhen={team.swapWhen ?? 'autos'}
+                onSwapWhenChange={(swapWhen) => setTeam((t) => ({ ...t, swapWhen }))}
                 cardOf={cardOf}
                 assistOf={assistOf}
                 nameOf={nameOf}
