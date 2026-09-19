@@ -15,6 +15,7 @@
  * Protocol (postMessage):
  *   in  { type: 'init' }              -> { type: 'progress', ... } * n, { type: 'ready', info }
  *   in  { type: 'run', id, payload }  -> { type: 'result', id, data } | { type: 'error', id, message }
+ *   in  { type: 'suggest', id, payload } -> same, but the data is a group suggestion
  */
 
 const PYODIDE_VERSION = 'v314.0.6';
@@ -34,6 +35,7 @@ const DATA_FILES = [
 
 let pyodide = null;
 let runFn = null;
+let suggestFn = null;
 let booting = null;
 
 function progress(phase, detail) {
@@ -83,6 +85,7 @@ import otogi_sim.web as web
 web.init("/data")
 `);
   runFn = pyodide.runPython('import otogi_sim.web as web; web.run');
+  suggestFn = pyodide.runPython('import otogi_sim.web as web; web.suggest_groups');
   return JSON.parse(info);
 }
 
@@ -100,7 +103,9 @@ self.onmessage = async (e) => {
     return;
   }
 
-  if (msg.type === 'run') {
+  // 'run' scores the groups the player built; 'suggest' picks them. Same payload,
+  // same one-at-a-time rule -- the engine's RNG and cast policy are process-global.
+  if (msg.type === 'run' || msg.type === 'suggest') {
     try {
       booting = booting || boot();
       await booting;
@@ -110,15 +115,20 @@ self.onmessage = async (e) => {
       // Pyodide turns this JS function into something Python can call, so the seed
       // loop inside spec.score can report which run it is on. A ten-seed run is ten
       // seconds of otherwise silent work.
+      const suggesting = msg.type === 'suggest';
       const onStep = (done, total) =>
         self.postMessage({
           type: 'progress',
-          phase: 'run',
-          detail: done >= total ? 'Finishing' : `Run ${done} of ${total - 1}`,
+          phase: msg.type,
+          detail: done >= total
+            ? 'Finishing'
+            : suggesting
+              ? `Trying group ${done} of ${total - 1}`
+              : `Run ${done} of ${total - 1}`,
           done,
           total,
         });
-      const out = runFn(msg.payload, onStep);
+      const out = (suggesting ? suggestFn : runFn)(msg.payload, onStep);
       self.postMessage({ type: 'result', id: msg.id, data: JSON.parse(out) });
     } catch (err) {
       self.postMessage({ type: 'error', id: msg.id, message: String(err) });

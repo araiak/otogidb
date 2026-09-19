@@ -10,6 +10,20 @@
 export type BondKind = 'normal' | 'skill' | 'hp';
 export type BondSlot = [BondKind, number];
 
+export type Scheduler = 'group' | 'cadence';
+
+/** When a retire-and-replace fires. Autos cap at 99,999 and skills at 999,999, and
+ *  they saturate independently, so a card feeding only one channel is spent as soon
+ *  as THAT one caps -- which is why this is a choice and not a constant. */
+export type SwapWhen = 'autos' | 'skills' | 'either' | 'both';
+
+export const SWAP_WHEN_LABELS: Record<SwapWhen, string> = {
+  autos: 'auto attacks cap',
+  skills: 'skill hits cap',
+  either: 'autos or skills cap',
+  both: 'autos and skills cap',
+};
+
 export interface SimRequest {
   /** 7 card ids in slot order: 4 active (0 is leader), helper, then 2 reserves. */
   cards: (number | null)[];
@@ -18,6 +32,22 @@ export interface SimRequest {
   bonds?: BondSlot[][];
   /** Ordered cast groups of slot keys ("P1".."P5"); priority left to right. */
   groups: string[][];
+  /**
+   * Player-authored retire-and-replace, {retiring: replacement}. The retiring slot
+   * stops casting once a carry's auto attacks reach the damage cap, and the named
+   * replacement starts. Deliberately the player's call, not something the engine
+   * infers: retiring a card whose skill still carries an unsaturated buff measured
+   * -1.8% on the team the mechanism was written for.
+   */
+  swap?: Record<string, string>;
+  /** Which damage channel must saturate before the swap fires. */
+  swap_when?: SwapWhen;
+  /**
+   * Cast policy. 'group' executes the rotation above; 'cadence' ignores it and lets
+   * the engine pick its own (what the tier lists run). Groups are sent either way so
+   * toggling does not lose them.
+   */
+  scheduler?: Scheduler;
   iters: number;
   /**
    * Base seed. A battle is deterministic in (team, scenario, seed), so this is the
@@ -130,12 +160,53 @@ export interface SimResult {
   stats: SimCardStats[];
 }
 
-export type SimPhase = 'runtime' | 'engine' | 'data' | 'init' | 'run';
+/** One step of the greedy group search, in the order it was decided. */
+export interface SuggestStep {
+  /** The group after this step, or null when the step was a rejection. */
+  group: string[] | null;
+  score: number;
+  /** The slot this step added. */
+  added?: string | null;
+  /** The slot considered and turned down, which is why the search stopped. */
+  rejected?: string;
+  /** A ramp swap that beat the plain group. */
+  swap?: Record<string, string>;
+  /** Which damage channel must saturate before the swap fires. */
+  swap_when?: SwapWhen;
+}
+
+export interface SuggestResult {
+  groups: string[][];
+  /** {retiring: replacement} -- a permanent-stack buffer vacating once it caps. */
+  swap: Record<string, string>;
+  /** The condition the suggested swap was measured under. */
+  swap_when: SwapWhen;
+  score: number;
+  /** Members the orb budget allows: cost decay / orb regen. */
+  cap: number;
+  /** Castable slots the search left out. */
+  dropped: string[];
+  info: Record<string, { name: string; damage: boolean; ramp: boolean }>;
+  /** Caveats the groups cannot express -- a ramp buffer's retire-at-cap, say. */
+  notes: string[];
+  trace: SuggestStep[];
+  seed: number;
+}
+
+export type SimPhase =
+  | 'runtime'
+  | 'engine'
+  | 'data'
+  | 'init'
+  | 'run'
+  | 'suggest';
 
 export interface SimClient {
   /** Start downloading the runtime. Safe to call repeatedly. */
   warmup(): Promise<void>;
   run(req: SimRequest): Promise<SimResult>;
+  /** Pick the cast group for this team. Ignores `req.groups`; returns new ones. */
+  suggest(req: SimRequest): Promise<SuggestResult>;
   onProgress(
     cb: (phase: SimPhase, detail: string, done?: number, total?: number) => void
   ): () => void;
@@ -145,9 +216,11 @@ export interface SimClient {
 export function createSimClient(): SimClient {
   // Module worker, not classic: Pyodide 314 refuses to run in a classic worker.
   const worker = new Worker('/sim/worker.js', { type: 'module' });
+  // Untyped payload: the same request/response plumbing carries both a scored run
+  // and a group suggestion, and only the caller knows which it asked for.
   const pending = new Map<
     number,
-    { resolve: (r: SimResult) => void; reject: (e: Error) => void }
+    { resolve: (r: unknown) => void; reject: (e: Error) => void }
   >();
   const listeners = new Set<
     (phase: SimPhase, detail: string, done?: number, total?: number) => void
@@ -207,12 +280,12 @@ export function createSimClient(): SimClient {
   // policy on a process-wide singleton, so concurrent runs would interleave state.
   let queue: Promise<unknown> = Promise.resolve();
 
-  function run(req: SimRequest): Promise<SimResult> {
+  function ask<T>(type: 'run' | 'suggest', req: SimRequest): Promise<T> {
     const task = queue.then(() => {
       const id = nextId++;
-      return new Promise<SimResult>((resolve, reject) => {
-        pending.set(id, { resolve, reject });
-        worker.postMessage({ type: 'run', id, payload: JSON.stringify(req) });
+      return new Promise<T>((resolve, reject) => {
+        pending.set(id, { resolve: resolve as (r: unknown) => void, reject });
+        worker.postMessage({ type, id, payload: JSON.stringify(req) });
       });
     });
     queue = task.catch(() => undefined);
@@ -221,7 +294,8 @@ export function createSimClient(): SimClient {
 
   return {
     warmup,
-    run,
+    run: (req) => ask<SimResult>('run', req),
+    suggest: (req) => ask<SuggestResult>('suggest', req),
     onProgress(cb) {
       listeners.add(cb);
       return () => listeners.delete(cb);
