@@ -19462,5 +19462,40 @@
       "Crit Rate"
     ],
     "synergy_partners": []
+  },
+  "247701": {
+    "id": "247701",
+    "name": "Candy Knight",
+    "description": "Increases 40% of Crit DMG by the 2 allies with the highest ATK.",
+    "card_id": "2477",
+    "card_name": "Pumpkin Pie [HW3]",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT_ATK<40.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "247702": {
+    "id": "247702",
+    "name": "Queen's Grace",
+    "description": "Increases 45% of skill DMG and DMG dealt at the start of the final wave.",
+    "card_id": "2477",
+    "card_name": "Pumpkin Pie [HW3]",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<45.00%,0%>;ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Skill DMG",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
   }
 }

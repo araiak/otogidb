@@ -7,7 +7,7 @@
  */
 
 import type { Card } from '../../types/card';
-import type { BondSlot, SimRequest } from './client';
+import type { BondSlot, Scheduler, SimRequest, SwapWhen } from './client';
 
 export const SLOT_COUNT = 7;
 export const BATTLE_SLOTS = 5; // P1..P5; P5 is the helper
@@ -55,6 +55,12 @@ export interface TeamState {
   slots: SlotState[];
   /** Ordered cast groups of engine slot keys; priority left to right. */
   groups: string[][];
+  /** {retiring: replacement} -- a card that stands down once the carry's autos cap. */
+  swap: Record<string, string>;
+  /** Which channel has to cap before the swap above fires. */
+  swapWhen: SwapWhen;
+  /** 'group' runs the groups above; 'cadence' lets the engine choose. */
+  scheduler: Scheduler;
   bossId: number | null;
   bossLevel: number;
   iters: number;
@@ -73,6 +79,9 @@ export function emptyTeam(): TeamState {
     // One group by default: every battle slot fires together, which is the simplest
     // thing to reason about and the baseline other groupings get compared against.
     groups: [['P1', 'P2', 'P3', 'P4', 'P5']],
+    swap: {},
+    swapWhen: 'autos',
+    scheduler: 'group',
     bossId: null,
     bossLevel: 30,
     iters: 5,
@@ -87,6 +96,16 @@ export function toRequest(team: TeamState): SimRequest {
     assists: team.slots.map((s) => (s.assistId ? Number(s.assistId) : null)),
     bonds: team.slots.map((s) => s.bonds),
     groups: team.groups.filter((g) => g.length > 0),
+    // Only send a swap whose BOTH ends still have a card and a group -- an edit that
+    // removed one of them would otherwise ship a dangling rule the engine silently
+    // ignores, and the run would not match what the editor shows.
+    swap: Object.fromEntries(
+      Object.entries(team.swap ?? {}).filter(
+        ([a, b]) => team.groups.flat().includes(a) && team.groups.flat().includes(b)
+      )
+    ),
+    swap_when: team.swapWhen ?? 'autos',
+    scheduler: team.scheduler,
     iters: team.iters,
     seed: team.seed,
     time_limit: team.timeLimit,
@@ -97,9 +116,18 @@ export function toRequest(team: TeamState): SimRequest {
 
 const STORAGE_KEY = 'otogidb-team-simulator';
 
-export function loadTeam(): TeamState {
+/** Named save slots, on top of the autosave. Three is enough to compare a couple of
+ *  builds without turning this into a team manager. */
+export const SAVE_SLOTS = [1, 2, 3];
+
+/** No slot = the autosave the calculator restores on load. */
+function storageKey(slot?: number): string {
+  return slot ? `${STORAGE_KEY}-save${slot}` : STORAGE_KEY;
+}
+
+export function loadTeam(slot?: number): TeamState {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(storageKey(slot));
     if (!raw) return emptyTeam();
     const parsed = JSON.parse(raw) as Partial<TeamState>;
     const base = emptyTeam();
@@ -113,17 +141,30 @@ export function loadTeam(): TeamState {
         (_, i) => parsed.slots?.[i] ?? emptySlot()
       ),
       groups: parsed.groups?.length ? parsed.groups : base.groups,
+      swap: parsed.swap ?? base.swap,
+      swapWhen: parsed.swapWhen ?? base.swapWhen,
+      // Teams saved before the control existed have no scheduler.
+      scheduler: parsed.scheduler ?? base.scheduler,
     };
   } catch {
     return emptyTeam();
   }
 }
 
-export function saveTeam(team: TeamState): void {
+export function saveTeam(team: TeamState, slot?: number): void {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(team));
+    localStorage.setItem(storageKey(slot), JSON.stringify(team));
   } catch {
     // Private browsing or blocked storage: the calculator still works, it just
     // forgets. Not worth surfacing.
+  }
+}
+
+/** Does this save slot hold a team? Drives the Load buttons' disabled state. */
+export function hasSavedTeam(slot: number): boolean {
+  try {
+    return localStorage.getItem(storageKey(slot)) !== null;
+  } catch {
+    return false;
   }
 }
