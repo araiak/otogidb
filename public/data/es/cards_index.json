@@ -26591,6 +26591,81 @@
         "type_name": "Healer"
       }
     },
+    "2477": {
+      "abilities": [
+        {
+          "description": "Increases 40% of Crit DMG by the 2 allies with the highest ATK.",
+          "name": "Candy Knight",
+          "tags": [
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 45% of skill DMG and DMG dealt at the start of the final wave.",
+          "name": "Queen's Grace",
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "102477",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2477",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790062205/otogi/android/102477_e6a889aa6c7e7b2e8d9028f14de124fb.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790062205/otogi/cards_hd/102477_hd_e9b232c39919b9817b71901fe4f6d0e1.png"
+      },
+      "name": "Pumpkin Pie [HW3]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "Deals {value} DMG to current target, with a {probability} of inflicting Paralysis.",
+        "name": "Pumpkin Slash",
+        "prob_lb0": "150.05%",
+        "prob_mlb": "179.05%",
+        "slv_lb0": "5,269",
+        "slv_mlb": "6,289",
+        "tags": [
+          "DMG",
+          "Single",
+          "Paralysis"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4565,
+        "base_hp": 3430,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 13700,
+        "max_hp": 10300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
     "248": {
       "abilities": [
         {
@@ -66393,8 +66468,8 @@
       }
     }
   },
-  "data_hash": "439a1901",
+  "data_hash": "d6ab752d",
   "locale": "es",
-  "total_cards": 1018,
-  "version": "d3d28a8"
+  "total_cards": 1019,
+  "version": "a1cc4af"
 }
