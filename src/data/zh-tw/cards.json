@@ -83951,9 +83951,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -83976,7 +83980,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84010,12 +84015,63 @@
             ],
             "date": "2026-03-15",
             "version": "fa11c2b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.776537+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-09-24T18:38:25.745616+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2373",
       "image_urls": {
@@ -84155,9 +84211,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84180,7 +84240,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84198,11 +84259,63 @@
       "description": "<color=#f4e48e>「這我就拿走囉，感激不盡！」</color><br/><color=#ef9843>總是在日本的中秋時節出沒，偷丸子的盜匪之靈。</color>在此聲明，其實大家十分歡迎她在今晚偷東西，因為這時任何人都可以拿取丸子。這個傳統就是讓所有人都能「假裝」偷丸子來增添樂趣。所以，要是你想在公開場合戲劇性地揭發犯罪事件，她恐怕會讓你失望。如果你發現了她，可以好玩地說聲「大家小心自己的貴重物品喔」但是無需報警。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.511549+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.747668+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2374",
       "image_urls": {
@@ -84301,9 +84414,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84326,7 +84443,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84344,11 +84462,63 @@
       "description": "<color=#f4e48e>「沒有人能像我一樣採收它們！」</color><br/><color=#ef9843>一位為了賞月而採收芋頭的靈體。</color>如果在15號前後的夜晚採收量夠高的話，她會在豐收祭典上將採收的芋頭獻給月亮。她會將朋友的栗子和豆子一起算入。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.515560+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.751249+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2376",
       "image_urls": {
@@ -84453,9 +84623,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84478,7 +84652,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84496,11 +84671,63 @@
       "description": "<color=#f4e48e>「我會將你推入卡路里地獄！」</color><br/><color=#ef9843>遙遠的東方點心之靈。</color>她熱愛甜食，並且有著非常慷慨的心。她總是認為最好的禮物就是自己想要的禮物，所以你會發現她在分送大量的月餅。眾所皆知的是，她會將炸彈烘焙成點心當作惡作劇，所以咬一口之前請再次確認。別吃太多。它們熱量很高。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.514056+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.749507+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2377",
       "image_urls": {
@@ -194268,5 +194495,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 1019,
-  "version": "a1cc4af"
+  "version": "20ae173"
 }
