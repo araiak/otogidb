@@ -83951,9 +83951,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -83976,7 +83980,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84010,12 +84015,63 @@
             ],
             "date": "2026-03-15",
             "version": "fa11c2b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.776537+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-09-24T18:38:25.745616+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2373",
       "image_urls": {
@@ -84155,9 +84211,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84180,7 +84240,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84198,11 +84259,63 @@
       "description": "<color=#f4e48e>\"I'll take that, thank you very much!\"</color><br/><color=#ef9843>This spirit of a dumpling-stealing bandit always appears around the time of autumnal moon viewing in Japan.</color> For the record, she is actually quite welcome to steal on this night, as it is the one time it is permitted for anyone to help themselves to dumplings. It's a tradition that anyone is allowed to pretend they're stealing, you know, just for fun. So if you're looking for crime and drama at a public event, she may let you down. If you do spot her, feel free to give a playful \"Lock up your valuables, everyone,\" but there's no need to call the police.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.511549+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.747668+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2374",
       "image_urls": {
@@ -84301,9 +84414,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84326,7 +84443,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84344,11 +84462,63 @@
       "description": "<color=#f4e48e>\"Nobody harvests 'em like I do!\"</color><br/><color=#ef9843>A spirit who gathers taro potatoes for the moon viewing.</color> If the harvest yield is high enough around the night of the 15th, she offers up the harvested taro to the moon at a harvest festival. She counts among her friends chestnuts and beans.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.515560+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.751249+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2376",
       "image_urls": {
@@ -84453,9 +84623,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84478,7 +84652,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84496,11 +84671,63 @@
       "description": "<color=#f4e48e>\"I'll put you in a calorie coma!\"</color><br/><color=#ef9843>The spirit of a Far Eastern treat.</color> She has a sweet tooth, and is particularly generous of heart. She can't help but think the greatest gift is the gift of oneself, so you're likely to find her distributing large quantities of mooncake. She has been known to bake bombs into the cakes as a prank, so double check before taking a bite. Don't eat too many. They're rather calorific.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.514056+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.749507+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2377",
       "image_urls": {
@@ -194268,5 +194495,5 @@
   },
   "locale": "es_ES",
   "total_cards": 1019,
-  "version": "a1cc4af"
+  "version": "20ae173"
 }

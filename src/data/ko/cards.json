@@ -83951,9 +83951,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -83976,7 +83980,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84010,12 +84015,63 @@
             ],
             "date": "2026-03-15",
             "version": "fa11c2b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.776537+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-09-24T18:38:25.745616+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2373",
       "image_urls": {
@@ -84155,9 +84211,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84180,7 +84240,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84198,11 +84259,63 @@
       "description": "<color=#f4e48e>\"내가 가져가지, 고맙군!\"</color><br/><color=#ef9843>이 경단 도둑의 영은 항상 가을 달이 뜰 때쯤 일본에 나타난다.</color> 사실 이날 밤에는, 경단 훔치기를 허락하며 마음껏 먹을 수 있게 해준다. 재미로 누구든 훔치는 척 하는 전통인 것이다. 행사에서 무슨 범죄나 볼거리를 기대한다면 실망할 것이다. 그녀를 보게 되면 사람들에게 \"귀중품 조심해요\"라고 경고할 수는 있지만, 경찰을 부를 필요는 없다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.511549+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.747668+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2374",
       "image_urls": {
@@ -84301,9 +84414,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84326,7 +84443,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84344,11 +84462,63 @@
       "description": "<color=#f4e48e>\"나처럼 추수 잘하는 사람은 없어!\"</color><br/><color=#ef9843>달구경을 위해 타로를 수확하는 영</color>15일 밤, 수확고가 넉넉할 경우, 추수 축제에서 수확한 타로를 나눠준다. 잣과 콩을 셀 때 친구들까지 센다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.515560+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.751249+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2376",
       "image_urls": {
@@ -84453,9 +84623,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-09-28 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -84478,7 +84652,8 @@
           "standard_pool_start": "2025-10-04 00:00:00"
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -84496,11 +84671,63 @@
       "description": "<color=#f4e48e>\"칼로리 코마에 빠뜨리겠어!\"</color><br/><color=#ef9843>극동 지방 간식의 영</color> 단 것을 좋아하며 인심이 매우 후하다. 최고의 선물은 자신이 만든 선물이라 생각해서 어마어마한 양의 월병을 나눠주는 모습을 볼 수 있다. 장난으로 월병 안에 폭탄을 넣기도 하므로 먹기 전에 잘 살펴야 한다. 너무 많이 먹지 마요. 칼로리가 대단해요.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-09-28 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              }
+            ],
+            "date": "2026-09-24",
+            "version": "20ae173"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.514056+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-09-24T18:38:25.749507+00:00",
+        "last_modified_version": "20ae173"
       },
       "id": "2377",
       "image_urls": {
@@ -194268,5 +194495,5 @@
   },
   "locale": "ko_KR",
   "total_cards": 1019,
-  "version": "a1cc4af"
+  "version": "20ae173"
 }
