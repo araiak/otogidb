@@ -9,7 +9,7 @@ draft: false
 
 <div data-lang="en">
 
-The devs have put up a [poll](https://wj.qq.com/s2/28029092/85o9) for an interim event before Halloween starts. It's a cool opportunity to replay an older event and bring back some cards. I just wanted to quickly draw attention to a few cards and events that might be of interest to players.
+The devs have put up a [poll](https://wj.qq.com/s2/28029092/85o9) for an interim event before Halloween starts. It's a cool opportunity to replay an older event and bring back some cards. I just wanted to quickly draw attention to a few cards and events that might be of interest to players. I may have missed some events, but these are the ones that caught my eye.
 
 ---
 
