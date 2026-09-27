@@ -27,7 +27,7 @@ This one includes :card[492] and :card[495]. :card[492] is a fairly rare and exp
 
 ## Alice in the Serious Kingdom
 
-This brings :card[642] and :card[644]. :card[642] has been fairly powercrept, but :card[644] has in some ways actually gotten better with the releases of :card[1488] and :card[1584]. It feels like there are more healer XP boosters than you have slots for, but ranged attackers are fairly limited, with the strongest being :card[1494] or :card[570]. A high attacker with an ATK skill like :card[644] would probably be a nice add for a lot of players looking to increase the strength of a full-on XP farming team.
+This brings :card[642] and :card[644]. :card[642] has been fairly powercrept, but :card[644] has in some ways actually gotten better with the releases of :card[1488] and :card[1584]. It feels like there are more healer XP boosters than you have slots for, but ranged attackers are fairly limited, with the strongest being :card[1494] or :card[570]. A high ATK card with an damage skill like :card[644] would probably be a nice add for a lot of players looking to increase the strength of a full-on XP farming team.
 
 ---
 
