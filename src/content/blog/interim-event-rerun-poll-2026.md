@@ -21,7 +21,7 @@ The devs have put up a [poll](https://wj.qq.com/s2/28029092/85o9) for an interim
 
 ## Once Upon a Root...
 
-This one includes :card[492] and :card[495]. :card[492] is a fairly rare and expensive healer/tank who brings 55% skill damage to the top 2 Divina ATK. There aren't a lot of options with this ability or anything similar in Divina, so she can be nice for flexibility when building, and she can allow :card[1721] teams to pivot more abilities toward attack damage while still ensuring skills crit. :card[495] has mostly been replaced by :card[1672], :card[1784], :card[1494] or :card[1540].
+This one includes :card[492] and :card[495]. :card[492] is a fairly rare and expensive healer/tank who brings 55% skill damage to the top 2 Divina ATK. There aren't a lot of options with this ability or anything similar in Divina, so she can be nice for flexibility when building, and she can allow :card[1721] teams to pivot more abilities toward attack damage while still ensuring skills cap. :card[495] has mostly been replaced by :card[1672], :card[1784], :card[1494] or :card[1540].
 
 ---
 
