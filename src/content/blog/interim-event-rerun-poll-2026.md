@@ -39,7 +39,7 @@ This includes the legendary :card[514], which is still a staple in a lot of play
 
 ## Otogi 2nd Anniversary Special Episode: Incident of the Surprise Assault at the Sakuma Mansion
 
-Probably my personal top pick. We just had :card[1650], but Anima ranged carries are few and far between, and an uptick in supply for :card[543] would probably make Anima a bit more common. Even if she isn't a top tier carry anymore, she could make a pretty solid support for :card[1526] teams if you can find space for her passive and active damage amps — that's exactly what :card[1526] really lacks.
+Probably my personal top pick, I didn't play 2nd anniversary. We just had :card[1650], but Anima ranged carries are few and far between, and an uptick in supply for :card[543] would probably make Anima a bit more common. Even if she isn't a top tier carry anymore, she could make a pretty solid support for :card[1526] teams if you can find space for her passive and active damage amps — that's exactly what :card[1526] really lacks.
 
 For this and the next one, :card[550] is still a staple, and :card[553] is still a decent support option even years later.
 
