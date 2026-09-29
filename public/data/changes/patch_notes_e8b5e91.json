@@ -1,0 +1,1627 @@
+{
+  "version": "e8b5e91",
+  "version_date": "2026-09-29",
+  "previous_version": "20ae173",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 20
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "732",
+      "name": "Muramasa [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634646/otogi/cards_hd/100732_hd_e53c9375bc33c85d766b9e816ff7ae91.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Featured Banners: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.1",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-09-27 15:00:00",
+            "end": "2026-10-01 15:00:00",
+            "pity": 100,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-09-27 15:00:00', 'end': '2026-10-01 15:00:00', 'pity': 100, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-11 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-11 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "733",
+      "name": "Okita Soji [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634648/otogi/cards_hd/100733_hd_a0268230202f917aecc3c1b52f75f3b5.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Featured Banners: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.1",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-10-01 15:00:00",
+            "end": "2026-10-04 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-10-01 15:00:00', 'end': '2026-10-04 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-11 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-11 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "734",
+      "name": "Ibaraki Doji [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634649/otogi/cards_hd/100734_hd_2a1048535cd4b6321f5587a1d078cb72.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Featured Banners: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.1",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-10-04 15:00:00",
+            "end": "2026-10-07 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-10-04 15:00:00', 'end': '2026-10-07 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-11 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-11 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "738",
+      "name": "Cao Cao [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634652/otogi/cards_hd/100738_hd_9bc45cac7b0ea407fcbb667db5386b50.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "floors": [
+              64
+            ],
+            "first_seen": "2026-09-29",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'floors': [64], 'first_seen': '2026-09-29', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "739",
+      "name": "Tsuchimikado Mikado [Demon]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634653/otogi/cards_hd/100739_hd_2a98f1240d6098b3622f352d5ba6c2d0.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "10 items",
+          "display": "Reward Tiers: 0 items → 10 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 3,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 3, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.7",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 2,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 2, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.8",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.9",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "740",
+      "name": "Shuten Doji [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634654/otogi/cards_hd/100740_hd_cbd31e1d2eebcf6cf4a27d013ec66014.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Featured Banners: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.1",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-10-07 15:00:00",
+            "end": "2026-10-11 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-10-07 15:00:00', 'end': '2026-10-11 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-07 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-07 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "741",
+      "name": "Senji Ryakketsu",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634655/otogi/cards_hd/100741_hd_0b25b5a479e50b5d0d3ef064aa978d0a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Featured Banners: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.1",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-10-11 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-10-11 15:00:00', 'end': '2026-10-14 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-07 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-07 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1650",
+      "name": "Mira [4th anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987011/otogi/cards_hd/101650_hd_72466a08252120db901b7f26e352f85a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "5 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 5 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "2245",
+      "name": "Moon Viewing Set [4th anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987008/otogi/cards_hd/102245_hd_853d6cedcb66058e9638771d8e452649.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "7 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 7 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "2373",
+      "name": "Harvest Moon",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634774/otogi/cards_hd/102373_hd_adc43e51355045dd7d2041ede1e59c7c.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "2374",
+      "name": "Moon Viewing Pickpocket",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634775/otogi/cards_hd/102374_hd_aa6a29844efb1b1740c8e681ac6083d2.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "736",
+      "name": "Meito Kotetsu [3rd anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634650/otogi/cards_hd/100736_hd_a0bce40848a391c6fae92262ced3773e.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Reward Tiers: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "floors": [
+              32
+            ],
+            "first_seen": "2026-09-29",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'floors': [32], 'first_seen': '2026-09-29', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "737",
+      "name": "Pipe Fox [3rd anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634651/otogi/cards_hd/100737_hd_57cd065347aedf8033f8a8f1c68fb3c4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "2 items",
+          "display": "Reward Tiers: 0 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "floors": [
+              48
+            ],
+            "first_seen": "2026-09-29",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'floors': [48], 'first_seen': '2026-09-29', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "742",
+      "name": "Ame-no-Uzume [3rd anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634656/otogi/cards_hd/100742_hd_66dbcf4c0a2913c2d4e2a1cef7f1861d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Exchange Entries: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.1",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-10-07 15:00:00",
+            "end": "2026-10-14 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-10-07 15:00:00', 'end': '2026-10-14 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "2243",
+      "name": "Bisque Doll [4th anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987006/otogi/cards_hd/102243_hd_190ddd1d222a1c89772cd31bee232851.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "2244",
+      "name": "Amaymon [4th anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987007/otogi/cards_hd/102244_hd_6d1a70810cb181142d57c3b85a32f921.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "2376",
+      "name": "Tannia",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634775/otogi/cards_hd/102376_hd_b11b4d4ee2d6a1a19a393f92222f7a2c.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "2377",
+      "name": "Mooncake",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634776/otogi/cards_hd/102377_hd_9c65bfa9324f5ddd91119795dedb3998.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "735",
+      "name": "Charon",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634649/otogi/cards_hd/100735_hd_3acc71c1dc7a2772a937a79291a54ac9.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Reward Tiers: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 2,
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 2, 'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "From Description: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.190",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "190",
+            "event_name": "Clavicle of the King (Re-run)",
+            "floors": [
+              16
+            ],
+            "first_seen": "2026-09-29",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '190', 'event_name': 'Clavicle of the King (Re-run)', 'floors': [16], 'first_seen': '2026-09-29', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "2242",
+      "name": "Merchant Chuck Eye [4th anniversary]",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1787987003/otogi/cards_hd/102242_hd_0a3bb952625fd8c9cd1c533892ecc31c.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "3 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 3 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "185",
+            "event_name": "Otogi 4th Anniversary Tower",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "cardInit": {
+      "old_count": 476,
+      "new_count": 476,
+      "diff": 0
+    },
+    "towerBattles": {
+      "old_count": 231,
+      "new_count": 200,
+      "diff": -31
+    },
+    "banner": {
+      "old_count": 578,
+      "new_count": 579,
+      "diff": 1
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "eventHelpers": {
+      "old_count": 13,
+      "new_count": 11,
+      "diff": -2
+    },
+    "gachaGuarentee": {
+      "old_count": 199,
+      "new_count": 204,
+      "diff": 5
+    },
+    "towerTrade": {
+      "old_count": 10,
+      "new_count": 9,
+      "diff": -1
+    },
+    "towerEpisode": {
+      "old_count": 80,
+      "new_count": 64,
+      "diff": -16
+    },
+    "towerChapter": {
+      "old_count": 5,
+      "new_count": 4,
+      "diff": -1
+    },
+    "gachaTrade": {
+      "old_count": 352,
+      "new_count": 358,
+      "diff": 6
+    },
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "gachaContents": {
+      "old_count": 765,
+      "new_count": 765,
+      "diff": 0
+    },
+    "eventRankings": {
+      "old_count": 19,
+      "new_count": 19,
+      "diff": 0
+    }
+  }
+}
