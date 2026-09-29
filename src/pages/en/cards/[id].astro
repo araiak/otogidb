@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
-import { formatDescription, formatNumber, formatDate, formatSkillDescription, parseValue, parseDelay } from '../../../lib/formatters';
+import { formatDescription, formatNumber, formatDate, formatSkillDescription, getSkillPlaceholderValues, parseValue, parseDelay } from '../../../lib/formatters';
 import { MLB_MAX_LEVELS, computeMlbStats } from '../../../lib/lb';
 import { getAttributeIconUrl, getTypeIconUrl, getStarIconUrl } from '../../../lib/icons';
 import { getImageUrl, getAndroidImageWithFallback, getPlaceholderHD, getPlaceholderCircle } from '../../../lib/images';
@@ -162,6 +162,7 @@ function getAbilityBugs(abilityId: string): GameBug[] {
 
 // Get skill data for formatting
 const skillData = card.skill ? skillsData[card.skill.id] : null;
+const skillPlaceholders = getSkillPlaceholderValues(skillData, card.stats.rarity);
 
 // Compute MLB stats at build time
 const mlbStatsResult = computeMlbStats(card.stats);
@@ -1225,8 +1226,8 @@ const jsonLd = {
   </div>
 
   <!-- Card hover popups for synergy cards -->
+  <!-- No card data as props: island props are serialized into this page. -->
   {card.synergies && card.synergies.length > 0 && (
-    <!-- No card data as props: island props are serialized into this page. -->
     <CardPopups
       client:load
       selector=".synergy-card"
@@ -1234,7 +1235,7 @@ const jsonLd = {
   )}
 
   <!-- Client-side i18n: patch translatable fields without rebuilding pages -->
-  <script is:inline define:vars={{ cardId: card.id, localeIndexPaths }}>
+  <script is:inline define:vars={{ cardId: card.id, localeIndexPaths, skillPlaceholders }}>
   (function() {
     const SUPPORTED = ['ja', 'ko', 'zh-cn', 'zh-tw', 'es'];
 
@@ -1266,7 +1267,12 @@ const jsonLd = {
         const sn = document.querySelector('[data-i18n="skill-name"]');
         if (sn && skill.name) sn.textContent = skill.name;
         const sd = document.querySelector('[data-i18n="skill-description"]');
-        if (sd && skill.description) sd.textContent = skill.description;
+        if (sd && skill.description) {
+          // Locale templates keep {value}/{probability}/{delay1}; fill them like the English render.
+          sd.textContent = skill.description.replace(/\{(\w+)\}/g, function(m, k) {
+            return skillPlaceholders[k] || m;
+          });
+        }
       }
       (cardData.abilities || []).forEach(function(ab, i) {
         const an = document.querySelector('[data-ability-index="' + i + '"][data-i18n="ability-name"]');

@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import { remarkCardReference } from './src/lib/remark-card-reference';
 import { remarkFilterReference, remarkListReference } from './src/lib/remark-filter-reference';
 import { remarkTeamReference } from './src/lib/remark-team-reference';
@@ -46,8 +47,13 @@ export default defineConfig({
       prefixDefaultLocale: false
     }
   },
+  // Astro 7 defaults to JSX whitespace rules, which drop spaces between inline elements.
+  compressHTML: true,
   markdown: {
-    remarkPlugins: [remarkCardReference, remarkFilterReference, remarkListReference, remarkTeamReference, remarkSpoiler, remarkGlossary]
+    // Astro 7 defaults to Sätteri; our remark plugins need the unified pipeline.
+    processor: unified({
+      remarkPlugins: [remarkCardReference, remarkFilterReference, remarkListReference, remarkTeamReference, remarkSpoiler, remarkGlossary]
+    })
   },
   build: {
     inlineStylesheets: 'auto'
