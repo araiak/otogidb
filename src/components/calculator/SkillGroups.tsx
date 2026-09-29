@@ -63,6 +63,9 @@ export function SkillGroups({
     }
     while (next.length > 1 && next[next.length - 1].length === 0) next.pop();
     onChange(next);
+    // Moving either end breaks the adjacency the engine needs, and dragging a card
+    // away is the natural undo for an accidental pair drop.
+    unpair(slot);
   }
 
   function onDrop(target: number, before?: string) {
@@ -95,10 +98,12 @@ export function SkillGroups({
     setOver(null);
   }
 
+  /** Remove any pair `slot` is on, either end. */
   function unpair(slot: string) {
-    const next = { ...swap };
-    delete next[slot];
-    onSwapChange(next);
+    const next = Object.fromEntries(
+      Object.entries(swap).filter(([a, b]) => a !== slot && b !== slot)
+    );
+    if (Object.keys(next).length !== Object.keys(swap).length) onSwapChange(next);
   }
 
   function circle(slot: string, index: number, group: number) {
@@ -196,14 +201,16 @@ export function SkillGroups({
             </button>
           )}
           {Object.values(swap).includes(slot) && (
-            <span
+            <button
+              type="button"
+              onClick={() => unpair(slot)}
               title={`Takes over from ${nameOf(
                 Object.keys(swap).find((k) => swap[k] === slot) || ''
-              )} once ${SWAP_WHEN_LABELS[swapWhen]}.`}
+              )} once ${SWAP_WHEN_LABELS[swapWhen]}. Click to remove.`}
               className="absolute -bottom-1 -left-1 z-20 px-1 rounded bg-surface text-amber-500 text-[9px] font-semibold border border-amber-500/50"
             >
               ⇄in
-            </span>
+            </button>
           )}
           {index >= 0 && (
             <span
@@ -229,11 +236,25 @@ export function SkillGroups({
           an always-visible control implies the feature is doing something when it
           is not. */}
       {pairs.length > 0 && (
-        <label className="flex items-center gap-2 text-[11px] text-secondary px-2">
+        <div className="flex flex-wrap items-center gap-2 text-[11px] text-secondary px-2">
           <span className="text-amber-500">⇄</span>
-          {pairs
-            .map(([a, b]) => `${slotIdFor(a)} stands down for ${slotIdFor(b)}`)
-            .join(', ')}{' '}
+          {pairs.map(([a, b]) => (
+            <span
+              key={a}
+              className="inline-flex items-center gap-1 pl-1.5 rounded border border-amber-500/50"
+            >
+              {slotIdFor(a)} stands down for {slotIdFor(b)}
+              <button
+                type="button"
+                onClick={() => unpair(a)}
+                title="Remove this swap"
+                aria-label={`Remove swap ${slotIdFor(a)} to ${slotIdFor(b)}`}
+                className="px-1 text-secondary hover:text-primary"
+              >
+                ✕
+              </button>
+            </span>
+          ))}
           once
           <select
             value={swapWhen}
@@ -247,7 +268,7 @@ export function SkillGroups({
               </option>
             ))}
           </select>
-        </label>
+        </div>
       )}
       {groups.map((g, i) => (
         <div
@@ -284,7 +305,7 @@ export function SkillGroups({
           + Group
         </button>
         <span className="text-[10px] text-secondary">
-          drag between groups · drop onto a card to cast it first
+          drag between groups · drop onto a portrait to swap in · drag either away to undo
         </span>
       </div>
 
