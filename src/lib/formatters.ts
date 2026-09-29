@@ -265,6 +265,26 @@ export function parseDelay(de: string, level: number = 1): string | null {
 }
 
 /**
+ * Max-level values for a skill's {value}, {probability}, and {delay1} placeholders.
+ * Shared by the English render and the client-side locale patch.
+ */
+export function getSkillPlaceholderValues(
+  skillData?: SkillData | null,
+  rarity: number = 5 // Default to 5★ for max values
+): Record<string, string> {
+  const values: Record<string, string> = {};
+  if (!skillData) return values;
+  const maxLevel = getMaxLevelForRarity(rarity);
+  const value = parseValue(skillData.ie, maxLevel);
+  if (value) values.value = value;
+  const probability = parseProbability(skillData.de, maxLevel);
+  if (probability) values.probability = probability;
+  const delay = parseDelay(skillData.de, maxLevel);
+  if (delay) values.delay1 = delay;
+  return values;
+}
+
+/**
  * Format skill description by substituting {value}, {probability}, and {delay1} placeholders
  * Uses max level values based on card rarity
  */
@@ -276,31 +296,10 @@ export function formatSkillDescription(
   if (!description) return '';
 
   let formatted = description;
-
-  if (skillData) {
-    const maxLevel = getMaxLevelForRarity(rarity);
-
-    // Replace {value} with actual damage/heal value at max level
-    const value = parseValue(skillData.ie, maxLevel);
-    if (value) {
-      formatted = formatted.replace(/\{value\}/g, value);
-    }
-
-    // Replace {probability} with actual probability at max level
-    const probability = parseProbability(skillData.de, maxLevel);
-    if (probability) {
-      formatted = formatted.replace(/\{probability\}/g, probability);
-    }
-
-    // Replace {delay1} with debuff/effect value at max level
-    const delay = parseDelay(skillData.de, maxLevel);
-    if (delay) {
-      formatted = formatted.replace(/\{delay1\}/g, delay);
-    }
+  for (const [key, val] of Object.entries(getSkillPlaceholderValues(skillData, rarity))) {
+    formatted = formatted.replaceAll(`{${key}}`, val);
   }
 
   // Apply color formatting
-  formatted = formatDescription(formatted);
-
-  return formatted;
+  return formatDescription(formatted);
 }
