@@ -44676,43 +44676,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -44742,11 +44706,78 @@
       "description": "<color=#f4e48e>「就盡我們所能吧，主人！」</color><br/>她是<color=#ef9843>古靈的九十九神</color>，並服侍主人。她宣稱在遇到主人後的一年當中，有了非常大的成長（但身高、心智還是毫無進展）。而在陰陽寮與靈同為靈子的九十九神，身兼同伴與導師的<color=#ef9843>魅角師父</color>表示靈擁有極大的未開發潛能，但在潛能激發前也只能維持現狀。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "5 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.579740+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.579740+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-29T07:08:29.314367+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "1650",
       "image_urls": {
@@ -79579,29 +79610,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "185",
@@ -79641,11 +79650,56 @@
       "description": "<color=#f4e48e>「銷售稅另計。」</color><br/><color=#ef9843>一位住在電腦世界的死忠線上遊戲玩家。</color>「肋眼」是他的線上暱稱。他是「燒肉定食」公會的商人。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.578269+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.578269+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-29T07:08:29.302593+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2242",
       "image_urls": {
@@ -79776,50 +79830,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "185",
@@ -79859,11 +79870,89 @@
       "description": "<color=#f4e48e>「大家都看著我，都讓我臉紅了！」</color><br/>深受19世紀歐洲的貴族女士和女孩子們喜愛的人偶。從不錯過社交場合的她，身著一襲華麗的服飾抵達派對，很快地讓其他的派對賓客為之讚賞。<color=#ef9843>而且，毫無意外地她獲得了本活動的「最佳服裝」獎。</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.578520+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.578520+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-29T07:08:29.304404+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2243",
       "image_urls": {
@@ -79993,50 +80082,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "185",
@@ -80076,11 +80122,89 @@
       "description": "<color=#f4e48e>「比蒙巨獸！比蒙巨獸！比蒙巨獸！」</color><br/><color=#ef9843>他是魔界八王子之一，掌管貪婪之惡。</color>他率領四十軍團。他也是魔界的頭號比蒙巨獸粉絲。<color=#ef9843>他並非真的想來派對，但當他知道比蒙巨獸會現身之後他就馬上改變了心意。</color>有謠言說他收集到大量的蛋糕要給比蒙巨獸。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.578773+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.578773+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-29T07:08:29.306207+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2244",
       "image_urls": {
@@ -80243,57 +80367,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "185",
-              "event_name": "御靈錄Otogi四週年紀念塔",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -80323,11 +80397,100 @@
       "description": "<color=#f4e48e>「我到了才準開始派對！」</color><br/><color=#ef9843>傳統月見套餐的九十九神，由芒草和丸子所組成。</color>她在派對上進行了開場致詞，雖然她很不幸地沒有被允許做結尾致詞。順道一提，她的演說草稿過於冗長，需要3000張紙才能寫得完。<color=#ef9843>信不信由你，這讓她有了很多成為作家的工作機會。</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "7 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "185",
+                  "event_name": "Otogi 4th Anniversary Tower",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
+          }
+        ],
         "first_seen": "2026-08-29T07:03:34.579499+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-08-29T07:03:34.579499+00:00",
-        "last_modified_version": "d2d2c18"
+        "last_modified": "2026-09-29T07:08:29.312287+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2245",
       "image_urls": {
@@ -83951,7 +84114,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-28 15:00:00",
           "is_time_limited": true,
@@ -84066,12 +84229,23 @@
             ],
             "date": "2026-09-24",
             "version": "20ae173"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-24T18:38:25.745616+00:00",
-        "last_modified_version": "20ae173"
+        "last_modified": "2026-09-29T07:08:28.967577+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2373",
       "image_urls": {
@@ -84211,7 +84385,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-28 15:00:00",
           "is_time_limited": true,
@@ -84310,12 +84484,23 @@
             ],
             "date": "2026-09-24",
             "version": "20ae173"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-24T18:38:25.747668+00:00",
-        "last_modified_version": "20ae173"
+        "last_modified": "2026-09-29T07:08:28.969531+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2374",
       "image_urls": {
@@ -84414,7 +84599,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-28 15:00:00",
           "is_time_limited": true,
@@ -84513,12 +84698,23 @@
             ],
             "date": "2026-09-24",
             "version": "20ae173"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-24T18:38:25.751249+00:00",
-        "last_modified_version": "20ae173"
+        "last_modified": "2026-09-29T07:08:28.972887+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2376",
       "image_urls": {
@@ -84623,7 +84819,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-09-28 15:00:00",
           "is_time_limited": true,
@@ -84722,12 +84918,23 @@
             ],
             "date": "2026-09-24",
             "version": "20ae173"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-24T18:38:25.749507+00:00",
-        "last_modified_version": "20ae173"
+        "last_modified": "2026-09-29T07:08:28.971265+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "2377",
       "image_urls": {
@@ -86698,7 +86905,7 @@
           "featured_banners": [
             {
               "end": "2026-09-29 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-09-21 15:00:00"
             }
@@ -130180,7 +130387,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -130192,7 +130399,7 @@
             {
               "event_id": "188",
               "event_name": "公會討伐ー黃龍ー",
-              "is_current": true
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -184824,7 +185031,7 @@
           "price_min": 1000,
           "start_date": ""
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -184834,9 +185041,14 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
-              "is_current": null
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -184851,6 +185063,14 @@
               "limit": 5,
               "price": 200,
               "start": "2025-09-07 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 200,
+              "start": "2026-10-11 15:00:00"
             }
           ]
         },
@@ -184861,6 +185081,12 @@
               "is_current": false,
               "pity": 70,
               "start": "2025-08-20 15:00:00"
+            },
+            {
+              "end": "2026-10-01 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-09-27 15:00:00"
             }
           ],
           "in_standard_pool": false,
@@ -184994,12 +185220,74 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 200,
+                  "start": "2026-10-11 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-01 15:00:00",
+                  "is_current": true,
+                  "pity": 100,
+                  "start": "2026-09-27 15:00:00"
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.115223+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.831134+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "732",
       "image_urls": {
@@ -185152,9 +185440,14 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
-              "is_current": null
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -185169,6 +185462,14 @@
               "limit": 5,
               "price": 200,
               "start": "2025-09-07 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 200,
+              "start": "2026-10-11 15:00:00"
             }
           ]
         },
@@ -185179,6 +185480,12 @@
               "is_current": false,
               "pity": 70,
               "start": "2025-08-27 15:00:00"
+            },
+            {
+              "end": "2026-10-04 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-01 15:00:00"
             }
           ],
           "in_standard_pool": false,
@@ -185312,12 +185619,74 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 200,
+                  "start": "2026-10-11 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-04 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-01 15:00:00"
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.117381+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.833404+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "733",
       "image_urls": {
@@ -185470,9 +185839,14 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
-              "is_current": null
+              "is_current": false
             }
           ],
           "reward_tiers": [],
@@ -185487,6 +185861,14 @@
               "limit": 5,
               "price": 200,
               "start": "2025-09-07 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 200,
+              "start": "2026-10-11 15:00:00"
             }
           ]
         },
@@ -185497,6 +185879,12 @@
               "is_current": false,
               "pity": 70,
               "start": "2025-08-31 15:00:00"
+            },
+            {
+              "end": "2026-10-07 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-04 15:00:00"
             }
           ],
           "in_standard_pool": false,
@@ -185630,12 +186018,74 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 200,
+                  "start": "2026-10-11 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-07 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-04 15:00:00"
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.119542+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.835632+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "734",
       "image_urls": {
@@ -185752,13 +186202,45 @@
         "event": {
           "from_description": [
             {
-              "event_id": "61",
-              "event_name": "王之鎖骨",
-              "is_current": null
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
             }
           ],
-          "reward_tiers": [],
-          "tower_drops": []
+          "reward_tiers": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "first_seen": "2026-09-29",
+              "floors": [
+                16
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -185856,12 +186338,84 @@
             ],
             "date": "2026-03-14",
             "version": "c58924b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    16
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-14T14:41:52.215496+00:00",
-        "last_modified_version": "c58924b"
+        "last_modified": "2026-09-29T07:08:28.837425+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "735",
       "image_urls": {
@@ -185993,13 +186547,38 @@
         "event": {
           "from_description": [
             {
-              "event_id": "61",
-              "event_name": "王之鎖骨",
-              "is_current": null
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
             }
           ],
-          "reward_tiers": [],
-          "tower_drops": []
+          "reward_tiers": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "first_seen": "2026-09-29",
+              "floors": [
+                32
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -186097,12 +186676,73 @@
             ],
             "date": "2026-03-14",
             "version": "c58924b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    32
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-14T14:41:52.216881+00:00",
-        "last_modified_version": "c58924b"
+        "last_modified": "2026-09-29T07:08:28.839199+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "736",
       "image_urls": {
@@ -186220,13 +186860,38 @@
         "event": {
           "from_description": [
             {
-              "event_id": "61",
-              "event_name": "王之鎖骨",
-              "is_current": null
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
             }
           ],
-          "reward_tiers": [],
-          "tower_drops": []
+          "reward_tiers": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "first_seen": "2026-09-29",
+              "floors": [
+                48
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -186324,12 +186989,73 @@
             ],
             "date": "2026-03-14",
             "version": "c58924b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    48
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-14T14:41:52.218219+00:00",
-        "last_modified_version": "c58924b"
+        "last_modified": "2026-09-29T07:08:28.840968+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "737",
       "image_urls": {
@@ -186485,13 +187211,23 @@
         "event": {
           "from_description": [
             {
-              "event_id": "61",
-              "event_name": "王之鎖骨",
-              "is_current": null
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "first_seen": "2026-09-29",
+              "floors": [
+                64
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -186589,12 +187325,46 @@
             ],
             "date": "2026-03-14",
             "version": "c58924b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    64
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-14T14:41:52.219936+00:00",
-        "last_modified_version": "c58924b"
+        "last_modified": "2026-09-29T07:08:28.843129+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "738",
       "image_urls": {
@@ -186755,12 +187525,83 @@
         "event": {
           "from_description": [
             {
-              "event_id": "61",
-              "event_name": "王之鎖骨",
-              "is_current": null
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
             }
           ],
-          "reward_tiers": [],
+          "reward_tiers": [
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "1"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "2"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -186859,12 +187700,143 @@
             ],
             "date": "2026-03-14",
             "version": "c58924b"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "10 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.7",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.8",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.9",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Event #190",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-14T14:41:52.221537+00:00",
-        "last_modified_version": "c58924b"
+        "last_modified": "2026-09-29T07:08:28.846686+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "739",
       "image_urls": {
@@ -187178,6 +188150,11 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
               "is_current": false
@@ -187195,6 +188172,14 @@
               "limit": 1,
               "price": 200,
               "start": "2025-09-03 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-10-07 15:00:00"
             }
           ]
         },
@@ -187205,6 +188190,12 @@
               "is_current": false,
               "pity": 70,
               "start": "2025-09-03 15:00:00"
+            },
+            {
+              "end": "2026-10-11 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-07 15:00:00"
             }
           ],
           "in_standard_pool": false,
@@ -187338,12 +188329,74 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-10-07 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-11 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-07 15:00:00"
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.130790+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.849028+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "740",
       "image_urls": {
@@ -187517,6 +188570,11 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
               "is_current": false
@@ -187534,6 +188592,14 @@
               "limit": 1,
               "price": 200,
               "start": "2025-09-03 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-10-07 15:00:00"
             }
           ]
         },
@@ -187544,6 +188610,12 @@
               "is_current": false,
               "pity": 70,
               "start": "2025-09-07 15:00:00"
+            },
+            {
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-11 15:00:00"
             }
           ],
           "in_standard_pool": false,
@@ -187677,12 +188749,74 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-10-07 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-11 15:00:00"
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.133127+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.851461+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "741",
       "image_urls": {
@@ -187815,6 +188949,11 @@
         "event": {
           "from_description": [
             {
+              "event_id": "190",
+              "event_name": "Event #190",
+              "is_current": false
+            },
+            {
               "event_id": "61",
               "event_name": "王之鎖骨",
               "is_current": false
@@ -187832,6 +188971,14 @@
               "limit": 5,
               "price": 50,
               "start": "2025-09-03 15:00:00"
+            },
+            {
+              "currency": "gApple",
+              "end": "2026-10-14 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-10-07 15:00:00"
             }
           ]
         },
@@ -187950,12 +189097,59 @@
             ],
             "date": "2026-09-14",
             "version": "550a400"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.1",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-10-07 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_id",
+                "new": "190",
+                "old": "61"
+              },
+              {
+                "field": "acquisition.event.from_description.0.event_name",
+                "new": "Event #190",
+                "old": "Clavicle of the King"
+              },
+              {
+                "field": "acquisition.event.from_description.1",
+                "new": {
+                  "event_id": "61",
+                  "event_name": "Clavicle of the King",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-09-29",
+            "version": "e8b5e91"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-14T14:33:27.134932+00:00",
-        "last_modified_version": "550a400"
+        "last_modified": "2026-09-29T07:08:28.853338+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "742",
       "image_urls": {
@@ -194495,5 +195689,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 1019,
-  "version": "20ae173"
+  "version": "e8b5e91"
 }
