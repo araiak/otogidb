@@ -44776,7 +44776,7 @@
         ],
         "first_seen": "2026-08-29T07:03:34.579740+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-09-29T07:08:29.314367+00:00",
+        "last_modified": "2026-09-29T07:51:50.112952+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "1650",
@@ -79698,7 +79698,7 @@
         ],
         "first_seen": "2026-08-29T07:03:34.578269+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-09-29T07:08:29.302593+00:00",
+        "last_modified": "2026-09-29T07:51:50.094467+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2242",
@@ -79951,7 +79951,7 @@
         ],
         "first_seen": "2026-08-29T07:03:34.578520+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-09-29T07:08:29.304404+00:00",
+        "last_modified": "2026-09-29T07:51:50.097424+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2243",
@@ -80203,7 +80203,7 @@
         ],
         "first_seen": "2026-08-29T07:03:34.578773+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-09-29T07:08:29.306207+00:00",
+        "last_modified": "2026-09-29T07:51:50.100001+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2244",
@@ -80489,7 +80489,7 @@
         ],
         "first_seen": "2026-08-29T07:03:34.579499+00:00",
         "first_seen_version": "d2d2c18",
-        "last_modified": "2026-09-29T07:08:29.312287+00:00",
+        "last_modified": "2026-09-29T07:51:50.109584+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2245",
@@ -84244,7 +84244,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:08:28.967577+00:00",
+        "last_modified": "2026-09-29T07:51:49.537694+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2373",
@@ -84499,7 +84499,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:08:28.969531+00:00",
+        "last_modified": "2026-09-29T07:51:49.540584+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2374",
@@ -84713,7 +84713,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:08:28.972887+00:00",
+        "last_modified": "2026-09-29T07:51:49.546106+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2376",
@@ -84933,7 +84933,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.576654+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:08:28.971265+00:00",
+        "last_modified": "2026-09-29T07:51:49.543744+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "2377",
@@ -185224,6 +185224,35 @@
           {
             "changes": [
               {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-01 15:00:00",
+                  "is_current": true,
+                  "pity": 100,
+                  "start": "2026-09-27 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -185239,71 +185268,6 @@
                   "start": "2026-10-11 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.gacha.featured_banners",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.gacha.featured_banners.1",
-                "new": {
-                  "end": "2026-10-01 15:00:00",
-                  "is_current": true,
-                  "pity": 100,
-                  "start": "2026-09-27 15:00:00"
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Clavicle of the King"
               }
             ],
             "date": "2026-09-29",
@@ -185312,7 +185276,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.172327+00:00",
+        "last_modified": "2026-09-29T07:51:49.417153+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "732",
@@ -185649,6 +185613,35 @@
           {
             "changes": [
               {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-04 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-01 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -185664,71 +185657,6 @@
                   "start": "2026-10-11 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.gacha.featured_banners",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.gacha.featured_banners.1",
-                "new": {
-                  "end": "2026-10-04 15:00:00",
-                  "is_current": false,
-                  "pity": 100,
-                  "start": "2026-10-01 15:00:00"
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Clavicle of the King"
               }
             ],
             "date": "2026-09-29",
@@ -185737,7 +185665,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.175513+00:00",
+        "last_modified": "2026-09-29T07:51:49.420402+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "733",
@@ -186074,6 +186002,35 @@
           {
             "changes": [
               {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-07 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-04 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -186089,71 +186046,6 @@
                   "start": "2026-10-11 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.gacha.featured_banners",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.gacha.featured_banners.1",
-                "new": {
-                  "end": "2026-10-07 15:00:00",
-                  "is_current": false,
-                  "pity": 100,
-                  "start": "2026-10-04 15:00:00"
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Clavicle of the King"
               }
             ],
             "date": "2026-09-29",
@@ -186162,7 +186054,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.178625+00:00",
+        "last_modified": "2026-09-29T07:51:49.424139+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "734",
@@ -186425,24 +186317,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "190",
-                  "event_name": "Event #190",
-                  "first_seen": "2026-09-29",
-                  "floors": [
-                    16
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.event.reward_tiers",
                 "new": "3 items",
                 "old": "0 items"
@@ -186451,7 +186325,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -186462,7 +186336,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -186473,7 +186347,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "5"
@@ -186481,61 +186355,33 @@
                 "old": null
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.reward_tiers.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.2.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
                 "field": "acquisition.event.from_description",
                 "new": "2 items",
                 "old": "1 items"
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
+                "field": "acquisition.event.from_description.190",
                 "new": {
                   "event_id": "190",
                   "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    16
+                  ],
                   "is_current": false
                 },
                 "old": null
@@ -186547,7 +186393,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.181293+00:00",
+        "last_modified": "2026-09-29T07:51:49.426929+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "735",
@@ -186818,24 +186664,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "190",
-                  "event_name": "Event #190",
-                  "first_seen": "2026-09-29",
-                  "floors": [
-                    32
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.event.reward_tiers",
                 "new": "2 items",
                 "old": "0 items"
@@ -186844,7 +186672,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -186855,7 +186683,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -186863,56 +186691,33 @@
                 "old": null
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.reward_tiers.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
                 "field": "acquisition.event.from_description",
                 "new": "2 items",
                 "old": "1 items"
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
+                "field": "acquisition.event.from_description.190",
                 "new": {
                   "event_id": "190",
                   "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    32
+                  ],
                   "is_current": false
                 },
                 "old": null
@@ -186924,7 +186729,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.183854+00:00",
+        "last_modified": "2026-09-29T07:51:49.429861+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "736",
@@ -187181,24 +186986,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "190",
-                  "event_name": "Event #190",
-                  "first_seen": "2026-09-29",
-                  "floors": [
-                    48
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.event.reward_tiers",
                 "new": "2 items",
                 "old": "0 items"
@@ -187207,7 +186994,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -187218,7 +187005,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -187226,56 +187013,33 @@
                 "old": null
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.reward_tiers.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
                 "field": "acquisition.event.from_description",
                 "new": "2 items",
                 "old": "1 items"
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
+                "field": "acquisition.event.from_description.190",
                 "new": {
                   "event_id": "190",
                   "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "first_seen": "2026-09-29",
+                  "floors": [
+                    48
+                  ],
                   "is_current": false
                 },
                 "old": null
@@ -187287,7 +187051,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.186349+00:00",
+        "last_modified": "2026-09-29T07:51:49.432447+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "737",
@@ -187567,6 +187331,20 @@
           {
             "changes": [
               {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.event.tower_drops",
                 "new": "1 items",
                 "old": "0 items"
@@ -187575,56 +187353,11 @@
                 "field": "acquisition.event.tower_drops.0",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "first_seen": "2026-09-29",
                   "floors": [
                     64
                   ],
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "190",
-                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false
                 },
                 "old": null
@@ -187636,7 +187369,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.189324+00:00",
+        "last_modified": "2026-09-29T07:51:49.436016+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "738",
@@ -187990,7 +187723,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "1"
@@ -188001,7 +187734,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -188012,7 +187745,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -188023,7 +187756,7 @@
                 "field": "acquisition.event.reward_tiers.3",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "1"
@@ -188034,7 +187767,7 @@
                 "field": "acquisition.event.reward_tiers.4",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -188045,7 +187778,7 @@
                 "field": "acquisition.event.reward_tiers.5",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -188056,7 +187789,7 @@
                 "field": "acquisition.event.reward_tiers.6",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 3,
                   "tier": "1"
@@ -188067,7 +187800,7 @@
                 "field": "acquisition.event.reward_tiers.7",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "2"
@@ -188078,7 +187811,7 @@
                 "field": "acquisition.event.reward_tiers.8",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -188089,7 +187822,7 @@
                 "field": "acquisition.event.reward_tiers.9",
                 "new": {
                   "event_id": "190",
-                  "event_name": "Event #190",
+                  "event_name": "Clavicle of the King (Re-run)",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -188097,88 +187830,12 @@
                 "old": null
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.reward_tiers.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.1.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.2.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.3.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.4.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.5.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.6.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.7.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.8.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.reward_tiers.9.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
-              },
-              {
                 "field": "acquisition.event.from_description",
                 "new": "2 items",
                 "old": "1 items"
               },
               {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "61",
-                "old": "190"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King",
-                "old": "Event #190"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
+                "field": "acquisition.event.from_description.190",
                 "new": {
                   "event_id": "190",
                   "event_name": "Clavicle of the King (Re-run)",
@@ -188193,7 +187850,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.193013+00:00",
+        "last_modified": "2026-09-29T07:51:49.439201+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "739",
@@ -188691,6 +188348,35 @@
           {
             "changes": [
               {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-11 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-07 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -188706,56 +188392,6 @@
                   "start": "2026-10-07 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.gacha.featured_banners",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.gacha.featured_banners.1",
-                "new": {
-                  "end": "2026-10-11 15:00:00",
-                  "is_current": false,
-                  "pity": 100,
-                  "start": "2026-10-07 15:00:00"
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
               }
             ],
             "date": "2026-09-29",
@@ -188764,7 +188400,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.196312+00:00",
+        "last_modified": "2026-09-29T07:51:49.443136+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "740",
@@ -189122,6 +188758,35 @@
           {
             "changes": [
               {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.1",
+                "new": {
+                  "end": "2026-10-14 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-11 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -189137,56 +188802,6 @@
                   "start": "2026-10-07 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.gacha.featured_banners",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.gacha.featured_banners.1",
-                "new": {
-                  "end": "2026-10-14 15:00:00",
-                  "is_current": false,
-                  "pity": 100,
-                  "start": "2026-10-11 15:00:00"
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
               }
             ],
             "date": "2026-09-29",
@@ -189195,7 +188810,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.199779+00:00",
+        "last_modified": "2026-09-29T07:51:49.447268+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "741",
@@ -189481,6 +189096,20 @@
           {
             "changes": [
               {
+                "field": "acquisition.event.from_description",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "2 items",
                 "old": "1 items"
@@ -189496,41 +189125,6 @@
                   "start": "2026-10-07 15:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_id",
-                "new": "190",
-                "old": "61"
-              },
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Event #190",
-                "old": "Clavicle of the King"
-              },
-              {
-                "field": "acquisition.event.from_description.1",
-                "new": {
-                  "event_id": "61",
-                  "event_name": "Clavicle of the King",
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-09-29",
-            "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.from_description.0.event_name",
-                "new": "Clavicle of the King (Re-run)",
-                "old": "Event #190"
               }
             ],
             "date": "2026-09-29",
@@ -189539,7 +189133,7 @@
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:15:04.202466+00:00",
+        "last_modified": "2026-09-29T07:51:49.450241+00:00",
         "last_modified_version": "e8b5e91"
       },
       "id": "742",
