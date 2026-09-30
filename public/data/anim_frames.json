@@ -1,0 +1,5701 @@
+{
+ "frame_rate": 30,
+ "source": "monster bundles (auto/skill attackFrame, isMeleeAttack) + shared VFX bundles (skill AttackEffectSetting.timeAttack)",
+ "cards": {
+  "1": {
+   "auto_frame": 15,
+   "skill_frame": 6,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "2": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 24,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "3": {
+   "skill_frame": 31,
+   "skill_class": "FrameAttackAction",
+   "melee": true,
+   "auto_frame": 11,
+   "role": 1
+  },
+  "5": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "7": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "8": {
+   "auto_frame": 11,
+   "skill_frame": 11,
+   "skill_class": "FrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "9": {
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 12,
+   "melee": false,
+   "role": 2
+  },
+  "10": {
+   "auto_frame": 12,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "11": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "12": {
+   "auto_frame": 13,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "role": 2
+  },
+  "17": {
+   "skill_frame": 26,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "18": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 12,
+   "melee": false,
+   "role": 3
+  },
+  "19": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "20": {
+   "melee": true,
+   "auto_frame": 13,
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "21": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "23": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 16,
+   "role": 2
+  },
+  "25": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "26": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "27": {
+   "melee": true,
+   "skill_frame": 9,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "28": {
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 9,
+   "melee": false,
+   "role": 2
+  },
+  "29": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "30": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "31": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 12,
+   "role": 2
+  },
+  "32": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "33": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "34": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "35": {
+   "melee": true,
+   "auto_frame": 13,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "36": {
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "37": {
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": false,
+   "role": 2
+  },
+  "38": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "39": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "40": {
+   "auto_frame": 17,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "44": {
+   "melee": true,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "45": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "46": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "48": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "49": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "50": {
+   "skill_frame": 6,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "51": {
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "52": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "53": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "54": {
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 14,
+   "role": 2
+  },
+  "55": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "56": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "57": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "58": {
+   "melee": false,
+   "auto_frame": 8,
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "59": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "60": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "61": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "62": {
+   "skill_frame": 35,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 14,
+   "role": 2
+  },
+  "64": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "66": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "68": {
+   "auto_frame": 12,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "69": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "72": {
+   "auto_frame": 14,
+   "skill_frame": 8,
+   "skill_class": "FrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "74": {
+   "auto_frame": 17,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "77": {
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 12,
+   "melee": true,
+   "role": 1
+  },
+  "78": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "79": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "80": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 26,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "82": {
+   "auto_frame": 9,
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "83": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "84": {
+   "auto_frame": 11,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "86": {
+   "auto_frame": 11,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "87": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "88": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 1
+  },
+  "89": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "90": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "91": {
+   "auto_frame": 14,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "92": {
+   "melee": false,
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "93": {
+   "auto_frame": 18,
+   "melee": false,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "94": {
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 19,
+   "melee": false,
+   "role": 2
+  },
+  "95": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "96": {
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "97": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "98": {
+   "auto_frame": 14,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "99": {
+   "auto_frame": 15,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "100": {
+   "auto_frame": 11,
+   "skill_frame": 8,
+   "skill_class": "FrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "101": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "102": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 3
+  },
+  "103": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "104": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "105": {
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "106": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "107": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "108": {
+   "melee": true,
+   "auto_frame": 13,
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "109": {
+   "melee": false,
+   "auto_frame": 12,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "110": {
+   "melee": true,
+   "skill_frame": 26,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 13,
+   "role": 1
+  },
+  "111": {
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 13,
+   "role": 1
+  },
+  "112": {
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "113": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "114": {
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "115": {
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "116": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "117": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "118": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 3
+  },
+  "119": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "120": {
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "121": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "122": {
+   "melee": false,
+   "auto_frame": 19,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "123": {
+   "melee": false,
+   "auto_frame": 13,
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "role": 2
+  },
+  "124": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "125": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "126": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "127": {
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "128": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "129": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "130": {
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "131": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "132": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "133": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "134": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "135": {
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "136": {
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "137": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "138": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "139": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "140": {
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "141": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "142": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "143": {
+   "melee": true,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "144": {
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "auto_frame": 13,
+   "melee": false,
+   "role": 2
+  },
+  "145": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "146": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "147": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "148": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "149": {
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "150": {
+   "skill_frame": 4,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "151": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 0,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "152": {
+   "melee": true,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "153": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "154": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "156": {
+   "auto_frame": 13,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "role": 2
+  },
+  "157": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "158": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "159": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "160": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "161": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "162": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "163": {
+   "melee": false,
+   "auto_frame": 33,
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "164": {
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 16,
+   "melee": true,
+   "role": 1
+  },
+  "165": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "166": {
+   "skill_frame": 18,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 13,
+   "role": 2
+  },
+  "167": {
+   "auto_frame": 11,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "168": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "169": {
+   "skill_frame": 6,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "170": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 1
+  },
+  "171": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "172": {
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "173": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "174": {
+   "melee": false,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "175": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "176": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "177": {
+   "melee": true,
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 1
+  },
+  "178": {
+   "melee": false,
+   "auto_frame": 12,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "179": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "180": {
+   "auto_frame": 12,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "181": {
+   "skill_frame": 18,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 13,
+   "role": 2
+  },
+  "182": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "183": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "184": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "185": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "186": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "187": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "188": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "189": {
+   "auto_frame": 11,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "190": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "191": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "192": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "193": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "194": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "195": {
+   "melee": true,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 1
+  },
+  "196": {
+   "melee": true,
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 1
+  },
+  "197": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "198": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "199": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "200": {
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "201": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "202": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "203": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "204": {
+   "auto_frame": 14,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "205": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "206": {
+   "melee": true,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "207": {
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "208": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "209": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "210": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "211": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "212": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "213": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "214": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "215": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "216": {
+   "auto_frame": 15,
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "217": {
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "218": {
+   "melee": true,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 16,
+   "role": 1
+  },
+  "219": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "220": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "221": {
+   "melee": true,
+   "skill_frame": 7,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "222": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 16,
+   "melee": true,
+   "role": 1
+  },
+  "223": {
+   "auto_frame": 13,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "224": {
+   "melee": false,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "225": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 9,
+   "role": 2
+  },
+  "226": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "227": {
+   "auto_frame": 14,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "228": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "229": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "230": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "231": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "232": {
+   "auto_frame": 19,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "233": {
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 16,
+   "role": 1
+  },
+  "234": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "235": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "236": {
+   "skill_frame": 6,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "237": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "238": {
+   "auto_frame": 11,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "239": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 12,
+   "role": 1
+  },
+  "240": {
+   "auto_frame": 11,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "241": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "242": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "243": {
+   "skill_frame": 6,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "244": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "245": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 12,
+   "melee": false,
+   "role": 2
+  },
+  "246": {
+   "auto_frame": 12,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "role": 2
+  },
+  "247": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "248": {
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "249": {
+   "melee": false,
+   "auto_frame": 12,
+   "skill_frame": 22,
+   "skill_class": "AimedHunterAttackAction",
+   "role": 2
+  },
+  "250": {
+   "auto_frame": 10,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "251": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "252": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "253": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "254": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "255": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "256": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "257": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "258": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "259": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "260": {
+   "auto_frame": 14,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "role": 1
+  },
+  "261": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "262": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "263": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "264": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "265": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "266": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "267": {
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "268": {
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "269": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "270": {
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "271": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "272": {
+   "skill_frame": 13,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "273": {
+   "melee": true,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "274": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "275": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "276": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 19,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "277": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "278": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 6,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "279": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "280": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "281": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "282": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "283": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 1
+  },
+  "284": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "285": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "286": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "287": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "288": {
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "289": {
+   "auto_frame": 14,
+   "skill_frame": 6,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "290": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "292": {
+   "auto_frame": 10,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "293": {
+   "auto_frame": 14,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "294": {
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "295": {
+   "auto_frame": 13,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "296": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "297": {
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "298": {
+   "auto_frame": 14,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "299": {
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "300": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "301": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "302": {
+   "auto_frame": 13,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "303": {
+   "auto_frame": 10,
+   "skill_frame": 13,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "304": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "305": {
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "306": {
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 13,
+   "role": 1
+  },
+  "307": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "308": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "309": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "310": {
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "311": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "312": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "313": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "314": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "315": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "316": {
+   "auto_frame": 12,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "317": {
+   "auto_frame": 15,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "318": {
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "319": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "320": {
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "321": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "322": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "323": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "324": {
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "325": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "326": {
+   "auto_frame": 10,
+   "skill_frame": 13,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "327": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "328": {
+   "auto_frame": 10,
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "329": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "330": {
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "331": {
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "332": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "333": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "334": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "335": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "336": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "337": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "role": 3
+  },
+  "338": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "339": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 16,
+   "role": 2
+  },
+  "340": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "341": {
+   "skill_frame": 22,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "342": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "343": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "344": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "345": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "346": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "347": {
+   "melee": false,
+   "auto_frame": 12,
+   "skill_frame": 18,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "348": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "349": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "350": {
+   "skill_frame": 6,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "351": {
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "352": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "353": {
+   "auto_frame": 10,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "354": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "355": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "356": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "357": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "358": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "359": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "360": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "361": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "362": {
+   "skill_frame": 12,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "363": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "364": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "365": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "366": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "367": {
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "368": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "369": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "370": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "role": 3
+  },
+  "371": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "372": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "373": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "374": {
+   "auto_frame": 14,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "375": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "376": {
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 10,
+   "role": 1
+  },
+  "377": {
+   "auto_frame": 19,
+   "melee": false,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "378": {
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 3
+  },
+  "379": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "380": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "381": {
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "382": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "383": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "384": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "385": {
+   "auto_frame": 11,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "386": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "387": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "388": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "389": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "390": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "391": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 1
+  },
+  "392": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "393": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "394": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "395": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "396": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "397": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 22,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "398": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "399": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "400": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "401": {
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "402": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "403": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "404": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "405": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "406": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "407": {
+   "skill_frame": 10,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "408": {
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "409": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "410": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "411": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "412": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "413": {
+   "skill_frame": 30,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 19,
+   "role": 2
+  },
+  "414": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "415": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "416": {
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "417": {
+   "melee": false,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "418": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "419": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "420": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "421": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "422": {
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "423": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "424": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "425": {
+   "auto_frame": 10,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "426": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "427": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "428": {
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "429": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "430": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "431": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "432": {
+   "auto_frame": 14,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "433": {
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "434": {
+   "skill_frame": 9,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "435": {
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "436": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "437": {
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "438": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "439": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "440": {
+   "melee": false,
+   "auto_frame": 19,
+   "skill_frame": 30,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "441": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 22,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "442": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "443": {
+   "auto_frame": 10,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "444": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "445": {
+   "auto_frame": 10,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "446": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "447": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "448": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 13,
+   "melee": true,
+   "role": 1
+  },
+  "449": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 1
+  },
+  "450": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 1
+  },
+  "451": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 1
+  },
+  "452": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "453": {
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "454": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "MultiVFXAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "455": {
+   "auto_frame": 12,
+   "skill_frame": 20,
+   "skill_class": "AimedHunterAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "456": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "457": {
+   "auto_frame": 12,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "458": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "459": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "460": {
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "461": {
+   "auto_frame": 10,
+   "melee": true,
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "462": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "463": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "464": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "465": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "466": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 13,
+   "role": 1
+  },
+  "467": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "468": {
+   "auto_frame": 32,
+   "melee": false,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "469": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "470": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "471": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "472": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "473": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "auto_frame": 13,
+   "role": 1
+  },
+  "474": {
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 3
+  },
+  "475": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "476": {
+   "auto_frame": 15,
+   "skill_frame": 22,
+   "skill_class": "VFXFrameAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "477": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "478": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "479": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "480": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "481": {
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 15,
+   "role": 1
+  },
+  "482": {
+   "melee": false,
+   "skill_frame": 25,
+   "skill_class": "AimedHunterAttackAction",
+   "auto_frame": 12,
+   "role": 2
+  },
+  "483": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "484": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "485": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "486": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "487": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "488": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 3
+  },
+  "489": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "490": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "491": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "492": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "493": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "494": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "495": {
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "496": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "497": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "498": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "499": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "500": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 2
+  },
+  "501": {
+   "auto_frame": 15,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "502": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "503": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "504": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "505": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "role": 2
+  },
+  "506": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "507": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "508": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "509": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "510": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "511": {
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "512": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "513": {
+   "melee": true,
+   "auto_frame": 11,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 1
+  },
+  "514": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "515": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "516": {
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "517": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "518": {
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.2,
+   "melee": false,
+   "role": 2
+  },
+  "519": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.8,
+   "role": 1
+  },
+  "523": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.8,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "524": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "525": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "526": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "527": {
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "528": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "531": {
+   "skill_frame": 14,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "532": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.2,
+   "role": 2
+  },
+  "533": {
+   "auto_frame": 14,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": true,
+   "role": 1
+  },
+  "536": {
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "537": {
+   "auto_frame": 10,
+   "skill_frame": 22,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "melee": true,
+   "role": 1
+  },
+  "538": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "539": {
+   "auto_frame": 10,
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.8,
+   "role": 1
+  },
+  "540": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "role": 3
+  },
+  "541": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 12,
+   "melee": true,
+   "role": 1
+  },
+  "542": {
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.07,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "543": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 2
+  },
+  "544": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "role": 2
+  },
+  "545": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "546": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "547": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.8,
+   "role": 2
+  },
+  "548": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 2
+  },
+  "549": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "553": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "558": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "559": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 2
+  },
+  "560": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "role": 1
+  },
+  "561": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "562": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "role": 2
+  },
+  "563": {
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "565": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "567": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "568": {
+   "auto_frame": 12,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 1
+  },
+  "570": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "574": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "575": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "576": {
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "577": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.7,
+   "melee": false,
+   "role": 2
+  },
+  "578": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "579": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "582": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "583": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "585": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "melee": false,
+   "role": 2
+  },
+  "586": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "590": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "591": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 1
+  },
+  "592": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "593": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "594": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 2
+  },
+  "595": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "597": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "599": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "role": 1
+  },
+  "600": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "603": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 1
+  },
+  "608": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "609": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "610": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "role": 1
+  },
+  "611": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 2
+  },
+  "612": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "613": {
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": false,
+   "role": 2
+  },
+  "615": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "616": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "619": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "623": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 2
+  },
+  "624": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 3
+  },
+  "625": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "626": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 25,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.1,
+   "role": 1
+  },
+  "627": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "628": {
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": true,
+   "role": 1
+  },
+  "630": {
+   "skill_frame": 25,
+   "skill_class": "AimedHunterAttackAction",
+   "skill_time_attack": 0.6,
+   "auto_frame": 12,
+   "melee": false,
+   "role": 2
+  },
+  "631": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "role": 1
+  },
+  "632": {
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "634": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "638": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.1,
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "639": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "640": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.8,
+   "role": 2
+  },
+  "641": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "642": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "644": {
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "646": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "652": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "653": {
+   "melee": true,
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "role": 1
+  },
+  "654": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "role": 2
+  },
+  "655": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "658": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "role": 2
+  },
+  "660": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "661": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "668": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "669": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "670": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "671": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.2,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "672": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "674": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "role": 2
+  },
+  "675": {
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 3
+  },
+  "678": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "684": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 12,
+   "melee": true,
+   "role": 1
+  },
+  "685": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "686": {
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "687": {
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "690": {
+   "melee": true,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 16,
+   "role": 1
+  },
+  "691": {
+   "auto_frame": 14,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": true,
+   "role": 1
+  },
+  "693": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "694": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "699": {
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "703": {
+   "melee": true,
+   "skill_frame": 29,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.1,
+   "auto_frame": 12,
+   "role": 1
+  },
+  "704": {
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "705": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "706": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "709": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 16,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 2
+  },
+  "711": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 3
+  },
+  "712": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "714": {
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "718": {
+   "melee": true,
+   "skill_frame": 31,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "auto_frame": 15,
+   "role": 1
+  },
+  "719": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 3
+  },
+  "720": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "721": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.1,
+   "auto_frame": 15,
+   "melee": true,
+   "role": 1
+  },
+  "722": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 1
+  },
+  "724": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": true,
+   "auto_frame": 12,
+   "role": 1
+  },
+  "725": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "729": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "731": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "role": 2
+  },
+  "732": {
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.7,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "733": {
+   "skill_frame": 20,
+   "skill_class": "VFXFrameAttackAction",
+   "skill_time_attack": 0.8,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "734": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "735": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "role": 1
+  },
+  "736": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "737": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "738": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 1
+  },
+  "739": {
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "740": {
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "741": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "744": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "745": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "750": {
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "752": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "754": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1051": {
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1303": {
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "1307": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "1308": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1309": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1310": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.8,
+   "role": 4
+  },
+  "1311": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 16,
+   "role": 2
+  },
+  "1312": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1314": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1317": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1321": {
+   "melee": false,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "role": 3
+  },
+  "1323": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1388": {
+   "auto_frame": 11,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "1389": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1391": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1398": {
+   "melee": true,
+   "auto_frame": 15,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 1
+  },
+  "1399": {
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1401": {
+   "auto_frame": 10,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": false,
+   "role": 2
+  },
+  "1402": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "1404": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "auto_frame": 14,
+   "melee": true,
+   "role": 1
+  },
+  "1413": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "role": 1
+  },
+  "1431": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1432": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1433": {
+   "auto_frame": 11,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 2
+  },
+  "1435": {
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1436": {
+   "auto_frame": 15,
+   "melee": true,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 1
+  },
+  "1438": {
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1439": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "1442": {
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1445": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1453": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1458": {
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1465": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "1488": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1489": {
+   "auto_frame": 10,
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 1
+  },
+  "1490": {
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1494": {
+   "melee": false,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1497": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.7,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1498": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "role": 1
+  },
+  "1521": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1523": {
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1526": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 4,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "1527": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "1528": {
+   "auto_frame": 11,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "melee": false,
+   "role": 2
+  },
+  "1529": {
+   "melee": false,
+   "skill_frame": 10,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1538": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 23,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "1539": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "1540": {
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1550": {
+   "melee": false,
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1575": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1576": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "role": 2
+  },
+  "1577": {
+   "melee": true,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1578": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1579": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "role": 2
+  },
+  "1581": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1582": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.2,
+   "role": 2
+  },
+  "1584": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1590": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "1600": {
+   "auto_frame": 11,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "1607": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": true,
+   "role": 1
+  },
+  "1608": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "role": 2
+  },
+  "1609": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "melee": false,
+   "role": 2
+  },
+  "1611": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1615": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 2
+  },
+  "1616": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.7,
+   "role": 2
+  },
+  "1618": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "1619": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 1
+  },
+  "1631": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1635": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1636": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "1650": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "1651": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 2
+  },
+  "1666": {
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "1667": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 32,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.07,
+   "role": 1
+  },
+  "1668": {
+   "melee": true,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1669": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1670": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 2
+  },
+  "1671": {
+   "melee": false,
+   "skill_frame": 8,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1672": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 3
+  },
+  "1673": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.65,
+   "role": 2
+  },
+  "1718": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 13,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1719": {
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1720": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "melee": false,
+   "role": 2
+  },
+  "1721": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.75,
+   "role": 2
+  },
+  "1722": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1727": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1729": {
+   "auto_frame": 13,
+   "melee": false,
+   "role": 2
+  },
+  "1730": {
+   "melee": true,
+   "auto_frame": 14,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "role": 1
+  },
+  "1731": {
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1735": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1736": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "1773": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "1774": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1777": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "1778": {
+   "auto_frame": 15,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "melee": true,
+   "role": 1
+  },
+  "1779": {
+   "melee": true,
+   "skill_frame": 30,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "auto_frame": 11,
+   "role": 1
+  },
+  "1780": {
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1784": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "1786": {
+   "melee": true,
+   "auto_frame": 10,
+   "role": 1
+  },
+  "1788": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "1992": {
+   "melee": false,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "2184": {
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "2185": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "2186": {
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "2187": {
+   "auto_frame": 10,
+   "skill_frame": 28,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "2189": {
+   "skill_frame": 17,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "2190": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 11,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 2
+  },
+  "2191": {
+   "auto_frame": 11,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "melee": false,
+   "role": 2
+  },
+  "2192": {
+   "auto_frame": 16,
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.3,
+   "role": 1
+  },
+  "2194": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 2
+  },
+  "2236": {
+   "auto_frame": 14,
+   "melee": true,
+   "skill_frame": 12,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "role": 1
+  },
+  "2243": {
+   "skill_frame": 22,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.15,
+   "melee": false,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "2245": {
+   "skill_frame": 16,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 1.0,
+   "auto_frame": 11,
+   "melee": false,
+   "role": 2
+  },
+  "2248": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "2250": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.25,
+   "melee": true,
+   "auto_frame": 14,
+   "role": 1
+  },
+  "2253": {
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "2373": {
+   "auto_frame": 11,
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 3
+  },
+  "2374": {
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "2377": {
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "2477": {
+   "melee": true,
+   "auto_frame": 16,
+   "skill_frame": 20,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.35,
+   "role": 1
+  },
+  "20017": {
+   "auto_frame": 12,
+   "melee": false,
+   "skill_frame": 42,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "20018": {
+   "melee": false,
+   "skill_frame": 35,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 20,
+   "role": 2
+  },
+  "20034": {
+   "melee": true,
+   "auto_frame": 24,
+   "skill_frame": 38,
+   "skill_class": "SkillAttackAction",
+   "role": 1
+  },
+  "20035": {
+   "auto_frame": 24,
+   "skill_frame": 34,
+   "skill_class": "SkillAttackAction",
+   "melee": true,
+   "role": 1
+  },
+  "20036": {
+   "skill_frame": 39,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "20037": {
+   "auto_frame": 15,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "role": 2
+  },
+  "20038": {
+   "melee": true,
+   "skill_frame": 23,
+   "skill_class": "VFXFrameAttackAction",
+   "auto_frame": 13,
+   "role": 1
+  }
+ },
+ "role_defaults": {
+  "melee": {
+   "n": 271,
+   "auto_frame": 13.64,
+   "skill_frame": 17.86,
+   "skill_time_attack": 0.296
+  },
+  "ranged": {
+   "n": 388,
+   "auto_frame": 10.99,
+   "skill_frame": 16.68,
+   "skill_time_attack": 0.334
+  },
+  "healer": {
+   "n": 99,
+   "auto_frame": 10.99,
+   "skill_frame": 14.92,
+   "skill_time_attack": 0.426
+  }
+ }
+}
