@@ -31,6 +31,7 @@ const DATA_FILES = [
   'wbLv.json',
   'wbSkill.json',
   'wbSettings.json',
+  'anim_frames.json',
 ];
 
 let pyodide = null;
