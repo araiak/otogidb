@@ -23360,6 +23360,165 @@
       },
       "synergies": []
     },
+    "1486": {
+      "abilities": [
+        {
+          "description": "치명타율이 22% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "148601",
+          "name": "세척의 물",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 22.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-30 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-10-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101486",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "148601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"이제, 진정하세요... 모든 고통을 벗어나게 드리죠.\"</color><br/> <color=#ef9843>거대한 공작</color>의 영혼과 함께하는 <color=#ef9843>인도의 여신</color>입니다. 인간의 마음을 병들게 하는 세 가지의 죄악인 악의와 욕망, 그리고 무지를 치유한다고 합니다. 기도로 비를 소환할 수 있습니다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-09-30T03:49:14.556968+00:00",
+        "first_seen_version": "57c46c6",
+        "last_modified": "2026-09-30T03:49:14.556968+00:00",
+        "last_modified_version": "57c46c6"
+      },
+      "id": "1486",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/android/101486_d1c9d1c6ad7f9141487b393b26c1d4e1.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/cards_hd/101486_hd_3abcbc4dc337630d938486292689e2d3.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "148601"
+        ],
+        "generation": 0
+      },
+      "name": "마하마유리",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1486",
+        "name": "우신의 미소",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "1488": {
       "abilities": [
         {
@@ -195673,6 +195832,6 @@
     }
   },
   "locale": "ko_KR",
-  "total_cards": 1019,
-  "version": "360163c"
+  "total_cards": 1020,
+  "version": "57c46c6"
 }

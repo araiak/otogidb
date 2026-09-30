@@ -23360,6 +23360,165 @@
       },
       "synergies": []
     },
+    "1486": {
+      "abilities": [
+        {
+          "description": "暴击率22%增加(除助战外，己方全体仅生效1次)",
+          "id": "148601",
+          "name": "除垢之水",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 22.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-30 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-10-01 00:00:00"
+            }
+          ]
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "exchange"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101486",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "148601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“现在，请放松下来... 我会让你的烦恼全消。”</color><br/>具有<color=#ef9843>伟大孔雀</color>之灵魂的<color=#ef9843>印度女神</color>。她可以除却人心中的三种毒：贪、嗔、痴。她能够为祈祷者带来雨水。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-09-30T03:49:14.556968+00:00",
+        "first_seen_version": "57c46c6",
+        "last_modified": "2026-09-30T03:49:14.556968+00:00",
+        "last_modified_version": "57c46c6"
+      },
+      "id": "1486",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/android/101486_d1c9d1c6ad7f9141487b393b26c1d4e1.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/cards_hd/101486_hd_3abcbc4dc337630d938486292689e2d3.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "148601"
+        ],
+        "generation": 0
+      },
+      "name": "孔雀明王",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1486",
+        "name": "祈雨之微笑",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "1488": {
       "abilities": [
         {
@@ -195673,6 +195832,6 @@
     }
   },
   "locale": "zh_CN",
-  "total_cards": 1019,
-  "version": "360163c"
+  "total_cards": 1020,
+  "version": "57c46c6"
 }

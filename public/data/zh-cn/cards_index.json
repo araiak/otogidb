@@ -7386,6 +7386,69 @@
         "type_name": "Melee"
       }
     },
+    "1486": {
+      "abilities": [
+        {
+          "description": "暴击率22%增加(除助战外，己方全体仅生效1次)",
+          "name": "除垢之水",
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 81
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "exchange"
+        ]
+      },
+      "asset_id": "101486",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1486",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/android/101486_d1c9d1c6ad7f9141487b393b26c1d4e1.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1790740152/otogi/cards_hd/101486_hd_3abcbc4dc337630d938486292689e2d3.png"
+      },
+      "name": "孔雀明王",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "可用于羁绊和公会讨伐",
+        "name": "祈雨之微笑",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "1488": {
       "abilities": [
         {
@@ -66472,8 +66535,8 @@
       }
     }
   },
-  "data_hash": "a5b23968",
+  "data_hash": "4a5ab7d7",
   "locale": "zh-cn",
-  "total_cards": 1019,
-  "version": "360163c"
+  "total_cards": 1020,
+  "version": "57c46c6"
 }
