@@ -111,6 +111,9 @@ export function SimResults({ result, running, error, nameOf }: SimResultsProps) 
                 <span className="text-right">
                   {d.n}×{short(d.mean)}
                 </span>
+                <span className="text-right" title={`${d.crit ?? 0}/${d.n} hits crit`}>
+                  {Math.round(((d.crit ?? 0) / d.n) * 100)}% crit
+                </span>
                 <span
                   className="text-right text-secondary/50"
                   title={`${d.min.toLocaleString()} – ${d.max.toLocaleString()}`}
@@ -164,7 +167,7 @@ export function SimResults({ result, running, error, nameOf }: SimResultsProps) 
                   </div>
                 </div>
                 {(c.auto || c.skill) && (
-                  <div className="mt-1 grid grid-cols-[2.4rem_2.6rem_3.8rem_1fr] gap-x-2 text-[10px] text-secondary/80 tabular-nums">
+                  <div className="mt-1 grid grid-cols-[2.4rem_2.6rem_3.8rem_3.4rem_1fr] gap-x-2 text-[10px] text-secondary/80 tabular-nums">
                     {c.auto && row('auto', c.auto, true)}
                     {c.skill && row('skill', c.skill, false)}
                   </div>
