@@ -5697,5 +5697,115 @@
    "skill_frame": 14.92,
    "skill_time_attack": 0.426
   }
+ },
+ "bosses": {
+  "1": {
+   "1": {
+    "class": "SkillAttackAction",
+    "frame": 15,
+    "time_attack": 0.0
+   },
+   "2": {
+    "class": "SkillAttackAction",
+    "frame": 12,
+    "time_attack": 0.7
+   },
+   "3": {
+    "class": "VFXFrameAttackAction",
+    "frame": 52,
+    "time_attack": 0.1
+   },
+   "4": {
+    "class": "VFXFrameAttackAction",
+    "frame": 10,
+    "time_attack": 0.7
+   },
+   "5": {
+    "class": "SkillAttackAction",
+    "frame": 10,
+    "time_attack": 0.1
+   }
+  },
+  "2": {
+   "1": {
+    "class": "MultiVFXAttackAction",
+    "frame": 11,
+    "time_attack": 0.0
+   },
+   "2": {
+    "class": "VFXFrameAttackAction",
+    "frame": 6,
+    "time_attack": 0.5
+   },
+   "3": {
+    "class": "VFXFrameAttackAction",
+    "frame": 52,
+    "time_attack": 0.4
+   },
+   "4": {
+    "class": "SkillAttackAction",
+    "frame": 55,
+    "time_attack": 0.1
+   },
+   "5": {
+    "class": "SkillAttackAction",
+    "frame": 10,
+    "time_attack": 0.1
+   }
+  },
+  "3": {
+   "1": {
+    "class": "VFXFrameAttackAction",
+    "frame": 22,
+    "time_attack": 1.0
+   },
+   "2": {
+    "class": "SkillAttackAction",
+    "frame": 14,
+    "time_attack": 0.1
+   },
+   "3": {
+    "class": "SkillAttackAction",
+    "frame": 64,
+    "time_attack": 0.55
+   },
+   "4": {
+    "class": "SkillAttackAction",
+    "frame": 8,
+    "time_attack": 2.0
+   },
+   "5": {
+    "class": "SkillAttackAction",
+    "frame": 14,
+    "time_attack": 0.1
+   }
+  },
+  "4": {
+   "1": {
+    "class": "VFXFrameAttackAction",
+    "frame": 5,
+    "time_attack": 0.1
+   },
+   "2": {
+    "class": "SkillAttackAction",
+    "frame": 13,
+    "time_attack": 0.1
+   },
+   "3": {
+    "class": "SkillAttackAction",
+    "frame": 10,
+    "time_attack": 2.1
+   },
+   "4": {
+    "class": "SkillAttackAction",
+    "frame": 4,
+    "time_attack": 2.3
+   },
+   "5": {
+    "class": "SkillAttackAction",
+    "frame": 30,
+    "time_attack": 0.5
+   }
+  }
  }
 }
