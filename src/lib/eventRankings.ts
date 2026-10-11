@@ -20,6 +20,7 @@ export interface EventCutoff {
   event_name: string;
   start_date: string;
   event_type: 'tower' | 'story';
+  rerun?: boolean;
   participation: number | null;
   periods: Record<string, EventPeriod>;
 }

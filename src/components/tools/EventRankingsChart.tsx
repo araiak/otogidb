@@ -423,13 +423,14 @@ export function EventRankingsChart() {
     return [...order.filter(p => set.has(p)), ...[...set].filter(p => !order.includes(p))];
   }, [data]);
 
-  const { towerEvents, storyEvents } = useMemo(() => {
-    if (!data) return { towerEvents: [], storyEvents: [] };
+  const { towerEvents, storyEvents, rerunEvents } = useMemo(() => {
+    if (!data) return { towerEvents: [], storyEvents: [], rerunEvents: [] };
     const tower: EventCutoff[] = [];
     const story: EventCutoff[] = [];
+    const rerun: EventCutoff[] = [];
     for (const event of data.events)
-      (event.event_type === 'tower' ? tower : story).push(event);
-    return { towerEvents: tower, storyEvents: story };
+      (event.rerun ? rerun : event.event_type === 'tower' ? tower : story).push(event);
+    return { towerEvents: tower, storyEvents: story, rerunEvents: rerun };
   }, [data]);
 
   const eventMeta = useMemo(() => {
@@ -473,7 +474,8 @@ export function EventRankingsChart() {
       {availablePeriods.map(period => {
         const towerForPeriod = towerEvents.filter(e => e.periods[period]);
         const storyForPeriod = storyEvents.filter(e => e.periods[period]);
-        if (!towerForPeriod.length && !storyForPeriod.length) return null;
+        const rerunForPeriod = rerunEvents.filter(e => e.periods[period]);
+        if (!towerForPeriod.length && !storyForPeriod.length && !rerunForPeriod.length) return null;
         const collapsed = collapsedPeriods.has(period);
         return (
           <section key={period} className="mb-8">
@@ -502,6 +504,13 @@ export function EventRankingsChart() {
                   title="Special Story Events"
                   subtitle="Scores in millions · log scale"
                   events={storyForPeriod}
+                  period={period}
+                  eventMeta={eventMeta}
+                />
+                <RankingSubChart
+                  title="Re-run Events"
+                  subtitle="Different rank bands from new events · log scale"
+                  events={rerunForPeriod}
                   period={period}
                   eventMeta={eventMeta}
                 />

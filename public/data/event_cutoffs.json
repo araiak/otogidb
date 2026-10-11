@@ -1,11 +1,12 @@
 {
-  "generated_at": "2026-09-13T07:12:33Z",
+  "generated_at": "2026-10-11T12:14:04Z",
   "events": [
     {
       "event_id": "171",
       "event_name": "Demon King Rises!",
       "start_date": "2025-11-27",
       "event_type": "tower",
+      "rerun": false,
       "participation": null,
       "periods": {
         "first_half": {
@@ -107,6 +108,7 @@
       "event_name": "O Holy Night",
       "start_date": "2025-12-23",
       "event_type": "story",
+      "rerun": false,
       "participation": 1766,
       "periods": {
         "first_half": {
@@ -208,6 +210,7 @@
       "event_name": "Evil Gods Attack",
       "start_date": "2026-01-25",
       "event_type": "tower",
+      "rerun": false,
       "participation": 1815,
       "periods": {
         "first_half": {
@@ -309,6 +312,7 @@
       "event_name": "Elegance! Girls' Festival Rebellion!",
       "start_date": "2026-02-26",
       "event_type": "story",
+      "rerun": false,
       "participation": 1625,
       "periods": {
         "first_half": {
@@ -410,6 +414,7 @@
       "event_name": "Alice in Ayakashi Land",
       "start_date": "2026-03-29",
       "event_type": "tower",
+      "rerun": false,
       "participation": 1765,
       "periods": {
         "first_half": {
@@ -511,6 +516,7 @@
       "event_name": "The Ninjas' Elegy",
       "start_date": "2026-04-29",
       "event_type": "story",
+      "rerun": false,
       "participation": 1592,
       "periods": {
         "first_half": {
@@ -612,6 +618,7 @@
       "event_name": "Dragon's Roar - Summer Breeze Superstar",
       "start_date": "2026-05-30",
       "event_type": "tower",
+      "rerun": false,
       "participation": 1690,
       "periods": {
         "first_half": {
@@ -713,6 +720,7 @@
       "event_name": "Interstellar Tanabata Festival",
       "start_date": "2026-06-28",
       "event_type": "story",
+      "rerun": false,
       "participation": 1572,
       "periods": {
         "first_half": {
@@ -814,6 +822,7 @@
       "event_name": "Sengoku Swimsuit Scene",
       "start_date": "2026-07-30",
       "event_type": "tower",
+      "rerun": false,
       "participation": 1627,
       "periods": {
         "first_half": {
@@ -915,6 +924,7 @@
       "event_name": "Otogi 4th Anniversary Tower",
       "start_date": "2026-08-30",
       "event_type": "story",
+      "rerun": false,
       "participation": 1826,
       "periods": {
         "first_half": {
@@ -1006,6 +1016,45 @@
               "rank_min": 401,
               "rank_max": 800,
               "cutoff_score": 304515
+            }
+          ]
+        }
+      }
+    },
+    {
+      "event_id": "190",
+      "event_name": "Clavicle of the King (Re-run)",
+      "start_date": "2026-09-30",
+      "event_type": "story",
+      "rerun": true,
+      "participation": null,
+      "periods": {
+        "first_half": {
+          "cutoffs": [
+            {
+              "rank_min": 1,
+              "rank_max": 50,
+              "cutoff_score": 3596846
+            },
+            {
+              "rank_min": 51,
+              "rank_max": 100,
+              "cutoff_score": 1068780
+            },
+            {
+              "rank_min": 101,
+              "rank_max": 250,
+              "cutoff_score": 720326
+            },
+            {
+              "rank_min": 251,
+              "rank_max": 600,
+              "cutoff_score": 177316
+            },
+            {
+              "rank_min": 601,
+              "rank_max": 1000,
+              "cutoff_score": 48914
             }
           ]
         }
