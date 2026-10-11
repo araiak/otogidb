@@ -56,6 +56,7 @@ export function formatScore(score: number): string {
 export function buildTiers(events: EventCutoff[], period: string): Tier[] {
   const seen = new Map<string, Cutoff>();
   for (const event of events) {
+    if (event.rerun) continue; // re-runs use their own bands; mapped by position in cutoffForTier
     for (const c of event.periods[period]?.cutoffs ?? []) {
       const key = `${c.rank_min}-${c.rank_max}`;
       if (!seen.has(key)) seen.set(key, c);
@@ -73,6 +74,21 @@ export function buildTiers(events: EventCutoff[], period: string): Tier[] {
 // --- Chart data construction ---
 
 /**
+ * The event's cutoff for a tier. Re-runs use different rank bands (#1–50 vs #1–70),
+ * so they map by tier position (their 1st band -> T1) instead of exact range.
+ */
+export function cutoffForTier(
+  event: EventCutoff,
+  period: string,
+  tier: Tier,
+  tierIndex: number,
+): Cutoff | undefined {
+  const cutoffs = event.periods[period]?.cutoffs ?? [];
+  if (event.rerun) return [...cutoffs].sort((a, b) => a.rank_min - b.rank_min)[tierIndex];
+  return cutoffs.find(c => c.rank_min === tier.rank_min && c.rank_max === tier.rank_max);
+}
+
+/**
  * Build chart rows: one row per event, columns keyed by tier.key.
  * Tiers that have no matching cutoff in a given event are omitted (no data point).
  */
@@ -83,13 +99,10 @@ export function buildChartData(
 ): Record<string, string | number>[] {
   return events.map(event => {
     const row: Record<string, string | number> = { name: event.event_name };
-    const cutoffs = event.periods[period]?.cutoffs ?? [];
-    for (const tier of tiers) {
-      const match = cutoffs.find(
-        c => c.rank_min === tier.rank_min && c.rank_max === tier.rank_max,
-      );
+    tiers.forEach((tier, i) => {
+      const match = cutoffForTier(event, period, tier, i);
       if (match) row[tier.key] = match.cutoff_score;
-    }
+    });
     return row;
   });
 }
