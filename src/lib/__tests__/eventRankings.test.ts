@@ -40,7 +40,7 @@ const TOWER_CUTOFFS = [
   { rank_min: 401, rank_max: 800, cutoff_score:     50_000_000 },
 ];
 
-const _STORY_CUTOFFS = [
+const STORY_CUTOFFS = [
   { rank_min: 1,   rank_max: 70,  cutoff_score: 1_500_000 },
   { rank_min: 71,  rank_max: 140, cutoff_score:   800_000 },
   { rank_min: 141, rank_max: 210, cutoff_score:   400_000 },
@@ -333,5 +333,24 @@ describe('buildTrendData with an outlier', () => {
     const next = buildNextEventPredictions(chartData, tiers).T1!;
     expect(next).toBeGreaterThan(2_430_938);
     expect(next).toBeLessThan(10_056_894);
+  });
+});
+
+describe('re-run events', () => {
+  it('map onto story tiers by position, not exact rank range', () => {
+    const normal = makeEvent('N', 'story', { first_half: STORY_CUTOFFS });
+    const rerun = {
+      ...makeEvent('R', 'story', {
+        first_half: [
+          { rank_min: 51, rank_max: 100, cutoff_score: 900 },
+          { rank_min: 1, rank_max: 50, cutoff_score: 3000 },
+        ],
+      }),
+      rerun: true,
+    };
+    const tiers = buildTiers([normal, rerun], 'first_half');
+    expect(tiers.map(t => t.rangeLabel)).toEqual(buildTiers([normal], 'first_half').map(t => t.rangeLabel));
+    const rows = buildChartData([normal, rerun], 'first_half', tiers);
+    expect(rows[1]).toEqual({ name: 'R', T1: 3000, T2: 900 });
   });
 });

@@ -129,6 +129,8 @@ export interface SimEvent {
 /** Damage a card dealt with one kind of hit, over the traced (seed 0) battle. */
 export interface DamageSpread {
   n: number;
+  /** Hits that crit (normal or super). Absent from results produced before it existed. */
+  crit?: number;
   total: number;
   min: number;
   max: number;

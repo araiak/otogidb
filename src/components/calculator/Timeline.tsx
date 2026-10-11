@@ -29,9 +29,16 @@ const KIND_STYLE: Record<string, { dot: string; label: string }> = {
 const fmt = (n: number) => Math.round(n).toLocaleString();
 
 /** Percent values arrive as engine percentages (59.72 => "+59.7%"). */
-function signedPct(v: number): string {
+// Stats that are flat numbers, not percentages (DEFENSE is subtracted from damage).
+const FLAT_STATS = new Set(['DEFENSE']);
+
+function unit(stat?: string | null): string {
+  return stat && FLAT_STATS.has(stat) ? '' : '%';
+}
+
+function signedPct(v: number, stat?: string | null): string {
   const s = v >= 0 ? '+' : '';
-  return `${s}${v.toFixed(1)}%`;
+  return FLAT_STATS.has(stat ?? '') ? `${s}${v.toFixed(0)}` : `${s}${v.toFixed(1)}%`;
 }
 
 /** Enemy slots are E-prefixed. They must NOT go through nameOf, which indexes the
@@ -74,11 +81,14 @@ function describe(e: SimEvent, nameOf: (s: string) => string): string {
         // a wasted cast: it refreshes the window, which is how a duplicated carry
         // extends a debuff instead of re-applying it into itself.
         if (e.before === e.after) {
-          return `${e.stat} held at ${e.after.toFixed(1)}% on ${who(e, nameOf)} — window refreshed to ${dur}`;
+          return `${e.stat} held at ${e.after.toFixed(1)}${unit(e.stat)} on ${who(e, nameOf)} — window refreshed to ${dur}`;
+        }
+        if (FLAT_STATS.has(e.stat ?? '')) {
+          return `${e.stat} ${signedPct(e.after - e.before, e.stat)} on ${who(e, nameOf)} — ${dur}`;
         }
         return `${e.stat} ${e.before.toFixed(1)}% → ${e.after.toFixed(1)}% on ${who(e, nameOf)} — ${dur}`;
       }
-      const mag = typeof e.value === 'number' ? ` ${signedPct(e.value)}` : '';
+      const mag = typeof e.value === 'number' ? ` ${signedPct(e.value, e.stat)}` : '';
       return `${e.stat}${mag} on ${who(e, nameOf)} — ${dur}`;
     }
     case 'cc':

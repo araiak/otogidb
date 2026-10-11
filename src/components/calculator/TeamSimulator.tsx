@@ -167,8 +167,9 @@ export default function TeamSimulator() {
   }
 
   // Pick the group rather than score one. The size is arithmetic -- a skill's cost
-  // decays to 1 orb every 20s and the team earns an orb every 5s, so a group of more
-  // than four costs casts rather than adding them -- but which four is a question
+  // decays to 1 orb every 20s and the team earns an orb every 5s (5.5s in world boss,
+  // where CC pausing the decay stretches the cycle enough that four still fits), so a
+  // group of more than four costs casts rather than adding them -- but which four is a question
   // only the engine answers, because a buffer's worth depends on the group it joins.
   async function suggestGroups() {
     setRunning(true);
@@ -600,9 +601,11 @@ export default function TeamSimulator() {
                 {/* The budget is the whole reason a group has a size at all, so say it
                     rather than letting the cut look arbitrary. */}
                 <p className="mb-1">
-                  At one orb every 5s and a cost that decays every 20s, {suggestion.cap}{' '}
-                  casts per cycle is all the team can fund. A fifth member does not add
-                  casts — it takes them off your best cards.
+                  {team.bossId !== null
+                    ? 'At one orb every 5.5s and a cost that decays every 20s — a decay that pauses while the caster is stunned or frozen — '
+                    : 'At one orb every 5s and a cost that decays every 20s, '}
+                  {suggestion.cap} casts per cycle is all the team can fund. A fifth member
+                  does not add casts — it takes them off your best cards.
                 </p>
                 <ul className="space-y-0.5">
                   {suggestion.trace.map((st, i) => (

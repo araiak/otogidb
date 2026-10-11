@@ -22,6 +22,7 @@ import {
   buildNextEventPredictions,
   buildNextEventPredictionRanges,
   buildLogAxis,
+  cutoffForTier,
 } from '../../lib/eventRankings';
 import type { EventCutoff, EventCutoffsData } from '../../lib/eventRankings';
 
@@ -327,12 +328,14 @@ function RankingSubChart({
           </thead>
           <tbody>
             {events.map(event => {
-              const cutoffs = event.periods[period]?.cutoffs ?? [];
               return (
                 <tr key={event.event_id} className="border-b border-surface/50 hover:bg-surface/30 transition-colors">
-                  <td className="py-2 pr-4 whitespace-nowrap">{event.event_name}</td>
-                  {tiers.map(tier => {
-                    const cutoff = cutoffs.find(c => c.rank_min === tier.rank_min && c.rank_max === tier.rank_max);
+                  <td className="py-2 pr-4 whitespace-nowrap">
+                    {event.event_name}
+                    {event.rerun && <span className="text-secondary text-xs" title="Re-run rank bands differ (#1–50, #51–100, ...); hover the chart for exact ranges"> †</span>}
+                  </td>
+                  {tiers.map((tier, i) => {
+                    const cutoff = cutoffForTier(event, period, tier, i);
                     return (
                       <td key={tier.key} className="text-right py-2 px-3 font-mono tabular-nums">
                         {cutoff ? formatScore(cutoff.cutoff_score) : <span className="text-secondary">—</span>}

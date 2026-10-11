@@ -118,7 +118,7 @@
     "aliases": ["life steal"]
   },
   "cleanse": {
-    "definition": "Removes debuffs from your own allies.",
+    "definition": "Removes debuffs. Your cards can cleanse their allies, and some World Bosses cleanse debuffs from themselves on a schedule.",
     "aliases": ["cleanses"]
   },
   "dispel": {
@@ -216,5 +216,39 @@
   "level": {
     "definition": "On its own, 'level' can mean a card's level (raises that card's stats, capped by limit break) or your player level (account progression that unlocks features) — context decides which. See card level and player level.",
     "aliases": ["levels"]
+  },
+  "support": {
+    "definition": "A card whose job is to buff the carries rather than deal the damage itself.",
+    "aliases": ["supports", "buffer", "buffers"]
+  },
+  "leader": {
+    "definition": "The first active slot on your team. Some abilities only work when their card is the team leader.",
+    "aliases": ["team leader", "leader slot"]
+  },
+  "bond": {
+    "definition": "A card attached to another card to boost it. Each card has 3 bonds; one can be an assist, which also passes on its abilities. ATK bonds only boost auto attacks; skill bonds boost skill damage.",
+    "aliases": ["bonds", "bonded"]
+  },
+  "autos": {
+    "definition": "Auto attacks: the attacks every active card makes on its own, without spending spirit shards. Most melee and ranged cards auto about every 2.3 seconds.",
+    "aliases": ["auto attack", "auto attacks", "auto-attack", "auto-attacks"]
+  },
+  "exceed": {
+    "definition": "The random bonus a limit-broken card rolls on each hit: up to +5% per limit break, so ×1.00 to ×1.20 at MLB. Skill buffs roll it too; ability buffs don't."
+  },
+  "burst": {
+    "definition": "A group of skill casts timed together, buffs first, so the carries' damage skills land fully buffed.",
+    "aliases": ["bursts"]
+  },
+  "slow": {
+    "definition": "A debuff that lowers an enemy's speed. On a World Boss it makes skills with a long wind-up skip every other cast; stacking more slow does nothing extra.",
+    "aliases": ["slows", "slowed"]
+  },
+  "enrage": {
+    "definition": "The World Boss damage check at about 240 seconds. If your team hasn't dealt enough damage by then, everyone is wiped."
+  },
+  "bucket": {
+    "definition": "A group of buffs that add together in the damage formula (for example all DMG% buffs). Different buckets multiply, so a buff is worth more in an empty bucket.",
+    "aliases": ["buckets"]
   }
 }
