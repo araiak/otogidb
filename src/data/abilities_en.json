@@ -16454,7 +16454,7 @@
   "144502": {
     "id": "144502",
     "name": "Eldest Sister's Prayer",
-    "description": "Increases 4% of Max HP to Anima team members at the start of each wave.",
+    "description": "Increases 15% of Max HP to Anima team members at the start of each wave.",
     "card_id": "1445",
     "card_name": "Vanilla [New Year]",
     "er": "entry_wave",
@@ -19511,6 +19511,376 @@
     "tags": [
       "Self",
       "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "190901": {
+    "id": "190901",
+    "name": "Fire of Life",
+    "description": "Increases 12% of Crit rate.(only take effect once to the team)",
+    "card_id": "1909",
+    "card_name": "Candle Master",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<12.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "191901": {
+    "id": "191901",
+    "name": "Top-tier Escort",
+    "description": "Increases 7% of ATK speed of all allies.(only take effect once to the team)",
+    "card_id": "1919",
+    "card_name": "Saizo Kirigakure [Halloween]",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SPD<7.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "191101": {
+    "id": "191101",
+    "name": "Exorcising Silver Bullet",
+    "description": "All Divina team members deal 4% more DMG.(only take effect once to the team)",
+    "card_id": "1911",
+    "card_name": "Sister Miriam",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "ATK<4.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "191201": {
+    "id": "191201",
+    "name": "Sweet Tooth",
+    "description": "Increases 7% of DMG.(only take effect once to the team)",
+    "card_id": "1912",
+    "card_name": "Skeleton Knight",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<7.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "191301": {
+    "id": "191301",
+    "name": "Night Revelry",
+    "description": "90% chances of inflicting Sleep to all foes at the start of each wave.(only take effect once to the team)",
+    "card_id": "1913",
+    "card_name": "Dark Night Dress",
+    "er": "entry_wave",
+    "ts": "enemy;count<5>",
+    "de": "HIT<90.00%,0%>;SLEEP<5>",
+    "o": false,
+    "tags": [
+      "Wave Start",
+      "AoE",
+      "Sleep"
+    ],
+    "synergy_partners": []
+  },
+  "191001": {
+    "id": "191001",
+    "name": "Sweet Temptation",
+    "description": "Increases 8% of the skill DMG of all ranged allies. (only take effect once to the team)",
+    "card_id": "1910",
+    "card_name": "Blood-Soaked Candy",
+    "er": "entry",
+    "ts": "self;prof<2>;count<5>",
+    "de": "SKILL_ATK<8.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Ranged",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "191701": {
+    "id": "191701",
+    "name": "Pumpkin's Wrath",
+    "description": "Normal attacks have 50% chances of inflicting Burn.",
+    "card_id": "1917",
+    "card_name": "Pumpkin King [Wild]",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "HIT<50.00%,0%>;BURN<5.00%,0%,5>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Burn"
+    ],
+    "synergy_partners": []
+  },
+  "191702": {
+    "id": "191702",
+    "name": "Self-Proclaimed King",
+    "description": "Reduces 40% of DMG taken, increases 60% of DMG dealt and slowly restores HP over time when HP is 1/2 or below.",
+    "card_id": "1917",
+    "card_name": "Pumpkin King [Wild]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HPP_IN<0.00%,50.00%>;HEAL_DOT<10.00%,0%,5>;SHIELD<40.00%,0%>;ATK<60.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Conditional",
+      "Heal",
+      "DMG Reduction",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "192101": {
+    "id": "192101",
+    "name": "Party Hostess",
+    "description": "Restores 20% HP to Anima team members at the start of each wave.",
+    "card_id": "1921",
+    "card_name": "Jack-O-Lantern [Revival]",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "HEAL<20.00%,0%,1>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Heal"
+    ],
+    "synergy_partners": []
+  },
+  "192102": {
+    "id": "192102",
+    "name": "Buxom Growth",
+    "description": "Increases 20% of skill DMG to Anima team members at the start of each wave.",
+    "card_id": "1921",
+    "card_name": "Jack-O-Lantern [Revival]",
+    "er": "entry_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "SKILL_ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Anima",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "191801": {
+    "id": "191801",
+    "name": "Soul-Reaping Witch",
+    "description": "Increases 20% of Crit DMG by the 2 allies with the highest ATK at the start of every wave.",
+    "card_id": "1918",
+    "card_name": "Walpurgis Night",
+    "er": "entry_wave",
+    "ts": "self;count<2>;max_atk",
+    "de": "CHIT_ATK<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Multi",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "191802": {
+    "id": "191802",
+    "name": "Divine Judgment",
+    "description": "Increase 45% of DMG dealt by the 2 allies with the highest ATK.",
+    "card_id": "1918",
+    "card_name": "Walpurgis Night",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Multi",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "191601": {
+    "id": "191601",
+    "name": "Dragon Superstar",
+    "description": "Increases 15% of DMG by the 2 allies Phantasma team members at the start of every wave.",
+    "card_id": "1916",
+    "card_name": "Dragon Princess [Halloween]",
+    "er": "entry_wave",
+    "ts": "self;type<2>;count<2>",
+    "de": "ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Phantasma",
+      "Multi",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "191602": {
+    "id": "191602",
+    "name": "Shining Stage",
+    "description": "Increases 20% of Crit Rate of Phantasma allies.",
+    "card_id": "1916",
+    "card_name": "Dragon Princess [Halloween]",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT<20.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "192201": {
+    "id": "192201",
+    "name": "Special Forces Trick",
+    "description": "Increases 15% of max HP of Anima team members.(only take effect once to the team)",
+    "card_id": "1922",
+    "card_name": "Trick or Treat",
+    "er": "entry",
+    "ts": "self;type<2>;count<5>",
+    "de": "HP<15.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Phantasma",
+      "AoE",
+      "Max HP"
+    ],
+    "synergy_partners": []
+  },
+  "192202": {
+    "id": "192202",
+    "name": "Price of Candy",
+    "description": "Increases 35% of DMG dealt by Anima team members at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1922",
+    "card_name": "Trick or Treat",
+    "er": "last_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "ATK<35.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Anima",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "192001": {
+    "id": "192001",
+    "name": "Soul of an Actress",
+    "description": "Increases 50% of Skill DMG at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1920",
+    "card_name": "Koi Carp [Halloween]",
+    "er": "last_wave",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<50.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "192801": {
+    "id": "192801",
+    "name": "Sleepless Land",
+    "description": "Increases 15% of skill DMG by all team members at the start of each wave.",
+    "card_id": "1928",
+    "card_name": "Emperor of the Night",
+    "er": "entry_wave",
+    "ts": "self;count<5>",
+    "de": "SKILL_ATK<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "192802": {
+    "id": "192802",
+    "name": "Ruler of the Night",
+    "description": "Increases all allies' level by 10.",
+    "card_id": "1928",
+    "card_name": "Emperor of the Night",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "LEVEL<10,0>",
+    "o": true,
+    "tags": [
+      "Team",
+      "AoE",
+      "Level Boost"
+    ],
+    "synergy_partners": []
+  },
+  "191501": {
+    "id": "191501",
+    "name": "Dual Mastery",
+    "description": "Increases 30% of ATK speed.",
+    "card_id": "1915",
+    "card_name": "Sasuke Sarutobi [Halloween]",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SPD<30.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "191502": {
+    "id": "191502",
+    "name": "Halloween Guard",
+    "description": "Increases 25% more DMG dealt of all team members when this daemon is Team Leader.",
+    "card_id": "1915",
+    "card_name": "Sasuke Sarutobi [Halloween]",
+    "er": "entry_leader",
+    "ts": "self;count<5>",
+    "de": "ATK<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Leader",
+      "Team",
+      "AoE",
+      "DMG Boost"
     ],
     "synergy_partners": []
   }

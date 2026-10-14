@@ -16910,9 +16910,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16944,7 +16948,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -16962,11 +16967,63 @@
       "description": "<color=#f4e48e>\"사령관! 내가 인간의 모든 적을 몰살하는 것을 지켜보도록 해!\"</color><br/>사상 최대이자 최고인 <color=#ef9843>전함</color>의 <color=#ef9843>혼령</color>. <color=#ef9843>악한 신들</color>로부터 지구를 지키는 것을 돕기 위해 비밀 방어 기관에서 파견되었다. 당신을 사령관으로서 깊이 존경한 나머지 기관으로 돌아가지 않기로 했다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.004703+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.664019+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.723634+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1413",
       "image_urls": {
@@ -20890,7 +20947,7 @@
           "unlock_level": 75
         },
         {
-          "description": "WAVE 시작 시마다 모든 영물 속성 파티원의 최대 HP가 4% 증가한다",
+          "description": "WAVE 시작 시마다 모든 영물 속성 파티원의 최대 HP가 15% 증가한다",
           "id": "144502",
           "name": "맏언니의 기도",
           "parsed": {
@@ -20997,12 +21054,23 @@
             ],
             "date": "2026-02-11",
             "version": "869f7f8"
+          },
+          {
+            "changes": [
+              {
+                "field": "abilities.1.description",
+                "new": "Increases 15% of Max HP to Anima team members at the start of each wave.",
+                "old": "Increases 4% of Max HP to Anima team members at the start of each wave."
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.004465+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.661694+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.721785+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1445",
       "image_urls": {
@@ -23399,7 +23467,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -23416,7 +23484,7 @@
             {
               "currency": "gApple",
               "end": "2026-11-30 23:59:59",
-              "is_current": false,
+              "is_current": true,
               "limit": 0,
               "price": 65,
               "start": "2026-10-01 00:00:00"
@@ -33841,17 +33909,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -33898,6 +33962,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34039,12 +34104,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153507+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.996434+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.758102+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1570",
       "image_urls": {
@@ -34148,17 +34269,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34205,6 +34322,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34346,12 +34464,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154067+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.999440+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.761847+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1572",
       "image_urls": {
@@ -34454,17 +34628,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34505,6 +34675,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34661,12 +34832,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154325+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.075557+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.763649+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1573",
       "image_urls": {
@@ -34769,17 +34996,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34821,6 +35044,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35154,12 +35378,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154581+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.077094+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.765426+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1575",
       "image_urls": {
@@ -35289,17 +35569,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35342,6 +35618,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35418,12 +35695,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155132+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.410472+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.769571+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1576",
       "image_urls": {
@@ -35541,17 +35874,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35593,6 +35922,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35678,12 +36008,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154865+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.408726+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.767490+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1577",
       "image_urls": {
@@ -35823,17 +36209,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35880,6 +36262,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36037,12 +36420,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156024+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:10.010494+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.775807+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1578",
       "image_urls": {
@@ -36184,17 +36623,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -36223,6 +36658,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36419,12 +36855,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155735+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.083667+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.773597+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1579",
       "image_urls": {
@@ -36682,17 +37174,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -36739,6 +37227,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36880,12 +37369,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153806+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.997948+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.759971+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1580",
       "image_urls": {
@@ -37020,17 +37565,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -37059,6 +37600,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -37294,12 +37836,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155408+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.082004+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.771580+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1581",
       "image_urls": {
@@ -44183,17 +44781,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -44240,6 +44834,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -44341,12 +44936,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156311+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.418237+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.778004+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1638",
       "image_urls": {
@@ -59528,7 +60179,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -59545,7 +60196,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-30 23:59:59",
-              "is_current": true,
+              "is_current": false,
               "limit": 0,
               "price": 65,
               "start": "2026-08-01 00:00:00"
@@ -63912,6 +64563,154 @@
       },
       "synergies": []
     },
+    "1909": {
+      "abilities": [
+        {
+          "description": "치명타율이 12% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "190901",
+          "name": "생명의 불꽃",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101909",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "190901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"생명이 꺼질 준비를 하도록!\"</color><br/>사람들이 장수와 건강을 빌 때 켜는 양초 속에 살고 있는 <color=#ef9843>악령</color>. 성가시게 군다면 당신의 수명도 순식간에 줄여버릴 수 있다... 주위 귀신들은 속으로 이런 양초를 가지고 다닌다는 것에 좋은 의도가 있을 수 없다고 생각하고 있다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951398+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951398+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1909",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990937/otogi/android/101909_c62064134317725336c70e3801661be5.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990950/otogi/cards_hd/101909_hd_74be4a64b5656e3957507022086ff327.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "190901"
+        ],
+        "generation": 0
+      },
+      "name": "양초 마스터",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1909",
+        "name": "유종의 미",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "191": {
       "abilities": [
         {
@@ -64075,6 +64874,1524 @@
       },
       "synergies": []
     },
+    "1910": {
+      "abilities": [
+        {
+          "description": "모든 원거리형 아군의 스킬 데미지가 8% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "191001",
+          "name": "달콤한 유혹",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 8.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "prof<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Ranged",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101910",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "191001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"훤하니 빨간 사탕은 어때?\"</color><br/> <color=#ef9843>피가 뚝뚝 떨어지는 사탕</color>을 나눠주면서 사람들의 환심을 사고자 하는 귀신. 사탕이 사실은 굉장히 맛이 있지만 사람들은 겉모습만 보고 거절한다. 사실 이건 피가 아니다. 딸기 소스이다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952884+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952884+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1910",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990943/otogi/android/101910_59bacbdd82528171e4eb217754a1c1a3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990953/otogi/cards_hd/101910_hd_38f3431e641dd0d8277636de13f4b24a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191001"
+        ],
+        "generation": 0
+      },
+      "name": "피로 물든 사탕",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1910",
+        "name": "수상한 사탕",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1911": {
+      "abilities": [
+        {
+          "description": "모든 신령 속성 파티원의 전투 데미지가 4% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "191101",
+          "name": "퇴마의 은탄환",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101911",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"내가 장전을 하면 기도를 해!\"<color=#ef9843>할로윈 파티</color>가 나쁜 귀신들을 물리치기 딱 좋은 기회라고 생각하는 </color><br/> <color=#ef9843>수녀</color>이다. 멋진 은장식이 돋보이는 리볼버를 가지고 다니며 한 방에 귀신을 내세로 보낼 수 있다. 수녀에게 당한 자들은 자신보다 수녀가 더 큰 문제라고 생각을 한다...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951991+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951991+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1911",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990942/otogi/android/101911_b21f26d4983499f8ef189d22e0145b21.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990951/otogi/cards_hd/101911_hd_1dfe97acaa92fece7b478bcde8b54f3c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191101"
+        ],
+        "generation": 0
+      },
+      "name": "미리암 수녀",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1911",
+        "name": "실버 스트라이크",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1912": {
+      "abilities": [
+        {
+          "description": "전투 데미지가 7% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "191201",
+          "name": "단것 매니아",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 50
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101912",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "191201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"사탕이 있는 곳이라면 내가 있지!\"</color><br/>단 것이라면 사족을 못 쓰는 <color=#ef9843>무서운 해골 기사</color>. 종종 사탕에 눈이 멀어 주위에서 벌어지는 일을 알지 못한다. 할로윈 파티에서 쿠키 조각을 먹는데 정신이 팔려 탈출을 하는 것조차 잊어버렸다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952304+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952304+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1912",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990940/otogi/android/101912_d3acd95a60a88780e96b6e68c6ddcdad.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990955/otogi/cards_hd/101912_hd_6d2e03836d0aff99d924a4199234690c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191201"
+        ],
+        "generation": 0
+      },
+      "name": "해골 기사",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1912",
+        "name": "본 소드",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1913": {
+      "abilities": [
+        {
+          "description": "WAVE시작 시마다 90% 확률로 모든 적을 수면 상태로 만든다(조력자이외 아군파티 1회유효)",
+          "id": "191301",
+          "name": "밤의 광란",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 90.0,
+                "scale": 0.0,
+                "type": "SLEEP",
+                "unit": "flat",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "enemy",
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Sleep"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101913",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"훔쳐보지마, 응큼한 것!\"</color><br/>매혹적인 매력을 가진 작은 <color=#ef9843>마녀</color>. 자신은 밤에만 나올 수 있고 일광과는 맞지 않는다고 주장한다. 하지만 진실은 밤과 낮이 뒤바뀐 생활은 하는 것이다. 할로윈 파티 때는 보통 음주를 심하게 해 잠이 드는 편이다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952597+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952597+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1913",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990939/otogi/android/101913_7dc73e265b827e9be1ae5f3d0e8f6147.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990952/otogi/cards_hd/101913_hd_196c14a5fe64d66fe10529679f95e8c4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191301"
+        ],
+        "generation": 0
+      },
+      "name": "다크 나이트 드레스",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "HP가 가장 높은 적 1명에게 {value}의 데미지를 입히고 일정 시간 동안 속도를 {delay1} 감소시킨다",
+        "id": "1913",
+        "name": "보드카 마녀",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.68,
+              "type": "SPD",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 420.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 1834,
+          "slvup": 48,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2900,
+        "base_hp": 2165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 8700,
+        "max_hp": 6500,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1915": {
+      "abilities": [
+        {
+          "description": "공격 속도가 30% 증가한다",
+          "id": "191501",
+          "name": "양파 마스터",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "파티장일 때 모든 파티원의 전투 데미지가 25% 증가한다",
+          "id": "191502",
+          "name": "할로윈 호위",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101915",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "191501",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"아, 다행이야. 마침 심심하던 참인데. 호박을 좀 수확해볼까!\"</color><br/>코가류와 이가류의 닌자술에 모두 능한 <color=#ef9843>닌자의 명인</color>. 할로윈 파티의 경비를 위해 그의 영원한 친구이자 라이벌인 키리가쿠레 사이조가 선택한 인물.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.955744+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.955744+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1915",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990942/otogi/android/101915_ea24fe4e9740e2b20b03905d543df848.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990950/otogi/cards_hd/101915_hd_32eeeae32f13a380146092d23aa0f22d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191501"
+        ],
+        "generation": 0
+      },
+      "name": "사루토비 사스케 [할로윈]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "모든 적에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 입히는 데미지를 {delay1} 감소시킨다",
+        "id": "1915",
+        "name": "닌자 네메시스",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.47,
+              "type": "ATK",
+              "unit": "percent",
+              "value": -13.9
+            }
+          ],
+          "immediate": {
+            "base": 502.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1395,
+          "slvup": 32,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4330,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1916": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 요괴 속성 아군 2명의 데미지가 15% 증가한다",
+          "id": "191601",
+          "name": "드래곤 슈퍼스타",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "모든 요괴 속성의 파티원의 치명타율이 20% 증가한다",
+          "id": "191602",
+          "name": "빛나는 무대",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101916",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "191601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"감히 내 공연을 망치다니?!\"</color><br/> <color=#ef9843>팝 역사상 최고의 스타</color>가 되기를 바라는 귀족 드래곤. 할로윈 파티의 오프닝 공연을 하기로 했지만 호박왕의 방해로 한 소절도 부르지 못했다. 할로윈 파티에 관심이 있어서가 아니라 자신의 무대를 되찾기 위해 당신과 함께 싸울 것이다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954172+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954172+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1916",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990937/otogi/android/101916_e95d2abab174d3df173dec627a1892dd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990949/otogi/cards_hd/101916_hd_397de4ba262fbf67684ae4be66815798.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191601"
+        ],
+        "generation": 0
+      },
+      "name": "드래곤 프린세스 [할로윈]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "공격력이 가장 높은 적 2명에게 {value}의 데미지를 입히고 일정 시간 동안 대상이 받는 데미지를 {delay1} 증가시킨다",
+        "id": "1916",
+        "name": "초특급 스타",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1468.0,
+            "scale": 35.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 2951,
+          "slvup": 53,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4930,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14800,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1917": {
+      "abilities": [
+        {
+          "description": "50%로 일반 공격 대상을 화상 상태로 만든다",
+          "id": "191701",
+          "name": "호박의 분노",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "proc_rate": 50.0,
+                "scale": 0.0,
+                "type": "BURN",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Burn"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "남은 HP가 50%이하일때 받는 데미지가 40% 감소하고 시간 경과에 따라 HP가 조금씩 회복된다 전투 데미지가 60% 증가한다.",
+          "id": "191702",
+          "name": "자칭 왕",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101917",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "191701",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"그아아앙! 으흐흐!\"</color><br/>발푸르기스의 밤에 의해 폭력적으로 변한 호박. <color=#ef9843>\"왕\"이라는 호칭은 자신이 직접 붙인 것이다.</color>할로윈 파티의 진정한 의미를 잊은 사람들에 분노한 발푸르기스의 밤에 의해 분노로 불타오른다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953229+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953229+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1917",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990943/otogi/android/101917_0e211eb74cb73547fb8a789eca1b330a.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990945/otogi/cards_hd/101917_hd_946539e42ee432b46e3b905c63213114.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191701"
+        ],
+        "generation": 0
+      },
+      "name": "호박왕 [란]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "적 3명(원거리형 우선)에게 {value}의 데미지를 입히고 {probability}로 화상 상태로 만든다",
+        "id": "1917",
+        "name": "왕의 분노",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.14,
+              "type": "BURN",
+              "unit": "percent",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 680.0,
+            "scale": 20.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1001,
+          "slvup": 29,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4000,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1918": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 공격력이 가장 높은 아군 2명의 치명타 데미지가 20% 증가한다",
+          "id": "191801",
+          "name": "영혼을 거두는 마녀",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        },
+        {
+          "description": "공격력이 가장 높은 아군 2명의 전투 데미지가 45% 증가한다",
+          "id": "191802",
+          "name": "신의 심판",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101918",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "191801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"축제를 모독하는 건 신을 모독하는 것이다.\"</color><br/>우아한 의상을 입은 무서운 얼굴의 <color=#ef9843>마녀</color>. 영혼을 흡수하는 호박 로봇과 함께 할로윈이 단지 의상 파티라고 생각하는 바보들을 정리하기 위해 나타났다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953846+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953846+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1918",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990939/otogi/android/101918_93d0a9175ee43071d4d5b2f3fe28f4e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990954/otogi/cards_hd/101918_hd_10823a4eb4db98944f37e0f3f51cae0f.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191801"
+        ],
+        "generation": 0
+      },
+      "name": "발푸르기스의 밤",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "공격력이 가장 높은 아군 2명의 HP를 {value} 회복시키고 일정 시간 동안 대상이 입히는 데미지를 {delay1} 증가시킨다",
+        "id": "1918",
+        "name": "해피 할로윈",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.64,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 23.0
+            }
+          ],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 2738,
+          "slvup": 49,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4830,
+        "base_hp": 3600,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 10800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1919": {
+      "abilities": [
+        {
+          "description": "모든 파티원의 공격 속도가 7% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "191901",
+          "name": "일류 호위",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101919",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"그들은 아주 간단한 경비 일이라고 했단 말야...\"</color><br/>요즘 닌자의 마을은 경비 서비스로 활발한 활동을 하고 있으며 사이조는 할로윈 파티의 <color=#ef9843>경비</color>를 맡았다. 사이조의 임무는 주최자와 손님을 안전하게 보호하는 일이다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951698+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951698+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1919",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990944/otogi/android/101919_c086b205812c06d4f299f64104449b01.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990948/otogi/cards_hd/101919_hd_069e571509423997ef3ddd4a6296f558.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191901"
+        ],
+        "generation": 0
+      },
+      "name": "키리가쿠레 사이조 [할로윈]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1919",
+        "name": "악령의 섬광",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "192": {
       "abilities": [],
       "acquisition": {
@@ -64207,6 +66524,701 @@
         "max_hp": 3900,
         "max_level": 50,
         "rarity": 3,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1920": {
+      "abilities": [
+        {
+          "description": "최종 WAVE시 자신의 스킬 데미지가 50% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "192001",
+          "name": "여배우의 혼",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101920",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "192001",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"여배우는 독특한 성격을 가지고 있어야 해.\"</color><br/>예전에는 조그마한 기획사에서 <color=#ef9843>아이돌</color>이 되고 싶어했지만 이제는 배우로서 스타가 되고자 한다. 할로윈 파티에 손님으로 참가했지만 전투에 참가하기로 한다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954748+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954748+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1920",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990945/otogi/android/101920_577d3bd1096abb2bc9088ecd0941a552.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990946/otogi/cards_hd/101920_hd_e48a03c2636d36d7b63837f82c797284.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192001"
+        ],
+        "generation": 0
+      },
+      "name": "잉어 [할로윈]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "모든 아군의 HP를 {value} 회복시킨다",
+        "id": "1920",
+        "name": "킥",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 630.0,
+            "scale": 21.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 580,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2200,
+        "base_hp": 2265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 6600,
+        "max_hp": 6800,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1921": {
+      "abilities": [
+        {
+          "description": "WAVE 시작시 마다 모든 영물 속성의 파티원의 HP를 20% 회복한다",
+          "id": "192101",
+          "name": "파티의 여주인",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 1,
+                "scale": 0.0,
+                "type": "HEAL",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "WAVE 시작 시마다 모든 영물 속성 파티원의 스킬 데미지가 20% 증가한다",
+          "id": "192102",
+          "name": "풍만한 성장",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101921",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "192101",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"할로윈은 끝나지 않았어!\"</color><br/>할로윈 파티의 <color=#ef9843>주최자</color>. 파티의 모든 것을 계획했지만, <color=#ef9843>호박왕</color>이 대혼란을 일으키면서 그녀의 계획을 산산조각 내고 만다. 지금은 축제를 재개한다는 희망을 가지고 전투를 한다. 여담이지만 최근에 성장을 좀 한 듯 하다... <color=#ef9843>흉부</color>쪽은 특히 두드러진다, 험험.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953540+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953540+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1921",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990938/otogi/android/101921_a1d43c4fa5e82163e11b0270cd4db7b8.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990947/otogi/cards_hd/101921_hd_afab07949cc89da9707d74033deb9051.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192101"
+        ],
+        "generation": 0
+      },
+      "name": "잭 오 랜턴 [재래]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "모든 아군의 HP를 {value} 회복시키고 일정 시간 동안 받는 데미지를 {delay1} 감소시킨다",
+        "id": "1921",
+        "name": "재키의 귀환",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.58,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 400.0,
+            "scale": 12.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 801,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 4100,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1922": {
+      "abilities": [
+        {
+          "description": "모든 영물 속성 파티원의 최대 HP가 15% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "192201",
+          "name": "특수 장난",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "최종 WAVE 시 모든 영물 속성 파티원의 전투 데미지가 35% 증가한다(조력자이외 아군파티 1회유효)",
+          "id": "192202",
+          "name": "사탕의 대가",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101922",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "HP<7.0%,0.0%>",
+          "id": "192201",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"내게 사탕을 주더라도 장난을 치겠어!\"</color><br/> <color=#ef9843>사탕 아니면 장난</color> 게임을 너무 좋아하는 짓궃은 소녀. \"사탕이 필요해! 하지만 난 장난도 치고 싶어!\". <color=#ef9843>특수부대</color>의 전략에 맞먹을 만한 장난을 친다고 하니 그녀를 만나게 된다면 자신의 나쁜 운을 저주할 수 밖에 없다. 사탕을 주면 장난의 강도가 조금 낮아지겠지만 별 차이는 없다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954470+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954470+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1922",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990940/otogi/android/101922_951a55d5ed6ca211f56b0834d1c351b4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990948/otogi/cards_hd/101922_hd_ab217bf8ba984ccfec34806ce082c2f4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192201"
+        ],
+        "generation": 0
+      },
+      "name": "사탕 아니면 장난을",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "길드 토벌과 결속시 사용가능",
+        "id": "1922",
+        "name": "장난 가득한 사탕",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1928": {
+      "abilities": [
+        {
+          "description": "WAVE 시작 시마다 모든 파티원의 스킬 데미지가 15% 증가한다",
+          "id": "192801",
+          "name": "잠들지 않는 도시",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "때 모든 파티원의 레벨+10",
+          "id": "192802",
+          "name": "밤의 지배자",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "LEVEL",
+                "unit": "flat",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "Level Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101928",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "192801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"나도 저런 차가 있으면 얼마나 좋을까!\"</color><br/>겉으론 <color=#ef9843>폭신폭신한 케이크</color>처럼 보이지만, 사실은 <color=#ef9843>밤의 세계의 제왕</color>이다. 불이 꺼지지 않는 번화가를 흥청거리고 다닌다. 인생 자체가 화려하고 방탕하다.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.955441+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.955441+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1928",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990941/otogi/android/101928_fb01fc11aed92dc694ceebf4720f44e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990946/otogi/cards_hd/101928_hd_2c97af873b97d393a3ebccaa1800b84b.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192801"
+        ],
+        "generation": 0
+      },
+      "name": "밤의 황제",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "모든 적에게 {value}의 데미지를 입힌다",
+        "id": "1928",
+        "name": "새빨간 거짓말",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 888.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 888,
+          "slvup": 26,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4900,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14700,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -177755,9 +180767,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -177827,11 +180839,28 @@
       "description": "<color=#f4e48e>“우후후-♪ 카레는 내 주특기 요리예요! ”</color><br/><color=#ef9843>일본 신화에 전해 내려오는 음식 여신 중 하나.</color> ‘우케모치노카미’와 쌍둥이이며, 족보를 보면 삼귀자보다 서열이 더 높다. 이자나기와 이자나미 직계의 상고 신이다. 일찍이 스사노오노미코토와 한바탕 싸운 적이 있으나 \"뭐, 젊었을 때는 이런저런 일이 있으니까요\"라며 특별히 신경 쓰지 않는 듯하다.(그녀 자신에 한해서는 말이다) 매우 가정적이며 가정에 헌신하는 타입이다. 그녀에게 부탁하면 웃는 얼굴로 손 요리를 대접한다. 순식간에 음식들로 식탁이 가득 차는데, 아무도 그것이 언제 만들어졌는지 모른다. 아야카시들은 대부분 맛있는 것을 먹을 수 있다면 자질구레한 일은 어떻게 되든 상관하지 않는다고 할까나! 이 기이한 현상을 고의로 무시하고 있다... 참고로 그녀가 가장 자신 있는 요리는 물론 ‘카레’다. 이 일에 관해선 깊이 생각하지 않는 게 좋다.<br/><color=#f45d68>[이벤트]아야카시 대식king 대회!</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.345224+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.394868+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "700",
       "image_urls": {
@@ -177935,9 +180964,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -178007,11 +181036,28 @@
       "description": "<color=#f4e48e>“모든 사람이 웃을 수 있게 노력할게요! ”</color><br/><color=#ef9843>북유럽 신화에서 몇 번이고 요리 재료가 되었지만 몇 번이고 살아난 멧돼지 아야카시.</color> 모든 것을 A5 등급 최상급 고기로 만드는 특수 능력을 갖추고 있다. 더욱이 고기 요리에 관해선 견줄 자가 없다고 일컬어질 정도로 탁월한 실력을 지녔다. 레어부터 웰던까지 자유자재로 조리할 수 있으며 ‘신의 팔’이라고 일컬어진다. 명랑한 현모양처 성격에, 자신의 요리를 웃는 얼굴로 먹는 사람을 위해서라면 어떠한 고생도 마다하지 않는, 신부로 삼고 싶은 타입이다. 유일한 단점은 아집이 세서 한번 결정한 일은 멈추지 않는다는 것.<br/><color=#f45d68>[이벤트]아야카시 대식king 대회!</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.347733+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.396752+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "701",
       "image_urls": {
@@ -178115,9 +181161,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -178187,11 +181233,28 @@
       "description": "<color=#f4e48e>“우선 국물 맛을 봐요!　그리고 면!　앗, 양념은 두 그릇째부터예요! ”</color><br/><color=#ef9843>켈트 신화에 나오는, 마음속으로 빌기만 하면 그 어떤 요리라도 만들어 내는 솥 아야카시.</color> 솥을 이용한 요리라면 수프부터 면류까지, 동서고금을 막론해 모든 요리를 재현해 낼 수 있는 천재 셰프. 레시피가 사라져 못 먹게 된 ‘텐텐켄’의 궁극의 라면을 부활시킨 이야기는 정말 유명하다. 아야카시 미식가 업계에서 그녀를 모르는 사람이 없을 정도라고...하지만, 칭찬을 너무 받은 나머지 어깨에 힘이 약간 들어갔다. 참견쟁이처럼 먹는 방법까지 꼬치꼬치 지시를 내리는 것이다. 상대가 고집불통 할아버지라면 화를 낼 텐데 외모가 어린 소녀이다 보니 이 또한 다른 종류의 포상이라고 생각하는 듯하다...<br/><color=#f45d68>[이벤트]아야카시 대식king 대회!</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.348738+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.398624+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "702",
       "image_urls": {
@@ -179384,9 +182447,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -179456,11 +182519,28 @@
       "description": "<color=#f4e48e>“또 너와 함께하게 됐구나ー! ”</color><br/><color=#ef9843>폭음과 폭식을 상징하는 거대한 짐승 아야카시.</color> 에너지 넘치고 호기심이 왕성한 여자아이다. 가만히 있지 못하고 여기저기에 가서 문제를 일으키는 트러블 메이커. 지난번 할로윈 때 주인공이 마음에 들었는지 주인공을 ‘아야카시 많이 먹기 왕 대회’에 반강제적으로 참여하게 한다. 평소엔 허기를 금방 느끼고 가스가 부족한 탓에 실력의 절반밖에 발휘하지 못한다고 한다. 그녀가 진짜 실력을 발휘하면 세계가 무너진다는 말도 있다. 참고로 리바이어던과는 먼 친척뻘이라고...방해 공작은 확실히 좋은 방법이다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.363792+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.411940+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "709",
       "image_urls": {
@@ -179752,9 +182832,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -179824,11 +182904,28 @@
       "description": "<color=#f4e48e>“남자는…등으로 말하지...”</color><br/><color=#ef9843>올림푸스 신들을 낳은 티탄의 수장으로, 하데스와 제우스, 헤라, 헤스티아의 아버지.</color> 말수가 적으며 자신이 한번 정한 바는 절대 양보하지 않는 완고한 아저씨다. 과거 제우스와 부모, 자식 싸움으로 세계를 멸망하게 할 뻔했다. 이밖에 아다마스의 낫과 과거에 인연이 있으며, 그에게 가장 말이 잘 통하는 상대가 바로 그녀라고 한다. 참고로, 제우스와 얼굴을 볼 때마다 싸우기 때문에 서로 만나는 것을 피한다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.366301+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.414146+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "710",
       "image_urls": {
@@ -179938,9 +183035,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -180002,11 +183099,28 @@
       "description": "<color=#f4e48e>“우리 미 양은 정말 대단하다니까! ”</color><br/><color=#ef9843>미토 고몬에서 유명한 ‘접시꽃 무늬’가 새겨진 약통 아야카시.</color> 미토 미츠쿠니와 친한 친구 사이로, 눈에 넣어도 아프지 않은 듯 미츠쿠니를 과보호한다. 원래 잘 보살펴 주는 성격까지 더해지면서, 동갑인데도 불구하고 아이와 못 떨어지는 엄마처럼 미츠쿠니를 대하고 있다. 처음에는 미츠쿠니도 싫어했는데, 최근에는 체념했는지 칭찬해도 가만히 놔둔다고...미츠쿠니를 위해서라면 더러운 일도 마다하지 않는 위험한 일면도 있다...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.367805+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.416002+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "711",
       "image_urls": {
@@ -184854,17 +187968,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-17",
-            "event_id": "179",
-            "event_name": "Guild Conquest ーWild Star Thornー",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -184893,6 +188003,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -185032,12 +188143,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-27T07:17:57.638855+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-10-14T15:15:57.452828+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "731",
       "image_urls": {
@@ -185190,7 +188357,7 @@
           "price_min": 1000,
           "start_date": ""
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -185243,7 +188410,7 @@
             },
             {
               "end": "2026-10-01 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-09-27 15:00:00"
             }
@@ -195832,6 +198999,6 @@
     }
   },
   "locale": "ko_KR",
-  "total_cards": 1020,
-  "version": "57c46c6"
+  "total_cards": 1034,
+  "version": "8194262"
 }
