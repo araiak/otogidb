@@ -15223,6 +15223,231 @@
       "Debuff"
     ]
   },
+  "1909": {
+    "id": "1909",
+    "name": "Last Hurrah",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1909",
+    "card_name": "Candle Master",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1919": {
+    "id": "1919",
+    "name": "Demonic Flash",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1919",
+    "card_name": "Saizo Kirigakure [Halloween]",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1911": {
+    "id": "1911",
+    "name": "Silver Strike",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1911",
+    "card_name": "Sister Miriam",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1912": {
+    "id": "1912",
+    "name": "Bone Sword",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1912",
+    "card_name": "Skeleton Knight",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1913": {
+    "id": "1913",
+    "name": "Vodka Witch",
+    "description": "Deals {value} DMG to the enemy with the most HP. Decreases target's speed by {delay1} for a limited time.",
+    "card_id": "1913",
+    "card_name": "Dark Night Dress",
+    "ie": "ATK<420,15>",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SPD<-20.00%,-0.68%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "Slow",
+      "Debuff"
+    ]
+  },
+  "1910": {
+    "id": "1910",
+    "name": "Dubious Candy",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1910",
+    "card_name": "Blood-Soaked Candy",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1917": {
+    "id": "1917",
+    "name": "King's Rage",
+    "description": "Deals {value} DMG to 3 enemies (ranged priority), with a {probability} of inflicting Burn.",
+    "card_id": "1917",
+    "card_name": "Pumpkin King [Wild]",
+    "ie": "ATK<680,20>",
+    "ts": "enemy;count<3>;prof<2,3,1>",
+    "de": "BURN<5.0%,0.14%,5>;HIT<25.00%,0.72%>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Burn",
+      "Debuff"
+    ]
+  },
+  "1921": {
+    "id": "1921",
+    "name": "Jackie Returns",
+    "description": "Restores {value} HP to all allies. Targets receive {delay1} less DMG for a limited time.",
+    "card_id": "1921",
+    "card_name": "Jack-O-Lantern [Revival]",
+    "ie": "HEAL<400,12>",
+    "ts": "self;count<5>",
+    "de": "SHIELD<20.00%,0.58%,8>",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "AoE",
+      "DMG Reduction"
+    ]
+  },
+  "1918": {
+    "id": "1918",
+    "name": "Happy Halloween",
+    "description": "Restores {value} HP to 2 allies with the highest ATK. Targets deal {delay1} more DMG for a limited time.",
+    "card_id": "1918",
+    "card_name": "Walpurgis Night",
+    "ie": "HEAL<800,23>",
+    "ts": "self;count<2>;max_atk",
+    "de": "ATK<23.00%,0.64%,8>",
+    "tn": 2,
+    "tags": [
+      "Heal",
+      "Multi",
+      "DMG Boost"
+    ]
+  },
+  "1916": {
+    "id": "1916",
+    "name": "Super Starlet",
+    "description": "Deals {value} DMG to the 2 enemies with the highest ATK, target receives {delay1} more DMG for a limited time.",
+    "card_id": "1916",
+    "card_name": "Dragon Princess [Halloween]",
+    "ie": "ATK<1468,35>",
+    "ts": "enemy;count<2>;max_atk",
+    "de": "SHIELD<-20.00%,-0.58%,8>",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi",
+      "DMG Up"
+    ]
+  },
+  "1922": {
+    "id": "1922",
+    "name": "Tricky Treat",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1922",
+    "card_name": "Trick or Treat",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1920": {
+    "id": "1920",
+    "name": "Kick",
+    "description": "Restores {value} HP to all allies.",
+    "card_id": "1920",
+    "card_name": "Koi Carp [Halloween]",
+    "ie": "HEAL<630,21>",
+    "ts": "self;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "Heal",
+      "AoE"
+    ]
+  },
+  "1928": {
+    "id": "1928",
+    "name": "Empty Flattery",
+    "description": "Deals {value} DMG to all enemies.",
+    "card_id": "1928",
+    "card_name": "Emperor of the Night",
+    "ie": "ATK<888,26>",
+    "ts": "enemy;count<5>",
+    "de": "none",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE"
+    ]
+  },
+  "1915": {
+    "id": "1915",
+    "name": "Ninja Nemesis",
+    "description": "Deals {value} DMG to all enemies. Targets deal {delay1} less DMG for a limited time.",
+    "card_id": "1915",
+    "card_name": "Sasuke Sarutobi [Halloween]",
+    "ie": "ATK<502,15>",
+    "ts": "enemy;count<5>",
+    "de": "ATK<-13.90%,-0.47%,8>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "DMG Down",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",

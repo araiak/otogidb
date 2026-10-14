@@ -16910,9 +16910,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -16944,7 +16948,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -16962,11 +16967,63 @@
       "description": "<color=#f4e48e>「司令官！请看着，我会消灭所有人类的敌人！」</color><br/>史上最强大的<color=#ef9843>战舰</color>之<color=#ef9843>灵</color>。获令前往一个机密防卫组织，帮助地球免于<color=#ef9843>邪神</color>肆虐。她认定你为司令官并对其十分崇敬，因而决定脱离组织。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2026-01-16T02:26:52.004703+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.664019+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.723634+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1413",
       "image_urls": {
@@ -20890,7 +20947,7 @@
           "unlock_level": 75
         },
         {
-          "description": "每回合开始时，己方全体付属性队员血量上限4%增加",
+          "description": "每回合开始时，己方全体付属性队员血量上限15%增加",
           "id": "144502",
           "name": "长姐的祈愿",
           "parsed": {
@@ -20997,12 +21054,23 @@
             ],
             "date": "2026-02-11",
             "version": "869f7f8"
+          },
+          {
+            "changes": [
+              {
+                "field": "abilities.1.description",
+                "new": "Increases 15% of Max HP to Anima team members at the start of each wave.",
+                "old": "Increases 4% of Max HP to Anima team members at the start of each wave."
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-01-16T02:26:52.004465+00:00",
         "first_seen_version": "6ba4beb",
-        "last_modified": "2026-03-13T06:07:58.661694+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.721785+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1445",
       "image_urls": {
@@ -23399,7 +23467,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -23416,7 +23484,7 @@
             {
               "currency": "gApple",
               "end": "2026-11-30 23:59:59",
-              "is_current": false,
+              "is_current": true,
               "limit": 0,
               "price": 65,
               "start": "2026-10-01 00:00:00"
@@ -33841,17 +33909,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -33898,6 +33962,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34039,12 +34104,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153507+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.996434+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.758102+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1570",
       "image_urls": {
@@ -34148,17 +34269,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34205,6 +34322,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34346,12 +34464,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154067+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.999440+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.761847+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1572",
       "image_urls": {
@@ -34454,17 +34628,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34505,6 +34675,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -34661,12 +34832,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154325+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.075557+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.763649+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1573",
       "image_urls": {
@@ -34769,17 +34996,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -34821,6 +35044,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35154,12 +35378,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154581+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.077094+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.765426+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1575",
       "image_urls": {
@@ -35289,17 +35569,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35342,6 +35618,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35418,12 +35695,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155132+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.410472+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.769571+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1576",
       "image_urls": {
@@ -35541,17 +35874,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35593,6 +35922,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -35678,12 +36008,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154865+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.408726+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.767490+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1577",
       "image_urls": {
@@ -35823,17 +36209,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -35880,6 +36262,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36037,12 +36420,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156024+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:10.010494+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.775807+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1578",
       "image_urls": {
@@ -36184,17 +36623,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -36223,6 +36658,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36419,12 +36855,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155735+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.083667+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.773597+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1579",
       "image_urls": {
@@ -36682,17 +37174,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -36739,6 +37227,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -36880,12 +37369,68 @@
             ],
             "date": "2026-05-08",
             "version": "8c64454"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153806+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-05-08T16:24:09.997948+00:00",
-        "last_modified_version": "8c64454"
+        "last_modified": "2026-10-14T15:15:57.759971+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1580",
       "image_urls": {
@@ -37020,17 +37565,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -37059,6 +37600,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -37294,12 +37836,68 @@
             ],
             "date": "2026-04-28",
             "version": "9b3b2c7"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.155408+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-04-28T07:14:19.082004+00:00",
-        "last_modified_version": "9b3b2c7"
+        "last_modified": "2026-10-14T15:15:57.771580+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1581",
       "image_urls": {
@@ -44183,17 +44781,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-29",
-            "event_id": "177",
-            "event_name": "Alice in Ayakashi Land",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-10-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -44240,6 +44834,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -44341,12 +44936,68 @@
             ],
             "date": "2026-03-28",
             "version": "b11011c"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156311+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-03-28T14:06:09.418237+00:00",
-        "last_modified_version": "b11011c"
+        "last_modified": "2026-10-14T15:15:57.778004+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "1638",
       "image_urls": {
@@ -59528,7 +60179,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -59545,7 +60196,7 @@
             {
               "currency": "gApple",
               "end": "2026-09-30 23:59:59",
-              "is_current": true,
+              "is_current": false,
               "limit": 0,
               "price": 65,
               "start": "2026-08-01 00:00:00"
@@ -63912,6 +64563,154 @@
       },
       "synergies": []
     },
+    "1909": {
+      "abilities": [
+        {
+          "description": "暴击率12%增加(除助战外，己方全体仅生效1次)",
+          "id": "190901",
+          "name": "生命之火",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101909",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "190901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“你的生命之火就准备熄灭吧！”一个长期居住在蜡烛里、被祈求长生不老的人所点燃的</color><br/><color=#ef9843>邪灵</color>。要是惹毛他的话，他会在眨眼间就让你的寿命大为缩短... 他的妖怪同伴私底下认为他寄宿在这种类型的蜡烛里，实在称不上是有品味的人。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951398+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951398+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1909",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990937/otogi/android/101909_c62064134317725336c70e3801661be5.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990950/otogi/cards_hd/101909_hd_74be4a64b5656e3957507022086ff327.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "190901"
+        ],
+        "generation": 0
+      },
+      "name": "蜡烛大师",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1909",
+        "name": "最后的欢呼",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "191": {
       "abilities": [
         {
@@ -64075,6 +64874,1524 @@
       },
       "synergies": []
     },
+    "1910": {
+      "abilities": [
+        {
+          "description": "己方全体远程职业技能伤害8%增加。(除助战外，己方全体仅生效1次)",
+          "id": "191001",
+          "name": "甜蜜诱惑",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 8.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "prof<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Ranged",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101910",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "191001",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“要不要来些亮红色的糖果啊？”</color><br/>一个用<color=#ef9843>沾满血的糖果</color>来讨他人欢心的妖怪。事实上这糖果还蛮好吃的，不过人们碍于它的外观，还是将她的慷慨好意转送给其他人。这些糖果的糖衣真的不是血啦。是草莓酱。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952884+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952884+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1910",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990943/otogi/android/101910_59bacbdd82528171e4eb217754a1c1a3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990953/otogi/cards_hd/101910_hd_38f3431e641dd0d8277636de13f4b24a.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191001"
+        ],
+        "generation": 0
+      },
+      "name": "浴血糖果",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1910",
+        "name": "可疑的糖果",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1911": {
+      "abilities": [
+        {
+          "description": "己方全体灵属性队员战斗伤害4%增加。(除助战外，己方全体仅生效1次)",
+          "id": "191101",
+          "name": "除魔银弹",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 4.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101911",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“当我重新上膛时，你应该要祷告的！”</color><br/>一位正直的<color=#ef9843>修女</color>，把这场<color=#ef9843>万圣节派对</color>视为一个能铲除邪恶灵魂的绝佳机会。她用着一把左轮手枪，上头缀着令人印象非常深刻的银色，能够一击就把妖怪送往来世。她手下的受害者都认为她根本就比怪物还像怪物...",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951991+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951991+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1911",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990942/otogi/android/101911_b21f26d4983499f8ef189d22e0145b21.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990951/otogi/cards_hd/101911_hd_1dfe97acaa92fece7b478bcde8b54f3c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191101"
+        ],
+        "generation": 0
+      },
+      "name": "修女米瑞恩",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1911",
+        "name": "银击",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1912": {
+      "abilities": [
+        {
+          "description": "战斗伤害7%增加(除助战外，己方全体仅生效1次)",
+          "id": "191201",
+          "name": "甜食控",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 50
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101912",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "NORM_ATK<3.0%,0.0%>",
+          "id": "191201",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“哪里有糖果，我就在哪里！”</color><br/>一位<color=#ef9843>恐怖的骷髅骑士</color>，出奇地爱吃甜食。事实上，她常常因为甜食而无视于周遭的事物。在万圣节派对上，她为了要捡饼干碎屑而忘了要逃走。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952304+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952304+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1912",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990940/otogi/android/101912_d3acd95a60a88780e96b6e68c6ddcdad.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990955/otogi/cards_hd/101912_hd_6d2e03836d0aff99d924a4199234690c.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191201"
+        ],
+        "generation": 0
+      },
+      "name": "骷髅骑士",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1912",
+        "name": "骨剑",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1913": {
+      "abilities": [
+        {
+          "description": "每回合开始时，敌方全体90%概率沉睡(除助战外，己方全体仅生效1次)",
+          "id": "191301",
+          "name": "夜之狂欢",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "proc_rate": 90.0,
+                "scale": 0.0,
+                "type": "SLEEP",
+                "unit": "flat",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "enemy",
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Sleep"
+          ],
+          "unlock_level": 63
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101913",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“不许偷瞄，你这淘气的家伙！”</color><br/>一位迷人的小<color=#ef9843>女巫</color>，拥有着蛊惑人的魅力。她声称只会在夜晚出没，白天跟她不太对盘。事实上她只是作息不正常而已。在万圣节派会上，她总是喝得太多，最后不省人事。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.952597+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.952597+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1913",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990939/otogi/android/101913_7dc73e265b827e9be1ae5f3d0e8f6147.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990952/otogi/cards_hd/101913_hd_196c14a5fe64d66fe10529679f95e8c4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191301"
+        ],
+        "generation": 0
+      },
+      "name": "黯夜洋装",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对1名血量最高的敌人造成{value}点伤害，并使目标一定时间内速度降低{delay1}",
+        "id": "1913",
+        "name": "伏特加女巫",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.68,
+              "type": "SPD",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 420.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 1834,
+          "slvup": 48,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 2900,
+        "base_hp": 2165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 8700,
+        "max_hp": 6500,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1915": {
+      "abilities": [
+        {
+          "description": "攻击速度30%增加",
+          "id": "191501",
+          "name": "双派精通",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "ATK Speed"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "身为队长时，己方全体队员战斗伤害25%增加",
+          "id": "191502",
+          "name": "万圣节护卫",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_leader"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Leader",
+            "Team",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101915",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "191501",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“喔，太好了。我正开始觉得无聊呢。采收南瓜的时候到啰！”</color><br/>一位<color=#ef9843>出色的忍者</color>，精通甲贺和伊贺两派的忍术。雾隐才藏的死敌兼朋友，雾隐才藏特别选他做为这次万圣节派对的维安人员。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.955744+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.955744+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1915",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990942/otogi/android/101915_ea24fe4e9740e2b20b03905d543df848.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990950/otogi/cards_hd/101915_hd_32eeeae32f13a380146092d23aa0f22d.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191501"
+        ],
+        "generation": 0
+      },
+      "name": "猿飞佐助[万圣节]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对敌方全体造成{value}点伤害，并使目标一定时间内战斗伤害降低{delay1}",
+        "id": "1915",
+        "name": "忍者天敌",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.47,
+              "type": "ATK",
+              "unit": "percent",
+              "value": -13.9
+            }
+          ],
+          "immediate": {
+            "base": 502.0,
+            "scale": 15.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1395,
+          "slvup": 32,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4330,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1916": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方2名怪属性队员战斗伤害15%增加",
+          "id": "191601",
+          "name": "龙之巨星",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Phantasma",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "己方全体怪属性队员暴击率20%增加",
+          "id": "191602",
+          "name": "闪耀舞台",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101916",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "191601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“你竟敢搞砸我的表演？！”</color><br/>一位高贵的龙族，计划着要成为<color=#ef9843>流行音乐史上最棒的明星</color>。她受邀为这场万圣节派对做开场表演，但连一个音符都还没唱就被南瓜王打断了。她与你一同作战––不单单只是她很在乎这场万圣节派对，更是为了要重新站上舞台。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954172+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954172+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1916",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990937/otogi/android/101916_e95d2abab174d3df173dec627a1892dd.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990949/otogi/cards_hd/101916_hd_397de4ba262fbf67684ae4be66815798.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191601"
+        ],
+        "generation": 0
+      },
+      "name": "龙族公主[万圣节]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对2名攻击最高的敌人造成{value}点伤害，并使目标一定时间内所受伤害提升{delay1}",
+        "id": "1916",
+        "name": "超级新星",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1468.0,
+            "scale": 35.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 2951,
+          "slvup": 53,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4930,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14800,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1917": {
+      "abilities": [
+        {
+          "description": "使普通攻击目标50%概率灼伤",
+          "id": "191701",
+          "name": "南瓜之怒",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "proc_rate": 50.0,
+                "scale": 0.0,
+                "type": "BURN",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Burn"
+          ],
+          "unlock_level": 70
+        },
+        {
+          "description": "血量低于1/2时，血量每5秒回复7.5%，同时战斗伤害60%增加，所受伤害40%减少",
+          "id": "191702",
+          "name": "自封为王",
+          "parsed": {
+            "conditions": {
+              "hpp_threshold": 50.0,
+              "hpp_type": "hpp_in"
+            },
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 10.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Conditional",
+            "Heal",
+            "DMG Reduction",
+            "DMG Boost"
+          ],
+          "unlock_level": 85
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101917",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "191701",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“喔喔！碰嘎碰嘎！”</color><br/>南瓜王由于沃普尔吉斯之夜的缘故而变得更加残暴了。<color=#ef9843>他的“国王”头衔是自己加的。</color>由于人们对于万圣节的意义误解，沃普尔吉斯之夜将盛怒灌进了南瓜里。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953229+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953229+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1917",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990943/otogi/android/101917_0e211eb74cb73547fb8a789eca1b330a.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990945/otogi/cards_hd/101917_hd_946539e42ee432b46e3b905c63213114.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191701"
+        ],
+        "generation": 0
+      },
+      "name": "南瓜王[乱]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对3名敌方（远程优先）造成{value}点伤害，并使目标{probability}灼伤",
+        "id": "1917",
+        "name": "王者之怒",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 5,
+              "scale": 0.14,
+              "type": "BURN",
+              "unit": "percent",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 680.0,
+            "scale": 20.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1001,
+          "slvup": 29,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "Burn",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4000,
+        "base_hp": 4330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 13000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1918": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方2名攻击最高的队员暴击伤害20%增加",
+          "id": "191801",
+          "name": "摄魂魔女",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Multi",
+            "Crit DMG"
+          ],
+          "unlock_level": 77
+        },
+        {
+          "description": "使己方攻击力最高的2名队员战斗伤害45%增加",
+          "id": "191802",
+          "name": "神之制裁",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Multi",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101918",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "191801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>“亵渎祭典，制裁神明！”</color><br/>一位<color=#ef9843>女巫</color>，脸上带着吓人的神情，身上的衣服却相当美丽。她带着摄魂南瓜破坏神来到这个世界上，要将那些认为万圣节只是一场变装派对的人铲除干净。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953846+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953846+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1918",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990939/otogi/android/101918_93d0a9175ee43071d4d5b2f3fe28f4e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990954/otogi/cards_hd/101918_hd_10823a4eb4db98944f37e0f3f51cae0f.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191801"
+        ],
+        "generation": 0
+      },
+      "name": "沃普尔吉斯之夜",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方2名攻击力最高的队员{value}点血量，并使目标一定时间内伤害提升{delay1}",
+        "id": "1918",
+        "name": "快乐万圣节",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.64,
+              "type": "ATK",
+              "unit": "percent",
+              "value": 23.0
+            }
+          ],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 2738,
+          "slvup": 49,
+          "target": {
+            "count": 2,
+            "filter": "max_atk",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Multi",
+          "DMG Boost"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4830,
+        "base_hp": 3600,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 10800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1919": {
+      "abilities": [
+        {
+          "description": "己方全体队员攻击速度7%增加。(除助战外，己方全体仅生效1次)",
+          "id": "191901",
+          "name": "顶级护卫",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101919",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "191901",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“他们说这只是个简单的护卫差事罢了...”</color><br/>忍者村提供一流的护卫服务，而才藏就负责这次万圣节派对的<color=#ef9843>安全</color>。才藏的工作就是要保护女主人和宾客的安全。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.951698+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.951698+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1919",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990944/otogi/android/101919_c086b205812c06d4f299f64104449b01.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990948/otogi/cards_hd/101919_hd_069e571509423997ef3ddd4a6296f558.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "191901"
+        ],
+        "generation": 0
+      },
+      "name": "雾隐才藏[万圣节]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1919",
+        "name": "恶魔闪光",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "192": {
       "abilities": [],
       "acquisition": {
@@ -64207,6 +66524,701 @@
         "max_hp": 3900,
         "max_level": 50,
         "rarity": 3,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1920": {
+      "abilities": [
+        {
+          "description": "最终回合，自身技能伤害50%增加(除助战外，己方全体仅生效1次)",
+          "id": "192001",
+          "name": "女演员之魂",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101920",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "HP<4.0%,0.0%>",
+          "id": "192001",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“你知道的，一位女演员必须要拥有独特的性格。”</color><br/>她之前是一位小经纪公司的<color=#ef9843>流行偶像候补生</color>，而她现在目标是朝向戏剧界发展。她只是以宾客的身份参加这场万圣节派对，不过后来就决定要加入战局。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954748+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954748+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1920",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990945/otogi/android/101920_577d3bd1096abb2bc9088ecd0941a552.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990946/otogi/cards_hd/101920_hd_e48a03c2636d36d7b63837f82c797284.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192001"
+        ],
+        "generation": 0
+      },
+      "name": "锦鲤[万圣节]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方全体队员{value}点血量",
+        "id": "1920",
+        "name": "踢击",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 630.0,
+            "scale": 21.0,
+            "type": "HEAL"
+          },
+          "ml": 60,
+          "slv1": 580,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2200,
+        "base_hp": 2265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 6600,
+        "max_hp": 6800,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1921": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体付属性队员血量20%回复",
+          "id": "192101",
+          "name": "派对女主人",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 1,
+                "scale": 0.0,
+                "type": "HEAL",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Heal"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合开始时，己方全体付属性队员技能伤害20%增加",
+          "id": "192102",
+          "name": "丰满的成长",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 20.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101921",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "192101",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“万圣节还没结束呢！”</color><br/>这场万圣节派对的<color=#ef9843>女主人</color>。尽管这场派对从头到尾都已悉心计划过了，<color=#ef9843>南瓜王</color>还是把一切弄得乱糟糟，破坏了她所有的计划。她现在与你一同作战，希望能恢复这场庆典。顺带一提，她最近好像“成长”不少... 特别是在，那个，<color=#ef9843>胸部的位置</color>。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.953540+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.953540+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1921",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990938/otogi/android/101921_a1d43c4fa5e82163e11b0270cd4db7b8.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990947/otogi/cards_hd/101921_hd_afab07949cc89da9707d74033deb9051.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192101"
+        ],
+        "generation": 0
+      },
+      "name": "南瓜灯笼[再临]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "恢复己方全体{value}点血量，并使目标一定时间内所受伤害降低{delay1}",
+        "id": "1921",
+        "name": "南瓜回归",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": 0.58,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": 20.0
+            }
+          ],
+          "immediate": {
+            "base": 400.0,
+            "scale": 12.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 801,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "ally",
+            "type": "ally"
+          }
+        },
+        "tags": [
+          "Heal",
+          "AoE",
+          "DMG Reduction"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3665,
+        "base_hp": 4100,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12300,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
+    "1922": {
+      "abilities": [
+        {
+          "description": "己方全体付属性队员血量上限15%增加。(除助战外，己方全体仅生效1次)",
+          "id": "192201",
+          "name": "特种捣蛋",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<2>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Phantasma",
+            "AoE",
+            "Max HP"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "最终回合，己方全体付属性队员战斗伤害35%增加。(除助战外，己方全体仅生效1次)",
+          "id": "192202",
+          "name": "糖果的代价",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101922",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "HP<7.0%,0.0%>",
+          "id": "192201",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>“就算你给我糖，我还是要捉弄你！”</color><br/>一个调皮的女孩，喜欢<color=#ef9843>糖果也喜欢捣蛋</color>。她强调说：“我要糖果！不过我也要捉弄你！”他们说她的捉弄层级可比拟<color=#ef9843>某些特种部队</color>的战略行动，所以如果你遇到她，你也只能自叹倒霉了。如果你给她糖，她可能会对你下手轻一些，不过实在没有太大的差别。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.954470+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.954470+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1922",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990940/otogi/android/101922_951a55d5ed6ca211f56b0834d1c351b4.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990948/otogi/cards_hd/101922_hd_ab217bf8ba984ccfec34806ce082c2f4.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192201"
+        ],
+        "generation": 0
+      },
+      "name": "不给糖就捣蛋",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "可用于羁绊和公会讨伐",
+        "id": "1922",
+        "name": "捣蛋糖果",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1928": {
+      "abilities": [
+        {
+          "description": "每回合开始时，己方全体队员技能伤害15%增加",
+          "id": "192801",
+          "name": "不眠之乡",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 81
+        },
+        {
+          "description": "己方全体队员等级+10",
+          "id": "192802",
+          "name": "夜之统治者",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "LEVEL",
+                "unit": "flat",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "Level Boost"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101928",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "192801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>“我好想要一台那样的车啊！”</color><br/>他看起来可能像个<color=#ef9843>可爱又松软甜蜜的蛋糕</color>，但事实上却是个邪恶的<color=#ef9843>夜之统治者</color>，喜欢极致繁华的不眠之乡。他穷极一生挥霍、铺张，并沉浸在自己的邪恶念头中。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-10-14T15:15:57.955441+00:00",
+        "first_seen_version": "8194262",
+        "last_modified": "2026-10-14T15:15:57.955441+00:00",
+        "last_modified_version": "8194262"
+      },
+      "id": "1928",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990941/otogi/android/101928_fb01fc11aed92dc694ceebf4720f44e3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990946/otogi/cards_hd/101928_hd_2c97af873b97d393a3ebccaa1800b84b.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "192801"
+        ],
+        "generation": 0
+      },
+      "name": "夜之帝王",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "对敌方全体造成{value}点伤害",
+        "id": "1928",
+        "name": "空虚谄媚",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 888.0,
+            "scale": 26.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 888,
+          "slvup": 26,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4900,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14700,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
@@ -177755,9 +180767,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -177827,11 +180839,28 @@
       "description": "<color=#f4e48e>“呵呵♪　咖哩是我的拿手好菜！”</color><br/><color=#ef9843>日本神话传承的食之女神其中一柱。</color>和“保食神”是双胞胎，就系谱来说比三贵子更为悠久，是伊邪那岐、伊邪那美的直系上古大神。过去曾和须佐能乎起了一番争执，不过如今会说“嗯，因为年轻时发生了不少事情嘛”，感觉并不是特别在意（就她自己本身来说）。非常居家，是会为家庭奉献一切的类型，一旦向她要求，就会带着笑容招待别人自己亲手制作的料理，只是餐桌上会不知不觉就摆满了料理，谁也不知道那是什么时候做好的。虽说大部分妖怪都觉得只要吃到美食就好，不用在意那种小事！而刻意无视这个诡异的状况……顺带一提，拿手好菜当然是“料理”。不可以太认真去思考这件事。<br/><color=#f45d68>[活动]妖怪大胃王决定战！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.345224+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.394868+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "700",
       "image_urls": {
@@ -177935,9 +180964,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -178007,11 +181036,28 @@
       "description": "<color=#f4e48e>“我会为了大家的笑容努力！”</color><br/><color=#ef9843>在北欧神话登场，已经不知道被料理过几次的野猪化身的妖怪。</color>拥有让任何物品都变化为A5等级特级肉的特殊能力。而且在肉料理这方面的手艺更是无人能出其右，从半熟到全熟都能自由驾驭，被称为‘神之手艺’。个性是开朗的贤妻良母，如果是为了能笑着吃自己的料理的人，无论如何辛苦也不嫌累，是会让人想娶回家的类型。唯一的缺点是容易钻牛角尖，一旦决定之后就无法停下。<br/><color=#f45d68>[活动]妖怪大胃王决定战！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.347733+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.396752+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "701",
       "image_urls": {
@@ -178115,9 +181161,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -178187,11 +181233,28 @@
       "description": "<color=#f4e48e>“首先来品尝浓汤吧！　再来才是面！　啊！佐料要从第二碗才有喔！”</color><br/><color=#ef9843>在凯尔特神话中登场，只要祈求就会冒出任何食物的锅子化身的妖怪。</color>是个天才厨师，倘若是会用到锅子的料理，无论是浓汤还是面纇，不分古今中外的料理都能重现。过去曾经复活因为失去食谱而再也吃不到的“天天轩”终极拉面，由于这项轶闻太过知名，使得她的名字在妖怪美食业界无人不知无人不晓……然而，如果太过夸奖她的话会变得有点得意忘形，会变得像是老大似的，就连吃法都要指指点点听她命令。如果对方是个顽固老头，这种举动就会让人不满，不过她的外表是个幼女，所以这似乎也算是一种另类的奖赏……<br/><color=#f45d68>[活动]妖怪大胃王决定战！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.348738+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.398624+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "702",
       "image_urls": {
@@ -179384,9 +182447,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -179456,11 +182519,28 @@
       "description": "<color=#f4e48e>“没想到又能和你一起啦──！”</color><br/><color=#ef9843>象征暴饮暴食的巨兽化身的妖怪。</color>是个精力充沛，充满好奇心的女孩，无法一直安分，是个会到处走动并引发问题的麻烦制造者。在上次的万圣节喜欢上了主角，半强硬地要求他一起参加“妖怪大胃王决定战”。由于平时总是饿著肚子缺乏精力，使得她的实力只能发挥一半，但听说她一旦认真起来，甚至会导致世界崩坏。顺带一提，她和利维坦似乎是远亲……给人添麻烦这点的确有得拼。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.363792+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.411940+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "709",
       "image_urls": {
@@ -179752,9 +182832,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -179824,11 +182904,28 @@
       "description": "<color=#f4e48e>“男人……就是要以背影来阐述故事……”</color><br/><color=#ef9843>孕育出奥林帕斯诸神的巨神族之长，是黑帝斯、宙斯、希拉以及赫斯提亚的父亲。</color>沉默寡言，是个一旦决定该怎么做，就绝对不会退让的顽固老爹，过去和宙斯引发的父子争执导致世界差点崩坏。另外，他和阿达玛斯之镰是老交情，认为对方最能了解自己。顺带一提，他每当与宙斯见面就会吵架，因此互相在避开彼此。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.366301+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.414146+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "710",
       "image_urls": {
@@ -179938,9 +183035,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -180002,11 +183099,28 @@
       "description": "<color=#f4e48e>“我们家的小黄真的很厉害喔！”</color><br/><color=#ef9843>在水户黄门中知名的刻着“葵之纹章”的装药容器化身的妖怪。</color>是水户光圀的知己，把光圀捧在掌心溺爱，甚至可说是过度保护，再加上她本身好管闲事的个性使然，导致两人明明同年，自己却像是个离不开小孩的母亲那样对待光圀。起初光圀也对此无法释怀，但最近或许是放弃了，总是任凭她不断夸奖自己……另外，如果是为了光圀，她甚至还有着敢插手肮脏工作的危险一面……",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-10-18 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.367805+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-10-14T15:15:57.416002+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "711",
       "image_urls": {
@@ -184854,17 +187968,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-10-15",
-            "event_date": "2026-03-17",
-            "event_id": "179",
-            "event_name": "Guild Conquest ーWild Star Thornー",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -184893,6 +188003,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -185032,12 +188143,68 @@
             ],
             "date": "2026-03-27",
             "version": "d26cea5"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              }
+            ],
+            "date": "2026-10-14",
+            "version": "8194262"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-27T07:17:57.638855+00:00",
-        "last_modified_version": "d26cea5"
+        "last_modified": "2026-10-14T15:15:57.452828+00:00",
+        "last_modified_version": "8194262"
       },
       "id": "731",
       "image_urls": {
@@ -185190,7 +188357,7 @@
           "price_min": 1000,
           "start_date": ""
         },
-        "currently_available": true,
+        "currently_available": false,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -185243,7 +188410,7 @@
             },
             {
               "end": "2026-10-01 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-09-27 15:00:00"
             }
@@ -195832,6 +198999,6 @@
     }
   },
   "locale": "zh_CN",
-  "total_cards": 1020,
-  "version": "57c46c6"
+  "total_cards": 1034,
+  "version": "8194262"
 }
