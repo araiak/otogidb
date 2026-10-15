@@ -145,10 +145,12 @@ export function StatsTable({ stats }: { stats: SimCardStats[] }) {
               : 'Attack speed'}
           </div>
           <div className="text-xs text-secondary leading-relaxed">
-            Interval is <span className="text-primary">(speed + 750) / 900</span>. Buffs
-            count <span className="text-primary">half</span> and the modifier clamps at{' '}
-            <span className="text-primary">±100%</span>, so the floor is half the base
-            interval and anything past the clamp is wasted.
+            An auto is the attack animation (~1s) plus a cooldown of{' '}
+            <span className="text-primary">speed / 1000</span> seconds. A speed buff cuts
+            the cooldown by <span className="text-primary">half</span> its value and plays
+            the animation up to 1.4× faster, and the total clamps at{' '}
+            <span className="text-primary">+100%</span>: a 1300-speed card goes from 2.27s
+            to 1.34s at best, and anything past the clamp is wasted.
           </div>
         </div>
       </div>
