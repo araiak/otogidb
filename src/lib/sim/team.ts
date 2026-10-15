@@ -9,6 +9,10 @@
 import type { Card } from '../../types/card';
 import type { BondSlot, Scheduler, SimRequest, SwapWhen } from './client';
 
+/** The calculator's Casting control: an engine policy, or the planner held to the
+ *  player's groups (sent as scheduler 'plan' + plan_groups). */
+export type CastPolicy = Scheduler | 'plan_groups';
+
 export const SLOT_COUNT = 7;
 export const BATTLE_SLOTS = 5; // P1..P5; P5 is the helper
 export const HELPER_INDEX = 4;
@@ -59,8 +63,11 @@ export interface TeamState {
   swap: Record<string, string>;
   /** Which channel has to cap before the swap above fires. */
   swapWhen: SwapWhen;
-  /** 'group' runs the groups above; 'cadence' lets the engine choose. */
-  scheduler: Scheduler;
+  /** 'group' runs the groups above; 'cadence'/'plan' let the engine choose;
+   *  'plan_groups' plans within the groups above; 'auto' runs all and keeps the best. */
+  scheduler: CastPolicy;
+  /** With 'plan_groups': the cycle length copied from a planner run ('' = planner's pick). */
+  planForce?: string;
   bossId: number | null;
   bossLevel: number;
   iters: number;
@@ -81,7 +88,8 @@ export function emptyTeam(): TeamState {
     groups: [['P1', 'P2', 'P3', 'P4', 'P5']],
     swap: {},
     swapWhen: 'autos',
-    scheduler: 'group',
+    // Best of cadence, the planner and the groups: never below any of them.
+    scheduler: 'auto',
     bossId: null,
     bossLevel: 30,
     iters: 5,
@@ -105,7 +113,9 @@ export function toRequest(team: TeamState): SimRequest {
       )
     ),
     swap_when: team.swapWhen ?? 'autos',
-    scheduler: team.scheduler,
+    scheduler: team.scheduler === 'plan_groups' ? 'plan' : team.scheduler,
+    plan_groups: team.scheduler === 'plan_groups',
+    plan_force: team.scheduler === 'plan_groups' ? (team.planForce ?? '') : '',
     iters: team.iters,
     seed: team.seed,
     time_limit: team.timeLimit,
