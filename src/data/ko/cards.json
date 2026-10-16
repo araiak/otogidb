@@ -64602,7 +64602,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64610,7 +64610,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -64618,11 +64624,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101909",
@@ -64639,11 +64655,62 @@
       "description": "<color=#f4e48e>\"생명이 꺼질 준비를 하도록!\"</color><br/>사람들이 장수와 건강을 빌 때 켜는 양초 속에 살고 있는 <color=#ef9843>악령</color>. 성가시게 군다면 당신의 수명도 순식간에 줄여버릴 수 있다... 주위 귀신들은 속으로 이런 양초를 가지고 다닌다는 것에 좋은 의도가 있을 수 없다고 생각하고 있다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951398+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951398+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.172995+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1909",
       "image_urls": {
@@ -65065,7 +65132,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65073,7 +65140,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -65081,11 +65154,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101911",
@@ -65102,11 +65185,62 @@
       "description": "<color=#f4e48e>\"내가 장전을 하면 기도를 해!\"<color=#ef9843>할로윈 파티</color>가 나쁜 귀신들을 물리치기 딱 좋은 기회라고 생각하는 </color><br/> <color=#ef9843>수녀</color>이다. 멋진 은장식이 돋보이는 리볼버를 가지고 다니며 한 방에 귀신을 내세로 보낼 수 있다. 수녀에게 당한 자들은 자신보다 수녀가 더 큰 문제라고 생각을 한다...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951991+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951991+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.175501+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1911",
       "image_urls": {
@@ -66283,7 +66417,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66291,7 +66425,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -66299,11 +66439,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101919",
@@ -66320,11 +66470,62 @@
       "description": "<color=#f4e48e>\"그들은 아주 간단한 경비 일이라고 했단 말야...\"</color><br/>요즘 닌자의 마을은 경비 서비스로 활발한 활동을 하고 있으며 사이조는 할로윈 파티의 <color=#ef9843>경비</color>를 맡았다. 사이조의 임무는 주최자와 손님을 안전하게 보호하는 일이다.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951698+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951698+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.174261+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1919",
       "image_urls": {
@@ -199000,5 +199201,5 @@
   },
   "locale": "ko_KR",
   "total_cards": 1034,
-  "version": "8194262"
+  "version": "b2280e8"
 }
