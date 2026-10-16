@@ -5471,6 +5471,68 @@
    "skill_time_attack": 0.0,
    "role": 2
   },
+  "1913": {
+   "auto_frame": 10,
+   "melee": false,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.12,
+   "role": 2
+  },
+  "1915": {
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 10,
+   "melee": false,
+   "role": 2
+  },
+  "1916": {
+   "melee": false,
+   "auto_frame": 11,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "role": 2
+  },
+  "1917": {
+   "melee": true,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "auto_frame": 14,
+   "role": 1
+  },
+  "1918": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.0,
+   "auto_frame": 10,
+   "role": 2
+  },
+  "1920": {
+   "melee": false,
+   "skill_frame": 15,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "auto_frame": 11,
+   "role": 3
+  },
+  "1921": {
+   "auto_frame": 11,
+   "skill_frame": 14,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.5,
+   "melee": false,
+   "role": 3
+  },
+  "1928": {
+   "melee": false,
+   "auto_frame": 10,
+   "skill_frame": 18,
+   "skill_class": "SkillAttackAction",
+   "skill_time_attack": 0.7,
+   "role": 2
+  },
   "1992": {
    "melee": false,
    "skill_frame": 14,
@@ -5680,22 +5742,22 @@
  },
  "role_defaults": {
   "melee": {
-   "n": 271,
+   "n": 272,
    "auto_frame": 13.64,
-   "skill_frame": 17.86,
+   "skill_frame": 17.84,
    "skill_time_attack": 0.296
   },
   "ranged": {
-   "n": 388,
-   "auto_frame": 10.99,
-   "skill_frame": 16.68,
+   "n": 393,
+   "auto_frame": 10.98,
+   "skill_frame": 16.67,
    "skill_time_attack": 0.334
   },
   "healer": {
-   "n": 99,
+   "n": 101,
    "auto_frame": 10.99,
-   "skill_frame": 14.92,
-   "skill_time_attack": 0.426
+   "skill_frame": 14.91,
+   "skill_time_attack": 0.427
   }
  },
  "bosses": {

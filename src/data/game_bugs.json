@@ -19,11 +19,6 @@
         "missing": "count<2>"
       },
       "analysis": "Game code defaults count to 1 when not specified. All other max_atk abilities have explicit count<N>. This ability is missing it, so it only affects 1 target despite description saying 2.",
-      "evidence": {
-        "ghidra_function": "TargetStragetyData$$ParseStrategyData",
-        "ghidra_address": "0x00BC8B0C",
-        "default_count": 1
-      },
       "affects_gameplay": true,
       "visual_only": false,
       "source": "manual",
@@ -2101,11 +2096,6 @@
       "source": "bundle_scan",
       "status": "open",
       "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/scan_bundles.py",
-        "confirmed_by": "UnityPy asset bundle inspection of 694 monster prefabs",
-        "investigation": "docs/re-findings/investigations/CARD_BEHAVIOR_BUG.md"
-      },
       "last_checked": "2026-10-16",
       "check_history": [
         {
@@ -2141,11 +2131,6 @@
       "source": "bundle_scan",
       "status": "open",
       "first_detected": "2026-03-06",
-      "evidence": {
-        "scan_tool": "scripts/lib/scan_bundles.py",
-        "confirmed_by": "UnityPy asset bundle inspection of 694 monster prefabs",
-        "investigation": "docs/re-findings/investigations/CARD_BEHAVIOR_BUG.md"
-      },
       "last_checked": "2026-10-16",
       "check_history": [
         {
@@ -2940,6 +2925,34 @@
           "game_version": "b2280e8"
         }
       ]
+    },
+    {
+      "id": "BUG-074",
+      "card_id": 1437,
+      "card_name": "Pipe Fox [Xmas]",
+      "affected_field": "ability",
+      "affected_id": "143702",
+      "category": "world_boss",
+      "severity": "gameplay",
+      "summary": "As an assist, the slow shows on the World Boss but never makes it skip a cast",
+      "details": {
+        "description_says": "Decreases 50% the ATK speed of all foes.",
+        "de_field": "SPD<-50.00%,0%>"
+      },
+      "analysis": "In World Boss, a slow's only effect is making the boss skip every other cast of its long wind-up skills. Pipe Fox's slow, run as an assist, reaches the boss's speed stat, but its debuff is removed from the boss's buff list 0.06s after it lands, and the boss then skipped none of its casts: the 3.8s wind-up big hit landed 14 of 14 times against Mizunoe. A slow from a card's own skill on the same boss skipped half (15 of 30). Card ability slows such as Izuminokami Kanesada's work as expected; players report the same failure for other assist slows such as Peculiar Raine.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "manual",
+      "status": "open",
+      "first_detected": "2026-10-16",
+      "last_checked": "2026-10-16",
+      "check_history": [
+        {
+          "date": "2026-10-16",
+          "status": "manual",
+          "game_version": "b2280e8"
+        }
+      ]
     }
   ],
   "categories": {
@@ -2951,7 +2964,8 @@
     "stackable": "Non-stackable abilities (o=false) missing 'once per team' text - affects all targeting including self_ime",
     "missing_duration": "Effect missing duration parameter - becomes permanent when it should be temporary",
     "combat_behavior": "Card uses wrong engagement range — closes to melee distance despite being Ranged type",
-    "prefab_type": "Wrong Unity prefab baked into asset bundle — card performs a different action class than its config role implies"
+    "prefab_type": "Wrong Unity prefab baked into asset bundle — card performs a different action class than its config role implies",
+    "world_boss": "Effect applies in normal battles but does nothing in World Boss"
   },
   "severity_levels": {
     "gameplay": "Bug affects actual game mechanics",
