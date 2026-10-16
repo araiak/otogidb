@@ -1,6 +1,6 @@
 {
   "version": "1.6.0",
-  "last_updated": "2026-10-14",
+  "last_updated": "2026-10-15",
   "description": "Tracked inconsistencies between a card's in-game description and its observed behaviour. A bug is fixed if either the data changes to match the description OR the description changes to match the data.",
   "bugs": [
     {
@@ -2864,6 +2864,70 @@
           "game_version": "fd57ea8"
         }
       ]
+    },
+    {
+      "id": "BUG-072",
+      "card_id": 1916,
+      "card_name": "Dragon Princess [Halloween]",
+      "affected_field": "ability",
+      "affected_id": "191602",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Ability buffs Anima team members, description says Phantasma",
+      "details": {
+        "description_says": "Increases 20% of Crit Rate of Phantasma allies.",
+        "target_string": "self;type<3>;count<5>",
+        "expected": "self;type<2>;count<5>"
+      },
+      "analysis": "type<2>=Phantasma and type<3>=Anima across every other ability (e.g. 1669 Dragon Princess uses type<2> for Phantasma, 656 Muramasa [Black Sakura] uses type<3> for Anima). This ability uses the other attribute's id, so the buff lands on Anima cards. The card's other ability (191601) targets the described attribute correctly.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-10-15",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "contains",
+        "value": "type<2>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "Anima"
+      },
+      "last_checked": "2026-10-15",
+      "check_history": []
+    },
+    {
+      "id": "BUG-073",
+      "card_id": 1922,
+      "card_name": "Trick or Treat",
+      "affected_field": "ability",
+      "affected_id": "192201",
+      "category": "targeting",
+      "severity": "gameplay",
+      "summary": "Ability buffs Phantasma team members, description says Anima",
+      "details": {
+        "description_says": "Increases 15% of max HP of Anima team members.(only take effect once to the team)",
+        "target_string": "self;type<2>;count<5>",
+        "expected": "self;type<3>;count<5>"
+      },
+      "analysis": "type<2>=Phantasma and type<3>=Anima across every other ability (e.g. 1669 Dragon Princess uses type<2> for Phantasma, 656 Muramasa [Black Sakura] uses type<3> for Anima). This ability uses the other attribute's id, so the buff lands on Phantasma cards. The card's other ability (192202) targets the described attribute correctly.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-10-15",
+      "resolution_check": {
+        "field": "ts",
+        "condition": "contains",
+        "value": "type<3>"
+      },
+      "description_check": {
+        "condition": "contains",
+        "value": "Phantasma"
+      },
+      "last_checked": "2026-10-15",
+      "check_history": []
     }
   ],
   "categories": {

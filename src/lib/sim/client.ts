@@ -10,7 +10,13 @@
 export type BondKind = 'normal' | 'skill' | 'hp';
 export type BondSlot = [BondKind, number];
 
-export type Scheduler = 'group' | 'cadence';
+/** Engine cast policies. 'auto' is not one: the worker runs cadence, plan and the
+ *  player's groups on the same seeds and returns the best. */
+export type Scheduler = 'group' | 'cadence' | 'plan' | 'auto';
+
+/** The planner's layout: [kind, groups]. A chain's links, a burst's one group, or a
+ *  cycle's [members once, long sequence, [orbs needed]]. */
+export type PlanLayout = ['burst' | 'chain' | 'cycle', string[][]];
 
 /** When a retire-and-replace fires. Autos cap at 99,999 and skills at 999,999, and
  *  they saturate independently, so a card feeding only one channel is spent as soon
@@ -48,6 +54,11 @@ export interface SimRequest {
    * toggling does not lose them.
    */
   scheduler?: Scheduler;
+  /** With scheduler 'plan': plan WITHIN `groups` (who casts and what goes together
+   *  stay the player's; order, carry repeats and the cycle are planned). */
+  plan_groups?: boolean;
+  /** With plan_groups: the cycle length a planner run settled on ('' = its own pick). */
+  plan_force?: string;
   iters: number;
   /**
    * Base seed. A battle is deterministic in (team, scenario, seed), so this is the
@@ -160,6 +171,21 @@ export interface SimResult {
   /** Followable play-by-play of the seed-0 battle. */
   timeline: SimEvent[];
   stats: SimCardStats[];
+  /** The policy that produced this result (under 'auto', the winner). */
+  policy?: string;
+  /** Under 'auto': every policy's mean on the same seeds. */
+  policies?: Record<string, number> | null;
+  /** The planner's layout when the planner ran. */
+  plan?: PlanLayout | null;
+  /** The cycle length the planner's probe chose; send back with its groups. */
+  plan_force?: string | null;
+}
+
+/** The planner's layout as editable groups: a cycle's members cast once each per
+ *  cycle in the editor, and the planner repeats the carry itself. */
+export function planGroups(plan: PlanLayout): string[][] {
+  const [kind, groups] = plan;
+  return kind === 'cycle' ? [Array.from(new Set(groups[1]))] : groups;
 }
 
 /** One step of the greedy group search, in the order it was decided. */

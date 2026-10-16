@@ -13,8 +13,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { Card } from '../../types/card';
 import { getFullCardsData } from '../../lib/cards';
-import { createSimClient, type SuggestResult } from '../../lib/sim/client';
-import type { SimClient, SimResult, BondSlot, Scheduler } from '../../lib/sim/client';
+import { createSimClient, planGroups, type SuggestResult } from '../../lib/sim/client';
+import type { SimClient, SimResult, BondSlot } from '../../lib/sim/client';
 import {
   HELPER_INDEX,
   SAVE_SLOTS,
@@ -26,6 +26,7 @@ import {
   saveTeam,
   slotKey,
   toRequest,
+  type CastPolicy,
   type TeamState,
 } from '../../lib/sim/team';
 import { CardSelector } from './CardSelector';
@@ -289,18 +290,25 @@ export default function TeamSimulator() {
             NOT labelled "Optimized": it loses to a good set of groups often enough
             that the word was reading as a promise. NOT "Auto" either -- the game has
             its own auto-battle and this is not it. The label names the mechanic:
-            pool orbs, cast the buffers, dump the carries inside the buff window. */}
+            pool orbs, cast the buffers, dump the carries inside the buff window.
+            'Planner' values each cast per orb and picks a burst, a chain of damage-up
+            windows, or a long cycle that recasts the carry at escalated cost.
+            'Best of' runs Buff & Dump, the Planner and your groups on the same seeds and
+            shows whichever scored highest -- still not "Auto", for the reason above. */}
         <label className="flex items-center gap-2 text-xs text-secondary">
           Casting
           <select
             value={team.scheduler}
             onChange={(e) =>
-              setTeam((t) => ({ ...t, scheduler: e.target.value as Scheduler }))
+              setTeam((t) => ({ ...t, scheduler: e.target.value as CastPolicy }))
             }
             className="px-2 py-1 bg-surface border border-border rounded text-primary text-sm"
-            title="Groups: run the cast groups below. Buff & Dump: the engine pools orbs, buffs, then dumps the carries on a ~21s beat."
+            title="Best of: runs Buff & Dump, the Planner and your groups, shows the best. Groups: run the cast groups below. Planner: the engine plans its own rotation. Planner, my groups: your groups decide who casts together; the planner orders them and repeats carries. Buff & Dump: pool orbs, buff, then dump the carries on a ~21s beat."
           >
+            <option value="auto">Best of</option>
             <option value="group">Groups</option>
+            <option value="plan">Planner</option>
+            <option value="plan_groups">Planner, my groups</option>
             <option value="cadence">Buff &amp; Dump</option>
           </select>
         </label>
@@ -572,12 +580,49 @@ export default function TeamSimulator() {
             <h2 className="text-sm font-medium text-primary mb-2 xl:block hidden">
               Rotation
             </h2>
-            {team.scheduler === 'cadence' && (
+            {(team.scheduler === 'cadence' || team.scheduler === 'plan') && (
               <p className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
-                Casting is set to <strong className="text-primary">Buff &amp; Dump</strong> —
-                the engine runs its own rotation and these groups are not used. They
+                Casting is set to{' '}
+                <strong className="text-primary">
+                  {team.scheduler === 'plan' ? 'Planner' : 'Buff & Dump'}
+                </strong>{' '}
+                — the engine runs its own rotation and these groups are not used. They
                 are kept, so switch back to Groups to compare.
               </p>
+            )}
+            {result?.plan && (
+              <div className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
+                <p>
+                  The planner ran a{' '}
+                  <strong className="text-primary">
+                    {result.plan[0] === 'cycle'
+                      ? `${result.plan[1][1].length}-cast cycle every ~40s`
+                      : result.plan[0]}
+                  </strong>
+                  :{' '}
+                  {(result.plan[0] === 'cycle' ? [result.plan[1][1]] : result.plan[1])
+                    .map((g) => g.map(nameOf).join(', '))
+                    .join(' → ')}
+                  .
+                </p>
+                <button
+                  type="button"
+                  className="mt-1 text-accent hover:underline"
+                  onClick={() =>
+                    setTeam((t) => ({
+                      ...t,
+                      groups: planGroups(result.plan!),
+                      scheduler: 'plan_groups',
+                      planForce: result.plan_force ?? '',
+                    }))
+                  }
+                >
+                  Use these as my groups
+                </button>{' '}
+                <span className="text-secondary/70">
+                  (with Planner, my groups, it scores the same)
+                </span>
+              </div>
             )}
             {suggestion && (
               <div className="text-[11px] text-secondary mb-2 px-2 py-1.5 rounded border border-border bg-surface">
@@ -631,11 +676,17 @@ export default function TeamSimulator() {
                 )}
               </div>
             )}
-            <div className={team.scheduler === 'cadence' ? 'opacity-50' : undefined}>
+            <div
+              className={
+                team.scheduler === 'cadence' || team.scheduler === 'plan'
+                  ? 'opacity-50'
+                  : undefined
+              }
+            >
               <SkillGroups
                 available={available}
                 groups={team.groups}
-                onChange={(groups) => setTeam((t) => ({ ...t, groups }))}
+                onChange={(groups) => setTeam((t) => ({ ...t, groups, planForce: '' }))}
                 swap={team.swap ?? {}}
                 onSwapChange={(swap) => setTeam((t) => ({ ...t, swap }))}
                 swapWhen={team.swapWhen ?? 'autos'}

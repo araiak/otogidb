@@ -20,6 +20,12 @@ function short(n: number): string {
   return String(Math.round(n));
 }
 
+const POLICY_LABELS: Record<string, string> = {
+  cadence: 'Buff & Dump',
+  plan: 'Planner',
+  group: 'Groups',
+};
+
 interface SimResultsProps {
   result: SimResult | null;
   running: boolean;
@@ -59,6 +65,15 @@ export function SimResults({ result, running, error, nameOf }: SimResultsProps) 
           {fmt(result.mean)}
         </div>
         <div className="text-xs text-secondary mt-1">
+          {result.policies && (
+            <div className="mb-0.5">
+              Best of:{' '}
+              {Object.entries(result.policies)
+                .sort((a, b) => b[1] - a[1])
+                .map(([p, m]) => `${POLICY_LABELS[p] ?? p} ${short(m)}`)
+                .join(' · ')}
+            </div>
+          )}
           {result.iters} run{result.iters === 1 ? '' : 's'} · ±{spread.toFixed(1)}% ·{' '}
           {result.effective_time.toFixed(0)}s · seed {result.seed}
           {result.deaths > 0 && (
