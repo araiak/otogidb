@@ -64602,7 +64602,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64610,7 +64610,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -64618,11 +64624,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101909",
@@ -64639,11 +64655,62 @@
       "description": "<color=#f4e48e>“你的生命之火就准备熄灭吧！”一个长期居住在蜡烛里、被祈求长生不老的人所点燃的</color><br/><color=#ef9843>邪灵</color>。要是惹毛他的话，他会在眨眼间就让你的寿命大为缩短... 他的妖怪同伴私底下认为他寄宿在这种类型的蜡烛里，实在称不上是有品味的人。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951398+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951398+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.172995+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1909",
       "image_urls": {
@@ -65065,7 +65132,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65073,7 +65140,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -65081,11 +65154,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101911",
@@ -65102,11 +65185,62 @@
       "description": "<color=#f4e48e>“当我重新上膛时，你应该要祷告的！”</color><br/>一位正直的<color=#ef9843>修女</color>，把这场<color=#ef9843>万圣节派对</color>视为一个能铲除邪恶灵魂的绝佳机会。她用着一把左轮手枪，上头缀着令人印象非常深刻的银色，能够一击就把妖怪送往来世。她手下的受害者都认为她根本就比怪物还像怪物...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951991+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951991+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.175501+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1911",
       "image_urls": {
@@ -66283,7 +66417,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66291,7 +66425,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "190",
+              "event_name": "Clavicle of the King (Re-run)",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -66299,11 +66439,21 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-10-15 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101919",
@@ -66320,11 +66470,62 @@
       "description": "<color=#f4e48e>“他们说这只是个简单的护卫差事罢了...”</color><br/>忍者村提供一流的护卫服务，而才藏就负责这次万圣节派对的<color=#ef9843>安全</color>。才藏的工作就是要保护女主人和宾客的安全。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-10-15 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-10-16",
+            "version": "b2280e8"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.951698+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.951698+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-16T07:36:47.174261+00:00",
+        "last_modified_version": "b2280e8"
       },
       "id": "1919",
       "image_urls": {
@@ -199000,5 +199201,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 1034,
-  "version": "8194262"
+  "version": "b2280e8"
 }
