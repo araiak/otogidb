@@ -15,7 +15,7 @@ Event data is dropped with the monthly auction, which may mean that an event is 
 
 ## Notable Picks
 
-:card[1918] is a great support or reserve, it combines the best parts of :card[672] with the targeting of :card[739] and has basically no attribute locking.  That makes her a competitive reserve for all attribute teams, and her skill is a smaller version of :card[1720]'s DMG buff (the heal isn't really the draw), which is a nice filler if you don't have :card[1720] or :card[739], and in the latter case her skill plus the 45% from her ability nearly breaks even with :card[1720]'s skill over its 8s duration (roughly 80% + 45% vs 125%), while that 45% keeps working outside the skill window as well.  Likely an LJS or an overall ranking reward, and probably worth pushing for most players.  **Great pickup for most players** — 20% crit DMG each wave and 45% DMG to the 2 highest-ATK allies with no attribute lock; a competitive reserve for any team, and her skill plus ability nearly matches :card[1720]'s skill window.
+:card[1918] is a great support or reserve, it combines the best parts of :card[672] with the targeting of :card[739] and has basically no attribute locking.  She's especially strong as a reserve in multi round content: either ability would be playable on its own, 20% crit DMG stacking every wave or a flat 45% DMG to the top 2, and having both together is insane value for any 1-2 carry team, whatever the attribute.  Her skill is a smaller version of :card[1720]'s DMG buff (the heal isn't really the draw), which is a nice filler if you don't have :card[1720] or :card[739], and in the latter case her skill plus the 45% from her ability nearly breaks even with :card[1720]'s skill over its 8s duration (roughly 80% + 45% vs 125%), while that 45% keeps working outside the skill window as well.  Likely an LJS or an overall ranking reward, and probably worth pushing for most players.  **Great pickup for most players, a standout multi-round reserve** — 20% crit DMG stacking each wave and 45% DMG to the 2 highest-ATK allies with no attribute lock; either alone is playable, together they're insane value for any 1-2 carry team, and her skill plus ability nearly matches :card[1720]'s skill window.
 
 ---
 
@@ -52,7 +52,7 @@ The 4★ and 3★ cards aren't really worth mentioning this time around.
 ## TL;DR
 
 Notable Picks:
-- :card[1918] — **Great pickup for most players** — 20% crit DMG each wave and 45% DMG to the 2 highest-ATK allies with no attribute lock; a competitive reserve for any team, and her skill plus ability nearly matches :card[1720]'s skill window
+- :card[1918] — **Great pickup for most players, a standout multi-round reserve** — 20% crit DMG stacking each wave and 45% DMG to the 2 highest-ATK allies with no attribute lock; either alone is playable, together they're insane value for any 1-2 carry team, and her skill plus ability nearly matches :card[1720]'s skill window
 
 Limited Jewel Summons:
 - :card[2477] — **Strong Phantasma melee, not worth chasing** — 40% crit DMG to 2 highest-ATK allies on entry plus a final-wave self buff; a straight upgrade to :card[383], useful from 2 copies. Under :card[1720], matched by 4★ :card[600]; :card[734] is better where she fits and :card[738] wins multi-wave. Situational if copies fall in your lap
