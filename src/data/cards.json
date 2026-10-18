@@ -64602,7 +64602,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-05-15",
-            "event_date": "2026-10-17",
+            "event_date": "2026-10-18",
             "event_id": "187",
             "event_name": "Halloween SOS",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -64629,7 +64629,16 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-10-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [
@@ -64645,6 +64654,7 @@
         },
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ],
         "stock_level": "unavailable"
@@ -64666,20 +64676,6 @@
         "changelog": [
           {
             "changes": [
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.187",
-                "new": {
-                  "event_id": "187",
-                  "event_name": "Halloween SOS",
-                  "is_current": false
-                },
-                "old": null
-              },
               {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
@@ -64709,16 +64705,86 @@
                 "field": "acquisition.sources.1",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-10-16",
             "version": "b2280e8"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                }
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-10-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.951398+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-16T07:59:28.545332+00:00",
-        "last_modified_version": "b2280e8"
+        "last_modified": "2026-10-18T04:18:40.879539+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1909",
       "image_urls": {
@@ -64987,6 +65053,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -64998,9 +65072,71 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
-          "tower_drops": []
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "first_seen": "2026-10-18",
+              "floors": [
+                60,
+                70,
+                140,
+                180
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -65010,7 +65146,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101910",
@@ -65027,11 +65165,134 @@
       "description": "<color=#f4e48e>\"How's about some bright red candy?\"</color><br/>A ghost who ingratiates herself with others by <color=#ef9843>distributing candy dripping with blood</color>. It's actually really delicious, but people are so perturbed by its appearance that they always pass on her generous offer. They're not really covered in blood. It's strawberry sauce.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "first_seen": "2026-10-18",
+                  "floors": [
+                    60,
+                    70,
+                    140,
+                    180
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "6 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.952884+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.952884+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.888879+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1910",
       "image_urls": {
@@ -65140,7 +65401,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-05-15",
-            "event_date": "2026-10-17",
+            "event_date": "2026-10-18",
             "event_id": "187",
             "event_name": "Halloween SOS",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -65167,7 +65428,16 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-10-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [
@@ -65183,6 +65453,7 @@
         },
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ],
         "stock_level": "unavailable"
@@ -65204,20 +65475,6 @@
         "changelog": [
           {
             "changes": [
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.187",
-                "new": {
-                  "event_id": "187",
-                  "event_name": "Halloween SOS",
-                  "is_current": false
-                },
-                "old": null
-              },
               {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
@@ -65247,16 +65504,86 @@
                 "field": "acquisition.sources.1",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-10-16",
             "version": "b2280e8"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                }
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-10-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.951991+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-16T07:59:28.549937+00:00",
-        "last_modified_version": "b2280e8"
+        "last_modified": "2026-10-18T04:18:40.883248+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1911",
       "image_urls": {
@@ -65360,6 +65687,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65371,9 +65706,49 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
-          "tower_drops": []
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "first_seen": "2026-10-18",
+              "floors": [
+                10,
+                20,
+                30
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -65383,7 +65758,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101912",
@@ -65400,11 +65777,100 @@
       "description": "<color=#f4e48e>\"Wherever there's candy, that is where I shall be found!\"</color><br/>A <color=#ef9843>spooky skeletal knight</color> with a shockingly sweet tooth. In fact, she's often so blinded by sweet treats that she becomes oblivious of her surroundings. At the Halloween party, she got so caught up in picking up cookie crumbs that she forgot to make her escape.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "first_seen": "2026-10-18",
+                  "floors": [
+                    10,
+                    20,
+                    30
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.952304+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.952304+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.885059+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1912",
       "image_urls": {
@@ -65510,6 +65976,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65521,9 +65995,71 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
-          "tower_drops": []
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
+          "tower_drops": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "first_seen": "2026-10-18",
+              "floors": [
+                40,
+                50,
+                120,
+                160
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -65533,7 +66069,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101913",
@@ -65550,11 +66088,134 @@
       "description": "<color=#f4e48e>\"No peeking, you naughty thing!\"</color><br/>A beguiling little <color=#ef9843>witch</color> with bewitching charms. She claims she can only come out at night, and that daylight doesn't agree with her. The truth, however, is that she's just gotten herself into a bad routine. At Halloween parties, she usually drinks too much and ends up passing out.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "first_seen": "2026-10-18",
+                  "floors": [
+                    40,
+                    50,
+                    120,
+                    160
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "6 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.952597+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.952597+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.886987+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1913",
       "image_urls": {
@@ -65712,14 +66373,25 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-11-01 00:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101915",
@@ -65736,11 +66408,45 @@
       "description": "<color=#f4e48e>\"Oh, good. I was starting to get bored. Time to harvest a few pumpkins!\"</color><br/>A <color=#ef9843>masterful ninja</color> well-versed in both the Koga and Iga schools of ninja arts. He was specially selected by Saizo Kirigakure, who is both his mortal enemy and friend, to provide security for the Halloween party.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-31 23:59:59",
+                  "is_current": false,
+                  "limit": 0,
+                  "price": 65,
+                  "start": "2026-11-01 00:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "exchange",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.955744+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.955744+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.905935+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1915",
       "image_urls": {
@@ -65885,6 +66591,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65896,19 +66610,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-10-25 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-10-29 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-25 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101916",
@@ -65925,11 +66665,84 @@
       "description": "<color=#f4e48e>\"How dare you ruin my performance?!\"</color><br/>A noble dragon who plans on becoming the <color=#ef9843>greatest star in pop history</color>. She was hired to perform the opening number at the Halloween party, but was interrupted by the Pumpkin King and didn't get to sing a single note. She battles alongside you––not so much because she cares about the Halloween party, but more because she wants her chance on stage back.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-10-29 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-10-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.954172+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.954172+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.897919+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1916",
       "image_urls": {
@@ -66089,6 +66902,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66100,9 +66921,29 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "first_seen": "2026-10-18",
+              "floors": [
+                80,
+                100,
+                150,
+                175,
+                200
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -66112,7 +66953,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101917",
@@ -66129,11 +66972,64 @@
       "description": "<color=#f4e48e>\"Grrrargh! Rrrargh!\"</color><br/>A pumpkin that was turned violent by Walpurgis Night. <color=#ef9843>His title of \"king\" is self-proclaimed.</color> Enraged by people's mistaken idea of what a Halloween party should be, Walpurgis Night filled this pumpkin with fury.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "first_seen": "2026-10-18",
+                  "floors": [
+                    80,
+                    100,
+                    150,
+                    175,
+                    200
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.953229+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.953229+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.891233+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1917",
       "image_urls": {
@@ -66276,6 +67172,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66287,8 +67191,50 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -66299,7 +67245,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101918",
@@ -66316,11 +67264,102 @@
       "description": "<color=#f4e48e>\"Blaspheme a festival, and you blaspheme the gods!\"</color><br/>A <color=#ef9843>witch</color> with a frightening countenance but magnificent attire. Accompanied by her soul-absorbing pumpkin robots, she has emerged to purge the world of fools who think that Halloween is nothing more than a costume party.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "5 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.953846+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.953846+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.895721+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1918",
       "image_urls": {
@@ -66433,7 +67472,7 @@
           "estimate": {
             "confidence": "high",
             "estimated_date": "2027-05-15",
-            "event_date": "2026-10-17",
+            "event_date": "2026-10-18",
             "event_id": "187",
             "event_name": "Halloween SOS",
             "note": "Auctions typically start on the 15th, ~7 months after event"
@@ -66460,7 +67499,16 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-10-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [
@@ -66476,6 +67524,7 @@
         },
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ],
         "stock_level": "unavailable"
@@ -66497,20 +67546,6 @@
         "changelog": [
           {
             "changes": [
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.187",
-                "new": {
-                  "event_id": "187",
-                  "event_name": "Halloween SOS",
-                  "is_current": false
-                },
-                "old": null
-              },
               {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
@@ -66540,16 +67575,86 @@
                 "field": "acquisition.sources.1",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-10-16",
             "version": "b2280e8"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description.190",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false
+                }
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-10-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.951698+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-16T07:59:28.547642+00:00",
-        "last_modified_version": "b2280e8"
+        "last_modified": "2026-10-18T04:18:40.881395+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1919",
       "image_urls": {
@@ -66792,6 +67897,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66803,19 +67916,37 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-10-25 15:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101920",
@@ -66832,11 +67963,64 @@
       "description": "<color=#f4e48e>\"An actress has to have a unique personality, you know.\"</color><br/>She used to be a <color=#ef9843>wannabe pop star</color> signed to a minuscule label, though she's now aiming for acting stardom. She joined the Halloween party simply as a guest, but then decided to join the fray.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-10-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.954748+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.954748+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.901808+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1920",
       "image_urls": {
@@ -66973,6 +68157,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66984,8 +68176,64 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -66996,7 +68244,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101921",
@@ -67013,11 +68263,124 @@
       "description": "<color=#f4e48e>\"Halloween isn't over yet!\"</color><br/>The <color=#ef9843>hostess</color> of this Halloween party. Despite planning the party down to the last detail, the <color=#ef9843>Pumpkin King</color> turned it to chaos, ruining everything she'd planned. She now battles alongside you in the hope of restoring the festivities. As a side note, she appears to have grown recently... Particularly in the, ahem, <color=#ef9843>bust area</color>.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "7 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.953540+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.953540+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.893500+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1921",
       "image_urls": {
@@ -67161,6 +68524,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-05-15",
+            "event_date": "2026-10-18",
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -67172,19 +68543,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "187",
+              "event_name": "Halloween SOS",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-11-03 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-10-25 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-11-01 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-10-29 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101922",
@@ -67201,11 +68598,84 @@
       "description": "<color=#f4e48e>\"Even if you give me a treat, I'll still play a trick on you!\"</color><br/>A mischievous girl who loves <color=#ef9843>both tricks and treats</color>. \"I want treats! But I want to play tricks, too!\" she declares emphatically. They say her tricks are on a par with the strategic actions of a <color=#ef9843>certain special forces group</color>, so if you run into her, all you can do is curse your bad luck. If you give her a treat, she might ease up on you a little, but not enough to make much difference.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-01 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-10-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.187",
+                "new": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-11-03 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-10-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.954470+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.954470+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.900085+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1922",
       "image_urls": {
@@ -67361,11 +68831,20 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false,
-          "standard_pool_start": null
+          "featured_banners": [
+            {
+              "end": "2026-11-08 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-11-01 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": "2026-11-01 15:00:00"
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101928",
@@ -67382,11 +68861,53 @@
       "description": "<color=#f4e48e>\"What I wouldn't give for a set of wheels like that!\"</color><br/>He might look like a <color=#ef9843>lovable fluffy sugary cake</color>, but it turns out he is the devilish <color=#ef9843>overlord of the night</color>, a lover of carousing in the parts of town that never sleep. He dedicates his whole life to extravagance, excess and indulging his wanton whims.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-08 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-11-01 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.in_standard_pool",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.gacha.standard_pool_start",
+                "new": "2026-11-01 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
+          }
+        ],
         "first_seen": "2026-10-14T15:15:57.955441+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-14T15:15:57.955441+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-18T04:18:40.903834+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "1928",
       "image_urls": {
@@ -189733,29 +191254,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "190",
@@ -189940,12 +191439,56 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:51:49.426929+00:00",
-        "last_modified_version": "e8b5e91"
+        "last_modified": "2026-10-18T04:18:40.372684+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "735",
       "image_urls": {
@@ -190087,22 +191630,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "190",
@@ -190276,12 +191804,45 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:51:49.429861+00:00",
-        "last_modified_version": "e8b5e91"
+        "last_modified": "2026-10-18T04:18:40.374686+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "736",
       "image_urls": {
@@ -190409,22 +191970,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "190",
@@ -190598,12 +192144,45 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:51:49.432447+00:00",
-        "last_modified_version": "e8b5e91"
+        "last_modified": "2026-10-18T04:18:40.376623+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "737",
       "image_urls": {
@@ -191092,78 +192671,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "1"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "2"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "190",
-              "event_name": "Clavicle of the King (Re-run)",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -191397,12 +192905,133 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "10 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.7",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.8",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.9",
+                "new": null,
+                "old": {
+                  "event_id": "190",
+                  "event_name": "Clavicle of the King (Re-run)",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              }
+            ],
+            "date": "2026-10-18",
+            "version": "6117a12"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:51:49.439201+00:00",
-        "last_modified_version": "e8b5e91"
+        "last_modified": "2026-10-18T04:18:40.381550+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "739",
       "image_urls": {
@@ -199224,5 +200853,5 @@
     }
   },
   "total_cards": 1034,
-  "version": "b2280e8"
+  "version": "6117a12"
 }

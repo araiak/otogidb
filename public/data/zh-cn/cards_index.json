@@ -18326,6 +18326,7 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ]
       },
@@ -18452,8 +18453,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101910",
       "bonds": [
@@ -18518,6 +18521,7 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ]
       },
@@ -18579,8 +18583,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101912",
       "bonds": [
@@ -18641,8 +18647,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101913",
       "bonds": [
@@ -18715,7 +18723,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange"
+        ]
       },
       "asset_id": "101915",
       "bonds": [
@@ -18791,7 +18801,11 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
       },
       "asset_id": "101916",
       "bonds": [
@@ -18863,8 +18877,10 @@
         }
       ],
       "acquisition": {
-        "has_tower_drops": false,
-        "sources": []
+        "has_tower_drops": true,
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101917",
       "bonds": [
@@ -18938,7 +18954,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101918",
       "bonds": [
@@ -19002,6 +19020,7 @@
         "has_tower_drops": false,
         "sources": [
           "gacha",
+          "exchange",
           "event"
         ]
       },
@@ -19119,7 +19138,10 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "exchange",
+          "event"
+        ]
       },
       "asset_id": "101920",
       "bonds": [
@@ -19194,7 +19216,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "event"
+        ]
       },
       "asset_id": "101921",
       "bonds": [
@@ -19269,7 +19293,11 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ]
       },
       "asset_id": "101922",
       "bonds": [
@@ -19342,7 +19370,9 @@
       ],
       "acquisition": {
         "has_tower_drops": false,
-        "sources": []
+        "sources": [
+          "gacha"
+        ]
       },
       "asset_id": "101928",
       "bonds": [
@@ -67509,8 +67539,8 @@
       }
     }
   },
-  "data_hash": "6b292ba7",
+  "data_hash": "e783b6e8",
   "locale": "zh-cn",
   "total_cards": 1034,
-  "version": "b2280e8"
+  "version": "6117a12"
 }
