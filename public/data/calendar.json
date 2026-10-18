@@ -1,6 +1,19 @@
 {
-  "generated_at": "2026-10-16T07:59:20Z",
-  "events": [],
+  "generated_at": "2026-10-18T04:18:32Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "187",
+      "start": "2026-10-18T07:00:00Z",
+      "end": "2026-11-01T07:00:00Z",
+      "name": "Halloween SOS",
+      "half": "2026-10-25T07:00:00Z",
+      "kill": "2026-11-03T07:00:00Z",
+      "boss_card": {
+        "id": "1917"
+      }
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
@@ -19,9 +32,132 @@
         }
       ],
       "pity_step": 35
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "315",
+      "start": "2026-10-25T07:00:00Z",
+      "end": "2026-10-29T07:00:00Z",
+      "cards": [
+        {
+          "id": "1916"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "312"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "316",
+      "start": "2026-10-29T07:00:00Z",
+      "end": "2026-11-01T07:00:00Z",
+      "cards": [
+        {
+          "id": "1922"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "312"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "317",
+      "start": "2026-11-01T07:00:00Z",
+      "end": "2026-11-08T07:00:00Z",
+      "cards": [
+        {
+          "id": "1928"
+        }
+      ],
+      "pity_step": 100
     }
   ],
   "exchanges": [
+    {
+      "type": "event_exchange",
+      "exchange_id": "1909",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-10-29T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1909"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1919",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-10-29T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1919"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1911",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-10-29T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1911"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1916",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-10-25T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1916"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1922",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-10-25T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1922"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1920",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-10-25T07:00:00Z",
+      "end": "2026-11-03T07:00:00Z",
+      "card": {
+        "id": "1920"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1915",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-10-31T16:00:00Z",
+      "end": "2026-12-31T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "1915"
+      }
+    },
     {
       "type": "event_exchange",
       "exchange_id": "2253",
@@ -577,7 +713,7 @@
     {
       "event_id": "187",
       "event_name": "Halloween SOS",
-      "event_date": "2026-10-17",
+      "event_date": "2026-10-18",
       "estimated_date": "2027-05-15"
     }
   ]
