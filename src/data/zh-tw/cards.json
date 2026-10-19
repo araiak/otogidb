@@ -33909,7 +33909,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -34160,12 +34160,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153507+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-10-14T15:15:57.758102+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.590290+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1570",
       "image_urls": {
@@ -34269,7 +34280,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -34520,12 +34531,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.154067+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-10-14T15:15:57.761847+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.592354+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1572",
       "image_urls": {
@@ -36209,7 +36231,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -36476,12 +36498,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156024+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-10-14T15:15:57.775807+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.599836+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1578",
       "image_urls": {
@@ -37174,7 +37207,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -37425,12 +37458,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.153806+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-10-14T15:15:57.759971+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.591337+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1580",
       "image_urls": {
@@ -44781,7 +44825,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -44992,12 +45036,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-03-19T23:44:10.156311+00:00",
         "first_seen_version": "eaf7a7e",
-        "last_modified": "2026-10-14T15:15:57.778004+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.601002+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1638",
       "image_urls": {
@@ -64622,7 +64677,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -65064,7 +65119,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65076,49 +65131,49 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -65134,7 +65189,7 @@
                 140,
                 180
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -65421,7 +65476,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -65698,7 +65753,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65710,28 +65765,28 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -65746,7 +65801,7 @@
                 20,
                 30
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -65987,7 +66042,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65999,49 +66054,49 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -66057,7 +66112,7 @@
                 120,
                 160
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66602,7 +66657,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66614,7 +66669,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66913,7 +66968,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66925,7 +66980,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66941,7 +66996,7 @@
                 175,
                 200
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -67024,12 +67079,23 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "stats.attribute",
+                "new": 3,
+                "old": 2
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.953229+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.891233+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-10-19T17:44:08.701263+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "1917",
       "image_urls": {
@@ -67087,8 +67153,8 @@
         ]
       },
       "stats": {
-        "attribute": 2,
-        "attribute_name": "Phantasma",
+        "attribute": 3,
+        "attribute_name": "Anima",
         "base_atk": 4000,
         "base_hp": 4330,
         "cost": 1,
@@ -67183,7 +67249,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67195,42 +67261,42 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -67492,7 +67558,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67908,7 +67974,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67920,7 +67986,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -68168,7 +68234,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -68180,56 +68246,56 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -68535,7 +68601,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -68547,7 +68613,7 @@
             {
               "event_id": "187",
               "event_name": "萬聖節SOS",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -182513,7 +182579,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -182601,12 +182667,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.394868+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.423663+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "700",
       "image_urls": {
@@ -182710,7 +182787,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -182798,12 +182875,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.396752+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.424713+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "701",
       "image_urls": {
@@ -182907,7 +182995,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -182995,12 +183083,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.398624+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.425725+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "702",
       "image_urls": {
@@ -184193,7 +184292,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -184281,12 +184380,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.411940+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.432854+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "709",
       "image_urls": {
@@ -184578,7 +184688,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -184666,12 +184776,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.414146+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.434031+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "710",
       "image_urls": {
@@ -184781,7 +184902,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-10-18 15:00:00",
           "is_time_limited": true,
@@ -184861,12 +184982,23 @@
             ],
             "date": "2026-10-14",
             "version": "8194262"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-10-19",
+            "version": "f041b74"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-14T15:15:57.416002+00:00",
-        "last_modified_version": "8194262"
+        "last_modified": "2026-10-19T17:44:08.435041+00:00",
+        "last_modified_version": "f041b74"
       },
       "id": "711",
       "image_urls": {
@@ -200854,5 +200986,5 @@
   },
   "locale": "zh_TW",
   "total_cards": 1034,
-  "version": "6117a12"
+  "version": "f041b74"
 }
