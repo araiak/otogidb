@@ -4,7 +4,7 @@ description: "Halloween gold auction card analysis, live until November 3"
 date: "2026-10-31"
 author: "Araiak"
 tags: ["analysis", "auction"]
-draft: true
+draft: false
 ---
 
 <div data-lang="en">
