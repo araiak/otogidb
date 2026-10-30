@@ -1,6 +1,6 @@
 ---
 title: "Halloween: October 2026 Auction"
-description: "Halloween gold auction card analysis, live until November 3"
+description: "Analysis of the Halloween special auction, covering the Welcome to Halloween Tower! cards, past Halloween cards, and the standard pool picks"
 date: "2026-10-31"
 author: "Araiak"
 tags: ["analysis", "auction"]
