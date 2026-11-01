@@ -23,7 +23,7 @@ concurrency:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04  # ponytail: Playwright 1.57 has no chromium for ubuntu 26.04 (ubuntu-latest); unpin once Playwright supports it
     timeout-minutes: 15
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
