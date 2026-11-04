@@ -16,7 +16,14 @@ export type Scheduler = 'group' | 'cadence' | 'plan' | 'auto';
 
 /** The planner's layout: [kind, groups]. A chain's links, a burst's one group, or a
  *  cycle's [members once, long sequence, [orbs needed]]. */
-export type PlanLayout = ['burst' | 'chain' | 'cycle', string[][]];
+export type PlanLayout = ['burst' | 'chain' | 'cycle' | 'timeline', string[][]];
+
+/** An amp chain ('timeline' plan): from `t0`, every `cycle` s, each slot casts at +off s. */
+export interface PlanRotation {
+  cycle: number;
+  t0: number;
+  off: Record<string, number>;
+}
 
 /** When a retire-and-replace fires. Autos cap at 99,999 and skills at 999,999, and
  *  they saturate independently, so a card feeding only one channel is spent as soon
@@ -179,6 +186,8 @@ export interface SimResult {
   plan?: PlanLayout | null;
   /** The cycle length the planner's probe chose; send back with its groups. */
   plan_force?: string | null;
+  /** The amp chain's timing when the plan is a 'timeline'. */
+  rotation?: PlanRotation | null;
 }
 
 /** The planner's layout as editable groups: a cycle's members cast once each per

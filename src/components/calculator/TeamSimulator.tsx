@@ -597,14 +597,23 @@ export default function TeamSimulator() {
                   <strong className="text-primary">
                     {result.plan[0] === 'cycle'
                       ? `${result.plan[1][1].length}-cast cycle every ~40s`
-                      : result.plan[0]}
+                      : result.plan[0] === 'timeline' && result.rotation
+                        ? `amp chain every ${result.rotation.cycle}s`
+                        : result.plan[0]}
                   </strong>
                   :{' '}
-                  {(result.plan[0] === 'cycle' ? [result.plan[1][1]] : result.plan[1])
-                    .map((g) => g.map(nameOf).join(', '))
-                    .join(' → ')}
+                  {result.plan[0] === 'timeline' && result.rotation
+                    ? result.plan[1]
+                        .map(([s]) => `${nameOf(s)} +${result.rotation!.off[s]}s`)
+                        .join(' → ')
+                    : (result.plan[0] === 'cycle' ? [result.plan[1][1]] : result.plan[1])
+                        .map((g) => g.map(nameOf).join(', '))
+                        .join(' → ')}
                   .
                 </p>
+                {/* A chain is timed, not grouped: groups cannot reproduce it. */}
+                {result.plan[0] !== 'timeline' && (
+                  <>
                 <button
                   type="button"
                   className="mt-1 text-accent hover:underline"
@@ -622,6 +631,8 @@ export default function TeamSimulator() {
                 <span className="text-secondary/70">
                   (with Planner, my groups, it scores the same)
                 </span>
+                  </>
+                )}
               </div>
             )}
             {suggestion && (
