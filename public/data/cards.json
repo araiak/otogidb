@@ -50544,6 +50544,197 @@
       },
       "synergies": []
     },
+    "1680": {
+      "abilities": [
+        {
+          "description": "Increases 10% of DMG dealt at the start of each wave.",
+          "id": "168001",
+          "name": "Spirit of Mischief",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 20% of the EXP gained from battle and increases 25% of Crit Rate.",
+          "id": "168002",
+          "name": "Lonely Resonance",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "EXP",
+                "unit": "percent",
+                "value": 20.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101680",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "168001",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Hey, won't someone be my friend?\"</color><br/>All she wants is a buddy to call her own, but most people only think of her as a PPP: a Paranormal Phenomenon Pest. There's nothing quite so persistent as a lonely <color=#ef9843>Phantom</color>. Won't someone hurry up and befriend her?",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976706+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976706+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1680",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "168001"
+        ],
+        "generation": 0
+      },
+      "name": "Poltergeist",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Sleep..",
+        "id": "1680",
+        "name": "Ghostly Prisoner",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SLEEP",
+              "unit": "flat",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 760.0,
+            "scale": 22.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 960,
+          "slvup": 25,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Sleep",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4800,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "169": {
       "abilities": [
         {
@@ -62437,6 +62628,195 @@
       },
       "synergies": []
     },
+    "1789": {
+      "abilities": [
+        {
+          "description": "All Divina team members deal 25% more DMG.",
+          "id": "178901",
+          "name": "Celestial Feather Robe",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 5% of ATK speed to Divina team members at the start of each wave.",
+          "id": "178902",
+          "name": "Bewitching Prank",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-11-17 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-11-09 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101789",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "178901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"I tire of my heavenly raiments. ...Shall I disrobe?\"</color><br/>An angelic maiden who serves the <color=#ef9843>Lord of the Heavens</color>. She is a born mischief-maker. Maidens like her appear in Japanese mythology, and have been known to throw human hearts into a lovelorn tailspin on a whim. Her beauty is surpassed only by her supreme malice.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976467+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976467+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1789",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283966/otogi/android/101789_429c3ffba6375da37636b91800360e1b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283967/otogi/cards_hd/101789_hd_2701f807835bd301387e692c342290d9.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178901"
+        ],
+        "generation": 0
+      },
+      "name": "Tennyo",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Restores {value} HP to 3 allies with the lowest percentage of HP and cures them from all negative status effects.",
+        "id": "1789",
+        "name": "Misplaced Kindness",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 810.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1546,
+          "slvup": 33,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "179": {
       "abilities": [],
       "acquisition": {
@@ -62861,6 +63241,155 @@
       },
       "synergies": []
     },
+    "1808": {
+      "abilities": [
+        {
+          "description": "Increases 5% of DMG dealt at the start of each wave.(only take effect once to the team)",
+          "id": "180801",
+          "name": "White Death",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101808",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "180801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Let's take care of business.\"</color><br/>A supremely-gifted sniper whose name strikes fear into his foes. In addition to his infallible shooting skills, he is also adept at hand-to-hand combat. Battlefields are said to fall silent in his presence. This is of course because he has taken care of every single one of his enemies.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.973734+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.973734+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1808",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "180801"
+        ],
+        "generation": 0
+      },
+      "name": "Sharp-Shooting Simeon",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1808",
+        "name": "Scorched Earth",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "181": {
       "abilities": [
         {
@@ -63015,6 +63544,678 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1811": {
+      "abilities": [
+        {
+          "description": "Increases 7% of DMG.(only take effect once to the team)",
+          "id": "181101",
+          "name": "Arms Monopoly",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101811",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "SKILL_ATK<3.0%,0.0%>",
+          "id": "181101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Heh heh, you lookin' to buy something?\"</color><br/>A ghost who was once single-handedly responsible for the circulation of <color=#ef9843>weaponry</color> around the <color=#ef9843>Eurasian continent</color>. She may act like she's got a screw loose, but she's really an incredibly <color=#ef9843>shrewd and calculating</color> individual. Some even say she was the daughter of a wealthy nobleman. There's something about the aura she exudes that's not quite human, although that could have something to do with the fact that she's a ghost.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974392+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974392+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1811",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181101"
+        ],
+        "generation": 0
+      },
+      "name": "Merchant of Death",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1811",
+        "name": "Dangerous Deal",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1816": {
+      "abilities": [
+        {
+          "description": "Increases 50% of Crit DMG.",
+          "id": "181601",
+          "name": "Orbital Bombardment",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 40% of DMG dealt and reduces 15% of DMG taken.",
+          "id": "181602",
+          "name": "Auto-Charge",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101816",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "181601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Target sighted. Initiating vaporize function.\"</color><br/>The ghost of a huge <color=#ef9843>laser cannon</color> satellite orbiting Earth. She was built to look like an angel who floats gracefully from the outer reaches of space back to the earth's surface, though she's far from angelic. She can only speak words she's been programmed to say, so her vocabulary's rather limited. The few words she does know all seem to be taken from robot anime, which probably has something to do with how her engineers spend their free time.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975276+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975276+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1816",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181601"
+        ],
+        "generation": 0
+      },
+      "name": "Satellite Cannon",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to the enemy with the highest ATK.Targets deal {delay1} less DMG for a limited time.",
+        "id": "1816",
+        "name": "Angel Tears",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "ATK",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1620.0,
+            "scale": 47.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 2307,
+          "slvup": 67,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1818": {
+      "abilities": [
+        {
+          "description": "Absorbs 13% of DMG dealt as HP.(only take effect once to the team)",
+          "id": "181801",
+          "name": "Serpent-Slaying Hero",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "unit": "percent",
+                "value": 13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 66
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101818",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "181801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Battling serpents isn't a walk in the park, y'know!\"</color><br/>A spirit active during the age of legends who, in addition to defeating <color=#ef9843>Yamata no Orochi</color>, is also known for his mischievous nature. Though formerly an ostracized figure among the deities, he's recently mellowed out somewhat, and is said to be doing rather well for himself.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974181+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974181+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1818",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181801"
+        ],
+        "generation": 0
+      },
+      "name": "Susanoo",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1818",
+        "name": "Heroic Aura",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1819": {
+      "abilities": [
+        {
+          "description": "Reduces 28% DMG dealt by all foes at the start of each wave.",
+          "id": "181901",
+          "name": "True Blade's Resolve",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -28.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "enemy",
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        },
+        {
+          "description": "Increases 15% of Crit Rate at the start of each wave.",
+          "id": "181902",
+          "name": "Total Concentration",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101819",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "181901",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"I am ready for battle.\"</color><br/>Hearing about the contest to determine the <color=#ef9843>best</color> Anima, Kotetsu has readied her sword and calmed her soul for the coming ordeal. With nary a ripple of doubt in her mind, she's 100% focused on laying waste to any and all opponents who would dare cross her. That said, she's been slightly buttered up by Sola's relentlessly warm charm, and occasionally shows a glimpse of her casual self.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975767+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975767+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1819",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181901"
+        ],
+        "generation": 0
+      },
+      "name": "Kotetsu [Focused]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to the enemy with the most HP. Targets take {delay1} more DMG for a limited time.",
+        "id": "1819",
+        "name": "Purgatorial Vigor",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.72,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4665,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14000,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -63185,6 +64386,974 @@
       },
       "synergies": []
     },
+    "1823": {
+      "abilities": [
+        {
+          "description": "Increases 11% of Max HP and Reduces 12% of DMG taken.(only take effect once to the team)",
+          "id": "182301",
+          "name": "Taste for Slaughter",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 11.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101823",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "182301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"My sickles are craving flesh...\"</color><br/>A goddess with more than a passing penchant for <color=#ef9843>blood</color>, <color=#ef9843>wine</color> and <color=#ef9843>butchery</color>. This is one lady you don't want to mess with. Her razor-sharp sickles are rumored to cut through even souls. Once a month, she is taken by the urge to go out hunting, and some say she can be heard prowling through the night as she scours for juicy souls. Take care you don't become her next victim!",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974616+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974616+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1823",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182301"
+        ],
+        "generation": 0
+      },
+      "name": "Kali",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1823",
+        "name": "Slice and Dice",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1824": {
+      "abilities": [
+        {
+          "description": "Restores 3% of HP every 5 seconds by the 2 allies with the highest ATK.",
+          "id": "182401",
+          "name": "Three Great Spears of Japan",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 3.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101824",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "182401",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Can I help you?\"</color><br/>The Anima of a spear that belonged to <color=#ef9843>Tadakatsu Honda</color>, the <color=#ef9843>greatest general of the Sengoku period</color>. Her beauty and the sharpness of her point are <color=#ef9843>unparalleled</color>. It is said that many a soldier lost his will to fight after gazing upon this spear's glint out on the battlefield. Just as the most beautiful animals are often the most dangerous, so too is many people's first glimpse of Tonbogiri also their last.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974825+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974825+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1824",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182401"
+        ],
+        "generation": 0
+      },
+      "name": "Tadakatsu's Tonbogiri",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to 2 enemies (ranged priority).",
+        "id": "1824",
+        "name": "Peerless Spear",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 930.0,
+            "scale": 32.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 819,
+          "slvup": 28,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3165,
+        "base_hp": 2130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9500,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1825": {
+      "abilities": [
+        {
+          "description": "Increases 12% of battle reward drop rate.(only take effect once to the team)",
+          "id": "182501",
+          "name": "Husband Tamer",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Drop Rate"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101825",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "182501",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Tsk, what did I tell you about slaying serpents just before dinner, Susanoo?\"</color><br/>A princess betrothed to Susanoo. Though known as the fragile young girl once offered to <color=#ef9843>Yamata no Orochi</color> as a living sacrifice, she's spent the past several thousand years toughening herself up, and is now quite the force to be reckoned with. She leaves no doubt as to who's in charge: even Susanoo is on his best behavior when he's around her.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.973968+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.973968+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1825",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182501"
+        ],
+        "generation": 0
+      },
+      "name": "Princess Kushinada",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1825",
+        "name": "Japanese Beauty",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1826": {
+      "abilities": [
+        {
+          "description": "Increases 60% of skill DMG.",
+          "id": "182601",
+          "name": "Blade of the Thunder God",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101826",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "182601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Watch out for my thunderbolts. They sting!\"</color><br/>A goddess worshipped in Japanese mythology as the god of <color=#ef9843>thunder</color> and <color=#ef9843>swords</color>. An avid collector of weapons, she tries to get her hands on specimens spanning a variety of eras and locales. It's said that the pulses of energy created when she brandishes a sword in her collection can even create thunderbolts. She's taken a keen interest in the recent contest taking place between legendary weapons, and intends to claim the victor for her own collection.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975043+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975043+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1826",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182601"
+        ],
+        "generation": 0
+      },
+      "name": "Takemikazuchi",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to further enemies, with a {probability} of inflicting Paralysis.",
+        "id": "1826",
+        "name": "Lightning Wrath",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "NUMB",
+              "unit": "flat",
+              "value": 8.0
+            }
+          ],
+          "immediate": {
+            "base": 640.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1108,
+          "slvup": 25,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4000,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1827": {
+      "abilities": [
+        {
+          "description": "Increases 30% of DMG dealt by Anima team members at the start of the final wave.(only take effect once to the team)",
+          "id": "182701",
+          "name": "Blanket Barrage",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "Increases 40% of skill DMG of Anima team members.(only take effect once to the team)",
+          "id": "182702",
+          "name": "Indiscriminate Bombardment",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101827",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "NORM_ATK<7.0%,0.0%>",
+          "id": "182701",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Blast off! Rockets a go-go!\"</color><br/>The Anima of a <color=#ef9843>multiple launch rocket system</color>. Full to bursting with rocket missiles, this lady packs an explosive artillery punch. Unfortunately, her aim leaves rather a lot to be desired, but she's certainly a dab hand at the launching part. The look on her face at the moment of launch is one of unbridled pleasure.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975991+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975991+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1827",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182701"
+        ],
+        "generation": 0
+      },
+      "name": "MLRS",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "1827",
+        "name": "Missile Barrage",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1828": {
+      "abilities": [
+        {
+          "description": "Increases 35% of Crit DMG by all Anima team members.",
+          "id": "182801",
+          "name": "Wicked Magic Bullet",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 50% of DMG dealt; Increases 50% of skill DMG.",
+          "id": "182802",
+          "name": "One-Woman Circus",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 50.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101828",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "182801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Solanda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976211+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976211+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1828",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182801"
+        ],
+        "generation": 0
+      },
+      "name": "Solanda",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to 3 enemies (ranged priority).",
+        "id": "1828",
+        "name": "Elemental Bullet",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1020.0,
+            "scale": 30.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 960,
+          "slvup": 26,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4830,
+        "base_hp": 3165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 9500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "183": {
       "abilities": [
         {
@@ -63349,6 +65518,198 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1830": {
+      "abilities": [
+        {
+          "description": "Normal attacks decrease the current target's ATK speed by 50%.",
+          "id": "183001",
+          "name": "Greatest Kabukimono Under Heaven",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 8,
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Slow"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "Increases 45% of Crit Rate and increases 45% Crit DMG",
+          "id": "183002",
+          "name": "Playboy of the Pleasure Quarters",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 45.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101830",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "183001",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Which lucky lady's going home with me tonight?\"</color><br/>An eccentric character who can often be found trawling red-light districts. Dynamic and exuding a manly air, he crushes the strong and helps the weak in his fight for justice. A well-known name in even the <color=#ef9843>most famous red-light districts</color>, he leaves behind him a never-ending trail of women desperate for one more encounter with him. His biggest worry is that he'll never meet that special someone.",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975506+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975506+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1830",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "183001"
+        ],
+        "generation": 0
+      },
+      "name": "Maeda Toshimasu",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Deals {value} DMG to the 3 enemies with the highest ATK, decreases targets' speed by {delay1} for a limited time.",
+        "id": "1830",
+        "name": "Bachelor Blues",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.51,
+              "type": "SPD",
+              "unit": "percent",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1026,
+          "slvup": 38,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 4665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 14000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -69062,7 +71423,7 @@
           "featured_banners": [
             {
               "end": "2026-11-08 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-11-01 15:00:00"
             }
@@ -76402,6 +78763,155 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2016": {
+      "abilities": [
+        {
+          "description": "Increases 25% of ATK speed of all allies.(only take effect once to the team)",
+          "id": "201601",
+          "name": "Riding the Wind",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102016",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "HP<7.0%,0.0%>",
+          "id": "201601",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>\"Here comes a good wind!\"</color><br/>She rides a large kite, and is often mistaken for a ninja. That, however is not the case. She is actually a skilled martial artist. To make up for her relative disadvantage in strength, she hit upon a solution of using aerial attacks, and that is when she came up with the idea of the kite. <color=#ef9843>She is also often mistaken for a man.</color>",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976916+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976916+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "2016",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "201601"
+        ],
+        "generation": 0
+      },
+      "name": "Big Kite Zamashi",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "Can be used as bond and in guild conquest.",
+        "id": "2016",
+        "name": "Aerial Chop",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -139438,7 +141948,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -139450,7 +141960,7 @@
             {
               "event_id": "193",
               "event_name": "Guild Conquest ーKadaー",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -201407,6 +203917,6 @@
       ]
     }
   },
-  "total_cards": 1034,
-  "version": "ac96bdc"
+  "total_cards": 1049,
+  "version": "5b5e400"
 }

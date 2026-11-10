@@ -19883,5 +19883,380 @@
       "DMG Boost"
     ],
     "synergy_partners": []
+  },
+  "180801": {
+    "id": "180801",
+    "name": "White Death",
+    "description": "Increases 5% of DMG dealt at the start of each wave.(only take effect once to the team)",
+    "card_id": "1808",
+    "card_name": "Sharp-Shooting Simeon",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "ATK<5.00%,0%>",
+    "o": false,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "182501": {
+    "id": "182501",
+    "name": "Husband Tamer",
+    "description": "Increases 12% of battle reward drop rate.(only take effect once to the team)",
+    "card_id": "1825",
+    "card_name": "Princess Kushinada",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ITEM<12.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Drop Rate"
+    ],
+    "synergy_partners": []
+  },
+  "181801": {
+    "id": "181801",
+    "name": "Serpent-Slaying Hero",
+    "description": "Absorbs 13% of DMG dealt as HP.(only take effect once to the team)",
+    "card_id": "1818",
+    "card_name": "Susanoo",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "VAMP<13.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Lifesteal"
+    ],
+    "synergy_partners": []
+  },
+  "181101": {
+    "id": "181101",
+    "name": "Arms Monopoly",
+    "description": "Increases 7% of DMG.(only take effect once to the team)",
+    "card_id": "1811",
+    "card_name": "Merchant of Death",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<7.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "182301": {
+    "id": "182301",
+    "name": "Taste for Slaughter",
+    "description": "Increases 11% of Max HP and Reduces 12% of DMG taken.(only take effect once to the team)",
+    "card_id": "1823",
+    "card_name": "Kali",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "HP<11.00%,0%>;SHIELD<12.00%,0%>",
+    "o": false,
+    "tags": [
+      "Self",
+      "Max HP",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "182401": {
+    "id": "182401",
+    "name": "Three Great Spears of Japan",
+    "description": "Restores 3% of HP every 5 seconds by the 2 allies with the highest ATK.",
+    "card_id": "1824",
+    "card_name": "Tadakatsu's Tonbogiri",
+    "er": "entry",
+    "ts": "self;count<2>;max_atk",
+    "de": "HEAL_DOT<3.00%,0%,5>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Multi",
+      "Heal"
+    ],
+    "synergy_partners": []
+  },
+  "182601": {
+    "id": "182601",
+    "name": "Blade of the Thunder God",
+    "description": "Increases 60% of skill DMG.",
+    "card_id": "1826",
+    "card_name": "Takemikazuchi",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "SKILL_ATK<60.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "181601": {
+    "id": "181601",
+    "name": "Orbital Bombardment",
+    "description": "Increases 50% of Crit DMG.",
+    "card_id": "1816",
+    "card_name": "Satellite Cannon",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT_ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "181602": {
+    "id": "181602",
+    "name": "Auto-Charge",
+    "description": "Increases 40% of DMG dealt and reduces 15% of DMG taken.",
+    "card_id": "1816",
+    "card_name": "Satellite Cannon",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<40.00%,0%>;SHIELD<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Boost",
+      "DMG Reduction"
+    ],
+    "synergy_partners": []
+  },
+  "183001": {
+    "id": "183001",
+    "name": "Greatest Kabukimono Under Heaven",
+    "description": "Normal attacks decrease the current target's ATK speed by 50%.",
+    "card_id": "1830",
+    "card_name": "Maeda Toshimasu",
+    "er": "attack_normal",
+    "ts": "none",
+    "de": "SPD<-50.00%,0%,8>",
+    "o": true,
+    "tags": [
+      "On Attack",
+      "Slow"
+    ],
+    "synergy_partners": []
+  },
+  "183002": {
+    "id": "183002",
+    "name": "Playboy of the Pleasure Quarters",
+    "description": "Increases 45% of Crit Rate and increases 45% Crit DMG",
+    "card_id": "1830",
+    "card_name": "Maeda Toshimasu",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "CHIT<45.00%,0%>;CHIT_ATK<45.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "Crit Rate",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "181901": {
+    "id": "181901",
+    "name": "True Blade's Resolve",
+    "description": "Reduces 28% DMG dealt by all foes at the start of each wave.",
+    "card_id": "1819",
+    "card_name": "Kotetsu [Focused]",
+    "er": "entry_wave",
+    "ts": "enemy;count<5>",
+    "de": "ATK<-28.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "AoE",
+      "Enemy DMG Down"
+    ],
+    "synergy_partners": []
+  },
+  "181902": {
+    "id": "181902",
+    "name": "Total Concentration",
+    "description": "Increases 15% of Crit Rate at the start of each wave.",
+    "card_id": "1819",
+    "card_name": "Kotetsu [Focused]",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "CHIT<15.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "182701": {
+    "id": "182701",
+    "name": "Blanket Barrage",
+    "description": "Increases 30% of DMG dealt by Anima team members at the start of the final wave.(only take effect once to the team)",
+    "card_id": "1827",
+    "card_name": "MLRS",
+    "er": "last_wave",
+    "ts": "self;type<3>;count<5>",
+    "de": "ATK<30.00%,0%>",
+    "o": false,
+    "tags": [
+      "Final Wave",
+      "Team",
+      "Anima",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "182702": {
+    "id": "182702",
+    "name": "Indiscriminate Bombardment",
+    "description": "Increases 40% of skill DMG of Anima team members.(only take effect once to the team)",
+    "card_id": "1827",
+    "card_name": "MLRS",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "SKILL_ATK<40.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "182801": {
+    "id": "182801",
+    "name": "Wicked Magic Bullet",
+    "description": "Increases 35% of Crit DMG by all Anima team members.",
+    "card_id": "1828",
+    "card_name": "Solanda",
+    "er": "entry",
+    "ts": "self;type<3>;count<5>",
+    "de": "CHIT_ATK<35.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Anima",
+      "AoE",
+      "Crit DMG"
+    ],
+    "synergy_partners": []
+  },
+  "182802": {
+    "id": "182802",
+    "name": "One-Woman Circus",
+    "description": "Increases 50% of DMG dealt; Increases 50% of skill DMG.",
+    "card_id": "1828",
+    "card_name": "Solanda",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "ATK<50.00%,0%>;SKILL_ATK<50.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "DMG Boost",
+      "Skill DMG"
+    ],
+    "synergy_partners": []
+  },
+  "178901": {
+    "id": "178901",
+    "name": "Celestial Feather Robe",
+    "description": "All Divina team members deal 25% more DMG.",
+    "card_id": "1789",
+    "card_name": "Tennyo",
+    "er": "entry",
+    "ts": "self;type<1>;count<5>",
+    "de": "ATK<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Team",
+      "Divina",
+      "AoE",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "178902": {
+    "id": "178902",
+    "name": "Bewitching Prank",
+    "description": "Increases 5% of ATK speed to Divina team members at the start of each wave.",
+    "card_id": "1789",
+    "card_name": "Tennyo",
+    "er": "entry_wave",
+    "ts": "self;type<1>;count<5>",
+    "de": "SPD<5.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Team",
+      "Divina",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
+  },
+  "168001": {
+    "id": "168001",
+    "name": "Spirit of Mischief",
+    "description": "Increases 10% of DMG dealt at the start of each wave.",
+    "card_id": "1680",
+    "card_name": "Poltergeist",
+    "er": "entry_wave",
+    "ts": "self_ime",
+    "de": "ATK<10.00%,0%>",
+    "o": true,
+    "tags": [
+      "Wave Start",
+      "Self",
+      "DMG Boost"
+    ],
+    "synergy_partners": []
+  },
+  "168002": {
+    "id": "168002",
+    "name": "Lonely Resonance",
+    "description": "Increases 20% of the EXP gained from battle and increases 25% of Crit Rate.",
+    "card_id": "1680",
+    "card_name": "Poltergeist",
+    "er": "entry",
+    "ts": "self_ime",
+    "de": "EXP<20.00%,0%>;CHIT<25.00%,0%>",
+    "o": true,
+    "tags": [
+      "Self",
+      "EXP Boost",
+      "Crit Rate"
+    ],
+    "synergy_partners": []
+  },
+  "201601": {
+    "id": "201601",
+    "name": "Riding the Wind",
+    "description": "Increases 25% of ATK speed of all allies.(only take effect once to the team)",
+    "card_id": "2016",
+    "card_name": "Big Kite Zamashi",
+    "er": "entry",
+    "ts": "self;count<5>",
+    "de": "SPD<25.00%,0%>",
+    "o": false,
+    "tags": [
+      "Team",
+      "AoE",
+      "ATK Speed"
+    ],
+    "synergy_partners": []
   }
 }
