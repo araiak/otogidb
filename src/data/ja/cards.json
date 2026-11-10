@@ -50544,6 +50544,197 @@
       },
       "synergies": []
     },
+    "1680": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の与ダメージ値が向上10%",
+          "id": "168001",
+          "name": "悪戯の霊",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 10.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "獲得経験値が20%に増加、自身のクリティカル率が25%増加",
+          "id": "168002",
+          "name": "孤独の共鳴",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "EXP",
+                "unit": "percent",
+                "value": 20.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101680",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "168001",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「ねえ、友達になってくれる？」</color><br/>この一言を伝えたいが為に必死で働きかけているのだが、一般人にとっては突然巻き起こる超常現象の原因でしかない。報われない<color=#ef9843>妖魔</color>である。誰か、友達になってあげてください。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976706+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976706+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1680",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "168001"
+        ],
+        "generation": 0
+      },
+      "name": "ポルターガイスト",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "敵全体に{value}のダメージを与える、対象を{probability}で昏睡状態にする",
+        "id": "1680",
+        "name": "囚われた怪奇",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "SLEEP",
+              "unit": "flat",
+              "value": 5.0
+            }
+          ],
+          "immediate": {
+            "base": 760.0,
+            "scale": 22.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 960,
+          "slvup": 25,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Sleep",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 4800,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "169": {
       "abilities": [
         {
@@ -62437,6 +62628,195 @@
       },
       "synergies": []
     },
+    "1789": {
+      "abilities": [
+        {
+          "description": "霊験属性の味方式神の与ダメージ値が25%増加",
+          "id": "178901",
+          "name": "天界の羽衣",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "ＷＡＶＥ開始ごとに、霊験属性の味方式神のスピードが5%上昇",
+          "id": "178902",
+          "name": "魅惑の悪戯",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<1>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": true,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [
+            {
+              "end": "2026-11-17 15:00:00",
+              "is_current": true,
+              "pity": 100,
+              "start": "2026-11-09 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": null
+        },
+        "sources": [
+          "gacha"
+        ],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101789",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "HP<5.0%,0.0%>",
+          "id": "178901",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「ちょっと羽衣、落としてみよっかな」</color><br/><color=#ef9843>天帝</color>に使える女官で、相当のイタズラ好き。日本に伝わる、天女絡みのお話は、彼女たちの出来心が人心を惑わしてしまったものなのかもしれない。かわいさ余ってにくさ百倍とはこのことか？",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976467+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976467+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1789",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283966/otogi/android/101789_429c3ffba6375da37636b91800360e1b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283967/otogi/cards_hd/101789_hd_2701f807835bd301387e692c342290d9.png"
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "178901"
+        ],
+        "generation": 0
+      },
+      "name": "天女",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "残ＨＰのパセントの比率が最も低い味方3体のＨＰを{value}回復し、状態異常を無効化する",
+        "id": "1789",
+        "name": "ありがためいわく",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 810.0,
+            "scale": 23.0,
+            "type": "HEAL"
+          },
+          "ml": 70,
+          "slv1": 1546,
+          "slvup": 33,
+          "target": {
+            "count": 3,
+            "filter": "min_hp",
+            "side": "ally",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type": 3,
+        "type_name": "Healer"
+      },
+      "synergies": []
+    },
     "179": {
       "abilities": [],
       "acquisition": {
@@ -62861,6 +63241,155 @@
       },
       "synergies": []
     },
+    "1808": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、自身の与ダメージ値が向上5%（助っ人以外、味方陣容一回有効）",
+          "id": "180801",
+          "name": "白い死神",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 5.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101808",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "180801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「…さて、ひと仕事かたづけるか」</color><br/>最高の狙撃兵として名を馳せた軍人。狙撃手として有名ではあるが、白兵戦ひとつとっても一級品であり、彼が赴いた戦場は絶えず静寂に包まれたと言われている。もちろん、彼があらゆる部隊を壊滅させた結果である。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.973734+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.973734+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1808",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "180801"
+        ],
+        "generation": 0
+      },
+      "name": "狙撃兵シモン",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1808",
+        "name": "殲滅作戦",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
     "181": {
       "abilities": [
         {
@@ -63015,6 +63544,678 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1811": {
+      "abilities": [
+        {
+          "description": "自身の与ダメージ値が7%に増加（助っ人以外、味方陣容一回有効）",
+          "id": "181101",
+          "name": "兵器独占",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 7.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101811",
+      "bonds": [
+        {
+          "bonus_percent": 3.0,
+          "effect": "SKILL_ATK<3.0%,0.0%>",
+          "id": "181101",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「フフ、客か？」</color><br/><color=#ef9843>ユーラシア大陸</color>を中心に、<color=#ef9843>武器</color>の流通を１手に担っていたあやかし。狂人を装うようそぶりをみせるが、ものすごく<color=#ef9843>常識人</color>だ。実はいいところのお嬢さんだったのではないだろうか。どこか人ならざる雰囲気を醸し出す。まぁ、そもそも人はではないのだが。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974392+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974392+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1811",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181101"
+        ],
+        "generation": 0
+      },
+      "name": "死の商人",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1811",
+        "name": "千の砲門",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -4.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -100.0
+            }
+          ],
+          "ml": 50,
+          "slv1": 400,
+          "slvup": 16,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1816": {
+      "abilities": [
+        {
+          "description": "クリティカルダメージ値が50%に増加",
+          "id": "181601",
+          "name": "軌道爆撃",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "与ダメージ値が40%に増加し、被ダメージを15%軽減",
+          "id": "181602",
+          "name": "オートチャージ",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 40.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101816",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "181601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「照準合わせ、目標を殲滅します」</color><br/>衛星軌道上に配備された巨大な<color=#ef9843>レーザー砲</color>のあやかし。宇宙空間から地上へと舞い降りる為、天使を模して造られたらしい。皮肉もいいところである。プログラムされた言葉しか発せない為、語彙は非常にすくないが、開発者の趣味か、ロボットアニメに影響された部分がちらほら見え隠れしている。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975276+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975276+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1816",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181601"
+        ],
+        "generation": 0
+      },
+      "name": "サテライトキャノン",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "最も攻撃力が高い敵１体に{value}のダメージを与え、対象の攻撃力を一時的に{delay1}低下させる",
+        "id": "1816",
+        "name": "堕天使の落涙",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.58,
+              "type": "ATK",
+              "unit": "percent",
+              "value": -20.0
+            }
+          ],
+          "immediate": {
+            "base": 1620.0,
+            "scale": 47.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 2307,
+          "slvup": 67,
+          "target": {
+            "count": 1,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1818": {
+      "abilities": [
+        {
+          "description": "相手にダメージを与えた時、ダメージ値13%ほどのＨＰを回復（助っ人以外、味方陣容一回有効）",
+          "id": "181801",
+          "name": "大蛇討ちの英雄",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "VAMP",
+                "unit": "percent",
+                "value": 13.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 66
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101818",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "181801",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「蛇退治もラクじゃねえ」</color><br/>神話の時代に<color=#ef9843>八岐大蛇</color>を退治するなど活躍したほか、持ち前のやんちゃっぷりで多方面に迷惑をかけていたあやかし。高天原では爪弾きものにされていたが、長い時を経て性格も多少丸くなり、今では結構楽しくやっているそうだ。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974181+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974181+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1818",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181801"
+        ],
+        "generation": 0
+      },
+      "name": "素盞鳴尊",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1818",
+        "name": "英雄オーラ",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1819": {
+      "abilities": [
+        {
+          "description": "ＷＡＶＥ開始ごとに、敵全体のダメージ値を28%軽減",
+          "id": "181901",
+          "name": "真打の覚悟",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": -28.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "enemy",
+              "type": "enemy"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        },
+        {
+          "description": "WAVE開始ごとに、クリティカル率15%上昇",
+          "id": "181902",
+          "name": "全身全霊",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 15.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry_wave"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101819",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "181901",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「…いざ、尋常に―――」</color><br/>九十九神の<color=#ef9843>頂点</color>を決めると聞きつけ、本気を出すべく身も心も整えなおし、明鏡止水の境地にいる虎徹。さざ波すらたたない心に迷いはなく、ただ襲い来る相手を斬り捨てるのみに集中した姿。なのだが、ミタマのほんわかパワーにあてられて、割りと普段通りな一面を見せている。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975767+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975767+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1819",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "181901"
+        ],
+        "generation": 0
+      },
+      "name": "銘刀虎徹[本気]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "残ＨＰが最も高い敵１体に{value}のダメージを与え、対象の被ダメージ値を一時的に{delay1}増加させる",
+        "id": "1819",
+        "name": "煉獄の闘気",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.72,
+              "type": "SHIELD",
+              "unit": "percent",
+              "value": -25.0
+            }
+          ],
+          "immediate": {
+            "base": 2100.0,
+            "scale": 61.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 2705,
+          "slvup": 79,
+          "target": {
+            "count": 1,
+            "filter": "max_hp",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4665,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14000,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -63185,6 +64386,974 @@
       },
       "synergies": []
     },
+    "1823": {
+      "abilities": [
+        {
+          "description": "最大ＨＰが11%上昇、被ダメージ値を12%軽減（助っ人以外、味方陣容一回有効）",
+          "id": "182301",
+          "name": "殺戮の嗜好",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "HP",
+                "unit": "percent",
+                "value": 11.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SHIELD",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Max HP",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101823",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "182301",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「はぁぁ、斬り裂きたいわぁ」</color><br/><color=#ef9843>血</color>と<color=#ef9843>酒</color>と<color=#ef9843>殺戮</color>が大好物の女神様。とにかくエグい。切れ味するどい鎌は、魂をも切り刻むと言われ、恐れられている。月に一回、狩りを行いたい衝動に駆られ、一晩中瑞々しい魂を探してうろついているとか。要注意。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974616+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974616+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1823",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182301"
+        ],
+        "generation": 0
+      },
+      "name": "カーリー",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1823",
+        "name": "１００枚おろし",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 2,
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1824": {
+      "abilities": [
+        {
+          "description": "最も攻撃力が高い味方２体のＨＰ自動回復（5秒毎に最大HPの3%）",
+          "id": "182401",
+          "name": "天下三名槍",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 5,
+                "scale": 0.0,
+                "type": "HEAL_DOT",
+                "unit": "percent",
+                "value": 3.0
+              }
+            ],
+            "target": {
+              "count": 2,
+              "filter": "max_atk",
+              "side": "ally",
+              "type": "ranked"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101824",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "NORM_ATK<4.0%,0.0%>",
+          "id": "182401",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「私に何か用かな？」</color><br/><color=#ef9843>戦国最強</color>の武将、<color=#ef9843>本多忠勝</color>が所有していた槍の九十九神。切れ味は天下一品、美しさも<color=#ef9843>天下一品</color>。その槍のきらめきを見るだけで、多くの将兵は戦意を喪失したという。美しいものにはトゲがあるように、蜻蛉切りもまた、ひとたび見惚れたら最期なのだろう。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.974825+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.974825+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1824",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182401"
+        ],
+        "generation": 0
+      },
+      "name": "忠勝の蜻蛉切り",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "敵２体（遠距離型優先）に{value}のダメージを与える",
+        "id": "1824",
+        "name": "無双の気",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 930.0,
+            "scale": 32.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 819,
+          "slvup": 28,
+          "target": {
+            "count": 2,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 3165,
+        "base_hp": 2130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9500,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1825": {
+      "abilities": [
+        {
+          "description": "ボーナスのドロップ率12%上昇（助っ人以外、味方陣容一回有効）",
+          "id": "182501",
+          "name": "良妻の操縦術",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ITEM",
+                "unit": "percent",
+                "value": 12.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Drop Rate"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101825",
+      "bonds": [
+        {
+          "bonus_percent": 4.0,
+          "effect": "SKILL_ATK<4.0%,0.0%>",
+          "id": "182501",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「スサノオったら、また闘いばかり…」</color><br/>スサノオの許嫁である姫様。かつて<color=#ef9843>八岐大蛇</color>の生贄として捧げられた頃は、か弱き存在だったが数千年の間に修行して強くなった。スサノオですら、手を焼くほどである。ヒエラルキーでは完全に上。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.973968+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.973968+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1825",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182501"
+        ],
+        "generation": 0
+      },
+      "name": "奇稲田姫",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1825",
+        "name": "大和の輝き",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -5.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -135.0
+            }
+          ],
+          "ml": 60,
+          "slv1": 540,
+          "slvup": 18,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1826": {
+      "abilities": [
+        {
+          "description": "特技の威力が60%向上",
+          "id": "182601",
+          "name": "雷神の剣",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 60.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101826",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "182601",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「痛いぞ、我が雷は」</color><br/>日本神話において、<color=#ef9843>雷神</color>や<color=#ef9843>剣</color>の神として崇められている。武器のコレクターでもあり、古今東西さまざまな武器を集めては、試し切りしている。その試し切りの余波が、落雷となって降り注いでいるとかいないとか。今回は武器同士の闘いを間近で見届けて、最強となった剣を手に入れようと思っていたようだ。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975043+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975043+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1826",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182601"
+        ],
+        "generation": 0
+      },
+      "name": "建御雷神",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "前方広範囲の敵に{value}のダメージを与える、対象を{probability}で麻痺状態にする",
+        "id": "1826",
+        "name": "鎮まらぬ雷神の怒り",
+        "parsed": {
+          "effects": [
+            {
+              "scale": 0.0,
+              "type": "NUMB",
+              "unit": "flat",
+              "value": 8.0
+            }
+          ],
+          "immediate": {
+            "base": 640.0,
+            "scale": 19.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1108,
+          "slvup": 25,
+          "target": {
+            "count": 4,
+            "filter": "enemy;range_front<3>",
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "AoE",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 4000,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
+      },
+      "synergies": []
+    },
+    "1827": {
+      "abilities": [
+        {
+          "description": "最終のＷＡＶＥに、付喪属性の味方式神全体のダメージが30%増加（助っ人以外、味方陣容一回有効）",
+          "id": "182701",
+          "name": "弾幕展開",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 30.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "last_wave"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "付喪属性の味方式神の特技ダメージ値が40%増加（助っ人以外、味方陣容一回有効）",
+          "id": "182702",
+          "name": "無差別爆撃",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 40.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101827",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "NORM_ATK<7.0%,0.0%>",
+          "id": "182701",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「よっしゃあ！いけー！」</color><br/><color=#ef9843>多連装ロケットシステム</color>の九十九神。とにかく体中にロケットミサイルを仕込んでおり、驚異的な弾幕性能がウリ。その代わり、狙った獲物に当てるのが苦手で、とにかくミサイルを放ることだけに特化しているようだ。発射がたまらなく快感らしい。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975991+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975991+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1827",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182701"
+        ],
+        "generation": 0
+      },
+      "name": "MLRS",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "1827",
+        "name": "１００連ミサイル",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
+      },
+      "synergies": []
+    },
+    "1828": {
+      "abilities": [
+        {
+          "description": "付喪属性の味方式神のクリティカルダメージ値が35%に増加",
+          "id": "182801",
+          "name": "邪悪な魔弾",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 35.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": "type<3>",
+              "side": "ally",
+              "type": "attribute"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "与ダメージ値が50%増加し、自身の特技の威力が向上50%",
+          "id": "182802",
+          "name": "一人サーカス団",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "ATK",
+                "unit": "percent",
+                "value": 50.0
+              },
+              {
+                "scale": 0.0,
+                "type": "SKILL_ATK",
+                "unit": "percent",
+                "value": 50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101828",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "NORM_ATK<5.0%,0.0%>",
+          "id": "182801",
+          "name": "",
+          "target_id": "",
+          "type": "Attack"
+        }
+      ],
+      "description": "<color=#f4e48e>「なにが飛び出るかはお楽しみ！」</color><br/>魔法が込められた銃弾を、<color=#ef9843>これまた魔法が込められた銃</color>。魔力の弱い魔女が、肉弾戦に活路を見出し、魔銃という武器を生み出した。その戦いは身のこなしに優れ、撃ちだす魔法の煌めきの中で俊敏に飛び回る様から、ひとりサーカスとまで言われている。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976211+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976211+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1828",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "182801"
+        ],
+        "generation": 0
+      },
+      "name": "魔銃ミランダ",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "敵３体（遠距離型優先）に{value}のダメージを与える",
+        "id": "1828",
+        "name": "四元素の銃弾",
+        "parsed": {
+          "effects": [],
+          "immediate": {
+            "base": 1020.0,
+            "scale": 30.0,
+            "type": "ATK"
+          },
+          "ml": 60,
+          "slv1": 960,
+          "slvup": 26,
+          "target": {
+            "count": 3,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4830,
+        "base_hp": 3165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 9500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 2,
+        "type_name": "Ranged"
+      },
+      "synergies": []
+    },
     "183": {
       "abilities": [
         {
@@ -63349,6 +65518,198 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "1830": {
+      "abilities": [
+        {
+          "description": "攻撃対象のスピードを50%低下させる",
+          "id": "183001",
+          "name": "天下一の傾奇者",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "duration": 8,
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": -50.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "attack_normal"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "On Attack",
+            "Slow"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "クリティカル率が45%上昇し、クリティカルダメージ値が45%に増加",
+          "id": "183002",
+          "name": "花街の風流人",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "CHIT",
+                "unit": "percent",
+                "value": 45.0
+              },
+              {
+                "scale": 0.0,
+                "type": "CHIT_ATK",
+                "unit": "percent",
+                "value": 45.0
+              }
+            ],
+            "target": {
+              "count": 1,
+              "filter": null,
+              "side": "ally",
+              "type": "self"
+            },
+            "trigger": "entry"
+          },
+          "stackable": true,
+          "synergy_partners": [],
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "101830",
+      "bonds": [
+        {
+          "bonus_percent": 5.0,
+          "effect": "SKILL_ATK<5.0%,0.0%>",
+          "id": "183001",
+          "name": "",
+          "target_id": "",
+          "type": "Skill"
+        }
+      ],
+      "description": "<color=#f4e48e>「ほほう、いいオンナがよりどりみどりだ」</color><br/>遊郭を練り歩くカブキ者。豪快で男気に溢れ、強きを挫く正義の男。<color=#ef9843>日本一</color>の遊郭でもその名は轟いており、彼に魅了された遊女は後を立たないらしい。一番の悩みは、ただひとりの女に出逢えないこと。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.975506+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.975506+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "1830",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "183001"
+        ],
+        "generation": 0
+      },
+      "name": "前田慶次",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "最も攻撃力が高い敵３体に{value}のダメージを与え、対象の攻撃スピードを一時的に{delay1}低下させる",
+        "id": "1830",
+        "name": "漢の生き様",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -0.51,
+              "type": "SPD",
+              "unit": "percent",
+              "value": -15.0
+            }
+          ],
+          "immediate": {
+            "base": 800.0,
+            "scale": 23.0,
+            "type": "ATK"
+          },
+          "ml": 70,
+          "slv1": 1026,
+          "slvup": 38,
+          "target": {
+            "count": 3,
+            "filter": "max_atk",
+            "side": "enemy",
+            "type": "ranked"
+          }
+        },
+        "tags": [
+          "DMG",
+          "Multi",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 1,
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 4665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 14000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 1,
+        "type_name": "Melee"
       },
       "synergies": []
     },
@@ -69062,7 +71423,7 @@
           "featured_banners": [
             {
               "end": "2026-11-08 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-11-01 15:00:00"
             }
@@ -76402,6 +78763,155 @@
         "speed": 1300,
         "type": 2,
         "type_name": "Ranged"
+      },
+      "synergies": []
+    },
+    "2016": {
+      "abilities": [
+        {
+          "description": "味方式神全体のスピードが25%上昇（助っ人以外、味方陣容一回有効）",
+          "id": "201601",
+          "name": "乗風破浪",
+          "parsed": {
+            "conditions": {},
+            "effects": [
+              {
+                "scale": 0.0,
+                "type": "SPD",
+                "unit": "percent",
+                "value": 25.0
+              }
+            ],
+            "target": {
+              "count": 5,
+              "filter": null,
+              "side": "ally",
+              "type": "team"
+            },
+            "trigger": "entry"
+          },
+          "stackable": false,
+          "synergy_partners": [],
+          "tags": [
+            "Team",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "auction": {
+          "available": false,
+          "price_max": null,
+          "price_min": null
+        },
+        "currently_available": false,
+        "daily": {
+          "available": false,
+          "battle_id": null,
+          "drop_rate": null,
+          "schedule": []
+        },
+        "event": {
+          "from_description": [],
+          "reward_tiers": [],
+          "tower_drops": []
+        },
+        "exchange": {
+          "entries": []
+        },
+        "gacha": {
+          "featured_banners": [],
+          "in_standard_pool": false,
+          "standard_pool_start": null
+        },
+        "sources": [],
+        "stock_level": "unavailable"
+      },
+      "asset_id": "102016",
+      "bonds": [
+        {
+          "bonus_percent": 7.000000000000001,
+          "effect": "HP<7.0%,0.0%>",
+          "id": "201601",
+          "name": "",
+          "target_id": "",
+          "type": "HP"
+        }
+      ],
+      "description": "<color=#f4e48e>「いい風が吹いて来た」</color><br/>大きな凧に乗っているので良く間違えられるのだが、武道家である。決して忍者ではない。非力であることの解決策として空中からの襲撃を思いつき、大凧を使うようになった。<color=#ef9843>それから、こちらもよく間違えられるのだが、彼女は女性である</color>。",
+      "gives_special_bond": false,
+      "history": {
+        "changelog": [],
+        "first_seen": "2026-11-10T04:12:48.976916+00:00",
+        "first_seen_version": "5b5e400",
+        "last_modified": "2026-11-10T04:12:48.976916+00:00",
+        "last_modified_version": "5b5e400"
+      },
+      "id": "2016",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "meta": {
+        "album": true,
+        "art_id": "",
+        "artist_name": null,
+        "artist_name_jp": null,
+        "cv_id": "",
+        "entanglement_ids": [
+          "201601"
+        ],
+        "generation": 0
+      },
+      "name": "大凧ザマシ",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "description": "機関特務と協力関係に使用できる",
+        "id": "2016",
+        "name": "空中ザマシチョップ",
+        "parsed": {
+          "effects": [
+            {
+              "duration": 8,
+              "scale": -6.0,
+              "type": "DEFENSE",
+              "unit": "flat",
+              "value": -200.0
+            }
+          ],
+          "ml": 70,
+          "slv1": 800,
+          "slvup": 23,
+          "target": {
+            "count": 5,
+            "filter": null,
+            "side": "enemy",
+            "type": "enemy"
+          }
+        },
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute": 3,
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type": 4,
+        "type_name": "Assist"
       },
       "synergies": []
     },
@@ -139438,7 +141948,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -139450,7 +141960,7 @@
             {
               "event_id": "193",
               "event_name": "機関特務ー化蛇ー",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -201408,6 +203918,6 @@
     }
   },
   "locale": "ja_JP",
-  "total_cards": 1034,
-  "version": "ac96bdc"
+  "total_cards": 1049,
+  "version": "5b5e400"
 }

@@ -14214,6 +14214,79 @@
         "type_name": "Ranged"
       }
     },
+    "1680": {
+      "abilities": [
+        {
+          "description": "每回合開始時，自身戰鬥傷害10%增加",
+          "name": "惡作劇之靈",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "經驗結算獎勵20%增加，同時自身暴擊率25%增加",
+          "name": "孤獨的共鳴",
+          "tags": [
+            "Self",
+            "EXP Boost",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101680",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1680",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "喧鬧鬼",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對敵方全體造成{value}點傷害，並使目標{probability}睡眠",
+        "name": "被囚禁的靈體",
+        "prob_lb0": "80.82%",
+        "prob_mlb": "96.42%",
+        "slv_lb0": "2,278",
+        "slv_mlb": "2,718",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Sleep",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 4800,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14400,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "169": {
       "abilities": [
         {
@@ -17403,6 +17476,83 @@
         "type_name": "Ranged"
       }
     },
+    "1789": {
+      "abilities": [
+        {
+          "description": "己方全體靈屬性隊員戰鬥傷害25%增加",
+          "name": "天界羽衣",
+          "tags": [
+            "Team",
+            "Divina",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "每回合開始時，己方全體靈屬性隊員攻擊速度5%增加",
+          "name": "魅惑惡戲",
+          "tags": [
+            "Wave Start",
+            "Team",
+            "Divina",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": [
+          "gacha"
+        ]
+      },
+      "asset_id": "101789",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1789",
+      "image_urls": {
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283966/otogi/android/101789_429c3ffba6375da37636b91800360e1b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794283967/otogi/cards_hd/101789_hd_2701f807835bd301387e692c342290d9.png"
+      },
+      "name": "天女",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "恢復3名血量百分比最低的隊員{value}點血量，並解除所有負面效果",
+        "name": "錯位仁慈",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,397",
+        "slv_mlb": "2,857",
+        "tags": [
+          "Heal",
+          "Cleanse",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3665,
+        "base_hp": 4000,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11000,
+        "max_hp": 12000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 2300,
+        "type_name": "Healer"
+      }
+    },
     "179": {
       "abilities": [],
       "acquisition": {
@@ -17575,6 +17725,68 @@
         "type_name": "Ranged"
       }
     },
+    "1808": {
+      "abilities": [
+        {
+          "description": "每回合開始時，自身戰鬥傷害5%增加（除助戰外，己方全體僅生效1次）",
+          "name": "白色死神",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 68
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101808",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1808",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "鷹眼狙擊手西蒙",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "滅世焦土",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
     "181": {
       "abilities": [
         {
@@ -17636,6 +17848,272 @@
         "rarity": 4,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1811": {
+      "abilities": [
+        {
+          "description": "戰鬥傷害7%增加（除助戰外，己方全體僅生效1次）",
+          "name": "軍火壟斷",
+          "tags": [
+            "Self",
+            "DMG Boost"
+          ],
+          "unlock_level": 53
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101811",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1811",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "死之商人",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "296",
+        "delay_mlb": "376",
+        "description": "可用於羈絆和公會討伐",
+        "name": "危險交易",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 1965,
+        "base_hp": 1500,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 5900,
+        "max_hp": 4500,
+        "max_level": 50,
+        "rarity": 3,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1816": {
+      "abilities": [
+        {
+          "description": "暴擊傷害50%增加",
+          "name": "軌道轟炸",
+          "tags": [
+            "Self",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "戰鬥傷害40%增加，同時所受傷害15%減少",
+          "name": "自動充能",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "DMG Reduction"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101816",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1816",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "衛星加農炮",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "60.02%",
+        "delay_mlb": "71.62%",
+        "description": "對1名攻擊最高的敵人造成{value}點傷害，並使目標一定時間內戰鬥傷害降低{delay1}",
+        "name": "天使之淚",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "4,863",
+        "slv_mlb": "5,803",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4330,
+        "base_hp": 3000,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 13000,
+        "max_hp": 9000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1818": {
+      "abilities": [
+        {
+          "description": "戰鬥傷害13%轉化為自身血量（除助戰外，己方全體僅生效1次）",
+          "name": "屠蛇英雄",
+          "tags": [
+            "Self",
+            "Lifesteal"
+          ],
+          "unlock_level": 66
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101818",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1818",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "須佐之男",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "英雄靈氣",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1819": {
+      "abilities": [
+        {
+          "description": "每回合開始時，敵方全體戰鬥傷害28%減少",
+          "name": "真打的覺悟",
+          "tags": [
+            "Wave Start",
+            "AoE",
+            "Enemy DMG Down"
+          ],
+          "unlock_level": 78
+        },
+        {
+          "description": "每回合開始時，自身暴擊率15%增加",
+          "name": "全神貫注",
+          "tags": [
+            "Wave Start",
+            "Self",
+            "Crit Rate"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101819",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1819",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "銘刀虎徹[全力形態]",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "74.68%",
+        "delay_mlb": "89.08%",
+        "description": "對1名HP最高的敵人造成{value}點傷害，並使目標一定時間內所受傷害提升{delay1}",
+        "name": "煉獄鬥氣",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "6,309",
+        "slv_mlb": "7,529",
+        "tags": [
+          "DMG",
+          "Single",
+          "DMG Up"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4665,
+        "base_hp": 3330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 14000,
+        "max_hp": 10000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "182": {
@@ -17704,6 +18182,399 @@
         "type_name": "Melee"
       }
     },
+    "1823": {
+      "abilities": [
+        {
+          "description": "血量上限11%增加，同時所受傷害12%減少（除助戰外，己方全體僅生效1次）",
+          "name": "殺戮嗜好",
+          "tags": [
+            "Self",
+            "Max HP",
+            "DMG Reduction"
+          ],
+          "unlock_level": 80
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101823",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1823",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "卡利",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "千刀萬剮",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Phantasma",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1824": {
+      "abilities": [
+        {
+          "description": "使己方攻擊力最高的2名隊員血量每5秒回復3%",
+          "name": "天下三名槍",
+          "tags": [
+            "Team",
+            "Multi",
+            "Heal"
+          ],
+          "unlock_level": 72
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101824",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1824",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "忠勝的蜻蛉切",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對2名敵方（遠程優先）造成{value}點傷害",
+        "name": "無雙之矛",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,818",
+        "slv_mlb": "3,458",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 3165,
+        "base_hp": 2130,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 9500,
+        "max_hp": 6400,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
+    "1825": {
+      "abilities": [
+        {
+          "description": "獎勵掉落概率12%增加（除助戰外，己方全體僅生效1次）",
+          "name": "馭夫之術",
+          "tags": [
+            "Self",
+            "Drop Rate"
+          ],
+          "unlock_level": 78
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101825",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1825",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "奇稻田公主",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "430",
+        "delay_mlb": "530",
+        "description": "可用於羈絆和公會討伐",
+        "name": "大和美人",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 2500,
+        "base_hp": 2330,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 7500,
+        "max_hp": 7000,
+        "max_level": 60,
+        "rarity": 4,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1826": {
+      "abilities": [
+        {
+          "description": "技能傷害60%增加",
+          "name": "雷神之劍",
+          "tags": [
+            "Self",
+            "Skill DMG"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101826",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1826",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "建御雷神",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對身前大範圍內的敵人造成{value}點傷害，並使目標{probability}麻痹",
+        "name": "雷之怒",
+        "prob_lb0": "80.82%",
+        "prob_mlb": "96.42%",
+        "slv_lb0": "1,951",
+        "slv_mlb": "2,331",
+        "tags": [
+          "DMG",
+          "AoE",
+          "Paralysis",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 4000,
+        "base_hp": 3265,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12000,
+        "max_hp": 9800,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
+      }
+    },
+    "1827": {
+      "abilities": [
+        {
+          "description": "最終回合，己方全體付屬性隊員戰鬥傷害30%增加（除助戰外，己方全體僅生效1次）",
+          "name": "彈幕覆蓋",
+          "tags": [
+            "Final Wave",
+            "Team",
+            "Anima",
+            "AoE",
+            "DMG Boost"
+          ],
+          "unlock_level": 80
+        },
+        {
+          "description": "己方全體付屬性隊員技能傷害40%增加（除助戰外，己方全體僅生效1次）",
+          "name": "無差別轟炸",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101827",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1827",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "多管火箭發射系統",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "可用於羈絆和公會討伐",
+        "name": "飛彈齊發",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
+      }
+    },
+    "1828": {
+      "abilities": [
+        {
+          "description": "己方全體付屬性隊員暴擊傷害35%增加",
+          "name": "邪惡魔彈",
+          "tags": [
+            "Team",
+            "Anima",
+            "AoE",
+            "Crit DMG"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "戰鬥傷害50%增加，同時技能傷害50%增加",
+          "name": "單人馬戲團",
+          "tags": [
+            "Self",
+            "DMG Boost",
+            "Skill DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101828",
+      "bonds": [
+        {
+          "type": "Attack"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1828",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "米蘭達",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": null,
+        "delay_mlb": null,
+        "description": "對3名敵人（遠端優先）造成{value}點傷害",
+        "name": "自然元素子彈",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "3,090",
+        "slv_mlb": "3,690",
+        "tags": [
+          "DMG",
+          "Multi"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4830,
+        "base_hp": 3165,
+        "cost": 1,
+        "crit": 2250,
+        "max_atk": 14500,
+        "max_hp": 9500,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Ranged"
+      }
+    },
     "183": {
       "abilities": [
         {
@@ -17767,6 +18638,78 @@
         "rarity": 5,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "1830": {
+      "abilities": [
+        {
+          "description": "使普通攻擊目標攻擊速度50%減少",
+          "name": "天下第一傾奇者",
+          "tags": [
+            "On Attack",
+            "Slow"
+          ],
+          "unlock_level": 75
+        },
+        {
+          "description": "暴擊率45%增加，同時暴擊傷害45%增加",
+          "name": "花街風流客",
+          "tags": [
+            "Self",
+            "Crit Rate",
+            "Crit DMG"
+          ],
+          "unlock_level": 90
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "101830",
+      "bonds": [
+        {
+          "type": "Skill"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "1830",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "前田慶次",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "50.19%",
+        "delay_mlb": "60.39%",
+        "description": "對3名ATK最高的敵人造成{value}點傷害，並使目標一定時間內速度降低{delay1}",
+        "name": "單身憂鬱",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": "2,387",
+        "slv_mlb": "2,847",
+        "tags": [
+          "DMG",
+          "Multi",
+          "Slow",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Divina",
+        "base_atk": 3765,
+        "base_hp": 4665,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 11300,
+        "max_hp": 14000,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Melee"
       }
     },
     "184": {
@@ -22262,6 +23205,68 @@
         "rarity": 3,
         "speed": 1300,
         "type_name": "Ranged"
+      }
+    },
+    "2016": {
+      "abilities": [
+        {
+          "description": "己方全體隊員攻擊速度25%增加（除助戰外，己方全體僅生效1次）",
+          "name": "乘風破浪",
+          "tags": [
+            "Team",
+            "AoE",
+            "ATK Speed"
+          ],
+          "unlock_level": 75
+        }
+      ],
+      "acquisition": {
+        "has_tower_drops": false,
+        "sources": []
+      },
+      "asset_id": "102016",
+      "bonds": [
+        {
+          "type": "HP"
+        }
+      ],
+      "gives_special_bond": false,
+      "has_bugs": false,
+      "id": "2016",
+      "image_urls": {
+        "android": null,
+        "hd": null
+      },
+      "name": "大風箏座間",
+      "playable": true,
+      "receives_special_bond": false,
+      "skill": {
+        "delay_lb0": "614",
+        "delay_mlb": "734",
+        "description": "可用於羈絆和公會討伐",
+        "name": "劈空斬",
+        "prob_lb0": null,
+        "prob_mlb": null,
+        "slv_lb0": null,
+        "slv_mlb": null,
+        "tags": [
+          "AoE",
+          "DEF Down",
+          "Debuff"
+        ]
+      },
+      "stats": {
+        "attribute_name": "Anima",
+        "base_atk": 4265,
+        "base_hp": 2865,
+        "cost": 1,
+        "crit": 750,
+        "max_atk": 12800,
+        "max_hp": 8600,
+        "max_level": 70,
+        "rarity": 5,
+        "speed": 1300,
+        "type_name": "Assist"
       }
     },
     "202": {
@@ -67541,8 +68546,8 @@
       }
     }
   },
-  "data_hash": "5377bbc6",
+  "data_hash": "7c57538b",
   "locale": "zh-tw",
-  "total_cards": 1034,
-  "version": "ac96bdc"
+  "total_cards": 1049,
+  "version": "5b5e400"
 }

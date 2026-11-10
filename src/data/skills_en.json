@@ -15448,6 +15448,248 @@
       "Debuff"
     ]
   },
+  "1808": {
+    "id": "1808",
+    "name": "Scorched Earth",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1808",
+    "card_name": "Sharp-Shooting Simeon",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1825": {
+    "id": "1825",
+    "name": "Japanese Beauty",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1825",
+    "card_name": "Princess Kushinada",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1818": {
+    "id": "1818",
+    "name": "Heroic Aura",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1818",
+    "card_name": "Susanoo",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1811": {
+    "id": "1811",
+    "name": "Dangerous Deal",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1811",
+    "card_name": "Merchant of Death",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-100,-4,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1823": {
+    "id": "1823",
+    "name": "Slice and Dice",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1823",
+    "card_name": "Kali",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-135,-5,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1824": {
+    "id": "1824",
+    "name": "Peerless Spear",
+    "description": "Deals {value} DMG to 2 enemies (ranged priority).",
+    "card_id": "1824",
+    "card_name": "Tadakatsu's Tonbogiri",
+    "ie": "ATK<930,32>",
+    "ts": "enemy;count<2>;prof<2,3,1>",
+    "de": "none",
+    "tn": 2,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1826": {
+    "id": "1826",
+    "name": "Lightning Wrath",
+    "description": "Deals {value} DMG to further enemies, with a {probability} of inflicting Paralysis.",
+    "card_id": "1826",
+    "card_name": "Takemikazuchi",
+    "ie": "ATK<640,19>",
+    "ts": "enemy;range_front<3>",
+    "de": "NUMB<8>;HIT<27.00%,0.78%>",
+    "tn": 4,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Paralysis",
+      "Debuff"
+    ]
+  },
+  "1816": {
+    "id": "1816",
+    "name": "Angel Tears",
+    "description": "Deals {value} DMG to the enemy with the highest ATK.Targets deal {delay1} less DMG for a limited time.",
+    "card_id": "1816",
+    "card_name": "Satellite Cannon",
+    "ie": "ATK<1620,47>",
+    "ts": "enemy;count<1>;max_atk",
+    "de": "ATK<-20.00%,-0.58%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Down",
+      "Debuff"
+    ]
+  },
+  "1830": {
+    "id": "1830",
+    "name": "Bachelor Blues",
+    "description": "Deals {value} DMG to the 3 enemies with the highest ATK, decreases targets' speed by {delay1} for a limited time.",
+    "card_id": "1830",
+    "card_name": "Maeda Toshimasu",
+    "ie": "ATK<800,23>",
+    "ts": "enemy;count<3>;max_atk",
+    "de": "SPD<-15.00%,-0.51%,8>",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi",
+      "Slow",
+      "Debuff"
+    ]
+  },
+  "1819": {
+    "id": "1819",
+    "name": "Purgatorial Vigor",
+    "description": "Deals {value} DMG to the enemy with the most HP. Targets take {delay1} more DMG for a limited time.",
+    "card_id": "1819",
+    "card_name": "Kotetsu [Focused]",
+    "ie": "ATK<2100,61>",
+    "ts": "enemy;count<1>;max_hp",
+    "de": "SHIELD<-25.00%,-0.72%,8>",
+    "tn": 1,
+    "tags": [
+      "DMG",
+      "Single",
+      "DMG Up"
+    ]
+  },
+  "1827": {
+    "id": "1827",
+    "name": "Missile Barrage",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "1827",
+    "card_name": "MLRS",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
+  "1828": {
+    "id": "1828",
+    "name": "Elemental Bullet",
+    "description": "Deals {value} DMG to 3 enemies (ranged priority).",
+    "card_id": "1828",
+    "card_name": "Solanda",
+    "ie": "ATK<1020,30>",
+    "ts": "enemy;count<3>;prof<2,3,1>",
+    "de": "none",
+    "tn": 3,
+    "tags": [
+      "DMG",
+      "Multi"
+    ]
+  },
+  "1789": {
+    "id": "1789",
+    "name": "Misplaced Kindness",
+    "description": "Restores {value} HP to 3 allies with the lowest percentage of HP and cures them from all negative status effects.",
+    "card_id": "1789",
+    "card_name": "Tennyo",
+    "ie": "HEAL<810,23>;ERASE_DEBUFF<0>",
+    "ts": "self;count<3>;min_hpp",
+    "de": "none",
+    "tn": 3,
+    "tags": [
+      "Heal",
+      "Cleanse",
+      "Multi"
+    ]
+  },
+  "1680": {
+    "id": "1680",
+    "name": "Ghostly Prisoner",
+    "description": "Deals {value} DMG to all enemies, with a {probability} of inflicting Sleep..",
+    "card_id": "1680",
+    "card_name": "Poltergeist",
+    "ie": "ATK<760,22>",
+    "ts": "enemy;count<5>",
+    "de": "SLEEP<5>;HIT<27.00%,0.78%>",
+    "tn": 5,
+    "tags": [
+      "DMG",
+      "AoE",
+      "Sleep",
+      "Debuff"
+    ]
+  },
+  "2016": {
+    "id": "2016",
+    "name": "Aerial Chop",
+    "description": "Can be used as bond and in guild conquest.",
+    "card_id": "2016",
+    "card_name": "Big Kite Zamashi",
+    "ie": "none",
+    "ts": "enemy;count<5>",
+    "de": "DEFENSE<-200,-6,8>",
+    "tn": 5,
+    "tags": [
+      "AoE",
+      "DEF Down",
+      "Debuff"
+    ]
+  },
   "20001": {
     "id": "20001",
     "name": "",
