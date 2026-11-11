@@ -2953,6 +2953,39 @@
           "game_version": "b2280e8"
         }
       ]
+    },
+    {
+      "id": "BUG-075",
+      "card_id": 1824,
+      "card_name": "Tadakatsu's Tonbogiri",
+      "affected_field": "ability",
+      "affected_id": "182401",
+      "category": "stackable",
+      "severity": "gameplay",
+      "summary": "Non-stackable ability missing 'once per team' text",
+      "details": {
+        "description_says": "Restores 3% of HP every 5 seconds by the 2 allies with the highest ATK.",
+        "o_field": false,
+        "ts_field": "self;count<2>;max_atk",
+        "expected_text": "Description should mention that effects don't stack"
+      },
+      "analysis": "Ability has o=false, so only one copy per side applies (helper exempt). Description doesn't say the effect won't stack with a second copy.",
+      "affects_gameplay": true,
+      "visual_only": false,
+      "source": "automated",
+      "status": "open",
+      "first_detected": "2026-11-10",
+      "resolution_check": {
+        "field": "o",
+        "condition": "equals",
+        "value": true
+      },
+      "description_check": {
+        "condition": "matches_regex",
+        "value": "(?i)(only\\s+take[sd]?\\s+effect\\s+once|does\\s+not\\s+stack|once\\s+per\\s+team|effect[s]?\\s+(?:do(?:es)?n't|will\\s+not)\\s+stack)"
+      },
+      "last_checked": "2026-11-10",
+      "check_history": []
     }
   ],
   "categories": {
