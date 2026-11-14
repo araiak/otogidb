@@ -20,10 +20,11 @@ import {
   SAVE_SLOTS,
   SLOT_LABELS,
   emptyTeam,
-  SHARE_PARAM,
   decodeTeam,
   encodeTeam,
+  hashWithTeam,
   hasSavedTeam,
+  isBlankTeam,
   isAssistCard,
   loadTeam,
   normalizeTeam,
@@ -87,34 +88,37 @@ export default function TeamSimulator() {
   // reactive and the Load buttons have to grey out on first paint.
   const [filledSaves, setFilledSaves] = useState<number[]>([]);
   const client = useRef<SimClient | null>(null);
-  // False until the starting team is known. A shared link decodes asynchronously, and
-  // the autosave and URL sync must not write the blank first-render team over it.
+  // False until the starting team is known (the first render holds a blank team), so
+  // the autosave and URL sync cannot write that blank team over the real one.
   const [ready, setReady] = useState(false);
   // The hash value this page last wrote, so our own replaceState is not mistaken for
   // someone pasting a new link into the address bar.
   const lastHash = useRef<string | null>(null);
+  // Set when a team arrives from a link: opening someone else's link must not
+  // overwrite the player's own autosave. Their first edit adopts the team and saves.
+  const skipAutosave = useRef(false);
 
   useEffect(() => {
-    let cancelled = false;
     const shared = teamParamFromHash(window.location.hash);
-    (shared ? decodeTeam(shared) : Promise.resolve(null)).then((fromLink) => {
-      if (cancelled) return;
-      lastHash.current = shared;
-      setTeam(fromLink ?? loadTeam());
-      if (shared && !fromLink) setError('That share link could not be read; loaded your last team instead.');
-      setReady(true);
-    });
+    const fromLink = shared ? decodeTeam(shared) : null;
+    lastHash.current = shared;
+    skipAutosave.current = fromLink !== null;
+    setTeam(fromLink ?? loadTeam());
+    if (shared && !fromLink) setError('That share link could not be read; loaded your last team instead.');
+    setReady(true);
     setFilledSaves(SAVE_SLOTS.filter(hasSavedTeam));
     getFullCardsData()
       .then((d) => setCards(Object.values(d.cards) as Card[]))
       .catch((e) => setError(`Could not load card data: ${e}`));
-    return () => {
-      cancelled = true;
-    };
   }, []);
 
   useEffect(() => {
-    if (ready) saveTeam(team);
+    if (!ready) return;
+    if (skipAutosave.current) {
+      skipAutosave.current = false;
+      return;
+    }
+    saveTeam(team);
   }, [team, ready]);
 
   // Keep the address bar in step with the team, so the URL is always a share link.
@@ -122,20 +126,14 @@ export default function TeamSimulator() {
   // back button should step through. Debounced so typing does not thrash history.
   useEffect(() => {
     if (!ready) return;
-    let cancelled = false;
-    const t = setTimeout(async () => {
-      const value = await encodeTeam(team);
-      if (cancelled) return;
-      const blank = JSON.stringify(team) === JSON.stringify(emptyTeam());
-      lastHash.current = blank ? null : value;
+    const t = setTimeout(() => {
+      const value = isBlankTeam(team) ? null : encodeTeam(team);
+      lastHash.current = value;
       const url = new URL(window.location.href);
-      url.hash = blank ? '' : `${SHARE_PARAM}=${value}`;
+      url.hash = hashWithTeam(url.hash, value);
       if (url.href !== window.location.href) history.replaceState(history.state, '', url);
     }, 300);
-    return () => {
-      cancelled = true;
-      clearTimeout(t);
-    };
+    return () => clearTimeout(t);
   }, [team, ready]);
 
   // A link pasted into this tab only changes the hash, which does not reload the page.
@@ -143,13 +141,19 @@ export default function TeamSimulator() {
     function onHashChange() {
       const shared = teamParamFromHash(window.location.hash);
       if (!shared || shared === lastHash.current) return;
-      decodeTeam(shared).then((t) => {
-        if (!t) return;
-        lastHash.current = shared;
-        setTeam(t);
-        setResult(null);
-        note('Loaded team from link');
-      });
+      lastHash.current = shared;
+      const t = decodeTeam(shared);
+      if (!t) {
+        setError('That share link could not be read.');
+        return;
+      }
+      skipAutosave.current = true;
+      setTeam(t);
+      setResult(null);
+      setSuggestion(null);
+      setError(null);
+      setStep('team');
+      note('Loaded team from link');
     }
     window.addEventListener('hashchange', onHashChange);
     return () => window.removeEventListener('hashchange', onHashChange);
@@ -277,11 +281,12 @@ export default function TeamSimulator() {
 
   async function shareLink() {
     // Write the hash now rather than wait out the debounce, so the copied link is
-    // exactly the team on screen.
-    const url = new URL(window.location.href);
-    const value = await encodeTeam(team);
+    // exactly the team on screen. Nothing is awaited before writeText: Safari drops
+    // the click's permission to write the clipboard across an unrelated await.
+    const value = encodeTeam(team);
     lastHash.current = value;
-    url.hash = `${SHARE_PARAM}=${value}`;
+    const url = new URL(window.location.href);
+    url.hash = hashWithTeam(url.hash, value);
     history.replaceState(history.state, '', url);
     try {
       await navigator.clipboard.writeText(url.href);
