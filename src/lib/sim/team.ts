@@ -135,27 +135,32 @@ function storageKey(slot?: number): string {
   return slot ? `${STORAGE_KEY}-save${slot}` : STORAGE_KEY;
 }
 
+/** Fill in whatever a stored, imported or shared team is missing, so an older or
+ *  hand-edited shape can never shift the slots or leave a field undefined. */
+export function normalizeTeam(parsed: Partial<TeamState>): TeamState {
+  const base = emptyTeam();
+  return {
+    ...base,
+    ...parsed,
+    // A stored team from an older shape must not shrink the slot list, or the
+    // reserves silently become undefined and every read after them shifts.
+    slots: Array.from({ length: SLOT_COUNT }, (_, i) => {
+      const s = parsed.slots?.[i];
+      return s ? { ...emptySlot(), ...s } : emptySlot();
+    }),
+    groups: parsed.groups?.length ? parsed.groups : base.groups,
+    swap: parsed.swap ?? base.swap,
+    swapWhen: parsed.swapWhen ?? base.swapWhen,
+    // Teams saved before the control existed have no scheduler.
+    scheduler: parsed.scheduler ?? base.scheduler,
+  };
+}
+
 export function loadTeam(slot?: number): TeamState {
   try {
     const raw = localStorage.getItem(storageKey(slot));
     if (!raw) return emptyTeam();
-    const parsed = JSON.parse(raw) as Partial<TeamState>;
-    const base = emptyTeam();
-    return {
-      ...base,
-      ...parsed,
-      // A stored team from an older shape must not shrink the slot list, or the
-      // reserves silently become undefined and every read after them shifts.
-      slots: Array.from(
-        { length: SLOT_COUNT },
-        (_, i) => parsed.slots?.[i] ?? emptySlot()
-      ),
-      groups: parsed.groups?.length ? parsed.groups : base.groups,
-      swap: parsed.swap ?? base.swap,
-      swapWhen: parsed.swapWhen ?? base.swapWhen,
-      // Teams saved before the control existed have no scheduler.
-      scheduler: parsed.scheduler ?? base.scheduler,
-    };
+    return normalizeTeam(JSON.parse(raw) as Partial<TeamState>);
   } catch {
     return emptyTeam();
   }
@@ -177,4 +182,99 @@ export function hasSavedTeam(slot: number): boolean {
   } catch {
     return false;
   }
+}
+
+// ---------------------------------------------------------------------------
+// Share links
+//
+// The team lives in the URL hash (#team=...) so a link reproduces the exact setup:
+// cards, assists, bonds, groups, boss and run settings. The hash, not the query,
+// because the page is static and the hash never reaches the server or the CDN cache.
+//
+// Only fields that differ from emptyTeam() are written, empty slots shrink to 0, and
+// the JSON is deflated when the browser can, so a full team stays a pasteable link.
+// The prefix says how to read it back: 'z' deflate-raw, 'j' plain JSON.
+// ---------------------------------------------------------------------------
+
+export const SHARE_PARAM = 'team';
+
+type CompactSlot = 0 | [string | null, string | null, BondSlot[]?];
+
+function compactTeam(team: TeamState): Record<string, unknown> {
+  const base = emptyTeam() as unknown as Record<string, unknown>;
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(team)) {
+    if (k === 'slots') continue;
+    if (JSON.stringify(v) !== JSON.stringify(base[k])) out[k] = v;
+  }
+  const slots: CompactSlot[] = team.slots.map((s) =>
+    !s.cardId && !s.assistId && !s.bonds.length
+      ? 0
+      : s.bonds.length
+        ? [s.cardId, s.assistId, s.bonds]
+        : [s.cardId, s.assistId]
+  );
+  while (slots.length && slots[slots.length - 1] === 0) slots.pop();
+  if (slots.length) out.s = slots;
+  return out;
+}
+
+function expandTeam(raw: Record<string, unknown>): TeamState {
+  const { s, ...rest } = raw;
+  const slots = Array.isArray(s)
+    ? (s as CompactSlot[]).map((c) =>
+        Array.isArray(c) ? { cardId: c[0], assistId: c[1], bonds: c[2] ?? [] } : emptySlot()
+      )
+    : [];
+  return normalizeTeam({ ...(rest as Partial<TeamState>), slots });
+}
+
+function toBase64Url(bytes: Uint8Array): string {
+  let bin = '';
+  for (const b of bytes) bin += String.fromCharCode(b);
+  return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+}
+
+function fromBase64Url(text: string): Uint8Array {
+  const b64 = text.replace(/-/g, '+').replace(/_/g, '/');
+  const bin = atob(b64 + '='.repeat((4 - (b64.length % 4)) % 4));
+  return Uint8Array.from(bin, (c) => c.charCodeAt(0));
+}
+
+async function pipe(bytes: Uint8Array, stream: GenericTransformStream): Promise<Uint8Array> {
+  const out = new Blob([bytes as BlobPart]).stream().pipeThrough(stream);
+  return new Uint8Array(await new Response(out).arrayBuffer());
+}
+
+/** Encode a team for the URL hash. */
+export async function encodeTeam(team: TeamState): Promise<string> {
+  const json = new TextEncoder().encode(JSON.stringify(compactTeam(team)));
+  if (typeof CompressionStream !== 'undefined') {
+    try {
+      return 'z' + toBase64Url(await pipe(json, new CompressionStream('deflate-raw')));
+    } catch {
+      // fall through to plain JSON
+    }
+  }
+  return 'j' + toBase64Url(json);
+}
+
+/** Decode a value written by encodeTeam(); null if it is not a team. */
+export async function decodeTeam(value: string): Promise<TeamState | null> {
+  try {
+    const kind = value[0];
+    let bytes = fromBase64Url(value.slice(1));
+    if (kind === 'z') bytes = await pipe(bytes, new DecompressionStream('deflate-raw'));
+    else if (kind !== 'j') return null;
+    const raw = JSON.parse(new TextDecoder().decode(bytes));
+    if (!raw || typeof raw !== 'object' || Array.isArray(raw)) return null;
+    return expandTeam(raw as Record<string, unknown>);
+  } catch {
+    return null;
+  }
+}
+
+/** The team value in a location hash ("#team=..."), if there is one. */
+export function teamParamFromHash(hash: string): string | null {
+  return new URLSearchParams(hash.replace(/^#/, '')).get(SHARE_PARAM);
 }

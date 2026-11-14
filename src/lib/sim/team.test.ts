@@ -53,3 +53,31 @@ describe('named save slots', () => {
     expect(team.slots[6]).toEqual({ cardId: null, assistId: null, bonds: [] });
   });
 });
+
+describe('share links', () => {
+  it('round-trips a full team through the URL encoding', async () => {
+    const { encodeTeam, decodeTeam, teamParamFromHash } = await import('./team');
+    const team = emptyTeam();
+    team.slots[0] = { cardId: '1650', assistId: '900', bonds: [['atk', 3] as never] };
+    team.slots[4].cardId = '1631';
+    team.bossId = 2;
+    team.bossLevel = 12;
+    team.seed = 42;
+    team.scheduler = 'group';
+    team.groups = [['P1', 'P5'], ['P2']];
+
+    const value = await encodeTeam(team);
+    expect(value).toMatch(/^[zj][A-Za-z0-9_-]+$/);
+    expect(teamParamFromHash(`#team=${value}`)).toBe(value);
+    expect(await decodeTeam(value)).toEqual(team);
+  });
+
+  it('keeps a blank team short and rejects garbage', async () => {
+    const { encodeTeam, decodeTeam } = await import('./team');
+    const value = await encodeTeam(emptyTeam());
+    expect(value.length).toBeLessThan(20);
+    expect(await decodeTeam(value)).toEqual(emptyTeam());
+    expect(await decodeTeam('znot-a-team')).toBeNull();
+    expect(await decodeTeam('xabc')).toBeNull();
+  });
+});

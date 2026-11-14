@@ -20,11 +20,16 @@ import {
   SAVE_SLOTS,
   SLOT_LABELS,
   emptyTeam,
+  SHARE_PARAM,
+  decodeTeam,
+  encodeTeam,
   hasSavedTeam,
   isAssistCard,
   loadTeam,
+  normalizeTeam,
   saveTeam,
   slotKey,
+  teamParamFromHash,
   toRequest,
   type CastPolicy,
   type TeamState,
@@ -82,18 +87,73 @@ export default function TeamSimulator() {
   // reactive and the Load buttons have to grey out on first paint.
   const [filledSaves, setFilledSaves] = useState<number[]>([]);
   const client = useRef<SimClient | null>(null);
+  // False until the starting team is known. A shared link decodes asynchronously, and
+  // the autosave and URL sync must not write the blank first-render team over it.
+  const [ready, setReady] = useState(false);
+  // The hash value this page last wrote, so our own replaceState is not mistaken for
+  // someone pasting a new link into the address bar.
+  const lastHash = useRef<string | null>(null);
 
   useEffect(() => {
-    setTeam(loadTeam());
+    let cancelled = false;
+    const shared = teamParamFromHash(window.location.hash);
+    (shared ? decodeTeam(shared) : Promise.resolve(null)).then((fromLink) => {
+      if (cancelled) return;
+      lastHash.current = shared;
+      setTeam(fromLink ?? loadTeam());
+      if (shared && !fromLink) setError('That share link could not be read; loaded your last team instead.');
+      setReady(true);
+    });
     setFilledSaves(SAVE_SLOTS.filter(hasSavedTeam));
     getFullCardsData()
       .then((d) => setCards(Object.values(d.cards) as Card[]))
       .catch((e) => setError(`Could not load card data: ${e}`));
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   useEffect(() => {
-    saveTeam(team);
-  }, [team]);
+    if (ready) saveTeam(team);
+  }, [team, ready]);
+
+  // Keep the address bar in step with the team, so the URL is always a share link.
+  // replaceState, not pushState: every keystroke in a number field is not a page the
+  // back button should step through. Debounced so typing does not thrash history.
+  useEffect(() => {
+    if (!ready) return;
+    let cancelled = false;
+    const t = setTimeout(async () => {
+      const value = await encodeTeam(team);
+      if (cancelled) return;
+      const blank = JSON.stringify(team) === JSON.stringify(emptyTeam());
+      lastHash.current = blank ? null : value;
+      const url = new URL(window.location.href);
+      url.hash = blank ? '' : `${SHARE_PARAM}=${value}`;
+      if (url.href !== window.location.href) history.replaceState(history.state, '', url);
+    }, 300);
+    return () => {
+      cancelled = true;
+      clearTimeout(t);
+    };
+  }, [team, ready]);
+
+  // A link pasted into this tab only changes the hash, which does not reload the page.
+  useEffect(() => {
+    function onHashChange() {
+      const shared = teamParamFromHash(window.location.hash);
+      if (!shared || shared === lastHash.current) return;
+      decodeTeam(shared).then((t) => {
+        if (!t) return;
+        lastHash.current = shared;
+        setTeam(t);
+        setResult(null);
+        note('Loaded team from link');
+      });
+    }
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   const getClient = useCallback(() => {
     if (!client.current) {
@@ -215,6 +275,23 @@ export default function TeamSimulator() {
     note(`Loaded slot ${slot}`);
   }
 
+  async function shareLink() {
+    // Write the hash now rather than wait out the debounce, so the copied link is
+    // exactly the team on screen.
+    const url = new URL(window.location.href);
+    const value = await encodeTeam(team);
+    lastHash.current = value;
+    url.hash = `${SHARE_PARAM}=${value}`;
+    history.replaceState(history.state, '', url);
+    try {
+      await navigator.clipboard.writeText(url.href);
+      note('Link copied');
+    } catch {
+      // No clipboard (http, permissions): the address bar already holds the link.
+      note('Copy the link from the address bar');
+    }
+  }
+
   async function exportTeam() {
     const text = JSON.stringify(team, null, 2);
     try {
@@ -238,18 +315,9 @@ export default function TeamSimulator() {
     try {
       const parsed = JSON.parse(importText) as Partial<TeamState>;
       if (!Array.isArray(parsed.slots)) throw new Error('no slots in that JSON');
-      const base = emptyTeam();
-      setTeam({
-        ...base,
-        ...parsed,
-        // Rebuild the slot list at full length: a short or padded array from an
-        // edited file would otherwise shift every slot after the gap.
-        slots: Array.from(
-          { length: base.slots.length },
-          (_, i) => parsed.slots?.[i] ?? { cardId: null, assistId: null, bonds: [] }
-        ),
-        groups: parsed.groups?.length ? parsed.groups : base.groups,
-      });
+      // normalizeTeam rebuilds the slot list at full length: a short or padded array
+      // from an edited file would otherwise shift every slot after the gap.
+      setTeam(normalizeTeam(parsed));
       setImportOpen(false);
       setImportText('');
       setShareNote('Team imported');
@@ -405,6 +473,14 @@ export default function TeamSimulator() {
               </button>
             </span>
           ))}
+          <button
+            type="button"
+            onClick={shareLink}
+            title="Copy a link that opens this exact team, boss and settings. The address bar always holds it too."
+            className="px-2 py-1 rounded border border-border text-xs text-secondary hover:text-primary"
+          >
+            Share
+          </button>
           <button
             type="button"
             onClick={exportTeam}
