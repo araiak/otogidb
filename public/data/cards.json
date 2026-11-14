@@ -30468,9 +30468,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -30502,7 +30506,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -30553,12 +30558,63 @@
             ],
             "date": "2026-02-25",
             "version": "ad1b1af"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-02-18T07:06:09.258531+00:00",
         "first_seen_version": "6fbeec8",
-        "last_modified": "2026-03-13T06:07:58.718902+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:16.278258+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1531",
       "image_urls": {
@@ -39315,17 +39371,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -39364,6 +39416,7 @@
         },
         "sources": [
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -39445,12 +39498,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "2 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847359+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.132620+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.322595+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1600",
       "image_urls": {
@@ -39559,17 +39668,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -39616,6 +39721,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -39717,12 +39823,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843397+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.108344+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.302773+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1601",
       "image_urls": {
@@ -39825,17 +39987,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -39882,6 +40040,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -39983,12 +40142,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843697+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.109936+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.304131+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1602",
       "image_urls": {
@@ -40248,17 +40463,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -40297,6 +40508,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -40369,12 +40581,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.845623+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.121400+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.313323+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1607",
       "image_urls": {
@@ -40703,17 +40971,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -40742,6 +41006,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -40966,12 +41231,68 @@
             ],
             "date": "2026-05-28",
             "version": "65edc6d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846218+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-28T07:23:31.851731+00:00",
-        "last_modified_version": "65edc6d"
+        "last_modified": "2026-11-14T13:26:16.316447+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1609",
       "image_urls": {
@@ -41240,17 +41561,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -41297,6 +41614,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -41398,12 +41716,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847629+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.134194+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.323958+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1610",
       "image_urls": {
@@ -41540,17 +41914,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 1000,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -41579,6 +41949,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -41759,12 +42130,68 @@
             ],
             "date": "2026-05-28",
             "version": "65edc6d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846503+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-28T07:23:31.853376+00:00",
-        "last_modified_version": "65edc6d"
+        "last_modified": "2026-11-14T13:26:16.318044+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1611",
       "image_urls": {
@@ -42023,17 +42450,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 5,
+          "price_min": 2,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -42072,6 +42495,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -42226,12 +42650,68 @@
             ],
             "date": "2026-05-28",
             "version": "65edc6d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 2,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.844828+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-28T07:23:31.844317+00:00",
-        "last_modified_version": "65edc6d"
+        "last_modified": "2026-11-14T13:26:16.309390+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1614",
       "image_urls": {
@@ -42369,17 +42849,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -42426,6 +42902,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -42527,12 +43004,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846803+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.129219+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.319627+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1615",
       "image_urls": {
@@ -42665,17 +43198,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 500,
+          "price_min": 30,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -42714,6 +43243,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -42786,12 +43316,68 @@
             ],
             "date": "2026-04-28",
             "version": "ae7c6a0"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 30,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.845937+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-04-28T15:12:15.123220+00:00",
-        "last_modified_version": "ae7c6a0"
+        "last_modified": "2026-11-14T13:26:16.314932+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1616",
       "image_urls": {
@@ -42900,17 +43486,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -42949,6 +43531,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -43169,12 +43752,68 @@
             ],
             "date": "2026-05-28",
             "version": "65edc6d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.845356+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-28T07:23:31.847197+00:00",
-        "last_modified_version": "65edc6d"
+        "last_modified": "2026-11-14T13:26:16.312013+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1617",
       "image_urls": {
@@ -43277,17 +43916,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gApple",
+          "end_date": "",
+          "is_time_limited": false,
+          "price_max": 50,
+          "price_min": 5,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -43326,6 +43961,7 @@
           "standard_pool_start": null
         },
         "sources": [
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -43546,12 +44182,68 @@
             ],
             "date": "2026-05-28",
             "version": "65edc6d"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 5,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gApple",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": false,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.845092+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-28T07:23:31.845753+00:00",
-        "last_modified_version": "65edc6d"
+        "last_modified": "2026-11-14T13:26:16.310689+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1618",
       "image_urls": {
@@ -43690,17 +44382,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2026-11-15",
-            "event_date": "2026-04-29",
-            "event_id": "178",
-            "event_name": "The Ninjas' Elegy",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-18 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": false,
         "daily": {
@@ -43747,6 +44435,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ],
         "stock_level": "unavailable"
@@ -43848,12 +44537,68 @@
             ],
             "date": "2026-05-07",
             "version": "21c7156"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "4 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "auction",
+                "old": "event"
+              },
+              {
+                "field": "acquisition.sources.3",
+                "new": "event",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847087+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-05-07T06:47:19.132080+00:00",
-        "last_modified_version": "21c7156"
+        "last_modified": "2026-11-14T13:26:16.321260+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "1619",
       "image_urls": {
@@ -175531,9 +176276,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -175603,11 +176348,28 @@
       "description": "<color=#f4e48e>\"When it comes to Spring, that's my season you know.\"</color><br/><color=#ef9843>The spirit transformed from the Greek goddess of flowers and fertility. </color>As an expert horticulturalist, any flower she has tended to will reach full bloom. With her serious and non-nonsense personality, she is always saying that her secret to having a green finger is to take delicate care of plants. Apparently she is even capable of conversing with plants; but for those who are unfamiliar with her abilities, they may mistake her for \"being a bit too exhausted\" when they see her talking to the trees or meadows. Although Juno is her only intimate friend and someone she confides in, she is also often a victim of her practical jokes……<br/><color=#f45d68>[Event] Black cherry blossom and demon blade</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.237307+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:15.993760+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "649",
       "image_urls": {
@@ -175828,9 +176590,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -175900,11 +176662,28 @@
       "description": "<color=#f4e48e>\"Such wonderful weather! It makes me want to dance with the wind! \"</color><br/><color=#ef9843>A spirit transformed from allergic rhinitis - a common ailment that comes with the pollination of plants in the spring. </color>Sometimes it can also manifest in the autumn. He would spread pollens unknowingly and as such, he is usually the culprit for causing symptoms such as sneezing and runny nose around him.  Due to his special traits, he had been alienated from others for years and this has gradually twisted his personality. But he is really very kind at heart; he can't even bear to abandon the sick and injured who are unattended. Although the situation is a bit tricky for others, he primarily socializes with tree spirits (because they are immune from pollinosis) and he is apparently fairly popular among those who accept him as a friend.<br/><color=#f45d68>[Event] Black cherry blossom and demon blade</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.239813+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:15.995152+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "650",
       "image_urls": {
@@ -176007,9 +176786,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -176079,11 +176858,28 @@
       "description": "<color=#f4e48e>\"Hey~~! It's time for a drink already! Hurry! \"</color><br/><color=#ef9843>A spirit transformed from man-made fermented wine during the ancient times. </color>The Manager of Hospitality and Catering who loves drinking and partying more than anyone else. Once intoxicated, she would cling to those around her and this has caused Poison S. Brew (her colleague) to stay clear of her... She was asked to host the Flower Viewing Party for the Bureau of the Occult, but to the surprise of everyone, all the flowers have been dyed black Wanting to get to the drinking as quickly as possible, she acted rashly out of her own accord in an effort to get the situation taken care of...<br/><color=#f45d68>[Event] Black cherry blossom and demon blade</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.241817+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:15.996495+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "651",
       "image_urls": {
@@ -177237,9 +178033,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -177309,11 +178105,28 @@
       "description": "<color=#f4e48e>\"There's no way I would do such a thing, would I? \"</color><br/><color=#ef9843>A spirit transformed from the famous 8th general of the Tokukawa Shogunate.  </color>He prioritizes the well-being of the people and would never hesitate to dish out punishment to villains and evil-doers who disrupt civil order. And as such, he is admired and respected by many. The sword skills he had learned from Matsuo Basho are second to none, and it makes him as powerful as Tosho Daigongen. But from time to time, he would get into the habit of yelling, \"Have you forgotten my face!?\" at someone he meets for the first time. Even though he claims such incidents to be simple moments of brain fart, apparently he has been doing it intentionally. He is a close friend of \"Sagittarius\" - the renowned God of Martial Arts and the two would meet from time to time to drink together. According to his somewhat chatty advisor Hiraga Gennai, his latest obsession lies in the ways of running away.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.256166+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:16.005691+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "658",
       "image_urls": {
@@ -177443,9 +178256,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -177515,11 +178328,28 @@
       "description": "<color=#f4e48e>\"Bwahaha♪ Freedom is such a wonderful thing.\"</color><br/><color=#ef9843>A spirit transformed from one of the grimoires that belonged to Lemegeton after he became aware of his own existence. </color>All of the five grimoires developed their own personalities, but one of them transformed into a spirit and left her former owner. Lemegeton became much weaker due to her loss of Theurgia. Despite her best efforts to track him down, Lemegeton has no clues as to his whereabouts. Incidentally, no one really knows what Theurgia is after now that he has earned his freedom.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.259261+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:16.007239+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "659",
       "image_urls": {
@@ -177736,9 +178566,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-10-18 15:00:00",
+          "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -177800,11 +178630,28 @@
       "description": "<color=#f4e48e>\"Superstar? What is that? \"</color><br/><color=#ef9843>A spirit that is known to dye cherry blossoms into black as a way to recreate a scene described by a poet during the Heian period.  </color>She is the childhood playmate of the Cherry Blossom Front and she is also a well-bred lady from an affluent family.  As Sumizome Zakura is older, she is in the habit of lecturing Cherry Blossom Front for her clumsiness. While she is a typical beauty with a calm and collected personality, she can be somewhat stubborn and a stickler for rules and conventions. Due to her strict upbringing, she has little knowledge of the outside world; characters in English that are written horizontally are entirely foreign to her...…At the Bureau of Occult's flower viewing party, she was called upon to aid in the process of restoring the black cherry blossoms to their former colors, but...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-18 15:00:00",
+                "old": "2025-10-18 15:00:00"
+              }
+            ],
+            "date": "2026-11-14",
+            "version": "9a1f22a"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.261281+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-14T13:26:16.008525+00:00",
+        "last_modified_version": "9a1f22a"
       },
       "id": "660",
       "image_urls": {
@@ -203918,5 +204765,5 @@
     }
   },
   "total_cards": 1049,
-  "version": "5b5e400"
+  "version": "9a1f22a"
 }
