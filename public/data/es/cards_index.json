@@ -9117,7 +9117,8 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
-          "exchange"
+          "exchange",
+          "auction"
         ]
       },
       "asset_id": "101531",
@@ -11214,6 +11215,7 @@
         "has_tower_drops": false,
         "sources": [
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -11280,6 +11282,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -11345,6 +11348,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -11472,6 +11476,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -11623,6 +11628,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -11753,6 +11759,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -11828,6 +11835,7 @@
       "acquisition": {
         "has_tower_drops": false,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -11954,6 +11962,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -12033,6 +12042,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -12106,6 +12116,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -12171,6 +12182,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -12234,6 +12246,7 @@
       "acquisition": {
         "has_tower_drops": true,
         "sources": [
+          "auction",
           "event"
         ]
       },
@@ -12308,6 +12321,7 @@
         "sources": [
           "gacha",
           "exchange",
+          "auction",
           "event"
         ]
       },
@@ -18268,7 +18282,7 @@
         }
       ],
       "gives_special_bond": false,
-      "has_bugs": false,
+      "has_bugs": true,
       "id": "1824",
       "image_urls": {
         "android": null,
@@ -68546,8 +68560,8 @@
       }
     }
   },
-  "data_hash": "7c57538b",
+  "data_hash": "fbea09f7",
   "locale": "es",
   "total_cards": 1049,
-  "version": "5b5e400"
+  "version": "9a1f22a"
 }
