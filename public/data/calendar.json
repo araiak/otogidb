@@ -1,21 +1,148 @@
 {
-  "generated_at": "2026-11-15T08:59:25Z",
-  "events": [],
+  "generated_at": "2026-11-17T08:06:16Z",
+  "events": [
+    {
+      "type": "conquest",
+      "event_id": "189",
+      "start": "2026-11-18T07:00:00Z",
+      "end": "2026-12-02T07:00:00Z",
+      "name": "天下一武具会",
+      "half": "2026-11-25T07:00:00Z",
+      "kill": "2026-12-04T07:00:00Z"
+    }
+  ],
   "banners": [
     {
       "type": "featured_banner",
-      "banner_id": "318",
-      "start": "2026-11-09T07:00:00Z",
-      "end": "2026-11-17T07:00:00Z",
+      "banner_id": "319",
+      "start": "2026-11-16T07:00:00Z",
+      "end": "2026-11-25T07:00:00Z",
       "cards": [
         {
-          "id": "1789"
+          "id": "1808"
+        },
+        {
+          "id": "1818"
+        },
+        {
+          "id": "1825"
+        }
+      ],
+      "pity_step": 35
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "320",
+      "start": "2026-11-25T07:00:00Z",
+      "end": "2026-11-29T07:00:00Z",
+      "cards": [
+        {
+          "id": "1827"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "320"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "321",
+      "start": "2026-11-29T07:00:00Z",
+      "end": "2026-12-02T07:00:00Z",
+      "cards": [
+        {
+          "id": "1828"
+        }
+      ],
+      "pity_step": 100,
+      "group_id": "320"
+    },
+    {
+      "type": "featured_banner",
+      "banner_id": "322",
+      "start": "2026-12-02T07:00:00Z",
+      "end": "2026-12-09T07:00:00Z",
+      "cards": [
+        {
+          "id": "1680"
         }
       ],
       "pity_step": 100
     }
   ],
   "exchanges": [
+    {
+      "type": "event_exchange",
+      "exchange_id": "1808",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-11-29T07:00:00Z",
+      "end": "2026-12-04T07:00:00Z",
+      "card": {
+        "id": "1808"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1825",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-11-29T07:00:00Z",
+      "end": "2026-12-04T07:00:00Z",
+      "card": {
+        "id": "1825"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1818",
+      "currency": "gApple",
+      "price": 50,
+      "limit": 5,
+      "start": "2026-11-29T07:00:00Z",
+      "end": "2026-12-04T07:00:00Z",
+      "card": {
+        "id": "1818"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1827",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-11-25T07:00:00Z",
+      "end": "2026-12-04T07:00:00Z",
+      "card": {
+        "id": "1827"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "1828",
+      "currency": "gApple",
+      "price": 200,
+      "limit": 1,
+      "start": "2026-11-25T07:00:00Z",
+      "end": "2026-12-04T07:00:00Z",
+      "card": {
+        "id": "1828"
+      }
+    },
+    {
+      "type": "event_exchange",
+      "exchange_id": "2016",
+      "currency": "gApple",
+      "price": 65,
+      "limit": 0,
+      "start": "2026-11-30T16:00:00Z",
+      "end": "2027-01-31T15:59:59Z",
+      "price_add": 15,
+      "card": {
+        "id": "2016"
+      }
+    },
     {
       "type": "event_exchange",
       "exchange_id": "1915",
@@ -567,6 +694,12 @@
       "event_name": "Halloween SOS",
       "event_date": "2026-10-18",
       "estimated_date": "2027-05-15"
+    },
+    {
+      "event_id": "189",
+      "event_name": "天下一武具会",
+      "event_date": "2026-11-20",
+      "estimated_date": "2027-06-15"
     }
   ]
 }

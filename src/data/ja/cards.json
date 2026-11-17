@@ -51382,11 +51382,20 @@
           "entries": []
         },
         "gacha": {
-          "featured_banners": [],
-          "in_standard_pool": false,
-          "standard_pool_start": null
+          "featured_banners": [
+            {
+              "end": "2026-12-09 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-12-02 15:00:00"
+            }
+          ],
+          "in_standard_pool": true,
+          "standard_pool_start": "2026-12-02 15:00:00"
         },
-        "sources": [],
+        "sources": [
+          "gacha"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101680",
@@ -51403,16 +51412,58 @@
       "description": "<color=#f4e48e>「ねえ、友達になってくれる？」</color><br/>この一言を伝えたいが為に必死で働きかけているのだが、一般人にとっては突然巻き起こる超常現象の原因でしかない。報われない<color=#ef9843>妖魔</color>である。誰か、友達になってあげてください。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.gacha.in_standard_pool",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.gacha.standard_pool_start",
+                "new": "2026-12-02 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-12-09 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-12-02 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.976706+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.976706+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.043426+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1680",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902813/otogi/android/101680_6790a4546797da13e7eee788a549dbef.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101680_hd_e6802c0089525c2dd90269280b586d7a.png"
       },
       "meta": {
         "album": true,
@@ -54009,14 +54060,6 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -57571,14 +57614,6 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -58241,14 +58276,6 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
-          "estimate": {
-            "confidence": "high",
-            "estimated_date": "2027-01-15",
-            "event_date": "2026-06-28",
-            "event_id": "182",
-            "event_name": "Interstellar Tanabata Festival",
-            "note": "Auctions typically start on the 15th, ~7 months after event"
-          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -63490,7 +63517,7 @@
           "featured_banners": [
             {
               "end": "2026-11-17 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 100,
               "start": "2026-11-09 15:00:00"
             }
@@ -64047,10 +64074,18 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64058,19 +64093,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-04 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-11-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-11-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-11-16 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101808",
@@ -64087,16 +64148,89 @@
       "description": "<color=#f4e48e>「…さて、ひと仕事かたづけるか」</color><br/>最高の狙撃兵として名を馳せた軍人。狙撃手として有名ではあるが、白兵戦ひとつとっても一級品であり、彼が赴いた戦場は絶えず静寂に包まれたと言われている。もちろん、彼があらゆる部隊を壊滅させた結果である。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-11-16 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.973734+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.973734+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.019370+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1808",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902810/otogi/android/101808_a24e371a85008fc8df047a032d00d552.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101808_hd_25cbed007d0890406ee5f643be0e69f8.png"
       },
       "meta": {
         "album": true,
@@ -64352,6 +64486,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -64363,8 +64505,36 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -64375,7 +64545,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101811",
@@ -64392,16 +64564,85 @@
       "description": "<color=#f4e48e>「フフ、客か？」</color><br/><color=#ef9843>ユーラシア大陸</color>を中心に、<color=#ef9843>武器</color>の流通を１手に担っていたあやかし。狂人を装うようそぶりをみせるが、ものすごく<color=#ef9843>常識人</color>だ。実はいいところのお嬢さんだったのではないだろうか。どこか人ならざる雰囲気を醸し出す。まぁ、そもそも人はではないのだが。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.974392+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.974392+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.024139+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1811",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902815/otogi/android/101811_c7d3743954673253b379c62e11df68a3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902817/otogi/cards_hd/101811_hd_5f9ac144f4d228445977a9a7329d4305.png"
       },
       "meta": {
         "album": true,
@@ -64537,6 +64778,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -64548,7 +64797,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -64560,7 +64815,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101816",
@@ -64577,16 +64834,47 @@
       "description": "<color=#f4e48e>「照準合わせ、目標を殲滅します」</color><br/>衛星軌道上に配備された巨大な<color=#ef9843>レーザー砲</color>のあやかし。宇宙空間から地上へと舞い降りる為、天使を模して造られたらしい。皮肉もいいところである。プログラムされた言葉しか発せない為、語彙は非常にすくないが、開発者の趣味か、ロボットアニメに影響された部分がちらほら見え隠れしている。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.975276+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.975276+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.031650+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1816",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902809/otogi/android/101816_a601b1ff6c8608f7c9e3623ab61bdb40.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101816_hd_fdc609e932808557d83fa779684afd9b.png"
       },
       "meta": {
         "album": true,
@@ -64691,10 +64979,18 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64702,19 +64998,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-04 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-11-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-11-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-11-16 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101818",
@@ -64731,16 +65053,89 @@
       "description": "<color=#f4e48e>「蛇退治もラクじゃねえ」</color><br/>神話の時代に<color=#ef9843>八岐大蛇</color>を退治するなど活躍したほか、持ち前のやんちゃっぷりで多方面に迷惑をかけていたあやかし。高天原では爪弾きものにされていたが、長い時を経て性格も多少丸くなり、今では結構楽しくやっているそうだ。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-11-16 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.974181+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.974181+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.022579+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1818",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902810/otogi/android/101818_354c30f11fa9ba001ba15033ee809967.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101818_hd_a33c9f66b6273f17a4fb890323671b6b.png"
       },
       "meta": {
         "album": true,
@@ -64871,6 +65266,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -64882,8 +65285,50 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 5,
+              "tier": "1"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 4,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 3,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -64894,7 +65339,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101819",
@@ -64911,16 +65358,107 @@
       "description": "<color=#f4e48e>「…いざ、尋常に―――」</color><br/>九十九神の<color=#ef9843>頂点</color>を決めると聞きつけ、本気を出すべく身も心も整えなおし、明鏡止水の境地にいる虎徹。さざ波すらたたない心に迷いはなく、ただ襲い来る相手を斬り捨てるのみに集中した姿。なのだが、ミタマのほんわかパワーにあてられて、割りと普段通りな一面を見せている。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "5 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.975767+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.975767+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.035643+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1819",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902813/otogi/android/101819_ed8129bb703ec36b13b1e4f03f3bb684.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101819_hd_006490416abb2fd45af2a628f1ccab29.png"
       },
       "meta": {
         "album": true,
@@ -65198,6 +65736,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65209,8 +65755,57 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -65221,7 +65816,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101823",
@@ -65238,16 +65835,118 @@
       "description": "<color=#f4e48e>「はぁぁ、斬り裂きたいわぁ」</color><br/><color=#ef9843>血</color>と<color=#ef9843>酒</color>と<color=#ef9843>殺戮</color>が大好物の女神様。とにかくエグい。切れ味するどい鎌は、魂をも切り刻むと言われ、恐れられている。月に一回、狩りを行いたい衝動に駆られ、一晩中瑞々しい魂を探してうろついているとか。要注意。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "6 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.974616+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.974616+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.026289+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1823",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902816/otogi/android/101823_532fa25ea122f12e35ac759ee23a8d64.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101823_hd_63d594d2544360899d65fce2c615397e.png"
       },
       "meta": {
         "album": true,
@@ -65348,6 +66047,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65359,8 +66066,57 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "4"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "5"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -65371,7 +66127,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101824",
@@ -65388,16 +66146,118 @@
       "description": "<color=#f4e48e>「私に何か用かな？」</color><br/><color=#ef9843>戦国最強</color>の武将、<color=#ef9843>本多忠勝</color>が所有していた槍の九十九神。切れ味は天下一品、美しさも<color=#ef9843>天下一品</color>。その槍のきらめきを見るだけで、多くの将兵は戦意を喪失したという。美しいものにはトゲがあるように、蜻蛉切りもまた、ひとたび見惚れたら最期なのだろう。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "6 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.974825+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.974825+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.028020+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1824",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902808/otogi/android/101824_79eef8e6e75dac0233c09cb6ec829be1.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101824_hd_0c0c4d2a9582f67d58bf713bba295b8a.png"
       },
       "meta": {
         "album": true,
@@ -65492,10 +66352,18 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65503,19 +66371,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-04 15:00:00",
+              "is_current": false,
+              "limit": 5,
+              "price": 50,
+              "start": "2026-11-29 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-11-25 15:00:00",
+              "is_current": true,
+              "pity": 35,
+              "start": "2026-11-16 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101825",
@@ -65532,16 +66426,89 @@
       "description": "<color=#f4e48e>「スサノオったら、また闘いばかり…」</color><br/>スサノオの許嫁である姫様。かつて<color=#ef9843>八岐大蛇</color>の生贄として捧げられた頃は、か弱き存在だったが数千年の間に修行して強くなった。スサノオですら、手を焼くほどである。ヒエラルキーでは完全に上。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-25 15:00:00",
+                  "is_current": true,
+                  "pity": 35,
+                  "start": "2026-11-16 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.973968+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.973968+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.020992+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1825",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902814/otogi/android/101825_77051792fd714d51a788d502ce31faf0.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902822/otogi/cards_hd/101825_hd_c0c084a1153e8fac5220e602c846b744.png"
       },
       "meta": {
         "album": true,
@@ -65640,6 +66607,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65651,7 +66626,13 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
@@ -65663,7 +66644,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101826",
@@ -65680,16 +66663,47 @@
       "description": "<color=#f4e48e>「痛いぞ、我が雷は」</color><br/>日本神話において、<color=#ef9843>雷神</color>や<color=#ef9843>剣</color>の神として崇められている。武器のコレクターでもあり、古今東西さまざまな武器を集めては、試し切りしている。その試し切りの余波が、落雷となって降り注いでいるとかいないとか。今回は武器同士の闘いを間近で見届けて、最強となった剣を手に入れようと思っていたようだ。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.975043+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.975043+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.029654+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1826",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902812/otogi/android/101826_2bfbb69426bb4291f513b9bf7063167d.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902823/otogi/cards_hd/101826_hd_ad023e727ff6b441983facc853bc427b.png"
       },
       "meta": {
         "album": true,
@@ -65828,6 +66842,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -65839,19 +66861,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-04 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-11-25 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-11-29 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-11-25 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101827",
@@ -65868,16 +66916,89 @@
       "description": "<color=#f4e48e>「よっしゃあ！いけー！」</color><br/><color=#ef9843>多連装ロケットシステム</color>の九十九神。とにかく体中にロケットミサイルを仕込んでおり、驚異的な弾幕性能がウリ。その代わり、狙った獲物に当てるのが苦手で、とにかくミサイルを放ることだけに特化しているようだ。発射がたまらなく快感らしい。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-11-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-11-29 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-11-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.975991+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.975991+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.037573+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1827",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902811/otogi/android/101827_b48c4d1b20d6e07c8499d262d0e882b3.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902820/otogi/cards_hd/101827_hd_6ba47d13d98031ada0416d1d38ce196b.png"
       },
       "meta": {
         "album": true,
@@ -66015,6 +67136,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66026,19 +67155,45 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
           "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2026-12-04 15:00:00",
+              "is_current": false,
+              "limit": 1,
+              "price": 200,
+              "start": "2026-11-25 15:00:00"
+            }
+          ]
         },
         "gacha": {
-          "featured_banners": [],
+          "featured_banners": [
+            {
+              "end": "2026-12-02 15:00:00",
+              "is_current": false,
+              "pity": 100,
+              "start": "2026-11-29 15:00:00"
+            }
+          ],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "gacha",
+          "exchange",
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101828",
@@ -66055,16 +67210,99 @@
       "description": "<color=#f4e48e>「なにが飛び出るかはお楽しみ！」</color><br/>魔法が込められた銃弾を、<color=#ef9843>これまた魔法が込められた銃</color>。魔力の弱い魔女が、肉弾戦に活路を見出し、魔銃という武器を生み出した。その戦いは身のこなしに優れ、撃ちだす魔法の煌めきの中で俊敏に飛び回る様から、ひとりサーカスとまで言われている。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "description",
+                "new": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Miranda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
+                "old": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Solanda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus."
+              },
+              {
+                "field": "name",
+                "new": "Miranda",
+                "old": "Solanda"
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-11-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.featured_banners",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.gacha.featured_banners.0",
+                "new": {
+                  "end": "2026-12-02 15:00:00",
+                  "is_current": false,
+                  "pity": 100,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "3 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "gacha",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "exchange",
+                "old": null
+              },
+              {
+                "field": "acquisition.sources.2",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.976211+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.976211+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.039493+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1828",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902807/otogi/android/101828_d57fc91708d7083033442400094fa21e.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101828_hd_24df571c5534ffac8699d398ec1524fa.png"
       },
       "meta": {
         "album": true,
@@ -66364,6 +67602,14 @@
       "acquisition": {
         "auction": {
           "available": false,
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-06-15",
+            "event_date": "2026-11-20",
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "price_max": null,
           "price_min": null
         },
@@ -66375,8 +67621,64 @@
           "schedule": []
         },
         "event": {
-          "from_description": [],
-          "reward_tiers": [],
+          "from_description": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false
+            }
+          ],
+          "reward_tiers": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 2,
+              "tier": "1"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "2"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "3"
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "is_current": false,
+              "quantity": 1,
+              "tier": "1"
+            }
+          ],
           "tower_drops": []
         },
         "exchange": {
@@ -66387,7 +67689,9 @@
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "event"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "101830",
@@ -66404,16 +67708,129 @@
       "description": "<color=#f4e48e>「ほほう、いいオンナがよりどりみどりだ」</color><br/>遊郭を練り歩くカブキ者。豪快で男気に溢れ、強きを挫く正義の男。<color=#ef9843>日本一</color>の遊郭でもその名は轟いており、彼に魅了された遊女は後を立たないらしい。一番の悩みは、ただひとりの女に出逢えないこと。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "7 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.975506+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.975506+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.033690+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1830",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902815/otogi/android/101830_4bbf1283d04c8e1832e43d1019d44485.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902825/otogi/cards_hd/101830_hd_e1f6a8ef472c74a8d56e340b9c292ba2.png"
       },
       "meta": {
         "album": true,
@@ -68426,50 +69843,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "187",
@@ -68634,12 +70008,89 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.952884+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.888879+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:10.002091+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1910",
       "image_urls": {
@@ -69060,29 +70511,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "187",
@@ -69212,12 +70641,56 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "3 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.952304+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.885059+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:09.998478+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1912",
       "image_urls": {
@@ -69349,50 +70822,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "5"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": [
             {
               "event_id": "187",
@@ -69557,12 +70987,89 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "6 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "5"
+                }
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.952597+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.886987+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:10.000331+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1913",
       "image_urls": {
@@ -70556,43 +72063,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 5,
-              "tier": "1"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 4,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 3,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "4"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -70712,12 +72183,78 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "5 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 5,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 4,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 3,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "4"
+                }
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.953846+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.895721+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:10.008314+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1918",
       "image_urls": {
@@ -71541,57 +73078,7 @@
               "is_current": false
             }
           ],
-          "reward_tiers": [
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 2,
-              "tier": "1"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "2"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "3"
-            },
-            {
-              "event_id": "187",
-              "event_name": "ハロウィンＳＯＳ",
-              "is_current": false,
-              "quantity": 1,
-              "tier": "1"
-            }
-          ],
+          "reward_tiers": [],
           "tower_drops": []
         },
         "exchange": {
@@ -71733,12 +73220,100 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.reward_tiers",
+                "new": "0 items",
+                "old": "7 items"
+              },
+              {
+                "field": "acquisition.event.reward_tiers.0",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.1",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.2",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.3",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 2,
+                  "tier": "1"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.4",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "2"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.5",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "3"
+                }
+              },
+              {
+                "field": "acquisition.event.reward_tiers.6",
+                "new": null,
+                "old": {
+                  "event_id": "187",
+                  "event_name": "Halloween SOS",
+                  "is_current": false,
+                  "quantity": 1,
+                  "tier": "1"
+                }
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2026-10-14T15:15:57.953540+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-10-18T04:18:40.893500+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:10.006329+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "1921",
       "image_urls": {
@@ -79588,14 +81163,25 @@
           "tower_drops": []
         },
         "exchange": {
-          "entries": []
+          "entries": [
+            {
+              "currency": "gApple",
+              "end": "2027-01-31 23:59:59",
+              "is_current": false,
+              "limit": 0,
+              "price": 65,
+              "start": "2026-12-01 00:00:00"
+            }
+          ]
         },
         "gacha": {
           "featured_banners": [],
           "in_standard_pool": false,
           "standard_pool_start": null
         },
-        "sources": [],
+        "sources": [
+          "exchange"
+        ],
         "stock_level": "unavailable"
       },
       "asset_id": "102016",
@@ -79612,16 +81198,50 @@
       "description": "<color=#f4e48e>「いい風が吹いて来た」</color><br/>大きな凧に乗っているので良く間違えられるのだが、武道家である。決して忍者ではない。非力であることの解決策として空中からの襲撃を思いつき、大凧を使うようになった。<color=#ef9843>それから、こちらもよく間違えられるのだが、彼女は女性である</color>。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2027-01-31 23:59:59",
+                  "is_current": false,
+                  "limit": 0,
+                  "price": 65,
+                  "start": "2026-12-01 00:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "exchange",
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2026-11-10T04:12:48.976916+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-10T04:12:48.976916+00:00",
-        "last_modified_version": "5b5e400"
+        "last_modified": "2026-11-17T08:07:10.045096+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "2016",
       "image_urls": {
-        "android": null,
-        "hd": null
+        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902811/otogi/android/102016_cfe28637b2a2e0bd4f0179261c4eca7b.png",
+        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902819/otogi/cards_hd/102016_hd_96307ec17c7571d2776a194f23d4a362.png"
       },
       "meta": {
         "album": true,
@@ -113271,7 +114891,17 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [
+                16
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -113301,11 +114931,36 @@
       "description": "<color=#f4e48e>「侮ることのないように、私は強いぞ？」</color><br/><color=#ef9843>日本のおとぎ話にて語られる小さき武士のあやかし。</color>どんなに不利な状況であろうと、逆転の機会を窺う不屈の武士。並々ならぬ努力により、金太郎にも劣らぬ膂力を誇る。打ち出の小槌の力を借りれば、一時的ではあるが体を巨大化することができる。もっとも巨大化といっても、元のサイズが小さいため、言うほど巨大になるわけではない。大体１m８0cmくらいだとか…<br/><color=#f45d68>[特務]Ghost in the Mirror</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [
+                    16
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.491435+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.133152+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-17T08:07:08.800458+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "333",
       "image_urls": {
@@ -187002,7 +188657,17 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [
+                32
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -187032,11 +188697,36 @@
       "description": "<color=#f4e48e>「オレ様の雷槌を食らって生きてるヤツはいねぇぜ！」</color><br/><color=#ef9843>北欧神話に登場する雷神のあやかし。</color>我が強くオレ様気質のわんぱく小僧で、自分が一番にならないと気が済まないタイプ。見た目はまだ幼いがその実力は雷神の名に相応しく、その気になれば全神々を敵に回しても戦いのけるほどの剛の者。ミョルニルの相棒で、守銭奴の彼女にそそのかされてはトラブルを起こすこともしばしば…。年頃の男の子ゆえに胸の大きなお姉さんには抗えないとか…。また、大食漢ながらこだわりが強く、自分が気に入った食べ方以外は頑として受け入れないらしい。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [
+                    32
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.351250+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-17T08:07:09.452279+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "703",
       "image_urls": {
@@ -187170,7 +188860,17 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [
+                48
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -187200,11 +188900,36 @@
       "description": "<color=#f4e48e>「ワシは新しいものには目がなくての！」</color><br/><color=#ef9843>大日本史を編纂した天下の副将軍のあやかし。</color>新し物好き、珍し物好きなアクティブ女子高生。（見た目は）あやかし化した際に時代劇の影響が強く出たためか、女性化した後も未だ老人言葉が抜けきらず、これも個性と開き直っているご様子。性格は老獪にして策士で、かの吉宗公も頭が上がらないほどの口達者とのこと。最近は印盒を見せても皆驚かなくなってきたので、別の手を思案中だとか…。ちなみに、日本でラーメンを初めて食べた人物としても有名だったりする。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [
+                    48
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.352754+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-17T08:07:09.454021+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "704",
       "image_urls": {
@@ -187339,7 +189064,17 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [
+                64
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -187369,11 +189104,36 @@
       "description": "<color=#f4e48e>「左舷20度ニ敵正反応ヲ確認。排除シマス」</color><br/><color=#ef9843>本来は作劇用語だったが、そこから転じた「機械仕掛けの神」というイメージがあやかしになった存在。</color>体内に無限機関という炉を持っており、あらゆる物質をエネルギーに転化することができる。その強さは得たエネルギーによって変化し、上限は設けられていないため、条件によってはすべてのあやかしを上回る可能性がある。ベースが機械であるために計算に強く、すべての事象を正確に数値化して分析することができるらしい。その反面か感情はいたって薄く、ロボット口調で話すためポンコツ扱いされるのが悩みとか…。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [
+                    64
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.355261+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-17T08:07:09.455721+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "705",
       "image_urls": {
@@ -187539,7 +189299,17 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": []
+          "tower_drops": [
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [
+                80
+              ],
+              "is_current": false
+            }
+          ]
         },
         "exchange": {
           "entries": []
@@ -187569,11 +189339,36 @@
       "description": "<color=#f4e48e>「この私に大食いで勝とうだなんて百万年早いわよ！」</color><br/><color=#ef9843>七つの大罪のうち暴食を司る地獄の大公のあやかし。</color>その罪に相応しく、食べることにおいて彼女に右に出るものはなく、名立たる大食い大会、早食い大会を次々と廃止に追い込んだ張本人。それだけでは飽き足らず、店舗ごとの大食いチャレンジ荒らしでも有名で、彼女のせいで廃業に追い込まれた店は星の数ほどとか…。正に悪魔の所業といえよう。ちなみに、長年思い煩っていた体臭問題は、ツリートップスターからプレゼントされた香水で解決したらしく最近は特にご機嫌のようだ。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.0",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [
+                    80
+                  ],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:58.357769+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-17T08:07:09.457731+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "706",
       "image_urls": {
@@ -195200,6 +196995,13 @@
                 16
               ],
               "is_current": false
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [],
+              "is_current": false
             }
           ]
         },
@@ -195419,12 +197221,34 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-18T04:18:40.372684+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:09.510031+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "735",
       "image_urls": {
@@ -195575,6 +197399,13 @@
               "floors": [
                 32
               ],
+              "is_current": false
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [],
               "is_current": false
             }
           ]
@@ -195773,12 +197604,34 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-18T04:18:40.374686+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:09.511870+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "736",
       "image_urls": {
@@ -195915,6 +197768,13 @@
               "floors": [
                 48
               ],
+              "is_current": false
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [],
               "is_current": false
             }
           ]
@@ -196113,12 +197973,34 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-18T04:18:40.376623+00:00",
-        "last_modified_version": "6117a12"
+        "last_modified": "2026-11-17T08:07:09.513676+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "737",
       "image_urls": {
@@ -196294,6 +198176,13 @@
                 64
               ],
               "is_current": false
+            },
+            {
+              "event_id": "189",
+              "event_name": "天下一武具会",
+              "first_seen": "2026-11-17",
+              "floors": [],
+              "is_current": false
             }
           ]
         },
@@ -196431,12 +198320,34 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.event.tower_drops",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.event.tower_drops.1",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "天下一武具会",
+                  "first_seen": "2026-11-17",
+                  "floors": [],
+                  "is_current": false
+                },
+                "old": null
+              }
+            ],
+            "date": "2026-11-17",
+            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-09-29T07:51:49.436016+00:00",
-        "last_modified_version": "e8b5e91"
+        "last_modified": "2026-11-17T08:07:09.515885+00:00",
+        "last_modified_version": "cf77c3c"
       },
       "id": "738",
       "image_urls": {
@@ -204790,5 +206701,5 @@
   },
   "locale": "ja_JP",
   "total_cards": 1049,
-  "version": "9a1f22a"
+  "version": "cf77c3c"
 }
