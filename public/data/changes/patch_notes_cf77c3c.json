@@ -1,0 +1,2349 @@
+{
+  "version": "cf77c3c",
+  "version_date": "2026-11-17",
+  "previous_version": "9a1f22a",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 28
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "706",
+      "name": "Beelzebub [Gula]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634621/otogi/cards_hd/100706_hd_820775336fdfd7aeef8908d53763395d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [
+              80
+            ],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [80], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "738",
+      "name": "Cao Cao [3rd anniversary]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634652/otogi/cards_hd/100738_hd_9bc45cac7b0ea407fcbb667db5386b50.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Tower Drops: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.1",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1680",
+      "name": "Poltergeist",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101680_hd_e6802c0089525c2dd90269280b586d7a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.in_standard_pool",
+          "field_label": "In Standard Pool",
+          "old": false,
+          "new": true,
+          "display": "In Standard Pool: False → True (+1)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.standard_pool_start",
+          "field_label": "Standard Pool Start",
+          "old": null,
+          "new": "2026-12-02 15:00:00",
+          "display": "Standard Pool Start: Added (2026-12-02 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-12-02 15:00:00",
+            "end": "2026-12-09 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-12-02 15:00:00', 'end': '2026-12-09 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        }
+      ]
+    },
+    {
+      "id": "1816",
+      "name": "Satellite Cannon",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101816_hd_fdc609e932808557d83fa779684afd9b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1819",
+      "name": "Kotetsu [Focused]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101819_hd_006490416abb2fd45af2a628f1ccab29.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "5 items",
+          "display": "Reward Tiers: 0 items → 5 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 5, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 4, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 3, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 2, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1826",
+      "name": "Takemikazuchi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902823/otogi/cards_hd/101826_hd_ad023e727ff6b441983facc853bc427b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1827",
+      "name": "MLRS",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902820/otogi/cards_hd/101827_hd_6ba47d13d98031ada0416d1d38ce196b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-11-25 15:00:00",
+            "end": "2026-12-04 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-11-25 15:00:00', 'end': '2026-12-04 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-11-25 15:00:00",
+            "end": "2026-11-29 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-11-25 15:00:00', 'end': '2026-11-29 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Sources: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1828",
+      "name": "Miranda",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101828_hd_24df571c5534ffac8699d398ec1524fa.png",
+      "changes": [
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "description",
+          "field_label": "Description",
+          "old": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Solanda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
+          "new": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Miranda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
+          "display": "Description: Updated"
+        },
+        {
+          "category": "info",
+          "category_label": "Info",
+          "field": "name",
+          "field_label": "Name",
+          "old": "Solanda",
+          "new": "Miranda",
+          "display": "Name: Solanda → Miranda"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-11-25 15:00:00",
+            "end": "2026-12-04 15:00:00",
+            "price": 200,
+            "currency": "gApple",
+            "limit": 1,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-11-25 15:00:00', 'end': '2026-12-04 15:00:00', 'price': 200, 'currency': 'gApple', 'limit': 1, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-11-29 15:00:00",
+            "end": "2026-12-02 15:00:00",
+            "pity": 100,
+            "is_current": false
+          },
+          "display": "Featured Banners: Added ({'start': '2026-11-29 15:00:00', 'end': '2026-12-02 15:00:00', 'pity': 100, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Sources: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1830",
+      "name": "Maeda Toshimasu",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902825/otogi/cards_hd/101830_hd_e1f6a8ef472c74a8d56e340b9c292ba2.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "7 items",
+          "display": "Reward Tiers: 0 items → 7 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 2, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1918",
+      "name": "Walpurgis Night",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990954/otogi/cards_hd/101918_hd_10823a4eb4db98944f37e0f3f51cae0f.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "5 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 5 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 5,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 4,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 3,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 2,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1921",
+      "name": "Jack-O-Lantern [Revival]",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990947/otogi/cards_hd/101921_hd_afab07949cc89da9707d74033deb9051.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "7 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 7 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 2,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.6",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "2016",
+      "name": "Big Kite Zamashi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902819/otogi/cards_hd/102016_hd_96307ec17c7571d2776a194f23d4a362.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-12-01 00:00:00",
+            "end": "2027-01-31 23:59:59",
+            "price": 65,
+            "currency": "gApple",
+            "limit": 0,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-12-01 00:00:00', 'end': '2027-01-31 23:59:59', 'price': 65, 'currency': 'gApple', 'limit': 0, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        }
+      ]
+    },
+    {
+      "id": "704",
+      "name": "Mito Mitsukuni",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634619/otogi/cards_hd/100704_hd_06ea331902c4fd32d58c15fc71a9d217.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [
+              48
+            ],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [48], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "705",
+      "name": "Deus Ex Machina",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634620/otogi/cards_hd/100705_hd_1758628a8612d6f1389b2b637d4927e4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [
+              64
+            ],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [64], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "736",
+      "name": "Meito Kotetsu [3rd anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634650/otogi/cards_hd/100736_hd_a0bce40848a391c6fae92262ced3773e.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Tower Drops: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.1",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "737",
+      "name": "Pipe Fox [3rd anniversary]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634651/otogi/cards_hd/100737_hd_57cd065347aedf8033f8a8f1c68fb3c4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Tower Drops: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.1",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1808",
+      "name": "Sharp-Shooting Simeon",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101808_hd_25cbed007d0890406ee5f643be0e69f8.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-11-29 15:00:00",
+            "end": "2026-12-04 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-11-29 15:00:00', 'end': '2026-12-04 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-11-16 15:00:00",
+            "end": "2026-11-25 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-11-16 15:00:00', 'end': '2026-11-25 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Sources: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1818",
+      "name": "Susanoo",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101818_hd_a33c9f66b6273f17a4fb890323671b6b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-11-29 15:00:00",
+            "end": "2026-12-04 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-11-29 15:00:00', 'end': '2026-12-04 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-11-16 15:00:00",
+            "end": "2026-11-25 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-11-16 15:00:00', 'end': '2026-11-25 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Sources: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1823",
+      "name": "Kali",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101823_hd_63d594d2544360899d65fce2c615397e.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1824",
+      "name": "Tadakatsu's Tonbogiri",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101824_hd_0c0c4d2a9582f67d58bf713bba295b8a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "6 items",
+          "display": "Reward Tiers: 0 items → 6 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '1', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '4', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '2', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '3', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1825",
+      "name": "Princess Kushinada",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902822/otogi/cards_hd/101825_hd_c0c084a1153e8fac5220e602c846b744.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries",
+          "field_label": "Exchange Entries",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Exchange Entries: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.exchange.entries.0",
+          "field_label": "Exchange Entries",
+          "old": null,
+          "new": {
+            "start": "2026-11-29 15:00:00",
+            "end": "2026-12-04 15:00:00",
+            "price": 50,
+            "currency": "gApple",
+            "limit": 5,
+            "is_current": false
+          },
+          "display": "Exchange Entries: Added ({'start': '2026-11-29 15:00:00', 'end': '2026-12-04 15:00:00', 'price': 50, 'currency': 'gApple', 'limit': 5, 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners",
+          "field_label": "Featured Banners",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Featured Banners: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.gacha.featured_banners.0",
+          "field_label": "Featured Banners",
+          "old": null,
+          "new": {
+            "start": "2026-11-16 15:00:00",
+            "end": "2026-11-25 15:00:00",
+            "pity": 35,
+            "is_current": true
+          },
+          "display": "Featured Banners: Added ({'start': '2026-11-16 15:00:00', 'end': '2026-11-25 15:00:00', 'pity': 35, 'is_current': True})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Sources: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "gacha",
+          "display": "Sources: Added (gacha)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "exchange",
+          "display": "Sources: Added (exchange)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.2",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1910",
+      "name": "Blood-Soaked Candy",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990953/otogi/cards_hd/101910_hd_38f3431e641dd0d8277636de13f4b24a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "1913",
+      "name": "Dark Night Dress",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990952/otogi/cards_hd/101913_hd_196c14a5fe64d66fe10529679f95e8c4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "6 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 6 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "1",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "2",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.3",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "3",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.4",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "4",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.5",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    },
+    {
+      "id": "333",
+      "name": "Issun Boshi",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634228/otogi/cards_hd/100333_hd_a6b1086e08f6c1abb88c819a426e12c2.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [
+              16
+            ],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [16], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "703",
+      "name": "Thor",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634618/otogi/cards_hd/100703_hd_ef3a44980193b623b3b9f598bc5345b7.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Tower Drops: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.0",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [
+              32
+            ],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [32], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "735",
+      "name": "Charon",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634649/otogi/cards_hd/100735_hd_3acc71c1dc7a2772a937a79291a54ac9.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops",
+          "field_label": "Tower Drops",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Tower Drops: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.tower_drops.1",
+          "field_label": "Tower Drops",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "floors": [],
+            "first_seen": "2026-11-17",
+            "is_current": false
+          },
+          "display": "Tower Drops: Added ({'event_id': '189', 'event_name': '天下一武具会', 'floors': [], 'first_seen': '2026-11-17', 'is_current': False})"
+        }
+      ]
+    },
+    {
+      "id": "1811",
+      "name": "Merchant of Death",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902817/otogi/cards_hd/101811_hd_5f9ac144f4d228445977a9a7329d4305.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description",
+          "field_label": "From Description",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "From Description: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.from_description.189",
+          "field_label": "From Description",
+          "old": null,
+          "new": {
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "From Description: Added ({'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "0 items",
+          "new": "3 items",
+          "display": "Reward Tiers: 0 items → 3 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": null,
+          "new": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "189",
+            "event_name": "天下一武具会",
+            "is_current": false
+          },
+          "display": "Reward Tiers: Added ({'tier': '5', 'quantity': 1, 'event_id': '189', 'event_name': '天下一武具会', 'is_current': False})"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "0 items",
+          "new": "1 items",
+          "display": "Sources: 0 items → 1 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.0",
+          "field_label": "Sources",
+          "old": null,
+          "new": "event",
+          "display": "Sources: Added (event)"
+        }
+      ]
+    },
+    {
+      "id": "1912",
+      "name": "Skeleton Knight",
+      "rarity": 3,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1791990955/otogi/cards_hd/101912_hd_6d2e03836d0aff99d924a4199234690c.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers",
+          "field_label": "Reward Tiers",
+          "old": "3 items",
+          "new": "0 items",
+          "display": "Reward Tiers: 3 items → 0 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.0",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.1",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.event.reward_tiers.2",
+          "field_label": "Reward Tiers",
+          "old": {
+            "tier": "5",
+            "quantity": 1,
+            "event_id": "187",
+            "event_name": "Halloween SOS",
+            "is_current": false
+          },
+          "new": null,
+          "display": "Reward Tiers: Removed"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "gachaContents": {
+      "old_count": 767,
+      "new_count": 768,
+      "diff": 1
+    },
+    "cardInit": {
+      "old_count": 488,
+      "new_count": 499,
+      "diff": 11
+    },
+    "eventHelpers": {
+      "old_count": 11,
+      "new_count": 12,
+      "diff": 1
+    },
+    "towerEpisode": {
+      "old_count": 64,
+      "new_count": 80,
+      "diff": 16
+    },
+    "eventRankings": {
+      "old_count": 19,
+      "new_count": 19,
+      "diff": 0
+    },
+    "gachaPromo": {
+      "old_count": 178,
+      "new_count": 178,
+      "diff": 0
+    },
+    "eventSettings": {
+      "old_count": 1,
+      "new_count": 1,
+      "diff": 0
+    },
+    "gachaGuarentee": {
+      "old_count": 209,
+      "new_count": 213,
+      "diff": 4
+    },
+    "towerChapter": {
+      "old_count": 4,
+      "new_count": 5,
+      "diff": 1
+    },
+    "banner": {
+      "old_count": 590,
+      "new_count": 598,
+      "diff": 8
+    },
+    "gachaTrade": {
+      "old_count": 366,
+      "new_count": 372,
+      "diff": 6
+    }
+  }
+}
