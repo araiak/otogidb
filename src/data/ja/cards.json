@@ -51416,16 +51416,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.gacha.in_standard_pool",
-                "new": true,
-                "old": false
-              },
-              {
-                "field": "acquisition.gacha.standard_pool_start",
-                "new": "2026-12-02 15:00:00",
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -51438,6 +51428,16 @@
                   "pity": 100,
                   "start": "2026-12-02 15:00:00"
                 },
+                "old": null
+              },
+              {
+                "field": "acquisition.gacha.in_standard_pool",
+                "new": true,
+                "old": false
+              },
+              {
+                "field": "acquisition.gacha.standard_pool_start",
+                "new": "2026-12-02 15:00:00",
                 "old": null
               },
               {
@@ -51457,13 +51457,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.976706+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.043426+00:00",
+        "last_modified": "2026-11-17T09:12:26.204302+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1680",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902813/otogi/android/101680_6790a4546797da13e7eee788a549dbef.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101680_hd_e6802c0089525c2dd90269280b586d7a.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -54060,6 +54060,14 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-01-15",
+            "event_date": "2026-06-28",
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -57614,6 +57622,14 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-01-15",
+            "event_date": "2026-06-28",
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -58276,6 +58292,14 @@
           "available": false,
           "currency": "gold",
           "end_date": "2026-08-22 15:00:00",
+          "estimate": {
+            "confidence": "high",
+            "estimated_date": "2027-01-15",
+            "event_date": "2026-06-28",
+            "event_id": "182",
+            "event_name": "Interstellar Tanabata Festival",
+            "note": "Auctions typically start on the 15th, ~7 months after event"
+          },
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -64079,7 +64103,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -64152,37 +64176,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.exchange.entries",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.exchange.entries.0",
-                "new": {
-                  "currency": "gApple",
-                  "end": "2026-12-04 15:00:00",
-                  "is_current": false,
-                  "limit": 5,
-                  "price": 50,
-                  "start": "2026-11-29 15:00:00"
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -64216,6 +64209,37 @@
                 "field": "acquisition.sources.2",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-11-17",
@@ -64224,13 +64248,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.973734+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.019370+00:00",
+        "last_modified": "2026-11-17T09:12:26.170684+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1808",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902810/otogi/android/101808_a24e371a85008fc8df047a032d00d552.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101808_hd_25cbed007d0890406ee5f643be0e69f8.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -64491,7 +64515,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -64568,17 +64592,13 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.from_description",
+                "field": "acquisition.sources",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
+                "field": "acquisition.sources.0",
+                "new": "event",
                 "old": null
               },
               {
@@ -64590,7 +64610,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -64601,7 +64621,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -64612,7 +64632,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -64620,13 +64640,17 @@
                 "old": null
               },
               {
-                "field": "acquisition.sources",
+                "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.sources.0",
-                "new": "event",
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
                 "old": null
               }
             ],
@@ -64636,13 +64660,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.974392+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.024139+00:00",
+        "last_modified": "2026-11-17T09:12:26.177673+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1811",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902815/otogi/android/101811_c7d3743954673253b379c62e11df68a3.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902817/otogi/cards_hd/101811_hd_5f9ac144f4d228445977a9a7329d4305.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -64783,7 +64807,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -64838,6 +64862,16 @@
           {
             "changes": [
               {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              },
+              {
                 "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
@@ -64846,19 +64880,9 @@
                 "field": "acquisition.event.from_description.189",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false
                 },
-                "old": null
-              },
-              {
-                "field": "acquisition.sources",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.sources.0",
-                "new": "event",
                 "old": null
               }
             ],
@@ -64868,13 +64892,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.975276+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.031650+00:00",
+        "last_modified": "2026-11-17T09:12:26.187594+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1816",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902809/otogi/android/101816_a601b1ff6c8608f7c9e3623ab61bdb40.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101816_hd_fdc609e932808557d83fa779684afd9b.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -64984,7 +65008,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -65057,37 +65081,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.exchange.entries",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.exchange.entries.0",
-                "new": {
-                  "currency": "gApple",
-                  "end": "2026-12-04 15:00:00",
-                  "is_current": false,
-                  "limit": 5,
-                  "price": 50,
-                  "start": "2026-11-29 15:00:00"
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -65121,6 +65114,37 @@
                 "field": "acquisition.sources.2",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-11-17",
@@ -65129,13 +65153,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.974181+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.022579+00:00",
+        "last_modified": "2026-11-17T09:12:26.175229+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1818",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902810/otogi/android/101818_354c30f11fa9ba001ba15033ee809967.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902818/otogi/cards_hd/101818_hd_a33c9f66b6273f17a4fb890323671b6b.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -65271,7 +65295,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -65362,17 +65386,13 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.from_description",
+                "field": "acquisition.sources",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
+                "field": "acquisition.sources.0",
+                "new": "event",
                 "old": null
               },
               {
@@ -65384,7 +65404,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 5,
                   "tier": "1"
@@ -65395,7 +65415,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 4,
                   "tier": "2"
@@ -65406,7 +65426,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 3,
                   "tier": "3"
@@ -65417,7 +65437,7 @@
                 "field": "acquisition.event.reward_tiers.3",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "3"
@@ -65428,7 +65448,7 @@
                 "field": "acquisition.event.reward_tiers.4",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -65436,13 +65456,17 @@
                 "old": null
               },
               {
-                "field": "acquisition.sources",
+                "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.sources.0",
-                "new": "event",
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
                 "old": null
               }
             ],
@@ -65452,13 +65476,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.975767+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.035643+00:00",
+        "last_modified": "2026-11-17T09:12:26.193344+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1819",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902813/otogi/android/101819_ed8129bb703ec36b13b1e4f03f3bb684.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101819_hd_006490416abb2fd45af2a628f1ccab29.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -65741,7 +65765,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -65839,17 +65863,13 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.from_description",
+                "field": "acquisition.sources",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
+                "field": "acquisition.sources.0",
+                "new": "event",
                 "old": null
               },
               {
@@ -65861,7 +65881,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "1"
@@ -65872,7 +65892,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -65883,7 +65903,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -65894,7 +65914,7 @@
                 "field": "acquisition.event.reward_tiers.3",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -65905,7 +65925,7 @@
                 "field": "acquisition.event.reward_tiers.4",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -65916,7 +65936,7 @@
                 "field": "acquisition.event.reward_tiers.5",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -65924,13 +65944,17 @@
                 "old": null
               },
               {
-                "field": "acquisition.sources",
+                "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.sources.0",
-                "new": "event",
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
                 "old": null
               }
             ],
@@ -65940,13 +65964,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.974616+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.026289+00:00",
+        "last_modified": "2026-11-17T09:12:26.180087+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1823",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902816/otogi/android/101823_532fa25ea122f12e35ac759ee23a8d64.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902827/otogi/cards_hd/101823_hd_63d594d2544360899d65fce2c615397e.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -66052,7 +66076,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -66150,17 +66174,13 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.from_description",
+                "field": "acquisition.sources",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
+                "field": "acquisition.sources.0",
+                "new": "event",
                 "old": null
               },
               {
@@ -66172,7 +66192,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "1"
@@ -66183,7 +66203,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -66194,7 +66214,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "4"
@@ -66205,7 +66225,7 @@
                 "field": "acquisition.event.reward_tiers.3",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -66216,7 +66236,7 @@
                 "field": "acquisition.event.reward_tiers.4",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -66227,7 +66247,7 @@
                 "field": "acquisition.event.reward_tiers.5",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "5"
@@ -66235,13 +66255,17 @@
                 "old": null
               },
               {
-                "field": "acquisition.sources",
+                "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.sources.0",
-                "new": "event",
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
                 "old": null
               }
             ],
@@ -66251,13 +66275,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.974825+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.028020+00:00",
+        "last_modified": "2026-11-17T09:12:26.182366+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1824",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902808/otogi/android/101824_79eef8e6e75dac0233c09cb6ec829be1.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902824/otogi/cards_hd/101824_hd_0c0c4d2a9582f67d58bf713bba295b8a.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -66357,7 +66381,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -66430,37 +66454,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.exchange.entries",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.exchange.entries.0",
-                "new": {
-                  "currency": "gApple",
-                  "end": "2026-12-04 15:00:00",
-                  "is_current": false,
-                  "limit": 5,
-                  "price": 50,
-                  "start": "2026-11-29 15:00:00"
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -66494,6 +66487,37 @@
                 "field": "acquisition.sources.2",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 5,
+                  "price": 50,
+                  "start": "2026-11-29 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-11-17",
@@ -66502,13 +66526,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.973968+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.020992+00:00",
+        "last_modified": "2026-11-17T09:12:26.172951+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1825",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902814/otogi/android/101825_77051792fd714d51a788d502ce31faf0.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902822/otogi/cards_hd/101825_hd_c0c084a1153e8fac5220e602c846b744.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -66612,7 +66636,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -66667,6 +66691,16 @@
           {
             "changes": [
               {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "event",
+                "old": null
+              },
+              {
                 "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
@@ -66675,19 +66709,9 @@
                 "field": "acquisition.event.from_description.189",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false
                 },
-                "old": null
-              },
-              {
-                "field": "acquisition.sources",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.sources.0",
-                "new": "event",
                 "old": null
               }
             ],
@@ -66697,13 +66721,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.975043+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.029654+00:00",
+        "last_modified": "2026-11-17T09:12:26.184716+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1826",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902812/otogi/android/101826_2bfbb69426bb4291f513b9bf7063167d.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902823/otogi/cards_hd/101826_hd_ad023e727ff6b441983facc853bc427b.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -66847,7 +66871,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -66920,37 +66944,6 @@
           {
             "changes": [
               {
-                "field": "acquisition.exchange.entries",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.exchange.entries.0",
-                "new": {
-                  "currency": "gApple",
-                  "end": "2026-12-04 15:00:00",
-                  "is_current": false,
-                  "limit": 1,
-                  "price": 200,
-                  "start": "2026-11-25 15:00:00"
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -66984,6 +66977,37 @@
                 "field": "acquisition.sources.2",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-11-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
+                "old": null
               }
             ],
             "date": "2026-11-17",
@@ -66992,13 +67016,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.975991+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.037573+00:00",
+        "last_modified": "2026-11-17T09:12:26.196095+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1827",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902811/otogi/android/101827_b48c4d1b20d6e07c8499d262d0e882b3.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902820/otogi/cards_hd/101827_hd_6ba47d13d98031ada0416d1d38ce196b.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -67141,7 +67165,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -67214,47 +67238,6 @@
           {
             "changes": [
               {
-                "field": "description",
-                "new": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Miranda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
-                "old": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Solanda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus."
-              },
-              {
-                "field": "name",
-                "new": "Miranda",
-                "old": "Solanda"
-              },
-              {
-                "field": "acquisition.exchange.entries",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.exchange.entries.0",
-                "new": {
-                  "currency": "gApple",
-                  "end": "2026-12-04 15:00:00",
-                  "is_current": false,
-                  "limit": 1,
-                  "price": 200,
-                  "start": "2026-11-25 15:00:00"
-                },
-                "old": null
-              },
-              {
-                "field": "acquisition.event.from_description",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
-                "old": null
-              },
-              {
                 "field": "acquisition.gacha.featured_banners",
                 "new": "1 items",
                 "old": "0 items"
@@ -67288,6 +67271,47 @@
                 "field": "acquisition.sources.2",
                 "new": "event",
                 "old": null
+              },
+              {
+                "field": "acquisition.exchange.entries",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.exchange.entries.0",
+                "new": {
+                  "currency": "gApple",
+                  "end": "2026-12-04 15:00:00",
+                  "is_current": false,
+                  "limit": 1,
+                  "price": 200,
+                  "start": "2026-11-25 15:00:00"
+                },
+                "old": null
+              },
+              {
+                "field": "acquisition.event.from_description",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
+                "old": null
+              },
+              {
+                "field": "description",
+                "new": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Miranda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus.",
+                "old": "<color=#f4e48e>\"Just you wait and see what I've got in store for you!\"</color><br/>A <color=#ef9843>gun imbued with evil magic</color> and loaded with (you guessed it) evil magic bullets. She was forged by a lackluster witch who favored physical combat to relying on spells. A real dazzler out on the battlefield, the sight of Solanda's magical bullets sparking and whooshing elegantly through the air has led some to describe her as a one-woman circus."
+              },
+              {
+                "field": "name",
+                "new": "Miranda",
+                "old": "Solanda"
               }
             ],
             "date": "2026-11-17",
@@ -67296,13 +67320,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.976211+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.039493+00:00",
+        "last_modified": "2026-11-17T09:12:26.198903+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1828",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902807/otogi/android/101828_d57fc91708d7083033442400094fa21e.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902821/otogi/cards_hd/101828_hd_24df571c5534ffac8699d398ec1524fa.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -67607,7 +67631,7 @@
             "estimated_date": "2027-06-15",
             "event_date": "2026-11-20",
             "event_id": "189",
-            "event_name": "天下一武具会",
+            "event_name": "Wondrous World of Weaponry",
             "note": "Auctions typically start on the 15th, ~7 months after event"
           },
           "price_max": null,
@@ -67712,17 +67736,13 @@
           {
             "changes": [
               {
-                "field": "acquisition.event.from_description",
+                "field": "acquisition.sources",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.event.from_description.189",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "is_current": false
-                },
+                "field": "acquisition.sources.0",
+                "new": "event",
                 "old": null
               },
               {
@@ -67734,7 +67754,7 @@
                 "field": "acquisition.event.reward_tiers.0",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "1"
@@ -67745,7 +67765,7 @@
                 "field": "acquisition.event.reward_tiers.1",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -67756,7 +67776,7 @@
                 "field": "acquisition.event.reward_tiers.2",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -67767,7 +67787,7 @@
                 "field": "acquisition.event.reward_tiers.3",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 2,
                   "tier": "1"
@@ -67778,7 +67798,7 @@
                 "field": "acquisition.event.reward_tiers.4",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "2"
@@ -67789,7 +67809,7 @@
                 "field": "acquisition.event.reward_tiers.5",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "3"
@@ -67800,7 +67820,7 @@
                 "field": "acquisition.event.reward_tiers.6",
                 "new": {
                   "event_id": "189",
-                  "event_name": "天下一武具会",
+                  "event_name": "Wondrous World of Weaponry",
                   "is_current": false,
                   "quantity": 1,
                   "tier": "1"
@@ -67808,13 +67828,17 @@
                 "old": null
               },
               {
-                "field": "acquisition.sources",
+                "field": "acquisition.event.from_description",
                 "new": "1 items",
                 "old": "0 items"
               },
               {
-                "field": "acquisition.sources.0",
-                "new": "event",
+                "field": "acquisition.event.from_description.189",
+                "new": {
+                  "event_id": "189",
+                  "event_name": "Wondrous World of Weaponry",
+                  "is_current": false
+                },
                 "old": null
               }
             ],
@@ -67824,13 +67848,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.975506+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.033690+00:00",
+        "last_modified": "2026-11-17T09:12:26.190560+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1830",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902815/otogi/android/101830_4bbf1283d04c8e1832e43d1019d44485.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902825/otogi/cards_hd/101830_hd_e1f6a8ef472c74a8d56e340b9c292ba2.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -70089,7 +70113,7 @@
         ],
         "first_seen": "2026-10-14T15:15:57.952884+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-11-17T08:07:10.002091+00:00",
+        "last_modified": "2026-11-17T09:12:26.144872+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1910",
@@ -70689,7 +70713,7 @@
         ],
         "first_seen": "2026-10-14T15:15:57.952304+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-11-17T08:07:09.998478+00:00",
+        "last_modified": "2026-11-17T09:12:26.138364+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1912",
@@ -71068,7 +71092,7 @@
         ],
         "first_seen": "2026-10-14T15:15:57.952597+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-11-17T08:07:10.000331+00:00",
+        "last_modified": "2026-11-17T09:12:26.142185+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1913",
@@ -72253,7 +72277,7 @@
         ],
         "first_seen": "2026-10-14T15:15:57.953846+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-11-17T08:07:10.008314+00:00",
+        "last_modified": "2026-11-17T09:12:26.154624+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1918",
@@ -73312,7 +73336,7 @@
         ],
         "first_seen": "2026-10-14T15:15:57.953540+00:00",
         "first_seen_version": "8194262",
-        "last_modified": "2026-11-17T08:07:10.006329+00:00",
+        "last_modified": "2026-11-17T09:12:26.151219+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "1921",
@@ -81202,6 +81226,16 @@
           {
             "changes": [
               {
+                "field": "acquisition.sources",
+                "new": "1 items",
+                "old": "0 items"
+              },
+              {
+                "field": "acquisition.sources.0",
+                "new": "exchange",
+                "old": null
+              },
+              {
                 "field": "acquisition.exchange.entries",
                 "new": "1 items",
                 "old": "0 items"
@@ -81217,16 +81251,6 @@
                   "start": "2026-12-01 00:00:00"
                 },
                 "old": null
-              },
-              {
-                "field": "acquisition.sources",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.sources.0",
-                "new": "exchange",
-                "old": null
               }
             ],
             "date": "2026-11-17",
@@ -81235,13 +81259,13 @@
         ],
         "first_seen": "2026-11-10T04:12:48.976916+00:00",
         "first_seen_version": "5b5e400",
-        "last_modified": "2026-11-17T08:07:10.045096+00:00",
+        "last_modified": "2026-11-17T09:12:26.206453+00:00",
         "last_modified_version": "cf77c3c"
       },
       "id": "2016",
       "image_urls": {
-        "android": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902811/otogi/android/102016_cfe28637b2a2e0bd4f0179261c4eca7b.png",
-        "hd": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1794902819/otogi/cards_hd/102016_hd_96307ec17c7571d2776a194f23d4a362.png"
+        "android": null,
+        "hd": null
       },
       "meta": {
         "album": true,
@@ -114891,17 +114915,7 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": [
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [
-                16
-              ],
-              "is_current": false
-            }
-          ]
+          "tower_drops": []
         },
         "exchange": {
           "entries": []
@@ -114931,36 +114945,11 @@
       "description": "<color=#f4e48e>「侮ることのないように、私は強いぞ？」</color><br/><color=#ef9843>日本のおとぎ話にて語られる小さき武士のあやかし。</color>どんなに不利な状況であろうと、逆転の機会を窺う不屈の武士。並々ならぬ努力により、金太郎にも劣らぬ膂力を誇る。打ち出の小槌の力を借りれば、一時的ではあるが体を巨大化することができる。もっとも巨大化といっても、元のサイズが小さいため、言うほど巨大になるわけではない。大体１m８0cmくらいだとか…<br/><color=#f45d68>[特務]Ghost in the Mirror</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [
-                    16
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
-          }
-        ],
+        "changelog": [],
         "first_seen": "2025-12-12T23:26:10.491435+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:08.800458+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-03-15T14:47:13.133152+00:00",
+        "last_modified_version": "fa11c2b"
       },
       "id": "333",
       "image_urls": {
@@ -188657,17 +188646,7 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": [
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [
-                32
-              ],
-              "is_current": false
-            }
-          ]
+          "tower_drops": []
         },
         "exchange": {
           "entries": []
@@ -188697,36 +188676,11 @@
       "description": "<color=#f4e48e>「オレ様の雷槌を食らって生きてるヤツはいねぇぜ！」</color><br/><color=#ef9843>北欧神話に登場する雷神のあやかし。</color>我が強くオレ様気質のわんぱく小僧で、自分が一番にならないと気が済まないタイプ。見た目はまだ幼いがその実力は雷神の名に相応しく、その気になれば全神々を敵に回しても戦いのけるほどの剛の者。ミョルニルの相棒で、守銭奴の彼女にそそのかされてはトラブルを起こすこともしばしば…。年頃の男の子ゆえに胸の大きなお姉さんには抗えないとか…。また、大食漢ながらこだわりが強く、自分が気に入った食べ方以外は頑として受け入れないらしい。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [
-                    32
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
-          }
-        ],
+        "changelog": [],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.452279+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-03-13T06:07:58.351250+00:00",
+        "last_modified_version": "df010ec"
       },
       "id": "703",
       "image_urls": {
@@ -188860,17 +188814,7 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": [
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [
-                48
-              ],
-              "is_current": false
-            }
-          ]
+          "tower_drops": []
         },
         "exchange": {
           "entries": []
@@ -188900,36 +188844,11 @@
       "description": "<color=#f4e48e>「ワシは新しいものには目がなくての！」</color><br/><color=#ef9843>大日本史を編纂した天下の副将軍のあやかし。</color>新し物好き、珍し物好きなアクティブ女子高生。（見た目は）あやかし化した際に時代劇の影響が強く出たためか、女性化した後も未だ老人言葉が抜けきらず、これも個性と開き直っているご様子。性格は老獪にして策士で、かの吉宗公も頭が上がらないほどの口達者とのこと。最近は印盒を見せても皆驚かなくなってきたので、別の手を思案中だとか…。ちなみに、日本でラーメンを初めて食べた人物としても有名だったりする。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [
-                    48
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
-          }
-        ],
+        "changelog": [],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.454021+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-03-13T06:07:58.352754+00:00",
+        "last_modified_version": "df010ec"
       },
       "id": "704",
       "image_urls": {
@@ -189064,17 +188983,7 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": [
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [
-                64
-              ],
-              "is_current": false
-            }
-          ]
+          "tower_drops": []
         },
         "exchange": {
           "entries": []
@@ -189104,36 +189013,11 @@
       "description": "<color=#f4e48e>「左舷20度ニ敵正反応ヲ確認。排除シマス」</color><br/><color=#ef9843>本来は作劇用語だったが、そこから転じた「機械仕掛けの神」というイメージがあやかしになった存在。</color>体内に無限機関という炉を持っており、あらゆる物質をエネルギーに転化することができる。その強さは得たエネルギーによって変化し、上限は設けられていないため、条件によってはすべてのあやかしを上回る可能性がある。ベースが機械であるために計算に強く、すべての事象を正確に数値化して分析することができるらしい。その反面か感情はいたって薄く、ロボット口調で話すためポンコツ扱いされるのが悩みとか…。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [
-                    64
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
-          }
-        ],
+        "changelog": [],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.455721+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-03-13T06:07:58.355261+00:00",
+        "last_modified_version": "df010ec"
       },
       "id": "705",
       "image_urls": {
@@ -189299,17 +189183,7 @@
             }
           ],
           "reward_tiers": [],
-          "tower_drops": [
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [
-                80
-              ],
-              "is_current": false
-            }
-          ]
+          "tower_drops": []
         },
         "exchange": {
           "entries": []
@@ -189339,36 +189213,11 @@
       "description": "<color=#f4e48e>「この私に大食いで勝とうだなんて百万年早いわよ！」</color><br/><color=#ef9843>七つの大罪のうち暴食を司る地獄の大公のあやかし。</color>その罪に相応しく、食べることにおいて彼女に右に出るものはなく、名立たる大食い大会、早食い大会を次々と廃止に追い込んだ張本人。それだけでは飽き足らず、店舗ごとの大食いチャレンジ荒らしでも有名で、彼女のせいで廃業に追い込まれた店は星の数ほどとか…。正に悪魔の所業といえよう。ちなみに、長年思い煩っていた体臭問題は、ツリートップスターからプレゼントされた香水で解決したらしく最近は特にご機嫌のようだ。<br/><color=#f45d68>[特務]あやかし大食いking決定戦！</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "1 items",
-                "old": "0 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.0",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [
-                    80
-                  ],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
-          }
-        ],
+        "changelog": [],
         "first_seen": "2025-12-12T23:26:10.566655+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.457731+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-03-13T06:07:58.357769+00:00",
+        "last_modified_version": "df010ec"
       },
       "id": "706",
       "image_urls": {
@@ -196995,13 +196844,6 @@
                 16
               ],
               "is_current": false
-            },
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [],
-              "is_current": false
             }
           ]
         },
@@ -197221,34 +197063,12 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.1",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.510031+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-10-18T04:18:40.372684+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "735",
       "image_urls": {
@@ -197399,13 +197219,6 @@
               "floors": [
                 32
               ],
-              "is_current": false
-            },
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [],
               "is_current": false
             }
           ]
@@ -197604,34 +197417,12 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.1",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.511870+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-10-18T04:18:40.374686+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "736",
       "image_urls": {
@@ -197768,13 +197559,6 @@
               "floors": [
                 48
               ],
-              "is_current": false
-            },
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [],
               "is_current": false
             }
           ]
@@ -197973,34 +197757,12 @@
             ],
             "date": "2026-10-18",
             "version": "6117a12"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.1",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.571653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.513676+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-10-18T04:18:40.376623+00:00",
+        "last_modified_version": "6117a12"
       },
       "id": "737",
       "image_urls": {
@@ -198176,13 +197938,6 @@
                 64
               ],
               "is_current": false
-            },
-            {
-              "event_id": "189",
-              "event_name": "天下一武具会",
-              "first_seen": "2026-11-17",
-              "floors": [],
-              "is_current": false
             }
           ]
         },
@@ -198320,34 +198075,12 @@
             ],
             "date": "2026-09-29",
             "version": "e8b5e91"
-          },
-          {
-            "changes": [
-              {
-                "field": "acquisition.event.tower_drops",
-                "new": "2 items",
-                "old": "1 items"
-              },
-              {
-                "field": "acquisition.event.tower_drops.1",
-                "new": {
-                  "event_id": "189",
-                  "event_name": "天下一武具会",
-                  "first_seen": "2026-11-17",
-                  "floors": [],
-                  "is_current": false
-                },
-                "old": null
-              }
-            ],
-            "date": "2026-11-17",
-            "version": "cf77c3c"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.572653+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-17T08:07:09.515885+00:00",
-        "last_modified_version": "cf77c3c"
+        "last_modified": "2026-09-29T07:51:49.436016+00:00",
+        "last_modified_version": "e8b5e91"
       },
       "id": "738",
       "image_urls": {
