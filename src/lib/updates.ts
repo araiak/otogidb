@@ -64,7 +64,7 @@ export async function getMonthGroups(): Promise<MonthGroup[]> {
   try {
     const manifestRaw = await import('../../public/data/changes/manifest.json');
     manifest = (manifestRaw.default || manifestRaw) as PatchNotesManifest;
-  } catch (_e) {
+  } catch {
     manifest = { total_versions: 0, versions: [] };
   }
 
@@ -73,7 +73,7 @@ export async function getMonthGroups(): Promise<MonthGroup[]> {
     try {
       const notes = await import(`../../public/data/changes/patch_notes_${versionInfo.version}.json`);
       patchNotes.push((notes.default || notes) as PatchNotes);
-    } catch (_e) {
+    } catch {
       console.warn(`Failed to load patch notes for version ${versionInfo.version}`);
     }
   }

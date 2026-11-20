@@ -183,7 +183,7 @@ export function buildTrendData(
   tiers: Tier[],
   activeTiers: Set<string>,
 ): Record<string, number | undefined>[] {
-  return chartData.map((row, idx) => {
+  return chartData.map((_row, idx) => {
     const trendRow: Record<string, number | undefined> = {};
     for (const tier of tiers) {
       if (!activeTiers.has(tier.key)) continue;
