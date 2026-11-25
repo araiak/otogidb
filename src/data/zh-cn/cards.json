@@ -38655,9 +38655,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -38727,11 +38727,28 @@
       "description": "<color=#f4e48e>“别看我这样，我也当过神明呢。”</color><br/><color=#ef9843>曾经登上统辖太阳之位的妖怪。</color>她与将自己拉下统辖之位的<color=#ef9843>魁札尔科亚特尔</color>关系十分恶劣，至今为止已经多次发生冲突。最近她意识到只要与魁札尔科亚特尔扯上关系都是浪费时间，因此尽量避免与对方碰面。但是，魁札尔科亚特尔的追踪本事实在了得，当她觉察到时，对方已经近在咫尺了。或许是实在忍无可忍了吧，她干劲十足地表示下次绝对要与魁札尔科亚特尔做个了断，也不知道她最后能不能成功呢……<br/><color=#94b5fe>[特殊羁绊]使“魁札尔科亚特尔”普通攻击提升</color><br/><color=#f45d68>[活动]妖怪武斗感恩节</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.259761+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.892254+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "159",
       "image_urls": {
@@ -39193,9 +39210,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -39257,11 +39274,28 @@
       "description": "<color=#f4e48e>“啊～必须得亲自做啊～？”</color><br/><color=#ef9843>传说中某部族的丰收之神。</color>负责管理大地能量。由于他的身体状况会影响农作物，当他的生病时，当地便会发生粮荒。于是，他充分利用这一点，常常装作身体不适，让周围的人带食物来给他。据说他身边某位女神看穿了他的本性，为了纠正他的坏毛病，就把他送到阴阳寮来了。<br/><color=#f45d68>[活动]妖怪武斗感恩节</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.261265+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.894155+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "160",
       "image_urls": {
@@ -39371,7 +39405,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39554,12 +39588,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847359+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.322595+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.255983+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1600",
       "image_urls": {
@@ -39668,7 +39713,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39879,12 +39924,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843397+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.302773+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.228958+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1601",
       "image_urls": {
@@ -39987,7 +40043,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -40198,12 +40254,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843697+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.304131+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.230833+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1602",
       "image_urls": {
@@ -41392,9 +41459,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -41456,11 +41523,28 @@
       "description": "<color=#f4e48e>“算啦算啦，这种小事没关系的啦。”</color><br/><color=#ef9843>掌管大地的恶魔妖怪。</color>虽是恶魔，却拥有如同大地般开阔的心胸。她对大部分事情都宽宏大量，因此备受其他妖怪景仰。同时，她也是某个精灵偶像团体的狂热粉丝。虽然她慈悲心肠、极少动怒，但只要遇到有关偶像团体的事，不论是多么琐碎的小事，她都寸步不让。她的狂热使她在粉丝间成了传说。<br/><color=#f45d68>[活动]妖怪武斗感恩节</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.461313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.263772+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.895949+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "161",
       "image_urls": {
@@ -41561,7 +41645,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -41772,12 +41856,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847629+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.323958+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.257868+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1610",
       "image_urls": {
@@ -42849,7 +42944,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -43060,12 +43155,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846803+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.319627+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.251821+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1615",
       "image_urls": {
@@ -44382,7 +44488,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -44593,12 +44699,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847087+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.321260+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.254105+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1619",
       "image_urls": {
@@ -51919,9 +52036,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -51944,7 +52065,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -51962,11 +52084,63 @@
       "description": "<color=#f4e48e>“嘿嘿，那孩子也来了啊～”</color><br/><color=#ef9843>曾经登上统辖太阳之位的妖怪。</color>她最喜欢<color=#ef9843>特斯卡特利波卡</color>了。两人从很久以前开始就一直争执不断，但大多都是魁札尔科亚特尔主动招惹的。她自豪地表示，现在她之所以追着特斯卡特利波卡跑，当然就是为了调戏对方。尽管这让特斯卡特利波卡非常困扰，魁札尔科亚特尔却说“我简直爱死她那副表情了”。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.462312+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.904516+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.911769+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "170",
       "image_urls": {
@@ -64121,7 +64295,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64143,7 +64317,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -64521,7 +64695,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64533,28 +64707,28 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -64567,7 +64741,7 @@
               "floors": [
                 16
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -64847,7 +65021,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64859,7 +65033,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64871,7 +65045,7 @@
               "floors": [
                 80
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -65094,7 +65268,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -65116,7 +65290,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -65369,7 +65543,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65381,42 +65555,42 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -65839,7 +66013,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65851,49 +66025,49 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -65906,7 +66080,7 @@
               "floors": [
                 32
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66184,7 +66358,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66196,49 +66370,49 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -66251,7 +66425,7 @@
               "floors": [
                 48
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66535,7 +66709,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66557,7 +66731,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -66778,7 +66952,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66790,7 +66964,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66802,7 +66976,7 @@
               "floors": [
                 64
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -67047,7 +67221,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67059,7 +67233,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67070,7 +67244,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67081,7 +67255,7 @@
           "featured_banners": [
             {
               "end": "2026-11-29 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-11-25 15:00:00"
             }
@@ -67341,7 +67515,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67353,7 +67527,7 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67364,7 +67538,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67807,7 +67981,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67819,56 +67993,56 @@
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "魔幻武器世界",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -69219,9 +69393,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2023-10-03 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -69275,11 +69449,28 @@
       "description": "<color=#f4e48e>“哎呀呀，爽朗的秋天近在眼前了。”</color><br/>居住在平城京西边龙田山的妖怪，<color=#ef9843>掌管秋季的良家千金</color>。和<color=#ef9843>佐保姬</color>感情非常好，两人同时也是人气相当、总是互相较劲的永远的对手。佐保姬和龙田姬目前正从事<color=#ef9843>地下偶像团体</color>的活动，但这件事并没有公开，也未得到阴阳寮的官方认可。妖怪当中有很多人默默地支持她们。她们的乐曲相当激烈喧闹，龙田姬负责和声、吉他和音控。<br/><color=#94b5fe>[特殊羁绊]使“佐保姬”速度提升</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2023-10-03 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.431281+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.713679+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.671651+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "19",
       "image_urls": {
@@ -120526,9 +120717,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-12-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -120598,11 +120789,28 @@
       "description": "<color=#f4e48e>\"同为饱尝艰辛的人，一起加油吧。\"</color><br/><color=#ef9843>在日本神话里登场的护国神。 </color>也是神在月运动会的主办人。主要用意是聚集各式各样的神明同好透过运动来做交流。正因为每年都会举办，累积了许多办理的经验，即使突然要在别的会场举办也不为所动。甚至可以说他胆识高到会享受这种困境。实际上也仅花数小时就安排好墓地作为运动会的会场之类的。毕竟他从以前就饱尝艰辛，言行举止非常柔软。心胸之广在神明之中也是屈指可数的。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-12-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.497938+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.174757+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:31.258888+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "361",
       "image_urls": {
@@ -130317,9 +130525,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-01-04 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -130374,11 +130582,28 @@
       "description": "<color=#f4e48e>\"无论发生什么都不动摇的心…那才是最重要的。\"</color><br/><color=#ef9843>贵为太阳的象征，守护着在日本举办的诸多祭神仪式的妖怪。 </color>基本上是个怕寂寞的人，内心纤细到只因为周围的妖怪对她抱持敬意而拉开距离就会受到打击。她也烦恼自己这样下去会失去威严。即使如此，在重要的时刻还是会漂亮地完成自己应尽的职务，果然是个值得尊敬的出色神明。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-01-04 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.507450+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.735619+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.351331+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "411",
       "image_urls": {
@@ -137796,9 +138021,13 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -137821,7 +138050,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -137839,11 +138069,63 @@
       "description": "<color=#f4e48e>“哎呀，远处好像有什么东西在靠近呢。”</color><br/><color=#ef9843>掌管丰饶多产的尼罗河的土地、被称为“丰饶女神”的妖怪。</color>心地善良，如同母亲般温暖、包容，因此受众多妖怪景仰。而且，她还拥有可以看穿一切的慧眼，很擅长倾听、解决他人的烦恼。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.436288+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.068248+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.708830+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "45",
       "image_urls": {
@@ -143267,9 +143549,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143347,11 +143629,28 @@
       "description": "<color=#f4e48e>\"是啊，他的话啊，还在襁褓的时候我就认识了喔。\"</color><br/><color=#ef9843>高床式仓库所化身的妖怪。</color>在日本历史上灿然发光的古代世界宝物们之伟大母亲。许多的妖怪都诉说著对她的尊敬与感谢。本人则是谦虚地表示那都与自己没有关系，是宝物们各自的个性与实力带来的成果，自己什么都没做。虽然是这样的她，也已经存在了相应的一段岁月，只是把她当成人老珠黄来对待是禁忌。有可能会被拖进不打开的密室里。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.521513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.867235+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.477125+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "478",
       "image_urls": {
@@ -178114,7 +178413,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178202,12 +178501,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.993760+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.797328+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "649",
       "image_urls": {
@@ -178428,7 +178738,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178516,12 +178826,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.995152+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.799263+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "650",
       "image_urls": {
@@ -178624,7 +178945,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178712,12 +179033,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.996495+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.801143+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "651",
       "image_urls": {
@@ -179871,7 +180203,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -179959,12 +180291,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.005691+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.813984+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "658",
       "image_urls": {
@@ -180094,7 +180437,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180182,12 +180525,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.007239+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.816150+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "659",
       "image_urls": {
@@ -180404,7 +180758,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180484,12 +180838,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.008525+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.818005+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "660",
       "image_urls": {
@@ -188169,9 +188534,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188268,12 +188633,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.423663+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.893017+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "700",
       "image_urls": {
@@ -188377,9 +188758,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188476,12 +188857,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.424713+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.894931+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "701",
       "image_urls": {
@@ -188585,9 +188982,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188684,12 +189081,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.425725+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.896857+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "702",
       "image_urls": {
@@ -206604,5 +207017,5 @@
   },
   "locale": "zh_CN",
   "total_cards": 1049,
-  "version": "8642ee6"
+  "version": "8181c69"
 }

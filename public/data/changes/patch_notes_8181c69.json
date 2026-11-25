@@ -1,0 +1,661 @@
+{
+  "version": "8181c69",
+  "version_date": "2026-11-25",
+  "previous_version": "8642ee6",
+  "summary": {
+    "new_cards": 0,
+    "modified_cards": 24
+  },
+  "new_cards": [],
+  "modified_cards": [
+    {
+      "id": "170",
+      "name": "Quetzalcoatl",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634060/otogi/cards_hd/100170_hd_5d55fc2c0d0b55834b03916ff3da908a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "auction",
+          "display": "Sources: Added (auction)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 1000,
+          "display": "Min Auction Price: Added (1000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 100000,
+          "display": "Max Auction Price: Added (100000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: Added (2026-11-29 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "361",
+      "name": "Okuninushi",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634256/otogi/cards_hd/100361_hd_29e6c8c8d88d6d9ab335b39269944715.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2024-12-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2024-12-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "411",
+      "name": "Goddess Amaterasu",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634311/otogi/cards_hd/100411_hd_41ff33132dadac974193ae83da671668.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2026-01-04 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2026-01-04 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "478",
+      "name": "Shosoin",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634379/otogi/cards_hd/100478_hd_ec5a7a79a9b3d817e43c1da4744a9041.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2025-09-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2025-09-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "658",
+      "name": "Tokugawa Yoshimune",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634575/otogi/cards_hd/100658_hd_d53db671f61f89d255f69fc1a1c2747f.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "659",
+      "name": "Theurgia・Goetia",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634577/otogi/cards_hd/100659_hd_cce3ef95bf52b569977d29335b1cd691.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1615",
+      "name": "Kashinkoji",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765953/otogi/cards_hd/101615_hd_27e2474bf95a167f02700262e09eefd4.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1619",
+      "name": "Goemon Ishikawa",
+      "rarity": 5,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765948/otogi/cards_hd/101619_hd_9bb1061c5f9ae667da94a64f7c5d8ecb.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Princess Tatsuta",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765619980/otogi/cards_hd/100019_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2023-10-03 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2023-10-03 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "name": "Isis",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1765620002/otogi/cards_hd/100045_hd.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources",
+          "field_label": "Sources",
+          "old": "1 items",
+          "new": "2 items",
+          "display": "Sources: 1 items → 2 items"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.sources.1",
+          "field_label": "Sources",
+          "old": null,
+          "new": "auction",
+          "display": "Sources: Added (auction)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.start_date",
+          "field_label": "Start Date",
+          "old": null,
+          "new": "",
+          "display": "Start Date: Added ()"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.is_time_limited",
+          "field_label": "Is Time Limited",
+          "old": null,
+          "new": true,
+          "display": "Is Time Limited: Added (True)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_min",
+          "field_label": "Min Auction Price",
+          "old": null,
+          "new": 500,
+          "display": "Min Auction Price: Added (500)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.currency",
+          "field_label": "Currency",
+          "old": null,
+          "new": "gold",
+          "display": "Currency: Added (gold)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.price_max",
+          "field_label": "Max Auction Price",
+          "old": null,
+          "new": 50000,
+          "display": "Max Auction Price: Added (50000)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": null,
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: Added (2026-11-29 15:00:00)"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "159",
+      "name": "Tezcatlipoca",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634048/otogi/cards_hd/100159_hd_cc9ff9afd2b86665c8c01185f13b1e59.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2024-06-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2024-06-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "160",
+      "name": "Kokopelli",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634049/otogi/cards_hd/100160_hd_3eab46f35bf6c7584b4242d4ae24897b.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2024-06-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2024-06-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "161",
+      "name": "Amaymon",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634050/otogi/cards_hd/100161_hd_a9ea0430fac8fd4ffdf6606fa2e8b06a.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2024-06-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2024-06-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "649",
+      "name": "Flora",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634565/otogi/cards_hd/100649_hd_077319c7b01f49e85f8ba574ca796f72.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "650",
+      "name": "Pollinosis",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634566/otogi/cards_hd/100650_hd_38c0f11f614315f802fe3ae461a97034.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "651",
+      "name": "Kuchikamizake",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634567/otogi/cards_hd/100651_hd_ab53595dc402cd976a7f4dfa8f855c91.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "660",
+      "name": "Sumizome Zakura",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634578/otogi/cards_hd/100660_hd_5ff78ce3a0a7014a38f99e5bb3c810a5.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "700",
+      "name": "Ogetsu Hime [Gula]",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634616/otogi/cards_hd/100700_hd_d96b0c2ef2137928b50dbf0aa48f72fe.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2026-10-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2026-10-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "701",
+      "name": "Sæhrímnir",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634617/otogi/cards_hd/100701_hd_07c01921e810c6b7fd9a8f64542ff0f3.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2026-10-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2026-10-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "702",
+      "name": "Dagda's Cauldron",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1773634618/otogi/cards_hd/100702_hd_f91d12578af542cb2bda568a9f1da586.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.end_date",
+          "field_label": "End Date",
+          "old": "2026-10-18 15:00:00",
+          "new": "2026-11-29 15:00:00",
+          "display": "End Date: 2026-10-18 15:00:00 → 2026-11-29 15:00:00"
+        },
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": false,
+          "new": true,
+          "display": "Auction Available: False → True (+1)"
+        }
+      ]
+    },
+    {
+      "id": "1600",
+      "name": "Bell Inscription",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765958/otogi/cards_hd/101600_hd_cf52b8055a37cceb74a01697018c3aa9.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1601",
+      "name": "Owl",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765947/otogi/cards_hd/101601_hd_1ca5f57acefba4dce48581de22cfbcd5.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1602",
+      "name": "Basho",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765956/otogi/cards_hd/101602_hd_ef1ac152fc0990841ef4bc375c377575.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    },
+    {
+      "id": "1610",
+      "name": "Saizo Kirigakure",
+      "rarity": 4,
+      "image_url": "https://res.cloudinary.com/dn3j8sqcc/image/upload/v1776765942/otogi/cards_hd/101610_hd_4d2474be16d9829ec80ae111b442479d.png",
+      "changes": [
+        {
+          "category": "acquisition",
+          "category_label": "Acquisition",
+          "field": "acquisition.auction.available",
+          "field_label": "Auction Available",
+          "old": true,
+          "new": false,
+          "display": "Auction Available: True → False (-1)"
+        }
+      ]
+    }
+  ],
+  "section_changes": {
+    "tradeMonster": {
+      "old_count": 625,
+      "new_count": 627,
+      "diff": 2
+    }
+  }
+}
