@@ -38655,9 +38655,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -38727,11 +38727,28 @@
       "description": "<color=#f4e48e>「一応これでも神様やってたんだけどねぇ」</color><br/><color=#ef9843>かつて太陽の座を手にするまでに至ったあやかし。</color>自身を引きずり落としたケツァルコアトルとは仲が悪く、今までに何度も衝突している。最近は関わるだけ無駄だと判断し、顔を合わせないように行動している。しかし、どこから嗅ぎつけたのか、気がつけば近くまで来ているのだとか。さすがに堪忍袋の緒が切れたのか、次こそ決着をつけるといき込んでいるが成功するのだろうか…。<br/><color=#94b5fe>[協力特効]ケツァルコアトルの通常攻撃力を増加させる</color><br/><color=#f45d68>[特務]あやかし武闘感謝祭</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.259761+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.892254+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "159",
       "image_urls": {
@@ -39193,9 +39210,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -39257,11 +39274,28 @@
       "description": "<color=#f4e48e>「はぁ〜、自分でやらなきゃダメかぁ〜」</color><br/><color=#ef9843>とある部族に豊穣の神として語り継がれるあやかし。</color>大地のエネルギーを常に管理している。彼の体調が周りの作物に影響するため、彼が体調を崩すと、その地は食糧難になってしまうとか。それゆえに彼は周囲に甘えてきた。すぐに体調の悪いふりをして、食べ物を持って来させたりと。その様子を最も近くで見てきた女神に根性を叩き直してこいと陰陽寮に送られてきたらしい。<br/><color=#f45d68>[特務]あやかし武闘感謝祭</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.261265+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.894155+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "160",
       "image_urls": {
@@ -39371,7 +39405,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39554,12 +39588,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847359+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.322595+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.255983+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1600",
       "image_urls": {
@@ -39668,7 +39713,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39879,12 +39924,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843397+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.302773+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.228958+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1601",
       "image_urls": {
@@ -39987,7 +40043,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -40198,12 +40254,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843697+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.304131+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.230833+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1602",
       "image_urls": {
@@ -41392,9 +41459,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -41456,11 +41523,28 @@
       "description": "<color=#f4e48e>「まぁまぁ良いじゃないですか、それくらい」</color><br/><color=#ef9843>地を司る悪魔のあやかし。</color>悪魔ではあるものの大地のように心が広いのがウリ。大抵のことには寛大なため、他のあやかしからも慕われている。エルフで構成されるアイドルグループの熱烈なファンとしても有名である。並大抵のことでは怒らない半ば仏じみた彼女だが、グループのことになると些細なことでも突っかかってくる。その苛烈さたるやファンの間で伝説となるほど。<br/><color=#f45d68>[特務]あやかし武闘感謝祭</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.461313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.263772+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.895949+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "161",
       "image_urls": {
@@ -41561,7 +41645,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -41772,12 +41856,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847629+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.323958+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.257868+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1610",
       "image_urls": {
@@ -42849,7 +42944,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -43060,12 +43155,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846803+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.319627+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.251821+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1615",
       "image_urls": {
@@ -44382,7 +44488,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -44593,12 +44699,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847087+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.321260+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.254105+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1619",
       "image_urls": {
@@ -51919,9 +52036,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -51944,7 +52065,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -51962,11 +52084,63 @@
       "description": "<color=#f4e48e>「えへへ、あの子も来てるんだぁ〜」</color><br/><color=#ef9843>かつて太陽の座を手にするまでに至ったあやかし。</color><color=#ef9843>テスカトリポカ</color>のことが大好きで、遥か昔から続く争いの原因はほぼケツァルコアトルからのちょっかい。今だにテスカトリポカを追いかけているのは、もちろんちょっかいを出すためだと誇らしげに語る。テスカトポカは相当に迷惑顔をするのだが、その表情が堪らなく好き、と語る。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.462312+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.904516+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.911769+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "170",
       "image_urls": {
@@ -64121,7 +64295,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64143,7 +64317,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -64521,7 +64695,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64533,28 +64707,28 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -64567,7 +64741,7 @@
               "floors": [
                 16
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -64847,7 +65021,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64859,7 +65033,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64871,7 +65045,7 @@
               "floors": [
                 80
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -65094,7 +65268,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -65116,7 +65290,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -65369,7 +65543,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65381,42 +65555,42 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -65839,7 +66013,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65851,49 +66025,49 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -65906,7 +66080,7 @@
               "floors": [
                 32
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66184,7 +66358,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66196,49 +66370,49 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -66251,7 +66425,7 @@
               "floors": [
                 48
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66535,7 +66709,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66557,7 +66731,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -66778,7 +66952,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66790,7 +66964,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66802,7 +66976,7 @@
               "floors": [
                 64
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -67047,7 +67221,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67059,7 +67233,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67070,7 +67244,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67081,7 +67255,7 @@
           "featured_banners": [
             {
               "end": "2026-11-29 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-11-25 15:00:00"
             }
@@ -67341,7 +67515,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67353,7 +67527,7 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67364,7 +67538,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67807,7 +67981,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67819,56 +67993,56 @@
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "天下一武具会",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -69219,9 +69393,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2023-10-03 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -69275,11 +69449,28 @@
       "description": "<color=#f4e48e>「おやおや、爽やかな秋がほらそこに」</color><br/><color=#ef9843>平城京の西にある竜田山のあやかし。</color>秋を司っている良家のお嬢様。<color=#ef9843>佐保姫</color>とは大の仲良し。そして、人気を二分し、切磋琢磨しあう永遠のライバルでもある。なんと竜田姫と佐保姫は、<color=#ef9843>地下アイドルユニット活動</color>を行っているのだ。だがそのことは、公表されていないようで、陰陽寮も非公認の見解を貫いている。あやかしの中には、ひっそりと彼女たちを応援しているものも多い。彼女らの楽曲はなかなかラウドで、彼女はコーラスとギターとマニピュレーターを担当。<br/><color=#94b5fe>[協力特効]佐保姫のスピードを上昇させる</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2023-10-03 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.431281+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.713679+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.671651+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "19",
       "image_urls": {
@@ -120526,9 +120717,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-12-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -120598,11 +120789,28 @@
       "description": "<color=#f4e48e>「苦労人同士、頑張りましょう」</color><br/><color=#ef9843>日本神話に登場する国護りの神様。</color>神在月運動会の主催者でもある。様々な身分の神様同士で運動を通して交流という趣旨だとか。毎年開催しているだけあって運営のノウハウ蓄積があり、急遽別会場での開催となったところでビクともしない。むしろその苦境を楽しめる胆力の持ち主。実際、たった数時間で墓場を運動会の会場にアレンジしてしまったとか。昔から苦労人だった為か、非常に物腰柔らかい。懐の大きさは神様の中でも指折りである。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-12-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.497938+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.174757+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:31.258888+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "361",
       "image_urls": {
@@ -130317,9 +130525,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-01-04 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -130374,11 +130582,28 @@
       "description": "<color=#f4e48e>「何事にも動じない心…それが大事である」</color><br/><color=#ef9843>太陽の象徴であり、日本で執り行われる多くの神事を見守るあやかし。</color>基本的に寂しがり屋で、周囲のあやかしたちが敬意を払って少し距離を置いて接しただけでショックを受けてしまうほど繊細な心の持ち主。ただ、それでは威厳が…と、思い悩んでいるようだ。それでも、ここぞというときにはバッチリ決めてくれるため、やっぱり敬うに値する立派な神様なのだ。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-01-04 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.507450+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.735619+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.351331+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "411",
       "image_urls": {
@@ -137796,9 +138021,13 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -137821,7 +138050,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -137839,11 +138069,63 @@
       "description": "<color=#f4e48e>「あら、遠くから何か近づいてくるわね」</color><br/><color=#ef9843>豊かなナイルの土壌を司る豊饒の女神のあやかし。</color>心優しく、きめ細やかなシルクのような包容力はまるでお母さん。と、多くのあやかしから慕われている。彼女のすべてを見通す慧眼がそれに拍車をかけていて、悩み相談の解決力に関しては右に出る者はいない。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.436288+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.068248+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.708830+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "45",
       "image_urls": {
@@ -143267,9 +143549,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143347,11 +143629,28 @@
       "description": "<color=#f4e48e>「ああ、あの子ならオシメの頃から知ってるよ」</color><br/><color=#ef9843>高床式倉庫のあやかし。</color>日本の歴史に燦然と輝く、古代世界の宝物たちのビッグママ。多くのあやかしたちが彼女に対して、尊敬と感謝を述べている。本人はそんなことどこ吹く風で、それぞれの個性や実力があったからこそであり、自分は何もしていないと謙遜している。そんな彼女だが、それなりに長い年月存在しているので、年増扱いだけはしてはいけない。開かずの間に引きずり込まれる可能性がある。",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.521513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.867235+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.477125+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "478",
       "image_urls": {
@@ -178114,7 +178413,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178202,12 +178501,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.993760+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.797328+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "649",
       "image_urls": {
@@ -178428,7 +178738,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178516,12 +178826,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.995152+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.799263+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "650",
       "image_urls": {
@@ -178624,7 +178945,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178712,12 +179033,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.996495+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.801143+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "651",
       "image_urls": {
@@ -179871,7 +180203,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -179959,12 +180291,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.005691+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.813984+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "658",
       "image_urls": {
@@ -180094,7 +180437,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180182,12 +180525,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.007239+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.816150+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "659",
       "image_urls": {
@@ -180404,7 +180758,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180484,12 +180838,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.008525+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.818005+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "660",
       "image_urls": {
@@ -188169,9 +188534,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188268,12 +188633,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.423663+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.893017+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "700",
       "image_urls": {
@@ -188377,9 +188758,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188476,12 +188857,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.424713+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.894931+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "701",
       "image_urls": {
@@ -188585,9 +188982,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188684,12 +189081,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.425725+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.896857+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "702",
       "image_urls": {
@@ -206604,5 +207017,5 @@
   },
   "locale": "ja_JP",
   "total_cards": 1049,
-  "version": "8642ee6"
+  "version": "8181c69"
 }

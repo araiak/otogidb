@@ -38655,9 +38655,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -38727,11 +38727,28 @@
       "description": "<color=#f4e48e>\"Can you believe a god did that?\"</color><br/><color=#ef9843>A spirit who once ruled the sun.</color> She doesn't get along well with <color=#ef9843>Quetzalcoatl</color>, who struck her down from the sun and has been nothing but trouble ever since. Recently she decided it's not worth trying to maintain a relationship and has been avoiding Quetzalcoatl altogether. But Quetzalcoatl still sneaks up on her every now and then before Tezcatlipoca has time to get away. The next time this happens, she's vowed to settle things once and for all, but who knows if she'll succeed...<br/><color=#94b5fe>[Special Bond] Increases Quetzalcoatl's normal ATK.</color><br/><color=#f45d68>[Event] Thanksgiving Day Beatdown</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.259761+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.892254+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "159",
       "image_urls": {
@@ -39193,9 +39210,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -39257,11 +39274,28 @@
       "description": "<color=#f4e48e>\"Ugh... Do I HAVE tooo?\"</color><br/><color=#ef9843>A spirit considered to be the god of fertility in certain parts of the world.</color> He is constantly altering the energy levels of the land. Actually, his health affects the production of local crops, so when he's sick it can cause a shortage of food. As a result people are extremely nice to him, and he's gotten kind of spoiled. If he so much as pretends to be sick, people come running with food for him. Apparently a certain goddess noticed this and sent him to the Bureau of the Occult to try to build some strength and endurance.<br/><color=#f45d68>[Event] Thanksgiving Day Beatdown</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.460313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.261265+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.894155+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "160",
       "image_urls": {
@@ -39371,7 +39405,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39554,12 +39588,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847359+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.322595+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.255983+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1600",
       "image_urls": {
@@ -39668,7 +39713,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -39879,12 +39924,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843397+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.302773+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.228958+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1601",
       "image_urls": {
@@ -39987,7 +40043,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -40198,12 +40254,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.843697+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.304131+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.230833+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1602",
       "image_urls": {
@@ -41392,9 +41459,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-06-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -41456,11 +41523,28 @@
       "description": "<color=#f4e48e>\"Not bad, not bad at all. You'll do just fine!\"</color><br/><color=#ef9843>The spirit of a demon that controls the land and earth.</color> She's really open-minded about most things, which has won her the affection of many other spirits. She's also known for being a passionate fan of a certain elven dance group. Although she never gets angry under normal circumstances—almost like some sort of enlightened Buddha—when it comes to her favorite group of elves, she gets worked up over even the tiniest of details. This has made her a legend among hardcore fans.<br/><color=#f45d68>[Event] Thanksgiving Day Beatdown</color>",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-06-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.461313+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.263772+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.895949+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "161",
       "image_urls": {
@@ -41561,7 +41645,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -41772,12 +41856,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847629+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.323958+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.257868+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1610",
       "image_urls": {
@@ -42849,7 +42944,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -43060,12 +43155,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.846803+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.319627+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.251821+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1615",
       "image_urls": {
@@ -44382,7 +44488,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -44593,12 +44699,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2026-04-21T10:06:00.847087+00:00",
         "first_seen_version": "6ff5af5",
-        "last_modified": "2026-11-14T13:26:16.321260+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:32.254105+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "1619",
       "image_urls": {
@@ -51919,9 +52036,13 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 100000,
+          "price_min": 1000,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -51944,7 +52065,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -51962,11 +52084,63 @@
       "description": "<color=#f4e48e>\"So she's here, too, eh? Heh, heh, heh...\"</color><br/><color=#ef9843>A spirit that once ruled the sun.</color> She loves <color=#ef9843>Tezcatlipoca</color>, and most of their fights over the years originated from Quetzalcoatl's failed attempts at flirting. She boasts proudly that the only reason she's still chasing Tezcatlipoca around after all this time is because she wants to hit on her. This very much irritates Tezcatlipoca, but seeing the look of chagrin on her face makes Quetzalcoatl like her all the more.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 1000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 100000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.462312+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.904516+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.911769+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "170",
       "image_urls": {
@@ -64121,7 +64295,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64143,7 +64317,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -64521,7 +64695,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64533,28 +64707,28 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -64567,7 +64741,7 @@
               "floors": [
                 16
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -64847,7 +65021,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -64859,7 +65033,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -64871,7 +65045,7 @@
               "floors": [
                 80
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -65094,7 +65268,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -65116,7 +65290,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -65369,7 +65543,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65381,42 +65555,42 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 5,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 4,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 3,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             }
@@ -65839,7 +66013,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -65851,49 +66025,49 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -65906,7 +66080,7 @@
               "floors": [
                 32
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66184,7 +66358,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66196,49 +66370,49 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "4"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "5"
             }
@@ -66251,7 +66425,7 @@
               "floors": [
                 48
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -66535,7 +66709,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66557,7 +66731,7 @@
           "featured_banners": [
             {
               "end": "2026-11-25 15:00:00",
-              "is_current": true,
+              "is_current": false,
               "pity": 35,
               "start": "2026-11-16 15:00:00"
             }
@@ -66778,7 +66952,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -66790,7 +66964,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -66802,7 +66976,7 @@
               "floors": [
                 64
               ],
-              "is_current": false
+              "is_current": true
             }
           ]
         },
@@ -67047,7 +67221,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67059,7 +67233,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67070,7 +67244,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67081,7 +67255,7 @@
           "featured_banners": [
             {
               "end": "2026-11-29 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "pity": 100,
               "start": "2026-11-25 15:00:00"
             }
@@ -67341,7 +67515,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67353,7 +67527,7 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [],
@@ -67364,7 +67538,7 @@
             {
               "currency": "gApple",
               "end": "2026-12-04 15:00:00",
-              "is_current": false,
+              "is_current": true,
               "limit": 1,
               "price": 200,
               "start": "2026-11-25 15:00:00"
@@ -67807,7 +67981,7 @@
           "price_max": null,
           "price_min": null
         },
-        "currently_available": false,
+        "currently_available": true,
         "daily": {
           "available": false,
           "battle_id": null,
@@ -67819,56 +67993,56 @@
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false
+              "is_current": true
             }
           ],
           "reward_tiers": [
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 2,
               "tier": "1"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "2"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "3"
             },
             {
               "event_id": "189",
               "event_name": "Wondrous World of Weaponry",
-              "is_current": false,
+              "is_current": true,
               "quantity": 1,
               "tier": "1"
             }
@@ -69219,9 +69393,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2023-10-03 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -69275,11 +69449,28 @@
       "description": "<color=#f4e48e>\"Oh, a clear autumn day is so nice!\" </color><br/><color=#ef9843>The spirit of Mount Tatsuta, which lies to the west of the ancient capital, Nara. </color>The daughter of a good family that rules fall, and very close with <color=#ef9843>Princess Saho</color>. They are eternal rivals, constantly vying to become the more popular one. Actually, they perform as an underground idol duo, too. But this is a well-kept secret, and even the Bureau of the Occult doesn't officially recognize it. Lots of people are secretly fans, though. Their music is pretty loud, and she is in charge of choruses, guitar and manipulation.<br/><color=#94b5fe>[Special Bond] Increases Princess Saho's speed.</color>",
       "gives_special_bond": true,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2023-10-03 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.431281+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:12.713679+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:30.671651+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "19",
       "image_urls": {
@@ -120526,9 +120717,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2024-12-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -120598,11 +120789,28 @@
       "description": "<color=#f4e48e>\"We're all hardworkers here, so let's do this together!\"</color><br/><color=#ef9843>A nation-protecting god in Japanese mythology, and also the organizer of the October Sports Meet. </color>He's built up a lot of management experience from running it every year, so he didn't even break a sweat over changing the venue at the last minute. He's the kind of person that actually enjoys those moments of crisis. In fact, he had the whole event ready to go in the cemetery with just a few hours' prep. He's grown very gentle from all the years of hard labor he's put in, and the size of his heart is notable even among the gods.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2024-12-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.497938+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-15T14:47:13.174757+00:00",
-        "last_modified_version": "fa11c2b"
+        "last_modified": "2026-11-25T14:13:31.258888+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "361",
       "image_urls": {
@@ -130317,9 +130525,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-01-04 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -130374,11 +130582,28 @@
       "description": "<color=#f4e48e>\"Neutrality and ambivalence to all things...that is what matters.\"</color><br/><color=#ef9843>The symbol of the sun itself and guardian spirit of all Japan's celebrations.</color> A lonesome spirit, her easily unnerved disposition means even close proximity to even the most respectful of others can trigger her anxiety. That said, according to her, it is her dignity that's at risk by such closeness. Nevertheless, her courage does not abandon her when the moment arises, and for that she is eternally admired.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-01-04 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.507450+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.735619+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.351331+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "411",
       "image_urls": {
@@ -137796,9 +138021,13 @@
       "abilities": [],
       "acquisition": {
         "auction": {
-          "available": false,
-          "price_max": null,
-          "price_min": null
+          "available": true,
+          "currency": "gold",
+          "end_date": "2026-11-29 15:00:00",
+          "is_time_limited": true,
+          "price_max": 50000,
+          "price_min": 500,
+          "start_date": ""
         },
         "currently_available": true,
         "daily": {
@@ -137821,7 +138050,8 @@
           "standard_pool_start": null
         },
         "sources": [
-          "gacha"
+          "gacha",
+          "auction"
         ],
         "stock_level": "unavailable"
       },
@@ -137839,11 +138069,63 @@
       "description": "<color=#f4e48e>\"Hm? I spy with my little eye... something approaching from afar.\"</color><br/><color=#ef9843>An ancient goddess who presides over the Nile's fertile banks.</color> She's adored as a mother-figure among spirits for her kindness and silky-soft compassion. Her talents include a keen and penetrating insight, which she uses to deliver expert advice to those in a spot of bother.",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.sources",
+                "new": "2 items",
+                "old": "1 items"
+              },
+              {
+                "field": "acquisition.sources.1",
+                "new": "auction",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.start_date",
+                "new": "",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.is_time_limited",
+                "new": true,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_min",
+                "new": 500,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.currency",
+                "new": "gold",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.price_max",
+                "new": 50000,
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": null
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.436288+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.068248+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:30.708830+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "45",
       "image_urls": {
@@ -143267,9 +143549,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2025-09-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 100000,
           "price_min": 1000,
@@ -143347,11 +143629,28 @@
       "description": "<color=#f4e48e>\"We've known each other since we were in diapers!\"</color><br/><color=#ef9843>The spirit of a famous log-cabin style storehouse.</color> She stores the motherload of illustrious artifacts from Japanese history, making many spirits feel nothing but respect and admiration towards her. But she doesn't let any of it go to her head! She knows it's all thanks to her inherent qualities—nothing that she's in any place to take credit for. Her one quirk is that despite having been around longer than most, she can't stand being treated like an old woman. That's best avoided unless you want to be dragged into the \"Forbidden Room\"...",
       "gives_special_bond": false,
       "history": {
-        "changelog": [],
+        "changelog": [
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2025-09-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
+          }
+        ],
         "first_seen": "2025-12-12T23:26:10.521513+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-03-13T06:07:57.867235+00:00",
-        "last_modified_version": "df010ec"
+        "last_modified": "2026-11-25T14:13:31.477125+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "478",
       "image_urls": {
@@ -178114,7 +178413,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178202,12 +178501,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.993760+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.797328+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "649",
       "image_urls": {
@@ -178428,7 +178738,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178516,12 +178826,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.995152+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.799263+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "650",
       "image_urls": {
@@ -178624,7 +178945,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -178712,12 +179033,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.553609+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:15.996495+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.801143+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "651",
       "image_urls": {
@@ -179871,7 +180203,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -179959,12 +180291,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.005691+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.813984+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "658",
       "image_urls": {
@@ -180094,7 +180437,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180182,12 +180525,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.007239+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.816150+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "659",
       "image_urls": {
@@ -180404,7 +180758,7 @@
       ],
       "acquisition": {
         "auction": {
-          "available": true,
+          "available": false,
           "currency": "gold",
           "end_date": "2026-11-18 15:00:00",
           "is_time_limited": true,
@@ -180484,12 +180838,23 @@
             ],
             "date": "2026-11-14",
             "version": "9a1f22a"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.available",
+                "new": false,
+                "old": true
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.556608+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-11-14T13:26:16.008525+00:00",
-        "last_modified_version": "9a1f22a"
+        "last_modified": "2026-11-25T14:13:31.818005+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "660",
       "image_urls": {
@@ -188169,9 +188534,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188268,12 +188633,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.423663+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.893017+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "700",
       "image_urls": {
@@ -188377,9 +188758,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188476,12 +188857,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.424713+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.894931+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "701",
       "image_urls": {
@@ -188585,9 +188982,9 @@
       ],
       "acquisition": {
         "auction": {
-          "available": false,
+          "available": true,
           "currency": "gold",
-          "end_date": "2026-10-18 15:00:00",
+          "end_date": "2026-11-29 15:00:00",
           "is_time_limited": true,
           "price_max": 50000,
           "price_min": 500,
@@ -188684,12 +189081,28 @@
             ],
             "date": "2026-10-19",
             "version": "f041b74"
+          },
+          {
+            "changes": [
+              {
+                "field": "acquisition.auction.end_date",
+                "new": "2026-11-29 15:00:00",
+                "old": "2026-10-18 15:00:00"
+              },
+              {
+                "field": "acquisition.auction.available",
+                "new": true,
+                "old": false
+              }
+            ],
+            "date": "2026-11-25",
+            "version": "8181c69"
           }
         ],
         "first_seen": "2025-12-12T23:26:10.565657+00:00",
         "first_seen_version": "f044a9d",
-        "last_modified": "2026-10-19T17:44:08.425725+00:00",
-        "last_modified_version": "f041b74"
+        "last_modified": "2026-11-25T14:13:31.896857+00:00",
+        "last_modified_version": "8181c69"
       },
       "id": "702",
       "image_urls": {
@@ -206603,5 +207016,5 @@
     }
   },
   "total_cards": 1049,
-  "version": "8642ee6"
+  "version": "8181c69"
 }
